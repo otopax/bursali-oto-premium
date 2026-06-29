@@ -1,0 +1,54 @@
+{
+  "faultCode": "P0001",
+  "brand": "Acura",
+  "model": "acura_vigor_1991_1994_fuses",
+  "updatedAt": "2026-06-29T07:39:54.879Z",
+  "aiAnalysis": {
+    "description": "Sayın Müşterim, P0001 arıza kodu 'Yakıt Hacmi Regülatörü Kontrol Devresi/Açık' anlamına gelir. Ancak 1991-1994 model Acura Vigor (G25A1 motor) gibi daha eski araçlarda, modern yakıt hacmi regülatörleri veya değişken yakıt pompaları bulunmaz. Bu kod, OBD-I sisteminin OBD-II'ye eşlenmesi sonucu ortaya çıkmış olup, bu modelde doğrudan yakıt pompası kontrol devresinde bir açık devre veya elektriksel bir arızaya işaret eder. Yani, motor kontrol ünitesi (ECU), yakıt pompasını çalıştırmak için gerekli elektrik sinyalini gönderdiğinde, beklenen akım geri bildirimini alamamakta veya pompayı enerjileyememektedir. Bu durum, ya yakıt pompasının kendisine giden gücün kesilmesi, ya da pompanın kendisinin elektriksel olarak arızalanması sonucu oluşur. Devre genellikle PGM-FI Ana Rölesi, yakıt pompası ve bunları birbirine bağlayan kablolamadan oluşur. Bu arızanın ihmal edilmesi durumunda, motor yetersiz yakıt beslemesi alacak ve 'fakir karışım' (lean mixture) ile çalışacaktır. Fakir karışım, yanma odası sıcaklıklarını tehlikeli derecede yükseltir, bu da motorun detonasyon yapmasına, bujilerin erimesine, egzoz valflerinin ve piston tepelerinin hasar görmesine neden olabilir. Ayrıca, katalitik konvertör aşırı ısınarak bozulabilir ve geri dönüşü olmayan ciddi motor arızalarına yol açabilir.",
+    "symptoms": [
+      "Motor çalışmaz veya zor çalışır (uzun marş süresi).",
+      "Motor rölantide düzensiz çalışır veya stop eder.",
+      "Araç hareket halindeyken güç kaybı yaşanır veya tekler.",
+      "Yüksek devirlerde motorun aniden durması veya hızlanma sorunları.",
+      "Yakıt enjeksiyon sistemi arıza lambası (MIL) yanar."
+    ],
+    "commonCauses": [
+      "**PGM-FI Ana Rölesi Arızası:** Bu, 1990'lı yılların Honda/Acura modellerinde kronik bir üretim hatasıdır. Rölenin içindeki lehim bağlantıları zamanla, özellikle motor bölmesindeki ısı döngüsü nedeniyle çatlar. Bu, yakıt pompasına ve ECU'ya giden gücün kesintili veya tamamen kaybolmasına neden olur. Röle, çoğu zaman gösterge panelinin altında, sürücü tarafında bulunur.",
+      "**Yakıt Pompası Arızası:** Yakıt pompasının kendisi elektriksel olarak arızalanabilir (iç sargılarında açık devre) veya mekanik olarak sıkışabilir. Pompa, yakıt deposunun içinde yer alır.",
+      "**Elektriksel Kablolama Sorunları:** Yakıt pompasına giden güç kablolarında veya PGM-FI Ana Rölesi ile ECU arasındaki kontrol kablolarında korozyon, aşınma, kopukluk veya kısa devreler. Özellikle yakıt tankı üzerindeki kablo demeti bağlantı noktaları veya şasiye giden topraklama kabloları zamanla hasar görebilir.",
+      "**Sigorta Yanması:** Yakıt pompası veya PGM-FI Ana Rölesi ile ilgili bir sigortanın atması (motor bölmesi veya iç sigorta kutusu).",
+      "**ECU Arızası:** Daha nadir olmakla birlikte, ECU'nun yakıt pompası sürücü devresi arızalanabilir ve röleyi tetikleyemez."
+    ],
+    "stepByStepSolution": [
+      "**Adım 1: Ön Kontrol ve Güvenlik Hazırlıkları**",
+      "   - Akü bağlantılarını kontrol edin ve temiz olduğundan emin olun.",
+      "   - Motorun soğuk olduğundan emin olun ve yangın riskini önlemek için iyi havalandırılmış bir alanda çalışın. Yakıt sisteminde çalışırken göz ve el koruması kullanın.",
+      "   - Gerekli Aletler: Multimetre (voltaj, direnç ve süreklilik ölçümü için), kablo test cihazı (test light), anahtar takımı (lokma seti, tornavidalar), pense, yalıtım bandı, PGM-FI Ana Rölesi (yedek), tercihen yakıt basınç göstergesi.",
+      "**Adım 2: Sigorta Kontrolü**",
+      "   - Motor bölmesindeki sigorta kutusunu (akünün yanında) ve araç içindeki sigorta kutusunu (genellikle sürücü tarafı gösterge panelinin altında) kontrol edin. 'FUEL PUMP' (Yakıt Pompası) veya 'MAIN' (Ana Röle) olarak etiketlenmiş sigortaları bulun. Bunlar genellikle 15A veya 20A değerindedir.",
+      "   - **Alet:** Sigorta çekme pensesi veya küçük tornavida. Multimetre ile sigortanın her iki ucunda süreklilik kontrolü yapın (0 Ohm veya çok düşük direnç olmalı). Görsel kontrol yeterli değildir.",
+      "**Adım 3: PGM-FI Ana Rölesi Kontrolü ve Testi (KRONİK SORUN)**",
+      "   - **Konum:** Vigor'da bu röle genellikle sürücü tarafında, direksiyon kolonunun solunda veya sağında, gösterge panelinin altına gizlenmiş, genellikle kırmızımsı-kahverengi veya gri renkli, 5 veya 7 pinli bir ünitedir. Bazı modellerde torpido gözünün arkasında da bulunabilir.",
+      "   - **Sökme:** Röleyi bağlantı soketinden dikkatlice ayırın. Genellikle iki adet 10mm somun veya bir klips ile sabitlenmiştir. Sökerken plastik tırnaklara zarar vermemeye özen gösterin.",
+      "   - **Görsel Kontrol:** Röleyi açabilirseniz (genellikle dış kasayı nazikçe ayırarak), içindeki lehim noktalarını büyüteçle kontrol edin. Çatlaklar (hairline cracks) yaygın bir sorundur.",
+      "   - **Voltaj ve Toprak Kontrolü (Röle Soketi):** Multimetre ile röle soketindeki pinleri kontrol edin. Kontak anahtarı 'II' konumundayken:",
+      "     - Bir pinde sürekli akü voltajı (yaklaşık 12V) olmalı (genellikle ana güç girişi).",
+      "     - Bir başka pinde anahtar açıldığında gelen akü voltajı (yaklaşık 12V) olmalı (IGN).",
+      "     - ECU'dan gelen tetikleme sinyali için bir pinde topraklama (0V) sinyali aranmalıdır. Bu sinyal genellikle motor marş yaparken veya anahtar 'II' konumuna getirildiğinde kısa bir süreliğine (2-3 saniye) görünür.",
+      "     - Yakıt pompasına giden çıkış pini, röle çekildiğinde akü voltajı göstermelidir.",
+      "   - **Değişim:** Bu röle bu modelde o kadar sık arızalanır ki, test sonuçları kesin olmasa bile yedek bir OEM veya yüksek kaliteli aftermarket röle ile değiştirmek çoğu zaman en hızlı ve en güvenilir çözümdür. Yeni röle takıldığında marş yapmayı deneyin ve yakıt pompasının çalıştığını dinleyin (arka koltuk altından hafif bir vızıldama sesi).",
+      "**Adım 4: Yakıt Pompası Kontrolü**",
+      "   - **Konum:** Yakıt pompası, arka koltuk minderinin altında, yakıt deposunun içine yerleştirilmiştir. Arka koltuğu kaldırarak veya sökerek yakıt deposu erişim plakasını (genellikle 4-6 adet 10mm vida ile tutulur) bulun ve çıkarın.",
+      "   - **Güç Kontrolü:** Yakıt pompası konnektörünü ayırın. Multimetre ile konnektördeki (+) ve (-) pinler arasında kontak 'II' konumuna getirildiğinde veya motor marş yapılırken yaklaşık 12V olup olmadığını kontrol edin. Bu voltaj sadece birkaç saniye için görünür (pompa primingi için).",
+      "   - **Direnç Kontrolü:** Multimetre ile yakıt pompasının kendi bağlantı pinleri arasında direnç ölçümü yapın. Normalde düşük bir direnç değeri (0.5-5 Ohm arası) okunmalıdır. 'OL' (Open Loop) veya çok yüksek direnç okuması, pompanın elektriksel olarak arızalı olduğunu gösterir.",
+      "   - **Değişim:** Yakıt pompasına güç gelmesine rağmen çalışmıyorsa veya direnci normal değerler içinde değilse, yakıt pompasının kendisi arızalıdır. Yakıt deposundan sökülerek yenisiyle değiştirilmelidir. Bu işlem dikkatlice yapılmalı, yakıt sızıntısını önlemek için uygun contalar ve sıkma torkları kullanılmalıdır. Yeni bir yakıt filtresi ile birlikte değiştirmek, sistemin ömrünü uzatır.",
+      "**Adım 5: Kablolama Tesisatı Kontrolü**",
+      "   - PGM-FI Ana Rölesi ile yakıt pompası arasındaki güç kablosu ile ECU ve röle arasındaki kontrol kablolarını görsel olarak ve multimetre ile süreklilik testi yaparak kontrol edin. Kablolarda ezilme, kopma, korozyon veya kısa devre belirtileri arayın.",
+      "**Adım 6: ECU Çıkış Kontrolü (Gerekirse)**",
+      "   - Eğer tüm diğer kontroller normalse ve yakıt pompası hala çalışmıyorsa, ECU'dan yakıt pompası rölesini tetikleyen toprak sinyalini (D2 pini, sarı/yeşil kablo) kontrol edin. Bu sinyal yoksa, ECU'da bir arıza şüphesi oluşur. Bu, genellikle son başvurulacak bir testtir."
+    ],
+    "estimatedCostInfo": "Bu arızanın onarımı, sorunun PGM-FI Ana Rölesi mi yoksa yakıt pompasında mı olduğuna bağlı olarak değişir. PGM-FI Ana Rölesi değişimi için parça maliyeti 50-150 USD, işçilik 0.5-1.5 saat (50-150 USD) olup toplamda 100-300 USD civarındadır. Yakıt pompası değişimi için parça maliyeti 150-400 USD, işçilik 1.5-3 saat (150-300 USD) olup toplamda 300-700 USD civarındadır. Kablolama onarımları duruma göre 100-300 USD ek maliyet getirebilir. Teşhis ve onarım süresi toplamda 1 ila 4 saat arasında değişebilir.",
+    "severity": "Critical"
+  },
+  "videos": []
+}

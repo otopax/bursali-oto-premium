@@ -1,0 +1,1172 @@
+[
+  {
+    "boxName": "Instrument panel fuse block",
+    "boxAspectRatio": 0.6563758389261745,
+    "fuses": [
+      {
+        "id": "SDM",
+        "layout": {
+          "top": 7.157464212678937,
+          "left": 8.590604026845638,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Safety systems manager"
+      },
+      {
+        "id": "EMS1",
+        "layout": {
+          "top": 20.449897750511248,
+          "left": 8.590604026845638,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine management system",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "OBD",
+        "layout": {
+          "top": 33.74233128834356,
+          "left": 8.590604026845638,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "On-Board Diagnostics",
+        "relatedEntities": [
+          "SISTEMA_OBD"
+        ]
+      },
+      {
+        "id": "DOOR LOCK",
+        "layout": {
+          "top": 47.239263803680984,
+          "left": 8.590604026845638,
+          "width": 15.167785234899329,
+          "height": 10.838445807770961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Central locking",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "id": "HORN",
+        "layout": {
+          "top": 60.32719836400818,
+          "left": 8.590604026845638,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/horn-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "WIPER",
+        "layout": {
+          "top": 7.157464212678937,
+          "left": 25.369127516778523,
+          "width": 15.302013422818792,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Windshield wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "STOP LAMP",
+        "layout": {
+          "top": 20.449897750511248,
+          "left": 25.369127516778523,
+          "width": 15.302013422818792,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Brake light",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TESTIGO_FRENO_DE_MANO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/brake-light-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "RR DEFOG",
+        "layout": {
+          "top": 33.74233128834356,
+          "left": 25.369127516778523,
+          "width": 15.302013422818792,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Rear defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "RR FOG",
+        "layout": {
+          "top": 47.239263803680984,
+          "left": 25.369127516778523,
+          "width": 15.302013422818792,
+          "height": 10.838445807770961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear fog light",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/fog-light-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "MIRROR/ SUNROOF*",
+        "layout": {
+          "top": 60.32719836400818,
+          "left": 25.369127516778523,
+          "width": 15.302013422818792,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Mirror/ Sunroof",
+        "relatedEntities": [
+          "ESPEJO",
+          "TECHO_SOLAR",
+          "ESPEJO_LATERAL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/sunroof-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "CLUSTER",
+        "layout": {
+          "top": 7.157464212678937,
+          "left": 41.87919463087248,
+          "width": 15.302013422818792,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument panel",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "AUDIO/RKE*",
+        "layout": {
+          "top": 59.468302658486714,
+          "left": 42.41610738255034,
+          "width": 18.355407328108786,
+          "height": 13.0879345603272
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Remote keyless entry",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "id": "T/SIG",
+        "layout": {
+          "top": 7.157464212678937,
+          "left": 58.52348993288591,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Turn signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "CIGAR",
+        "layout": {
+          "top": 20.449897750511248,
+          "left": 58.52348993288591,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Cigarette lighter/ 12V outlet",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "CLUSTER/ROOM LAMP",
+        "layout": {
+          "top": 33.74233128834356,
+          "left": 58.52348993288591,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument panel / Interior light",
+        "relatedEntities": [
+          "TABLERO",
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "SUN ROOF",
+        "layout": {
+          "top": 47.239263803680984,
+          "left": 58.52348993288591,
+          "width": 15.167785234899329,
+          "height": 10.838445807770961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/sunroof-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "EMS2",
+        "layout": {
+          "top": 7.157464212678937,
+          "left": 75.43624161073825,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine management system",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "AUDIO",
+        "layout": {
+          "top": 20.449897750511248,
+          "left": 75.43624161073825,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/radio-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "CAVIDAD",
+        "layout": {
+          "top": 33.74233128834356,
+          "left": 75.43624161073825,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "relatedMayBe": [
+          "TOMA_12V"
+        ],
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "CAVITY",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "B/UP LAMP",
+        "layout": {
+          "top": 47.239263803680984,
+          "left": 75.43624161073825,
+          "width": 15.167785234899329,
+          "height": 10.838445807770961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Reverse light",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "DEFOG MIRROR",
+        "layout": {
+          "top": 60.32719836400818,
+          "left": 75.43624161073825,
+          "width": 15.167785234899329,
+          "height": 11.042944785276074
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Mirror defroster",
+        "relatedEntities": [
+          "DESEMPANADOR(of=ESPEJO)",
+          "DESEMPANADOR(of=ESPEJO_LATERAL)"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/c864ea50_fusebox-aveo.jpg"
+    },
+    "templateId": "6192b3be037c0500048fed83",
+    "isTranslated": true,
+    "imageClusters": [
+      "619562e50fed4a00040f0b04"
+    ],
+    "boxScaleMultiplier": "0.7",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-aveo-2017-genid-g1.1-0.webp"
+  },
+  {
+    "boxName": "Engine compartment fuse block",
+    "boxAspectRatio": 0.5127272727272727,
+    "fuses": [
+      {
+        "id": "BATT",
+        "layout": {
+          "top": 1.8912529550827424,
+          "left": 9.090909090909092,
+          "width": 8,
+          "height": 16.07565011820331
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Battery",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "PK/LP LH",
+        "layout": {
+          "top": 1.4184397163120568,
+          "left": 19.03030303030303,
+          "width": 8.363636363636363,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left parking light",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "PK/LP RH",
+        "layout": {
+          "top": 12.529550827423167,
+          "left": 19.03030303030303,
+          "width": 8.363636363636363,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right parking light",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "IGN2/ST",
+        "layout": {
+          "top": 1.8912529550827424,
+          "left": 29.333333333333332,
+          "width": 8,
+          "height": 16.07565011820331
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Ignition 2 / Start",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/starter-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "FUSE PULLER",
+        "layout": {
+          "top": 1.8912529550827424,
+          "left": 52.36363636363637,
+          "width": 6.0606060606060606,
+          "height": 14.420803782505912
+        },
+        "kind": {
+          "type": "fusepuller",
+          "format": "up",
+          "notUsed": false
+        },
+        "description": "Fuse puller tool",
+        "relatedEntities": [
+          "FUSIBLE_FUSEPULLER"
+        ]
+      },
+      {
+        "id": "H/L LOW RELAY",
+        "layout": {
+          "top": 2.127659574468085,
+          "left": 70.78787878787878,
+          "width": 11.878787878787879,
+          "height": 20.33096926713948
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Low beam headlight relay",
+        "relatedEntities": [
+          "RELAY_INTERMINTENTES",
+          "RELAY(protects=LUZ_BAJA)"
+        ]
+      },
+      {
+        "id": "ACC/IGN1",
+        "layout": {
+          "top": 19.62174940898345,
+          "left": 29.333333333333332,
+          "width": 8,
+          "height": 16.07565011820331
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Accessories / Ignition 1",
+        "relatedEntities": [
+          "ACCESORIO",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/starter-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "HAZARD",
+        "layout": {
+          "top": 21.749408983451538,
+          "left": 39.87878787878788,
+          "width": 8.363636363636363,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Hazard",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "H/L LOW RH",
+        "layout": {
+          "top": 22.458628841607563,
+          "left": 60.969696969696976,
+          "width": 9.090909090909092,
+          "height": 8.983451536643026
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right low beam headlight",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "H/L LOW LH",
+        "layout": {
+          "top": 33.56973995271868,
+          "left": 60.969696969696976,
+          "width": 9.090909090909092,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left low beam headlight",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "FAN HI RELAY",
+        "layout": {
+          "top": 26.47754137115839,
+          "left": 72.72727272727273,
+          "width": 12,
+          "height": 20.56737588652482
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling fan high speed relay",
+        "relatedEntities": [
+          "RELAY(protects=VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_ALTA))",
+          "RELAY(protects=VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_ALTA))"
+        ]
+      },
+      {
+        "id": "FAN HI",
+        "layout": {
+          "top": 24.113475177304963,
+          "left": 88.60606060606061,
+          "width": 8,
+          "height": 15.839243498817968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Cooling fan high speed",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_ALTA)",
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_ALTA)"
+        ]
+      },
+      {
+        "id": "FUEL PUMP RELAY",
+        "layout": {
+          "top": 37.35224586288416,
+          "left": 1.8181818181818181,
+          "width": 9.212121212121211,
+          "height": 27.659574468085108
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/fuel-pump-relay",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "P/WINDOW RELAY*",
+        "layout": {
+          "top": 37.35224586288416,
+          "left": 13.939393939393941,
+          "width": 9.212121212121211,
+          "height": 27.659574468085108
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Power window relay (if equipped)",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "id": "PARK LAMP RELAY",
+        "layout": {
+          "top": 37.35224586288416,
+          "left": 26.181818181818183,
+          "width": 9.212121212121211,
+          "height": 27.659574468085108
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Parking lights relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_DE_ESTACIONAMIENTO)"
+        ]
+      },
+      {
+        "id": "FRT FOG RELAY*",
+        "layout": {
+          "top": 37.35224586288416,
+          "left": 38.42424242424242,
+          "width": 9.333333333333334,
+          "height": 27.659574468085108
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog lights relay (if equipped)",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ]
+      },
+      {
+        "id": "H/L HI RELAY",
+        "layout": {
+          "top": 37.35224586288416,
+          "left": 50.42424242424243,
+          "width": 9.212121212121211,
+          "height": 27.659574468085108
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "High beam headlight relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ALTA)"
+        ]
+      },
+      {
+        "id": "FRT FOG*",
+        "layout": {
+          "top": 44.680851063829785,
+          "left": 60.969696969696976,
+          "width": 9.090909090909092,
+          "height": 8.983451536643026
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front defogger (if equipped)",
+        "relatedEntities": [
+          "DESEMPANADOR(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "H/L HI",
+        "layout": {
+          "top": 55.55555555555556,
+          "left": 60.969696969696976,
+          "width": 9.090909090909092,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "High beam headlight",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "FAN LOW RELAY",
+        "layout": {
+          "top": 51.77304964539007,
+          "left": 72.72727272727273,
+          "width": 12,
+          "height": 20.56737588652482
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling fan low speed",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_BAJA)",
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA)"
+        ]
+      },
+      {
+        "id": "FAN LOW",
+        "layout": {
+          "top": 44.680851063829785,
+          "left": 88.12121212121212,
+          "width": 9.090909090909092,
+          "height": 8.983451536643026
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cooling fan low speed",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_BAJA)",
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA)"
+        ]
+      },
+      {
+        "id": "A/C COMP*",
+        "layout": {
+          "top": 55.55555555555556,
+          "left": 88.12121212121212,
+          "width": 9.090909090909092,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air conditioning compressor (if equipped)",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "P/WINDOW2*",
+        "layout": {
+          "top": 68.5579196217494,
+          "left": 8.848484848484848,
+          "width": 8.363636363636363,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Power window 2 (if equipped)",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "P/WINDOW1*",
+        "layout": {
+          "top": 79.90543735224587,
+          "left": 8.848484848484848,
+          "width": 8.606060606060606,
+          "height": 14.893617021276595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power window 1 (if equipped)",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "FUEL PUMP",
+        "layout": {
+          "top": 67.37588652482269,
+          "left": 19.03030303030303,
+          "width": 8.848484848484848,
+          "height": 8.983451536643026
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/fuel-pump-fuse",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "ECU",
+        "layout": {
+          "top": 78.25059101654847,
+          "left": 19.03030303030303,
+          "width": 8.848484848484848,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Electronic control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "EMS1*",
+        "layout": {
+          "top": 89.36170212765957,
+          "left": 19.03030303030303,
+          "width": 8.848484848484848,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine management system",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "EMS2*",
+        "layout": {
+          "top": 71.15839243498819,
+          "left": 29.575757575757578,
+          "width": 8.727272727272728,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine management system",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "SPARE 1",
+        "layout": {
+          "top": 67.37588652482269,
+          "left": 51.272727272727266,
+          "width": 8.242424242424242,
+          "height": 8.983451536643026
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "SPARE 2",
+        "layout": {
+          "top": 78.25059101654847,
+          "left": 51.272727272727266,
+          "width": 8.242424242424242,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "SPARE 3",
+        "layout": {
+          "top": 89.36170212765957,
+          "left": 51.272727272727266,
+          "width": 8.242424242424242,
+          "height": 9.219858156028367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "ABS*",
+        "layout": {
+          "top": 67.84869976359337,
+          "left": 61.33333333333333,
+          "width": 8,
+          "height": 16.07565011820331
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Anti-lock brakes*",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "A/C RELAY*",
+        "layout": {
+          "top": 77.30496453900709,
+          "left": 72.72727272727273,
+          "width": 12,
+          "height": 20.33096926713948
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning relay (if equipped)",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/aveo/info/fusebox/2017/air-conditioning-relay",
+            "urlWithAnchor": "/chevrolet/aveo/info/fusebox/2017/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "MAIN RELAY*",
+        "layout": {
+          "top": 70.2127659574468,
+          "left": 88.60606060606061,
+          "width": 8.606060606060606,
+          "height": 27.423167848699766
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Main relay (if equipped)",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/fe015cdf_chevrolet-aveo-2009.jpg"
+    },
+    "templateId": "6192b54e037c0500048fed84",
+    "isTranslated": true,
+    "imageClusters": [],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-aveo-2017-genid-g1.1-1.webp"
+  }
+]

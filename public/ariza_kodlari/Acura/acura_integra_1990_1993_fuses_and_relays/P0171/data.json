@@ -1,0 +1,38 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_integra_1990_1993_fuses_and_relays",
+  "updatedAt": "2026-06-29T00:55:18.343Z",
+  "aiAnalysis": {
+    "description": "P0171 kodu, motor kontrol ünitesinin (ECU) motorun yanma odasına giren hava/yakıt karışımının çok fakir olduğunu, yani belirlenen standarttan daha fazla hava veya daha az yakıt içerdiğini tespit etmesidir. Acura Integra'nın dört silindirli motorunda 'Bank 1' terimi tüm motoru kapsar.",
+    "symptoms": [
+      "Kontrol Motoru Lambası (CEL) yanar",
+      "Motor rölantide düzensiz veya sallantılı çalışır",
+      "Hızlanma sırasında performans düşüşü veya tereddüt",
+      "Yakıt tüketiminde gözle görülür artış",
+      "Egzozdan farklı, sıra dışı kokular (örn. kükürt)",
+      "Motorun zor çalışması veya istemsizce durması (daha ciddi durumlarda)"
+    ],
+    "commonCauses": [
+      "**Vakum Kaçakları:** Emme manifoldu contaları, vakum hortumları, PCV valfi veya fren hidroliği güçlendiricisi gibi bileşenlerdeki kaçaklar motorun fazladan 'ölçülmemiş' hava almasına neden olur.",
+      "**Yakıt Basıncı Sorunları:** Yakıt pompasının zayıf olması, tıkalı bir yakıt filtresi veya arızalı bir yakıt basınç regülatörü yakıt rayında düşük basınca yol açar.",
+      "**Yakıt Enjektörleri:** Tıkalı, kirli veya arızalı yakıt enjektörleri silindirlere yeterli yakıt püskürtemez.",
+      "**Arızalı Manifold Mutlak Basınç (MAP) Sensörü:** MAP sensörü, motorun emme manifoldundaki basıncı yanlış okuyarak ECU'ya yanlış hava miktarı bilgisi gönderebilir ve yakıt oranının yanlış ayarlanmasına neden olabilir.",
+      "**Oksijen (O2) Sensörü Arızası:** Ön (upstream) oksijen sensörünün arızalanması veya ısıtıcısının çalışmaması, ECU'ya yanlış egzoz gazı bilgisi ileterek fakir karışım tespiti yapılmasına sebep olabilir.",
+      "**Egzoz Kaçakları:** Oksijen sensörü öncesi egzoz sistemindeki kaçaklar, dış havanın egzoz akışına karışmasına ve O2 sensörünün hatalı bir şekilde fakir karışım okumasına neden olabilir.",
+      "**Tıkalı Katalitik Konvertör:** Nadir olmakla birlikte, aşırı tıkalı bir katalitik konvertör, motorun doğru nefes almasını engelleyerek karışımı bozabilir."
+    ],
+    "stepByStepSolution": [
+      "**Adım 1: Arıza Kodunu Doğrula ve Aracın Geçmişini İncele.** Profesyonel bir tarayıcı ile P0171 kodunu doğrulayın. Araçta yakın zamanda yapılan bir bakım veya parça değişimi olup olmadığını kontrol edin, bu ipucu olabilir. Kodu silin ve motorun normal çalışma sıcaklığına gelmesini sağlayarak kodun tekrar gelip gelmediğini gözlemleyin.",
+      "**Adım 2: Vakum Kaçaklarını Detaylıca Tespit Et.** Tüm vakum hortumlarını, emme manifoldu contalarını, PCV valfini ve bağlantılarını görsel olarak kontrol edin. Basınçlı duman makinesi kullanarak emme sistemindeki en küçük kaçakları bile tespit edin. Motor çalışırken vakum hattı sızıntıları için karbüratör temizleyici veya benzeri bir sprey ile şüpheli bölgelere püskürtmek, motor devrinde bir değişiklik yaratıyorsa kaçak olduğunu gösterir.",
+      "**Adım 3: Yakıt Sistemi Basıncını ve Akışını Ölç.** Yakıt rayına bağlanan bir yakıt basınç göstergesi ile sistem basıncını üreticinin spesifikasyonlarına (genellikle 2.5-3.0 bar arası) göre kontrol edin. Ayrıca, yakıt filtresinin tıkalı olup olmadığını belirlemek için basıncı test edin ve yakıt pompasının akış hızını kontrol edin. Düşük basınç veya akış varsa yakıt filtresini veya yakıt pompasını değiştirin.",
+      "**Adım 4: Yakıt Enjektörlerini Kontrol Et.** Her bir yakıt enjektörünün elektriksel direncini ve akım çekişini multimetre ile kontrol edin. Mümkünse, özel bir test düzeneği kullanarak enjektörlerin püskürtme desenini ve akış dengesini kontrol edin. Kirli enjektörleri ultrasonik yöntemle temizleyin veya arızalı olanları değiştirin.",
+      "**Adım 5: MAP Sensörünü Test Et.** Tarayıcı üzerinden MAP sensörünün canlı verilerini (manifoldundaki mutlak basınç değeri) izleyin. Rölantide ve farklı motor devirlerinde doğru ve stabil değerler okuduğundan emin olun. Sensörün bağlantısını, vakum hattını ve kendisini kontrol edin; arızalı ise değiştirin. (Bu modelde MAF sensörü yerine MAP sensörü kullanılır.)",
+      "**Adım 6: Oksijen (O2) Sensörünün Verilerini Analiz Et.** Tarayıcı ile ön (upstream) oksijen sensörünün canlı verilerini (voltaj salınımları) izleyin. Sensörün hızlı ve düzenli bir şekilde 0.1V ile 0.9V arasında salınım yaptığından emin olun. Yavaş tepki veren veya sabit kalan bir sensör arızalı olabilir. Sensör ısıtıcısının çalıştığını da kontrol edin. Gerekirse sensörü değiştirin.",
+      "**Adım 7: Egzoz Kaçaklarını Kontrol Et.** Egzoz manifoldunda, bağlantı contalarında veya ön egzoz borusunda, oksijen sensörü öncesinde herhangi bir çatlak veya kaçak olup olmadığını dikkatlice inceleyin. Bu tür kaçaklar, dışarıdan hava emilimine neden olarak O2 sensörünün yanlış fakir okumasına yol açar."
+    ],
+    "estimatedCostInfo": "Onarım maliyeti, sorunun temel nedenine bağlı olarak büyük ölçüde değişir. Basit bir vakum hortumu veya yakıt filtresi değişimi için 30-100 EUR, bir oksijen sensörü için 80-250 EUR, bir MAP sensörü için 90-300 EUR arasında maliyetler bekleyebiliriz. Yakıt pompası veya enjektörler gibi daha ciddi arızalarda maliyet 350-900 EUR ve üzeri olabilir. İşçilik süresi, teşhis ve onarımın karmaşıklığına bağlı olarak 1 ila 4 saat arasında değişebilir.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

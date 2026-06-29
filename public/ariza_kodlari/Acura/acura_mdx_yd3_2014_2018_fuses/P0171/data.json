@@ -1,0 +1,36 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_mdx_yd3_2014_2018_fuses",
+  "updatedAt": "2026-06-29T00:57:30.046Z",
+  "aiAnalysis": {
+    "description": "P0171 kodu, motorun Yakıt Sistemi 1'de (genellikle motorun ilk silindirini içeren taraf) fakir bir karışım algıladığını gösterir. Bu, motor kontrol ünitesinin (ECM/PCM) egzoz gazlarındaki oksijen sensörlerinden gelen verileri analiz ederek yakıt-hava karışımının optimumdan daha fazla hava veya daha az yakıt içerdiğini saptaması anlamına gelir. Sistem yakıt ekleyerek dengelemeye çalışır, ancak bu dengeleme limitlerinin ötesine geçmiştir.",
+    "symptoms": [
+      "Motor Kontrol Işığı'nın (Check Engine Light) yanması",
+      "Motorun düzensiz çalışması veya rölantide sallanma",
+      "Hızlanma sırasında güç kaybı veya tereddüt",
+      "Yakıt tüketiminde artış",
+      "Nadiren, motorun zor çalışması veya durması"
+    ],
+    "commonCauses": [
+      "Vakum Kaçakları: Emme manifoldu contası, vakum hortumları, PCV valfi veya hortumu gibi emme sistemindeki herhangi bir noktadan giren ölçülmemiş hava.",
+      "Kirlenmiş veya Arızalı Kütle Hava Akış (MAF) Sensörü: Yanlış hava akışı okumaları, motorun yanlış miktarda yakıt enjekte etmesine neden olur.",
+      "Düşük Yakıt Basıncı: Tıkanmış yakıt filtresi, zayıf yakıt pompası veya arızalı yakıt basınç regülatörü nedeniyle yakıt rayına yeterli yakıtın ulaşmaması.",
+      "Tıkanmış veya Kirlenmiş Yakıt Enjektörleri: Yakıt Sistemi 1'deki bir veya daha fazla enjektörün doğru miktarda yakıt püskürtememesi.",
+      "Egzoz Kaçağı: Ön oksijen sensörü (Bank 1 Sensör 1) öncesindeki egzoz manifoldu veya egzoz borusundaki kaçaklar, yanlış oksijen sensörü okumalarına yol açar.",
+      "Arızalı Ön Oksijen (O2) Sensörü (Yakıt Sistemi 1, Sensör 1): Sensörün kendisi arızalı olup, doğru olmayan bir fakir karışım durumu rapor etmesi."
+    ],
+    "stepByStepSolution": [
+      "Profesyonel Bir Teşhis Tarayıcı Bağlayın: Canlı veri okuyun. Özellikle Yakıt Sistemi 1 için kısa (STFT) ve uzun vadeli (LTFT) yakıt düzeltmelerini, MAF sensörü okumalarını ve ön O2 sensörü (Bank 1 Sensör 1) voltajlarını kontrol edin. Yüksek pozitif yakıt düzeltmeleri (+%15-20 üzeri), fakir karışım durumunu doğrular.",
+      "Vakum Kaçaklarını Titizlikle Kontrol Edin: Tüm vakum hortumlarını, emme manifoldu contalarını, fren hidroliği güçlendiricisini ve PCV sistemini görsel olarak inceleyin. Gerekirse duman makinesi kullanarak veya yanıcı olmayan özel bir sprey ile olası kaçak noktalarını test edin.",
+      "MAF Sensörünü İnceleyin ve Temizleyin: MAF sensörünün bağlantılarını ve kablo demetini kontrol edin. MAF sensörünü özel bir MAF temizleyici ile dikkatlice temizleyin. Temizlik sonrası sorun devam ederse, sensörün teknik özelliklere göre doğru okuma yapıp yapmadığını test edin; arızalıysa değiştirin.",
+      "Yakıt Sistemini Test Edin: Yakıt basıncını araç üreticisinin spesifikasyonlarına göre test edin. Yakıt filtresinin (varsa) durumunu kontrol edin. Yakıt enjektörlerinin akışını ve püskürtme desenini test ettirmek veya ultrasonik temizlik yapmak gerekebilir.",
+      "Egzoz Kaçaklarını Tespit Edin: Ön oksijen sensöründen önceki egzoz manifoldu veya egzoz borusunda herhangi bir çatlak, delik veya conta kaçağı olup olmadığını dikkatlice kontrol edin.",
+      "Oksijen Sensörünü Değerlendirin: Yukarıdaki tüm kontrollerin ardından sorun devam ediyorsa, ön O2 sensörünün (Bank 1 Sensör 1) doğru çalıştığını onaylayın. Canlı veri akışında sensörün tepki süresini ve voltaj aralığını izleyin. Yavaş veya tutarsız tepki veriyorsa, sensörün değiştirilmesi gerekebilir.",
+      "Kodu Temizleyin ve Test Sürüşü Yapın: Tüm onarımlar tamamlandıktan sonra, arıza kodunu silin ve sorunun tamamen çözüldüğünden emin olmak için aracı farklı sürüş koşullarında kapsamlı bir test sürüşüne çıkarın."
+    ],
+    "estimatedCostInfo": "Onarım maliyetleri, P0171 kodunun temel nedenine bağlı olarak büyük ölçüde değişir. Basit bir vakum hortumu değişimi 50-200 USD gibi düşük maliyetli olabilirken, bir MAF sensörü değişimi 150-400 USD, yakıt pompası veya enjektör değişimi ise 300-1000 USD veya daha fazlaya mal olabilir. Tahmini onarım süresi 0.5 saatten 4 saate kadar değişebilir. Teşhis ücretleri genellikle ayrı hesaplanır.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

@@ -1,0 +1,39 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_mdx_yd2_2007_2013_fuses",
+  "updatedAt": "2026-06-29T00:57:08.414Z",
+  "aiAnalysis": {
+    "description": "P0171 arıza kodu, motor kontrol ünitesinin (ECU), Bank 1'deki (birinci silindir sırası, genellikle motorun ön tarafı veya 1 numaralı silindirin bulunduğu taraf) oksijen sensörlerinden gelen veriye dayanarak yakıt-hava karışımının çok fakir (yani çok fazla hava, az yakıt) olduğunu tespit ettiğini belirtir. ECU, bu durumu düzeltmek için yakıt enjeksiyonunu artırmaya çalışır ancak başarılı olamaz.",
+    "symptoms": [
+      "Motor Arıza Lambasının (MIL) yanması",
+      "Rölantide düzensiz çalışma veya titreme",
+      "Performans kaybı, hızlanmada tereddüt",
+      "Yakıt tüketiminde artış",
+      "Bazı durumlarda motor teklemesi veya zor çalışma"
+    ],
+    "commonCauses": [
+      "Vakum kaçağı (emme manifoldu contası, PCV hortumu, fren destek hortumu, diğer vakum hatları)",
+      "Kirlenmiş veya arızalı Kütle Hava Akış (MAF) sensörü",
+      "Düşük yakıt basıncı (yakıt pompası arızası, tıkalı yakıt filtresi, arızalı yakıt basınç regülatörü)",
+      "Tıkalı yakıt enjektörleri (Bank 1'deki silindirler için)",
+      "Egzoz sisteminde oksijen sensöründen önce meydana gelen kaçaklar",
+      "Arızalı ısıtmalı oksijen sensörü (HO2S) – Bank 1, Sensör 1 (katalitik konvertör öncesi)",
+      "PCV valfinin açık kalması",
+      "EVAP sisteminde sızıntı"
+    ],
+    "stepByStepSolution": [
+      "Arıza kodunu ve canlı verileri (yakıt düzeltmeleri, MAF sensör değeri, O2 sensör değerleri) teşhis cihazı ile kontrol edin.",
+      "Tüm vakum hortumlarını, emme manifoldunu ve PCV sistemini görsel olarak kontrol edin. Gözle görülür çatlaklar, kopukluklar veya gevşek bağlantılar arayın. Gerekirse duman makinesi veya püskürtülebilir bir ürün (örn. karbüratör temizleyici) ile vakum kaçağı testi yapın.",
+      "MAF sensörünü inceleyin ve gerekirse özel MAF temizleyici ile temizleyin. MAF sensörünün canlı verilerini rölantide ve farklı devirlerde izleyin. Değerler araç spesifikasyonlarına uymuyorsa sensör arızalı olabilir.",
+      "Yakıt basıncını bir yakıt basınç göstergesi ile test edin. Basınç düşükse, yakıt filtresini, yakıt pompasını veya yakıt basınç regülatörünü kontrol edin.",
+      "Bank 1'deki oksijen sensörü (katalitik konvertör öncesi) voltaj dalgalanmalarını izleyin. Sensörün düzgün çalıştığından ve karışımı doğru algıladığından emin olun. Gerekirse sensörün ısıtıcısını kontrol edin.",
+      "Enjektörlerin tıkalı olup olmadığını kontrol edin. Yakıt sistemine enjektör temizleyici eklemeyi veya profesyonel enjektör temizliği/testi yapmayı düşünün.",
+      "Egzoz sisteminde Bank 1 oksijen sensöründen önce sızıntı olup olmadığını kontrol edin. Bu, sensörün hatalı veri okumasına neden olabilir.",
+      "Onarımları tamamladıktan sonra arıza kodlarını silin ve aracı test sürüşüne çıkarın. Yakıt düzeltmelerinin normal seviyelere döndüğünü onaylamak için teşhis cihazını tekrar bağlayın."
+    ],
+    "estimatedCostInfo": "Maliyet, arızanın kaynağına göre büyük ölçüde değişir. Basit bir vakum hortumu değişimi 50-150 USD aralığında olabilirken, yeni bir MAF sensörü 150-400 USD, yakıt pompası veya emme manifoldu conta değişimi işçilikle birlikte 400-1000 USD veya daha fazlasına mal olabilir. Teşhis için genellikle 1-2 saat, onarım için ise 0.5 saatten 4-6 saate kadar bir süre gerekebilir. Bu tahmini maliyetler parçalar ve işçilik dahil olup, lokasyona göre farklılık gösterebilir.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

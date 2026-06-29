@@ -1,0 +1,40 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_cl_2000_2003_fuses",
+  "updatedAt": "2026-06-29T00:53:50.974Z",
+  "aiAnalysis": {
+    "description": "Sistem Çok Zayıf (Bank 1). Motor kontrol ünitesi (ECU), motorun 1. silindir sırasındaki yakıt-hava karışımının olması gerekenden daha fazla hava veya daha az yakıt içerdiğini tespit etmiştir.",
+    "symptoms": [
+      "Motor Arıza Lambası (MIL) yanması",
+      "Düzensiz rölanti veya stop etme",
+      "Gaz tepkisinde gecikme veya zayıf ivmelenme",
+      "Yakıt tüketiminde artış",
+      "Motor teklemeleri"
+    ],
+    "commonCauses": [
+      "Vakum kaçağı (hortumlar, emme manifoldu contası, PCV valfi, fren hidrolik takviyesi)",
+      "Arızalı Kütle Hava Akış (MAF) sensörü",
+      "Tıkalı yakıt filtresi veya zayıf yakıt pompası",
+      "Tıkalı yakıt enjektörleri",
+      "Oksijen sensörü öncesi egzoz kaçağı",
+      "Arızalı yukarı akış (katalitik konvertör öncesi) oksijen (O2) sensörü",
+      "PCV sistemi sorunları (açık kalmış PCV valfi, çatlak hortum)"
+    ],
+    "stepByStepSolution": [
+      "Öncelikle arıza kodunu (P0171) doğrulayın ve başka kod olup olmadığını kontrol edin.",
+      "Görsel inceleme yaparak vakum kaçağı (çatlak hortumlar, gevşek bağlantılar) arayın.",
+      "Donmuş veri çerçevesini (freeze frame data) kontrol ederek kodun hangi motor koşullarında oluştuğunu anlayın.",
+      "Canlı verileri izleyin: Kısa ve Uzun Vadeli Yakıt Düzeltmeleri (STFT/LTFT), O2 sensörü voltajları ve MAF sensörü okumaları. Yüksek pozitif yakıt düzeltmeleri, zayıf karışımı doğrular.",
+      "Vakum kaçağı testi yapın (duman makinesi veya karbon temizleyici sprey ile). Rölantide yüksek pozitif yakıt düzeltmeleri genellikle vakum kaçağına işaret eder.",
+      "Yakıt basıncını test edin ve yakıt pompasının ve filtresinin düzgün çalıştığından emin olun.",
+      "MAF sensörünü test edin/temizleyin. Sensörün doğru hava akışı değerlerini ölçtüğünden emin olun.",
+      "Oksijen sensörünü (Bank 1 Sensör 1) ve kablolarını kontrol edin. Sensörün kendisinin arızalı olması zayıf karışım okumasına neden olabilir, ancak genellikle zayıf karışımın kendisi sensör tarafından tespit edilir.",
+      "Yakıt enjektörlerini kontrol edin. Kirli veya tıkalı enjektörler yakıt akışını azaltarak zayıf karışımına neden olabilir.",
+      "Egzoz sisteminde oksijen sensörü öncesi kaçak olup olmadığını kontrol edin."
+    ],
+    "estimatedCostInfo": "Maliyet, sorunun kaynağına göre büyük ölçüde değişir. Basit bir vakum hortumu değişimi 50-150 USD aralığında olabilirken, MAF sensörü 150-400 USD, yakıt pompası veya enjektörler 400-1000 USD ve üzeri tutabilir. Teşhis süresi genellikle 1-2 saat olup, onarım süresi değişen parçaya göre farklılık gösterir.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

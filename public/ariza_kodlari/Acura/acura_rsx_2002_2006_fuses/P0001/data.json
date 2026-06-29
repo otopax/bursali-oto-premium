@@ -1,0 +1,39 @@
+{
+  "faultCode": "P0001",
+  "brand": "Acura",
+  "model": "acura_rsx_2002_2006_fuses",
+  "updatedAt": "2026-06-29T07:34:58.571Z",
+  "aiAnalysis": {
+    "description": "P0001 kodu, 'Yakıt Hacmi Regülatörü Kontrol Devresi/Açık' anlamına gelir. Bu, Motor Kontrol Ünitesi'nin (ECM/PCM) yakıt basıncını ayarlamakla görevli yakıt hacmi regülatörü devresinde bir kesinti (açık devre) tespit ettiğini gösterir. Acura RSX (2002-2006) modellerinde, bu genellikle Yakıt Pompası Kontrol Modülü (FPCM) veya bu modül ile yakıt pompası arasındaki elektrik devresindeki bir soruna işaret eder. Araç, dönüşsüz (returnless) yakıt sistemi kullandığından, yakıt basıncı FPCM tarafından yakıt pompasına giden voltajın ayarlanmasıyla yönetilir. P0001, bu kontrol devresinin elektriksel bütünlüğünün kaybolduğunu belirtir, yani modülün pompayı doğru şekilde kontrol edememesi veya devrede bir kopukluk olmasıdır. Bu, yakıt pompası selenoidi veya motorun kontrolü için kullanılan devrede bir kopukluk anlamına gelir.",
+    "symptoms": [
+      "Motorun zor çalışması veya hiç çalışmaması",
+      "Rölantide dalgalanma veya düzensiz çalışma",
+      "Gaz pedalına basıldığında terleme, tekleyerek gitme veya güç kaybı",
+      "Yakıt tüketiminde belirgin artış",
+      "Motor Arıza Lambası (Check Engine Light) yanar",
+      "Yüksek hızlarda veya yük altında performans düşüşü",
+      "Motorun aniden stop etmesi (düşük yakıt basıncı durumunda)"
+    ],
+    "commonCauses": [
+      "**Yakıt Pompası Kontrol Modülü (FPCM) Arızası:** RSX'lerde sıkça rastlanan bir durumdur. FPCM, bagajın sağ arka tarafındaki trim panelinin arkasında bulunur. İçindeki elektronik bileşenler zamanla arızalanabilir veya nemden etkilenebilir.",
+      "**Kablolama Sorunları:** FPCM ile yakıt pompası arasındaki kablo demetinde (şasi altına yakın kısımlarda veya bağlantı noktalarında) korozyon, fiziksel hasar, sürtünmeden kaynaklanan aşınma veya gevşek/kopuk konektör pimleri. ECM/PCM ile FPCM arasındaki kontrol sinyal kablolarında da benzer sorunlar görülebilir.",
+      "**Yakıt Pompası Montajı İçindeki Arıza:** Yakıt pompası motorunun veya pompa içindeki kontrol elemanlarının elektriksel olarak açık devreye geçmesi, nadiren de olsa görülebilir. Ancak P0001 daha çok kontrol devresiyle ilgilidir.",
+      "**Sigorta Kutusu Sorunları:** Yakıt pompası veya FPCM'yi besleyen sigortanın atması veya sigorta yuvasında kötü temas. Genellikle motor bölmesindeki 'FUEL PUMP' veya 'PGM-FI Main' sigortasıdır.",
+      "**ECM/PCM Arızası:** Nadiren, motor kontrol modülünün yakıt hacmi regülatörü kontrol devresi sürücüsünde dahili bir arıza olabilir."
+    ],
+    "stepByStepSolution": [
+      "**1. İlk Kontroller ve Teşhis Aletleri:** Arıza kodunu bir OBD-II tarayıcı ile doğrulayın ve silin. Tekrar ortaya çıkıp çıkmadığını kontrol edin. İhtiyaç duyulacak aletler: Dijital multimetre (DC voltaj, direnç ve süreklilik ölçümü), kablo demeti diyagramları (Acura RSX 2002-2006 fabrika servis kılavuzu), test lambası, genel el aletleri (lokma takımı, pense vb.), tornavida takımı (özellikle trim panelleri için), voltaj düşme testi için uygun kablolar.",
+      "**2. Sigortaların Kontrolü:** Motor bölmesindeki sigorta kutusunu açın. 'FUEL PUMP' veya 'PGM-FI Main' etiketiyle belirtilen yakıt pompası sigortasını görsel olarak kontrol edin ve multimetre ile sürekliliğini test edin. Ayrıca, yakıt enjeksiyonu ve ECM/PCM'yi besleyen ilgili sigortaları (örn. 'FI', 'ECM') kontrol edin.",
+      "**3. Yakıt Pompası Kontrol Modülü (FPCM) Konumu ve Görsel Muayene:** Arka bagajdaki sağ yan trim panelini dikkatlice sökün. FPCM genellikle buraya monte edilmiştir. Modülün ve bağlantı soketinin dış yüzeyini korozyon, hasar veya gevşek kablolar açısından görsel olarak inceleyin.",
+      "**4. FPCM Giriş Güç ve Toprak Kontrolleri (Anahtar Açık, Motor Kapalı - KOEO):** Fabrika kablolama diyagramını kullanarak FPCM soketine gelen güç (batarya voltajı ve kontak açıldığında gelen voltaj) ve şasi (toprak) bağlantılarını multimetre ile kontrol edin. Voltaj düşme testi ile toprak bağlantısının sağlamlığını doğrulayın. Örneğin, FPCM'ye gelen ana güç besleme hattında (genellikle kalın bir kablo) kontak açıkken batarya voltajı (yaklaşık 12.6V) okunmalıdır.",
+      "**5. ECM/PCM'den FPCM'ye Gelen Kontrol Sinyali Kontrolü:** ECM/PCM'den FPCM'ye gelen kontrol sinyal hattını (genellikle bir veya iki ince sinyal kablosu) diyagrama göre bulun. Bu sinyal, kontak açıldığında veya marş sırasında belirli bir voltaj veya darbe genişliği modülasyonu (PWM) sinyali vermelidir. Bu sinyali bir osiloskop ile kontrol etmek idealdir ancak multimetre ile ortalama voltaj değerini okuyarak da bir fikir edinilebilir.",
+      "**6. FPCM'den Yakıt Pompasına Çıkış Kontrolü:** FPCM'den yakıt pompasına giden çıkış kablolarını (genellikle iki kalın kablo) tespit edin. Kontak açıkken veya marş sırasında bu kablolardan yakıt pompasına doğru voltaj verilip verilmediğini kontrol edin. Normalde, sistem yakıt hattını doldurmak için kısa bir süre (~2 saniye) için tam batarya voltajı gönderir, ardından ECM/PCM'nin talebine göre voltajı ayarlar. Bu voltajın hiç gelmemesi veya çok düşük olması FPCM arızasına işaret edebilir.",
+      "**7. Yakıt Pompası Elektriksel Bütünlük Kontrolü:** Arka koltuğu kaldırın, altında bulunan yakıt deposu erişim kapağını sökün. Yakıt pompası montajına giden elektrik konnektörünü ayırın. Multimetre ile yakıt pompası motorunun direncini ölçün (pompa kabloları arasında). K-serisi motorlarda tipik olarak 0.5-2.0 Ohm aralığında olmalıdır. Açık devre (sonsuz direnç) okunursa, yakıt pompası motorunda içsel bir kopukluk veya arıza var demektir ve pompanın değiştirilmesi gerekir.",
+      "**8. Kablo Demeti Süreklilik ve Kısa Devre Kontrolü:** Batarya bağlantısını kesin. FPCM ile yakıt pompası arasındaki kabloların her birini (güç, toprak ve sinyal) FPCM konektörü ve yakıt pompası konektörü arasında multimetre ile süreklilik (0 Ohm'a yakın) açısından kontrol edin. Ayrıca, kabloların herhangi birine şasiye veya diğer kablolara kısa devre yapıp yapmadığını kontrol edin. Herhangi bir kopukluk veya kısa devre tespit edilirse, kablo demetinin onarılması veya değiştirilmesi gerekmektedir.",
+      "**9. Parça Değişimi ve Yeniden Test:** Yapılan testler sonucunda FPCM, yakıt pompası veya kablo demetinde bir arıza tespit edilirse, arızalı parçayı OEM (orijinal ekipman üreticisi) veya eşdeğer kalitede bir parça ile değiştirin. Değişim sonrası arıza kodlarını silin ve aracı bir test sürüşüne çıkararak sorunun giderildiğini doğrulayın. Yakıt basıncını canlı verilerle izleyerek FPCM'nin düzgün çalıştığını kontrol edin."
+    ],
+    "estimatedCostInfo": "Teşhis süresi genellikle 1-3 saat sürer. Onarım maliyeti, arızanın kaynağına göre büyük ölçüde değişir. Sadece bir sigorta ise birkaç Euro'dur. Kablo demeti onarımı için 100-300 Euro işçilik ve malzeme maliyeti olabilir. Yakıt Pompası Kontrol Modülü (FPCM) değişimi genellikle 200-600 Euro parça maliyeti ve 1-2 saat işçilik (100-250 Euro) tutabilir. Yakıt pompası montajının komple değişimi en pahalı senaryodur; parça maliyeti 300-800 Euro arasında değişebilir ve işçilik maliyeti 1-3 saat (100-350 Euro) olabilir. Toplam maliyet 100 Euro'dan başlayıp 1500 Euro'ya kadar çıkabilir.",
+    "severity": "Critical"
+  },
+  "videos": []
+}

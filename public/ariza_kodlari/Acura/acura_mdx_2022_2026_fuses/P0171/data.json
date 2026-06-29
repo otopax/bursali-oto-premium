@@ -1,0 +1,40 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_mdx_2022_2026_fuses",
+  "updatedAt": "2026-06-29T00:56:33.029Z",
+  "aiAnalysis": {
+    "description": "P0171 arıza kodu, 'Sistem Çok Zayıf (Bank 1)' anlamına gelir. Motor Kontrol Modülü (ECM) veya Güç Aktarım Sistemi Kontrol Modülü (PCM), motorun 1. silindir sırasındaki (Bank 1) yakıt karışımının idealden çok daha fazla hava ve yetersiz yakıt içerdiğini algıladığında bu kodu kaydeder.",
+    "symptoms": [
+      "Check Engine (Motor Arıza) ışığının yanması",
+      "Motor performansında düşüş veya güç kaybı",
+      "Düzensiz rölanti veya stop etme",
+      "Motorun tekleyerek çalışması (misfire)",
+      "Yakıt tüketiminde artış",
+      "Araç hızlanırken tereddüt veya duraksama"
+    ],
+    "commonCauses": [
+      "Emme sistemi veya vakum hatlarında kaçaklar (en yaygın neden, örn: emme manifoldu contası, vakum hortumları, PCV valfi)",
+      "Kütle Hava Akış (MAF) sensörünün kirlenmesi veya arızalanması",
+      "Yakıt pompasının yetersiz basınç üretmesi veya arızalanması",
+      "Yakıt filtresinin tıkanması",
+      "Yakıt enjektörlerinin tıkanması veya yetersiz püskürtme yapması",
+      "Oksijen (O2) sensörü (Bank 1, Sensör 1 veya Sensör 2) arızası",
+      "Egzoz sisteminde O2 sensöründen önceki kısımda kaçak",
+      "Yakıt basınç regülatörünün arızalanması",
+      "PCV (Pozitif Karter Havalandırma) valfinin arızası veya hortumlarında kaçak"
+    ],
+    "stepByStepSolution": [
+      "Bir teşhis cihazı kullanarak donmuş çerçeve verilerini (freeze frame data) ve canlı veri akışından yakıt düzeltme (fuel trim) değerlerini (kısa ve uzun vadeli) Bank 1 için kontrol edin. Özellikle rölantide ve farklı motor devirlerinde değerleri inceleyin.",
+      "Motor çalışırken veya duman makinesi kullanarak emme manifold contaları, vakum hortumları ve PCV sistemi dahil olmak üzere tüm emme sisteminde vakum kaçağı arayın. Bu, P0171 için en sık karşılaşılan nedendir.",
+      "Kütle Hava Akış (MAF) sensörünü görsel olarak kontrol edin. Gerekirse, özel bir MAF sensörü temizleyicisi ile dikkatlice temizleyin ve yeniden test edin. MAF sensörünün bağlantısını ve kablo demetini kontrol edin.",
+      "Yakıt basıncını bir yakıt basınç göstergesi ile kontrol edin. Üreticinin belirlediği değerlere uygun olduğundan emin olun. Yakıt filtresinin durumunu ve gerekirse yakıt enjektörlerinin püskürtme düzenini kontrol edin.",
+      "Bank 1'deki ön ve arka O2 sensörlerinin doğru voltaj değerleri ve hızlı tepki verip vermediğini teşhis cihazı ile kontrol edin. Egzoz sisteminde O2 sensöründen önceki kısımda herhangi bir kaçak olup olmadığını araştırın.",
+      "Tüm kontroller yapıldıktan sonra, tespit edilen arızalı bileşeni (örn: kaçaklı hortum, arızalı MAF sensörü, tıkalı filtre) değiştirin veya onarın.",
+      "Arıza kodlarını silin ve aracı kapsamlı bir test sürüşüne çıkarın. Yakıt düzeltme değerlerinin normal aralıklara döndüğünü ve arıza kodunun tekrar ortaya çıkmadığını doğrulayın."
+    ],
+    "estimatedCostInfo": "Maliyet, arızanın temel nedenine bağlı olarak büyük ölçüde değişir. Basit bir vakum kaçağının onarımı veya MAF sensörü temizliği düşük maliyetli (50-200 EUR işçilik dahil) olabilirken, yakıt pompası, O2 sensörü veya yakıt enjektörlerinin değiştirilmesi daha yüksek maliyetli (200-800 EUR veya daha fazla, parçalar ve işçilik dahil) olacaktır. Teşhis süresi genellikle 1-2 saat, onarım ise arızaya göre 1-4 saat sürebilir.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

@@ -1,0 +1,34 @@
+{
+  "faultCode": "P0002",
+  "brand": "Acura",
+  "model": "acura_rsx_2002_2006_fuses",
+  "updatedAt": "2026-06-29T11:48:03.083Z",
+  "aiAnalysis": {
+    "description": "Das Motorsteuergerät (ECM) hat einen Fehler im Stromkreis zur Steuerung des Kraftstoffmengenreglers festgestellt. Bei Ihrem Acura RSX, der ein rückloses Kraftstoffsystem verwendet, deutet dies in der Regel auf ein Problem im Steuerkreis des Kraftstoffpumpen-Treibermoduls (FPDM) hin. Dieses Modul ist für die präzise Regelung des Kraftstoffdrucks und der Kraftstoffmenge, die der Motor benötigt, zuständig. Der Code P0002 signalisiert, dass das elektrische Signal zwischen dem ECM und dem FPDM außerhalb des erwarteten Bereichs liegt oder eine Fehlfunktion aufweist.",
+    "symptoms": [
+      "Die Motorkontrollleuchte (MIL) ist aktiv.",
+      "Schlechte Motorleistung, Zögern beim Beschleunigen oder Ruckeln.",
+      "Der Motor stirbt ab oder lässt sich schwer starten.",
+      "Rauher Motorlauf oder Fehlzündungen.",
+      "Potenziell erhöhter Kraftstoffverbrauch.",
+      "Das Fahrzeug geht in den Notlaufmodus ('Limp Mode') über."
+    ],
+    "commonCauses": [
+      "Elektrische Unterbrechung, Kurzschluss oder hoher Widerstand im Kabelbaum zum Kraftstoffpumpen-Treibermodul (FPDM) oder zur Kraftstoffpumpe.",
+      "Defektes Kraftstoffpumpen-Treibermodul (FPDM) selbst, das die Pumpenleistung nicht korrekt ansteuern kann.",
+      "Fehlerhafte Kraftstoffpumpe, die den vom FPDM angeforderten Druck nicht aufbauen oder halten kann.",
+      "Korrodierte, lose oder beschädigte elektrische Stecker am FPDM oder an der Kraftstoffpumpe.",
+      "Verstopfter Kraftstofffilter, der den Kraftstofffluss behindert und die Druckregelung beeinflusst.",
+      "Selten: Interner Fehler im Motorsteuergerät (ECM), das die Steuerung des FPDM nicht korrekt ausführt."
+    ],
+    "stepByStepSolution": [
+      "**1. Gründliche Sichtprüfung und Fehlercode-Analyse:** Wir beginnen mit einer detaillierten Inspektion des Kraftstoffpumpen-Treibermoduls, der zugehörigen Verkabelung und aller Stecker zum Kraftstofftank und der Kraftstoffpumpe. Wir suchen nach sichtbaren Schäden, Korrosion, Scheuerstellen oder lockeren Verbindungen. Anschließend lesen wir mit unserem Diagnosetester den Fehlercode P0002 aus und analysieren die 'Freeze Frame'-Daten, um die Umstände des Fehlerauftritts zu verstehen. Relevante Sicherungen und Relais werden geprüft.",
+      "**2. Elektrische Schaltkreisprüfung des FPDM:** Mittels Multimeter und gegebenenfalls Oszilloskop prüfen wir die Integrität des elektrischen Steuerkreises. Dies beinhaltet die Messung der Spannungsversorgung, der Masse und der Kommunikationsleitungen (PWM-Signal) zwischen dem Motorsteuergerät und dem FPDM auf korrekte Werte, Unterbrechungen oder Kurzschlüsse. Wir stellen sicher, dass das ECM ein korrektes Ansteuersignal an das FPDM sendet.",
+      "**3. Kraftstoffdruck- und Durchflussprüfung:** Wir schließen ein Präzisions-Kraftstoffdruckmessgerät an das Kraftstoffsystem an. Der gemessene Kraftstoffdruck wird mit den vom Motorsteuergerät angeforderten Werten (falls über den Diagnosetester verfügbar) verglichen. Ein zu niedriger oder zu hoher Druck, der nicht den Anforderungen entspricht, kann auf ein defektes FPDM, eine schwache Kraftstoffpumpe oder eine Verstopfung im System hindeuten. Wir prüfen auch den Rücklauf auf eventuelle Restriktionen.",
+      "**4. Komponentenprüfung und Austausch:** Wenn die elektrische Prüfung des Schaltkreises als einwandfrei befunden wird, liegt der Verdacht auf einem defekten Kraftstoffpumpen-Treibermodul selbst. Dieses wird gegebenenfalls ersetzt. Sollte das FPDM korrekt arbeiten, richten wir unser Augenmerk auf die Kraftstoffpumpe im Tank, die möglicherweise den Druck nicht mehr adäquat aufbauen kann oder einen integrierten Druckreglerfehler aufweist. Ein verstopfter Kraftstofffilter wird ebenfalls in Betracht gezogen und gegebenenfalls ersetzt. Erst nach Ausschluss aller anderen Komponenten wird ein Defekt des Motorsteuergeräts in Betracht gezogen."
+    ],
+    "estimatedCostInfo": "Die Diagnosekosten (ca. 1-2 Stunden Arbeitszeit) belaufen sich auf 100€ bis 250€. Die Kosten für ein neues Kraftstoffpumpen-Treibermodul (FPDM) liegen in der Regel zwischen 150€ und 400€. Sollte die gesamte Kraftstoffpumpe inklusive Regler ersetzt werden müssen, können die Materialkosten 300€ bis 800€ oder mehr betragen (Originalteil-Qualität). Die Arbeitskosten für den Austausch sind je nach Zugänglichkeit der Komponente (FPDM meist einfacher, Kraftstoffpumpe aufwendiger) mit 100€ bis 400€ anzusetzen. Somit bewegen sich die geschätzten Gesamtkosten zwischen 250€ und 1500€+, abhängig von der genauen Ursache und den benötigten Ersatzteilen.",
+    "severity": "High"
+  },
+  "videos": []
+}

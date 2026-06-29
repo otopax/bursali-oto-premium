@@ -1,0 +1,37 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_csx_2006_2009_fuses_and_relays",
+  "updatedAt": "2026-06-29T00:54:07.991Z",
+  "aiAnalysis": {
+    "description": "P0171 arıza kodu, motor kontrol ünitesinin (ECM/PCM) Bank 1'deki yakıt-hava karışımının çok fakir olduğunu tespit ettiğini gösterir. Bu durum, yanma için çok fazla hava veya yetersiz yakıt olduğunu işaret eder. Bu, motorun optimum performansla çalışmadığı ve potansiyel olarak motor hasarı riskini taşıdığı anlamına gelir.",
+    "symptoms": [
+      "Motor Arıza Lambası (CEL/MIL) yanar",
+      "Motorun düzensiz çalışması veya rölantide titreme",
+      "Hızlanmada tereddüt veya güç kaybı",
+      "Yakıt tüketiminde artış",
+      "Motorun stop etmesi (nadiren)"
+    ],
+    "commonCauses": [
+      "Vakum Kaçakları: En yaygın nedenlerden biridir. Emme manifoldu contaları, vakum hortumları, PCV valfi veya hortumlarında oluşan çatlaklar veya kopmalar.",
+      "Kütle Hava Akış (MAF) Sensörü: Kirli veya arızalı MAF sensörü hatalı hava akışı bilgisi gönderiyor olabilir.",
+      "Yakıt Sistemi Sorunları: Tıkalı yakıt filtresi, zayıf yakıt pompası, tıkalı veya arızalı yakıt enjektörleri, yakıt basınç regülatörü sorunları.",
+      "Oksijen (O2) Sensörü: Katalitik konvertör öncesi (upstream) O2 sensörünün yanlış değer okuması veya arızalı olması.",
+      "Egzoz Kaçakları: Özellikle O2 sensörü öncesindeki egzoz sistemindeki kaçaklar, sensörün yanlış fakir okumasına neden olabilir.",
+      "PCV Sistemi Sorunları: Açık kalmış PCV valfi.",
+      "EVAP Sistemi Kaçakları: Gevşek yakıt deposu kapağı veya EVAP hortumlarındaki çatlaklar."
+    ],
+    "stepByStepSolution": [
+      "Teşhis Kodunu ve Dondurulmuş Verileri Doğrulayın: Bir teşhis tarayıcısı kullanarak P0171 kodunu onaylayın. Motorun arıza meydana geldiği andaki çalışma koşullarını (RPM, yük, sıcaklık, kısa/uzun vadeli yakıt düzeltmeleri) gösteren dondurulmuş verileri analiz edin. Uzun vadeli yakıt düzeltmeleri (+%10-20'nin üzerindeyse) fakir bir durumu kesin olarak gösterir.",
+      "Vakum Kaçaklarını Kontrol Edin: Tüm vakum hortumlarını, emme manifoldu contalarını, PCV valfini ve hortumlarını görsel olarak inceleyin. Hasar, çatlak veya bağlantı kopukluğu olup olmadığını kontrol edin. Profesyonel bir duman makinesi kullanarak emme sistemine basınç uygulayın ve kaçakları tespit edin. Alternatif olarak, motor çalışırken şüpheli bölgelere karbüratör temizleyici püskürterek rölantide bir değişiklik olup olmadığını gözlemleyin.",
+      "MAF Sensörünü İnceleyin: MAF sensörünün kirli olup olmadığını kontrol edin. Yalnızca MAF sensörü temizleyicisi ile dikkatlice temizleyin. Tarayıcı ile MAF sensörü okumalarını (rölantide ve yük altında g/s) izleyin ve fabrika spesifikasyonları ile karşılaştırın. Okumalar hatalıysa veya dalgalıysa sensörü değiştirin.",
+      "Yakıt Sistemini Kontrol Edin: Yakıt rayında yakıt basıncını bir manometre ile ölçün ve üreticinin spesifikasyonları ile karşılaştırın. Basınç düşükse, yakıt pompasını, yakıt filtresini ve yakıt basınç regülatörünü kontrol edin. Yakıt enjektörlerinin direncini ve püskürtme desenini mümkünse kontrol edin.",
+      "Oksijen Sensörünü (Üst Akış) İnceleyin: Tarayıcı ile üst akış O2 sensörü okumalarını izleyin. Hızlı bir şekilde zengin ve fakir arasında dalgalanmalıdır (0.1V - 0.9V). Sürekli olarak düşük (fakir) okuma yapıyorsa, sensör arızalı olabilir veya doğru bir fakir durumu bildiriyor olabilir.",
+      "Egzoz Kaçaklarını Kontrol Edin: Özellikle katalitik konvertör öncesi egzoz sisteminde kaçak olup olmadığını görsel ve işitsel olarak kontrol edin.",
+      "ECM/PCM'i Sıfırlayın ve Test Sürüşü Yapın: Onarımlar yapıldıktan sonra arıza kodlarını temizleyin ve yakıt düzeltmelerinin normal aralığa (uzun vadeli için %0'a yakın) dönmesini sağlamak için kapsamlı bir test sürüşü gerçekleştirin."
+    ],
+    "estimatedCostInfo": "Teşhis genellikle 1-2 saat işçilik gerektirir (€100-€250). Parça maliyetleri arızanın nedenine göre büyük ölçüde değişir. Basit bir vakum hortumu değişimi €50-€150 aralığında olabilirken, MAF sensörü (€100-€300), yakıt pompası (€200-€600) veya emme manifoldu contası (€150-€400) gibi parçaların değişimi işçilikle birlikte toplam maliyeti €300'dan €1000'a kadar çıkarabilir. Onarım süresi birkaç saatten bir güne kadar değişebilir.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

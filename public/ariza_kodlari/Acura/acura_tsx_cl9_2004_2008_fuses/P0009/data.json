@@ -1,0 +1,35 @@
+{
+  "faultCode": "P0009",
+  "brand": "Acura",
+  "model": "acura_tsx_cl9_2004_2008_fuses",
+  "updatedAt": "2026-06-29T14:08:14.354Z",
+  "aiAnalysis": {
+    "description": "DTC P0009 (Motor Konum Sistemi Performansı - Bank 2), Acura TSX CL9 (K24A2 motor) için, krank mili ile bir veya her iki eksantrik mili arasındaki dönüş ilişkisinde bir tutarsızlık olduğunu veya VTC (Variable Timing Control) sisteminin genel performansında bir sorun olduğunu gösterir. Inline-4 motorlarda 'Bank 2' terimi genellikle geleneksel bir V-motor anlamında kullanılmaz; daha ziyade motorun genel zamanlama sistemi performansına veya egzoz kamı ile ilgili bir soruna işaret eder. PCM (Powertrain Control Module), gerçek eksantrik mili konumunun komut edilen konumla eşleşmediğini veya beklenen aralığın dışında olduğunu algılar.",
+    "symptoms": [
+      "Motor Arıza Lambası (MIL) yanar (Check Engine Light).",
+      "Motor gücünde belirgin azalma (performans kaybı).",
+      "Düzensiz rölanti veya motorun stop etmesi.",
+      "Yakıt tüketiminde artış.",
+      "Motorun özellikle soğuk çalıştırmada anormal sesler çıkarması (örneğin zincir sesi veya VTC aktüatör tıkırtısı).",
+      "Daha az yaygın olarak, motoru çalıştırmada zorluk."
+    ],
+    "commonCauses": [
+      "**Gerilmiş Zamanlama Zinciri:** Acura K-serisi motorlarda, özellikle yüksek kilometrelerde çok yaygın bir nedendir. Zamanlama zinciri uzar ve eksantrik mili ile krank mili arasındaki zamanlama uyumunu bozar.",
+      "**Arızalı VTC Aktüatörü (Değişken Zamanlama Kontrol Aktüatörü):** Emme eksantrik milindeki VTC aktüatörü takılı kalabilir, doğru şekilde ilerleyemez/gecikemez veya özellikle soğuk çalıştırmada tıkırtı sesleri çıkarabilir. Bu, soğuk başlangıçta belirgin bir 'tırtıklama' sesiyle kendini gösterebilir.",
+      "**Düşük Motor Yağı Seviyesi veya Kirlenmiş Yağ:** VTC sistemi, çalışması için doğru yağ basıncına ve kalitesine bağlıdır. Düşük veya kirli yağ, sistemin işleyişini olumsuz etkileyebilir. Yağ kanallarında çamur oluşumu da bu soruna yol açabilir.",
+      "**Tıkalı Yağ Kanalları/Filtre Süzgeçleri:** VTC sisteminin yağ beslemesini sağlayan süzgeçler, motor yağı tortuları ile tıkanarak yağ akışını kısıtlayabilir ve aktüatörün düzgün çalışmasını engelleyebilir.",
+      "**Arızalı Eksantrik Mili Konum (CMP) Sensörü veya Yağ Kontrol Valfi (OCV):** Sensörün kendisi direkt arızalı olmasa da, yanlış veri sağlaması veya OCV'nin düzgün çalışmaması zamanlama performansını etkileyebilir. P0009 genellikle bir sensör arızasından ziyade sistem performansını işaret eder.",
+      "**PCM Yazılım Hatası veya İç Arıza:** Nadir durumlarda, motor kontrol ünitesinde bir yazılım hatası veya donanımsal arıza bu kodu tetikleyebilir."
+    ],
+    "stepByStepSolution": [
+      "**1. Başlangıç Teşhisi ve Veri Toplama:** Arıza kodunu (P0009) bir diagnostik cihazı (HDS) ile doğrulayın ve varsa eşlik eden diğer kodları not alın. Dondurulmuş çerçeve verilerini kaydedin. Motor yağı seviyesini ve durumunu kontrol edin; düşük veya kirli ise müşteriye uygun bakım ve periyodik yağ değişimi konusunda tavsiyede bulunun. Motorun soğuk çalıştırma anında veya rölantide anormal sesler olup olmadığını dikkatlice dinleyin (özellikle zincir sesi veya VTC aktüatörü tıkırtısı).",
+      "**2. Canlı Veri Analizi (HDS/Tarama Cihazı ile):** HDS veya uygun bir tarama cihazı kullanarak eksantrik mili konum (CMP) ve krank mili konum (CKP) sensör verilerini canlı olarak izleyin. Motor çalışırken (rölanti, çeşitli devirlerde) tutarsız okumalar veya komut edilen değerlerden sapmalar olup olmadığını kontrol edin. VTC Yağ Kontrol Valfi (OCV) görev döngüsünü ve VTC açısının gerçek ve komut edilen değerlerini izleyin. Beklenen ile ölçülen değerler arasındaki herhangi bir önemli fark, zamanlama sorununa işaret eder.",
+      "**3. Bileşen Spesifik Testler:**\n    *   **VTC Aktüatörü:** Mümkünse tarama cihazı ile fonksiyon testi yapın. Özellikle soğuk çalıştırmada belirgin bir 'tırtıklama' sesi mevcutsa, VTC aktüatöründe bir sorun olduğu güçlü bir göstergedir. OCV'nin bobin direnç değerlerini kontrol edin ve 12V uygulanarak doğru şekilde 'klik' sesiyle çalışıp çalışmadığını test edin.\n    *   **Zamanlama Zinciri Muayenesi (Kritik Adım):** Subap kapağını çıkararak zamanlama zinciri gerdiricisinin uzamasını inceleyin. Eğer gerdirici limitine yakın veya tam uzamışsa, zincirin gerildiğini gösterir ve değiştirilmesi gerektiğini işaret eder. Zamanlama zincirinde aşırı boşluk veya gevşeklik olup olmadığını görsel olarak kontrol edin. Gerekirse krank milini manuel olarak çevirerek zincir boşluğunu dikkatlice gözlemleyin. Kesin zamanlama doğruluğu için, özel aletler kullanarak kam lobu konumlarını ve krank mili konumunu karşılaştırın.",
+      "**4. Onarım/Değişim (Bulgulara Göre):**\n    *   **Zamanlama Zinciri Gerilmişse:** Komple zamanlama zinciri kiti (zincir, gerdirici, kılavuzlar ve VTC aktüatörü) orijinal Honda/Acura parçaları ile değiştirilmelidir. Bu, en yaygın ve kapsamlı çözümdür.\n    *   **VTC Aktüatörü Arızalıysa:** VTC aktüatörünü değiştirin. Eğer zamanlama zinciri de yüksek kilometreye sahipse veya hafif bir boşluk gösteriyorsa, işçilik maliyetini optimize etmek adına zinciri de aynı anda değiştirmeyi düşünün.\n    *   **OCV Arızalıysa:** VTC Yağ Kontrol Valfini değiştirin.\n    *   **Yağ ile İlgili Sorun Varsa:** Tam bir motor yağı değişimi (doğru viskozitede ve kaliteli bir filtre ile) yapın. Yağ karteri ve VTC yağ kanallarının temizliğini kontrol edin.",
+      "**5. Onarım Sonrası Doğrulama:** Tüm DTC'leri silin. Gerekirse ECU rölanti öğrenme prosedürünü gerçekleştirin. Arıza kodunun geri dönmediğinden ve motor performansının tamamen düzeldiğinden emin olmak için aracı çeşitli yük ve devir koşullarında uzun bir test sürüşüne çıkarın. Bu sırada CMP/CKP korelasyonunu ve VTC çalışmasını canlı verilerden sürekli izleyin. Herhangi yeni bir ses veya sorunun olup olmadığını dikkatlice kontrol edin."
+    ],
+    "estimatedCostInfo": "Bu arıza kodu genellikle önemli motor içi çalışmalar gerektirdiğinden, maliyetler tespit edilen soruna göre değişiklik gösterecektir. Sadece VTC Yağ Kontrol Valfi (OCV) değişimi veya basit bir yağ değişimi ile çözülürse tahmini maliyet €200 - €500 arasında değişebilir. Ancak, VTC Aktüatörünün tek başına değişimi (parça ve işçilik dahil) €600 - €1200 aralığında olabilir. En yaygın ve kapsamlı senaryo olan zamanlama zinciri, gerdirici, kılavuzlar ve VTC aktüatörünün komple değişimi (orijinal yedek parçalar ve uzman işçilik dahil) genellikle €1500 - €2500+ aralığında bir maliyetle sonuçlanmaktadır. Bu fiyatlar, kalite ve uzun ömürlülüğü garanti eden Alman mühendislik standartlarımızı yansıtmaktadır.",
+    "severity": "High"
+  },
+  "videos": []
+}

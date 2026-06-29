@@ -1,0 +1,36 @@
+{
+  "faultCode": "P0001",
+  "brand": "Acura",
+  "model": "acura_rl_kb1_kb2_2005_2012_fuses",
+  "updatedAt": "2026-06-29T07:34:28.103Z",
+  "aiAnalysis": {
+    "description": "P0001 arıza kodu, 'Yakıt Hacmi Regülatörü Kontrol Devresi/Açık' anlamına gelir. Acura RL (KB1/KB2, J35A8 motorlu, 2005-2012) özelinde bu, Motor Kontrol Ünitesi (ECU) ile Yakıt Pompası Sürücü Modülü (FPDM) veya yakıt pompası arasındaki iletişimde, özellikle yakıt basıncının düzenlenmesinden sorumlu devrede bir kesinti veya hatalı bir sinyal olduğu anlamına gelir. Araç, dönüşsüz (returnless) yakıt sistemi kullandığından, yakıt basıncı FPDM tarafından elektronik olarak kontrol edilir. ECU, motorun yakıt ihtiyacına göre FPDM'ye Darbe Genişlik Modülasyonlu (PWM) bir sinyal göndererek yakıt pompasının hızını ve dolayısıyla yakıt basıncını ayarlar. Bu devredeki bir 'açık' durum, ECU'nun FPDM'den beklediği geri bildirimi alamaması veya FPDM'nin kontrol sinyalini alamaması demektir, bu da yakıt basıncının uygun şekilde düzenlenememesine yol açar.",
+    "symptoms": [
+      "Motorun geç çalışması veya hiç çalışmaması, özellikle motor sıcakken",
+      "Motor teklemesi, kesiklik veya düzensiz rölanti",
+      "Hızlanma sırasında güç kaybı ve performans düşüşü",
+      "Yakıt tüketiminde belirgin bir artış",
+      "Yüksek hızlarda veya yük altında motorun sarsılması veya aniden stop etmesi",
+      "Motor Arıza Lambası (MIL - Check Engine Light) yanması"
+    ],
+    "commonCauses": [
+      "**Yakıt Pompası Sürücü Modülü (FPDM) Arızası**: Acura RL KB1/KB2'de sıkça karşılaşılan bir problemdir. FPDM, genellikle yakıt deposuna yakın bir yerde veya arka koltuğun altında bulunur ve yol tuzu, nem gibi çevresel faktörlere maruz kalarak iç korozyon veya elektronik arıza geliştirebilir.",
+      "**Kablo Demeti Hasarı**: ECU, FPDM ve yakıt pompası arasındaki elektrik kablo demetinde kopmalar, aşınmalar, korozyonlu konektörler veya kemirgen hasarı. Bu tür hasarlar, sinyal iletimini bozarak 'açık devre' durumuna yol açabilir.",
+      "**Yakıt Pompası İç Arızası**: Nadiren de olsa, yakıt pompasının kendisinin aşırı akım çekmesi veya iç direnç sorunları yaşaması, FPDM'nin kontrol devresinde anormal bir yük algılanmasına veya FPDM'nin arızalanmasına neden olabilir. Ancak P0001 daha çok kontrol devresi hatasına işaret eder.",
+      "**Topraklama Sorunları**: FPDM veya yakıt pompası için zayıf veya kopuk bir topraklama bağlantısı, kontrol devresinde açık devreye benzer sorunlar yaratabilir."
+    ],
+    "stepByStepSolution": [
+      "**1. Ön Teşhis ve Veri Toplama**: Honda HDS (Honda Diagnostic System) veya uyumlu bir profesyonel tarama cihazı ile arıza kodlarını okuyun ve dondurulmuş veri (freeze frame data) kayıtlarını inceleyin. Bu, arızanın hangi koşullar altında meydana geldiğini anlamak için hayati öneme sahiptir. Canlı veri akışından 'Yakıt Rayı Basıncı' (Fuel Rail Pressure) değerlerini izleyin. Motor rölantide ve yük altında basıncın stabilitesini kontrol edin (genellikle 3.5-4.5 bar veya 50-65 psi olmalıdır).",
+      "**2. Görsel Kontrol ve Konum Tespiti**: Acura RL KB1/KB2'de Yakıt Pompası Sürücü Modülü (FPDM), genellikle arka koltuk minderinin altında, yakıt deposu erişim kapağının yakınında veya direkt şasiye monte edilmiş bir ünitedir. Aracın arka kısmına erişim sağlayın ve FPDM'yi bulun. Tüm kablo demetini, konektörleri ve FPDM muhafazasını korozyon, aşınma, kopukluk veya kemirgen hasarı açısından dikkatlice inceleyin.",
+      "**3. FPDM Besleme Gerilimi ve Toprak Kontrolü**: FPDM'nin elektrik konektörünü ayırın. Multimetre kullanarak, kontak açık (ignition ON) konumdayken FPDM'ye gelen güç besleme pinlerinde akü voltajını (B+ ~12V) ölçün. Toprak (şasi) pininde ise multimetreyi direnç moduna alarak şasiye karşı süreklilik veya voltaj modunda akü negatif kutbuna karşı sıfıra yakın voltaj (iyi toprak) kontrolü yapın. Zayıf veya eksik güç/toprak, FPDM'nin çalışmamasına neden olacaktır.",
+      "**4. ECU'dan FPDM'ye Kontrol Sinyali Kontrolü**: FPDM konektörü takılıyken, ECU'dan FPDM'ye gelen kontrol sinyali kablosunu (genellikle tek bir veri veya PWM kablosu) arkadan prob aracılığıyla ölçün (backprobe). Bir osiloskop veya multimetrenin frekans (Hz) / görev döngüsü (duty cycle) modunu kullanarak bu PWM sinyalinin varlığını ve tutarlılığını kontrol edin. Marş esnasında veya motor çalışırken (eğer çalışıyorsa) sinyalin değişmesi beklenir. Eğer sinyal yoksa, sorun ECU'da veya ECU ile FPDM arasındaki kablolamada olabilir.",
+      "**5. FPDM'den Yakıt Pompasına Çıkış Kontrolü**: FPDM'nin yakıt pompasına giden çıkış kablolarını (genellikle iki kalın kablo) ölçün. FPDM'nin gelen PWM sinyaline göre yakıt pompasına değişken bir voltaj göndermesi gerekir. Bu voltaj, motorun marş esnasında veya çalışırken değişmelidir. Hiç voltaj yoksa veya sabitse, FPDM arızalı olabilir.",
+      "**6. Kablo Demeti Süreklilik ve Direnç Kontrolü**: FPDM ve yakıt pompası konektörleri ayrılmışken, tüm ilgili kablolarda (güç, toprak, kontrol sinyali ve FPDM'den pompaya giden kablolar) sürekliliği kontrol edin. Ayrıca, herhangi bir kısa devreyi (şasiye veya beslemeye) ve kabloların iç direncini ölçün. Yüksek direnç, yetersiz akım akışına neden olabilir.",
+      "**7. Yakıt Pompası Direnç Kontrolü (Gerekirse)**: FPDM ve yakıt pompası konektörleri ayrılmışken, doğrudan yakıt pompasının elektrik bağlantı pinleri arasındaki direnci ölçün. Bu değeri fabrika servis manuelindeki spesifikasyonlarla karşılaştırın. Aşırı düşük veya yüksek direnç, pompanın iç arızasını gösterebilir.",
+      "**8. Parça Değişimi ve Son Testler**: Yapılan teşhisler sonucunda: a) FPDM'ye gelen güç, toprak ve ECU kontrol sinyali normal olmasına rağmen FPDM'den yakıt pompasına çıkış yoksa, **Yakıt Pompası Sürücü Modülünü (FPDM) değiştirin.** b) FPDM'den çıkan sinyal normal ancak yakıt pompası çalışmıyorsa ve kablolamada sorun yoksa, **yakıt pompası modülünü değiştirin.** (Bu genellikle yakıt seviye sensörü ve filtre ile birlikte gelir.) Parça değişiminden sonra arıza kodlarını silin, aracı yol testine çıkarın ve canlı veriden yakıt basıncını tekrar izleyerek sistemin düzgün çalıştığından emin olun."
+    ],
+    "estimatedCostInfo": "Bu arızanın giderilmesi için teşhis süresi genellikle 1 ila 3 saat arasında değişir. Parça maliyeti, arızalı bileşene göre değişir: Yakıt Pompası Sürücü Modülü (FPDM) için ortalama 150-300 Euro/Dolar, komple yakıt pompası modülü için ise 300-600 Euro/Dolar civarındadır (OEM veya kaliteli yedek parça fiyatlarıdır). İşçilik maliyetleri, bölgenizdeki servis ücretlerine ve değiştirilecek parçaya göre 1 ila 4 saat arasında değişebilir. Toplam maliyet, teşhis, parça ve işçilik dahil genellikle 300 Euro/Dolar ile 1000 Euro/Dolar arasında olacaktır. Kablo demeti onarımları ek maliyet getirebilir.",
+    "severity": "Critical"
+  },
+  "videos": []
+}

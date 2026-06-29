@@ -1,0 +1,36 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_integra_2023_2026_fuses",
+  "updatedAt": "2026-06-29T00:56:17.655Z",
+  "aiAnalysis": {
+    "description": "P0171 kodu, motor kontrol ünitesinin (ECU), motorun Bank 1'deki (genellikle ilk silindiri içeren taraf) hava-yakıt karışımının çok zayıf olduğunu (yani çok fazla hava ve yetersiz yakıt) algıladığını gösterir. ECU, bu durumu düzeltmek için yakıt enjeksiyonunu artırmaya çalışır, ancak uzun vadeli yakıt trimleri maksimum limitlerine ulaştığında bu arıza kodu tetiklenir.",
+    "symptoms": [
+      "Motor Arıza Lambası (MIL) yanar",
+      "Motor gücünde azalma veya genel performans düşüklüğü",
+      "Rölantide düzensizlik, dalgalanma veya titreme",
+      "Motorun zor çalışması veya tekleme hissi",
+      "Yakıt tüketiminde artış (ECU'nun zenginleştirme çabası nedeniyle)",
+      "Egzozdan farklı, yanmamış yakıt veya çok fakir karışım kokusu"
+    ],
+    "commonCauses": [
+      "Vakum kaçakları (emme manifoldu contaları, vakum hortumları, PCV valfi ve hortumları, fren destekleyici hortumu gibi çeşitli yerlerden)",
+      "Kirlenmiş veya arızalı Kütle Hava Akış (MAF) sensörü",
+      "Düşük yakıt basıncı (arızalı yakıt pompası, tıkalı yakıt filtresi, arızalı yakıt basınç regülatörü)",
+      "Tıkalı veya arızalı yakıt enjektörleri",
+      "Egzoz sisteminde (özellikle ön oksijen sensörü öncesinde) kaçak",
+      "Arızalı ön (upstream) oksijen (lambda) sensörü (daha nadir olarak P0171'in doğrudan nedeni, genellikle sorunu bildiren bileşendir)"
+    ],
+    "stepByStepSolution": [
+      "Detaylı arıza tespiti için bir OBD-II teşhis cihazı ile DTC'yi doğrula ve canlı veri akışını (özellikle uzun ve kısa vadeli yakıt düzeltmeleri (LTFT/STFT), ön O2 sensör voltajları, MAF sensörü okumaları, motor yükü) incele. Uzun vadeli yakıt düzeltmesinin (LTFT) +%15'in üzerinde olması, zayıf karışım sorununu teyit eder.",
+      "Tüm emme sistemi, vakum hortumları, PCV sistemi ve contaları üzerinde dikkatli bir görsel inceleme yap. Vakum kaçağı tespiti için bir duman makinesi veya uygun spreyler (örn. propan) kullanarak kaçakları bul ve onar.",
+      "Kütle Hava Akış (MAF) sensörünü kontrol et. Kirlenmişse, özel MAF sensör temizleyici ile hassas bir şekilde temizle. Sensörün canlı veri okumalarının motor devrine göre makul sınırlar içinde olduğunu doğrula; arızalıysa değiştir.",
+      "Yakıt sistemini kontrol et: Yakıt basıncını bir manometre ile ölçerek üretici spesifikasyonlarına uygun olup olmadığını teyit et. Yakıt filtresinin durumunu değerlendir ve yakıt enjektörlerinin düzgün püskürtüp püskürtmediğini kontrol et (gerekirse temizle veya değiştir).",
+      "Ön (upstream) oksijen sensörünün (Bank 1) canlı veri akışında voltaj değişimlerini izle. Sensörün hızlı ve doğru bir şekilde tepki verdiğinden emin ol. Ayrıca, oksijen sensörü öncesindeki egzoz sisteminde herhangi bir kaçak olup olmadığını kontrol et.",
+      "Tüm tespit edilen arızalı veya şüpheli bileşenleri, orijinal ekipman (OEM) kalitesinde parçalarla değiştir. Tüm onarımlar tamamlandıktan sonra arıza kodlarını sil ve aracın normal çalışma parametrelerine döndüğünden emin olmak için kapsamlı bir yol testi yap."
+    ],
+    "estimatedCostInfo": "Teşhis süresi genellikle 1-2 saat sürer ve maliyeti 100-250 EUR arasında değişir. Onarım maliyeti, sorunun kökenine bağlı olarak büyük ölçüde farklılık gösterebilir: Basit bir vakum hortumu değişimi 50-150 EUR iken, yeni bir MAF sensörü 200-450 EUR, yakıt pompası veya enjektör değişimi ise 400-1200 EUR veya daha fazlasına mal olabilir. Genel olarak, teşhis ve onarım dahil olmak üzere 150 EUR ile 1200 EUR+ arasında bir maliyet beklenebilir.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

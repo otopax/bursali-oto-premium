@@ -1,0 +1,1173 @@
+header .sub-nav .converter { background: linear-gradient(-45deg, rgba(60, 60, 60, 1) 0, rgba(40, 40, 40, 1) 100%); display: block; float: right; height: 50px; line-height: 50px; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; text-decoration: none; text-align: center; padding: 0 20px }
+header .sub-nav .converter:after { content: ""; display: inline-block; height: 16px; width: 16px; background: url("../img/sprite.png") -37px -18px no-repeat; vertical-align: middle; margin: -5px 0 0 9px }
+header .sub-nav .converter.active:before { content: ""; display: block; height: 10px; width: 20px; background: url("../img/sprite.png") left top no-repeat; position: absolute; z-index: 1002; margin: 50px 0 0 4px }
+header .sub-nav .converter.active { background: rgba(26, 26, 26, 1) }
+header .sub-nav .converter.static { background: rgba(26, 26, 26, 1) }
+header .sub-nav .converter.static:before { content: ""; display: block; height: 10px; width: 20px; background: url("../img/sprite.png") left top no-repeat; position: absolute; z-index: 1002; margin: 50px 0 0 47px }
+header .sub-nav .converter:hover { background: rgba(80, 80, 80, 1) }
+header .sub-nav .converter.active:hover { background: rgba(26, 26, 26, 1) }
+#select-recent-car { position: absolute; top: 100px; left: 0; display: none; width: 100%; padding: 25px 0 0; background: rgba(255, 255, 255, 1); box-shadow: 0 1px 10px rgba(50, 50, 50, 1); z-index: 998 }
+#select-recent-car .column ul li:hover, #select-recent-car .column ul li.active { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(242, 242, 242, 1) 6%, rgba(242, 242, 242, 1) 100%) }
+#select-recent-car.active:before { border: 1px solid rgba(255, 0, 0, 1) }
+#select-recent-car .lineout.clearfix:after { content: ""; display: block; height: 0; line-height: 0; overflow: hidden; clear: both; visibility: hidden }
+#select-recent-car .column { display: block; margin: 0 0 30px }
+#select-recent-car .column:last-child ul { border: none }
+#select-recent-car .column ul { padding: 0 19px 0 20px; border-right: 1px solid rgba(234, 234, 234, 1); list-style-type: none }
+#select-recent-car .column ul li { cursor: pointer; display: block; text-indent: 14px; font-size: 14px; position: relative; margin: 0 0 10px; border: 1px solid rgba(200, 200, 200, 1); background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+#select-recent-car .column ul li:hover { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(242, 242, 242, 1) 6%, rgba(242, 242, 242, 1) 100%) }
+#select-recent-car .column ul li a { color: rgba(0, 0, 0, 1); display: block; height: 48px; line-height: 48px }
+#select-recent-car .column ul li:hover, #select-recent-car .column ul li a:hover { font-weight: bold }
+#select-recent-car .column h3 { display: block; overflow: hidden; white-space: nowrap; margin: 0 0 0 20px; line-height: 40px }
+.custom-dropdown-wrapper { float: left; position: relative; border: 1px solid rgba(167, 167, 167, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 38px; height: 38px; margin: 0 20px; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 50%, rgba(242, 242, 242, 1) 100%); overflow: hidden; white-space: nowrap; width: 240px }
+#systemSection .custom-dropdown-wrapper { width: auto !important }
+.custom-dropdown-wrapper span.selected { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 38px; height: 38px; margin: 0 40px 0 15px }
+.custom-dropdown-wrapper span.selected:before { content: "_"; font-family: "HaynesPro", sans-serif; display: block; width: 25px; height: 38px; text-align: left; line-height: 38px; float: right }
+.custom-dropdown-wrapper select { display: block; border: none; width: 100%; height: 38px; opacity: 0; position: absolute; margin: -38px 0 0 }
+#filter-vehicle-criteria .custom-dropdown-wrapper { width: 210px; margin: 0 20px }
+.filter-vehicle-criteria { text-align: left !important; width: 170px }
+.filter-vehicle-criteria.active { background: rgba(26, 26, 26, 1) }
+.filter-vehicle-criteria.active:hover { background: rgba(26, 26, 26, 1) }
+.filter-vehicle-criteria:before { content: ""; display: block !important; height: 10px; width: 20px; background: none; position: absolute; z-index: 1002; margin: 50px 0 0 100px }
+.filter-vehicle-criteria.active:before { background: url("../img/sprite.png") left top no-repeat }
+.filter-vehicle-criteria span { float: right; font-family: "HaynesPro", sans-serif }
+#filter-vehicle-criteria { position: absolute; top: 100px; left: 0; display: none; opacity: 0; width: 100%; padding: 25px 0 0; background: rgba(255, 255, 255, 1); box-shadow: 0 1px 10px rgba(50, 50, 50, 1); z-index: 998 }
+#filter-vehicle-criteria .lineout.clearfix:after { content: ""; display: block; height: 0; line-height: 0; overflow: hidden; clear: both; visibility: hidden }
+#filter-vehicle-criteria .column { display: block; float: left; width: 333px; margin: 0 0 30px }
+#filter-vehicle-criteria .column.full { width: 100%; float: none; clear: both }
+#filter-vehicle-criteria .column:last-child ul { border: none }
+#filter-vehicle-criteria .column ul { padding: 0 19px 0 20px; border-right: 1px solid rgba(234, 234, 234, 1); list-style-type: none }
+#filter-vehicle-criteria .column ul li { position: relative; height: 48px; margin: 0 0 10px; border: 1px solid rgba(200, 200, 200, 1); background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+#filter-vehicle-criteria .column ul li:hover, #filter-vehicle-criteria .column ul li.active { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+#filter-vehicle-criteria .column ul li.active { color: rgba(57, 151, 46, 1); font-weight: bold; cursor: pointer }
+#filter-vehicle-criteria .column ul li label { display: block; height: 100%; line-height: 48px; text-indent: 14px; font-size: 14px; cursor: pointer }
+#filter-vehicle-criteria .column ul li input[type="radio"] { position: absolute; display: block; height: 100%; width: 100%; background: rgba(0, 255, 0, 1); border: none; opacity: 0; margin: -48px 0 0; cursor: pointer }
+#filter-vehicle-criteria .column .custom-radio-button { position: absolute; display: block; height: 22px; width: 22px; color: rgba(255, 255, 255, 1); font-family: "HaynesPro", sans-serif; font-weight: normal; background: rgba(255, 255, 255, 1); text-align: center; line-height: 22px; border: 1px solid rgba(234, 234, 234, 1); right: 10px; top: 12px }
+#filter-vehicle-criteria .column ul li.disabled label { background: rgba(238, 238, 238, 1); color: rgba(187, 187, 187, 1) !important; cursor: default !important }
+#filter-vehicle-criteria .column .custom-radio-button.disabled { background: rgba(250, 250, 250, 1); color: rgba(204, 204, 204, 1) !important; cursor: default !important }
+#filter-vehicle-criteria .column ul li.disabled input[type="radio"] { cursor: default !important }
+#filter-vehicle-criteria .column .active .custom-radio-button { color: rgba(58, 151, 47, 1) }
+#filter-vehicle-criteria .column h3 { display: block; overflow: hidden; white-space: nowrap; margin: 0 0 0 20px; line-height: 40px }
+#filter-vehicle-criteria .button-bar { border-top: 1px solid rgba(234, 234, 234, 1); height: 70px }
+#filter-vehicle-criteria .button-bar .button { float: right; margin: 16px 20px 0 0 }
+#filter-car-criteria { position: absolute; top: 100px; left: 0; display: none; width: 100%; padding: 25px 0 0; background: rgba(255, 255, 255, 1); box-shadow: 0 1px 10px rgba(50, 50, 50, 1); z-index: 98 }
+#filter-car-criteria .column.full { width: 100% }
+#filter-car-criteria .column ul li:hover, #filter-car-criteria .column ul li.active { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(242, 242, 242, 1) 6%, rgba(242, 242, 242, 1) 100%) }
+#filter-car-criteria.active:before { border: 1px solid rgba(255, 0, 0, 1) }
+#filter-car-criteria .lineout.clearfix:after { content: ""; display: block; height: 0; line-height: 0; overflow: hidden; clear: both; visibility: hidden }
+#filter-car-criteria .column { display: block; margin: 0 0 30px }
+#filter-car-criteria .column:last-child ul { border: none }
+#filter-car-criteria .column ul { padding: 0 19px 0 20px; border-right: 1px solid rgba(234, 234, 234, 1); list-style-type: none }
+#filter-car-criteria .column ul li { cursor: pointer; display: block; text-indent: 14px; font-size: 14px; position: relative; margin: 0 0 10px; border: 1px solid rgba(200, 200, 200, 1); background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+#filter-car-criteria .column ul li:hover { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(242, 242, 242, 1) 6%, rgba(242, 242, 242, 1) 100%) }
+#filter-car-criteria .column ul li a { color: rgba(0, 0, 0, 1); display: block; height: 48px; line-height: 48px }
+#filter-car-criteria .column ul li:hover, #filter-car-criteria .column ul li a:hover { font-weight: bold }
+#filter-car-criteria .column ul li.selected a { border-left: 4px solid rgba(48, 151, 29, 1); color: rgba(48, 151, 29, 1) }
+#filter-car-criteria .column h3 { display: block; overflow: hidden; white-space: nowrap; margin: 0 0 0 20px; line-height: 40px }
+#select-recent-config { position: absolute; top: 100px; left: 0; display: none; width: 100%; padding: 25px 0 0; background: rgba(255, 255, 255, 1); box-shadow: 0 1px 10px rgba(50, 50, 50, 1); z-index: 998 }
+#select-recent-config .column ul li:hover, #select-recent-config .column ul li.active { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(242, 242, 242, 1) 6%, rgba(242, 242, 242, 1) 100%) }
+#select-recent-config.active:before { border: 1px solid rgba(255, 0, 0, 1) }
+#select-recent-config .lineout.clearfix:after { content: ""; display: block; height: 0; line-height: 0; overflow: hidden; clear: both; visibility: hidden }
+#select-recent-config .column { display: block; margin: 0 0 30px }
+#select-recent-config .column:last-child ul { border: none }
+#select-recent-config .column ul { padding: 0 19px 0 20px; border-right: 1px solid rgba(234, 234, 234, 1); list-style-type: none }
+#select-recent-config .column ul li { cursor: pointer; display: block; text-indent: 14px; font-size: 14px; position: relative; margin: 0 0 10px; border: 1px solid rgba(200, 200, 200, 1); background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+#select-recent-config .column ul li:hover { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(242, 242, 242, 1) 6%, rgba(242, 242, 242, 1) 100%) }
+#select-recent-config .column ul li a { color: rgba(0, 0, 0, 1); display: block; height: 48px; line-height: 48px }
+#select-recent-config .column ul li:hover, #select-recent-config .column ul li a:hover { font-weight: bold }
+#select-recent-config .column h3 { display: block; overflow: hidden; white-space: nowrap; margin: 0 0 0 20px; line-height: 40px }
+.check:before { content: "v" !important; font-family: "HaynesPro", sans-serif }
+.note:before { content: "!" !important; font-family: "HaynesPro", sans-serif }
+.loginWarning { font-family: "HaynesPro", sans-serif; color: rgba(204, 0, 0, 1); font-size: 25px; float: left; clear: both; height: 45px; margin-right: 15px }
+.checkSpace { padding-left: 21px !important }
+.loading { width: 28px; height: 28px; background: url("../img/ajax-loader.gif") center no-repeat rgba(255, 255, 255, 1); border: 1px solid rgba(170, 170, 170, 1) }
+.warning-lights-loading { margin: 0 !important; position: initial !important }
+#id-locator .loading { position: relative; top: 50%; left: 45% }
+#model-detail-overview .loading { position: absolute; top: 50%; left: 50% }
+#model-detail-overview .dropdown-items li.loading { position: static; width: auto }
+#carsHistory .loading { position: relative; top: 50%; left: 45% }
+#newVehicle .loading { position: relative; top: 50%; left: 45% }
+.loading.extraUsers { position: absolute; top: 50%; left: 50%; margin-left: -14px; margin-top: -14px }
+table.contentTable { background: rgba(242, 242, 242, 1); border-top: none; border-left: none }
+table.contentTable tr td { border-top: 1px solid rgba(232, 232, 232, 1); border-bottom: none; border-right: none; height: auto; line-height: 18px; padding: 16px 0; font-size: 14px; color: rgba(0, 0, 0, 1); font-family: "Helvetica Neue", Arial, sans-serif }
+table.contentTable tr:nth-child(2n+1), table.contentTable tr:nth-child(2n) { background: none }
+table.contentTable tr:hover { cursor: default }
+div.contentTableContainer { padding: 0 20px }
+#descriptionTemplates { display: none; visibility: hidden }
+.button.inactive { opacity: 0.2; border: 1px solid rgba(134, 134, 134, 1) !important; background: rgba(85, 85, 85, 1) !important; cursor: default; pointer-events: none }
+.filters .custom-radio-button { font-family: "Helvetica Neue", Arial, sans-serif; vertical-align: middle; height: 18px; width: 18px; line-height: 18px; font-size: 15px; color: rgba(51, 51, 51, 1); display: block; margin: 19px 0 0 20px; float: left; background: url("../img/custom-radio-button-greybg.png") -1px 0 no-repeat }
+.filters .custom-radio-button.checked { background: url("../img/custom-radio-button-greybg.png") -21px 0 no-repeat }
+div.tmpl.repair-manuals, section.repair-manuals { display: block; width: 100%; background: rgba(245, 245, 245, 1); border: 1px solid rgba(200, 200, 200, 1) }
+.repair-manuals>.heading { display: block; position: relative; width: 100%; background: rgba(112, 112, 112, 1); text-align: center; box-shadow: inset 0 0 30px rgba(97, 97, 97, 1); overflow: hidden }
+.repair-manuals .heading h2 { text-align: center; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 30px; font-size: 22px; text-shadow: 0 1px rgba(90, 90, 90, 1); padding: 25px 22% }
+.repair-manuals>.heading .button { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+.repair-manuals>.heading .back { position: absolute; margin: 22px 0 0; left: 20px }
+.repair-manuals>.heading .print { position: absolute; margin: 22px 0 0; right: 20px }
+.repair-manuals>.heading .print span { font-size: 18px; font-weight: normal !important }
+.repair-manuals>.heading .button>span { font-family: "HaynesPro", sans-serif; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0 }
+.repair-manuals>.inner { display: block; overflow: hidden; margin: 0; background: rgba(242, 242, 242, 1); box-shadow: inset 0 2px 4px rgba(196, 196, 196, 1) }
+.repair-manuals>.inner div.left { display: block; float: left; padding: 0 0 99900px; margin: 0 0 -99900px; width: 29%; background: rgba(85, 85, 85, 1); position: sticky; top: 0 }
+.repair-manuals>.inner div.left li { display: block; width: 100%; border-top: 1px solid rgba(94, 94, 94, 1); border-bottom: 1px solid rgba(68, 68, 68, 1) }
+.repair-manuals>.inner div.left li a { display: block; font-size: 15px; line-height: 18px; padding: 15px 20px; color: rgba(255, 255, 255, 1) }
+.repair-manuals>.inner div.left li.active, .repair-manuals>.inner div.left li:hover { background: none left top repeat scroll rgba(52, 52, 52, 1); border-bottom: 1px solid rgba(42, 42, 42, 1); border-top: 1px solid rgba(42, 42, 42, 1) }
+.repair-manuals>.inner div.left ul ul li a { padding: 10px 20px 10px 40px; font-size: 13px }
+.repair-manuals .left { overflow: hidden }
+.repair-manuals>.inner .right { display: block; float: left; padding: 20px 0 99904px; margin: 0 0 -99900px; width: 71% }
+.alt div.tmpl.repair-manuals, .alt section.repair-manuals { display: block; width: 100%; background: rgba(26, 26, 26, 1); border: none; overflow: hidden; margin: 0 0 20px }
+.alt .repair-manuals>.heading { display: block; position: relative; width: 100%; background: rgba(26, 26, 26, 1); box-shadow: none }
+.alt .repair-manuals .heading h2 { text-align: center; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 30px; font-size: 22px; margin: 0 0 0 20px; padding: 25px 7% 5px }
+.alt .repair-manuals>.heading .button { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; font-weight: normal; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+.alt .repair-manuals>.heading .print { position: static; float: right; margin: 22px 10px 0 0 }
+.alt .repair-manuals>.heading .print span { font-size: 18px; font-weight: normal !important }
+.alt .repair-manuals>.heading .button>span { font-family: "HaynesPro", sans-serif; font-weight: normal; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0 }
+.alt .repair-manuals>.heading .close { float: right; margin: 22px 20px 0 0 }
+.alt .repair-manuals>.inner { display: block; overflow: hidden; margin: 0 20px 20px; background: rgba(255, 255, 255, 1) }
+.alt .repair-manuals>.inner.technical-drawings-overview { margin: 20px; padding: 0 }
+.alt .repair-manuals>.inner { display: block; overflow: hidden; margin: 20px; background: rgba(255, 255, 255, 1); box-shadow: none; padding: 0 }
+.alt .repair-manuals>.inner .left { display: block; float: left; padding: 0 0 99900px; margin: 0 0 -99900px; width: 29%; background: rgba(255, 255, 255, 1) }
+.alt .repair-manuals>.inner .left li { display: block; width: 100%; border-top: none; border-bottom: 1px solid rgba(232, 232, 232, 1); background: linear-gradient(180deg, rgba(249, 249, 249, 1) 0, rgba(255, 255, 255, 1) 21%, rgba(255, 255, 255, 1) 100%) }
+.alt .repair-manuals>.inner .left li a { color: rgba(0, 0, 0, 1) }
+.alt .repair-manuals>.inner .left li:hover a, .alt .repair-manuals>.inner .left li.active a { background: rgba(112, 112, 112, 1); color: rgba(255, 255, 255, 1) }
+.alt .repair-manuals>.inner .left li.active { border-bottom: 1px solid rgba(101, 101, 101, 1) }
+.alt .repair-manuals>.inner .left li:hover { border-bottom: 1px solid rgba(101, 101, 101, 1) }
+.alt .repair-manuals>.inner .right { display: block; float: left; padding: 20px 0 99904px; margin: 0 0 -99900px; width: 71%; background: rgba(242, 242, 242, 1) }
+.repair-manuals>.inner .right ul li { border-bottom: 1px solid rgba(218, 218, 218, 1); font-size: 14px; line-height: 18px; padding: 8px 0; overflow: hidden; position: relative }
+.repair-manuals>.inner .right ul li.HEADER_STYLE { font-weight: bold }
+ul li.bulletinLine.HEADER_STYLE { font-weight: bold }
+.repair-manuals>.inner .right ul li.SUBSENTENCE_STYLE { margin: 0 20px 0 40px }
+ul li.bulletinLine.SUBSENTENCE_STYLE { margin: 0 20px 0 40px !important }
+ul li.bulletinLine.SENTENCE_STYLE { margin-left: 0 !important; min-height: 17.6px }
+.repair-manuals>.inner .right ul.BULLET_LIST { margin: 0 20px 0 40px; list-style-type: disc }
+ul.bulletinLine.BULLET_LIST { margin: 0 20px 0 40px; list-style-type: disc }
+.repair-manuals>.inner .right ol.NUMBERED_LIST { margin: 0 20px 0 61px }
+ol.bulletinLine.NUMBERED_LIST { margin: 0 20px 0 40px }
+.repair-manuals>.inner .right ul li.PARAGRAPH_STYLE { border-bottom: none }
+ul li.bulletinLine.PARAGRAPH_STYLE { border-bottom: none }
+.repair-manuals>.inner .right ul li.componentHeader { font-weight: bold }
+.repair-manuals>.inner .right figure { text-align: center }
+.repair-manuals>.inner .right ul li table.tableContent { }
+.repair-manuals>.inner .right ul li table.tableContent td { line-height: 28px }
+.repair-manuals>.inner .right ul li table.tableContent tr:hover { cursor: default }
+.repair-manuals>.inner .right .imgCallOut { border-top: none; border-right: 1px solid rgba(218, 218, 218, 1); border-bottom: 1px solid rgba(218, 218, 218, 1); border-left: 1px solid rgba(218, 218, 218, 1); display: block; margin: 0; padding: 10px 0; background: rgba(255, 255, 255, 1); position: relative }
+.repair-manuals>.inner .right .imgCallOut h2 { font-size: 16px; line-height: 30px }
+.repair-manuals>.inner .right .imgCallOut ul.BULLET_LIST { margin: 0 20px }
+.repair-manuals>.inner .right .imgCallOut ol.NUMBERED_LIST { margin: 0 20px }
+.repair-manuals>.inner .right .imgCallOut li { font-size: 14px; line-height: 18px; padding: 0 0 8px; border: none }
+.repair-manuals>.inner .right .imgCallOut li.checkSpace { padding-left: 5px !important }
+.repair-manuals>.inner .right .repair-items ul li.indent { padding-left: 20px }
+.repair-manuals>.inner .right .repair-items ul li.indent2 { padding-left: 35px }
+.repair-manuals>.inner .right .repair-items ul li.emissionHeader { background-color: rgba(229, 229, 229, 1) }
+.repair-manuals>.inner .right .repair-items ul li>span { height: 100%; border-left: 1px solid rgba(229, 229, 229, 1); position: absolute; margin: 0; right: 0; top: 0 }
+.repair-manuals>.inner .right .repair-items ul li>span .holder { display: block; word-break: keep-all }
+.repair-manuals>.inner .right .repair-items ul li>span.extra-info { right: 352px; border: none }
+.repair-manuals>.inner .right.manuals .repair-items ul li>span.extra-info { right: 0; width: 160px; border: none }
+.repair-manuals>.inner .right.lubricants .repair-items ul li>span.extra-info { right: 515px; width: 50px; border: none }
+.repair-manuals>.inner .right .repair-items ul li>span.value { right: 151px; width: 200px; border: none }
+.repair-manuals>.inner .right .repair-items ul li>span.unit { right: 0; width: 150px; border: none }
+.repair-manuals>.inner .right .repair-items ul li>span.lube_value1 { float: left; width: 20%; height: auto; position: static; border: none }
+.repair-manuals>.inner .right .repair-items ul li>span.lube_value2 { float: left; width: 20%; height: auto; position: static; border: none }
+.repair-manuals>.inner .right .repair-items ul li>span.lube_value3 { float: left; width: 20%; height: auto; position: static; border: none }
+.repair-manuals>.inner .right .repair-items ul li>span.value .holder { width: 180px; padding: 8px 0 }
+.repair-manuals>.inner .right .repair-items ul li>span.unit .holder { width: 130px; padding: 8px 0 }
+.repair-manuals>.inner .right .repair-items ul li>span .button { display: block; height: 28px; width: 28px; border: 1px solid rgba(200, 200, 200, 1); background: rgba(255, 255, 255, 1); box-shadow: inset 0 0 10px rgba(249, 249, 249, 1); text-shadow: none !important; margin: 0; padding: 0; font-size: 24px; font-weight: normal; line-height: 32px; text-align: center; font-family: "HaynesPro", sans-serif; color: rgba(51, 51, 51, 1) }
+.repair-manuals>.inner .right .repair-items ul li>span.extra-info .button { float: right; margin: 4px 0 0 10px; color: rgba(13, 116, 196, 1) }
+.repair-manuals>.inner .right .repair-parts { display: block; margin: 0 20px 12px; background: rgba(242, 242, 242, 1); border: 1px solid rgba(200, 200, 200, 1); overflow: hidden }
+.repair-manuals>.inner .right .repair-parts.expand { height: 58px }
+.repair-manuals>.inner .right .repair-parts .top-bar { display: block; height: 58px; width: 100%; background: rgba(255, 255, 255, 1); border-bottom: 1px solid rgba(200, 200, 200, 1); box-shadow: inset 0 0 30px rgba(250, 250, 250, 1) }
+.repair-manuals>.inner .right .repair-parts .top-bar h2 { display: inline-block; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 20px; line-height: 58px; margin: 0 15px 0 20px; vertical-align: middle }
+.repair-manuals>.inner .right .repair-parts .top-bar .counter { display: inline-block; height: 22px; line-height: 22px; padding: 0 13px; background: rgba(242, 245, 248, 1); border: 1px solid rgba(210, 215, 220, 1); color: rgba(0, 109, 193, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px; font-weight: bold; vertical-align: middle; box-shadow: inset 0 1px 3px rgba(224, 227, 230, 1); text-shadow: 0 1px rgba(255, 255, 255, 1) }
+.repair-manuals>.inner .right .repair-parts .top-bar .switch { float: right; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; color: rgba(51, 51, 51, 1); margin: 22px 20px 0 0 }
+.repair-manuals>.inner .right .repair-parts .top-bar .switch span.icon { font-size: 13px; font-weight: normal; color: rgba(51, 51, 51, 1); margin: 0 0 0 8px; font-family: "HaynesPro", sans-serif }
+.repair-manuals>.inner .right .repair-parts .filters { display: block; height: 56px; box-shadow: inset 0 0 30px rgba(229, 229, 229, 1) }
+.repair-manuals>.inner .right .repair-parts .filters .quantity { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; display: block; width: 119px; line-height: 56px; float: right; text-indent: 11px; color: rgba(51, 51, 51, 1); opacity: 0.6 }
+.repair-manuals>.inner .right .repair-parts .filters .price { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; display: block; width: 130px; line-height: 56px; float: right; text-indent: 11px; color: rgba(51, 51, 51, 1); opacity: 0.6 }
+.repair-manuals>.inner .right .repair-parts .filters .custom-radio-button input[type="radio"] { display: block; height: 18px; width: 18px; border: none; position: relative; margin: 1px 0 0; opacity: 0 }
+.repair-manuals>.inner .right .repair-parts .filters label { font-family: "Helvetica Neue", Arial, sans-serif; vertical-align: middle; height: 18px; line-height: 18px; font-size: 15px; color: rgba(51, 51, 51, 1); display: block; margin: 19px 0 0 9px; float: left }
+.repair-manuals>.inner .right .repair-parts .filters .custom-checkbox-wrapper { margin: 20px 0 0 30px; float: left; line-height: 16px }
+.repair-manuals>.inner .right .repair-parts ul { margin: 0; display: block; width: 100% }
+.repair-manuals>.inner .right .repair-parts ul li { display: block; position: relative; width: 100%; padding: 15px 0; font-size: 15px; line-height: 18px; border-top: 1px solid rgba(232, 232, 232, 1); background: rgba(255, 255, 255, 1); box-shadow: inset 0 0 30px rgba(249, 249, 249, 1); overflow: hidden }
+.repair-manuals.technical-drawings>.inner .right .repair-parts ul li { padding: 10px 0 }
+.repair-manuals>.inner .right .repair-parts:not(.static) ul li h3 { display: inline-block; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(51, 51, 51, 1); font-weight: normal; font-size: 15px; line-height: 18px; margin: 0 244px 0 20px; overflow: hidden; white-space: nowrap }
+.repair-manuals>.inner .right .repair-parts ul li h3 span { display: inline-block; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(51, 51, 51, 1); font-weight: normal; font-size: 12px; line-height: 18px; overflow: hidden; white-space: nowrap }
+.repair-manuals>.inner .right .repair-parts:not(.static) ul li>span { float: right; vertical-align: top; height: 18px; line-height: 18px; border-left: 1px solid rgba(229, 229, 229, 1); padding: 15px 0; margin: -15px 0 0 }
+.repair-manuals>.inner .right .repair-parts:not(.static) ul li>span.showPart { height: auto; margin: 0 10px; padding: 0 }
+.repair-manuals>.inner .right .repair-parts:not(.static) ul li>span.showPart.disabled a { color: rgba(153, 153, 153, 1); cursor: default }
+.repair-manuals>.inner .right .repair-parts ul li span.price { width: 104px; text-indent: 10px }
+.repair-manuals>.inner .right .repair-parts ul li span.price input[type="text"] { box-shadow: inset 0 2px 10px rgba(235, 235, 235, 1); color: rgba(51, 51, 51, 1); display: block; font-size: 15px; line-height: 15px; margin: -7px 0 0 10px; padding: 7px 0 6px; text-align: center; top: 50%; width: 63px }
+.repair-manuals>.inner .right .repair-parts ul li span.quantity { width: 65px }
+.repair-manuals>.inner .right .repair-parts ul li span.quantity input[type="text"] { display: block; font-size: 15px; line-height: 15px; padding: 7px 0 6px; width: 43px; border: 1px solid rgba(191, 191, 191, 1); top: 50%; margin: -7px 0 0 10px; text-align: center; color: rgba(51, 51, 51, 1); box-shadow: inset 0 2px 10px rgba(235, 235, 235, 1) }
+.repair-manuals>.inner .right .repair-parts ul li span.checker { width: 52px }
+.repair-manuals>.inner .right .repair-parts.check-only ul li h3 { margin: 0 72px 0 20px }
+.repair-manuals>.inner .right .repair-parts.check-only ul li span.checker { border: none }
+.repair-manuals>.inner .right .repair-parts ul li.active:before { content: ""; position: absolute; left: 0; display: block; margin: -15px 0 0; background: rgba(48, 151, 29, 1); height: 100%; width: 4px }
+.repair-manuals>.inner .right .repair-parts ul li.active h3 { color: rgba(48, 151, 29, 1) !important }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper { font-family: "HaynesPro", sans-serif; display: block; height: 28px; width: 28px; line-height: 32px; font-size: 14px; font-weight: bold; border: 1px solid rgba(200, 200, 200, 1); color: rgba(206, 206, 206, 1); padding: 0; background: rgba(255, 255, 255, 1); box-shadow: inset 0 0 10px rgba(249, 249, 249, 1); vertical-align: middle; margin: -6px 0 0 10px; text-align: center }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.checked { border: 1px solid rgba(192, 211, 189, 1); background: rgba(214, 232, 211, 1); box-shadow: inset 0 0 10px rgba(206, 225, 203, 1); color: rgba(57, 151, 46, 1) }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper input[type="checkbox"]:hover { cursor: pointer }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper input[type="checkbox"] { display: block; height: 30px; width: 30px; opacity: 0; position: absolute; border: none; margin: -28px 0 0 }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.add-remove { font-family: "HaynesPro", sans-serif; display: block; font-weight: normal !important; font-size: 16px !important; height: 28px; width: 28px; color: rgba(48, 151, 29, 1) !important; line-height: 32px; border: 1px solid rgba(200, 200, 200, 1); padding: 0; background: rgba(255, 255, 255, 1); box-shadow: inset 0 0 10px rgba(249, 249, 249, 1); vertical-align: middle; margin: -6px 0 0 10px; text-align: center }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.add-remove.checked { border: 1px solid rgba(200, 200, 200, 1); background: none; font-weight: normal; line-height: 32px; color: rgba(198, 6, 0, 1) !important }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.add-remove input[type="checkbox"]:hover { cursor: pointer }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.add-remove input[type="checkbox"] { display: block; height: 30px; width: 30px; opacity: 0; position: absolute; border: none; margin: -28px 0 0 }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.small { float: left; font-family: "HaynesPro", sans-serif; display: block; height: 14px; width: 14px; line-height: 14px; margin: 0; font-size: 10px; color: rgba(255, 255, 255, 1) }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.small.checked { color: rgba(57, 151, 46, 1); background: rgba(255, 255, 255, 1); box-shadow: inset 0 0 10px rgba(249, 249, 249, 1) }
+.repair-manuals>.inner .right .repair-parts .custom-checkbox-wrapper.small input[type="checkbox"] { display: block; height: 14px; width: 14px; opacity: 0; position: absolute; border: none; margin: -14px 0 0 }
+.repair-manuals>.inner .right .repair-parts .repair-parts-bottom { padding: 10px; overflow: hidden; border-top: 1px solid rgba(200, 200, 200, 1); box-shadow: inset 0 0 30px rgba(229, 229, 229, 1) }
+.repair-manuals>.inner .right .repair-parts .repair-parts-bottom .button { float: right }
+.repair-manuals>.inner>.top { background: none left top repeat scroll rgba(255, 255, 255, 1); border-bottom: 1px solid rgba(219, 219, 219, 1); margin: 0; height: 20px }
+.alt .repair-manuals>.inner>.top { height: 74px; margin: 0 20px }
+.repair-manuals>.inner>.top h3 { float: left; line-height: 74px; margin: 0 0 0 20px }
+.repair-manuals>.inner>.top .custom-dropdown-wrapper { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 50%, rgba(242, 242, 242, 1) 100%); border: 1px solid rgba(167, 167, 167, 1); float: left; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; height: 38px; line-height: 38px; margin: 16px 30px 0 20px; position: relative; overflow: hidden; white-space: nowrap; width: 300px }
+.repair-manuals>.inner>.top .custom-dropdown-wrapper span.selected:before { content: "_"; display: block; float: right; font-family: "HaynesPro", sans-serif; height: 38px; line-height: 38px; text-align: left; width: 25px }
+.repair-manuals>.inner>.top .custom-dropdown-wrapper span.selected { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; height: 38px; line-height: 38px; margin: 0 40px 0 15px }
+.repair-manuals .custom-dropdown-wrapper select { border: 3px none; display: block; height: 38px; margin: -38px 0 0; opacity: 0; position: absolute; width: 100% }
+.repair-manuals>.inner>.top .custom-dropdown-wrapper select option.header { background: rgba(221, 221, 221, 1) }
+.repair-manuals>.inner>.top .custom-dropdown-wrapper select option.indent { padding-left: 20px }
+.repair-manuals.technical-drawings .top { margin: 0; height: 74px }
+.repair-manuals>.inner.technical-drawings-overview { margin: 0 }
+.repair-manuals>.inner.technical-drawings-overview .left { width: 22% }
+.repair-manuals>.inner.technical-drawings-overview .right { width: 78% }
+.repair-manuals>.inner .right ul.technical-drawings { margin-bottom: 20px }
+.repair-manuals>.inner .right ul.technical-drawings li { border-top: none; font-size: 14px; line-height: 18px; padding: 0; position: relative }
+.repair-manuals .technical-drawings .drawing { background: rgba(255, 255, 255, 1); border: 1px solid rgba(218, 218, 218, 1); margin: 0 20px; text-align: center }
+.repair-manuals>.inner .right ul.technical-drawings figure img { max-width: none; max-height: none }
+.repair-manuals>.inner .right ul.technical-drawings>li>a.button { position: absolute; top: 10px; right: 10px; color: rgba(0, 109, 193, 1); border: 1px solid rgba(200, 200, 200, 1); z-index: 99 }
+.repair-manuals .technical-drawings .drawing embed, .repair-manuals .technical-drawings .drawing svg { margin: 0 auto }
+.repair-manuals.technical-drawings .tmpl { border-top: 1px solid rgba(218, 218, 218, 1); border-bottom: 1px solid rgba(218, 218, 218, 1) }
+#technical-drawings-overview ul li span.price input[type="text"] { display: block; font-size: 15px; line-height: 15px; padding: 7px 0 6px; width: 63px; border: 1px solid rgba(191, 191, 191, 1); top: 50%; margin: -7px 0 0 10px; text-align: center; color: rgba(51, 51, 51, 1); box-shadow: inset 0 2px 10px rgba(235, 235, 235, 1) }
+.lineoutLogin { display: block; width: 800px; margin: 0 auto 25px; background: rgba(245, 245, 245, 1); border: 1px solid rgba(219, 219, 219, 1); overflow: hidden }
+.lineoutLogin .left, .lineoutLogin .right { float: left; height: 400px }
+.lineoutLogin .left { width: 399px; border-right: 1px solid rgba(219, 219, 219, 1) }
+.lineoutLogin .right { width: 400px }
+.lineoutLogin form { border-bottom: 1px solid rgba(219, 219, 219, 1); padding: 20px; height: 150px }
+.lineoutLogin .demoPart form { border-bottom: none; padding: 0; height: auto }
+.lineoutLogin form fieldset { display: block; margin-bottom: 10px }
+.lineoutLogin form label { color: rgba(0, 0, 0, 1); display: block; margin: 0 0 7px; font-size: 13px; font-weight: bold }
+ { color: rgba(204, 204, 204, 1); font-weight: normal; vertical-align: middle }
+ { color: rgba(204, 204, 204, 1); font-weight: normal; vertical-align: middle }
+.lineoutLogin form input[type="text"], .lineoutLogin form input[type="email"], .lineoutLogin form input[type="password"] { width: 337px; border: 1px solid rgba(191, 191, 191, 1); margin: 0; padding: 7px 10px; color: rgba(51, 51, 51, 1); background: linear-gradient(180deg, rgba(235, 235, 235, 1) 0, rgba(249, 249, 249, 1) 10%, rgba(255, 255, 255, 1) 19%, rgba(255, 255, 255, 1) 100%) }
+.lineoutLogin .button { float: right }
+.lineoutLogin .rememberCheck input[type="checkbox"] { height: 14px; width: 14px; border: none; margin: 2px 5px 0 0; float: left }
+.lineoutLogin .rememberCheck label { font-size: 12px; font-weight: normal; padding: 3px 0 0; float: left }
+.lineoutLogin .demoPart { height: 49px; border-bottom: 1px solid rgba(219, 219, 219, 1); padding: 10px 20px; font-size: 12px }
+.lineoutLogin span { float: left; width: 280px; line-height: 15px }
+.lineoutLogin .disclaimerPart { overflow: hidden; height: 110px; font-size: 10px; padding: 10px 20px; line-height: 15px }
+.lineoutLogin.plainMsg { display: block; width: 600px; margin: 50px auto; padding: 20px; background: rgba(255, 255, 255, 1); border: 1px solid rgba(219, 219, 219, 1); text-align: center }
+.lineoutLogin.plainMsg p { margin: 10px 0 }
+.errorLogin { position: absolute; top: 0; width: 430px; height: 50px; background: rgba(245, 245, 245, 1); border-top: none; border-right: 1px solid rgba(219, 219, 219, 1); border-bottom: 1px solid rgba(219, 219, 219, 1); border-left: 1px solid rgba(219, 219, 219, 1); padding: 20px; line-height: 18px; box-shadow: 0 3px 10px 1px rgba(153, 153, 153, 1); font-size: 13px }
+.help-text-block { display: block; float: left; width: 68%; padding: 15px 0 9990px; margin: 0 0 -9975px }
+.help-text { border: 1px solid rgba(200, 200, 200, 1); margin: 5px 20px 10px; padding-bottom: 20px }
+.help-text h3 { font-size: 14px; padding: 20px; border-bottom: 1px solid rgba(233, 233, 233, 1); margin: 0 0 20px }
+.help-text p { margin: 15px 20px; font-size: 12px; line-height: 15px }
+#converters { display: none; opacity: 0; z-index: 1000; position: absolute; left: 50%; margin-left: -480px; width: 960px; height: 590px; background: rgba(255, 255, 255, 1); top: 170px; box-shadow: 0 3px 15px 1px rgba(75, 75, 75, 1) }
+#converters>.top { display: block; width: 100%; height: 9px; border-bottom: 1px solid rgba(50, 50, 50, 1); background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0, rgba(161, 161, 161, 1) 100%) }
+#converters nav { display: block; width: 100%; height: 50px; background: rgba(52, 52, 52, 1) }
+#converters nav div a.button-close { display: block; height: 34px; width: 40px; background: url("../img/sprite.png") 0 -108px no-repeat rgba(0, 0, 0, 1); float: right; margin: 8px 10px 0 0 }
+#converters nav div a.button-close:hover { background: url("../img/sprite.png") 0 -108px no-repeat rgba(80, 80, 80, 1) }
+#converters .left { float: left; display: block; height: 530px; width: 220px }
+#converter-overview aside { display: block; width: 220px; height: 530px; background: rgba(112, 112, 112, 1); float: left }
+#converter-overview aside ul { display: block; width: 100%; padding-top: 20px }
+#converter-overview aside ul li { display: block; width: 100%; background: rgba(85, 85, 85, 1); overflow: hidden }
+#converter-overview aside ul li:first-child a { border-top: 1px solid rgba(85, 85, 85, 1) }
+#converter-overview aside ul li a { display: block; border-top: 1px solid rgba(95, 95, 95, 1); border-bottom: 1px solid rgba(68, 68, 68, 1); padding: 18px 11% 19px; vertical-align: middle; color: rgba(255, 255, 255, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 18px; font-weight: bold; position: relative }
+#converter-overview aside ul li.active a { background: url("../img/active-list-item-arrow.png") right no-repeat rgba(52, 52, 52, 1); border-top: 1px solid rgba(52, 52, 52, 1); border-bottom: 1px solid rgba(42, 42, 42, 1) }
+#converter-overview aside ul li a:hover { background: url("../img/active-list-item-arrow.png") right no-repeat rgba(66, 66, 66, 1); border-top: 1px solid rgba(66, 66, 66, 1) }
+#converters .right { float: right; display: block; height: 470px; width: 680px; padding: 30px; background: rgba(245, 245, 245, 1) }
+#converters .right .tmpl { display: none }
+#converters .right .tmpl.active { display: block }
+#converters .right h2 { margin-bottom: 30px; margin-left: 25px }
+#converters .right form .top { width: 640px; min-height: 200px; overflow: hidden; background: rgba(255, 255, 255, 1); border: 1px solid rgba(200, 200, 200, 1); padding: 20px }
+#converters .right form fieldset { display: block; margin-bottom: 10px }
+#converters .right form .result { height: 17px; width: 630px; border-top: 0; border-right: 1px solid rgba(200, 200, 200, 1); border-bottom: 1px solid rgba(200, 200, 200, 1); border-left: 1px solid rgba(200, 200, 200, 1); padding: 28px 25px 25px; background: rgba(239, 239, 239, 1) }
+#converters .right form .result div { float: right; font-size: 14px; width: 200px }
+#converters .right form .result span { font-weight: bold; display: block; float: right }
+#converters .right form #resultToe span:after { content: " mm" }
+#converters .right form #resultTorque span:after { content: " Ft/Lbs" }
+#converters .right form #resultPressure span:after { content: " Psi" }
+#converters .right form #resultVolume span:after { content: " UK Pints" }
+#converters .right form #resultMm span:after { content: " inches" }
+#converters .right form #resultSpeed span:after { content: " mph" }
+#converters .right form label { color: rgba(0, 0, 0, 1); display: block; margin: 0 0 7px; font-size: 13px; font-weight: bold }
+ { color: rgba(204, 204, 204, 1); font-weight: normal; vertical-align: middle }
+#converters .right form input[type="text"] { float: left; clear: left; width: 300px; border: 1px solid rgba(191, 191, 191, 1); margin: 0; padding: 7px 10px; color: rgba(51, 51, 51, 1); background: linear-gradient(180deg, rgba(235, 235, 235, 1) 0, rgba(249, 249, 249, 1) 10%, rgba(255, 255, 255, 1) 19%, rgba(255, 255, 255, 1) 100%) }
+#converters .right form span.unit { float: left; clear: right; margin-left: 10px }
+#id-locator { height: 614px }
+.eobd-wrapper { float: left; padding-right: 27px; padding-bottom: 16px }
+#id-locator nav ul { width: 910px }
+#id-locator nav ul li { width: 140px }
+#id-locator nav ul li a { width: 140px }
+#id-locator nav ul li a.inactive { background: rgba(60, 60, 60, 1); font-style: italic; color: rgba(170, 170, 170, 1); cursor: default; pointer-events: none }
+#id-locator nav ul li:hover a.inactive { background: rgba(60, 60, 60, 1); font-style: italic }
+#id-locator nav div { width: 50px }
+#id-locator .left { width: 617px }
+#id-locator .left figure { text-align: center; padding: 10px }
+#id-locator .left figure img { max-height: 510px; max-width: 600px }
+#id-locator .right { width: 339px }
+#id-locator .right #tmpl-key-holder { overflow: auto; height: 461px; padding: 25px 0 0 }
+div.loading { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 16px; line-height: 30px; margin: 0 0 30px 30px; float: left }
+div.loading.maintenance { float: none; position: fixed; left: 50%; top: 50%; height: 28px; width: 28px; margin-left: -15px }
+.tmpl.repair-manuals div.loading { margin: 30px 0 30px 30px }
+.dropdown-items li.loading { background: rgba(255, 255, 255, 1); padding: 10px 20px }
+.alt #maintenance-schedule { display: block; width: 100%; background: rgba(26, 26, 26, 1); border: none; overflow: hidden; margin: 0 0 20px }
+.alt #maintenance-schedule>.heading { display: block; position: relative; width: 100%; background: rgba(26, 26, 26, 1); box-shadow: none }
+.alt #maintenance-schedule .heading h2 { text-align: center; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 50px; font-size: 22px; margin: 0 0 0 20px; padding: 25px 7% 5px }
+.alt #maintenance-schedule>.heading .button { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; font-weight: normal; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+.alt #maintenance-schedule>.heading .print { position: static; float: right; margin: 22px 10px 0 0 }
+.alt #maintenance-schedule>.heading .print span { font-size: 18px; font-weight: normal !important }
+.alt #maintenance-schedule>.heading .button>span { font-family: "HaynesPro", sans-serif; font-weight: normal; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0 }
+.alt #maintenance-schedule>.heading .close { float: right; margin: 22px 20px 0 0 }
+.alt #maintenance-schedule>.inner { display: block; overflow: hidden; margin: 0 20px 20px; background: rgba(255, 255, 255, 1) }
+#maintenance-schedule .maintenance-item.static ul li.longDescription h3 { margin-left: 40px }
+.alt #maintenance-schedule>.time-schedule { display: block; overflow: hidden; margin: 20px 20px 0; background: rgba(255, 255, 255, 1); box-shadow: none; padding: 0 }
+.alt #maintenance-schedule>.maintenance-overview { display: block; overflow: hidden; margin: 0 20px 20px; background: rgba(245, 245, 245, 1); box-shadow: none; padding: 20px 0 0 }
+.alt #maintenance-schedule .time-schedule h2 { display: inline-block; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 20px; line-height: 58px; margin: 0 15px 0 20px; vertical-align: middle }
+#maintenance-schedule .maintenance-item ul li h2 { color: rgba(51, 51, 51, 1); display: inline-block; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 15px; font-weight: bold; line-height: 18px; margin: 0 360px 0 20px }
+#maintenance-schedule .maintenance-item.static ul li>span.extra-time .holder { top: 0; margin: 18px 0 0 10px }
+#maintenance-schedule .maintenance-item.static ul li>span.extra-time .holder .time input[type="number"] { display: inline-block; margin: -28px -8px 0 10px; text-align: right; vertical-align: middle; border: 1px solid rgba(255, 0, 0, 1); box-shadow: 0 0 5px rgba(255, 0, 0, 1); width: 50px; line-height: 16px }
+#maintenance-schedule .maintenance-item.static ul li>span.extra-time .holder .time .timeSelectWrap { width: 24px; float: left; overflow: hidden; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 50%, rgba(242, 242, 242, 1) 100%) left top repeat scroll rgba(0, 0, 0, 0); border: 1px solid rgba(167, 167, 167, 1); margin-top: -3px }
+#maintenance-schedule .maintenance-item.static ul li>span.extra-time .holder .time select.timeSelect { width: 45px; padding: 0; border: 0; background-color: rgba(0, 0, 0, 0); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 15px; line-height: 16px }
+#maintenance-schedule .maintenance-item.static ul li>span.extra-time .holder .time .timeSelectText { float: left }
+#maintenance-schedule .maintenance-item.static ul li>span.extra-time .holder .overlapTime { float: right; line-height: 16px; color: rgba(255, 0, 0, 1) }
+#maintenance-schedule .maintenance-item ul li h3 span.overlapMessage { color: rgba(255, 0, 0, 1); font-style: italic }
+#repair-times-overview li span.overlapMessage { color: rgba(255, 0, 0, 1); font-style: italic; font-size: 11px; display: block }
+#repair-times-overview li .overlapTime { color: rgba(255, 0, 0, 1) }
+#repair-times-overview div.note { background: rgba(238, 238, 238, 1); border: 1px solid rgba(221, 221, 221, 1); padding: 18px 18px 18px 45px; margin: 20px }
+#repair-times-overview div.note.important { background: rgba(255, 250, 200, 1); border: 1px solid rgba(239, 236, 207, 1) }
+#repair-times-overview div.note:before { content: ""; display: none }
+#repair-times-overview div.note h3 { font-size: 14px; color: rgba(52, 52, 52, 1); margin: 0 0 10px }
+#repair-times-overview div.note h3:before { content: "!"; font-family: "HaynesPro", sans-serif; color: rgba(119, 119, 119, 1); font-size: 20px; position: absolute; display: block; height: 16px; width: 16px; text-align: center; margin: 0 0 0 -26px }
+#repair-times-overview div.note p { font-size: 12px; line-height: 18px; margin: 0 }
+.dropdown-items>li>ul>li.checked span.title { padding: 0 0 0 16px }
+#model-detail-overview aside nav ul li.unavailable { background: rgba(112, 112, 112, 1) }
+#model-detail-overview aside nav ul li.unavailable a, #model-detail-overview aside nav ul li.unavailable a:hover { background: rgba(112, 112, 112, 1); border-bottom: 1px solid rgba(96, 96, 96, 1); border-top: 1px solid rgba(128, 128, 128, 1); color: rgba(136, 136, 136, 1); cursor: default }
+#model-detail-overview aside nav ul li.unavailable .counter { background: rgba(96, 96, 96, 1); border-bottom: 1px solid rgba(90, 90, 90, 1); border-top: 1px solid rgba(68, 68, 68, 1) }
+.model-detail-overview ul li.unavailable { background: rgba(238, 238, 238, 1); border: 1px solid rgba(216, 216, 216, 1); display: block; pointer-events: none }
+.model-detail-overview ul li.timing.unavailable { display: none }
+.model-detail-overview ul li.unavailable a { color: rgba(154, 154, 154, 1) }
+#model-detail-overview aside nav ul li.viewerUnavailable { background: rgba(112, 112, 112, 1) }
+#model-detail-overview aside nav ul li.viewerUnavailable a, #model-detail-overview aside nav ul li.viewerUnavailable a:hover { text-decoration: line-through; background: rgba(112, 112, 112, 1); border: 1px solid rgba(255, 0, 0, 1); color: rgba(136, 136, 136, 1); cursor: default }
+#model-detail-overview aside nav ul li.viewerUnavailable .counter { background: rgba(96, 96, 96, 1); border-bottom: 1px solid rgba(90, 90, 90, 1); border-top: 1px solid rgba(68, 68, 68, 1) }
+.model-detail-overview ul.smartPackDirectLinks li.unavailable { background: rgba(238, 238, 238, 1); border: 1px solid rgba(216, 216, 216, 1); display: block }
+.model-detail-overview ul.smartPackDirectLinks li.unavailable a { cursor: default; color: rgba(154, 154, 154, 1) }
+.model-detail-overview ul.smartPackDirectLinks li.unavailable .counter { background: rgba(229, 229, 229, 1); color: rgba(154, 154, 154, 1) }
+.model-detail-subnav nav ul li.unavailable { display: none }
+.model-detail-subnav-extend nav ul li.unavailable { display: none }
+.model-detail-overview ul li.licenseDisabled, .model-detail-overview ul li.licenseDisabled:hover, .model-detail-subnav nav ul li.licenseDisabled, .model-detail-subnav nav ul li.licenseDisabled:hover, .model-detail-subnav-extend nav ul li.licenseDisabled, .model-detail-subnav-extend nav ul li.licenseDisabled:hover, .model-detail-subnav-extend nav .tmpl li.licenseDisabled, .model-detail-subnav-extend nav .tmpl li.licenseDisabled:hover { background: rgba(238, 238, 238, 1); border: 1px solid rgba(216, 216, 216, 1); display: block }
+.model-detail-overview ul li.licenseDisabled a, .model-detail-overview ul li.licenseDisabled:hover a, .model-detail-subnav nav ul li.licenseDisabled a, .model-detail-subnav nav ul li.licenseDisabled:hover a, .model-detail-subnav-extend nav ul li.licenseDisabled a, .model-detail-subnav-extend nav ul li.licenseDisabled:hover a, .model-detail-subnav-extend nav .tmpl li.licenseDisabled a, .model-detail-subnav-extend nav .tmpl li.licenseDisabled:hover a { text-decoration: line-through; color: rgba(154, 154, 154, 1); font-weight: normal; cursor: default }
+.model-detail-overview ul li.viewerUnavailable, .model-detail-overview ul li.viewerUnavailable:hover, .model-detail-subnav nav ul li.viewerUnavailable, .model-detail-subnav nav ul li.viewerUnavailable:hover, .model-detail-subnav-extend nav ul li.viewerUnavailable, .model-detail-subnav-extend nav ul li.viewerUnavailable:hover, .model-detail-subnav-extend nav .tmpl li.viewerUnavailable, .model-detail-subnav-extend nav .tmpl li.viewerUnavailable:hover { background: rgba(238, 238, 238, 1); display: block; cursor: default }
+.model-detail-overview ul li.viewerUnavailable a, .model-detail-overview ul li.viewerUnavailable:hover a, .model-detail-subnav nav ul li.viewerUnavailable a, .model-detail-subnav nav ul li.viewerUnavailable:hover a, .model-detail-subnav-extend nav ul li.viewerUnavailable a, .model-detail-subnav-extend nav ul li.viewerUnavailable:hover a, .model-detail-subnav-extend nav .tmpl li.viewerUnavailable a, .model-detail-subnav-extend nav .tmpl li.viewerUnavailable:hover a { text-decoration: line-through; color: rgba(154, 154, 154, 1); font-weight: normal; cursor: default }
+#tmpl-smartpack-all ul li.licenseDisabled a, #tmpl-smartpack-smartcase ul li.licenseDisabled a, #tmpl-smartpack-technical-service-bulletins ul li.licenseDisabled a { color: rgba(154, 154, 154, 1); cursor: default }
+#smartpack nav.tabs li.unavailable { background: rgba(238, 238, 238, 1); border: 1px solid rgba(216, 216, 216, 1); display: block }
+#smartpack nav.tabs li.unavailable a { cursor: default; color: rgba(154, 154, 154, 1) }
+#smartpack nav.tabs li.unavailable a .counter { background: rgba(229, 229, 229, 1); color: rgba(154, 154, 154, 1) }
+#smartpack-detail .overview>li ul li.remark { margin-left: 20px }
+#smartpack-detail .overview>li ul li.indent { margin-left: 20px }
+#smartpack-detail .overview>li ul li span.indent { margin-left: 40px }
+#smartpack-detail .overview>li ul li.mimedata { display: block }
+#smartpack-detail .overview>li figure { text-align: center; padding: 20px 0 }
+#smartpack-detail .overview>li figure a.enlarge { color: rgba(0, 109, 193, 1) }
+#smartpack-detail .overview li { list-style: none }
+.alt #smartpack-detail { display: block; width: 100%; border: none; overflow: hidden; margin: 0 0 20px }
+.alt #smartpack-detail>.heading { display: block; position: relative; width: 100%; background: rgba(26, 26, 26, 1); box-shadow: none }
+.alt #smartpack-detail .heading h2 { text-align: center; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 30px; font-size: 22px; margin: 0 0 0 20px; padding: 25px 7% }
+.alt #smartpack-detail>.heading .button { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; font-weight: normal; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+.alt #smartpack-detail>.heading .print { position: static; float: right; margin: 22px 10px 0 0 }
+.alt #smartpack-detail>.heading .print span { font-size: 18px; font-weight: normal !important }
+.alt #smartpack-detail>.heading .button>span { font-family: "HaynesPro", sans-serif; font-weight: normal; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0 }
+.alt #smartpack-detail>.heading .close { float: right; margin: 22px 20px 0 0 }
+.alt #smartpack-detail>.inner { display: block; overflow: hidden; margin: 0 20px 20px; background: rgba(255, 255, 255, 1) }
+.fuel-type ul li.inactive a, .fuel-type ul li.inactive:hover a { cursor: default }
+.fuel-type ul li:hover { border-bottom: 1px solid rgba(134, 134, 134, 1) !important; background: rgba(85, 85, 85, 1) }
+.fuel-type ul li.active:hover { border-bottom: 1px solid rgba(0, 0, 0, 0) !important; background: rgba(52, 52, 52, 1) }
+#lightbox { display: none; opacity: 0; z-index: 1000; position: absolute; left: 50%; margin-left: -480px; width: 960px; height: 590px; background: rgba(255, 255, 255, 1); top: 170px; box-shadow: 0 3px 15px 1px rgba(75, 75, 75, 1) }
+#lightbox figure { margin: 10px }
+#lightbox a.button-close { background: url("../img/sprite.png") 0 -108px no-repeat scroll rgba(0, 0, 0, 1); display: block; float: right; height: 34px; width: 40px; position: absolute; right: 8px; top: 8px }
+#lightbox a.button-close:hover { background: url("../img/sprite.png") 0 -108px no-repeat rgba(80, 80, 80, 1) }
+#electronic-systems .fault-code-diagnosis { width: 81%; float: right }
+#electronic-systems .aside-eobd-location { background: rgba(112, 112, 112, 1) !important }
+#electronic-systems .aside-eobd-location .eobd { display: block; width: 100%; overflow: hidden; background: rgba(85, 85, 85, 1); border-bottom: 1px solid rgba(68, 68, 68, 1) }
+#electronic-systems .aside-eobd-location figure { margin: 5px; background: rgba(255, 255, 255, 1); overflow: hidden }
+#electronic-systems .aside-eobd-location figure img { display: block; margin: 0 auto }
+#electronic-systems .aside-eobd-location p { margin: 0 20px; padding: 8px 0 13px; line-height: 24px; font-size: 14px; font-weight: bold; color: rgba(255, 255, 255, 1) }
+#electronics-component-detail .tabs ul li.unavailable a { color: rgba(204, 204, 204, 1); cursor: default }
+@media all and (min-width: 1350px) { #electronic-systems .aside-eobd-location { width: 16% } #electronic-systems .fault-code-diagnosis { width: 84% } }
+@media all and (min-width: 1600px) { #electronic-systems .aside-eobd-location { width: 14% } #electronic-systems .fault-code-diagnosis { width: 86% } }
+div.hiddenMessage { display: none }
+#location-detail aside figure.drawing { height: 200px; padding: 20px 0 }
+#location-detail section.content figure.drawing { height: 500px; padding: 20px 0 }
+#location-detail aside ul li.active a, #location-detail aside ul li.active a:hover { background: url("../img/active-list-item-arrow.png") right no-repeat scroll rgba(52, 52, 52, 1); color: rgba(255, 255, 255, 1) }
+#location-detail { background: none left top repeat scroll rgba(245, 245, 245, 1); border: 1px solid rgba(200, 200, 200, 1); display: block; width: 100% }
+#location-detail>.heading { display: block; position: relative; width: 100%; background: rgba(112, 112, 112, 1); text-align: center; box-shadow: inset 0 0 30px rgba(97, 97, 97, 1); overflow: hidden }
+#location-detail .heading h2 { text-align: center; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 30px; font-size: 22px; text-shadow: 0 1px rgba(90, 90, 90, 1); padding: 25px 22%; min-height: 30px }
+#location-detail .heading h2 span { font-weight: normal }
+#location-detail>.heading .button { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+#location-detail>.heading .back { position: absolute; margin: 22px 0 0; left: 20px }
+#location-detail>.heading .print { position: absolute; margin: 22px 0 0; right: 20px }
+#location-detail>.heading .print span { font-size: 18px; font-weight: normal !important }
+#location-detail>.heading .button>span { font-family: "HaynesPro", sans-serif; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0 }
+#location-detail>.heading .close { float: right; margin: 22px 20px 0 0 }
+#location-detail>.inner { display: block; margin: 0; overflow: hidden; background: rgba(255, 255, 255, 1) }
+.alt #location-detail { display: block; width: 100%; background: rgba(26, 26, 26, 1); border: none; overflow: hidden }
+.alt #location-detail>.heading { display: block; position: relative; width: 100%; height: 80px; background: rgba(26, 26, 26, 1); box-shadow: none }
+.alt #location-detail .heading h2 { text-align: left; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 80px; font-size: 22px; margin: 0 0 0 20px }
+.alt #location-detail>.heading .button { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; font-weight: normal; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+.alt #location-detail>.heading .print { float: right; margin: 22px 10px 0 0; position: static }
+.alt #location-detail>.heading .print span { font-size: 18px; font-weight: normal !important }
+.alt #location-detail>.heading .button>span { font-family: "HaynesPro", sans-serif; font-weight: normal; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0 }
+.alt #location-detail>.inner { display: block; margin: 0; overflow: hidden; background: rgba(255, 255, 255, 1) }
+#location-detail>.inner .heading { display: block; height: 83px; border-bottom: 1px solid rgba(237, 237, 237, 1) }
+#location-detail>.inner .heading img { display: block; height: 51px; width: 80px; float: left; margin: 16px 0 0 20px }
+#location-detail>.inner.clearfix:after { content: ""; display: block; height: 0; line-height: 0; overflow: hidden; clear: both; visibility: hidden }
+#location-detail>.inner .heading h2 { color: rgba(51, 51, 51, 1); float: left }
+#location-detail aside { display: block; float: left; width: 30%; border-right: 1px solid rgba(232, 232, 232, 1); padding: 0 0 99900px; margin: 0 0 -99900px; background: rgba(255, 255, 255, 1) }
+#location-detail aside figure { display: block; width: 100%; overflow: hidden; border-bottom: 1px solid rgba(232, 232, 232, 1) }
+#location-detail aside figure img { display: block; margin: 0 auto }
+#location-detail aside ul { display: block }
+#location-detail aside ul li { position: relative; display: block; border-bottom: 1px solid rgba(232, 232, 232, 1) }
+#location-detail aside ul li a { display: inline-block; color: rgba(0, 0, 0, 1); padding: 16px 40px 16px 74px; font-size: 13px; line-height: 20px; width: calc(100% - 114px) }
+#location-detail aside ul li a span { font-weight: bold; font-size: 15px; position: relative; margin: 0 0 0 -55px; display: inline-block; float: left; width: 25% }
+#location-detail aside ul li:hover { border-bottom: 1px solid rgba(112, 112, 112, 1) }
+#location-detail aside ul li:hover a { color: rgba(255, 255, 255, 1); background: rgba(112, 112, 112, 1) }
+#location-detail section.content { display: block; float: left; width: 69.75%; padding: 0 0 30px; margin: 0 }
+#location-detail section.content figure { overflow: hidden; background: rgba(255, 255, 255, 1); margin: 20px; border: 1px solid rgba(218, 218, 218, 1) }
+#location-detail section.content figure img { display: block; margin: 0 auto }
+#location-detail #locationSystemWrapper { overflow: hidden; background: rgba(242, 242, 242, 1) }
+.model-detail-subnav nav:first-child { margin-bottom: 25px }
+.model-detail-subnav-extend .tmpl.alt#vesa_systems ul.dropdown-items { margin: 0 }
+.model-detail-subnav-extend nav ul#vesa_systems li.dropdown.opened>.title { font-weight: bold }
+#electronic-systems section.overview ul li.hidden { display: none }
+#electronics-component-detail .content-top { background: none left top repeat scroll rgba(255, 255, 255, 1); height: 74px }
+#electronics-component-detail .content-top h3 { float: left; line-height: 74px; margin: 0 0 0 20px }
+.alt #electronics-component-detail .tmpl.repair-manuals>.inner { margin: 0 }
+.alt #electronics-component-detail .tmpl.repair-manuals>.inner>.top { margin: 0 }
+#electronics-component-detail>.inner>.top h3 { line-height: 74px; float: left; margin: 0 }
+#electronics-component-detail .custom-dropdown-wrapper { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 50%, rgba(242, 242, 242, 1) 100%) left top repeat scroll rgba(0, 0, 0, 0); border: 1px solid rgba(167, 167, 167, 1); float: left; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; height: 38px; line-height: 38px; margin: 16px 30px 0 20px; position: relative }
+#electronics-component-detail .custom-dropdown-wrapper span.selected:before { content: "_"; display: block; float: right; font-family: "HaynesPro", sans-serif; height: 38px; line-height: 38px; text-align: left; width: 25px }
+#electronics-component-detail .custom-dropdown-wrapper span.selected { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; height: 38px; line-height: 38px; margin: 0 40px 0 15px }
+#electronics-component-detail .custom-dropdown-wrapper select { border: 3px none; display: block; height: 38px; margin: -38px 0 0; opacity: 0; position: absolute; width: 100% }
+#electronics-component-detail .custom-dropdown-wrapper { background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 50%, rgba(242, 242, 242, 1) 100%) left top repeat scroll rgba(0, 0, 0, 0); border: 1px solid rgba(167, 167, 167, 1); float: left; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; height: 38px; line-height: 38px; margin: 16px 30px 0 20px; position: relative }
+#electronics-component-detail .tmpl aside figure { margin: 20px 0; overflow: hidden }
+#electronics-component-detail .tmpl section.content figure.circuit { padding: 0 }
+#electronics-component-detail .tmpl section.content figure.circuit div.circuitWrapper { overflow: auto }
+#electronics-component-detail .tmpl section.content figure.circuit div#standAloneElectronics { float: left }
+#electronics-component-detail .tmpl section.content figure.circuit div#standAloneElectronics svg { float: left }
+#electronics-component-detail .tmpl section.content figure#systemDetailImage { height: 500px }
+#electronics-component-detail .tmpl aside figure#systemOverviewImage { height: 200px }
+#electronics-component-detail #nonVesa-components-overview tr.row:hover, #electronics-component-detail #wiring-pins-overview tr.row:hover { background: rgba(231, 243, 230, 1); border-bottom: 1px solid rgba(211, 222, 209, 1); cursor: pointer }
+#electronics-component-detail #wiring-pins-overview tr.row.disabled:hover { background: rgba(255, 255, 255, 1) }
+#electronics-component-detail #wiring-pins-overview tr.row.disabled:hover:nth-child(2n) { background: rgba(242, 242, 242, 1) }
+#electronics-component-detail #nonVesa-components-overview tr.row.active td { font-weight: bold }
+#electronics-component-detail #nonVesa-components-overview .button.active { background: rgba(26, 26, 26, 1); box-shadow: none }
+#electronics-component-detail #wiring-pins-overview .button.active { background: rgba(26, 26, 26, 1); box-shadow: none }
+#electronics-component-detail #connectorsContainer .connectorWrap { padding: 20px 0 }
+#electronics-component-detail #connectorsContainer .connectorWrap figure { margin: 10px 0 0; height: 200px }
+#electronic-systems .fault-code-diagnosis ul li a.arrow:after { color: rgba(112, 112, 112, 1); content: ">"; position: absolute; top: 0; right: 0; padding: 22px 0; width: 30px; font-family: "HaynesPro", sans-serif; display: block }
+#electronic-systems .fault-code-diagnosis ul li.dropdown.active ul { display: block; opacity: 1 }
+#electronic-systems .fault-code-diagnosis ul li.dropdown.opened ul { display: block; opacity: 1 }
+#electronic-systems .fault-code-diagnosis ul li.dropdown ul { display: none; margin: 0 }
+#electronic-systems .fault-code-diagnosis ul li.dropdown ul li { display: block; position: relative; height: auto; border-top: 1px solid rgba(233, 233, 233, 1); border-right: none; border-bottom: none; border-left: none; background: rgba(250, 250, 250, 1); margin: 0 }
+#electronic-systems .fault-code-diagnosis ul li.dropdown ul li:hover { background: rgba(255, 255, 255, 1); height: auto }
+#electronic-systems .fault-code-diagnosis ul li.dropdown ul li a { font-size: 13px; padding: 0; font-weight: normal !important; height: auto }
+#electronic-systems .fault-code-diagnosis ul li.dropdown.active>a { background: linear-gradient(180deg, rgba(238, 238, 238, 1) 0, rgba(250, 250, 250, 1) 6%, rgba(250, 250, 250, 1) 100%) }
+.model-detail-overview .column-50-50 ul li.dropdown.active ul { display: block }
+.model-detail-overview .column-50-50 ul li.dropdown.opened ul { display: block }
+.model-detail-overview .column-50-50 ul li.dropdown ul { display: none }
+.model-detail-overview .column-50-50 ul li.dropdown ul li { display: block; position: relative; height: auto; line-height: 18px; border-top: 1px solid rgba(233, 233, 233, 1); border-right: none; border-bottom: none; border-left: none; background: rgba(250, 250, 250, 1); margin: 0 }
+.model-detail-overview .column-50-50 ul li.dropdown ul li:hover { background: rgba(255, 255, 255, 1); height: auto; line-height: 18px }
+.model-detail-overview .column-50-50 ul li.dropdown ul li a { line-height: 18px; font-size: 13px; padding: 11px 29px 11px 19px; font-weight: normal !important; height: auto }
+.model-detail-overview .column-50-50 ul li.dropdown.active>a { background: linear-gradient(180deg, rgba(238, 238, 238, 1) 0, rgba(250, 250, 250, 1) 6%, rgba(250, 250, 250, 1) 100%) }
+.model-detail-overview .column-50-50 ul li.dropdown.opened>a { background: rgba(255, 255, 255, 1); cursor: default }
+.model-detail-overview .column-50-50 ul li.dropdown.opened>.title { background: rgba(255, 255, 255, 1); cursor: default }
+.model-detail-overview .column-50-50 ul li.dropdown.active ul li a, .model-detail-subnav-extend nav ul li.dropdown.opened ul li a { font-weight: bold }
+.model-detail-overview .column-50-50 ul li.dropdown.active ul li a:hover:after { content: ">"; font-family: "HaynesPro", sans-serif; font-size: 13px; line-height: 18px; display: block; position: absolute; top: 50%; height: 18px; right: 10px; width: 18px; margin: -9px 0 0; color: rgba(112, 112, 112, 1) }
+.model-detail-overview .column-50-50 ul li.dropdown.opened ul li a:after { content: ">"; font-family: "HaynesPro", sans-serif; font-size: 13px; line-height: 18px; display: block; position: absolute; top: 50%; height: 18px; right: 10px; width: 18px; margin: -9px 0 0; color: rgba(112, 112, 112, 1) }
+.model-detail-overview .column-50-50 ul li.dropdown.alt.active ul li a { content: ">"; font-family: "HaynesPro", sans-serif; font-size: 13px; line-height: 18px; display: block; position: absolute; top: 50%; height: 18px; right: 10px; width: 18px; margin: -9px 0 0; color: rgba(112, 112, 112, 1) }
+.top h3.oneItemPresent { font-weight: normal }
+#nonVesaSystems { border-top: 1px solid rgba(211, 222, 209, 1); padding-top: 5px }
+.model-detail-subnav-extend nav .tmpl #nonVesaSystems h4 { padding-left: 20px; font-size: 14px; line-height: 40px; background-color: rgba(255, 255, 255, 1) }
+.model-detail-subnav-extend nav .tmpl #nonVesaSystems h4:hover { padding-left: 20px; font-size: 14px; line-height: 40px; background-color: rgba(255, 255, 255, 1) }
+.pageContainer { clear: both }
+#electronics-component-detail .tmpl section.content.nonVesa { display: block; float: left; width: 100%; margin: 0 0 30px }
+#electronics-component-detail .tmpl section.content.nonVesa figure { margin: 0; overflow: auto }
+#schemeWrap { position: relative; overflow: hidden; width: auto; margin: 0 auto }
+#electronics-component-detail .tmpl section.content.nonVesa .highLightComponent { position: absolute; left: 0; top: 0; width: 0; height: 0; z-index: 1 }
+#electronics-component-detail .tmpl section.content.nonVesa #highLightComponent1 { border: 3px solid rgba(255, 0, 0, 1) }
+#electronics-component-detail .tmpl section.content.nonVesa #highLightComponent2 { border: 3px solid rgba(0, 255, 0, 1); display: none }
+#electronics-component-detail .tmpl section.content figure.nonVesa { padding: 20px }
+.view li.disabled a img { opacity: 0.5 }
+.view li.disabled a { color: rgba(153, 153, 153, 1); cursor: default }
+.view.tiles li.disabled.tile a { color: rgba(153, 153, 153, 1) }
+.view li.disabled.tile:hover { border-top: 1px solid rgba(242, 242, 242, 1); border-right: 1px solid rgba(227, 227, 227, 1); border-bottom: 1px solid rgba(208, 208, 208, 1); border-left: 1px solid rgba(227, 227, 227, 1); box-shadow: 0 0 3px rgba(234, 234, 234, 1) }
+table tr.disabled td { color: rgba(153, 153, 153, 1) }
+table tr.disabled:hover:nth-child(2n), table tr.disabled:hover:nth-child(2n+1) { background: url("../img/table-rows-transparant.png") 0 -100px repeat-x; border-bottom: 1px solid rgba(208, 208, 208, 1); cursor: default }
+.model-select ul li.active h3 { color: rgba(255, 255, 255, 1) !important }
+.model-select ul li.disabled { opacity: 0.5 }
+.model-select ul li.disabled a { cursor: default }
+.model-select ul li.disabled:hover { border-top: 1px solid rgba(94, 94, 94, 1); border-bottom: 1px solid rgba(68, 68, 68, 1); background: rgba(85, 85, 85, 1); cursor: default }
+#noResult, .noResult { display: none; margin: 20px; border: 1px solid rgba(221, 221, 221, 1); padding: 10px; color: rgba(68, 68, 68, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px; line-height: 30px; background: rgba(255, 255, 255, 1) }
+.noResult.visible { display: block }
+.notFoundFCs { margin: 20px; border: 1px solid rgba(221, 221, 221, 1); padding: 10px; color: rgba(68, 68, 68, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 12px; line-height: 30px }
+#modelDetailOverview .modelDetailOverview-search-result { display: none; padding: 25px 0; margin-top: 5px; margin-bottom: 25px; width: 100%; border-top: 1px solid rgba(200, 200, 200, 1) }
+#modelDetailOverview .clearfix:after { content: ""; display: block; height: 0; line-height: 0; overflow: hidden; clear: both; visibility: hidden }
+#modelDetailOverview .modelDetailOverview-search-result-lineout { margin: 0 20px }
+#modelDetailOverview .modelDetailOverview-search-result-lineout p { display: block; font-size: 14px; line-height: 20px; color: rgba(0, 0, 0, 1); float: left }
+#modelDetailOverview .modelDetailOverview-search-result-lineout p.filtered-by { display: none }
+#modelDetailOverview .result { font-weight: bold }
+#modelDetailOverview .filtered-by { margin: 0 }
+#modelDetailOverview .filter span.selected { font-weight: bold; color: rgba(53, 133, 43, 1) }
+#modelDetailOverview .filter span.selected:before { color: rgba(0, 0, 0, 1); font-weight: normal }
+#modelDetailOverview .filter span.selected.default { font-weight: normal; color: rgba(0, 0, 0, 1) }
+#modelDetailOverview .results { margin: 20px 0 0 }
+#modelDetailOverview .results h2 { margin: 0 0 15px }
+.model-detail-overview .results h3 { font-size: 12px; font-weight: normal; color: rgba(68, 68, 68, 1); margin: 0 0 15px }
+#modelDetailOverview .results ul { margin: 0 0 25px }
+#modelDetailOverview .results ul:last-child { margin: 0 }
+#modelDetailOverview .results ul li { display: block; position: relative; border-top: 1px solid rgba(232, 232, 232, 1); border-right: 1px solid rgba(232, 232, 232, 1); border-bottom: none; border-left: 1px solid rgba(232, 232, 232, 1); overflow: hidden }
+#modelDetailOverview .results ul li:nth-child(2n+1) { background: rgba(255, 255, 255, 1) }
+#modelDetailOverview .results ul li:nth-child(2n) { background: rgba(253, 253, 253, 1) }
+#modelDetailOverview .results ul li:not(.disabled):hover { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(230, 230, 230, 1) 6%, rgba(230, 230, 230, 1) 100%) }
+#modelDetailOverview .results ul li a { display: block; width: 100%; height: 58px; line-height: 58px; vertical-align: middle; font-size: 14px; text-indent: 20px; color: rgba(0, 0, 0, 1) }
+#modelDetailOverview .results ul li a.arrow:after { content: ">"; font-family: "HaynesPro", sans-serif; font-size: 16px; line-height: 18px; display: block; position: absolute; height: 18px; width: 18px; top: 50%; margin: -9px 0 0; right: 30px; color: rgba(64, 155, 53, 1) }
+#modelDetailOverview .results ul li:last-child { border-bottom: 1px solid rgba(232, 232, 232, 1) }
+#modelDetailOverview .results ul li.disabled a { cursor: default }
+#modelDetailOverview .results ul li a .fault-code { float: right; margin: 0 80px 0 0; color: rgba(136, 136, 136, 1) }
+#modelDetailOverview .results ul li.disabled a .fault-code { color: rgba(218, 0, 0, 1) }
+#modelDetailOverview .results ul li.disabled .remark { color: rgba(136, 136, 136, 1); padding: 10px 20px; font-size: 12px; display: block }
+#modelDetailOverview .results ul li.no-result { display: block; background: rgba(240, 240, 240, 1); border: 1px solid rgba(232, 232, 232, 1); overflow: hidden; height: 58px; line-height: 58px; color: rgba(153, 153, 153, 1); text-align: center; font-size: 16px }
+#modelDetailOverview .close-modelDetailOverview-search { position: absolute; font-family: "HaynesPro", sans-serif; right: 20px; display: block; height: 23px; width: 23px; border: 1px solid rgba(200, 200, 200, 1); background: rgba(255, 255, 255, 1); color: rgba(0, 0, 0, 1); line-height: 26px; text-align: center }
+#modelDetailOverview .column-50-50 .box #resetButton { display: none; opacity: 0 }
+.search-box { position: relative; overflow: hidden; float: left; padding: 3px; margin: 24px 0 0 }
+.search-box .empty-search { display: none; opacity: 0; height: 23px; width: 23px; background: url("../img/sprite.png") -77px -108px no-repeat; position: absolute; z-index: 6; top: 6px; right: 6px }
+#search-results table tr:nth-child(2n), #search-results table tr:nth-child(2n):hover { background: url("../img/table-rows-transparant.png") 0 -40px repeat-x }
+#search-results table tr:nth-child(2n):hover { background-position: 0 -100px }
+#search-results table tr:nth-child(2n+1), #search-results table tr:nth-child(2n+1):hover { background: url("../img/table-rows-transparant.png") 0 -100px repeat-x }
+#search-results table tr:nth-child(2n+1):hover { background-position: 0 -40px }
+#search-results table tr:hover { cursor: pointer }
+#search-results table th { padding: 0 0 0 20px; border-bottom: 1px solid rgba(226, 226, 226, 1); border-right: none }
+#search-results table tr td { line-height: 18px; padding: 20px 0 20px 20px; font-size: 14px }
+#search-result-overview table tr td.arrow:before, #search-results table tr td.arrow:before { content: ">"; font-family: "HaynesPro", sans-serif; font-size: 16px; line-height: 18px; position: initial; right: 30px }
+#search-results div.note { background: rgba(238, 238, 238, 1); border: 1px solid rgba(221, 221, 221, 1); padding: 18px; margin: 20px; text-align: center }
+#search-results .note:before { content: "!" !important; font-family: "HaynesPro", sans-serif; margin-right: 10px }
+.repair-manuals>.inner .left li#backToTop { display: none }
+.repair-manuals>.inner .left li#backToTop a.button { border-top-left-radius: 0; line-height: 34px; padding: 0 20px; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+.repair-manuals>.inner .left li#backToTop a.button>span { font-family: "HaynesPro", sans-serif; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0 }
+#tos { display: block; width: 100%; background: rgba(26, 26, 26, 1); overflow: hidden }
+#tos>.inner { display: block; margin: 0 20px 20px; background: rgba(255, 255, 255, 1); padding: 20px }
+.tos #cost-estimate>.inner { display: block; margin: 0 20px 20px; background: rgba(255, 255, 255, 1); padding: 20px }
+#tos>.heading { display: block; position: relative; width: 100%; background: rgba(26, 26, 26, 1); box-shadow: none }
+#tos .heading h2 { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 80px; font-size: 22px; margin: 0 0 0 20px }
+#tos .heading fieldset { float: right }
+#tos .custom-dropdown-wrapper { float: left; position: relative; border: 1px solid rgba(167, 167, 167, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 38px; height: 38px; margin: 20px 30px 0 20px; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 50%, rgba(242, 242, 242, 1) 100%); overflow: hidden; white-space: nowrap; width: 300px }
+#tos .custom-dropdown-wrapper span.selected { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 38px; height: 38px; margin: 0 40px 0 15px }
+#tos .custom-dropdown-wrapper span.selected:before { content: "_"; font-family: "HaynesPro", sans-serif; display: block; width: 25px; height: 38px; text-align: left; line-height: 38px; float: right }
+#tos .custom-dropdown-wrapper select { display: block; border: none; width: 100%; height: 38px; opacity: 0; position: absolute; margin: -38px 0 0 }
+.tos .mid-section h1, .tos .mid-section h2, .tos .mid-section h3, .tos .mid-section h4, .tos .mid-section p { margin-bottom: 20px }
+.tos .mid-section h1 { font-size: 30px }
+.tos .mid-section p { line-height: 20px }
+.tos .mid-section ul, .tos .mid-section ol { margin-left: 20px; margin-bottom: 20px }
+.tos .mid-section li { line-height: 20px }
+.tos #cost-estimate form fieldset { display: block; float: right; margin-top: 20px; margin-right: 20px }
+.errorMessage { position: absolute; top: 70px; left: 50%; margin-left: -211px; text-align: center; background: rgba(252, 246, 246, 1); color: rgba(193, 0, 0, 1); border: 1px solid rgba(193, 0, 0, 1); width: 400px; box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.3); padding: 10px }
+.errorMessage p { padding: 0; font-size: 14px; line-height: 18px; margin: 0 18px 0 0; color: rgba(193, 0, 0, 1); font-weight: bold }
+.errorMessage p:before { content: "!"; display: block; height: 18px; width: 18px; float: left; font-family: "HaynesPro", sans-serif; color: rgba(204, 0, 0, 1); font-size: 25px; background-color: rgba(255, 255, 255, 1) }
+.wrapper-vinNr { width: 248px !important }
+.wrapper-regNr { width: 179px !important }
+.wrapper-regDate { width: 200px !important }
+.wrapper-mileage { width: 140px !important }
+#customerDetailsWrap { overflow: hidden }
+#customerDetailsWrap.organiserFull { display: none }
+#addCustomer { float: right; margin: 20px }
+#planningDiv, #reminderBoxDiv { display: none }
+footer { height: auto; min-height: 80px }
+div.oemWaiver { background: rgba(255, 250, 200, 1); border-top: 1px solid rgba(239, 236, 207, 1); height: auto }
+div.oemWaiver .lineout { padding: 10px 0 }
+.model-detail-subnav-extend nav.warningLightsSystems { width: auto }
+nav.warningLightsSystems { background: rgba(255, 255, 255, 1); margin: 0 }
+.model-detail-subnav-extend nav ul li.dropdown.active nav.warningLightsSystems { display: block }
+.model-detail-subnav-extend nav ul li.dropdown.opened nav.warningLightsSystems { display: block }
+.model-detail-subnav-extend nav ul li.dropdown nav.warningLightsSystems { display: none }
+.model-detail-subnav-extend nav ul li.dropdown nav.warningLightsSystems ul { display: block }
+.model-detail-subnav-extend nav.warningLightsSystems ul li { background: rgba(0, 0, 0, 0); border: none; overflow: visible }
+.model-detail-subnav-extend nav.warningLightsSystems ul li:hover { background: rgba(0, 0, 0, 0) }
+nav.warningLightsSystems ul li.checkSpace { padding-left: 0 !important; border-bottom: 1px solid rgba(221, 221, 221, 1) }
+nav.warningLightsSystems div.warningLightsSystemsRow { overflow: hidden; clear: both }
+nav.warningLightsSystems div a { float: left; border: 1px solid rgba(221, 221, 221, 1); height: 60px; width: 60px; margin: 2px; display: block; padding: 10px }
+nav.warningLightsSystems div a.active { background: url("../img/arrow_bottom.png") bottom no-repeat rgba(221, 221, 221, 1); height: 62px; width: 62px; border: none }
+nav.warningLightsSystems div a:hover { background: rgba(170, 170, 170, 1) }
+nav.warningLightsSystems div a.active:hover { background: url("../img/arrow_bottom.png") bottom no-repeat rgba(221, 221, 221, 1); height: 62px; width: 62px; border: none }
+nav.warningLightsSystems div div.iconDescription { display: block; overflow: hidden; clear: both; border: 1px solid rgba(221, 221, 221, 1); padding: 10px; margin: 2px; font-size: 14px; line-height: 20px }
+nav.warningLightsSystems div div.iconDescription li { clear: left; overflow: hidden }
+nav.warningLightsSystems div div.iconDescription span.extra-info { clear: right; overflow: hidden; float: right }
+.model-detail-subnav-extend nav.warningLightsSystems .tmpl { display: block }
+nav.warningLightsSystems .tmpl .enlarge { display: none }
+nav.warningLightsSystems .button { display: block; height: 28px; width: 28px; border: 1px solid rgba(200, 200, 200, 1); background: rgba(255, 255, 255, 1); box-shadow: inset 0 0 10px rgba(249, 249, 249, 1); text-shadow: none !important; margin: 0; padding: 0; font-size: 24px; font-weight: normal; line-height: 32px; text-align: center; font-family: "HaynesPro", sans-serif }
+nav.warningLightsSystems .button { margin: 10px 10px 10px 0; color: rgba(13, 116, 196, 1); clear: right }
+span.button-skip { float: right; margin-right: 200px; margin-top: 100px }
+.view.tiles .tile.customTruck a, .view.tiles .tile.customTrailer a { margin-top: 45px; height: 138px; width: 140px; padding-left: 15px; color: rgba(187, 187, 187, 1) !important; font-weight: bold; text-align: left !important; text-decoration: none; font-size: 16px !important; font-family: "Helvetica Neue", Arial, sans-serif !important }
+.view.list .tile.customTruck a, .view.list .tile.customTrailer a { color: rgba(187, 187, 187, 1) !important; font-weight: bold; text-align: left !important; text-decoration: none; font-family: "Helvetica Neue", Arial, sans-serif !important }
+.view.tiles .tile.customTruck a div.textAddCustomTruck, .view.tiles .tile.customTrailer a div.textAddCustomTrailer { float: left; width: 70%; overflow: hidden }
+.view.list .tile.customTruck a div.textAddCustomTruck, .view.list .tile.customTrailer a div.textAddCustomTrailer { display: flex; height: 100%; justify-content: center; align-items: center; line-height: 12px }
+.view.tiles .tile.customTruck a div.iconAddCustomTruck, .view.tiles .tile.customTrailer a div.iconAddCustomTrailer { float: right; width: 16% }
+.view.list .tile.customTruck a div.iconAddCustomTruck, .view.list .tile.customTrailer a div.iconAddCustomTrailer { display: flex; height: 100%; justify-content: center; align-items: center }
+.fa-ban { margin-top: 20px; color: rgba(208, 208, 208, 1) }
+.componentConfiguration-wrap { display: block; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1); margin: 20px; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+.column-50-50 .componentConfiguration-wrap { margin: 20px 0 0 }
+.componentConfiguration-wrap .title { background: rgba(255, 255, 255, 1); cursor: default; color: rgba(26, 26, 26, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 14px; line-height: 22px; padding: 18px 19px; display: block }
+.componentConfiguration-wrap .title a.button { float: right; margin-top: -5px }
+.componentConfiguration-wrap ul.componentConfiguration-items>li { display: block; overflow: hidden; clear: both; height: auto; border-top: 1px solid rgba(233, 233, 233, 1); border-right: none; border-bottom: none; border-left: none; background: rgba(250, 250, 250, 1); margin: 0; line-height: 18px; font-size: 13px; padding: 11px 29px 11px 19px; font-weight: bold }
+.model-detail-overview .column-50-50 .componentConfiguration-wrap ul.componentConfiguration-items>li:hover { display: block; overflow: hidden; clear: both; height: auto; border-top: 1px solid rgba(233, 233, 233, 1); border-right: none; border-bottom: none; border-left: none; background: rgba(250, 250, 250, 1); margin: 0; line-height: 18px; font-size: 13px; padding: 11px 29px 11px 19px; font-weight: bold }
+.axleType { display: block; font-weight: normal; float: right; width: 50% }
+.axleType-customTruck { width: 18% }
+.componentsSuspension { display: block; font-weight: normal; float: right; width: 17.5% }
+.componentEquipment { display: block; font-weight: normal; float: right; width: 16% }
+div#modelTypesListContainer.contentContainer.content.axleConfigurator { padding: 3px 0 0 }
+#model-detail .axleConfigImage { text-align: center }
+#model-detail .componentConfiguration { margin: 0 10px }
+#model-detail .componentConfiguration .filters { display: block; overflow: hidden; border-top: 1px solid rgba(221, 221, 221, 1); padding: 10px 0 }
+#model-detail .componentConfiguration .filters span { display: table-cell; color: rgba(85, 85, 85, 1); font-size: 12px; line-height: 18px; font-weight: normal; font-family: "Helvetica Neue", Arial, sans-serif; width: 100%; float: left }
+#model-detail .componentConfiguration .filters span.nr { width: 50px }
+#model-detail .componentConfiguration .filters span.group { width: 120px }
+#model-detail .componentConfiguration .filters span.make { width: 120px }
+#model-detail .componentConfiguration .filters span.componentType { width: 200px }
+#model-detail .componentConfiguration .filters span.suspensionType { width: 200px }
+#model-detail .componentConfiguration .filters span.equipmentCode { width: 200px }
+#model-detail .componentConfiguration .filters span.code { width: 80px }
+#model-detail .componentConfiguration .filters span.description { width: 170px }
+#model-detail nav.componentConfiguration ul li { display: block; position: relative; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1); margin: 0 0 10px; background: rgba(238, 238, 238, 1) }
+#model-detail nav.componentConfiguration ul li:hover { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(230, 230, 230, 1) 6%, rgba(230, 230, 230, 1) 100%) }
+#model-detail nav.componentConfiguration ul>li>a { display: block; color: rgba(26, 26, 26, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 14px; line-height: 22px; padding: 18px 30px 18px 50px }
+#model-detail nav.componentConfiguration ul>li a.arrow:after { content: ">"; font-family: "HaynesPro", sans-serif; font-weight: normal; font-size: 16px; line-height: 18px; display: block; position: absolute; height: 18px; width: 18px; top: 50%; margin: -9px 0 0; right: 10px; color: rgba(112, 112, 112, 1) }
+#model-detail nav.componentConfiguration ul>li.dropdown { height: auto; display: block; position: relative; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1); margin: 0 0 10px }
+#model-detail nav.componentConfiguration ul>li.dropdown { background: rgba(238, 238, 238, 1) }
+#model-detail nav.componentConfiguration ul>li.dropdown:hover { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(230, 230, 230, 1) 6%, rgba(230, 230, 230, 1) 100%) }
+#model-detail nav.componentConfiguration ul li.dropdown { height: auto }
+#model-detail nav.componentConfiguration ul li.dropdown.opened { margin: 0 0 20px }
+#model-detail nav.componentConfiguration ul li.dropdown.active a.arrow:after { content: ">"; top: 30px; font-weight: normal }
+#model-detail nav.componentConfiguration ul li.dropdown.active a { color: rgba(0, 0, 0, 1) }
+#model-detail nav.componentConfiguration ul li.dropdown.opened a { color: rgba(0, 0, 0, 1) }
+#model-detail nav.componentConfiguration ul li.dropdown.active>ul { display: block }
+#model-detail nav.componentConfiguration ul li.dropdown.opened>ul { display: block }
+#model-detail nav.componentConfiguration ul li.dropdown>ul { display: none }
+#model-detail nav.componentConfiguration ul li.dropdown>ul>li { display: block; position: relative; height: auto; line-height: 18px; border-top: 1px solid rgba(233, 233, 233, 1); border-right: none; border-bottom: none; border-left: none; background: rgba(250, 250, 250, 1); margin: 0 }
+#model-detail nav.componentConfiguration ul li.dropdown>ul>li:hover { background: rgba(255, 255, 255, 1); height: auto; line-height: 18px }
+#model-detail nav.componentConfiguration ul li.dropdown>ul>li.makeHidden { display: none }
+#model-detail nav.componentConfiguration ul li.dropdown>ul>li.keyWordHidden { display: none }
+#model-detail nav.componentConfiguration ul li span { display: block; float: left; line-height: 18px; font-size: 13px; padding: 11px 0; font-weight: normal !important; height: auto; cursor: pointer }
+#model-detail nav.componentConfiguration ul li.active>a { background: rgba(219, 219, 219, 1) }
+#model-detail nav.componentConfiguration ul.customComponentList li { cursor: pointer; display: block; position: relative; height: auto; line-height: 18px; border: 1px solid rgba(233, 233, 233, 1); background: rgba(250, 250, 250, 1); margin: 2px 0 }
+#model-detail nav.componentConfiguration ul.customComponentList li:hover { background: rgba(255, 255, 255, 1); height: auto; line-height: 18px }
+#model-detail nav.componentConfiguration ul.customComponentList li.hidden { display: none }
+#model-detail nav.componentConfiguration ul.customComponentList li.makeHidden { display: none }
+#model-detail nav.componentConfiguration ul.customComponentList li.keyWordHidden { display: none }
+#model-detail nav.componentConfiguration ul.selectedComponents { margin-bottom: 10px }
+#model-detail nav.componentConfiguration ul.selectedComponents>li { height: auto; display: block; position: relative; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1); margin: 2px 0 }
+#model-detail nav.componentConfiguration ul.selectedComponents>li { background: rgba(238, 238, 238, 1) }
+#model-detail nav.componentConfiguration ul.selectedComponents>li:hover { background: linear-gradient(180deg, rgba(219, 219, 219, 1) 0, rgba(230, 230, 230, 1) 6%, rgba(230, 230, 230, 1) 100%) }
+#model-detail nav.componentConfiguration ul.selectedComponents>li.active:before { content: ""; position: absolute; left: 0; display: block; margin: 0; background: rgba(48, 151, 29, 1); height: 100%; width: 4px }
+#model-detail nav.componentConfiguration ul.selectedComponents>li span { color: rgba(58, 151, 47, 1); font-weight: bold !important }
+#model-detail nav.componentConfiguration ul li div.selectAxleType { color: rgba(119, 119, 119, 1); font-style: italic }
+#model-detail nav.componentConfiguration ul li.active div.selectComponentType { color: rgba(0, 0, 0, 1) }
+#model-detail nav.componentConfiguration ul li div.currentComponentType { overflow: hidden }
+#model-detail nav.componentConfiguration ul li div.currentComponentType span { padding: 0; font-size: 14px; line-height: 22px; min-height: 22px; color: rgba(58, 151, 47, 1); font-weight: bold !important }
+#model-detail nav.componentConfiguration ul li.active div.currentComponentType span { font-weight: bold !important }
+#model-detail nav.componentConfiguration ul li span.group { float: left; margin-left: 50px; width: 120px }
+#model-detail nav.componentConfiguration ul li span.make { float: left; margin-left: 0; width: 120px }
+#model-detail nav.componentConfiguration ul li div.currentComponentType span.group { float: left; margin-left: 0; width: 120px }
+#model-detail nav.componentConfiguration ul li span.componentType { float: left; width: 200px }
+#model-detail nav.componentConfiguration ul li span.code { float: left; width: 100px }
+#model-detail nav.componentConfiguration ul li span.description { float: left; width: 500px }
+#model-detail nav.componentConfiguration ul li span.nr { font-weight: bold !important; font-size: 14px; line-height: 24px; display: block; position: absolute; height: 24px; width: 24px; top: 29px; margin: -12px 0 0; padding: 0; left: 10px; border: 1px solid rgba(200, 200, 200, 1); text-align: center; background: rgba(255, 255, 255, 1); color: rgba(0, 109, 193, 1); cursor: pointer }
+#model-detail nav.componentConfiguration ul li.active span.nr { top: 29px }
+#model-detail nav.componentConfiguration ul li .custom-checkbox-wrapper.add-remove { position: absolute; display: block; height: 22px; width: 22px; color: rgba(48, 151, 29, 1); font-family: "HaynesPro", sans-serif; font-weight: normal; background: rgba(255, 255, 255, 1); text-align: center; font-size: 16px; line-height: 24px; border: 1px solid rgba(234, 234, 234, 1); right: 10px; top: 50%; padding: 0; margin: -11px 0 0 }
+#model-detail nav.componentConfiguration ul li .custom-checkbox-wrapper.add-remove .icon { height: 22px; width: 22px; font-size: 16px; line-height: 24px; padding: 0 }
+#model-detail nav.componentConfiguration ul.selectedComponents>li span.custom-checkbox-wrapper.add-remove .icon { color: rgba(198, 6, 0, 1) }
+#model-detail nav.componentConfiguration ul li .custom-radio-button { position: absolute; display: block; height: 22px; width: 22px; color: rgba(255, 255, 255, 1); font-family: "HaynesPro", sans-serif; font-weight: normal; background: rgba(255, 255, 255, 1); text-align: center; font-size: 16px; line-height: 22px; border: 1px solid rgba(234, 234, 234, 1); right: 10px; top: 50%; padding: 0; margin: -11px 0 0; cursor: pointer }
+#model-detail nav.componentConfiguration ul li li.active .custom-radio-button { color: rgba(58, 151, 47, 1) }
+#model-detail nav.componentConfiguration ul li input[type="radio"], #model-detail nav.componentConfiguration ul li input[type="checkbox"] { position: absolute; height: 100%; width: 100%; border: none; opacity: 0; top: 0; display: none }
+#model-detail nav.componentConfiguration ul li div.currentComponentType span.custom-radio-button { display: none }
+#model-detail nav.componentConfiguration ul li div.currentComponentType span.custom-checkbox-wrapper { display: none }
+.button-continue, .button-save, .button-cancel { margin: 10px 10px 10px 0; float: right }
+.button-skip { margin: 10px 10px 10px 0; float: right }
+.show-more { overflow: hidden; text-align: center; margin-top: 10px }
+.show-more a.button.secondary { margin: 0 auto; color: rgba(13, 116, 196, 1) }
+#axlesFromDb { display: none }
+header .sub-nav ul li a.select-truck::before { content: ""; display: inline-block; margin: -5px 9px 0 0; vertical-align: middle; height: 16px; width: 19px; background: url("../img/ico-truck.png") left top no-repeat }
+header .sub-nav ul li a.select-trailer::before { content: ""; display: inline-block; margin: -5px 9px 0 0; vertical-align: middle; height: 17px; width: 21px; background: url("../img/ico-trailer.png") left top no-repeat }
+header .sub-nav ul li a.select-axle::before { content: ""; display: inline-block; margin: -5px 9px 0 0; vertical-align: middle; height: 16px; width: 30px; background: url("../img/icon_axle.png") left top no-repeat }
+header .sub-nav ul li a.select-moto::before { content: ""; display: inline-block; margin: -5px 9px 0 0; vertical-align: middle; height: 18px; width: 25px; background: url("../img/ico-moto.png") left top no-repeat }
+header .sub-nav ul li a.select-saved-configurations::before { content: ""; display: inline-block; margin: -5px 9px 0 0; vertical-align: middle; height: 16px; width: 16px; background: url("../img/ico-config.png") left top no-repeat }
+.search-configs { overflow: hidden; float: right; clear: both; margin-bottom: 20px }
+.search-configs .search-field { float: left; margin-right: 10px }
+.search-configs .button { float: left }
+#select-recent-config #no-results { display: block }
+#all_config_list { overflow: hidden; clear: both }
+.saveComponentConfiguration-wrap { display: block; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1); margin: 20px; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+.saveComponentConfiguration-wrap h4 { margin: 18px 20px; line-height: 22px; font-size: 14px }
+.saveComponentConfiguration-wrap p { margin: 0 20px 10px; font-size: 14px }
+.saveComponentConfiguration-wrap .button { float: right; margin: 10px 20px }
+.componentConfigurationDetails-wrap { display: block; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1); margin: 20px; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+.column-50-50 .componentConfigurationDetails-wrap { margin: 20px 0 0 }
+.componentConfigurationDetails-wrap h4 { margin: 18px 20px; cursor: default; color: rgba(26, 26, 26, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 14px; line-height: 22px; display: block; font-weight: normal }
+.componentConfigurationDetails-wrap p { margin: 0 20px 10px; font-size: 14px; overflow: hidden; clear: left }
+.componentConfigurationDetails-wrap p label { display: block; float: left; width: 250px; font-weight: bold; font-size: 14px }
+.componentConfigurationDetails-wrap p span { display: block; margin-left: 250px; font-size: 14px }
+.componentConfigurationDetails-wrap .button { float: right; margin: 10px 20px }
+.configurationsTable tr.heading th { padding-left: 20px; height: 25px; line-height: 16px; background: rgba(255, 255, 255, 1); text-transform: uppercase; border: 0; color: rgba(119, 119, 119, 1) !important; font-size: 10px; font-family: "Helvetica Neue", Arial; font-weight: 400 }
+.configurationsTable { border: none }
+.configurationsTable tr td { line-height: 18px; padding: 0; margin: 0; border-right: none; background-clip: padding-box; vertical-align: middle }
+.remove-configuration { color: rgba(193, 0, 0, 1); font-family: "HaynesPro"; background-image: none !important; background-position: initial; background-size: initial; background-repeat: initial; background-attachment: initial; background-origin: initial; background-clip: initial; background-color: rgba(255, 255, 255, 1); text-shadow: none; border: 1px solid rgba(200, 200, 200, 1) !important; transition: background-color 0.1s ease; margin-left: 18px !important }
+.remove-configuration:hover { background-color: rgba(193, 0, 0, 1); color: rgba(255, 255, 255, 1) }
+.configurationsTable tr.heading:hover th { background-color: rgba(255, 255, 255, 1) !important }
+.configurationsTable tr:hover { background: rgba(247, 247, 247, 1) }
+.configurationsTable tr td a { line-height: 15px; padding: 20px 0 20px 20px; display: block }
+.model-detail-subnav-extend nav ul li.dropdown>ul>li.button-continue-wrapper { padding: 11px 10px 11px 19px }
+.model-detail-subnav-extend nav ul li.dropdown>ul>li.button-continue-wrapper .button { float: right }
+.model-detail-subnav-extend nav ul li.dropdown>ul>li.combinableSystem_period.active { background: rgba(255, 255, 255, 1) }
+.model-detail-subnav-extend nav ul li.dropdown>ul>li.combinableSystem_period label { display: block; color: rgba(26, 26, 26, 1); line-height: 18px; font-size: 13px; padding: 11px 29px 11px 19px; cursor: pointer }
+.model-detail-subnav-extend nav ul li.dropdown>ul>li.combinableSystem_period .custom-checkbox { position: absolute; display: block; height: 22px; width: 22px; color: rgba(221, 221, 221, 1); font-family: "HaynesPro", sans-serif; font-weight: normal; background: rgba(255, 255, 255, 1); text-align: center; line-height: 22px; border: 1px solid rgba(200, 200, 200, 1); right: 10px; top: 50%; margin: -11px 0 0; cursor: pointer }
+.model-detail-subnav-extend nav ul li.dropdown>ul>li.combinableSystem_period.active .custom-checkbox { color: rgba(48, 151, 29, 1) }
+.model-detail-subnav-extend nav ul li.dropdown>ul>li.combinableSystem_period input[type="checkbox"] { position: absolute; height: 100%; width: 100%; border: none; opacity: 0; top: 0; display: none }
+#maintenance-schedule .time-schedule h2 { position: relative; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 16px; margin: 10px 15px 10px 20px; vertical-align: middle; float: left; clear: left }
+#maintenance-schedule .time-schedule p.combinedPeriodsTitle { position: relative; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(51, 51, 51, 1); font-weight: normal; font-size: 10px; line-height: 18px; overflow: hidden; margin: 0 15px 0 20px; width: 500px; height: 36px; float: left; clear: left }
+#maintenance-schedule .maintenance-item.static ul li h3 { display: block }
+#maintenance-schedule .maintenance-item.static ul li h3>span>div>figure { position: relative; border-top: 1px solid rgba(221, 221, 221, 1) }
+#maintenance-schedule .maintenance-item>ul li h3>span>div>figure>a.enlarge { display: block; color: rgba(0, 109, 193, 1); font-size: 10px; height: 30px; padding: 15px 0; width: 80px; background: rgba(248, 248, 248, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-weight: bold; text-transform: uppercase; position: absolute; top: 10px; right: 20px; line-height: 22px; text-align: center }
+#maintenance-schedule .maintenance-item>ul li h3 span a span.spyglass { display: block; font-family: "HaynesPro", sans-serif; font-size: 20px; line-height: 15px }
+.confirmDialog { display: none; font-size: 12px; line-height: 18px }
+.confirmDialog p { margin: 0 }
+.ui-button-text-only .ui-button-text { font-size: 12px }
+.ui-dialog .ui-dialog-title { font-size: 14px }
+.ui-dialog { z-index: 1100 }
+.model-select ul li a { position: relative }
+.model-select ul li a span { position: absolute; top: 13px; right: 20px; font-size: 11px; background: rgba(14, 14, 14, 1); width: 25px; height: 25px; display: inline-block; line-height: 25px; text-align: center }
+#modelTypesListContainer table tr td { position: relative }
+#modelTypesListContainer table tr td span.indicator { width: 40px; height: 40px; line-height: 32px; text-align: center; font-weight: bold; position: absolute; top: 17px; right: 20px; font-size: 11px }
+#modelTypesListContainer table tr td span.indicator { background: url("../img/legend_update.png") no-repeat }
+#modelTypesListContainer table tr td span.indicator.new { background: url("../img/legend_new.png") no-repeat }
+.searchType { width: 430px; height: 60px; padding: 5px }
+#typeToTest { float: left }
+#goToOvervieBtn { float: right }
+.preferences.manageUsers .costs-bottom { margin-bottom: 20px }
+.preferences.manageUsers .button { float: left; display: block; margin-right: 10px }
+.preferences.manageUsers .button.blue { color: rgba(0, 109, 194, 1); background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(249, 249, 249, 1)); background-size: 100% }
+.preferences.manageUsers .button.red { color: rgba(255, 255, 255, 1) !important; background-image: linear-gradient(rgba(235, 0, 1, 1), rgba(236, 14, 13, 1)) !important; background-size: 100% !important }
+.preferences#cost-estimate>.inner .heading, .preferences.about#cost-estimate>.inner .heading, .preferences.manageUsers#cost-estimate>.inner .heading { padding-bottom: 0 }
+.preferences form input[type="text"], .preferences form input[type="email"], .preferences form input[type="password"] { width: 337px; border: 1px solid rgba(191, 191, 191, 1); margin: 0; padding: 7px 10px; color: rgba(51, 51, 51, 1); background: linear-gradient(180deg, rgba(235, 235, 235, 1) 0, rgba(249, 249, 249, 1) 10%, rgba(255, 255, 255, 1) 19%, rgba(255, 255, 255, 1) 100%) }
+.preferences form.cost-estimate fieldset { display: block; float: none; margin: 0 0 10px }
+.preferences.manageUsers form .cost-estimate-item.static { margin-top: 0 }
+.preferences .cost-estimate-item.static ul li { overflow: hidden }
+.cost-estimate-item.static ul li h3 { margin: 10px 20px }
+.preferences .cost-estimate-item.static ul li span { display: inline-block; line-height: 18px; margin: 6px 10px; float: right }
+.preferences div.note { background: rgba(238, 238, 238, 1); border: 1px solid rgba(221, 221, 221, 1); padding: 18px 18px 18px 45px; margin: 0 }
+.preferences div.note.important { background: rgba(255, 250, 200, 1); border: 1px solid rgba(239, 236, 207, 1) }
+.preferences div.note:before { content: ""; display: none }
+.preferences div.note h3 { font-size: 14px; line-height: 18px; color: rgba(52, 52, 52, 1); margin: 0 }
+.preferences div.note h3:before { content: "!"; font-family: "HaynesPro", sans-serif; color: rgba(119, 119, 119, 1); font-size: 20px; position: absolute; display: block; height: 16px; width: 16px; text-align: center; margin: 0 0 0 -26px }
+.preferences .note h3:before { color: rgba(67, 150, 57, 1) !important }
+.preferences div.note p { font-size: 12px; line-height: 18px; margin: 10px 0 0 }
+.preferences div.note ul { font-size: 12px; line-height: 18px; margin-top: 10px; list-style: none }
+.preferences div.note label { width: 200px; display: inline-block; margin: 0; font-size: 12px }
+.preferences .cost-estimate-item { border-top: none }
+.preferences.manageUsers li.emptyUserList { display: none }
+.preferences.manageUsers .validation_errorMsg { clear: both; float: none }
+.preferences.about .mid-section { padding: 30px 0; clear: both }
+.licenseExpireAlert { position: absolute; top: 25px; left: 50%; width: 500px; margin-left: -250px; background: rgba(255, 255, 255, 1); line-height: 18px; box-shadow: 0 3px 10px 1px rgba(153, 153, 153, 1); font-size: 13px; padding: 18px 0; z-index: 999; border-radius: 4px }
+.licenseExpireAlert h3 { font-size: 14px; color: rgba(52, 52, 52, 1); margin: 0 18px 9px 45px }
+.licenseExpireAlert h3:before { content: "!"; font-family: "HaynesPro", sans-serif; color: rgba(67, 150, 57, 1) !important; font-size: 20px; position: absolute; display: block; height: 16px; width: 16px; text-align: center; margin: 0 0 0 -26px }
+.licenseExpireAlert p { margin: 0 18px 0 45px }
+a.button.licenseExpireAlertHideButton { margin-right: 18px; margin-top: 0; float: right }
+.preferences div.note { width: 294px; margin-bottom: 20px }
+.preferences div.note.warning { background: rgba(242, 222, 222, 1); border: 1px solid rgba(235, 204, 209, 1) }
+.preferences .note.warning { color: rgba(193, 0, 0, 1) }
+.preferences .note.warning h3 { color: rgba(169, 68, 66, 1) }
+.preferences .note.warning h3:before { color: rgba(169, 68, 66, 1) !important }
+.part-memo-list-wrap { display: block; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1); margin: 20px; padding: 0 20px 18px; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(254, 254, 254, 1) 90%, rgba(249, 249, 249, 1) 100%) }
+.part-memo-list-wrap h4 { margin: 18px 20px 18px 0; line-height: 22px; font-size: 14px }
+.part-memo-list-wrap table { margin: 10px 0; border-top: 1px solid rgba(200, 200, 200, 1) }
+.part-memo-list-wrap table thead th { padding: 0 20px; background: rgba(255, 255, 255, 1); color: rgba(170, 170, 170, 1) }
+.part-memo-list-wrap table tr:hover { cursor: default }
+#editPartMemo { display: none; opacity: 0; z-index: 1000; position: absolute; left: 50%; margin-left: -250px; width: 500px; background: rgba(255, 255, 255, 1); top: 170px; box-shadow: 0 3px 15px 1px rgba(75, 75, 75, 1) }
+#editPartMemo>.top { display: block; width: 100%; height: 9px; border-bottom: 1px solid rgba(50, 50, 50, 1); background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0, rgba(161, 161, 161, 1) 100%) }
+#editPartMemo .top { border-bottom: 1px solid rgba(67, 150, 57, 1); background-image: linear-gradient(0deg, rgba(67, 150, 57, 1), rgba(40, 107, 32, 1)); background-size: 100% }
+#editPartMemo nav { display: block; width: 100%; height: 50px; background: rgba(52, 52, 52, 1) }
+#editPartMemo nav div a.editPartMemo-close { display: block; height: 34px; width: 40px; background: url("../img/sprite.png") 0 -108px no-repeat rgba(0, 0, 0, 1); float: right; margin: 8px 10px 0 0 }
+#editPartMemo nav div a.button-close:hover { background: url("../img/sprite.png") 0 -108px no-repeat rgba(80, 80, 80, 1) }
+#editPartMemo .fieldSearch { }
+#editPartMemo .fieldSearch input { float: left }
+#editPartMemo .fieldSearch .button { float: left }
+#editPartMemo .fieldSearch input { float: left; margin-right: 20px }
+#editPartMemo .fieldSearch input { margin-right: 20px }
+#editPartMemo .fieldSearch:last-child { margin-right: 0 }
+#editPartMemo .customerVehicle .innerFieldSearch { position: relative; padding: 0 20px }
+#editPartMemo .customerVehicle .top fieldset.fieldSearch { margin: 0; position: absolute; right: 0; top: 24px }
+#editPartMemo .customerVehicle .fieldSearch input { float: left }
+#editPartMemo .customerVehicle .fieldSearch .button { margin-right: 20px; float: left }
+#editPartMemo .customerVehicle .innerFieldSearch .fieldSearch input { float: left; margin-right: 20px }
+#editPartMemo .customerVehicle form.cost-estimate .innerFieldSearch .fieldSearch input { margin-right: 20px }
+#editPartMemo .customerVehicle .innerFieldSearch .fieldSearch:last-child { margin-right: 0 }
+#editPartMemo #searchResultsContainer { display: none; position: absolute; margin-left: 20px; margin-top: -10px; z-index: 900; width: 300px; background: rgba(255, 255, 255, 1); border-top: 1px solid rgba(170, 170, 170, 1); border-right: 1px solid rgba(170, 170, 170, 1); border-bottom: none; border-left: 1px solid rgba(170, 170, 170, 1); box-shadow: 1px 1px 3px 3px rgba(221, 221, 221, 1) }
+#editPartMemo ul#searchResults { display: block; overflow: hidden; list-style: none; margin: 0; padding: 0 }
+#editPartMemo ul#searchResults li div, #editPartMemo ul#searchResults li a { display: block; padding: 10px 0 10px 10px; color: rgba(0, 0, 0, 1); font-size: 14px; font-weight: bold; border-bottom: 1px solid rgba(221, 221, 221, 1) }
+#editPartMemo ul#searchResults li a:hover { background: rgba(238, 238, 238, 1) }
+#editPartMemo ul#searchResults li a span { margin-right: 20px; cursor: pointer }
+#editPartMemo ul#searchResults li a.arrow:after { content: ">"; font-family: "HaynesPro", sans-serif; font-size: 16px; line-height: 18px; display: inline-block; height: 18px; width: 18px; float: right; color: rgba(13, 116, 196, 1); font-weight: normal }
+#editPartMemo ul#searchResults ul.groupPartsList a { font-size: 12px; font-weight: normal; color: rgba(57, 151, 46, 1); display: block; overflow: hidden }
+#editPartMemo ul#searchResults ul.groupPartsList li.disabled a { color: rgba(187, 187, 187, 1); cursor: default }
+#editPartMemo ul#searchResults ul.groupPartsList li.disabled a:hover { background: rgba(0, 0, 0, 0) }
+#editPartMemo ul#searchResults ul.groupPartsList li.noLink a { color: rgba(119, 119, 119, 1); cursor: default }
+#editPartMemo ul#searchResults ul.groupPartsList li.noLink a:hover { background: rgba(0, 0, 0, 0) }
+#editPartMemo ul#searchResults li div.noResults { font-weight: normal; font-style: italic }
+#editPartMemo ul#searchResults li div.noResults { font-weight: normal; font-style: italic }
+#editPartMemo ul#searchResults li div.maxResults { font-weight: normal; font-style: italic }
+#editPartMemo #resetSearch { display: none; width: 20px; line-height: 21px; text-align: center; background: rgba(170, 170, 170, 1); cursor: pointer; color: rgba(255, 255, 255, 1); font-size: 14px; font-weight: bold; position: absolute; margin-top: -40px; margin-left: 315px; font-family: "HaynesPro", sans-serif }
+#editPartMemo fieldset { margin: 10px 20px }
+#editPartMemo h2 { margin: 20px; clear: both }
+#editPartMemo label { display: block; margin: 0 0 10px; float: none; clear: both; font-size: 12px; font-weight: bold }
+#editPartMemo .custom-dropdown-wrapper { width: 300px; margin: 0 }
+#editPartMemo input[type="text"] { width: 300px; margin: 0 }
+#editPartMemo textarea { display: block; border: 1px solid rgba(244, 244, 244, 1); line-height: 14px; padding: 10px; width: 300px; height: 100px; margin: 0; color: rgba(112, 112, 112, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 14px; font-weight: bold }
+#editPartMemo fieldset .button { float: right }
+#editPartMemo #partMemoSelectWrap { display: none }
+#editPartMemo #otherDescriptionWrap { display: none }
+#maintenance-schedule .maintenance-item ul li.smartlink, .cost-estimate-item.static ul li.smartlink { background-color: rgba(245, 245, 245, 1) }
+#maintenance-schedule .maintenance-item ul li.smartlink h3, .cost-estimate-item.static ul li.smartlink h3 { color: rgba(85, 85, 85, 1); font-style: italic }
+#maintenance-schedule .maintenance-item ul li.smartlink h3 { padding-left: 20px }
+.cost-estimate-item.static ul li.smartlink h3 { padding-left: 60px }
+.repair-manuals>.inner .right ul li.smartlink { padding: 10px 0 10px 20px; position: relative }
+.repair-manuals>.inner .right.manuals .repair-items ul li.smartlink { padding: 10px 0 10px 60px; position: relative }
+.repair-manuals>.inner .right.manuals .repair-items ul li.note { padding-left: 21px }
+.repair-manuals>.inner .right ul li.smartlink a p { color: rgba(85, 85, 85, 1); font-style: italic }
+#smartpack .sort-order { display: block; float: right; width: 30%; margin-top: 2px }
+#smartpack .sort-order label { display: block; margin: 0 0 12px; font-weight: bold; font-size: 13px; color: rgba(51, 51, 51, 1); width: 244px; float: right }
+#smartpack .custom-dropdown-wrapper2 span.selected.default { font-weight: normal; color: rgba(0, 0, 0, 1) }
+#smartpack .custom-dropdown-wrapper2 { float: right; width: 242px; border-radius: 3px; position: relative; border: 1px solid rgba(167, 167, 167, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 38px; height: 38px; margin: 0 0 0 10px; background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0, rgba(248, 248, 248, 1) 50%, rgba(242, 242, 242, 1) 100%) }
+#smartpack .custom-dropdown-wrapper2 span.selected { font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 38px; height: 38px; margin: 0 40px 0 15px }
+#smartpack .custom-dropdown-wrapper2 span.selected:before { content: "_"; font-family: "HaynesPro", sans-serif; display: block; width: 25px; height: 38px; text-align: left; line-height: 38px; float: right }
+#smartpack .custom-dropdown-wrapper2 select { display: block; border: none; width: 100%; height: 38px; opacity: 0; position: absolute; margin: -38px 0 0 }
+#smartpack .filter { width: 70% }
+.smartPackFilterCriterias { display: block }
+#smartpack .heading { height: auto }
+#smartpack .custom-dropdown-wrapper.disabled { background: rgba(250, 250, 250, 1); color: rgba(204, 204, 204, 1) !important; cursor: default !important }
+#smartpack .custom-dropdown-wrapper.disabled .selected { color: rgba(204, 204, 204, 1) !important }
+#smartpack .custom-dropdown-wrapper.disabled span.selected:before { color: rgba(204, 204, 204, 1) }
+#smartpack .custom-dropdown-wrapper { margin-bottom: 2px !important }
+#editCustomer { margin-left: 10px }
+#customerForm #content { display: block }
+#electronics-component-detail .tabs { width: 100% }
+#electronics-component-detail .templates>.tmpl section.content.vesa_connectors { display: block; float: left; width: 100%; margin: 0 0 30px }
+header .sub-nav a.search.disabled { background: url("../img/bg-disabled.png") left top repeat scroll rgba(0, 0, 0, 0); color: rgba(204, 204, 204, 1); cursor: default }
+header .sub-nav a.search.disabled:hover { background: rgba(60, 60, 60, 1) }
+#electronic-systems .title-bar .fault-code-diagnosis-search input[type="text"] { width: 442px }
+.separation { margin-top: 25px !important; border: 0 !important }
+.disabled-button { color: rgba(204, 204, 204, 1) !important; cursor: default }
+.licenseDisabled { pointer-events: none; font-style: italic; background-color: rgba(240, 240, 240, 1); color: rgba(128, 128, 128, 1) !important }
+.licenseDisabled a { color: rgba(128, 128, 128, 1) !important }
+a.arrow.licenseDisabled::after { color: rgba(128, 128, 128, 1) !important }
+.costs-bottom.acceptTOSButton { text-align: right }
+.component-locations .box { background: rgba(238, 238, 238, 1); border: 1px solid rgba(200, 200, 200, 1); padding: 20px 0; margin-bottom: 20px }
+.component-locations .box input[type="text"] { display: inline-block; border: 1px solid rgba(191, 191, 191, 1); color: rgba(0, 0, 0, 1); width: 55% }
+.component-locations .box .button { margin: 0 0 0 20px; height: 36px; line-height: 36px }
+.column-50-50 .componentConfiguration-wrap .title { text-decoration: underline }
+.componentConfiguration-wrap #editConfig.button { position: relative; float: right; top: 13px; right: 19px }
+.componentConfigurationDetails-wrap p span, .componentConfigurationDetails-wrap p label { font-weight: 600; font-size: 13px }
+.column-50-50 .componentConfiguration-wrap li label { position: absolute }
+.column-50-50 .componentConfiguration-wrap li span { margin-left: 250px; display: inline-block }
+.mostUsedFaultCodes { margin: 5px 0 10px 10px }
+#maintenance-schedule .maintenance-item .filters .price { width: 155px }
+#search-info-quick, #search-info { background: rgba(238, 238, 238, 1); border: 1px solid rgba(221, 221, 221, 1); padding: 10px; margin-top: 10px; font-size: 13px; text-align: left }
+.highlightedWord { font-weight: 600; color: rgba(60, 160, 48, 1) }
+.disabled { pointer-events: none }
+#popup.colorcodes.cwd .color-codes { width: 94% }
+#search-result-overview h2 { margin-top: 20px }
+.ui-autocomplete { height: 300px; overflow-y: scroll; overflow-x: hidden }
+input.ui-autocomplete-loading { background: url("../img/ajax-loader.gif") right no-repeat !important }
+.ui-autocomplete-highlight { font-weight: bold; color: rgba(67, 150, 57, 1) }
+.ui-autocomplete-loading-more { margin-left: 23% !important; margin-top: 10px !important; margin-bottom: 10px !important; width: 40% !important }
+.search-normal .validationConfirmation { position: absolute; top: 74px; left: 570px; color: rgba(0, 128, 0, 1); font-size: 20px }
+.search-normal .validation_errorMsg { display: none; position: absolute; top: 108px; left: 55px; font-size: 15px !important; font-weight: 600; color: rgba(255, 0, 0, 1) }
+.search-normal .etk-additional-fields { display: inline-block }
+#search .search-normal input[type="text"].etk-input { display: block; float: left; height: 38px; width: 45px; color: rgba(0, 0, 0, 1); font-size: 24px; line-height: 40px; margin: 24px 0 0; padding: 0 5px; border: 1px solid rgba(221, 221, 221, 1) }
+#search .search-normal input[type="text"].etk-input.etk2 { width: 105px }
+#search .search-normal input[type="text"].etk-input.etk3 { width: 80px }
+#search .search-normal input[type="text"].etk-input.mandatory { background: rgba(255, 250, 200, 1); border: 1px solid rgba(221, 221, 221, 1) }
+#search .search-normal input[type="text"].etk-input.etk4 { width: 35px }
+.etk-additional-fields span.etk-seperator { display: block; float: left; color: rgba(119, 119, 119, 1); font-size: 24px; font-weight: bold; line-height: 40px; margin: 24px 5px 0 }
+.etk-additional-fields select { border: 1px solid rgba(167, 167, 167, 1); font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: bold; line-height: 40px; height: 40px; width: auto; margin: 24px 0 0 10px }
+.etk-additional-fields select:disabled { border: 1px solid rgba(204, 204, 204, 1); color: rgba(187, 187, 187, 1) }
+.etk-additional-fields #etkField2 { float: left; margin-right: 10px }
+.etk-additional-fields #etkField3 { float: right; margin-right: 10px }
+.etk-additional-fields .etk-remark { text-align: left; font-family: "Helvetica Neue", Arial, sans-serif; font-size: 13px; font-weight: normal; line-height: 40px; color: rgba(119, 119, 119, 1); font-style: italic }
+.bottom.times-total { position: relative; height: 32px; padding: 10px; border-bottom: 1px solid rgba(200, 200, 200, 1); text-align: right }
+.bottom.times-total label { position: absolute; color: rgba(108, 108, 108, 1); right: 220px; width: 200px }
+.bottom.times-total label input { width: 50px; text-align: right }
+.bottom.times-total .totalTime { position: absolute; margin: auto; font-weight: 600; color: rgba(108, 108, 108, 1); top: 18px; bottom: 0; right: 20px }
+.bottom.reset { display: none; position: relative; height: 32px; padding: 10px; border-bottom: 1px solid rgba(200, 200, 200, 1); text-align: right }
+.bottom.reset .resetTime { position: relative; top: 0; height: 53px !important }
+span.manual.rate span { right: 20px !important }
+.timeMargin.timesEdited { background-color: rgba(0, 0, 0, 0) !important; border: none !important }
+#repair-times .times a.estimate { width: auto }
+.search-bar .lineout .search-normal .search-input { padding: 0 20px !important; margin-right: 10px !important }
+#makesSection .view.list li a { width: 133px; position: relative; padding-left: 75px; line-height: 16px; display: flex; align-items: center }
+#makesSection .view.list li a span { position: absolute; left: 0; bottom: 0; top: 0; width: 59px; height: 59px; overflow: hidden; border-right: 1px solid rgba(227, 227, 227, 1) }
+#makesSection .view.list li a span img { width: 76px; position: relative; left: -8px }
+#comfort-electronics svg#wiringDiagram { font-size: 12px }
+#comfort-electronics .top .button.secondary.panZoomControls { margin-right: 10px; margin-left: 0 }
+#repair-times-overview ul li.dropdown ul.dropdown-items>li>ul>li.followupHidden { display: none }
+.make-logo-big { width: 182px !important; height: 138px !important }
+.make-logo-list { width: 77px !important; height: 59px !important }
+.model-group-image { width: 182px !important; height: 120px !important }
+.view.list li a .model-group-image { width: 58px !important; height: 58px !important }
+#modelTypesListContainer .vectorial { background-size: 250px 225px }
+#exportXmlCostEstimate { font-size: 14px; height: 32px }
+nav.control-pag { clear: both; margin-top: 20px; position: relative }
+nav.control-pag ul.center { position: absolute; left: 35%; width: 65% }
+nav.control-pag a { border: 1px solid rgba(200, 200, 200, 1); display: inline-block; background: rgba(255, 255, 255, 1); color: rgba(0, 110, 192, 1); width: 35px; height: 35px; line-height: 35px; text-align: center; margin-right: 5px; float: left; border-radius: 3px }
+nav.control-pag li.active a { background: rgba(235, 235, 235, 1); color: rgba(0, 0, 0, 1) }
+nav.control-pag li.disabled a { background: rgba(245, 245, 245, 1); color: rgba(221, 221, 221, 1); cursor: default }
+nav.control-pag a:hover, nav.control .active a { background: rgba(235, 235, 235, 1); color: rgba(0, 0, 0, 1) }
+nav.control-pag .right { float: right }
+#tmpl-manual.right.manuals.full-width { width: 100% !important }
+.alt #smartpack .heading h2 { text-align: center; font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); line-height: 30px; font-size: 22px; margin: 0 0 0 20px; padding: 25px 7% }
+.alt #smartpack>.heading { display: block; position: relative; width: 100%; background: rgba(26, 26, 26, 1); box-shadow: none; border-top-left-radius: 3px; border-top-right-radius: 3px; padding: 0 }
+.alt #smartpack .smartpack-content { background: rgba(245, 245, 245, 1) !important; padding: 23px 0 20px !important }
+.alt #smartpack>.heading .close { float: right; margin: 22px 20px 0 0 }
+.alt #smartpack>.heading .button { font-family: "Helvetica Neue", Arial, sans-serif; color: rgba(255, 255, 255, 1); font-size: 14px; font-weight: normal; text-shadow: none; border: 1px solid rgba(40, 39, 39, 1); background: linear-gradient(180deg, rgba(72, 72, 72, 1) 0, rgba(62, 62, 62, 1) 10%, rgba(52, 52, 52, 1) 100%) }
+#smartpack nav.tabs li.dont-display { display: none !important }
+#electronics-component-detail>.heading { height: auto; min-height: 80px; overflow: hidden }
+#electronics-component-detail .heading h2 { line-height: 30px; margin: 20px }
+.fault-code-description { margin-top: 1% }
+.fault-code-elecpage-div, .fault-code-elecpage-title { margin: 0 20px 5px; color: rgba(0, 0, 0, 1); font-size: 15px }
+.fault-code-elecpage-title { margin-top: 5px; line-height: 24px }
+.licenseplateContainer { float: right; border-left: 1px solid rgba(234, 234, 234, 1) }
+@media all and (min-width: 1115px) { .licenseplateContainer { display: inline } }
+@media all and (min-width: 1251px) { .licenseplateContainer { display: inline-flex } }
+.licenseplateContainer fieldset { display: block; width: 250px; padding-top: 24px }
+.licenseplateContainer fieldset .custom-dropdown-wrapper { width: 227px }
+#search .search-licenseplate { display: inline-flex; width: 285px; border-left: none }
+#search .search-licenseplate .fi { background: url("../img/fin-licenseplate.png") no-repeat; color: rgba(0, 0, 0, 1) }
+#search .search-licenseplate .dk { background: url("../img/da-licenseplate.png") no-repeat; color: rgba(0, 0, 0, 1) }
+.active-trailer { background: rgba(238, 238, 238, 1) !important }
+#overlay-modal { position: absolute; left: 0; top: 60px; bottom: 0; right: 0; background: rgba(255, 255, 255, 1) }
+#loading-modal { width: 28px; height: 28px; background: url("../img/ajax-loader.gif") center no-repeat rgba(255, 255, 255, 1); border: 1px solid rgba(170, 170, 170, 1); position: absolute; border-radius: 100%; top: 50%; left: 50%; margin: -28px 0 0 -25px }
+.bold-txt { font-weight: bold }
+.componentConfiguration-items li a { color: rgba(0, 0, 255, 1) !important; display: inline !important; padding: 0 !important; line-height: 0 !important }
+.margin-top-sm { margin-top: 20px }
+.appVersion, .dbVersion { display: table-row }
+#search-result-overview table tr td a { display: block }
+.lbsMsg { padding: 20px 200px 20px 20px; text-align: left; font-size: 14px; line-height: 20px; background: url("../img/ico_warning.png") right no-repeat rgba(255, 250, 200, 1); overflow: hidden; clear: both }
+.lbsMsg p, .lbsMsg h2 { margin: 5px 0 }
+.lbsMsg .button { display: block; padding: 0 14px; cursor: pointer; margin: 5px auto 0; float: left; color: rgba(255, 255, 255, 1) }
+.lineoutLogin .right-no-background { width: 400px; height: 400px; float: left }
+.ui-tooltip { border-radius: 1px; padding: 3px; box-shadow: 0 0 1px rgba(0, 0, 0, 1); font-family: Verdana; stroke: none; font-size: 10pt; font-weight: normal }
+#smartpack-detail .links li.smartlink a p { color: rgba(85, 85, 85, 1); font-style: italic; margin: 0 0 0 20px; display: inline-block }
+ { float: right }
+#smartpack-detail .links li.smartlink { position: relative; padding: 15px }
+#smartpack-detail .links li.smartlink .extra-info a.button { display: block; height: 28px; width: 28px; border: 1px solid rgba(200, 200, 200, 1); background: rgba(255, 255, 255, 1); box-shadow: inset 0 0 10px rgba(249, 249, 249, 1); text-shadow: none !important; margin: 0; padding: 0; font-size: 24px; font-weight: normal; line-height: 32px; text-align: center; font-family: "HaynesPro", sans-serif; color: rgba(51, 51, 51, 1) }
+#smartpack-detail .links>li { margin: 10px !important; padding: 2px !important; border: 0 !important; background: rgba(255, 255, 255, 1) }
+#smartpack-detail .overview>li ul.alt li { height: 100% !important }
+#content #search { width: auto !important; background: none !important; padding: 0 !important }
+.oem-name { font-size: 80%; word-wrap: normal }
+.location-item-desc { margin-left: 20px !important; display: inline-block }
+#electronics-component-detail .component-locations ul li a { display: inline-block !important; width: calc(100% - 114px) !important }
+#electronics-component-detail .component-locations ul li a span { position: relative !important; display: inline-block !important; float: left; width: 25% }
+#cost-estimate .fieldSearch input { width: auto !important }
+#printCustomerForm { margin: 2% }
+#printCustomerForm h2 { margin-bottom: 2% }
+#printCustomerForm input, .feedback-box input { width: 81%; margin: 0; border-color: rgba(226, 226, 226, 1) }
+#printCustomerForm a { margin-top: 10px; float: right }
+#printCustomerForm table, .feedback-box table { background: none rgba(255, 255, 255, 1); border: none }
+#printCustomerForm table th, .feedback-box table th { background: none rgba(255, 255, 255, 1); border: none; width: 186px }
+#printCustomerForm table tr td, .feedback-box table tr td { background: none rgba(255, 255, 255, 1); border: none; padding-left: 0; padding-bottom: 16px }
+#printCustomerForm .button>span { font-family: "HaynesPro"; color: rgba(255, 255, 255, 1); margin: 0 12px 0 0; font-size: 18px; font-weight: normal !important }
+#customerSearch { width: 91% !important; margin-right: 17px !important }
+#printCustomerForm .fieldSearch { width: 33%; float: right; margin-bottom: 52px; display: inline-flex }
+@media all and (max-width: 1400px) { #printCustomerForm .fieldSearch { width: 44% } #repair-times .times.expanded-header { height: 135px } }
+#printCustomerForm #addNewCustomer { margin-top: 0 }
+.warning { background-color: rgba(154, 23, 23, 1); color: rgba(255, 255, 255, 1) !important }
+.warning:hover { background-color: rgba(121, 18, 18, 1) }
+#dialog-system-selection .model-detail-subnav { display: none }
+#dialog-system-selection .model-detail-subnav-extend { width: 100%; padding: initial }
+#dialog-system-selection a.continue-electronic-systems { display: none }
+.btn-bar-electronic-systems #show-system-selection, .btn-box { color: rgba(0, 109, 193, 1) !important; border: 1px solid rgba(200, 200, 200, 1); font-size: 16px; background: rgba(255, 255, 255, 1) }
+#dialog_footer a { float: right; margin-left: 15px }
+#printCustomerForm textarea { border: 1px solid rgba(226, 226, 226, 1) }
+.indeterminate { border: 1px solid rgba(198, 6, 0, 1) !important; color: rgba(198, 6, 0, 1) !important }
+.dropdown-content { display: none; position: absolute; background-color: rgba(241, 241, 241, 1); min-width: 160px; right: 20px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); z-index: 1 }
+.dropdown-content a { color: rgba(0, 0, 0, 1); padding: 12px 16px; text-decoration: none; display: block }
+.dropdown-print a:hover { background-color: rgba(221, 221, 221, 1) }
+.show-dropdown { display: block }
+.bold-text { font-weight: bold }
+.bullet-list-element { font-size: 17px }
+.model-detail-info { background-size: 300px 208px; margin-right: 0 }
+.featherlight .featherlight-inner.image { background: rgba(221, 221, 221, 1) }
+.featherlight-content .image figure { display: block; float: right; height: 500px; margin: 0; padding: 20px; background: rgba(255, 255, 255, 1) }
+.featherlight-content .image figure .imageContainer { height: 500px }
+.featherlight-content .image figure img { height: 100%; width: auto; background: rgba(255, 255, 255, 1) }
+.featherlight-content a.enlarge { display: none }
+.featherlight .popup-print-button { margin-top: 0; margin-right: 40px; position: absolute; z-index: 9999; top: 10px; right: 10px; cursor: pointer; text-align: center; font-family: Arial, sans-serif; color: rgba(255, 255, 255, 1) }
+.type-certificate-input { margin-left: 2px !important; font-size: 19px !important; text-transform: none !important; width: 166px !important }
+.featherbox-newsflash { cursor: pointer }
+.featherlight-close-icon { background: rgba(220, 37, 39, 1); border: none; color: rgba(255, 255, 255, 1); text-decoration: none; text-align: center; display: inline-block; padding: 2px 10px; width: auto }
+.featherlight-close-icon:hover { background: rgba(77, 77, 79, 1); color: rgba(255, 255, 255, 1) }
+.featherlight-inner { background: rgba(255, 255, 255, 1) }
+.imageContainer { cursor: pointer }
+ { color: rgba(189, 189, 189, 1); font-weight: 500 }
+.timeWithMargin-changeable-field { width: 47px }
+#search .search-licenseplate .fr { background: url("../img/fr-licenseplate.png") no-repeat; color: rgba(0, 0, 0, 1) }
+.model-detail-subnav-extend .tmpl.alt .custom-radio-button { height: 28px; width: 28px; line-height: 28px; font-weight: bold }
+.electronic-overview-input { width: 24% !important }
+.continue-to-electronics-top { float: right; height: 34px !important; margin-right: 12px !important; margin-left: 0 !important }
+.electronic-btn-bottom { position: relative !important; left: 0 !important; margin: 10px 0 0 !important; float: right !important }
+.include-on-print-checkbox { margin-top: 6% !important }
+.currency-select { margin: 11px 0 0 !important; height: 43px !important }
+#cost-estimate .custom-dropdown-wrapper.currency-dropdown { width: 110px }
+.currency-label { text-align: right; clear: both; float: left; margin-right: 15px !important; line-height: 43px }
+.input-part { margin-top: -6px !important }
+.button.print.secondary.technical-drawings-print-btn { margin-top: 15px }
+.disabled-tab { pointer-events: none }
+.disabled-tab a { color: rgba(154, 154, 154, 1) !important }
+.magnifying-glass { margin-left: -37px; margin-right: 30px; color: rgba(112, 112, 112, 1) }
+.magnifying-glass-repair-times { margin: 32px -358px 7px 0; float: right; color: rgba(112, 112, 112, 1) }
+.viewed-smart-pack { background: rgba(234, 234, 234, 1) !important }
+.axle-header { text-transform: capitalize; margin-bottom: 21px; margin-top: 21px; font-weight: 300; font-family: Roboto, sans-serif; font-size: 19px }
+.toggleMenu { float: left }
+.btn-logout, .btn-feedback { float: left; margin: 12px 0 0; display: block; text-decoration: none; height: 26px; line-height: 26px; color: rgba(255, 255, 255, 1); font-size: 13px; text-shadow: 0 1px 1px rgba(50, 50, 50, 1); padding: 0 36px 0 15px; background-color: rgba(255, 255, 255, 0.2); border-radius: 2px }
+.btn-logout:hover, .btn-feedback:hover { background-color: rgba(255, 255, 255, 0.4) }
+.unavailable-fault-codes { background: rgba(229, 229, 229, 1) !important; border: 1px solid rgba(167, 167, 167, 1) !important; display: block; pointer-events: none; opacity: 0.3 }
+.custom-checkbox-wrapper.add-remove.add-remove-part { margin-top: 3px !important }
+#maintenance-schedule .maintenance-item.static ul li>span.checker.ok { right: 52px }
+.checkbox-column-icons { float: right; margin-right: 20px }
+#maintenance-schedule .maintenance-item.static ul li>span.checker .custom-checkbox-wrapper { margin: 10px 0 0 10px !important; top: 0 !important }
+#maintenance-schedule ul li.oeCode>div { top: 11px; margin: 0 0 0 15px; padding-right: 2px; padding-left: 2px; word-break: break-all; width: 116px }
+.black-text { color: rgba(0, 0, 0, 1) }
+.small-icon { font-size: 17.6px !important }
+#show-system-selection { white-space: normal; height: 100%; line-height: 1.5 }
+.jackingPointsTab { width: 210px !important }
+#id-locator nav div a.button-close { margin: 8px 5px 0 0 !important }
+#id-locator nav ul li a { font-size: 11px !important; font-weight: bold !important }
+.no-border-bottom { border-bottom: 0 !important }
+#electronics-component-detail .templates>.tmpl aside { margin: 56px 0 40px }
+.circuit-buttons { float: right; margin-bottom: 20px }
+.circuit-buttons a { color: rgba(52, 133, 203, 1) !important }
+form.cost-estimate input[type="tel"] { width: 337px }
+.pseudo.fms:before { content: "Y" !important }
+.pseudo.ecas:before { content: "" !important; display: block !important; height: 24px !important; width: 24px !important; background-size: 24px 24px; background-image: url("../img/ecas-icon.svg"); background-repeat: no-repeat }
+.pseudo.locations-moto:before { content: "" !important; display: block !important; height: 24px !important; width: 24px !important; background-size: 24px 24px; background-image: url("../img/icon_locations_mc.svg"); background-repeat: no-repeat }
+#id-locator .left { height: auto !important }
+.repair-manuals>.inner .right ol.NUMBERED_LIST li { overflow: visible !important; padding-left: 0 !important }
+#repair-times .times label { width: auto }
+#repair-times .times .jobs { width: auto }
+#repair-times .times .time { width: auto }
+#repair-times .parts { width: auto }
+#repair-times .times a.detail { margin: 28px 0 0 }
+#repair-times .times a.detail span.title { width: auto }
+.axle-header-padding { padding-left: 20px }
+.electronicResetFilterBtn { margin-left: 0 !important }
+.electronicBox { display: inline-block !important; width: 100% !important }
+.buttonSearchFCElectronicPage { margin-left: 3px !important; height: 37px !important; line-height: 37px !important }
+.inline-block-element { display: inline-block }
+.vertical-top-align { vertical-align: top }
+.fault-codes-tsb { margin-bottom: 10px }
+#electronic-systems .fault-code-diagnosis.no-results { background: none }
+.model-detail-subnav-extend nav .tmpl li.maintenance-tab { background: rgba(245, 245, 245, 1) }
+#search .search-licenseplate .gb { background-size: 184px 40px }
+.featherlight .featherlight-content { border-radius: 3px }
+.repair-manuals>.inner .right figure { height: 150px }
+#smartpack-detail .overview>li figure img { height: 150px }
+.header-label { margin-bottom: 21px !important }
+.input-header { height: 30px }
+.configurationsTable .heading { border-bottom: 0.5px solid rgba(232, 232, 232, 1) }
+input.filterInput { display: inline-block; margin-right: 10px }
+.filterSmartPackContainer { margin-top: 13px; margin-bottom: 20px }
+.filterSmartPackContainer input.filterInput { margin-left: 0; width: 410px; border: 1px solid rgba(191, 191, 191, 1) }
+#smartpack .filter { overflow: visible }
+#modelDetailSmartPack .no-result { height: 58px; line-height: 58px; background: rgba(245, 245, 245, 1) !important; color: rgba(97, 97, 97, 1) !important; text-align: center; font-size: 16px; pointer-events: none }
+#modelDetailSmartPack .resetButton { height: 38px; line-height: 37px }
+.filter-box-repair-manuals input.filter-input-repair-manuals { display: inline-block; margin-right: 10px; width: 331px; border: 1px solid rgba(191, 191, 191, 1) }
+@media all and (max-width: 1351px) { .filter-box-repair-manuals input.filter-input-repair-manuals { width: 222px } }
+@media all and (max-width: 1187px) { .filter-box-repair-manuals input.filter-input-repair-manuals { width: 185px } }
+@media all and (max-width: 1146px) { #repair-times .times { height: 135px } }
+@media all and (max-width: 702px) { #repair-times .times { height: 189px } }
+.filter-box-repair-manuals { float: right; margin-right: 50px; margin-top: 10px }
+.repair-manuals-dropdown.active .filter-box-repair-manuals { display: block }
+.repair-manuals-dropdown .filter-box-repair-manuals { display: none }
+#popup.colorcodes { height: auto; width: 650px }
+#electronic-systems .title-bar .fault-code-diagnosis-search a { color: rgba(255, 255, 255, 1); border: 1px solid rgba(67, 150, 57, 1) }
+#electronic-systems .title-bar .fault-code-diagnosis-search { width: auto }
+.no-side-margin { margin-left: 0; margin-right: 0 }
+.id-location-div { margin-top: 10px; margin-left: 30px; font-weight: bold; line-height: 21px; font-size: 15px }
+.id-location-link { color: rgba(21, 101, 192, 1) }
+.id-location-link:visited { color: rgba(21, 101, 192, 1) }
+.id-location-link:hover { color: rgba(30, 136, 229, 1) }
+.id-location-btn.button.secondary { line-height: 28px; height: 28px; margin-top: 5px; margin-right: 1px }
+.change-car { width: 93%; height: 100%; min-height: 144px; min-width: initial; max-width: initial; padding-bottom: 12px; box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px rgba(0, 0, 0, 0.14), 0 1px 5px rgba(0, 0, 0, 0.12) }
+.change-car:hover { box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12) }
+.change-car img { width: 93%; height: auto; min-height: 144px }
+#model-detail-overview aside { padding: 8px 0 9990px }
+.id-location-overview { font-size: 13px; margin-left: 11px; margin-top: 5px; line-height: 16px }
+.search-details-overview { font-size: 11px; margin-left: 11px; margin-top: 8px; line-height: 16px }
+.button.secondary.id-locations-print { position: absolute; z-index: 9999; top: 9px; right: 56px; cursor: pointer; text-align: center; line-height: 20px; height: 20px }
+.loading-id-location { position: absolute; top: 50%; left: 50%; margin: -25px 0 0 -25px }
+.jackingPointsContainer { text-align: center }
+.jackingPointsImg { width: 74vw; height: 42vw }
+.eobdConnectorContainer { padding-bottom: 22px; text-align: center }
+.eobdConnectorImg { width: 74vw; height: 38vw }
+.eobdConnectorTxt { margin-top: 22px; margin-left: 22px; margin-right: 22px }
+ { font-size: 11px }
+#searchFcInput { width: 63% }
+.dropdown.redirectDiagnosticConnector .arrow:after { content: ">" !important }
+.repair-manuals>.inner .right ul li p { width: 50% }
+.repair-manuals .repair-manuals-list .drawing { border: 0 }
+.repair-manuals>.inner .right .repair-manuals-list figure { border: 1px solid rgba(218, 218, 218, 1) }
+.repair-manuals>.inner .right ul li.inline-smartlink { padding-left: 60px }
+.repair-manuals>.inner .right ul li.inline-smartlink.small-indent { padding-left: 40px }
+#resetButtonFC { display: none; opacity: 0 }
+#repair-times .wrapper { width: 100% }
+mark { background-color: rgba(0, 0, 0, 0); border-radius: 1em 0; background-image: linear-gradient(-100deg, rgba(255, 224, 0, 0.2), rgba(255, 224, 0, 0.7) 95%, rgba(255, 224, 0, 0.1)) }
+mark.overview-page { background-image: none }
+.searched-results-header { margin-left: 40px; padding-top: 20px; font-size: 14px }
+.search-smartpack-icon { margin-right: 13px }
+.chip { display: inline-block; padding: 0 8px; height: 19px; font-size: 14px; line-height: 19px; border-radius: 25px; background-color: rgba(215, 215, 215, 1) }
+.closebtn { padding-left: 10px; color: rgba(136, 136, 136, 1); font-weight: bold; float: right; font-size: 20px; cursor: pointer }
+.closebtn:hover { color: rgba(0, 0, 0, 1) }
+.notification-warning-panel { background: rgba(255, 255, 255, 1); border-radius: 10px; width: 663px; top: 119px; left: 0; right: 0; margin: auto }
+a.button.redirectNotificationBtn { margin-right: 0; float: right }
+.notification-warning-panel h3 { font-size: 15px; margin-bottom: 20px }
+.lineoutLogin.redirect-notification-visible { opacity: 0.3 }
+.filter-by-country-box, .filter-by-country-box-timing { display: block; height: 92px; margin-top: 15px; font-size: 14px }
+.filter-by-country-fieldset { display: block; width: 100% }
+.filter-by-country-dropdown { margin: 0; line-height: 34px; height: 34px }
+.filter-by-country-dropdown span.selected { line-height: 34px; height: 34px }
+.filter-by-country-dropdown span.selected:before { height: 34px; line-height: 34px }
+.filter-by-country-label { display: block; margin: 0 0 7px; font-size: 13px }
+.filter-all-delimiter-box { margin-top: 39px; margin-bottom: 20px }
+.filter-all-delimiter-box h1 { font-weight: 300; font-family: Roboto, sans-serif; font-size: 19px }
+.filter-by-country-header { float: left }
+h1.filter-by-country-header { font-weight: 300; font-family: Roboto, sans-serif; font-size: 19px; width: 100%; margin-top: 39px; margin-bottom: 20px }
+#filter-by-country-btn { margin-top: 20px; height: 36px; line-height: 36px }
+.country-dropdown-fieldset { display: block; float: right }
+.no-result-system-filter, .no-result-axle-system-filter { margin-right: 10px; margin-left: 0; margin-top: 43px }
+.filtered-element { display: none }
+.model-detail-subnav-extend nav .tmpl li.filtered-element { display: none }
+footer .haynespro { margin: 0; padding: 0; height: 108px; width: 229px }
+.filter-by-country-box.lubricants { margin: 0 20px 14px; box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12); display: block; position: relative; padding: 16px; border-radius: 4px; background: rgba(255, 255, 255, 1); height: 77px; transition: height 0.3s }
+.no-result-system-filter.lubricants { margin-left: 20px; margin-right: 20px }
+.filter-lubricant-data { clear: both }
+.replacement-intervals { font-size: 14px; border-radius: 9px; position: relative; padding: 16px; background: rgba(255, 255, 255, 1); line-height: 20px; margin-bottom: 20px; overflow: hidden; border: 1px solid rgba(200, 200, 200, 1) }
+.timing-belt-replacements { font-weight: bold; margin-left: 20px; margin-top: 4px; line-height: 20px }
+.btn-feedback { margin-left: 15px; padding: 0 15px }
+.feedback-box { border-radius: 9px; padding: 20px; margin-bottom: 20px; width: 46%; display: inline-table; height: 644px }
+#feedbackForm { padding: 20px }
+#feedbackCustomerComment { height: 193px; width: 95%; border-radius: 3px; resize: none; border: 1px solid rgba(226, 226, 226, 1); padding: 10px; margin-top: 12px }
+.feedback-box h2 { margin-bottom: 7% }
+.feedbackValidationError { display: none; color: rgba(255, 0, 0, 1); margin-left: 27px; line-height: 27px; position: relative; cursor: default; font-size: 13px }
+.feedbackValidationError:before { content: "!"; font-family: "HaynesPro", sans-serif; color: rgba(255, 0, 0, 1); font-size: 20px; position: absolute; display: block; height: 16px; width: 16px; text-align: center; margin: 0 0 0 -26px }
+.feedback-box table tr { cursor: default }
+.feedback-box table th { width: 88px; line-height: 14px }
+.feedback-box label { line-height: 14px; color: rgba(85, 85, 85, 1); font-size: 12px; font-weight: bold }
+.feedback-box fieldset { margin-top: 15px }
+.feedback-box input { margin-top: 3px; width: 95% }
+.feedback-box input.disabled-input { pointer-events: none; background: rgba(244, 244, 244, 1) }
+#sendFeedback { width: 100px }
+#sendFeedback i { margin-right: 5px }
+#feedbackTypeId { display: none }
+#numberPlateRegion { height: 43px; margin-top: 24px; margin-left: 24px; border: 1px solid rgba(0, 0, 0, 1); border-radius: 2px }

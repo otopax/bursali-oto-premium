@@ -1,0 +1,188 @@
+// 🚀 V5.0 FEATURE 4 & 5: Embedding Versioning ve Enterprise Knowledge Graph
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ----- MEVCUT TABLOLAR (Özet) -----
+model User {
+  id             String    @id @default(uuid())
+  email          String    @unique
+  role           Role      @default(MECHANIC)
+  subscriptionId String?
+  subscription   SubscriptionTier? @relation(fields: [subscriptionId], references: [id])
+  usageLogs      UsageLog[]
+}
+
+model SubscriptionTier {
+  id            String    @id @default(uuid())
+  name          String    @unique
+  monthlyQuota  Int
+  price         Float
+  currency      String    @default("TRY")
+  features      Json      // Hangi özelliklerin açık olduğu
+  users         User[]
+}
+
+model UsageLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id])
+  ipAddress String?
+  action    String
+  credits   Int      @default(1)
+  createdAt DateTime @default(now())
+
+  @@index([userId, createdAt])
+  @@index([ipAddress])
+}
+
+// ----- YENİ: Embedding Versioning Tablosu -----
+model VectorEmbedding {
+  id               String   @id @default(uuid())
+  contentHash      String   @unique // İçeriğin SHA-256'sı
+  embedding        Json     // Vektör verisi (Float[] veya JSON)
+  modelName        String   // e.g. "text-embedding-3-small", "gemini-embedding-001"
+  modelVersion     String   // e.g. "v1", "v2"
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Hangi araca ait olduğu bilgisi (Knowledge Graph ile bağlantı)
+  vehicleId        String?
+  vehicle          Vehicle? @relation(fields: [vehicleId], references: [id])
+
+  @@index([modelName, modelVersion])
+  @@index([contentHash, modelName]) // Sorgu optimizasyonu
+}
+
+// ----- YENİ: Enterprise Knowledge Graph (OEM -> Araç -> Motor -> ECU -> Sensör -> Arıza Kodu -> Video -> Parça) -----
+model Manufacturer {
+  id           String   @id @default(uuid())
+  name         String   @unique // e.g. "Toyota", "Ford"
+  country      String
+  logoUrl      String?
+  website      String?
+  vehicles     Vehicle[]
+  createdAt    DateTime @default(now())
+}
+
+model Vehicle {
+  id             String   @id @default(uuid())
+  manufacturerId String
+  manufacturer   Manufacturer @relation(fields: [manufacturerId], references: [id])
+  model          String   // e.g. "Corolla"
+  generation     String?  // e.g. "E210"
+  yearStart      Int
+  yearEnd        Int?
+  bodyType       String   // Sedan, Hatchback, SUV
+  fuelType       String   // Benzin, Dizel, Hybrid, Electric
+  engineDisplacement Float? // cc
+  power          Int?     // HP
+  engines        Engine[]
+  embeddings     VectorEmbedding[]
+  faultCodes     FaultCode[]
+  createdAt      DateTime @default(now())
+
+  @@unique([manufacturerId, model, generation, yearStart])
+}
+
+model Engine {
+  id          String   @id @default(uuid())
+  vehicleId   String
+  vehicle     Vehicle  @relation(fields: [vehicleId], references: [id])
+  code        String   // e.g. "2ZR-FE"
+  cylinders   Int
+  displacement Float
+  fuelSystem  String   // Multipoint, Direct Injection
+  ecus        ECU[]
+  createdAt   DateTime @default(now())
+}
+
+model ECU {
+  id          String   @id @default(uuid())
+  engineId    String
+  engine      Engine   @relation(fields: [engineId], references: [id])
+  partNumber  String   @unique
+  softwareVersion String
+  sensors     Sensor[]
+  createdAt   DateTime @default(now())
+}
+
+model Sensor {
+  id          String   @id @default(uuid())
+  ecuId       String
+  ecu         ECU      @relation(fields: [ecuId], references: [id])
+  name        String   // e.g. "O2 Sensor Bank 1 Sensor 1"
+  type        String   // Oxygen, MAF, MAP, Temperature, Knock, Speed
+  minValue    Float?
+  maxValue    Float?
+  unit        String?  // Volt, °C, kPa, etc.
+  faultCodes  FaultCode[]
+  createdAt   DateTime @default(now())
+}
+
+model FaultCode {
+  id          String   @id @default(uuid())
+  code        String   @unique // e.g. "P0171"
+  description String   // e.g. "System Too Lean (Bank 1)"
+  severity    String   // LOW, MEDIUM, HIGH, CRITICAL
+  vehicleId   String?
+  vehicle     Vehicle? @relation(fields: [vehicleId], references: [id])
+  sensorId    String?
+  sensor      Sensor?  @relation(fields: [sensorId], references: [id])
+  repairVideos RepairVideo[]
+  parts       Part[]   @relation("FaultCodeParts")
+  createdAt   DateTime @default(now())
+
+  @@index([code])
+  @@index([vehicleId])
+}
+
+model RepairVideo {
+  id          String   @id @default(uuid())
+  faultCodeId String
+  faultCode   FaultCode @relation(fields: [faultCodeId], references: [id])
+  title       String
+  url         String   @unique
+  duration    Int?     // seconds
+  source      String   // YouTube, OEM, etc.
+  thumbnail   String?
+  createdAt   DateTime @default(now())
+}
+
+model Part {
+  id          String   @id @default(uuid())
+  name        String
+  oemNumber   String?  @unique
+  category    String   // Brake, Engine, Suspension, Electrical
+  price       Float?
+  currency    String   @default("TRY")
+  stock       Int      @default(0)
+  compatibleFaultCodes FaultCode[] @relation("FaultCodeParts")
+  createdAt   DateTime @default(now())
+
+  @@index([oemNumber])
+}
+
+// ----- YENİ: Outbox Event Tablosu (Transactional Outbox için) -----
+model OutboxEvent {
+  id          String   @id @default(uuid())
+  eventName   String
+  payload     Json
+  status      String   @default("PENDING") // PENDING, PROCESSED, FAILED
+  createdAt   DateTime @default(now())
+  processedAt DateTime?
+
+  @@index([status, createdAt])
+}
+
+// ----- ENUM'lar -----
+enum Role {
+  MECHANIC
+  FLEET_OWNER
+  ADMIN
+}

@@ -1,0 +1,52 @@
+{
+  "faultCode": "P0001",
+  "brand": "Acura",
+  "model": "acura_tlx_2014_2018_fuses",
+  "updatedAt": "2026-06-29T07:35:31.333Z",
+  "aiAnalysis": {
+    "description": "P0001 arıza kodu, 'Yakıt Hacim Regülatörü Kontrol Devresi/Açık' anlamına gelir. Bu, Acura TLX 2014-2018 modellerinde, özellikle 2.4L I4 ve 3.5L V6 direkt enjeksiyonlu motorlarda, motor kontrol ünitesinin (ECM) yüksek basınç yakıt pompasının (HPFP) üzerindeki entegre Yakıt Hacim Regülatörü (FVR) solenoid valfine giden veya ondan gelen elektrik devresinde bir kopukluk (açık devre) tespit ettiğini gösterir. FVR, yakıt rayına gönderilen yakıt miktarını hassas bir şekilde ayarlayarak yakıt basıncını kontrol eden kritik bir bileşendir. Açık devre durumunda, ECM FVR'yi kontrol edemez, bu da yakıt basıncının ya çok yüksek ya da çok düşük olmasına neden olur ve motorun yakıt beslemesini doğru şekilde yönetmesini engeller.",
+    "symptoms": [
+      "Motor Arıza Lambası (MIL) yanar",
+      "Motor gücünde belirgin bir düşüş",
+      "Gaz pedalına tepkisizlik, özellikle hızlanma sırasında",
+      "Motorun dengesiz rölantide çalışması veya stop etmesi",
+      "Motorun zor çalışması veya hiç çalışmaması",
+      "Yakıt tüketiminde artış veya ani düşüş",
+      "Belirgin motor teklemesi (misfire)"
+    ],
+    "commonCauses": [
+      "**Yakıt Hacim Regülatörü (FVR) İç Arızası:** En sık karşılaşılan sebep, FVR solenoid valfinin iç bobininde bir açık devrenin meydana gelmesidir. Bu genellikle termal yorgunluk veya üretim hatasından kaynaklanır.",
+      "**Kablo Demeti Hasarı:** FVR'ye giden elektrik kablo demetinde aşınma, kesik, ezilme veya kopukluklar. Motor bölmesindeki ısı, titreşim ve sürtünme zamanla yalıtıma zarar verebilir.",
+      "**Konektör Korozyonu veya Gevşemesi:** FVR konektöründe nem veya kir nedeniyle oluşan korozyon veya konektörün zamanla gevşeyerek zayıf temas sağlaması.",
+      "**Yüksek Basınç Yakıt Pompası (HPFP) Arızası:** Acura TLX'de FVR genellikle HPFP'nin bir parçası olduğundan, pompanın mekanik veya elektriksel bir arızası FVR devresini de etkileyebilir.",
+      "**Motor Kontrol Ünitesi (ECM) Arızası:** Nadir de olsa, ECM'nin FVR'yi kontrol eden sürücü devresinde bir arıza olabilir."
+    ],
+    "stepByStepSolution": [
+      "**Adım 1: Güvenlik Önlemleri ve Başlangıç Kontrolü**",
+      "- Yakıt sisteminde çalışmadan önce, yakıt basıncını düşürmek ve elektrik akımını kesmek için aracın akü kutup başını sökün. Motorun soğuk olduğundan emin olun.",
+      "- OBD-II tarayıcınızı bağlayarak P0001 kodunu ve varsa diğer ilgili kodları teyit edin. Dondurulmuş çerçeve (freeze frame) verilerini kaydedin. Bu veriler arızanın oluştuğu koşulları anlamanıza yardımcı olacaktır.",
+      "**Adım 2: Görsel Muayene ve Konumlandırma**",
+      "- Acura TLX'de Yüksek Basınç Yakıt Pompası (HPFP), motorun silindir kapağının üzerinde bulunur ve genellikle eksantrik mili tarafından tahrik edilir. FVR solenoid valfi, bu pompanın üzerinde küçük bir elektrik konektörü ile kolayca görülebilir bir parçadır.",
+      "- FVR'nin elektrik konektörünü ve tüm kablo demetini gözle kontrol edin. Aşınma, kesik, ezik, ısı hasarı veya kemirgen hasarı gibi fiziksel hasar belirtileri arayın.",
+      "- Konektörü dikkatlice ayırın. Pinlerin bükülmüş, korozyona uğramış veya geri itilmiş olmadığından emin olun. Gerekirse kontak temizleyici ile temizleyin.",
+      "**Adım 3: Elektriksel Kontroller (Multimetre ile)**",
+      "- **FVR Direnç Testi (Ohmmetre):** Multimetreyi ohm (Ω) moduna alın. FVR solenoid valfinin kendi üzerindeki iki terminal arasına prob uçlarını yerleştirin. Servis kılavuzunda belirtilen direnç değerini (genellikle 10-20 ohm arası) kontrol edin. Eğer 'OL' (açık devre) veya çok yüksek bir direnç okuyorsanız, FVR içten arızalıdır ve değiştirilmesi gerekmektedir.",
+      "- **Kablo Demeti Süreklilik Testi:** FVR konektörünü ve ECM konektörünü ayırın (ECM pinout şeması için servis kılavuzuna bakın). Kablo demetinin FVR tarafındaki pinlerden ECM tarafındaki ilgili pinlere süreklilik testi yapın. Direnç 0.5 ohm'dan az olmalıdır. Yüksek direnç veya 'OL', kablo kopukluğunu gösterir.",
+      "- **Kablo Demeti Kısa Devre Testi:** Her iki FVR kablosunu da araç şasisine (toprağa) ve birbirlerine karşı kısa devre olup olmadığını test edin. Multimetre 'OL' göstermelidir, aksi takdirde kısa devre mevcuttur.",
+      "- **Besleme Voltajı Kontrolü (Kontak açık, motor çalışmıyor):** Multimetreyi volt (V) moduna alın. FVR konektörüne giden kablolarda (servis kılavuzundan pinout'a bakarak) 12V referans voltajı olup olmadığını kontrol edin. Bazı sistemlerde ECM doğrudan FVR'ye anahtarlamalı 12V sağlar, bazılarında ise sürekli 12V besleme ve ECM tarafından kontrol edilen şasi bağlantısı bulunur. Voltaj yoksa, besleme devresinde (sigorta, röle, kablo) bir sorun vardır.",
+      "**Adım 4: Parça Değişimi veya Onarım**",
+      "- Eğer direnç testi FVR'nin arızalı olduğunu gösteriyorsa, Yüksek Basınç Yakıt Pompası'nın tamamının veya sadece FVR valfinin (eğer ayrı satılıyorsa) değiştirilmesi gerekecektir. Acura TLX'de FVR genellikle HPFP ile entegre bir parçadır.",
+      "- HPFP değişimi için gerekli aletler: Lokma anahtar takımı, tork anahtarı, pense, yakıt hattı ayırma aletleri (gerekirse).",
+      "- Yakıt sistemini boşalttıktan sonra, yakıt hatlarını ve elektrik konektörlerini HPFP'den ayırın. Pompayı silindir kapağına bağlayan cıvataları sökün. Yeni pompayı takmadan önce tüm contaların ve O-ringlerin yeni ve doğru yerleştirildiğinden emin olun. Cıvataları üreticinin belirttiği tork değerlerine göre sıkın.",
+      "- Eğer kablo demetinde veya konektörde hasar tespit edildiyse, uygun şekilde onarın veya değiştirin. Onarım için lehimleme, shrink tüp ve elektrikçi bandı kullanılabilir.",
+      "**Adım 5: Sistem Kontrolü ve Test Sürüşü**",
+      "- Tüm bağlantıların sağlam olduğundan ve akü kutup başının tekrar takıldığından emin olun.",
+      "- OBD-II tarayıcı ile arıza kodlarını silin.",
+      "- Motoru çalıştırın ve yakıt sızıntısı olup olmadığını görsel olarak kontrol edin. Canlı veri (live data) akışını kullanarak yakıt rayı basıncı değerlerini izleyin. Hedef basınç ve gerçek basınç değerlerinin uyumlu olup olmadığını gözlemleyin.",
+      "- Kodu tetikleyen koşulları taklit ederek bir test sürüşü yapın ve arıza kodunun geri gelip gelmediğini kontrol edin."
+    ],
+    "estimatedCostInfo": "Yakıt Hacim Regülatörü (FVR) genellikle Yüksek Basınç Yakıt Pompası (HPFP) ile entegre olduğundan, parça maliyeti yüksektir. OEM veya kaliteli bir HPFP'nin parça maliyeti 400 - 1000 USD arasında değişebilir. İşçilik maliyeti, teşhis dahil yaklaşık 2-4 saatlik bir süreyi kapsar (saatlik 100-200 USD işçilik ücreti ile 200-800 USD). Toplam maliyet ortalama 600 - 1800 USD arasında değişebilir. Tamir süresi teşhis ile birlikte ortalama 3-6 saattir.",
+    "severity": "High"
+  },
+  "videos": []
+}

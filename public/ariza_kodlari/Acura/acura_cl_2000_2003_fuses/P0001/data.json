@@ -1,0 +1,52 @@
+{
+  "faultCode": "P0001",
+  "brand": "Acura",
+  "model": "acura_cl_2000_2003_fuses",
+  "updatedAt": "2026-06-29T06:53:05.035Z",
+  "aiAnalysis": {
+    "description": "P0001 arıza kodu, 'Yakıt Hacmi Regülatörü Kontrol Devresi/Açık' anlamına gelir. Bu, Motor Kontrol Ünitesi (ECU/PCM) tarafından yakıt basıncını düzenlemekten sorumlu yakıt hacmi regülatörünün kontrol devresinde bir elektriksel kesinti veya aşırı direnç (açık devre) tespit edildiğini gösterir. Acura CL (2000-2003) modellerinde, bu regülatör genellikle yakıt deposunun içinde, yakıt pompası ünitesi ile entegre bir yapıdadır. ECU, yakıt basıncını optimize etmek için yakıt pompasının hızını (PWM - Darbe Genişlik Modülasyonu ile) kontrol eder. Bu devredeki bir aksaklık, ECU'nun istenen yakıt basıncını hassas bir şekilde ayarlayamamasına yol açar, bu da motorun optimum performansta çalışmasını engeller.",
+    "symptoms": [
+      "Motorun marş basıp çalışmaması veya zor çalışması",
+      "Rölantide motor devrinin dalgalanması, düzensiz çalışma",
+      "Hızlanma sırasında belirgin bir güç kaybı, terleme veya kesiklikler",
+      "Yüksek hızlarda veya yük altında motorun teklemeye başlaması",
+      "Yakıt tüketiminde gözle görülür bir artış",
+      "Motor Arıza Lambasının (MIL - 'Check Engine' ışığı) yanması",
+      "Egzoz emisyon değerlerinde bozulma"
+    ],
+    "commonCauses": [
+      "**Yakıt Pompası Modülü Arızası**: Acura CL'de yakıt basınç regülatörü, çoğu zaman yakıt pompası ünitesine entegredir. Regülatörün kendisi veya pompaya entegre kontrol mekanizması dahili olarak arızalanmış olabilir.",
+      "**Kablolama ve Konnektör Sorunları**: ECU'dan yakıt pompası/regülatör kontrol devresine giden kablo demetinde açık devre, kısa devre veya yüksek direnç. Yakıt deposu üzerindeki konnektörlerde veya kablo demeti boyunca korozyon, gevşek bağlantılar veya fiziksel hasar sıkça görülebilir.",
+      "**Yakıt Pompası Sürücü Modülü (FPDM) Arızası**: Bazı Honda/Acura modellerinde, yakıt pompası hızını kontrol eden ayrı bir FPDM bulunur. Bu modülün arızalanması P0001'e neden olabilir. Acura CL'de bu modül genellikle bagaj zemin panelinin altında veya yakıt deposunun yakınında yer alır.",
+      "**ECU/PCM Arızası**: Nadir olmakla birlikte, ECU'nun yakıt hacmi regülatör kontrol devresine uygun sinyali gönderme yeteneğini kaybetmesi (dahili bir sürücü çipinin arızası gibi) de bir olasılıktır, ancak diğer tüm olasılıklar elendikten sonra düşünülmelidir."
+    ],
+    "stepByStepSolution": [
+      "**Adım 1: Güvenlik ve Ön Kontroller (Kabin içi)**",
+      "    *   Aracın akü negatif kutbunu ayırın. Yakıt sistemindeki basıncı emniyetli bir şekilde boşaltın (örneğin, yakıt pompası rölesini çıkarıp motoru bir süre çalıştırmak).",
+      "    *   OBD-II tarayıcı ile diğer olası arıza kodlarını (özellikle yakıt basıncı veya zengin/fakir karışım kodları - P0171, P0174 gibi) kontrol edin. Canlı veri (Live Data) okuyarak yakıt basıncı sensöründen gelen değerleri (varsa) ve yakıt düzeltme (Fuel Trim) değerlerini gözlemleyin.",
+      "**Adım 2: Kablo Demeti ve Konnektör Kontrolü (Bagaj/Arka Koltuk Altı)**",
+      "    *   Bagaj zemininin altında veya arka koltuğun altında (aracın trim seviyesine göre değişiklik gösterebilir) bulunan yakıt deposu erişim panelini ve yakıt pompası modülü konnektörünü tespit edin. Genellikle 10mm veya 12mm somunlarla sabitlenmiş bir kapak bulunur.",
+      "    *   Konnektörü ayırın ve pinlerde korozyon, eğrilik veya gevşeklik olup olmadığını görsel olarak inceleyin.",
+      "    *   Bir multimetre kullanarak, ECU'dan yakıt pompası kontrol devresine giden kablo hattında (genellikle bir sinyal veya kontrol hattı) açık devre veya aşırı direnç olup olmadığını test edin. Ateşleme açıkken (motor çalışmadan) bu hatta referans voltaj (genellikle 12V) ve topraklama arasında süreklilik kontrolü yapın. Ayrıca ECU konnektöründen yakıt pompası konnektörüne kadar olan kablo demetinin direncini ölçün; 5 Ohm'dan fazla direnç veya açık devre sorun işaretidir. Fabrika servis kılavuzundan pinout şemasını mutlaka kontrol edin.",
+      "    *   **Gereken Aletler**: Multimetre, kablo test probu seti, tornavida seti, lokma anahtar seti (10mm, 12mm).",
+      "**Adım 3: Yakıt Pompası Sürücü Modülü (FPDM) Kontrolü (Varsa)**",
+      "    *   Eğer aracınızda ayrı bir FPDM ünitesi varsa (genellikle arka koltuk altında veya yakıt deposu üstünde), bu modülü bulun. Konnektörlerini ve kablolamasını korozyon veya hasar açısından inceleyin.",
+      "    *   Multimetre veya osiloskop kullanarak FPDM'ye gelen ve FPDM'den yakıt pompasına giden sinyal hatlarını test edin. Ateşleme açıkken, FPDM'den yakıt pompasına giden hatta bir PWM sinyali görmelisiniz. Eğer FPDM'ye giriş sinyali geliyorken çıkış sinyali yoksa, modül arızalı demektir.",
+      "    *   **Gereken Aletler**: Multimetre, (tercihen osiloskop), lokma anahtar seti.",
+      "**Adım 4: Yakıt Pompası Modülü ve Entegre Regülatör Kontrolü (Yakıt Deposu İçi)**",
+      "    *   Yukarıdaki kontrollerde sorun bulunamazsa, sorun büyük olasılıkla yakıt pompası modülünün kendisindedir. Yakıt deposu kapağını sökmek için özel bir anahtar veya uygun bir boru anahtarı kullanarak yakıt pompası modülünü depodan çıkarın.",
+      "    *   Modülü çıkardıktan sonra, üzerindeki yakıt basınç regülatörünün valfini ve elektriksel bağlantılarını görsel olarak kontrol edin. Kirli yakıt veya mekanik bir sıkışma olup olmadığını inceleyin. Acura modellerinde bu regülatör genellikle tüm yakıt pompası modülüyle birlikte değiştirilir.",
+      "    *   **Gereken Aletler**: Yakıt deposu anahtarı (special tool), lokma anahtar seti, eldivenler, yakıt toplama kabı.",
+      "**Adım 5: Gerekirse Yakıt Pompası Modülü Değişimi**",
+      "    *   Yeni bir yakıt pompası modülü (entegre regülatörlü) takın. Yeni contaları ve O-ringleri kullanmayı ihmal etmeyin.",
+      "    *   Tüm bağlantıları dikkatlice takın ve sıkın. Yakıt deposu kapağını doğru torkta sıkın.",
+      "    *   Akü bağlantısını yeniden yapın.",
+      "    *   Sistemi hava alma (prime) işlemi yapın: Kontak anahtarını birkaç kez 'ON' konumuna getirip kapatın (motoru çalıştırmadan), yakıt pompasının depodan yakıt çekip sistemi doldurmasına izin verin.",
+      "    *   Motoru çalıştırın, yakıt sızıntısı olup olmadığını kontrol edin.",
+      "    *   OBD-II tarayıcı ile arıza kodlarını silin ve detaylı bir sürüş testi gerçekleştirin. Yakıt basıncı sensörü değerlerini (varsa) ve yakıt düzeltme değerlerini tekrar izleyin."
+    ],
+    "estimatedCostInfo": "Tanılama süreci 1-3 saat, onarım ise sorunun kaynağına bağlı olarak 1-5 saat sürebilir. Kablolama onarımı 50-200 USD bandında iken, Yakıt Pompası Sürücü Modülü (FPDM) değişimi 150-400 USD ve tüm Yakıt Pompası Modülü'nün (entegre regülatörlü) değişimi 300-800 USD (parça kalitesi ve işçilik dahil) maliyetine ulaşabilir. Bu maliyetler, coğrafi konuma ve kullanılan parçanın (OEM/Aftermarket) kalitesine göre değişiklik gösterebilir.",
+    "severity": "Critical"
+  },
+  "videos": []
+}

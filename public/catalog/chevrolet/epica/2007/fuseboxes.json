@@ -1,0 +1,1683 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 12.706280598126861,
+          "left": 17.578936004099546,
+          "width": 10.759806114747887,
+          "height": 5.683446169753986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "30"
+        },
+        "description": "HVAC BLWR - Fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/cooling-fan-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 12.706280598126861,
+          "left": 33.81600836488056,
+          "width": 10.759806114747887,
+          "height": 5.683446169753986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "BCM BATT - Switch block with built-in logic"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 12.706280598126861,
+          "left": 61.99557260897893,
+          "width": 10.759806114747887,
+          "height": 5.683446169753986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "ABS - Electronic brake control unit",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 12.706280598126861,
+          "left": 77.6362768496421,
+          "width": 10.759806114747887,
+          "height": 5.683446169753986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "IGN1 - Egnition lock"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 20.444649023316643,
+          "left": 17.578936004099546,
+          "width": 10.759806114747887,
+          "height": 5.683446169753986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "PWR WIDW - Power window / driver door lock switch",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "INTERRUPTOR(of=CIERRE_CENTRALIZADO(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 20.444649023316643,
+          "left": 33.81600836488056,
+          "width": 10.759806114747887,
+          "height": 5.683446169753986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "COOL FAN HI - Cooling Fan High Speed Relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_ALTA))"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 20.444649023316643,
+          "left": 61.99557260897893,
+          "width": 10.759806114747887,
+          "height": 5.683446169753986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "COOL FAN LOW - Cooling fan low speed relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA))"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 20.363631864623244,
+          "left": 77.6362768496421,
+          "width": 10.760913467862595,
+          "height": 5.7708838031348195
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ST/IG2 - Ignition switch, starter relay",
+        "relatedEntities": [
+          "ARRANQUE",
+          "GENERIC_FUSE_NAME",
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO",
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/starter-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 12.213741522714678,
+          "left": 46.08808252936874,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "SPARE - Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 24.26208214269105,
+          "left": 46.08808252936874,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SPARE - Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 28.84126301281705,
+          "left": 54.35349483707626,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "SPARE - Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 28.84126301281705,
+          "left": 69.17848581853998,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "SPARE - Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 28.84126301281705,
+          "left": 84.0034768000038,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "SPARE - Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 32.745817843364954,
+          "left": 54.35349483707626,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS WARNING"
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 36.65037267391285,
+          "left": 37.05767202536848,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "S/ROOF - Sunroof assembly"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 36.65037267391285,
+          "left": 54.35349483707626,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ABS - ECM, ABS oil supply line connector",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "ECU"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 39.99713395723962,
+          "left": 64.41096610144368,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "HI BEAM - Headlight - left / right",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 43.232336531122165,
+          "left": 8.3960227945384,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "DRIVER'S PWR WIDW - Safe power window assembly"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 43.232336531122165,
+          "left": 23.457040572792383,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PWR MIRROR - Multifunction switch",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO",
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 43.232336531122165,
+          "left": 54.35349483707626,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ILLUM RT - Headlight - right, parking light - right, rear side light - right",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_DE_ESTACIONAMIENTO",
+          "LUCES_LATERALES(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 46.95010975247465,
+          "left": 8.3960227945384,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "LCM - LCM"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 46.89560603793508,
+          "left": 23.457040572792383,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "IP FUSE - Dashboard fuse box"
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 46.89547413793103,
+          "left": 38.01551312649167,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "STOP LAMPS - Brake switch",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO",
+          "SENSOR_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/brake-light-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 46.89547413793103,
+          "left": 54.35349483707626,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ILLUM LT- Headlight - left, parking light - left, tail light - left, license plate lighting",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO",
+          "LUCES_TRASERAS",
+          "LUZ_PATENTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/tail-light-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 50.595211354441055,
+          "left": 8.3960227945384,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "PWR SEAT - Driver's seat switch with electric adjustment",
+        "relatedEntities": [
+          "COMANDO_AJUSTE_ASIENTO",
+          "ASIENTO_ELECTRICO",
+          "TOMA_12V(of=ASIENTO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 50.609554597701155,
+          "left": 23.457040572792383,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "FUEL - Fuel pump module",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "COMBUSTIBLE",
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/fuel-pump-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 53.8304139283236,
+          "left": 8.3960227945384,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ECM - ECM, engine main relay, automatic transaxle",
+        "relatedEntities": [
+          "ECU",
+          "CAJA_AUTOMATICA"
+        ]
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 53.8304139283236,
+          "left": 23.468096959026646,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "IGN COIL - Gasoline: Ignition coils 1 - 6 Diesel: -",
+        "relatedEntities": [
+          "RELAY(protects=ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/starter-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F29",
+        "layout": {
+          "top": 53.8304139283236,
+          "left": 38.293087940490466,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "HORN - Horn relay",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/horn-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 62.60775862068966,
+          "left": 56.30596658711223,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ENG2 - Gasoline: Injectors 1 ~ 6, Vehicle Speed Sensor (VSS), Carbon Filter Purge Solenoid Valve Diesel: ECM, VSS, PTC-1/2/3 Heater Relay"
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 66.43127431260835,
+          "left": 56.30596658711223,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ENG3 - ECM",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 70.22427043371202,
+          "left": 40.3460047574661,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 70.22427043371202,
+          "left": 56.30596658711223,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ENG1 - Gasoline: EGR Solenoid, Generator, ECM, VIM Solenoid, Oxygen Sensor, CMP Sensor, MAF Sensor, Carbon Filter Vent Solenoid Diesel: Boost Control Actuator, CMP Sensor, Throttle Valve Actuator, EGR Solenoid, Fuel Heater Relay , WIF sensor, glow plug controller",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "ECU",
+          "SENSOR_OXIGENO",
+          "SENSOR_CAUDAL_DE_AIRE",
+          "RELAY(protects=CALENTADOR_COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/alternator-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "F34",
+        "layout": {
+          "top": 82.4979525862069,
+          "left": 37.70883054892602,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "FRT FOG - Front fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/fog-light-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 82.4979525862069,
+          "left": 54.17661097852029,
+          "width": 11.23827207637232,
+          "height": 2.1161379310344812
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "LOW BEAM LT - Headlight - left",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F36",
+        "layout": {
+          "top": 82.4979525862069,
+          "left": 76.57348040741836,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "PWR AMP - Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ]
+      },
+      {
+        "id": "F37",
+        "layout": {
+          "top": 85.52661637931035,
+          "left": 54.17661097852029,
+          "width": 11.383519735634302,
+          "height": 2.152297082228115
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "LOW BEAM RT - Headlight - right, multifunction switch",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "COMANDO_LUCES_VOLANTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 93.84087155780053,
+          "left": 9.723675922216051,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F39",
+        "layout": {
+          "top": 93.81139390877848,
+          "left": 26.662677436490164,
+          "width": 12.012742457586077,
+          "height": 2.3271989983844756
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C CMPRSR - A/C compressor relay",
+        "relatedEntities": [
+          "RELAY(protects=COMPRESOR_DE_AC)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/air-conditioning-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 82.45168298478075,
+          "left": 11.570133966761444,
+          "width": 21.15595353593312,
+          "height": 9.277605709876545
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan control relay"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 71.55896660325314,
+          "left": 11.5549744803074,
+          "width": 21.180186196994576,
+          "height": 9.186648791152265
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling Fan Relay - High Speed",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)",
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 60.451423499804875,
+          "left": 11.316310995820528,
+          "width": 21.41884968148145,
+          "height": 9.186648791152265
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/fuel-pump-relay",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 91.16379310344827,
+          "left": 43.198090692124104,
+          "width": 19.09307875894988,
+          "height": 5.711206896551724
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/C compressor electromagnetic clutch relay"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 74.56896551724138,
+          "left": 42.959427207637226,
+          "width": 19.09307875894988,
+          "height": 5.711206896551724
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 56.46551724137932,
+          "left": 42.959427207637226,
+          "width": 19.09307875894988,
+          "height": 5.818965517241379
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/horn-relay",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 86.52345556619838,
+          "left": 69.77608980081911,
+          "width": 21.522332846277948,
+          "height": 9.597523148148149
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling Fan Relay - Low Speed",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)",
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_BAJA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 74.35344827586206,
+          "left": 65.8711217183771,
+          "width": 18.85441527446301,
+          "height": 5.818965517241379
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Low beam relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_BAJA)"
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 62.702527502838095,
+          "left": 69.52488053443925,
+          "width": 21.488335522923485,
+          "height": 9.503429783950619
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Main relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 51.781293104346155,
+          "left": 69.52488053443925,
+          "width": 21.488335522923485,
+          "height": 9.503429783950619
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/starter-relay",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 43.67329758598631,
+          "left": 70.89056719785722,
+          "width": 19.02540509287857,
+          "height": 6.247287728876643
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Side light relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_LATERALES)"
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 32.2943092226753,
+          "left": 70.89056719785722,
+          "width": 19.02540509287857,
+          "height": 6.247287728876643
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "High beam relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ALTA)"
+        ]
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 29.54283811342856,
+          "left": 10.564999241870474,
+          "width": 21.723495250444422,
+          "height": 9.510614340637044
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Power window relay",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "id": "FUSEPULLER",
+        "layout": {
+          "top": 29.951576324346558,
+          "left": 36.29892157444165,
+          "width": 12.601242334244247,
+          "height": 5.1317006344343845
+        },
+        "kind": {
+          "type": "fusepuller",
+          "format": "up",
+          "notUsed": true
+        },
+        "description": "Fuse puller"
+      },
+      {
+        "id": "ALT",
+        "layout": {
+          "top": 11.871628147085719,
+          "left": -0.9878346124798789,
+          "width": 10.624576870049069,
+          "height": 7.474433532763119
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-283",
+          "amp": "120"
+        },
+        "description": "Alternator",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/alternator-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "ALT CON",
+        "layout": {
+          "top": 6.178415341782076,
+          "left": -4.054901564451143,
+          "width": 8.153745039805104,
+          "height": 3.4583199927709956
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "notUsed": true
+        },
+        "description": "Alternator connector"
+      },
+      {
+        "id": "BAT CON",
+        "layout": {
+          "top": 21.246278364048777,
+          "left": -4.054901564451143,
+          "width": 8.153745039805104,
+          "height": 3.4583199927709956
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "notUsed": true
+        },
+        "description": "Battery terminal"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 2.214797136038186,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/8c97fba8_image.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6c3e808f_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/fce9bf2a_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d2e08a5d_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d48cbb8d_image.png"
+      }
+    ],
+    "boxName": "Engine fuse box",
+    "templateId": "63c713d2e78809b31143ac27",
+    "imageClusters": [
+      "6362930356a62a92b1fb8231",
+      "63612dc4cdae8667507d57b5"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-epica-2007-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 26.101141924959215,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "CLUSTER2 - Instrument cluster, information display unit, LCM, RKE module, TCM, PNP switch",
+        "relatedEntities": [
+          "TABLERO",
+          "ACCESO_REMOTO",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 31.484502446982056,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "WIPER - Wiper / Washer Switch, Wiper Motor, Rain Sensor Unit",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 36.86821630988855,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ECU - Not used",
+        "relatedEntities": [
+          "ECU",
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 43.882544861337685,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HVAC - ISU, fan relay, MTC / FATC switch, mode select actuator, recirculation actuator",
+        "relatedEntities": [
+          "CLIMATIZADOR",
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/cooling-fan-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 54.15986949429038,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "CLOCK - Front courtesy lamp / sunroof switch, LCM, digital clock",
+        "relatedEntities": [
+          "RELOJ",
+          "LUZ_CORTESIA(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 61.174551386623165,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RADIO - Audio system, navigation module",
+        "relatedEntities": [
+          "ESTEREO",
+          "NAVEGADOR",
+          "MODULO_GPS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/radio-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 66.394779771615,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "HEATING MAT - Heated Carpet Switch - Driver / Passenger"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 71.67453365648696,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "AUDIO - Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/radio-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 78.14029363784665,
+          "left": 18.15068493150685,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "CLUSTER1 - Instrument Cluster, MTC / FATC Switch, Digital Clock, Information Display Unit, LCM, Inserted Key Switch, RKE Module",
+        "relatedEntities": [
+          "TABLERO",
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 19.575856443719413,
+          "left": 40.75342465753425,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HR - HR"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 26.101141924959215,
+          "left": 40.75342465753425,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "AIR BAG - Passenger airbag / seat belt warning lamp, PPD sensor",
+        "relatedEntities": [
+          "AIRBAG",
+          "AIRBAG_DE_PASAJERO",
+          "TESTIGO_CINTURONES"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 31.290280837677265,
+          "left": 40.75342465753425,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SPARE - Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 36.8678629690049,
+          "left": 40.75342465753425,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "LCM - LCM"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 61.188014968729746,
+          "left": 40.75342465753425,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "CIGAR - Additional socket, cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 66.394779771615,
+          "left": 40.75342465753425,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "SUB WOOFER - Speaker subwoofer"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 19.575856443719413,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "B/UP LP - Shift Lever, PNP Switch, Reverse Switch, ECM Mirror, Brake Switch, Instrument Cluster",
+        "relatedEntities": [
+          "SENSOR_FRENO",
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 26.101141924959215,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "U/H J/B - ECM, fuel pump module, automatic transaxle, MAF sensor",
+        "relatedEntities": [
+          "ECU",
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE",
+          "CAJA_AUTOMATICA",
+          "SENSOR_CAUDAL_DE_AIRE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/epica/info/fusebox/2007/fuel-pump-fuse",
+            "urlWithAnchor": "/chevrolet/epica/info/fusebox/2007/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 31.484502446982056,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "BCM - ISU, wiper / washer switch",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 36.8678629690049,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "OSRVM - Power Mirror - Driver / Passenger, MTC / FATC Switch",
+        "relatedEntities": [
+          "ESPEJO_LATERAL",
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 43.89641500487477,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "A/D CONVERTER - Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 54.15986949429038,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "SSPS - SSPS module"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 61.174551386623165,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.1207177814029365
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ALDL - DLC, trunk release switch",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 66.394779771615,
+          "left": 63.6986301369863,
+          "width": 15.41095890410959,
+          "height": 2.2838499184339316
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "ESC - Electronic brake control unit",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      }
+    ],
+    "boxAspectRatio": 2.0993150684931505,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/ed106ec1_holden-epica-2007.png"
+    },
+    "imageClusters": [
+      "6362930c56a62a92b1fb824e",
+      "665730e4bb7cb91f362a749c"
+    ],
+    "boxName": "Passenger compartment fuse box",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2e3d011f_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/19564e68_image.png"
+      }
+    ],
+    "templateId": "63c71efae78809b31143accf",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-epica-2007-genid-g2-1.webp"
+  }
+]

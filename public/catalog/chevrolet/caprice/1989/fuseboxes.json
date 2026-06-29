@@ -1,0 +1,457 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 27.676388089905394,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Instrument Panel Lights, Alarm Buzzer, Heater Dial Light",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Choke Heater"
+      },
+      {
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 27.441955580680485,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Circuit Breaker: Power Windows and Sunroof",
+        "relatedEntities": [
+          "CIRCUIT_BREAKER(protects=LEVANTAVIDRIOS)",
+          "TECHO_SOLAR"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 15.071250267033234,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Engine Crank"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 45.81275764027327,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Heater and Air Conditioning",
+        "relatedEntities": [
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/caprice/info/fusebox/1989/air-conditioning-fuse",
+            "urlWithAnchor": "/chevrolet/caprice/info/fusebox/1989/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Electronic Control Module",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 15.071250267033232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Ignition Switch Controlled"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 15.071250267033232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Injectors, Ignition",
+        "relatedEntities": [
+          "INYECTOR",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/caprice/info/fusebox/1989/starter-fuse",
+            "urlWithAnchor": "/chevrolet/caprice/info/fusebox/1989/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 37.179410097022654,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Windshield Wipers and Washer",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Stop Light, Hazard Light",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LUZ_BALIZA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/caprice/info/fusebox/1989/brake-light-fuse",
+            "urlWithAnchor": "/chevrolet/caprice/info/fusebox/1989/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 3.0236276471092705,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Instrument Panel Gauges"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 24.79607847053945,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Parking Lamps, Side Marker Lamps, License Lamps, Tail Lamps, Cornering Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO",
+          "LUCES_LATERALES",
+          "LUCES_TRASERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/caprice/info/fusebox/1989/tail-light-fuse",
+            "urlWithAnchor": "/chevrolet/caprice/info/fusebox/1989/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 48.292294419851615,
+          "left": 45.27182682164435,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Radio, Idle Stop Solenoid, Delay Wipers, Cruise Control",
+        "relatedEntities": [
+          "ESTEREO",
+          "CRUISE_CONTROL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/caprice/info/fusebox/1989/radio-fuse",
+            "urlWithAnchor": "/chevrolet/caprice/info/fusebox/1989/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 48.18950701691257,
+          "left": 68.42234514672232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Circuit Breaker: Power Door Locks, Power Seats, Rear Window Defogger, Tailgate Lock",
+        "relatedEntities": [
+          "CIRCUIT_BREAKER(protects=CIERRE_CENTRALIZADO)",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "DESEMPANADOR_TRASERO",
+          "CERRADURA(of=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 12.72692517478404,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Back-Up Lamps, Turn Signal Lamps",
+        "relatedEntities": [
+          "LUZ_RETROCESO",
+          "LAMPARA(of=LUZ_DIRECCIONAL)",
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 34.663839505471486,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Cigarette Lighter, Horn, Key Warning Buzzer, Clock Power Antenna, Dome Light, Reading Light, Courtesy Lamps, Underhood Light, Glove Box Lamp, Rear Compartment Light",
+        "relatedEntities": [
+          "TOMA_12V",
+          "BOCINA",
+          "LUZ_DE_HABITACULO",
+          "LUZ_LECTURA",
+          "LUZ_CORTESIA",
+          "LUZ_DE_GUANTERA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/caprice/info/fusebox/1989/horn-fuse",
+            "urlWithAnchor": "/chevrolet/caprice/info/fusebox/1989/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/chevrolet/caprice/info/fusebox/1989/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/caprice/info/fusebox/1989/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 55.76502833339506,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 70.69445298538898,
+          "left": 12.492492665559123,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.009895431737,
+          "left": 22.402385248583432,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": -1.8518714954204212,
+          "left": -3.29937158756767,
+          "width": 26.571430054676622,
+          "height": 20.54878598002677
+        },
+        "kind": {
+          "type": "flasher",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 68.51213289121294,
+          "left": 62.34044672269161,
+          "width": 36.41759544212321,
+          "height": 28.960214551455355
+        },
+        "kind": {
+          "type": "flasher",
+          "notUsed": true
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.2820512820512822,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/cabe01ba_chevrolet-caprice-1983.jpg"
+    },
+    "imageClusters": [
+      "64496ade85070df59bfbeeb2"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0ccb3085_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9dd70bdd_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f195f708_image.jpg"
+      }
+    ],
+    "boxName": "Cabin fuse box",
+    "templateId": "658eef5298879b55ca27bea0",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-caprice-1989-genid-g3-0.webp"
+  }
+]

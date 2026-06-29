@@ -1,0 +1,589 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 7.732785602503912,
+          "left": 20.015811379325193,
+          "width": 18.535542370564805,
+          "height": 7.18280291821117
+        },
+        "id": "A",
+        "kind": {
+          "format": "ato",
+          "type": "circuitbreaker",
+          "notUsed": false
+        },
+        "description": "Power Door Locks, Power Seat, Power Seat Lumbar, Remote Keyless Entry",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 7.732785602503912,
+          "left": 62.89095484255086,
+          "width": 18.535542370564805,
+          "height": 7.18280291821117
+        },
+        "id": "B",
+        "kind": {
+          "format": "ato",
+          "type": "circuitbreaker",
+          "notUsed": false
+        },
+        "description": "Power Windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.86118045791207,
+          "left": 72.23887620080959,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "1",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Stoplamps, Hazard Lamps, Chime, Center High-Mounted Stoplamp Relay, Center High-Mounted Stoplamp",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "LAMPARA(of=LUZ_BALIZA)",
+          "LUZ_BALIZA",
+          "RELAY(protects=TERCERA_LUZ_DE_FRENO)",
+          "TERCERA_LUZ_DE_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/brake-light-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.872622754859194,
+          "left": 72.23887620080959,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "2",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Dome Lamps, Cargo Lamps, Visor Vanity Mirror, Cigarette Lighter, Inside Rearview Mirror Lamp, Overhead Console Lamps, Glove Box Lamp, Horns, Horn Relay, IP Courtesy Lamps, Power Outside Rearview Mirror, Liftglass Release Motor, Illuminated Entry Module",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LAMPARA(of=LUZ_DE_HABITACULO)",
+          "LUZ_DE_CAJA",
+          "TOMA_12V",
+          "LUZ_DE_GUANTERA",
+          "BOCINA",
+          "RELAY(protects=BOCINA)",
+          "MOTOR_IMPULSOR(of=CERRADURA(of=PORTON_TRASERO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/horn-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.88406505180631,
+          "left": 72.23887620080959,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "3",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Parking Lamps, License Plate Lamps, Electric Shift Transfer Case Module, Underhood Lamp, Rear Wiper, Ashtray Lamp. Door Switch Lamp",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO",
+          "LUZ_PATENTE",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)",
+          "BACKLIGHT(of=TOMA_12V)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.895507348753426,
+          "left": 72.23887620080959,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "4",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Alternator Field, A/C Compressor Relay. Cluster Chime Module, DRL Relay Coil. Four-Wheel-Drive Indicator Lamp, DRL Module, Rear Defog Timer, Transfer Case Control Module Ignition, SIR Redundant Ignition, RKE Ignition",
+        "relatedEntities": [
+          "RELAY(protects=COMPRESOR_DE_AC)",
+          "BOBINA(of=RELAY(protects=LUCES_CIRCULACION_DIURNA))",
+          "RELAY(protects=RELAY(protects=LUCES_CIRCULACION_DIURNA))",
+          "RELAY(protects=LUCES_CIRCULACION_DIURNA)",
+          "TESTIGO_DOBLE_TRACCION",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/air-conditioning-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 73.90694964570055,
+          "left": 72.23887620080959,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "5",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Oxygen Sensor Heater, Exhaust Gas Recirculation, Cam Sensor, CANN. Purge, MAS",
+        "relatedEntities": [
+          "CALANETADOR_SENSOR_OXIGENO",
+          "SENSOR_ARBOL_DE_LEVAS",
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "layout": {
+          "top": 86.91839194264767,
+          "left": 72.23887620080959,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "6",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Blower Motor, Temperature Door Motor, HI Blower Relay Coil",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)",
+          "BOBINA(of=RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(velocidadVentilador=MAGNITUD_ALTA)))",
+          "RELAY(protects=RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(velocidadVentilador=MAGNITUD_ALTA)))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(velocidadVentilador=MAGNITUD_ALTA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.86118045791207,
+          "left": 50.4781384139473,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "7",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Power Auxiliary Outlets, Assembly Line Diagnostic Link"
+      },
+      {
+        "layout": {
+          "top": 34.79907705390121,
+          "left": 50.4781384139473,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "8",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Rear Window Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.73697364989034,
+          "left": 50.4781384139473,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "9",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "PCM/VCM Battery, ABS Battery"
+      },
+      {
+        "layout": {
+          "top": 60.674870245879475,
+          "left": 50.4781384139473,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "10",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "PCM/VCM Ignition, Injectors, Crank Sensor, Coil Driver Module",
+        "relatedEntities": [
+          "INYECTOR",
+          "SENSOR_POSICION_CIGUENAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 73.6127668418686,
+          "left": 50.4781384139473,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "11",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Radio, Inside Rearview Mirror Map Lamp, Overhead Console Reading Lamps, Rear Wiper, Rear Washer, Overhead Console Display",
+        "relatedEntities": [
+          "ESTEREO",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)",
+          "SAPITO(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/radio-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 86.55066343785774,
+          "left": 50.4781384139473,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "12",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "DRAC, Anti-Lock Braking System, VCM IGN-3"
+      },
+      {
+        "layout": {
+          "top": 21.86118045791207,
+          "left": 28.717400627085013,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "13",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Clock, Radio, Battery, CD Player",
+        "relatedEntities": [
+          "RELOJ",
+          "ESTEREO",
+          "BATERIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/radio-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.807486018161605,
+          "left": 28.717400627085013,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "14",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "A/C Compressor Battery Feed",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=COMPRESOR_DE_AC)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.75379157841114,
+          "left": 28.717400627085013,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "15",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps, Fog Lamps, Fog Lamp Relay",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/chevrolet/blazer/info/fusebox/1996/fog-light-fuse",
+            "urlWithAnchor": "/chevrolet/blazer/info/fusebox/1996/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.70009713866067,
+          "left": 28.717400627085013,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "16",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Turn Signals and Back-Up Lamps, Brake-Transmission Shift Interlock Solenoid",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL",
+          "LUZ_RETROCESO",
+          "SOLENOIDE_PARKING"
+        ]
+      },
+      {
+        "layout": {
+          "top": 73.64640269891021,
+          "left": 28.717400627085013,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "17",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Windshield Washer, Windshield Wiper Motor",
+        "relatedEntities": [
+          "SAPITO",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 86.59270825915974,
+          "left": 28.717400627085013,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "18",
+        "description": "Undefined",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        }
+      },
+      {
+        "layout": {
+          "top": 21.86118045791207,
+          "left": 6.956662840222721,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "19",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Electric Shift Transfer Case"
+      },
+      {
+        "layout": {
+          "top": 34.796764276495885,
+          "left": 6.956662840222721,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "20",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Crank Signal, Air Bag System",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.7323480950797,
+          "left": 6.956662840222721,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "21",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Cluster Illumination, Radio Illumination, Heater Lamp, Four-Wheel-Drive Illumination, Chime Module, Fog Lamp Illumination, Rear Wiper Switch, Rear Defog Switch Illumination, Liftglass Release Switch Illumination, Overhead Console Illumination",
+        "relatedEntities": [
+          "BACKLIGHT(of=TABLERO)",
+          "BACKLIGHT(of=RADIO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.66793191366351,
+          "left": 6.956662840222721,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "22",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Air Bag System",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "layout": {
+          "top": 73.60351573224733,
+          "left": 6.956662840222721,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "23",
+        "description": "Undefined",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        }
+      },
+      {
+        "layout": {
+          "top": 86.53909955083114,
+          "left": 6.956662840222721,
+          "width": 18.130945289285574,
+          "height": 4.896233708510049
+        },
+        "id": "24",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "PRNDL Power, 4L60E Automatic Transmission"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.7477341389728097,
+    "boxName": "Instrument Panel Fuse Block ",
+    "boxDescription": "The fuse block is at the driver’s end of the instrument panel",
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/2e7b3e30_Captura de Pantalla 2021-08-07 a la(s) 00.18.07.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/d7203284_Captura de Pantalla 2021-08-07 a la(s) 00.20.18.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/f3036f89_Captura de Pantalla 2021-08-07 a la(s) 00.22.50.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/4044bd20_Captura de Pantalla 2021-08-07 a la(s) 00.23.04.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/ad44b476_Captura de Pantalla 2021-08-07 a la(s) 00.25.08.png"
+    },
+    "templateId": "612542d862ddb40004ca5ad9",
+    "imageClusters": [
+      "61eb1cad05876e00041794bc"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-blazer-1996-genid-g5-0.webp"
+  }
+]

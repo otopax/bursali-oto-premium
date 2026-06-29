@@ -1,0 +1,37 @@
+{
+  "faultCode": "P0171",
+  "brand": "Acura",
+  "model": "acura_integra_2000_2001_fuses",
+  "updatedAt": "2026-06-29T00:55:54.748Z",
+  "aiAnalysis": {
+    "description": "Motor kontrol ünitesi (ECU), Bank 1'deki hava-yakıt karışımının olması gerekenden daha fazla hava içerdiğini, yani sistemin 'çok fakir' çalıştığını tespit etmiştir. Bu durum, motora yetersiz yakıt veya aşırı hava girişi nedeniyle oluşur.",
+    "symptoms": [
+      "Motor arıza lambası (MIL) yanar.",
+      "Rölantide düzensizlik, dalgalanma veya stop etme eğilimi.",
+      "Hızlanmada zayıflık veya genel motor performansında düşüş.",
+      "Yüksek yakıt tüketimi (ECU, fakir karışımı dengelemek için daha fazla yakıt enjekte etmeye çalışabilir).",
+      "Egzozdan farklı bir koku (yanmamış yakıt veya aşırı oksijen nedeniyle)."
+    ],
+    "commonCauses": [
+      "Vakum kaçağı: Emme manifoldu contaları, PCV hortumları, fren destek hortumu veya diğer vakum hatlarındaki çatlaklar/gevşeklikler (en yaygın neden).",
+      "Kütle Hava Akış (MAF) sensörü arızası veya kirlenmesi: Yanlış hava akış değerleri okunması.",
+      "Yakıt sistemi sorunları: Yakıt pompası zayıf performansı, yakıt filtresi tıkanıklığı veya yakıt enjektörlerinin tıkanması/arızası.",
+      "Oksijen (O2) sensörü arızası (Bank 1 Sensör 1 - yukarı akım): Egzoz gazındaki oksijen seviyesini yanlış okuma.",
+      "Egzoz sisteminde O2 sensöründen (üst akım) önce bir kaçak: Sensörün yanlış hava okumasına neden olur.",
+      "PCV (Pozitif Karter Havalandırması) valfi arızası: Vakum kaçağına benzer etki yaratabilir."
+    ],
+    "stepByStepSolution": [
+      "OBD-II tarayıcı ile hata kodunu doğrula ve 'dondurulmuş çerçeve' (freeze frame) verilerini incele. Uzun ve kısa vadeli yakıt düzeltme (fuel trim) değerlerine özellikle dikkat et, yüksek pozitif değerler fakir bir karışımı gösterir.",
+      "Motor çalışırken sprey (örneğin karbüratör temizleyici veya propan) kullanarak potansiyel vakum kaçağı noktalarını kontrol et. Motor devrinde değişiklik olan yerler kaçak işaretidir. Özellikle emme manifoldu çevresini, PCV hortumlarını ve diğer vakum hatlarını kontrol et.",
+      "MAF sensörünü özel MAF sensörü temizleyici ile temizle. Gerekirse sensörün çıkış değerlerini tarayıcı ile kontrol et; okumaları anormal veya tepkisiz ise sensörü değiştir.",
+      "Yakıt basıncını test et ve üreticinin spesifikasyonlarıyla karşılaştır. Yakıt filtresini kontrol et ve gerekirse değiştir. Yakıt pompasının zayıf olması düşük basınca neden olabilir.",
+      "Yakıt enjektörlerinin püskürtme desenini ve direncini kontrol et. Tıkalı veya arızalı enjektörleri ultrasonik temizleyici ile temizle veya değiştir.",
+      "Oksijen sensörü 1'in (upstream, Bank 1) çalışma voltajlarını ve tepki süresini gelişmiş bir tarayıcı veya osiloskop ile izle. Yanlış veya yavaş tepki veriyorsa sensörü değiştir.",
+      "Egzoz manifoldunda veya O2 sensöründen önce egzoz sisteminde (katalitik konvertör öncesi) bir kaçak olup olmadığını kontrol et ve onar. Bu, O2 sensörünün dış havayı algılamasına neden olabilir.",
+      "PCV valfini söküp kontrol et. Tıkalı veya arızalı ise değiştir."
+    ],
+    "estimatedCostInfo": "Onarım maliyeti, arızanın kaynağına göre büyük ölçüde değişir. Basit bir vakum hortumu değişimi için 50-150 USD, MAF sensörü için 150-300 USD, O2 sensörü için 100-250 USD, yakıt pompası veya enjektörler için 300-800+ USD arasında değişebilir. Onarım süresi 1 ila 4 saat arasında sürebilir.",
+    "severity": "Medium"
+  },
+  "videos": []
+}

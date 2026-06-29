@@ -1,0 +1,39 @@
+{
+  "faultCode": "P0001",
+  "brand": "Audi",
+  "model": "audi_a5_s5_2021_2022_fuses",
+  "updatedAt": "2026-06-29T07:48:00.659Z",
+  "aiAnalysis": {
+    "description": "P0001 arıza kodu, 'Yakıt Hacmi Regülatörü Kontrol Devresi/Açık' anlamına gelir. Bu kod, motor kontrol ünitesinin (ECU/ECM) Yüksek Basınç Yakıt Pompası (HPFP) üzerindeki N290 Yakıt Ölçüm Valfi (Fuel Volume Regulator) devresinde bir kesinti (açık devre) tespit ettiğini gösterir. Bu valf, motorun enjektörlere gönderilecek yakıt basıncını ve miktarını düzenleyen kritik bir bileşendir. HPFP'nin içinde veya üzerinde bulunur ve ECU'dan gelen bir Darbe Genişlik Modülasyonu (PWM) sinyali ile kontrol edilir. Açık devre durumu, N290 valfine giden elektrik bağlantılarında (güç beslemesi, sinyal hattı veya topraklama), konektörde korozyon/gevşeklik ya da valfin kendisinde dahili bir elektriksel arıza olduğunu işaret eder. Bu durum, yakıt basıncının düzensiz olmasına veya hiç oluşmamasına neden olarak motor performansını doğrudan etkiler.",
+    "symptoms": [
+      "Motor Kontrol Lambası (MIL) yanar",
+      "Motorun zor çalışması veya hiç çalışmaması",
+      "Motor gücünde belirgin düşüş (limp mode - 'düşük güç modu')",
+      "Düzensiz rölanti veya stop etme eğilimi",
+      "Hızlanmada tereddüt, ani güç kaybı veya yetersiz tepki",
+      "Yakıt tüketiminde artış (eğer sistem yakıtı olması gerekenden fazla göndermeye çalışıyorsa veya verimsiz çalışıyorsa)"
+    ],
+    "commonCauses": [
+      "**N290 Yakıt Ölçüm Valfi Arızası**: Valfin iç sargılarında bir kopukluk veya elektriksel arıza. Bu, Audi A5/S5 (B9.5 kasa, 2021-2022) modellerinde kullanılan EA888 Gen 3 evo (2.0 TFSI) ve EA839 (3.0 TFSI) motorlarda HPFP'ye entegre edilmiş veya onun üzerine monte edilmiş bir bileşen olarak sıkça görülür.",
+      "**Kablolama Demeti Hasarı**: N290 valfine giden kablolarda fiziksel hasar (sıyrık, kopma, kemirgen hasarı), aşırı aşınma veya kötü temasa neden olan gevşek bağlantılar. Bu tür motor bölgesi kablolamaları zamanla veya dış etkenlerle zarar görebilir.",
+      "**Konektör Sorunları**: N290 valfi veya ECU konektöründeki pinlerde korozyon, bükülme, oksitlenme veya gevşeklik. Nem ve motor ısısı konektörlerde zamanla sorunlara yol açabilir.",
+      "**Sigorta veya Röle Arızası**: N290 valfine veya HPFP sistemine güç sağlayan ilgili bir sigortanın atması veya rölenin arızalanması. Aracın 'fuses' (sigortalar) yapısı bu tür durumlar için önemli bir kontrol noktasıdır.",
+      "**Motor Kontrol Ünitesi (ECU) Arızası**: N290 valfini süren dahili devrede bir problem. Bu, daha nadir görülen ancak ciddi bir arıza nedenidir."
+    ],
+    "stepByStepSolution": [
+      "**1. Ön Hazırlık ve Güvenlik Protokolleri**: Aracı güvenli bir şekilde park edin ve kontak kapalıyken akü negatif kutbunu ayırın. Motorun tamamen soğuduğundan emin olun. Yakıt sistemi üzerindeki basıncı güvenli bir şekilde düşürmek için Audi'nin servis prosedürlerini (genellikle VCDS/ODIS gibi teşhis araçlarıyla) uygulayın.",
+      "**2. Görsel Kontrol ve Konum Tespiti**: Motor kapağını çıkarın. Audi A5/S5 (B9.5) modellerinde Yüksek Basınç Yakıt Pompası (HPFP), motorun üst kısmında, genellikle silindir kapağının üzerinde, emme manifolduna yakın konumdadır. N290 Yakıt Ölçüm Valfi (Fuel Volume Regulator), HPFP'nin gövdesine entegre edilmiş küçük bir elektrik konektörüne sahip bileşendir.",
+      "**3. Konektör ve Kablo Demeti Muayenesi**: N290 valfinin elektrik konektörünü dikkatlice ayırın. Konektördeki pinleri korozyon, bükülme, hasar veya gevşeklik açısından detaylıca inceleyin. Kablo demetini N290 valfinden ECU'ya kadar görsel olarak takip edin; herhangi bir sıyrık, kopukluk, ezilme veya kemirgen hasarı belirtisi olup olmadığını kontrol edin. Gevşek bağlantılar tespit edilirse sıkın veya onarın.",
+      "**4. N290 Valfi Direnç Ölçümü**: Konektör ayrıkken, bir multimetre (Dijital Voltmetre-Ohmmetre) kullanarak N290 valfinin kendi üzerindeki pinleri arasında direnç ölçün. Bu valfler için standart direnç değeri genellikle 2-5 Ohm arasındadır (Audi teknik servis kılavuzundan kesin değeri teyit edin). Sonsuz direnç (OL - Open Loop/Açık Devre), valfin iç sargılarının kopuk olduğunu ve arızalı olduğunu doğrular. **Gerekli Aletler**: Multimetre.",
+      "**5. Kablo Demeti Devre Süreklilik ve Kısa Devre Kontrolü**: Kontak kapalı ve akü bağlantısı kesikken, N290 konektöründen ECU'nun ilgili pinlerine kadar kablolarda süreklilik testi yapın. Bu, kablolarda bir kopukluk olup olmadığını belirler. Ayrıca, her bir kablonun şasiye veya 12V beslemesine kısa devre yapmadığını da kontrol edin. **Gerekli Aletler**: Multimetre, uygun pin test uçları.",
+      "**6. Besleme Voltajı Kontrolü (N290 Konektöründe)**: Kontak açıkken (motor kapalı), N290 konektöründeki besleme voltajı hattında (genellikle 12V olması gerekir) voltaj olup olmadığını ölçün. Eğer 12V yoksa, ilgili sigortaları ve röleyi kontrol edin. **Gerekli Aletler**: Multimetre.",
+      "**7. Kontrol Sinyali Kontrolü (Osilaskop ile)**: Eğer valfin direnci normalse, kablo demeti sağlamsa ve besleme voltajı mevcutsa, ancak arıza devam ediyorsa, N290'ın kontrol hattındaki PWM sinyalini bir osilaskop ile kontrol edin. Motor marş basarken veya çalışırken (eğer çalışıyorsa) bu sinyalin varlığını, frekansını ve görev döngüsünü gözlemleyin. Sinüs veya kare dalga formunda herhangi bir anormallik, ECU arızasına işaret edebilir. **Gerekli Aletler**: Osilaskop, uygun test probları.",
+      "**8. Parça Değişimi (N290 Yakıt Ölçüm Valfi)**: Yapılan testler N290 valfinin arızalı olduğunu kesinleştiriyorsa, valfi değiştirin. Bu valf, bazı durumlarda HPFP'den ayrı olarak değiştirilebilirken, bazı motor konfigürasyonlarında HPFP'nin bir parçası olarak gelir ve tüm pompanın değiştirilmesini gerektirebilir. Yakıt basıncını tamamen düşürdüğünüzden emin olun. Yakıt hatlarını sökerken özel anahtarlar (örn: açık ağızlı lokma anahtarlar veya flare nut anahtarları) kullanın. Yeni contalar ve contalar kullanın ve montaj tork değerlerine kesinlikle uyun. Gerekirse, HPFP'ye erişmek için hava filtresi kutusu veya bazı emme boruları gibi çevresel bileşenlerin sökülmesi gerekebilir. **Gerekli Aletler**: Tork anahtarları, lokma anahtarları (örn: Torx T30/T40 HPFP için), uzatmalar, yakıt hattı anahtarları, yeni contalar.",
+      "**9. Montaj Sonrası Kontroller ve Adaptasyonlar**: Tüm bağlantıları dikkatlice tekrar takın. Aküyü bağlayın. VCDS/ODIS gibi bir teşhis aracıyla arıza kodlarını temizleyin. Motoru çalıştırın, yakıt sızıntısı olup olmadığını kontrol edin ve motorun stabil çalıştığından emin olun. Gerekirse yakıt sistemi adaptasyonlarını sıfırlayın veya temel ayarlamaları yapın.",
+      "**10. Test Sürüşü**: Aracı farklı sürüş koşullarında test ederek arızanın tamamen giderildiğinden, motor performansının normal olduğundan ve herhangi bir yeni arıza kodunun oluşmadığından emin olun."
+    ],
+    "estimatedCostInfo": "Yalnızca N290 Yakıt Ölçüm Valfinin değişimi gerekiyorsa, parça maliyeti 200-500 Euro arasında değişebilir. İşçilik maliyeti, erişilebilirliğe ve teşhisin karmaşıklığına bağlı olarak 1 ila 3 saat sürebilir (100-300 Euro). Ancak, eğer tüm Yüksek Basınç Yakıt Pompasının (HPFP) değişimi gerekiyorsa (N290 valfi entegre ise), parça maliyeti 800-2000+ Euro'ya kadar çıkabilir ve işçilikle birlikte toplam maliyet 1000-2500+ Euro'yu bulabilir. Onarım süresi teşhisin detayına ve gerekli parça değişimine göre 2 saat ile yarım gün arasında değişebilir.",
+    "severity": "High"
+  },
+  "videos": []
+}

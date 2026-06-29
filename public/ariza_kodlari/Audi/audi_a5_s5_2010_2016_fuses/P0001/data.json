@@ -1,0 +1,41 @@
+{
+  "faultCode": "P0001",
+  "brand": "Audi",
+  "model": "audi_a5_s5_2010_2016_fuses",
+  "updatedAt": "2026-06-29T07:47:19.299Z",
+  "aiAnalysis": {
+    "description": "P0001 arıza kodu, 'Yakıt Hacmi Regülatörü Kontrol Devresi/Açık' anlamına gelir. Bu, Audi A5/S5 (B8/8T kasa kodu, 2010-2016 model yılı) üzerindeki FSI/TFSI motorlar için, yüksek basınç yakıt pompasının (HPFP) üzerinde yer alan N290 Yakıt Ölçüm Valfi (Fuel Metering Valve) ile ilgili bir elektrik arızasını işaret eder. Valf, motor kontrol ünitesi (ECM) tarafından darbe genişlik modülasyonu (PWM) sinyalleriyle kontrol edilerek, yanma odalarına gönderilecek yakıt basıncını düzenler. Bir 'açık devre', N290 valfinin iç sargılarında, valfe giden kablo tesisatında veya ECM'deki ilgili sürücü devresinde bir süreksizlik olduğunu gösterir. Bu durum, ECM'nin yakıt basıncını doğru şekilde kontrol edememesine ve motorun dengesiz yakıt beslemesiyle çalışmasına yol açar. Bu kod genellikle düşük yakıt basıncı ile ilişkilidir, ancak ECM'nin valfi kontrol edememesi durumunda güvenlik için yakıt akışını kesmesi de mümkündür.",
+    "symptoms": [
+      "Motor Arıza Lambası (MIL) yanar ve P0001 kodu kayıtlıdır.",
+      "Motorun rölantide düzensiz çalışması, dalgalanma veya belirgin bir sarsıntı.",
+      "Hızlanma sırasında güç kaybı, tereddüt veya silkeleme hissi.",
+      "Motorun 'limp mode' (güç azaltılmış güvenli mod) konumuna girmesi ve hızlanmanın kısıtlanması.",
+      "Uzun marş basma süreleri, özellikle soğuk havalarda, veya motorun çalışmayı reddetmesi.",
+      "Motorun seyir halindeyken aniden stop etmesi.",
+      "Yakıt tüketiminde açıklanamayan artış veya azalma (arızanın tipine bağlı olarak ECM'nin telafi çabalarına göre değişir)."
+    ],
+    "commonCauses": [
+      "**N290 Yakıt Ölçüm Valfinin İç Arızası:** Bu, P0001 kodu için en yaygın nedendir. Valfin solenoid sargılarında termal veya mekanik stres nedeniyle oluşan içten bir kopukluk (açık devre). Bu valf genellikle yüksek basınç yakıt pompasının (HPFP) gövdesine entegre edilmiştir veya doğrudan üzerine monte edilmiştir.",
+      "**Kablo Tesisatı Hasarı:** N290 valfi ile ECM arasındaki kablo tesisatında kopukluk, aşınma, korozyon veya kısa devreler. Motor bölmesinin yüksek ısı ve titreşim koşullarına maruz kalması nedeniyle kabloların yalıtımı zamanla bozulabilir veya kablolar sürtünme sonucu hasar görebilir.",
+      "**Konektör Sorunları:** N290 valfinin 2 pinli elektrik konektöründe gevşek bağlantı, oksidasyon, pinlerde bükülme veya korozyon. Bu, aralıklı bir açık devreye neden olabilir.",
+      "**Motor Kontrol Ünitesi (ECM) Arızası:** Daha nadir olmakla birlikte, ECM'nin N290 valfini kontrol eden dahili sürücü devresinde bir arıza meydana gelmiş olabilir. Bu durum, ECM'nin valfe doğru kontrol sinyalini gönderememesine yol açar."
+    ],
+    "stepByStepSolution": [
+      "**1. Tanı ve Doğrulama (VCDS Kullanımı):** Araca bir VCDS (VAG-COM Diagnostic System) veya ODIS cihazı bağlayın. P0001 kodunun yanı sıra yakıt basıncı sensörü (G247 veya G410) ile ilgili olası ikincil kodları kontrol edin. Canlı veri akışından (ölçüm blokları) yakıt basıncı set değeri ile gerçek değeri arasındaki farkı gözlemleyin. Valfin voltaj ve akım komutlarını inceleyin. Kodları silin ve arızanın hemen geri gelip gelmediğini veya belirli sürüş koşullarında tekrarlayıp tekrarlamadığını belirleyin. Dondurulmuş çerçeve (freeze frame) verilerini dikkatlice analiz edin.",
+      "**2. N290 Yakıt Ölçüm Valfinin Konumu ve Erişimi:** Audi A5/S5'in 2.0 TFSI, 3.0 TFSI ve 4.2 FSI motorlarında N290 valfi, motorun silindir kapağına monte edilmiş olan yüksek basınç yakıt pompasının (HPFP) üzerinde veya doğrudan entegre edilmiş bir parçası olarak bulunur. Genellikle siyah renkli, 2 pinli bir elektrik konektörüne sahiptir. Erişim sağlamak için motor üst kapaklarını ve gerektiğinde hava filtresi kutusunu sökmeniz gerekebilir. **Dikkat: Yakıt sistemi yüksek basınç altında olabilir, çalışma öncesinde yakıt basıncının boşaltılması ve güvenlik önlemlerinin alınması elzemdir.**",
+      "**3. Görsel Kontrol ve Kablo Tesisatı Denetimi:** N290 valfinin elektrik konektörünü ayırın. Konektörün kendisinde, pinlerde veya valfin terminalinde korozyon, bükülme, erime veya gevşeklik olup olmadığını kontrol edin. Valfe giden kablo tesisatını ECM'ye kadar dikkatlice takip edin. Kabloların motor bloğuna, şasiye veya hareketli parçalara sürtünüp sürtünmediğini, ezilme, kopukluk veya yalıtım hasarı olup olmadığını inceleyin.",
+      "**4. Multimetre ile Detaylı Elektriksel Testler:**",
+      "   *   **N290 Valfinin Direnci (Konektör Ayırılmış Durumda):** Bir multimetre kullanarak N290 valfinin kendi iki pini arasındaki direnci ölçün. Normalde, bu valfler için tipik direnç değeri 2 ila 10 Ohm arasındadır (kesin değer için motor koduna özel Audi servis manueline bakın). Eğer multimetre 'OL' (Over Limit - Sonsuz Direnç) veya beklenenden çok yüksek bir direnç değeri gösteriyorsa, valfin içinde bir açık devre vardır ve valf arızalıdır.",
+      "   *   **Kablo Tesisatındaki Besleme Voltajı (Kontak Açık, Motor Kapalı):** Multimetreyi DC voltaj moduna ayarlayın. N290 valfinin kablo tesisatı konektöründeki iki pin arasına ölçüm yapın (valf ayrılmış durumdayken). Bir pinde yaklaşık 12V (besleme voltajı) görmelisiniz. Bu besleme ECM tarafından veya ilgili bir röle üzerinden sağlanır ve kontak açıldığında kısa bir süre için aktif olabilir. Eğer bu 12V besleme yoksa, güç kaynağı veya kablo hattında sorun olabilir.",
+      "   *   **Kablo Tesisatındaki Süreklilik ve Kısa Devre Kontrolü (Kontak Kapalı, ECM ve Valf Ayrılmış):** Kontak kapalıyken, hem N290 valfinin konektörünü hem de ECM'nin ilgili konektörünü ayırın. Audi'nin ELSAWin veya eşdeğer bir elektrik şeması kullanarak N290 valfine giden her bir kablonun ECM'deki ilgili pinlere kadar sürekliliğini kontrol edin (direnç 0 Ohm'a yakın olmalı). Ayrıca, her bir kablonun şaseye ve akü pozitifine (12V) kısa devre yapıp yapmadığını test edin. Herhangi bir süreksizlik veya kısa devre tespiti, kablo tesisatında sorun olduğunu gösterir.",
+      "**5. Arızalı Parçanın Değişimi/Onarımı:**",
+      "   *   Eğer N290 valfinin kendisi arızalı (açık devre) ise, valfi değiştirin. Çoğu Audi TFSI/FSI motorunda N290 valfi, yüksek basınç yakıt pompasının (HPFP) ayrılmaz bir parçası olarak gelir, bu durumda HPFP'nin tamamının değiştirilmesi gerekir. Değişim sırasında yakıt basıncını düşürme, yeni o-ring ve contaları kullanma, ve doğru tork değerleriyle montaj yapma hayati önem taşır. Gereken aletler Torx anahtarlar, yakıt hattı sökme/takma araçları ve tork anahtarıdır.",
+      "   *   Eğer kablo tesisatında bir kopukluk veya hasar tespit edilirse, hasarlı bölümü profesyonelce onarın (lehimleme, ısı büzüşmeli makaronlar) veya tesisatın ilgili bölümünü değiştirin.",
+      "   *   Eğer N290 valfi ve kablo tesisatı sağlam ise ve ECM'den doğru kontrol sinyali gelmiyorsa, ECM arızası şüphesi doğar. Bu durumda ECM'nin daha ileri düzeyde teşhisi, onarımı veya değişimi gerekebilir ki bu uzmanlık ve yüksek maliyet gerektiren bir işlemdir.",
+      "**6. Sistemi Onaylama ve Adaptasyon:** Yeni parçayı taktıktan sonra tüm elektrik ve yakıt bağlantılarını çift kontrol edin. Arıza kodlarını silin. VCDS ile 'Basic Settings' veya 'Adaptation' prosedürlerini (eğer yeni HPFP veya valf bunu gerektiriyorsa) gerçekleştirin. Motoru çalıştırın ve rölanti dengesini, motorun tepkisini ve VCDS üzerinden canlı yakıt basıncı değerlerini kontrol edin. Uzun bir test sürüşü yaparak tüm çalışma koşullarında arızanın tekrar oluşmadığından emin olun."
+    ],
+    "estimatedCostInfo": "N290 valfinin ayrı olarak değiştirilmesi mümkünse parça maliyeti 200-500 EUR arasında değişebilir. Ancak, çoğu durumda valf yüksek basınç yakıt pompasının bir parçası olduğundan, HPFP'nin tamamının değişimi gerekir. Bu durumda parça maliyeti (orijinal veya OEM) 400-1200 EUR civarındadır. İşçilik maliyeti, teşhis ve değişim için 1 ila 3 saat sürerek 100-300 EUR eklenir. Eğer sorun kablo tesisatından kaynaklanıyorsa onarım maliyeti işçilik yoğunluğuna göre değişir. ECM değişimi ise parça, programlama ve işçilik dahil olmak üzere 1000-2500+ EUR gibi çok daha yüksek bir maliyete yol açabilir.",
+    "severity": "High"
+  },
+  "videos": []
+}
