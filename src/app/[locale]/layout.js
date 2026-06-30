@@ -176,6 +176,7 @@ export default async function RootLayout({ children, params }) {
                 <a href={`/${locale}/#yabanci`} title="Русский" style={{ fontSize: '1.2rem', textDecoration: 'none' }}>🇷🇺</a>
               </div>
               <a href={`/${locale}/#uzmanlik`}>{locale === 'tr' ? 'Uzmanlık Alanlarımız' : 'Expertise'}</a>
+              <a href={`/${locale}/vip-garaj`} style={{ color: 'var(--text-light)' }}>{locale === 'tr' ? 'VIP Garaj' : 'VIP Garage'}</a>
               <a href={`/${locale}/sanal-usta`} style={{ color: 'var(--accent-gold)' }}>{locale === 'tr' ? 'Sanal Usta (AI)' : 'AI Mechanic'}</a>
               <a href={`/${locale}/ariza-cozumleri`}>{locale === 'tr' ? 'Arıza Çözümleri' : 'Fault Codes'}</a>
               <a href={`/${locale}/teknik-kutuphane`}>{locale === 'tr' ? 'Kütüphane' : 'Library'}</a>

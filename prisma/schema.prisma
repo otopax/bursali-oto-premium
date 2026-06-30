@@ -18,6 +18,9 @@ model Tenant {
   subscriptionId   String?
   subscription     SubscriptionTier? @relation(fields: [subscriptionId], references: [id])
   users            TenantUser[]
+  customers        Customer[]
+  customerVehicles CustomerVehicle[]
+  workOrders       WorkOrder[]
   createdAt        DateTime @default(now())
 }
 
@@ -252,3 +255,97 @@ enum TenantRole {
   ADMIN
   MEMBER
 }
+
+enum WorkOrderStatus {
+  PENDING      // Bekliyor
+  IN_PROGRESS  // İşlemde
+  COMPLETED    // Tamamlandı
+  DELIVERED    // Teslim Edildi
+  CANCELLED    // İptal
+}
+
+enum WorkOrderItemType {
+  PART         // Yedek Parça
+  LABOR        // İşçilik
+}
+
+// ----- YENİ: GARAGE ERP & VIP GARAJ MODÜLLERİ (Faz 31) -----
+
+model Customer {
+  id          String   @id @default(uuid())
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  firstName   String
+  lastName    String?
+  phone       String   // Telefon Numarası (Plaka+Tel eşleşmesi ile login için kritik)
+  email       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  vehicles    CustomerVehicle[]
+
+  @@index([tenantId])
+  @@index([phone]) // VIP Garaj login performansı için
+}
+
+model CustomerVehicle {
+  id          String   @id @default(uuid())
+  customerId  String
+  customer    Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  tenantId    String
+  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  
+  plate       String   // Plaka (VIP Garaj login için kritik)
+  vin         String?  // Şasi No
+  brand       String   // Örn: BMW
+  model       String   // Örn: 320i
+  year        Int?
+  
+  workOrders  WorkOrder[]
+
+  createdAt   DateTime @default(now())
+
+  @@index([customerId])
+  @@index([tenantId])
+  @@index([plate]) // VIP Garaj login performansı için
+}
+
+model WorkOrder {
+  id              String   @id @default(uuid())
+  tenantId        String
+  tenant          Tenant   @relation(fields: [tenantId], references: [id])
+  vehicleId       String
+  vehicle         CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  assignedToId    String?  // İşi yapan usta (TenantUser veya User id)
+  
+  status          WorkOrderStatus @default(PENDING)
+  complaint       String?  @db.Text // Müşteri Şikayeti
+  mileage         Int?     // Giriş Kilometresi
+  notes           String?  @db.Text // Usta Notları (Müşteri de görebilir veya gizli tutulabilir)
+  
+  items           WorkOrderItem[]
+  
+  startedAt       DateTime?
+  completedAt     DateTime?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@index([tenantId])
+  @@index([vehicleId])
+}
+
+model WorkOrderItem {
+  id              String   @id @default(uuid())
+  workOrderId     String
+  workOrder       WorkOrder @relation(fields: [workOrderId], references: [id], onDelete: Cascade)
+  
+  type            WorkOrderItemType
+  name            String   // Örn: "Motul 5W30 Yağ" veya "Şanzıman Revizyon İşçiliği"
+  quantity        Float    @default(1)
+  unitPrice       Float    @default(0) // Fiyat bilgisi
+  
+  createdAt       DateTime @default(now())
+
+  @@index([workOrderId])
+}
+
