@@ -24,7 +24,13 @@ export default async function sitemap() {
     '/tr/porsche-mercedes-ozel-servis',
     '/tr/otomatik-sanziman-tamiri',
     '/tr/english-speaking-mechanic',
-    '/tr/vip-garaj'
+    '/tr/vip-garaj',
+    '/tr/bmw-servis-fethiye',
+    '/tr/mercedes-servis-fethiye',
+    '/tr/audi-servis-fethiye',
+    '/tr/porsche-servis-fethiye',
+    '/tr/volkswagen-servis-fethiye',
+    '/tr/land-rover-servis-fethiye'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),

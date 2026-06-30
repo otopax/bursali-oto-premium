@@ -186,6 +186,39 @@ export default async function RootLayout({ children, params }) {
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>
+        
+        {/* Yolda Kalanlar - Floating SOS Button */}
+        <a 
+          href={`/${locale}/fethiye-7-24-oto-cekici`}
+          style={{
+            position: 'fixed',
+            bottom: '20px',
+            left: '20px',
+            background: '#e11d48',
+            color: 'white',
+            padding: '12px 20px',
+            borderRadius: '50px',
+            fontWeight: 'bold',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+            boxShadow: '0 4px 15px rgba(225, 29, 72, 0.4)',
+            textDecoration: 'none',
+            zIndex: 9999,
+            animation: 'pulse 2s infinite'
+          }}
+        >
+          <span style={{ fontSize: '1.2rem' }}>🚨</span>
+          <span>Acil Çekici Çağır</span>
+        </a>
+        <style dangerouslySetInnerHTML={{__html: `
+          @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+          }
+        `}} />
+
         <Chatbot />
       </body>
     </html>

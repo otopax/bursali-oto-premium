@@ -95,9 +95,42 @@ export default function WorkOrdersAdminPage() {
               <p className="text-sm text-gray-200">{order.complaint || 'Belirtilmedi'}</p>
             </div>
 
-            <div className="flex justify-between items-center mt-6 pt-4 border-t border-white/5">
-              <span className="text-xs text-[var(--text-muted)]">{new Date(order.createdAt).toLocaleDateString('tr-TR')}</span>
-              <button className="text-sm text-[var(--accent-gold)] hover:underline">Detaylar / Parça Ekle</button>
+            <div className="flex flex-col gap-3 mt-6 pt-4 border-t border-white/5">
+              <div className="flex justify-between items-center">
+                <span className="text-xs text-[var(--text-muted)]">{new Date(order.createdAt).toLocaleDateString('tr-TR')}</span>
+                <button className="text-sm text-[var(--accent-gold)] hover:underline">Detaylar / Parça Ekle</button>
+              </div>
+              
+              {order.status === 'COMPLETED' && (
+                <button 
+                  onClick={async () => {
+                    const btn = document.getElementById(`btn-ai-${order.id}`);
+                    btn.innerText = 'Yapay Zeka Yazıyor...';
+                    try {
+                      const res = await fetch('/api/ai/google-post', {
+                        method: 'POST',
+                        body: JSON.stringify({
+                          workOrder: order,
+                          vehicle: order.vehicle,
+                          customer: order.customer,
+                          items: order.items || []
+                        })
+                      });
+                      const data = await res.json();
+                      if(data.success) {
+                        alert("Google İşletme Metniniz Hazır! Kopyalayabilirsiniz:\n\n" + data.post);
+                        btn.innerText = '🤖 AI Gönderisi Oluşturuldu';
+                      }
+                    } catch(e) {
+                      btn.innerText = 'Hata Oluştu';
+                    }
+                  }}
+                  id={`btn-ai-${order.id}`}
+                  className="w-full mt-2 py-2 text-xs font-bold bg-blue-600/20 text-blue-400 border border-blue-500/30 rounded-lg hover:bg-blue-600/40 transition-colors flex justify-center items-center gap-2"
+                >
+                  ✨ Google İşletme İçin AI Gönderi Üret
+                </button>
+              )}
             </div>
           </div>
         ))}

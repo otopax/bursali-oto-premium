@@ -1,0 +1,2094 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "BATT",
+        "kind": {
+          "type": "battery-terminal",
+          "format": ""
+        },
+        "layout": {
+          "top": 65.12562578078833,
+          "left": 16.352121157322415,
+          "width": 4.378151448709922,
+          "height": 12.65127428295574,
+          "rotation": 90
+        }
+      },
+      {
+        "layout": {
+          "top": 38.496240601503764,
+          "left": 16.623711340206185,
+          "width": 2.5773195876288657,
+          "height": 7.218045112781955
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "40"
+        },
+        "description": "Cooling Fan Auxiliary"
+      },
+      {
+        "layout": {
+          "top": 46.92998174296689,
+          "left": 15.0458354240889,
+          "width": 5.0898223129979705,
+          "height": 5.63496112638304
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Engine ControlModule/TransmissionControl Module/Serial Data GatewayCommunicationModule"
+      },
+      {
+        "layout": {
+          "top": 53.383458646616546,
+          "left": 15.528350515463918,
+          "width": 4.123711340206185,
+          "height": 5.112781954887218
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Engine Control Module",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "layout": {
+          "top": 59.722866462322976,
+          "left": 21.778350515463917,
+          "width": 4.059278350515464,
+          "height": 4.8120300751879705
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Engine 3",
+        "relatedEntities": [
+          "MOTOR"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "layout": {
+          "top": 65.81471632868302,
+          "left": 21.778350515463917,
+          "width": 4.059278350515464,
+          "height": 4.8120300751879705
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Engine 2",
+        "relatedEntities": [
+          "MOTOR"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "layout": {
+          "top": 72.4812030075188,
+          "left": 21.778350515463917,
+          "width": 4.059278350515464,
+          "height": 4.8120300751879705
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Engine 1",
+        "relatedEntities": [
+          "MOTOR"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "layout": {
+          "top": 27.368421052631582,
+          "left": 21.90721649484536,
+          "width": 2.5128865979381443,
+          "height": 7.368421052631578
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Rear Wiper Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 18.045112781954884,
+          "left": 21.90721649484536,
+          "width": 2.5128865979381443,
+          "height": 7.218045112781955
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "40"
+        },
+        "description": "Cooling Fan Main",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/cooling-fan-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.639097744360903,
+          "left": 34.858247422680414,
+          "width": 2.5773195876288657,
+          "height": 7.218045112781955
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Hybrid Auxiliary BEC"
+      },
+      {
+        "layout": {
+          "top": 25.413533834586467,
+          "left": 33.95618556701031,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Run"
+      },
+      {
+        "layout": {
+          "top": 15.639097744360903,
+          "left": 40.01288659793815,
+          "width": 2.5128865979381443,
+          "height": 7.218045112781955
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Sunroof Module",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/sunroof-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 25.563909774436087,
+          "left": 39.23969072164948,
+          "width": 4.059278350515464,
+          "height": 4.360902255639098
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Heated Seat Control Module",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "MODULO(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "MODULO(of=CALEFACCION_DE_ASIENTO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 31.879699248120303,
+          "left": 39.23969072164948,
+          "width": 4.059278350515464,
+          "height": 4.661654135338346
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Body Control Module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ],
+        "extendedDescription": "Body control module"
+      },
+      {
+        "layout": {
+          "top": 42.556390977443606,
+          "left": 40.01288659793815,
+          "width": 2.6417525773195876,
+          "height": 7.218045112781955
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Starter Motor",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/starter-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.53383458646617,
+          "left": 39.23969072164948,
+          "width": 4.059278350515464,
+          "height": 4.661654135338346
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "25"
+        },
+        "description": "Windshield Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.804511278195484,
+          "left": 39.23969072164948,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "All-Wheel Drive System",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 68.86064126186304,
+          "left": 38.686024543646724,
+          "width": 3.327960743114062,
+          "height": 8.676293566245066
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "40",
+          "notUsed": false
+        }
+      },
+      {
+        "layout": {
+          "top": 53.53383458646617,
+          "left": 44.45876288659794,
+          "width": 4.059278350515464,
+          "height": 4.661654135338346
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Air Conditioning Compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/air-conditioning-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.639097744360903,
+          "left": 51.73969072164949,
+          "width": 2.5773195876288657,
+          "height": 7.218045112781955
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "40"
+        },
+        "description": "Blower Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "layout": {
+          "top": 24.962406015037594,
+          "left": 50.9020618556701,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "layout": {
+          "top": 31.72932330827068,
+          "left": 50.9020618556701,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/horn-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.804511278195484,
+          "left": 50.06443298969072,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Antilock Brake System Module",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.17293233082707,
+          "left": 50.38659793814433,
+          "width": 2.5773195876288657,
+          "height": 7.368421052631578
+        },
+        "id": "F23",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "40"
+        }
+      },
+      {
+        "layout": {
+          "top": 61.804511278195484,
+          "left": 55.09020618556701,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Front Fog Lamps",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/fog-light-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.17293233082707,
+          "left": 56.572164948453604,
+          "width": 2.6417525773195876,
+          "height": 7.368421052631578
+        },
+        "id": "F25",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Instrument Panel Bussed Electrical Center"
+      },
+      {
+        "layout": {
+          "top": 45.41353383458647,
+          "left": 60.63144329896907,
+          "width": 4.059278350515464,
+          "height": 4.360902255639098
+        },
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Right Turn and Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.0827067669173,
+          "left": 60.63144329896907,
+          "width": 4.059278350515464,
+          "height": 4.8120300751879705
+        },
+        "id": "F27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Left Turn and Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 45.41353383458647,
+          "left": 66.43041237113401,
+          "width": 4.059278350515464,
+          "height": 4.360902255639098
+        },
+        "id": "F28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Trailer Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(of=REMOLQUE)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.0827067669173,
+          "left": 66.43041237113401,
+          "width": 4.059278350515464,
+          "height": 4.8120300751879705
+        },
+        "id": "F29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Passenger Side High-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 71.2781954887218,
+          "left": 66.62371134020619,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Stoplamps",
+        "relatedEntities": [
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/brake-light-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.81203007518796,
+          "left": 72.22938144329896,
+          "width": 2.5773195876288657,
+          "height": 7.368421052631578
+        },
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Defroster Fog"
+      },
+      {
+        "layout": {
+          "top": 44.21052631578947,
+          "left": 76.7396907216495,
+          "width": 3.994845360824742,
+          "height": 4.511278195488721
+        },
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Driver Side Low-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 50.526315789473685,
+          "left": 76.7396907216495,
+          "width": 3.994845360824742,
+          "height": 4.661654135338346
+        },
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Passenger Side Low-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.21052631578947,
+          "left": 83.05412371134021,
+          "width": 4.123711340206185,
+          "height": 4.511278195488721
+        },
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Driver Side High-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 49.51901793616991,
+          "left": 82.77962466629266,
+          "width": 4.633043387472512,
+          "height": 5.939553619701037
+        },
+        "id": "F35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Outside Rearview Mirror Heating"
+      },
+      {
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 14.247207209945255,
+          "left": 62.42033541430077,
+          "width": 3.3279607431140548,
+          "height": 3.9597024131340266
+        }
+      },
+      {
+        "id": "F37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 19.72987208966929,
+          "left": 62.42033541430077,
+          "width": 3.3279607431140548,
+          "height": 3.9597024131340266
+        }
+      },
+      {
+        "id": "F38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 19.72987208966929,
+          "left": 66.27032921515821,
+          "width": 3.3279607431140548,
+          "height": 3.9597024131340266
+        }
+      },
+      {
+        "id": "F39",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 19.72987208966929,
+          "left": 70.51184780932319,
+          "width": 3.3279607431140548,
+          "height": 3.9597024131340266
+        }
+      },
+      {
+        "layout": {
+          "top": 18.49624060150376,
+          "left": 74.93556701030928,
+          "width": 4.059278350515464,
+          "height": 4.511278195488721
+        },
+        "id": "F40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Daytime Running Light",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "PLR",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 61.28585305982106,
+          "left": 66.47591764947079,
+          "width": 4.136929513853715,
+          "height": 8.656135035706562
+        }
+      },
+      {
+        "layout": {
+          "top": 19.849624060150376,
+          "left": 15.335051546391753,
+          "width": 5.025773195876289,
+          "height": 16.390977443609025
+        },
+        "id": "R1",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Cooling Fan Main Relay",
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "layout": {
+          "top": 16.2406015037594,
+          "left": 25.322164948453608,
+          "width": 7.731958762886598,
+          "height": 17.44360902255639
+        },
+        "id": "R2",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "orange"
+        },
+        "description": "Cooling Fan Control Relay"
+      },
+      {
+        "layout": {
+          "top": 39.24812030075188,
+          "left": 29.445876288659793,
+          "width": 7.731958762886598,
+          "height": 17.74436090225564
+        },
+        "id": "R3",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Cooling Fan Auxiliary Relay"
+      },
+      {
+        "layout": {
+          "top": 60.75187969924812,
+          "left": 27.12628865979381,
+          "width": 5.025773195876289,
+          "height": 16.541353383458645
+        },
+        "id": "R4",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Engine Control Module/CAM, Canister, Injectors, Electronic Throttle Control Relay",
+        "relatedEntities": [
+          "CANISTER",
+          "INYECTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.75187969924812,
+          "left": 33.118556701030926,
+          "width": 5.025773195876289,
+          "height": 16.541353383458645
+        },
+        "id": "R5",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Starter Relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/starter-relay",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.639097744360903,
+          "left": 44.58762886597938,
+          "width": 5.154639175257731,
+          "height": 16.2406015037594
+        },
+        "id": "R6",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Run Relay"
+      },
+      {
+        "layout": {
+          "top": 60.63664394227698,
+          "left": 44.27968665771827,
+          "width": 5.35083884186966,
+          "height": 16.60029088583112
+        },
+        "id": "R7",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Air Conditioning Compressor Relay",
+        "relatedEntities": [
+          "RELAY(protects=COMPRESOR_DE_AC)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/air-conditioning-relay",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 38.94736842105263,
+          "left": 50.70876288659794,
+          "width": 7.731958762886598,
+          "height": 17.74436090225564
+        },
+        "id": "R8",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "orange"
+        },
+        "description": "Windshield Wiper Speed Relay"
+      },
+      {
+        "layout": {
+          "top": 15.639097744360903,
+          "left": 56.31443298969072,
+          "width": 5.09020618556701,
+          "height": 16.2406015037594
+        },
+        "id": "R9",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Horn Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/horn-relay",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.25814536340852,
+          "left": 63.01546391752577,
+          "width": 5.09020618556701,
+          "height": 16.390977443609025
+        },
+        "id": "R10",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "orange"
+        },
+        "description": "Windshield Wiper Control Relay"
+      },
+      {
+        "layout": {
+          "top": 27.25814536340852,
+          "left": 69.58762886597938,
+          "width": 5.025773195876289,
+          "height": 16.390977443609025
+        },
+        "id": "R11",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Parking Lamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_DE_ESTACIONAMIENTO)"
+        ],
+        "extendedDescription": "Parking lights"
+      },
+      {
+        "layout": {
+          "top": 27.25814536340852,
+          "left": 76.03092783505154,
+          "width": 5.025773195876289,
+          "height": 16.390977443609025
+        },
+        "id": "R12",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "High-Beam Headlamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ALTA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.25814536340852,
+          "left": 82.60309278350515,
+          "width": 5.09020618556701,
+          "height": 16.390977443609025
+        },
+        "id": "R13",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Low-Beam Headlamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_BAJA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.854636591478695,
+          "left": 60.50257731958762,
+          "width": 5.025773195876289,
+          "height": 16.541353383458645
+        },
+        "id": "R14",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Front Foglamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.29323308270676,
+          "left": 76.09536082474226,
+          "width": 5.09020618556701,
+          "height": 16.390977443609025
+        },
+        "id": "R15",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "Stoplamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_FRENO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.29323308270676,
+          "left": 82.66752577319588,
+          "width": 5.154639175257731,
+          "height": 16.390977443609025
+        },
+        "id": "R16",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Defrosten Fog Relay"
+      }
+    ],
+    "imageClusters": [
+      "6476548cbe2acdfc3512ac0d"
+    ],
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/77053f9e_saturn-vue-2009.jpg"
+    },
+    "boxAspectRatio": 0.42847938144329895,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/65d24a10_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/31c1ab99_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/14dc2483_image.jpg"
+      }
+    ],
+    "boxName": "Underhood Fuse Block",
+    "templateId": "61950d086cca580004987949",
+    "templateRenameMap": {
+      "FAN MAIN": "F8",
+      "REAR/WPR": "F7",
+      "FAN AUX": "F1",
+      "ECM": "F3",
+      "ENG-3": "F4",
+      "ENG-2": "F5",
+      "ENG-1": "F6",
+      "HYBRID BEC": "F9",
+      "RUN": "F10",
+      "S/ROOF": "F11",
+      "HTD/SEAT": "F12",
+      "BCM": "F13",
+      "STRTR": "F14",
+      "WPR": "F15",
+      "4WD/ ESCM": "F16",
+      "A/C CLTCH": "F18",
+      "BLWR MTR": "F19",
+      "AMP": "F20",
+      "HORN": "F21",
+      "ABS": "F22",
+      "I/P BEC": "F25",
+      "FRT FOG": "F24",
+      "DRL": "F40",
+      "T/LAMP RT": "F26",
+      "T/LAMP LT": "F27",
+      "TRLR T/LAMP": "F28",
+      "HDLP HI LT": "F29",
+      "STOP LP": "F30",
+      "DEFOG": "F31",
+      "HDLP LO RT": "F32",
+      "HDLP LO LT": "F33",
+      "HDLPHI RT": "F34",
+      "OSRVM HTR": "F35",
+      "FAN MAIN RLY": "R1",
+      "FAN CTRL RLY": "R2",
+      "FAN AUX RLY": "R3",
+      "PWR/TRN RLY": "R4",
+      "STRTR RLY": "R5",
+      "RUN RLY": "R6",
+      "AC CLTCH RLY": "R7",
+      "WPR SPD RLY": "R8",
+      "HORN RLY": "R9",
+      "WPR CNTRL RLY": "R10",
+      "T/LAMP RLY": "R11",
+      "HDLP HI RLY": "R12",
+      "HDLP LO RLY": "R13",
+      "FRT FOG RLY": "R14",
+      "STOP LP RLY": "R15",
+      "DEFOG RLY": "R16",
+      "ECM//TCM/SGCM": "F2",
+      "ABS 2": "F17",
+      "I/P BEC 2": "F23"
+    },
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-saturn-vue-2008-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 2.5670732443536783,
+          "left": 6.959348749192283,
+          "width": 13.846579894765995,
+          "height": 7.934345019818614
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "(POWER SEAT) Power seats",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 14.641076535382002,
+          "left": 6.959348749192283,
+          "width": 13.846579894765995,
+          "height": 7.934345019818614
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(PASS P/WIN) Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 27.06005134901114,
+          "left": 6.959348749192283,
+          "width": 13.846579894765995,
+          "height": 7.934345019818614
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "(DRIV P/WIND) Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 41.11522832316356,
+          "left": 7.630530428988001,
+          "width": 12.188412194467318,
+          "height": 11.957152545850883
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "RELAY RUN CRANK"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 55.38963135668732,
+          "left": 7.630530428988001,
+          "width": 12.188412194467318,
+          "height": 11.957152545850883
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "RELAY ACC RAP"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 68.11166253850745,
+          "left": 4.882361764977384,
+          "width": 16.385119542139755,
+          "height": 6.381973168114968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(SPARE) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 74.49363570662241,
+          "left": 4.882361764977384,
+          "width": 16.385119542139755,
+          "height": 6.381973168114968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(SPARE) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 81.39306615863859,
+          "left": 4.882361764977384,
+          "width": 16.385119542139755,
+          "height": 6.381973168114968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(SPARE) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 2.394587483053274,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "EMPTY"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 8.776560651168246,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(S/ROOF) Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/sunroof-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 15.331019580583622,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(CIGAR) Cigar lighter / power outlet",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/cigarette-lighter-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 21.885478509998997,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECM/TCM) Engine control unit; Transmission control unit"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 28.094965916813564,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "EMPTY"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 45.86099933075524,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuel Storage Control Module"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 52.24297249887021,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Inner Side Rearview Mirror"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.45245990568478,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(CLUSTER) Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 65.52437611900137,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(AIRBAG) Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 72.07883504841675,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Outer Side Rearview Mirror"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 78.97826550043293,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Key Capture Solenoid"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 86.05018171374952,
+          "left": 22.190586633434876,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 2
+        },
+        "description": "Steering Wheel Switch",
+        "relatedEntities": [
+          "COMANDOS_VOLANTE"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 2.394587483053274,
+          "left": 39.0372588387335,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front Driver Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "CERRADURA(of=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA)))"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 8.776560651168246,
+          "left": 39.0372588387335,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Accessory Power Outlet 2",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/cigarette-lighter-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 15.331019580583622,
+          "left": 39.0372588387335,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Body Control Module (BCM) (VB3)"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 80.87560887473738,
+          "left": 40.421916828210094,
+          "width": 13.615803563186567,
+          "height": 7.416887735917399
+        },
+        "kind": {
+          "format": "down",
+          "type": "fusepuller",
+          "notUsed": false
+        },
+        "description": "(FUSE PULLER) Fuse puller"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 2.394587483053274,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(DR LCK) Power door lock system",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 8.776560651168246,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(BCM (VB6)) Body control module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 15.331019580583622,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(BCM (VB4)) Body control module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 34.13196756232772,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(BCM (VB5)) Body control module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 40.686426491743106,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(TRL) Trailer",
+        "relatedEntities": [
+          "REMOLQUE"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 47.41337118245889,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(AIRCON) Air conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/air-conditioning-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 56.21014500877952,
+          "left": 61.653339333517955,
+          "width": 18.231330194775232,
+          "height": 6.381973168114975
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(AUDIO) Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/radio-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 68.45663406110825,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(BCM (VB7)) Body control module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 75.01109299052364,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 2
+        },
+        "description": "(IGN SW) Ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 81.7380376812394,
+          "left": 55.88393104403212,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(AIRBAG) Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 2.394587483053274,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(WASHER) Windshield washer",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 8.776560651168246,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(APO 1) Auxiliary power outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/cigarette-lighter-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 15.331019580583622,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "EMPTY"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 21.885478509998997,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Storage Control Module"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 40.686426491743106,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear Closure"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 47.41337118245889,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(BCM (VB2)) Body control module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 65.69686188030178,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(DRL) Daytime running lights",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/saturn/vue/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/saturn/vue/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 72.25132080971716,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(BCM (VB1)) Body control module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 78.97826550043293,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 2
+        },
+        "description": "(SPARE) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 85.70521019114872,
+          "left": 72.96137958091018,
+          "width": 15.923566878980893,
+          "height": 5.347058600312543
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ONSTAR",
+        "relatedEntities": [
+          "SISTEMA_ENTRETENIMIENTO"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.3379310344827586,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/c75df915_saturn-vue-2009.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8f43e848_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/499d8b10_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6098ae25_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/80b1747e_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/48129bc8_image.jpg"
+      }
+    ],
+    "boxName": "Instrument Panel Fuse Block",
+    "templateId": "630fb4fd4ae99d8e70be70ae",
+    "imageClusters": [
+      "62a87f60d73b04f22654cb15"
+    ],
+    "useAcronyms": true,
+    "boxScaleMultiplier": "0.6",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-saturn-vue-2008-genid-g2-1.webp"
+  }
+]
