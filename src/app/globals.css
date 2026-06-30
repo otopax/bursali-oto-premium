@@ -358,25 +358,42 @@ p {
 }
 
 @media (max-width: 768px) {
-  h1 { font-size: 2.8rem; }
-  h2 { font-size: 2.2rem; }
-  .hero { padding-top: 80px; text-align: center; }
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  .hero { padding-top: 160px; text-align: center; }
   .hero-content { margin: 0 auto; padding: 0 1rem; }
+  
+  .navbar { 
+    height: auto; 
+    padding: 0.8rem 0; 
+  }
+  .nav-container { 
+    flex-direction: column; 
+    gap: 0.5rem;
+  }
+  
+  .logo { font-size: 1.3rem; }
+
   .nav-links { 
     display: flex; 
     flex-wrap: wrap; 
-    gap: 1rem; 
+    gap: 0.8rem; 
     justify-content: center; 
-    margin-top: 1rem; 
+    margin-top: 0.5rem; 
     padding-bottom: 0.5rem;
   }
   
-  .navbar { height: auto; padding: 1rem 0; }
-  .nav-container { flex-direction: column; }
+  .nav-links a {
+    font-size: 0.85rem;
+  }
   
-  .glass-panel { padding: 2rem 1.5rem; }
+  main {
+    padding-top: 140px !important;
+  }
+
+  .glass-panel { padding: 1.5rem 1rem; }
   
-  .container { padding: 0 1.5rem; }
+  .container { padding: 0 1rem; }
   
   .grid {
     grid-template-columns: 1fr;
@@ -384,11 +401,13 @@ p {
   }
 
   .photo-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .btn {
     width: 100%;
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
   }
 }
 
