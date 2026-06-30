@@ -1,0 +1,2537 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 16.69545384449342,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-IG NO.1) Vehicle stability control system, shift lock control system, electric power steering, automatic headlight system, main body ECU, tire pressure warning system",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 21.503741729532756,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(GAUGE) Electric cooling fan(s), charging system, emergency flashers, front passenger's seat belt reminder light, back-up lights, multiport fuel injection system/sequential multiport fuel injection system, windshield wiper ECU, auto anti-glare inside rear view mirror",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "LUZ_BALIZA",
+          "TESTIGO_CINTURONES(warns=CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA)))",
+          "LUZ_RETROCESO",
+          "SISTEMA_DE_INYECCION",
+          "ANTI_ENCANDILAMIENTO(of=ESPEJO(ubicacion=INTERIOR))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/alternator-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 26.31202961457209,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(HTR-IG) Air conditioning system, wiper deicer, rear window defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_LIMPIAPARABRISAS",
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 31.12031749961142,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 40.736893269690086,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(WIPER RR) Rear window wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 45.54518115472942,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(WIPER FR) Windshield wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 50.353469039768754,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(WASHER FR) Windshield washer",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 55.16175692480809,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(OBD) On-board diagnosis system"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 59.97004480984742,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(FOG RR) Rear fog light",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/fog-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 64.77833269488676,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(PANEL NO.2) with Daytime Running Light or Automatic Light Control: Daytime running light system"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 64.77833269488676,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TAIL NO.1) Manual headlight leveling dial, front position lights, tail lights, license plate lights",
+        "relatedEntities": [
+          "LUCES_TRASERAS",
+          "LUZ_PATENTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/tail-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 69.58662057992609,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(DOOR NO.2) Power windows",
+        "relatedEntities": [
+          "PUERTA",
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 74.39490846496543,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(D/L NO.1) Power door lock system, main body ECU"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 41.87743900723477,
+          "left": 12.433363417952961,
+          "width": 5.840297829174213,
+          "height": 21.597143418532358
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "(DOOR NO.1) Power windows",
+        "relatedEntities": [
+          "PUERTA",
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 26.50137411446424,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 31.298016973654544,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(CIG) Power outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/cigarette-lighter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 36.09465983284485,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(ACC) Outside rear view mirrors, audio system, shift lock control system, main body ECU",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ESPEJO",
+          "ESPEJO_LATERAL",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/radio-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 40.891302692035154,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(PANEL NO.1) with Automatic Light Control: Meter, (PANEL) Meter, power management ECU"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 45.68794555122546,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TAIL) with Automatic Light Control: Front position lights, tail lights, license plate lights, rear fog light, front fog lights, manual headlight leveling dial, multiport fuel injection system/sequential multiport fuel injection system, instrument cluster, windshield wiper ECU (TAIL NO.2) Front position lights, tail lights, license plate lights, rear fog light, front fog lights, manual headlight leveling dial, multiport fuel injection system/sequential multiport fuel injection system, instrument cluster, windshield wiper ECU",
+        "relatedEntities": [
+          "LUCES_TRASERAS",
+          "LUZ_PATENTE",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)",
+          "SISTEMA_DE_INYECCION",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/fog-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/tail-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 50.48458841041577,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(FOG FR) Front fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/fog-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 55.28123126960607,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(AM1) \"ACC\" fuse, starting system",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO",
+          "FUSIBLE",
+          "GENERIC_FUSE_NAME",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/starter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 60.077874128796374,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(STOP) Vehicle stability control system, power management ECU, shift lock control system, stop lights, multiport fuel injection system/sequential multiport fuel injection system",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "CONTROL_DE_ESTABILIDAD",
+          "TESTIGO_STOP",
+          "SISTEMA_DE_INYECCION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/brake-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 64.87451698798668,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(D/L NO.2) Power door lock system"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 69.671159847177,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(SEAT-HTR) Seat heaters",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 41.56079043851074,
+          "left": 76.1594782895288,
+          "width": 5.840297829174213,
+          "height": 21.597143418532358
+        }
+      },
+      {
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 12.24276281268848,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 16.88098263748526,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 67.26546679425437,
+          "left": 23.1135362701057,
+          "width": 5.840297829174213,
+          "height": 21.597143418532358
+        }
+      },
+      {
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 67.26546679425437,
+          "left": 31.42587401261416,
+          "width": 5.840297829174213,
+          "height": 21.597143418532358
+        }
+      },
+      {
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 41.0924901229245,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 45.869856542465186,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 50.64722296200587,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 55.424589381546554,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 60.20195580108724,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 64.97932222062792,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 69.75668864016862,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 74.53405505970929,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.58838060676102,
+          "left": 79.31142147924999,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      },
+      {
+        "id": "U1",
+        "layout": {
+          "top": 10.616815394637513,
+          "left": 35.92860538465075,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(WASHER RR) Windshield washer",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 39.857111918924375,
+          "left": 21.704731255273934,
+          "width": 3.418093832555442,
+          "height": 21.473140454163858
+        }
+      }
+    ],
+    "boxName": "Passenger Compartment",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/d8a528b4_scion-iq-2012.jpg"
+    },
+    "boxAspectRatio": 0.41914387633769323,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/cb7588e5_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7f2b460a_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/dad35e84_image.jpg"
+      }
+    ],
+    "templateId": "61392476c09d3500045b2239",
+    "imageClusters": [
+      "663ba39668a08862a7b7e899"
+    ],
+    "templateRenameMap": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "5": "U1",
+      "6": "5",
+      "7": "6",
+      "8": "7",
+      "9": "8",
+      "10": "9",
+      "11": "10",
+      "12": "11",
+      "13": "12",
+      "14": "13",
+      "17": "15",
+      "18": "16",
+      "19": "17",
+      "20": "18",
+      "21": "19",
+      "22": "20",
+      "23": "21",
+      "24": "22",
+      "25": "23"
+    },
+    "backgroundColor": "#f7e6ba",
+    "boxScaleMultiplier": "0.9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-scion-iq-2012-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 2.433709672116077,
+          "left": 34.40848978972288,
+          "width": 11.49831947638421,
+          "height": 3.680894381178188
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(ABS NO.2) Anti-lock brake system",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 7.514037531631077,
+          "left": 34.40848978972288,
+          "width": 11.49831947638421,
+          "height": 3.680894381178188
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(HTR-B) \"HTR\", \"BLR\" fuses"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 12.852796109009164,
+          "left": 34.40848978972288,
+          "width": 11.49831947638421,
+          "height": 3.680894381178188
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(FUEL HTR) Fuel heater",
+        "relatedEntities": [
+          "CALENTADOR_COMBUSTIBLE"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 84.97541019760057,
+          "left": 35.241650204615375,
+          "width": 13.265665234961467,
+          "height": 6.854079192538719
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(BBC) Stop & Start system"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 17.814404247117345,
+          "left": 34.66020274449615,
+          "width": 11.246606521610943,
+          "height": 4.997861026309989
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-50",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(ABS NO.1) Anti-lock brake system",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 21.465642039684745,
+          "left": 34.66020274449615,
+          "width": 11.246606521610943,
+          "height": 4.997861026309989
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-50",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(RDI) Electric cooling fan"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 25.116879832252145,
+          "left": 34.66020274449615,
+          "width": 11.246606521610943,
+          "height": 4.997861026309989
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-50",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(EPS) Electric power steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 31.49093067826969,
+          "left": 35.25621531772141,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        }
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 34.67372494883418,
+          "left": 35.25621531772141,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        }
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.85651921939867,
+          "left": 35.25621531772141,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(DEFOGGER) Rear window defogger [Gasoline], Rear window defogger [Diesel]",
+        "relatedEntities": [
+          "DESEMPANADOR",
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 41.039313489963156,
+          "left": 35.25621531772141,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        }
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 44.22210776052765,
+          "left": 35.25621531772141,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(WIP-S) Power management ECU [Gasoline],  (DEFOGGER NO.2) Power Source Control ECU [Diesel]"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 47.404902031092135,
+          "left": 35.25621531772141,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(MIR HTR) Outside rear view mirror defoggers",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "DESEMPANADOR"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 2.433709672116077,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(EFI NO.1) Multiport fuel injection system/sequential multiport fuel injection system [Gasoline], (ECD NO.1) Multiport fuel injection system/sequential multiport fuel injection system [Diesel]",
+        "relatedEntities": [
+          "EFI",
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 5.6146735694988354,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(IG2) SRS airbag system, meter",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "TESTIGO_SRS",
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 8.795637466881594,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(IGN) Injection, igniter [Gasoline]",
+        "relatedEntities": [
+          "ARRANQUE",
+          "INYECCION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/starter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 8.795637466881594,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECD NO.2) Multiport fuel injection system/sequential multiport fuel injection system [Diesel]"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 11.97660136426435,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ALT-S) Charging system"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 15.157565261647111,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(EFI-MAIN) Multiport fuel injection system/sequential multiport fuel injection system, \"EFI NO.1\" fuse, fuel pump [Gasoline]",
+        "relatedEntities": [
+          "EFI",
+          "SISTEMA_DE_INYECCION",
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/fuel-pump-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 15.157565261647111,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(ECD-MAIN) Multiport fuel injection system/sequential multiport fuel injection system [Diesel] "
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 18.338529159029868,
+          "left": 59.20648020366108,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/horn-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 53.75127165381315,
+          "left": 22.857624763244043,
+          "width": 3.21035700480243,
+          "height": 5.077095698176819
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(DOME) Interior light, audio system",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/radio-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 53.75127165381315,
+          "left": 29.933513671788177,
+          "width": 3.21035700480243,
+          "height": 5.077095698176819
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-B NO.1) Main body ECU, power door lock system, smart entry 8t start system",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 55.78210993308387,
+          "left": 39.957689625559034,
+          "width": 3.720709201978308,
+          "height": 5.4578778755400785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(AM2 NO.1) Starting system",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/starter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.78210993308387,
+          "left": 50.20862314121355,
+          "width": 3.720709201978308,
+          "height": 5.4578778755400785
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 55.78210993308387,
+          "left": 58.06767216988203,
+          "width": 3.720709201978308,
+          "height": 5.4578778755400785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(H-LP HI) Toyota: without Daytime Running Light or Automatic Light Control: Right-hand headlight"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 55.78210993308387,
+          "left": 64.90162784698505,
+          "width": 3.720709201978308,
+          "height": 5.4578778755400785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(STRG LOCK) Steering lock system"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 55.78210993308387,
+          "left": 72.76067687565349,
+          "width": 3.720709201978308,
+          "height": 5.4578778755400785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H-LP RH) with Daytime Running Light or Automatic Light Control: Headlight (high beam) [Toyota]"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 55.78210993308387,
+          "left": 72.76067687565349,
+          "width": 3.720709201978308,
+          "height": 5.4578778755400785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(H-LP MAIN HI) \"H-LP RH HI\", \"H-LP LH HI\" fuses [Scion]",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)",
+          "FUSIBLE_LUZ_ALTA_IZQUIERDA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/headlight-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 63.01697130298584,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H-LP LO) with Daytime Running Light or Automatic Light Control: Headlight (low beam) [Toyota]"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 63.01697130298584,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H-LP LH) without Daytime Running Light or Automatic Light Control: Headlight (low beam)Left-hand headlight [Toyota]"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 63.01697130298584,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H-LP MAIN) (with Daytime Running Light): \"H-LP RH LO\", \"H-LP LH LO\" fuses  [Scion]",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)",
+          "FUSIBLE(protects=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/headlight-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 66.33891046670941,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(AM2 NO.2) Power management ECU"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 69.66084963043293,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(ECU-B NO.2) Meter, power windows, air conditioning system",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/air-conditioning-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 72.98278879415652,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ETCS) Electronic throttle control system"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 76.30472795788008,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TURN&HAZ) Turn signal lights, emergency flashers",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 79.62666712160365,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(IMMOBI) Smart entry & start system"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 82.94860628532714,
+          "left": 14.604589661354275,
+          "width": 11.550593948385693,
+          "height": 1.865259958240504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(D/C CUT) \"ECU-B NO.1\", \"DOME\" fuses",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "FUSIBLE_LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 94.74881941659093,
+          "left": 17.551521316115338,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        }
+      },
+      {
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 63.65160826525795,
+          "left": 42.31550602746102,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        }
+      },
+      {
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 63.524680872803515,
+          "left": 65.0165030414274,
+          "width": 11.55059394838569,
+          "height": 1.6154395403289905
+        }
+      },
+      {
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 66.69786568416404,
+          "left": 31.99799229867972,
+          "width": 3.21035700480243,
+          "height": 5.077095698176819
+        }
+      },
+      {
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 75.20200097861022,
+          "left": 31.99799229867972,
+          "width": 3.21035700480243,
+          "height": 5.077095698176819
+        }
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 20.877077008118274,
+          "left": 57.05978757357253,
+          "width": 12.677227677335205,
+          "height": 11.296537928443414
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 34.96601757055894,
+          "left": 54.11312699690459,
+          "width": 16.50823882852458,
+          "height": 5.711732660448917
+        }
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 69.36334092570688,
+          "left": 41.727475086974465,
+          "width": 14.74143522613361,
+          "height": 10.788828358625722
+        }
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 71.01339702761433,
+          "left": 62.660313108084196,
+          "width": 18.279379680405683,
+          "height": 7.615643547265222
+        }
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 50.578086842452656,
+          "left": 12.244604634707237,
+          "width": 10.613833362816203,
+          "height": 4.188603950995869
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 2.433709672116077,
+          "left": 15.486229454944398,
+          "width": 11.203490771861548,
+          "height": 6.346369622721019
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Electric cooling fan (FAN NO.2)"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 12.248574596747863,
+          "left": 15.486229454944398,
+          "width": 11.203490771861548,
+          "height": 6.346369622721019
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Starter (ST)",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/starter-relay",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 22.06343952137965,
+          "left": 15.486229454944398,
+          "width": 11.203490771861548,
+          "height": 6.346369622721019
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear window defogger (DEFOGGER)",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "DESEMPANADOR"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 31.878304446011438,
+          "left": 15.486229454944398,
+          "width": 11.203490771861548,
+          "height": 6.346369622721019
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Theft deterrent (S-HORN)"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 41.693169370643226,
+          "left": 15.486229454944398,
+          "width": 11.203490771861548,
+          "height": 6.346369622721019
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Electric cooling fan (FAN NO.1)"
+      },
+      {
+        "id": "Connector 5",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 41.185459800825534,
+          "left": 54.11312699690459,
+          "width": 16.50823882852458,
+          "height": 5.711732660448917
+        }
+      }
+    ],
+    "boxName": "Engine Compartment",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/0b53ba0b_scion-iq-2012.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/78e4d89d_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/e7c10c6d_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/814fde17_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "681b7a20be9678e079272967"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/81df424c_scion-iq-2012.jpg"
+    },
+    "templateId": "698a7848c1e7fe58ca176410",
+    "templateRenameMap": {
+      "3": "10",
+      "5": "12",
+      "6": "13",
+      "7": "20",
+      "8": "21",
+      "9": "27",
+      "10": "28",
+      "11": "29",
+      "12": "30",
+      "13": "31",
+      "14": "32",
+      "15": "33",
+      "16": "14",
+      "17": "15",
+      "18": "16",
+      "19": "17",
+      "20": "18",
+      "21": "19",
+      "22": "22",
+      "24": "24",
+      "25": "25",
+      "26": "26",
+      "27": "1",
+      "28": "2",
+      "29": "3",
+      "30": "5",
+      "31": "6",
+      "32": "7",
+      "33": "4",
+      "R1": "R1",
+      "R2": "R2",
+      "R3": "R3",
+      "R4": "R4",
+      "R5": "R5"
+    },
+    "boxAspectRatio": 2.3217054263565893,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-scion-iq-2012-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 16.45725501304711,
+          "left": 45.824317959360904,
+          "width": 16.926824601299685,
+          "height": 6.356693121104541
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(PTC NO.2) PTC heater"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 45.8569606981556,
+          "left": 45.824317959360904,
+          "width": 16.926824601299685,
+          "height": 6.356693121104541
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(PTC NO.1) 1KR-FE: PTC heater"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 45.8569606981556,
+          "left": 45.824317959360904,
+          "width": 16.926824601299685,
+          "height": 6.356693121104541
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "(PTC NO.1) Except 1KR-FE: PTC heater"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 32.19007048778085,
+          "left": 47.66419019863261,
+          "width": 15.08695236202798,
+          "height": 5.2442718249112374
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "30-20-40",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(PTC NO.3) PTC heater"
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "30-20-40"
+        },
+        "layout": {
+          "top": 35.68625170438834,
+          "left": 47.66419019863261,
+          "width": 15.08695236202798,
+          "height": 5.2442718249112374
+        }
+      },
+      {
+        "id": "5",
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "30-20-40"
+        },
+        "layout": {
+          "top": 39.81810223310629,
+          "left": 47.66419019863261,
+          "width": 15.08695236202798,
+          "height": 5.2442718249112374
+        }
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 24.403121414427783,
+          "left": 48.37203688575864,
+          "width": 12.879105674901929,
+          "height": 2.2248425923865867
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(PWR HTR) PTC heater"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 24.403121414427783,
+          "left": 48.37203688575864,
+          "width": 12.879105674901929,
+          "height": 2.2248425923865867
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(DEICER) Windshield wiper de-icer",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "DESEMPANADOR_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 24.403121414427783,
+          "left": 48.37203688575864,
+          "width": 12.879105674901929,
+          "height": 2.2248425923865867
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(PTC NO.2) PTC heater"
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 28.534971943145738,
+          "left": 48.37203688575864,
+          "width": 12.879105674901929,
+          "height": 2.2248425923865867
+        }
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 39.659184905078675,
+          "left": 67.90278483062137,
+          "width": 13.983029018464947,
+          "height": 2.2248425923865938
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H-LP LH LO) Left-hand headlight (low beam)",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/headlight-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 43.314283449713784,
+          "left": 67.90278483062137,
+          "width": 13.983029018464947,
+          "height": 2.2248425923865938
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H-LP RH LO) Right-hand headlight (low beam)",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/headlight-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 46.81046466632128,
+          "left": 67.90278483062137,
+          "width": 13.983029018464947,
+          "height": 2.2248425923865938
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H-LP LH HI) Scion: Left-hand headlight (high beam)"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 49.98881122687355,
+          "left": 67.90278483062137,
+          "width": 13.983029018464947,
+          "height": 2.2248425923865938
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H-LP RH HI) Scion: Right-hand headlight (high beam)"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 76.84583966354025,
+          "left": 9.762822069635487,
+          "width": 25.390236901949535,
+          "height": 10.170708993767263,
+          "rotation": 15
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Headlight (H-LP)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 80.89233569537458,
+          "left": 37.209263388750294,
+          "width": 25.390236901949535,
+          "height": 10.170708993767263,
+          "rotation": 15
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Except 1KR-FE: PTC heater (PTC NO.1)"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 5.3948132165184965,
+          "left": 16.299409768985658,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "1KR-FE: PTC heater (PTC NO.1)"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 3.4878052801871284,
+          "left": 29.91446433959628,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 22.868019348480377,
+          "left": 16.299409768985658,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 20.71673958723777,
+          "left": 30.866745413198522,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 36.66679127971838,
+          "left": 16.299409768985658,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "PTC heater (PTC NO.2)"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 34.515511518475776,
+          "left": 30.866745413198522,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "PTC heater (PTC NO.3)"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 50.46556321095639,
+          "left": 16.299409768985658,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 48.314283449713784,
+          "left": 30.866745413198522,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 64.43849641164671,
+          "left": 21.234719861052852,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805,
+          "rotation": 10
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 62.53148847531534,
+          "left": 35.64977443166348,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805,
+          "rotation": 10
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Dimmer (DIM)"
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 66.43085884486172,
+          "left": 57.079883572884704,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805,
+          "rotation": 10
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 64.52385090853035,
+          "left": 71.49493814349528,
+          "width": 12.511131227047596,
+          "height": 9.535039681656805,
+          "rotation": 10
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxName": "Relay Box",
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/605073d0_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2a6d08fd_image.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/623c8ef5_scion-iq-2012.jpg"
+    },
+    "imageClusters": [
+      "684b300dca084b77f38c800e"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/e6613c90_scion-iq-2012.jpg"
+    },
+    "templateId": "698a7f41c1e7fe58ca17647f",
+    "templateRenameMap": {
+      "1": "6",
+      "3": "8",
+      "4": "9",
+      "5": "10",
+      "6": "11",
+      "7": "1",
+      "8": "3",
+      "11": "2",
+      "R1": "R3",
+      "R3": "R7",
+      "R7": "R1",
+      "R4 ": "R8",
+      "R6 ": "R12",
+      "R7 ": "R1",
+      "R8 ": "R2"
+    },
+    "boxAspectRatio": 2.3153846153846156,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-scion-iq-2012-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "2",
+        "kind": {
+          "amp": 80,
+          "type": "fuse",
+          "format": "midi-ami"
+        },
+        "description": "(MAIN) \"EFI MAIN\", \"EFI NO.1\", \"HORN\", \"AM2 NO.1\", \"AM2 NO.2\", \"DOME\", \"ECU-B NO.2\", \"TURN&HAZ\", \"H-LP LO\", \"H-LP LH LO\", \"H-LP MAIN\", \"H-LP MAIN HI\", \"ECU-B NO.1\", \"D/C CUT\", \"ETCS\", \"H-LP HI\", \"IG2\", \"IGN\", \"ALT-S\" fuses",
+        "layout": {
+          "top": 29.96270789536244,
+          "left": 4.821403525176493,
+          "width": 14.850954173805668,
+          "height": 44.51571101612355
+        },
+        "relatedEntities": [
+          "EFI",
+          "BOCINA",
+          "GENERIC_FUSE_NAME",
+          "GENERIC_FUSE_NAME(numero=UNO)",
+          "GENERIC_FUSE_NAME(numero=DOS)",
+          "LUZ_DE_HABITACULO",
+          "LUZ_BAJA",
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)",
+          "LUCES_DELANTERAS",
+          "LUZ_ALTA",
+          "ARRANQUE",
+          "GENERIC_FUSE_NAME(protects=FUSIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/headlight-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/horn-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/starter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "kind": {
+          "amp": 120,
+          "type": "fuse",
+          "format": "midi-ami"
+        },
+        "description": "(ALT) Charging system, \"RDI\", \"ABS NO.1\", \"ABS NO.2\", \"HTR-B\", \"ACC\", \"CIG\", \"GAUGE\", \"ECU IG NO.1\", \"HTRIG\", \"WIPER WASHER\", \"AM1\", \"DOOR NO.1\", \"STOP\", \"DOOR NO.2\", \"OBD\", \"RR FOG\", \"FR FOG\", \"DEF\", \"TAIL\", \"TAIL NO.2\", \"EPS\", \"PTC NO.1\", \"PTC NO.2\", \"PTC NO.3\", \"DEICER\", \"D/L NO.1\", \"D/L NO.2\", \"PANEL\", \"PANEL NO.1\" fuses",
+        "layout": {
+          "top": 29.96270789536244,
+          "left": 30.673064494393763,
+          "width": 14.850954173805668,
+          "height": 44.51571101612355
+        },
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR",
+          "RADIADOR",
+          "SISTEMA_ABS",
+          "TOMA_12V",
+          "SENSOR",
+          "SAPITO",
+          "ACCESORIO_ELECTRICO",
+          "PUERTA",
+          "TESTIGO_STOP",
+          "LUZ_FRENO",
+          "SISTEMA_OBD",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)",
+          "DESEMPANADOR",
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA",
+          "DESEMPANADOR_TRASERO",
+          "TABLERO",
+          "PANEL_DE_PUERTA",
+          "FUSIBLE(numero=UNO,protects=TABLERO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/fog-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/alternator-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/cigarette-lighter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/brake-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 1.18,
+    "boxName": "Fusible Link Block [Gasoline]",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/1b29a7a4_scion-iq-2012.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bb724d20_image.jpg"
+      }
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-scion-iq-2012-3.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "amp": 80,
+          "type": "fuse",
+          "format": "midi-ami"
+        },
+        "description": "(GLOW DC/DC) Engine control",
+        "layout": {
+          "top": 33.677365837893596,
+          "left": 6.359298535794405,
+          "width": 14.977419911502984,
+          "height": 49.23072801194933
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "2",
+        "kind": {
+          "amp": 80,
+          "type": "fuse",
+          "format": "midi-ami"
+        },
+        "description": "(MAIN) \"EFI MAIN\", \"EFI NO.1\", \"HORN\", \"AM2 NO.1\", \"AM2 NO.2\", \"DOME\", \"ECU-B NO.2\", \"TURN&HAZ\", \"H-LP LO\", \"H-LP LH LO\", \"H-LP MAIN\", \"H-LP MAIN HI\", \"ECU-B NO.1\", \"D/C CUT\", \"ETCS\", \"H-LP HI\", \"IG2\", \"IGN\", \"ALT-S\" fuses",
+        "layout": {
+          "top": 33.677365837893596,
+          "left": 24.755477340140462,
+          "width": 14.977419911502984,
+          "height": 49.23072801194933
+        },
+        "relatedEntities": [
+          "EFI",
+          "BOCINA",
+          "GENERIC_FUSE_NAME",
+          "GENERIC_FUSE_NAME(numero=UNO)",
+          "GENERIC_FUSE_NAME(numero=DOS)",
+          "LUZ_DE_HABITACULO",
+          "LUZ_BAJA",
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)",
+          "LUCES_DELANTERAS",
+          "LUZ_ALTA",
+          "ARRANQUE",
+          "GENERIC_FUSE_NAME(protects=FUSIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/headlight-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/horn-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/starter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "kind": {
+          "amp": 120,
+          "type": "fuse",
+          "format": "midi-ami"
+        },
+        "description": "(ALT) Charging system, \"RDI\", \"ABS NO.1\", \"ABS NO.2\", \"HTR-B\", \"ACC\", \"CIG\", \"GAUGE\", \"ECU IG NO.1\", \"HTRIG\", \"WIPER WASHER\", \"AM1\", \"DOOR NO.1\", \"STOP\", \"DOOR NO.2\", \"OBD\", \"RR FOG\", \"FR FOG\", \"DEF\", \"TAIL\", \"TAIL NO.2\", \"EPS\", \"PTC NO.1\", \"PTC NO.2\", \"PTC NO.3\", \"DEICER\", \"D/L NO.1\", \"D/L NO.2\", \"PANEL\", \"PANEL NO.1\" fuses",
+        "layout": {
+          "top": 33.677365837893596,
+          "left": 43.15165614448652,
+          "width": 14.977419911502984,
+          "height": 49.23072801194933
+        },
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR",
+          "RADIADOR",
+          "SISTEMA_ABS",
+          "TOMA_12V",
+          "SENSOR",
+          "SAPITO",
+          "ACCESORIO_ELECTRICO",
+          "PUERTA",
+          "TESTIGO_STOP",
+          "LUZ_FRENO",
+          "SISTEMA_OBD",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)",
+          "DESEMPANADOR",
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA",
+          "DESEMPANADOR_TRASERO",
+          "TABLERO",
+          "PANEL_DE_PUERTA",
+          "FUSIBLE(numero=UNO,protects=TABLERO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/scion/iq/info/fusebox/2012/fog-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/alternator-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/cigarette-lighter-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/scion/iq/info/fusebox/2012/brake-light-fuse",
+            "urlWithAnchor": "/scion/iq/info/fusebox/2012/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.9722222222222222,
+    "boxName": "Fusible Link Block [Diesel]",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b00687ab_scion-iq-2012.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4e9ca3c8_image.jpg"
+      }
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-scion-iq-2012-4.webp"
+  }
+]

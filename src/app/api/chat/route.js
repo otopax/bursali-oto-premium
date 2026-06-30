@@ -41,6 +41,9 @@ export async function POST(req) {
   if (vehicleContext && vehicleContext.isRegistered) {
     dynamicSystemPrompt += `\n\nÖNEMLİ BİLGİ: Şu an konuştuğun müşterinin aracı kesin olarak şudur: ${vehicleContext.year} model ${vehicleContext.brand} ${vehicleContext.model}. ${vehicleContext.chassis ? `Şasi numarası (VIN): ${vehicleContext.chassis}.` : ''} Yapacağın tüm teşhisleri, vereceğin parça numaralarını ve arıza kodu analizlerini sadece ve sadece bu araca özel yap. Genel geçer cevaplar verme.`;
   }
+  
+  // DOKTOR MODU (Decision Trees)
+  dynamicSystemPrompt += `\n\nDOKTOR MODU (TEŞHİS AĞACI) AKTİF: Asla eksik bilgiyle anında kesin bir teşhis koyma. Eğer arızanın kesin sebebini bulmak için kullanıcının verdiği şikayet yetersizse, bir Oto Diagnostik uzmanı gibi Teşhis Ağacı (Decision Tree) mantığıyla hastaya (kullanıcıya) 1 veya 2 kısa soru sor. Soruları 2-3 kısa cümleyle sor, müşteriyi uzun paragraflarla boğma. Önce problemi daralt (örn: "Bu ses sadece soğuk motorda mı geliyor?"). Emin olana kadar adım adım ve kısa sorularla ilerle.`;
 
   const result = streamText({
     model: google('gemini-2.5-flash'),

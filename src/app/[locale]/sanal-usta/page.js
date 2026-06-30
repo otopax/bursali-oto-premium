@@ -4,6 +4,7 @@ import { useChat } from '@ai-sdk/react';
 import { useRef, useEffect, useState } from 'react';
 
 export default function SanalUstaPage() {
+  const [isListening, setIsListening] = useState(false);
   const [vehicleContext, setVehicleContext] = useState({
     isRegistered: false,
     brand: '',
@@ -210,13 +211,64 @@ export default function SanalUstaPage() {
 
             {/* Input Area */}
             <div className="p-3 md:p-6 border-t border-white/5 bg-black/40">
-              <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:gap-4">
+              <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:gap-4 relative">
                 <input
                   value={input}
                   onChange={handleInputChange}
-                  placeholder="Arıza kodunu veya şikayetinizi yazın..."
+                  placeholder={isListening ? "Dinleniyor..." : "Arıza kodunu veya şikayetinizi yazın..."}
                   className="flex-1 bg-white/5 border border-white/10 p-3 md:p-4 rounded-xl text-white text-base md:text-lg outline-none transition-colors focus:border-[var(--accent-gold)]"
+                  style={{ paddingRight: '50px' }}
                 />
+                
+                {/* Voice Record Button */}
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    if ('SpeechRecognition' in window || 'webkitSpeechRecognition' in window) {
+                      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+                      const recognition = new SpeechRecognition();
+                      recognition.lang = 'tr-TR';
+                      recognition.interimResults = false;
+                      recognition.maxAlternatives = 1;
+
+                      recognition.onstart = () => {
+                        setIsListening(true);
+                      };
+
+                      recognition.onresult = (event) => {
+                        const transcript = event.results[0][0].transcript;
+                        handleInputChange({ target: { value: input + " " + transcript } });
+                      };
+
+                      recognition.onerror = (event) => {
+                        console.error('Speech recognition error', event.error);
+                        setIsListening(false);
+                      };
+
+                      recognition.onend = () => {
+                        setIsListening(false);
+                      };
+
+                      recognition.start();
+                    } else {
+                      alert("Tarayıcınız ses tanıma özelliğini desteklemiyor. Lütfen Chrome veya Safari kullanın.");
+                    }
+                  }}
+                  className="absolute right-[110px] md:right-[130px] top-1/2 -translate-y-1/2 p-2 rounded-full transition-colors"
+                  style={{ 
+                    color: isListening ? '#ef4444' : 'var(--accent-gold)',
+                    animation: isListening ? 'pulseRed 1.5s infinite' : 'none'
+                  }}
+                  title="Sesle Yazdır"
+                >
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"></path>
+                    <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+                    <line x1="12" y1="19" x2="12" y2="22"></line>
+                  </svg>
+                </button>
+
                 <button 
                   type="submit" 
                   disabled={isLoading || !(input || '').trim()}
@@ -248,8 +300,13 @@ export default function SanalUstaPage() {
           }
           @keyframes pulseGoldText {
             0% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.5); }
-            50% { text-shadow: 0 0 15px rgba(212, 175, 55, 1), 0 0 30px rgba(212, 175, 55, 0.8), 0 0 45px rgba(212, 175, 55, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(212, 175, 55, 1), 0 0 30px rgba(212, 175, 55, 0.8), 0 0 40px rgba(212, 175, 55, 0.6); }
             100% { text-shadow: 0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.5); }
+          }
+          @keyframes pulseRed {
+            0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(239, 68, 68, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
           }
         `}} />
       </main>
