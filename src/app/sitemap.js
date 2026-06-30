@@ -72,12 +72,12 @@ export default async function sitemap() {
   let faultRoutes = [];
   try {
     const faultCodes = await prisma.faultCode.findMany({
-      select: { code: true, updatedAt: true }
+      select: { code: true, createdAt: true }
     });
     faultRoutes = faultCodes.map((fault) => ({
       // Using generic search URL for fault codes if specific vehicle is not joined
       url: `${baseUrl}/tr/ariza-cozumleri?q=${fault.code}`,
-      lastModified: fault.updatedAt.toISOString(),
+      lastModified: fault.createdAt.toISOString(),
       changeFrequency: 'monthly',
       priority: 0.6,
     }));

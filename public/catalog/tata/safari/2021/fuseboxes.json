@@ -1,0 +1,3897 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 68.74450097862572,
+          "left": 1.2639732787871858,
+          "width": 8.770094342300736,
+          "height": 14.07949657439705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 60
+        },
+        "description": "INTERIOR F/B BAT - II"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 84.27264613384445,
+          "left": 1.2639732787871858,
+          "width": 8.770094342300736,
+          "height": 14.07949657439705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 60
+        },
+        "description": "INTERIOR F/B BAT - I"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 73.93848326953972,
+          "left": 29.200969751485452,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "EMS RELAY",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ],
+        "extendedDescription": "Engine management system"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 84.26794112702324,
+          "left": 29.200969751485452,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 49.23775267669661,
+          "left": 4.933451601964649,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "UNDERBONNET F/R BOX"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 59.086582710883924,
+          "left": 5.023800792978298,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "GLOW PLUG",
+        "relatedEntities": [
+          "PRECALENTADOR"
+        ],
+        "extendedDescription": "Glow plug heater"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 49.23775267669661,
+          "left": 11.86727080809846,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "COOLING FAN FAST"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 59.086582710883924,
+          "left": 11.987736396116656,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "IGNITION LOAD"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 49.23775267669661,
+          "left": 18.80109001423227,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "BLOWER MOTOR",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 59.086582710883924,
+          "left": 18.951671999255016,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS ECU",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 49.23775267669661,
+          "left": 25.73490922036608,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "STARTER MOTOR SOL"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 59.086582710883924,
+          "left": 25.915607602393376,
+          "width": 5.538359574912237,
+          "height": 8.524400347352643
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "COOLING FAN LOW",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA)"
+        ],
+        "extendedDescription": "Radiator fan low speed"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 73.9412431228824,
+          "left": 11.685596101798676,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 73.9412431228824,
+          "left": 15.09952569615695,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 73.9412431228824,
+          "left": 18.786569658063875,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 73.9412431228824,
+          "left": 21.65427051732482,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "FUEL PUMP",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/fuel-pump-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 73.9412431228824,
+          "left": 25.13647870357027,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "BRAKE LAMP",
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 85.48490076781242,
+          "left": 11.685596101798676,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "EMS BATT",
+        "extendedDescription": "Engine management system"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 85.48490076781242,
+          "left": 15.09952569615695,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "COMPRESSOR",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "extendedDescription": "Air conditioning compressor",
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/air-conditioning-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 85.48490076781242,
+          "left": 18.376898106740907,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 85.48490076781242,
+          "left": 21.995663476760658,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "HORN HIGH/LOW TONE"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 85.48490076781242,
+          "left": 25.13647870357027,
+          "width": 2.0994222673737752,
+          "height": 6.921055532575183
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "ABS ECU",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 34.14935832384844,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 37.61330964478148,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "EMS IGN",
+        "extendedDescription": "Engine management system"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 41.07726096571452,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ABS IGN",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 44.541212286647564,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "REVERSE LAMP",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ],
+        "extendedDescription": "Backup lights"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 48.005163607580606,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "FRONT WIPER MOTOR",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 51.46911492851365,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 54.93306624944669,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 58.39701757037973,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 50.69149038170997,
+          "left": 61.84397080019837,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "EMS-CRANK INPUT"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 34.074438502011084,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 37.549092654635174,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HEAD LAMP HIGH BEAM RH",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ALTA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/headlight-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 41.02374680725927,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HEAD LAMP HIGH BEAM LH",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ALTA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/headlight-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 44.49840095988336,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HEAD LAMP LOW BEAM RH",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/headlight-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 47.97305511250745,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HEAD LAMP LOW BEAM LH",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/headlight-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 51.44770926513155,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "EMS ECU - II"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 54.92236341775564,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "EMS ECU - I"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 61.63701590978226,
+          "left": 58.39701757037973,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "EMS ECU - III"
+      },
+      {
+        "id": "40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.16121918883303,
+          "left": 39.46362653121801,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        }
+      },
+      {
+        "id": "41",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.16121918883303,
+          "left": 42.7782806838421,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        }
+      },
+      {
+        "id": "42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.16121918883303,
+          "left": 46.09293483646619,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        }
+      },
+      {
+        "id": "43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.16121918883303,
+          "left": 49.40758898909028,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        }
+      },
+      {
+        "id": "44",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.16121918883303,
+          "left": 52.72224314171437,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        }
+      },
+      {
+        "id": "45",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.16121918883303,
+          "left": 56.03689729433846,
+          "width": 1.8364590648013195,
+          "height": 6.524098211261932
+        }
+      },
+      {
+        "id": "47",
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami"
+        },
+        "layout": {
+          "top": 84.90423879869991,
+          "left": 38.33204329053134,
+          "width": 19.35773196208895,
+          "height": 7.9955573775734905
+        }
+      },
+      {
+        "id": "Battery 1",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        },
+        "layout": {
+          "top": 86.68195062541683,
+          "left": 38.30349107729589,
+          "width": 5.592233677936811,
+          "height": 13.229013115621584
+        },
+        "ignoreAndCrop": false
+      },
+      {
+        "id": "Battery 2",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        },
+        "layout": {
+          "top": 86.68195062541683,
+          "left": 52.520170440718296,
+          "width": 5.592233677936811,
+          "height": 13.229013115621584
+        },
+        "ignoreAndCrop": false
+      },
+      {
+        "id": "Diode 1",
+        "kind": {
+          "type": "diode",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 59.887570060198954,
+          "left": 64.52109711669024,
+          "width": 1.7780313933138214,
+          "height": 8.414464586812839
+        }
+      },
+      {
+        "id": "Diode 2",
+        "kind": {
+          "type": "diode",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 84.07560030156202,
+          "left": 64.52109711669024,
+          "width": 1.7780313933138214,
+          "height": 8.414464586812839
+        }
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 70.66780448864175,
+          "left": 61.983950511072905,
+          "width": 6.022405499316562,
+          "height": 7.559436066069466
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 16.831036736466924,
+          "left": 42.172540720396846,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 16.831036736466924,
+          "left": 56.44310283144386,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 25.557253093177184,
+          "left": 71.31617901882485,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 46.46801788357544,
+          "left": 71.07167896313985,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "STARTER INHIBIT (NO 40A)"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 62.85883776963964,
+          "left": 71.07167896313985,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "STARTER SOLENOID (NO 40A)"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 79.24965765570384,
+          "left": 71.07167896313985,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "EMS ECU (NO 40A)"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 48.80547439215828,
+          "left": 84.50377521419321,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "COOLING FAN HIGH MAXI (NO 70A)"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 65.11786930269108,
+          "left": 84.50377521419321,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "COOLING FAN LOW (NO 40A)"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 81.43026421322386,
+          "left": 84.50377521419321,
+          "width": 13.19288798982335,
+          "height": 15.979579391171225
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "IGNITION (NO 40A)"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 18.958078967977464,
+          "left": 4.229523661665439,
+          "width": 7.672898326273177,
+          "height": 15.214445253093082
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "AC CLUTCH (NO 20A)"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 18.958078967977464,
+          "left": 13.711923647927104,
+          "width": 7.672898326273177,
+          "height": 15.214445253093082
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HORN (NO 20A)"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 18.958078967977464,
+          "left": 23.19432363418877,
+          "width": 7.672898326273177,
+          "height": 15.214445253093082
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "DCU RELAY (NO 20A)"
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 18.958078967977464,
+          "left": 32.67672362045043,
+          "width": 7.672898326273177,
+          "height": 15.214445253093082
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "ATS RELAY (NO 20A)"
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 37.18710183294848,
+          "left": 5.362038291387105,
+          "width": 11.229440517458006,
+          "height": 10.195246819083
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FUEL PUMP (NO 20A)"
+      },
+      {
+        "id": "R15",
+        "layout": {
+          "top": 37.18710183294848,
+          "left": 17.40059109962925,
+          "width": 11.229440517458006,
+          "height": 10.195246819083
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HEAD LAMP LOW BEAM (NO 20A)"
+      },
+      {
+        "id": "R16",
+        "layout": {
+          "top": 37.18710183294848,
+          "left": 29.43914390787139,
+          "width": 11.229440517458006,
+          "height": 10.195246819083
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HEAD LAMP HIGH BEAM (NO 20A)"
+      },
+      {
+        "id": "R17",
+        "layout": {
+          "top": 37.18710183294848,
+          "left": 42.8776967161136,
+          "width": 11.229440517458006,
+          "height": 10.195246819083
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "WIPER ON/OFF (NO-NC 20A)"
+      },
+      {
+        "id": "R18",
+        "layout": {
+          "top": 37.18710183294848,
+          "left": 54.91624952435574,
+          "width": 11.229440517458006,
+          "height": 10.195246819083
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "WIPER SPEED SLOW / FAST (NO - NO 20A)"
+      },
+      {
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 64.4620 L 100.0000 64.4620 L 100.0000 17.0101 L 74.1576 0.0000 L 1.1021 0.0000 A 1.1021 1.1021 0 0 0 0.0000 1.1021 Z"
+        ],
+        "svgViewBoxH": 64.46199999999999,
+        "layout": {
+          "top": 15.349441895259083,
+          "left": 0.8105425394097745,
+          "width": 96.84441341162356,
+          "height": 84.38853711673204
+        },
+        "ignoreAndCrop": false
+      }
+    ],
+    "boxName": "Engine Compartment fuse box",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/69dea4f70d6bff1ae2ac0a3c/fragment-69dea4f70d6bff1ae2ac0a3c-e48a8bc386.jpg",
+      "source": "69dea5510d6bff1ae2ac0a5e"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/69dea4f70d6bff1ae2ac0a3c/fragment-69dea4f70d6bff1ae2ac0a3c-850d08d895.jpg",
+        "source": "69dea5590d6bff1ae2ac0a62"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/69dea4f70d6bff1ae2ac0a3c/fragment-69dea4f70d6bff1ae2ac0a3c-91d597c414.jpg",
+        "source": "69dea55f0d6bff1ae2ac0a66"
+      }
+    ],
+    "processed": false,
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/a0b9c89f_tata-safari-2019-tata harrier.jpg"
+    },
+    "imageClusters": [
+      "68e4fe92f214f8af63ef4229"
+    ],
+    "templateId": "69deabdeca8ff2372d67486f",
+    "boxAspectRatio": 0.7397622192866579,
+    "templateRenameMap": {
+      "1": "2",
+      "2": "18",
+      "3": "19",
+      "4": "20",
+      "5": "21",
+      "6": "22",
+      "7": "4",
+      "8": "3",
+      "9": "17",
+      "10": "16",
+      "11": "15",
+      "12": "14",
+      "13": "13",
+      "14": "1",
+      "15": "6",
+      "16": "8",
+      "17": "10",
+      "18": "12",
+      "19": "11",
+      "20": "9",
+      "21": "7",
+      "22": "5",
+      "23": "32",
+      "24": "33",
+      "25": "34",
+      "26": "35",
+      "27": "36",
+      "28": "37",
+      "29": "38",
+      "30": "39",
+      "39": "23",
+      "40": "24",
+      "41": "25",
+      "42": "26",
+      "43": "27",
+      "44": "28",
+      "45": "29",
+      "46": "30",
+      "47": "31",
+      "R18": "R10",
+      "R16": "R11",
+      "R14": "R12",
+      "R12": "R13",
+      "R17": "R14",
+      "R15": "R15",
+      "R13": "R16",
+      "R11": "R17",
+      "R6": "R4",
+      "R5": "R5",
+      "R4": "R6",
+      "R9 ": "R18",
+      "R3 ": "R7",
+      "R2 ": "R8",
+      "R1 ": "R9"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-tata-safari-2021-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 3.7714271763392855,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IGN SUPPLY"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 3.7714271763392855,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "BCM I"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 9.293876155931123,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "POWER SOCKET",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/cigarette-lighter-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 9.293876155931123,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "CLUSTER /OBD",
+        "relatedEntities": [
+          "TABLERO",
+          "SISTEMA_OBD"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 14.816325135522959,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RESTRAIN CONTROL MODULE"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 14.816325135522959,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "BCM II"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 20.338774115114795,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "MIRROR ADJUST MOTOR"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 20.338774115114795,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "INFOTAINMENT",
+        "relatedEntities": [
+          "INFOTAINMENT"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 25.86122309470663,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "IMMO/PEPS",
+        "extendedDescription": "Anti-theft system; Passive entry/ passive start (start button)"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 25.86122309470663,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "BCM III"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 31.383672074298467,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "USB CHARGER",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ],
+        "extendedDescription": "USB charger"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 31.383672074298467,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ACC BATT I LOW POWER"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RELAY COIL",
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA(of=RELAY)",
+          "RELAY(protects=RELAY)"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "STARTER FEEDBACK"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 42.428570033482146,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ACC BATT II HIGH POWER"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 42.428570033482146,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "HRW"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 54.30285574776786,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HVAC BATT",
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 54.30285574776786,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "REAR WIPER",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear wiper"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 59.82530472735969,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "AMPLIFIER",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 59.82530472735969,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 65.34775370695152,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PEPS",
+        "extendedDescription": "Passive entry/ passive start (start button)"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 65.34775370695152,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PARK ASSIST",
+        "relatedEntities": [
+          "ASISTENCIA_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.87020268654334,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 70.87020268654334,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "W/M MTR DR DOOR"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "KEY IN"
+      },
+      {
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ACC RELAY COIL",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=GENERIC_FUSE_NAME))",
+          "RELAY(protects=RELAY(protects=GENERIC_FUSE_NAME))",
+          "RELAY(protects=GENERIC_FUSE_NAME(protects=RELAY))",
+          "RELAY(protects=GENERIC_FUSE_NAME)",
+          "GENERIC_FUSE_NAME(protects=RELAY)",
+          "GENERIC_FUSE_NAME(protects=RELAY(protects=RELAY))",
+          "GENERIC_FUSE_NAME(protects=BOBINA(of=RELAY))"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "CDL"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TERRAIN RESPONSE SWITCH"
+      },
+      {
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 92.95999860491071,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TRANSIT"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 92.95999860491071,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TAILGATE RELEASE",
+        "relatedEntities": [
+          "CERRADURA(of=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 52.22857003348214,
+          "left": 25.762300972275725,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "BUZZER MODULE (ONLY MODEL XE)"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 52.22857003348214,
+          "left": 25.762300972275725,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "HEATED REAR WINDOW 40A (ONLY MODELS XT & XZ)",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 76.365712890625,
+          "left": 25.762300972275725,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 52.22857003348214,
+          "left": 74.0826296049658,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "BLOWER MOTOR 40A",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 76.365712890625,
+          "left": 74.0826296049658,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "ACCESSORY 40A",
+        "relatedEntities": [
+          "ACCESORIO"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 26.74956996218756,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "CDL-LOCK RELAY (NO NC 20A)"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 26.74956996218756,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "CDL-UNLOCK RELAY (NO NC 20A)"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 42.09700326844506,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "TAILGATE RELEASE RELAY (NO 20A)"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 42.09700326844506,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "IGNITION RELAY (NO 20A)"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 62.22575072291894,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "REAR WIPER (NO 20A)"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 62.22575072291894,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "REVERSE LAMP (NO AT 20A)"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 77.57318402917645,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 77.57318402917645,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 0.0000 L 23.1250 0.0000 L 23.1250 12.0313 L 100.0000 12.0313 L 100.0000 75.4688 L 0.0000 75.4688 Z"
+        ],
+        "svgViewBoxH": 75.46875061858444,
+        "layout": {
+          "top": 1.0285714285714285,
+          "left": 0.4715417548002473,
+          "width": 91.31521851424304,
+          "height": 98.13333565848214
+        },
+        "ignoreAndCrop": false,
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Passenger Compartment fuse box (Type I)",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/69dea4f70d6bff1ae2ac0a3c/fragment-69dea4f70d6bff1ae2ac0a3c-a0148ee9d7.jpg",
+      "source": "69dea5720d6bff1ae2ac0a6e"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/176706e7_image.jpg"
+      }
+    ],
+    "processed": false,
+    "imageClusters": [
+      "68fcfe30cdc3c6431d88daa8"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/b00f8bd3_tata-safari-2019-tata harrier.jpg"
+    },
+    "templateRenameMap": {
+      "IGN SUPPLY": "1",
+      "POWER SOCKET": "3",
+      "RESTRAIN CONTROL MODULE": "5",
+      "MIRROR ADJUST MOTOR": "7",
+      "IMMO/PEPS": "9",
+      "USB CHARGER": "11",
+      "RELAY COIL": "13",
+      "ACC BATT II HIGH POWER": "15",
+      "BCM I": "2",
+      "CLUSTER /OBD": "4",
+      "BCM II": "6",
+      "INFOTAINMENT": "8",
+      "BCM III": "10",
+      "ACC BATT I LOW POWER": "12",
+      "STARTER FEEDBACK": "14",
+      "HRW": "16",
+      "HVAC BATT": "17",
+      "AMPLIFIER": "19",
+      "PEPS": "21",
+      "KEY IN": "25",
+      "ACC RELAY COIL": "27",
+      "TERRAIN RESPONSE SWITCH": "29",
+      "TRANSIT": "31",
+      "REAR WIPER": "18",
+      "PARK ASSIST": "22",
+      "W/M MTR DR DOOR": "24",
+      "CDL": "28",
+      "TAILGATE RELEASE": "32",
+      "MODULE I A": "R5",
+      "MODULE I B": "R6",
+      "MODULE I C": "R7",
+      "MODULE I D": "R8",
+      "MODULE II A": "R9",
+      "MODULE II B": "R10",
+      "MODULE VII A": "R1",
+      "MODULE III A": "R1",
+      "MODULE IV A": "R3",
+      "MODULE IV B": "R4"
+    },
+    "boxAspectRatio": 0.6973684210526315,
+    "templateId": "69debe7eca8ff2372d676199",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-tata-safari-2021-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 3.7714271763392855,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IGN SUPPLY"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 3.7714271763392855,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "BCM I"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 9.293876155931123,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "POWER SOCKET",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/cigarette-lighter-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 9.293876155931123,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5",
+          "notUsed": false
+        },
+        "description": "IMMO (BAT) / TPMS (BAT)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 14.816325135522959,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RESTRAIN CONTROL MODULE"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 14.816325135522959,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "BCM II"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 20.338774115114795,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "MIRROR ADJUST MOTOR"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 20.338774115114795,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "INFOTAINMENT",
+        "relatedEntities": [
+          "INFOTAINMENT"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 25.86122309470663,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "IMMO IGN/PEPS IGN "
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 25.86122309470663,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "BCM III"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 31.383672074298467,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "USB CHARGER",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ],
+        "extendedDescription": "USB charger"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 31.383672074298467,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "USB CHARGER",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ],
+        "extendedDescription": "USB charger",
+        "unmappedId": "USB CHARGER"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 31.383672074298467,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "OBD / ACC. BAT LOW POWER",
+        "relatedEntities": [
+          "SISTEMA_OBD"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RELAY COIL",
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA(of=RELAY)",
+          "RELAY(protects=RELAY)"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "PEPS ACC",
+        "unmappedId": "RELAY COIL",
+        "extendedDescription": "Passive entry/ passive start (start button)"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "STARTER FEEDBACK"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 42.428570033482146,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ACC BATT II HIGH POWER"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 42.428570033482146,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "HRW"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 54.30285574776786,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HVAC BATT",
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 54.30285574776786,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "REAR WIPER",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear wiper"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 59.82530472735969,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "AMPLIFIER",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 59.82530472735969,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "REAR BLOWER MOTOR",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA))",
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 65.34775370695152,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PEPS",
+        "extendedDescription": "Passive entry/ passive start (start button)"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 65.34775370695152,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "PARK ASSIST",
+        "relatedEntities": [
+          "ASISTENCIA_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 70.87020268654334,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "INSTRUMENT CLUSTER",
+        "relatedEntities": [
+          "TABLERO"
+        ],
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 70.87020268654334,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "W/M MTR DR DOOR"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "KEY IN"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "POWER SEAT",
+        "unmappedId": "KEY IN",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ],
+        "extendedDescription": "Power seats"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "USB CHARGER 3RD ROW",
+        "relatedEntities": [
+          "CONECTOR_USB(of=3RA_FILA_ASIENTO)"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ACC RELAY COIL",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=GENERIC_FUSE_NAME))",
+          "RELAY(protects=RELAY(protects=GENERIC_FUSE_NAME))",
+          "RELAY(protects=GENERIC_FUSE_NAME(protects=RELAY))",
+          "RELAY(protects=GENERIC_FUSE_NAME)",
+          "GENERIC_FUSE_NAME(protects=RELAY)",
+          "GENERIC_FUSE_NAME(protects=RELAY(protects=RELAY))",
+          "GENERIC_FUSE_NAME(protects=BOBINA(of=RELAY))"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "SUNROOF",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "unmappedId": "ACC RELAY COIL",
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/sunroof-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "CDL"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TERRAIN RESPONSE SWITCH"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "SUNSHADE"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "BLOWER CONTROLLER"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 92.95999860491071,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TRANSIT"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 92.95999860491071,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TAILGATE RELEASE",
+        "relatedEntities": [
+          "CERRADURA(of=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 52.22857003348214,
+          "left": 25.762300972275725,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "HEATED REAR WINDOW 40A (ONLY MODELS XT & XZ)",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 76.365712890625,
+          "left": 25.762300972275725,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 52.22857003348214,
+          "left": 74.0826296049658,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "BLOWER MOTOR 40A",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 76.365712890625,
+          "left": 74.0826296049658,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "ACCESSORY 40A",
+        "relatedEntities": [
+          "ACCESORIO"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 26.74956996218756,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "CDL-LOCK RELAY (NO NC 20A)"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 26.74956996218756,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "CDL-UNLOCK RELAY (NO NC 20A)"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 42.09700326844506,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "TAILGATE RELEASE RELAY (NO 20A)"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 42.09700326844506,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "IGNITION RELAY (NO 20A)"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 62.22575072291894,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "REAR WIPER (NO 20A)"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 62.22575072291894,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "REVERSE LAMP (NO AT 20A)"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 77.57318402917645,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ],
+        "description": "POWER SEAT",
+        "extendedDescription": "Power seats"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 77.57318402917645,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 0.0000 L 23.1250 0.0000 L 23.1250 12.0313 L 100.0000 12.0313 L 100.0000 75.4688 L 0.0000 75.4688 Z"
+        ],
+        "svgViewBoxH": 75.46875061858444,
+        "layout": {
+          "top": 1.0285714285714285,
+          "left": 0.4715417548002473,
+          "width": 91.31521851424304,
+          "height": 98.13333565848214
+        },
+        "ignoreAndCrop": false,
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Passenger Compartment fuse box (Type 2)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/c93fe884_tata-safari-@tata-safari@g2-2019.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/176706e7_image.jpg"
+      }
+    ],
+    "processed": false,
+    "imageClusters": [
+      "68fcfe30cdc3c6431d88daa8"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/b00f8bd3_tata-safari-2019-tata harrier.jpg"
+    },
+    "templateRenameMap": {
+      "IGN SUPPLY": "1",
+      "POWER SOCKET": "3",
+      "RESTRAIN CONTROL MODULE": "5",
+      "MIRROR ADJUST MOTOR": "7",
+      "IMMO/PEPS": "9",
+      "USB CHARGER": "11",
+      "RELAY COIL": "13",
+      "ACC BATT II HIGH POWER": "15",
+      "BCM I": "2",
+      "CLUSTER /OBD": "4",
+      "BCM II": "6",
+      "INFOTAINMENT": "8",
+      "BCM III": "10",
+      "ACC BATT I LOW POWER": "12",
+      "STARTER FEEDBACK": "14",
+      "HRW": "16",
+      "HVAC BATT": "17",
+      "AMPLIFIER": "19",
+      "PEPS": "21",
+      "KEY IN": "25",
+      "ACC RELAY COIL": "27",
+      "TERRAIN RESPONSE SWITCH": "29",
+      "TRANSIT": "31",
+      "REAR WIPER": "18",
+      "PARK ASSIST": "22",
+      "W/M MTR DR DOOR": "24",
+      "CDL": "28",
+      "TAILGATE RELEASE": "32",
+      "MODULE I A": "R5",
+      "MODULE I B": "R6",
+      "MODULE I C": "R7",
+      "MODULE I D": "R8",
+      "MODULE II A": "R9",
+      "MODULE II B": "R10",
+      "MODULE III A": "R1",
+      "MODULE IV A": "R3",
+      "MODULE IV B": "R4"
+    },
+    "boxAspectRatio": 0.6973684210526315,
+    "templateId": "69debe7eca8ff2372d676199",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-tata-safari-2021-genid-g2-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 3.7714271763392855,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IGN SUPPLY"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 3.7714271763392855,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "BCM I"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 9.293876155931123,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "POWER SOCKET",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/cigarette-lighter-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 9.293876155931123,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5",
+          "notUsed": false
+        },
+        "description": "IMMO (BAT) / TPMS (BAT)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 14.816325135522959,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RESTRAIN CONTROL MODULE"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 14.816325135522959,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "BCM II"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 20.338774115114795,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "MIRROR ADJUST MOTOR"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 20.338774115114795,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "INFOTAINMENT",
+        "relatedEntities": [
+          "INFOTAINMENT"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 25.86122309470663,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "IMMO IGN/PEPS IGN "
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 25.86122309470663,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "BCM III"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 31.383672074298467,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "USB CHARGER",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ],
+        "extendedDescription": "USB charger"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 31.383672074298467,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "OBD ",
+        "relatedEntities": [
+          "SISTEMA_OBD"
+        ],
+        "extendedDescription": "On-board diagnostics"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RELAY COIL",
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA(of=RELAY)",
+          "RELAY(protects=RELAY)"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "PEPS ACC",
+        "unmappedId": "RELAY COIL",
+        "extendedDescription": "Passive entry/ passive start (start button)"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 36.90612105389031,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "TELEMATIC CONTROL UNIT"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 42.428570033482146,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ACC BATT II HIGH POWER"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 42.428570033482146,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "HRW"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 54.30285574776786,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HVAC BATT",
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 54.30285574776786,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "REAR WIPER",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear wiper"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 59.82530472735969,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "AMPLIFIER",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 59.82530472735969,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "WIRELESS CHARGER"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 65.34775370695152,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PEPS",
+        "extendedDescription": "Passive entry/ passive start (start button)"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 65.34775370695152,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "PARK ASSIST /  DUST SENSOR",
+        "relatedEntities": [
+          "ASISTENCIA_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 70.87020268654334,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "INSTRUMENT CLUSTER",
+        "relatedEntities": [
+          "TABLERO"
+        ],
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 70.87020268654334,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "W/M MTR DR DOOR"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "KEY IN"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "25"
+        },
+        "description": "POWER SEAT",
+        "unmappedId": "KEY IN",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ],
+        "extendedDescription": "Power seats"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 76.39265166613518,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "VENTILATED SEAT",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ACC RELAY COIL",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=GENERIC_FUSE_NAME))",
+          "RELAY(protects=RELAY(protects=GENERIC_FUSE_NAME))",
+          "RELAY(protects=GENERIC_FUSE_NAME(protects=RELAY))",
+          "RELAY(protects=GENERIC_FUSE_NAME)",
+          "GENERIC_FUSE_NAME(protects=RELAY)",
+          "GENERIC_FUSE_NAME(protects=RELAY(protects=RELAY))",
+          "GENERIC_FUSE_NAME(protects=BOBINA(of=RELAY))"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "SUNROOF",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "unmappedId": "ACC RELAY COIL",
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/tata/safari/info/fusebox/2021/sunroof-fuse",
+            "urlWithAnchor": "/tata/safari/info/fusebox/2021/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 81.91510064572702,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "CDL"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 2.2142516391170806,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TERRAIN RESPONSE SWITCH"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "SUNSHADE"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 87.43754962531887,
+          "left": 12.28796829224586,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "BLOWER CONTROLLER"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 92.95999860491071,
+          "left": 4.825339868297958,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TRANSIT"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 92.95999860491071,
+          "left": 14.899056521426772,
+          "width": 5.738193030263229,
+          "height": 3.1085714285714285
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TAILGATE RELEASE",
+        "relatedEntities": [
+          "CERRADURA(of=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 52.22857003348214,
+          "left": 25.762300972275725,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "HEATED REAR WINDOW 40A (ONLY MODELS XT & XZ)",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 76.365712890625,
+          "left": 25.762300972275725,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 52.22857003348214,
+          "left": 74.0826296049658,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "BLOWER MOTOR 40A",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 76.365712890625,
+          "left": 74.0826296049658,
+          "width": 16.759548289444666,
+          "height": 22.48857142857141
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "ACCESSORY 40A",
+        "relatedEntities": [
+          "ACCESORIO"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 26.74956996218756,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "CDL-LOCK RELAY (NO NC 20A)"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 26.74956996218756,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "CDL-UNLOCK RELAY (NO NC 20A)"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 42.09700326844506,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "TAILGATE RELEASE RELAY (NO 20A)"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 42.09700326844506,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "IGNITION RELAY (NO 20A)"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 62.22575072291894,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "REAR WIPER (NO 20A)"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 62.22575072291894,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "REVERSE LAMP (NO AT 20A)"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 20.47428431919643,
+          "left": 77.57318402917645,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ],
+        "description": "POWER SEAT",
+        "extendedDescription": "Power seats"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 35.22285574776785,
+          "left": 77.57318402917645,
+          "width": 12.368993865234078,
+          "height": 11.337142857142858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 0.0000 L 23.1250 0.0000 L 23.1250 12.0313 L 100.0000 12.0313 L 100.0000 75.4688 L 0.0000 75.4688 Z"
+        ],
+        "svgViewBoxH": 75.46875061858444,
+        "layout": {
+          "top": 1.0285714285714285,
+          "left": 0.4715417548002473,
+          "width": 91.31521851424304,
+          "height": 98.13333565848214
+        },
+        "ignoreAndCrop": false,
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Passenger Compartment fuse box (Type 3)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/415a5f07_tata-safari-@tata-safari@g2-2019.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/176706e7_image.jpg"
+      }
+    ],
+    "processed": false,
+    "imageClusters": [
+      "68fcfe30cdc3c6431d88daa8"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/b00f8bd3_tata-safari-2019-tata harrier.jpg"
+    },
+    "templateRenameMap": {
+      "IGN SUPPLY": "1",
+      "POWER SOCKET": "3",
+      "RESTRAIN CONTROL MODULE": "5",
+      "MIRROR ADJUST MOTOR": "7",
+      "IMMO/PEPS": "9",
+      "USB CHARGER": "11",
+      "RELAY COIL": "13",
+      "ACC BATT II HIGH POWER": "15",
+      "BCM I": "2",
+      "CLUSTER /OBD": "4",
+      "BCM II": "6",
+      "INFOTAINMENT": "8",
+      "BCM III": "10",
+      "ACC BATT I LOW POWER": "12",
+      "STARTER FEEDBACK": "14",
+      "HRW": "16",
+      "HVAC BATT": "17",
+      "AMPLIFIER": "19",
+      "PEPS": "21",
+      "KEY IN": "25",
+      "ACC RELAY COIL": "27",
+      "TERRAIN RESPONSE SWITCH": "29",
+      "TRANSIT": "31",
+      "REAR WIPER": "18",
+      "PARK ASSIST": "22",
+      "W/M MTR DR DOOR": "24",
+      "CDL": "28",
+      "TAILGATE RELEASE": "32",
+      "MODULE I A": "R5",
+      "MODULE I B": "R6",
+      "MODULE I C": "R7",
+      "MODULE I D": "R8",
+      "MODULE II A": "R9",
+      "MODULE II B": "R10",
+      "MODULE III A": "R1",
+      "MODULE IV A": "R3",
+      "MODULE IV B": "R4"
+    },
+    "boxAspectRatio": 0.6973684210526315,
+    "templateId": "69debe7eca8ff2372d676199",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-tata-safari-2021-genid-g2-3.webp"
+  }
+]

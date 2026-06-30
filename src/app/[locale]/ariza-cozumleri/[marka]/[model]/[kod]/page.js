@@ -1,4 +1,4 @@
-import { getFaultCodeData, getAvailableFaultBrands, getModelsForFaultBrand, getCodesForModel } from '@/lib/faultCodeUtils';
+import { PrismaClient } from '@prisma/client';
 import Link from 'next/link';
 
 export const revalidate = 86400; // Sayfayı 24 saatte bir sunucuda statik olarak yenile (ISR Cache)
@@ -15,24 +15,47 @@ export async function generateMetadata({ params }) {
 
 // SEO için statik yollar oluştur
 export async function generateStaticParams() {
-  const paramsList = [];
-  const brands = getAvailableFaultBrands();
-  for (const marka of brands) {
-    const models = getModelsForFaultBrand(marka);
-    for (const model of models) {
-      const codes = getCodesForModel(marka, model);
-      for (const kod of codes) {
-        paramsList.push({ marka, model, kod });
+  const prisma = new PrismaClient();
+  let dbCodes = [];
+  try {
+    dbCodes = await prisma.faultCode.findMany({
+      include: {
+        vehicle: {
+          include: {
+            manufacturer: true
+          }
+        }
       }
-    }
+    });
+  } catch (e) {
+    console.warn("Failed to fetch fault codes for static generation", e);
   }
-  return paramsList;
+
+  return dbCodes.map(c => ({
+    marka: c.vehicle?.manufacturer?.name?.toLowerCase() || 'genel',
+    model: c.vehicle?.model?.toLowerCase() || 'obd2',
+    kod: c.code
+  }));
 }
 
 export default async function FaultCodeDetailPage({ params }) {
   const { locale, marka, model, kod } = await params;
   
-  const data = getFaultCodeData(marka, model, kod);
+  const prisma = new PrismaClient();
+  let data = null;
+  try {
+    data = await prisma.faultCode.findUnique({
+      where: { code: kod },
+      include: {
+        vehicle: {
+          include: { manufacturer: true }
+        },
+        repairVideos: true
+      }
+    });
+  } catch (e) {
+    console.error("Failed to load fault code details", e);
+  }
 
   const brandName = marka.replace(/-/g, ' ').toUpperCase();
   const modelName = model.replace(/-/g, ' ').toUpperCase();
@@ -49,7 +72,19 @@ export default async function FaultCodeDetailPage({ params }) {
     );
   }
 
-  const ai = data.aiAnalysis;
+  // Map the database fields to the UI expected variables
+  let parsedAiAnalysis = null;
+  // If the description comes from the DB directly
+  const ai = {
+    severity: data.severity,
+    description: data.description,
+    // Database might not have symptoms, causes explicitly broken down if they aren't on schema, 
+    // but if we used JSON for something or string fields we adapt:
+    symptoms: [],
+    commonCauses: [],
+    stepByStepSolution: [],
+    estimatedCostInfo: null
+  };
 
   // Severity color mapping
   const severityColors = {
@@ -183,31 +218,15 @@ export default async function FaultCodeDetailPage({ params }) {
         
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '2rem' }}>
           
-          {/* Related Models */}
-          <div className="glass-panel" style={{ padding: '1.5rem' }}>
-            <h4 style={{ color: 'var(--text-light)', marginBottom: '1rem', fontSize: '1.1rem' }}>{brandName} Markasının Diğer Modelleri</h4>
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {getModelsForFaultBrand(marka).filter(m => m !== model).slice(0, 5).map(relatedModel => (
-                <li key={relatedModel}>
-                  <Link href={`/${locale}/ariza-cozumleri/${marka}/${relatedModel}`} style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    {brandName} {relatedModel.replace(/-/g, ' ').toUpperCase()} Arıza Çözümleri
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Related Fault Codes */}
           <div className="glass-panel" style={{ padding: '1.5rem' }}>
             <h4 style={{ color: 'var(--text-light)', marginBottom: '1rem', fontSize: '1.1rem' }}>Bu Araçtaki Diğer Arızalar</h4>
             <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              {getCodesForModel(marka, model).filter(c => c !== kod).slice(0, 5).map(relatedCode => (
-                <li key={relatedCode}>
-                  <Link href={`/${locale}/ariza-cozumleri/${marka}/${model}/${relatedCode}`} style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontSize: '0.9rem' }}>
-                    {brandName} {modelName} {relatedCode} Arızası
-                  </Link>
-                </li>
-              ))}
+              {/* Note: In a real environment, you might query the DB for related codes. Fallback string for now to avoid long DB calls in component */}
+              <li>
+                <Link href={`/${locale}/ariza-cozumleri`} style={{ color: 'var(--accent-blue)', textDecoration: 'none', fontSize: '0.9rem' }}>
+                  Tüm {brandName} {modelName} Arıza Çözümlerini Gör
+                </Link>
+              </li>
             </ul>
           </div>
 
