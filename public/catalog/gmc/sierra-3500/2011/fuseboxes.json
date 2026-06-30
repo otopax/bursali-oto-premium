@@ -1,0 +1,2895 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "Connector 1",
+        "layout": {
+          "top": 5.251565461499669,
+          "left": 10.513030164975309,
+          "width": 26.847572706322733,
+          "height": 28.59121705340987
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "description": "Driver Door Harness Connection"
+      },
+      {
+        "id": "Connector 2",
+        "layout": {
+          "top": 68.79752765341334,
+          "left": 12.055086913273962,
+          "width": 26.978751623971878,
+          "height": 30.291217053409895
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "description": "Harness Connector"
+      },
+      {
+        "id": "Connector 3",
+        "layout": {
+          "top": 40.83293407546278,
+          "left": 74.42925332360544,
+          "width": 15.697364706144487,
+          "height": 42.39226095971034
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "description": "Harness Connector"
+      },
+      {
+        "id": "F1",
+        "layout": {
+          "top": 42.74245442853408,
+          "left": 18.86175443112658,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver Door Module",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 49.988295473469705,
+          "left": 18.86175443112658,
+          "width": 6.090765377445484,
+          "height": 3.6713674203955238
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Instrument Panel Back Lighting",
+        "relatedEntities": [
+          "BACKLIGHT(of=TABLERO)"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 56.996838328383355,
+          "left": 18.86175443112658,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Climate Controls"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 40.385965026845376,
+          "left": 26.50555417433428,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Dome Lamps, Driver Side Turn Signal",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LAMPARA(of=LUZ_DE_HABITACULO)",
+          "LUZ_DIRECCIONAL(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 48.691401677614365,
+          "left": 26.50555417433428,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger Side Turn Signal, Stoplamp",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_DERECHO)",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/brake-light-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 56.996838328383355,
+          "left": 26.50555417433428,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Mirror",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 48.69140167761433,
+          "left": 36.02791123813931,
+          "width": 6.212029044899866,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger Door Module, Driver Unlock",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 51.75309418393457,
+          "left": 44.78647729958124,
+          "width": 6.090765377445484,
+          "height": 3.6713674203955238
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Door Lock 2 (Unlock Feature)"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 59.558960333548455,
+          "left": 44.78647729958124,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Body Control Module (BCM)",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 67.48347557817333,
+          "left": 44.78647729958124,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Door Lock 1 (Unlock Feature)"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 75.4079908227982,
+          "left": 44.78647729958124,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Door Lock 1 (Lock Feature)"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 83.45115516243405,
+          "left": 44.78647729958124,
+          "width": 6.090765377445484,
+          "height": 3.6713674203955238
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cooled Seats",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 51.75309418393457,
+          "left": 54.487570695932035,
+          "width": 6.090765377445484,
+          "height": 3.6713674203955238
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Door Lock 2 (Lock Feature)"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 59.5886226073012,
+          "left": 54.487570695932035,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Accessory Power Outlets",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/cigarette-lighter-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 67.54280012567881,
+          "left": 54.487570695932035,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Seat Entertainment",
+        "relatedEntities": [
+          "SISTEMA_ENTRETENIMIENTO(of=ASIENTO(ubicacion=PARTE_TRASERA))",
+          "SISTEMA_ENTRETENIMIENTO(of=ASIENTO,ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 75.49697764405643,
+          "left": 54.487570695932035,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver Information Center (DIC)"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 83.45115516243405,
+          "left": 54.487570695932035,
+          "width": 6.212029044899866,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver Seat Module, Remote Keyless Entry System",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_IZQUIERDO)",
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "id": "F18a",
+        "layout": {
+          "top": 17.605338784735885,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.6713674203955238
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Seats",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F18b",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 17.605338784735885,
+          "left": 66.56927665536331,
+          "width": 6.090765377445484,
+          "height": 3.6713674203955238
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F19a",
+        "layout": {
+          "top": 25.46528741003878,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Accessory Power Outlet",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F19b",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.46528741003878,
+          "left": 66.56927665536331,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F20a",
+        "layout": {
+          "top": 33.44388513035266,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Steering Wheel Controls Backlight",
+        "relatedEntities": [
+          "BACKLIGHT(of=COMANDOS_VOLANTE)"
+        ]
+      },
+      {
+        "id": "F20b",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 33.44388513035266,
+          "left": 66.56927665536331,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 41.42248285066655,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver Side Turn Signal, Stoplamp",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_IZQUIERDO)",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/brake-light-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 49.51972966599142,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.6713674203955238
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Stoplamps, Center-High Mounted Stoplamp",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TERCERA_LUZ_DE_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/brake-light-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 57.37967829129432,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lamps",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 65.3582760116082,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "UItrasonic Rear Parking Assist, Power Liftgate",
+        "relatedEntities": [
+          "PORTON_TRASERO"
+        ]
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 73.33687373192208,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 81.31547145223597,
+          "left": 63.46108208755629,
+          "width": 6.090765377445484,
+          "height": 3.9086656104174993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver Power Door Lock (Unlock Feature)"
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 13.749518729880164,
+          "left": 43.9684154040813,
+          "width": 14.449868554739139,
+          "height": 7.298271178296071
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": ""
+        },
+        "description": "Driver Side Power Window Circuit Breaker",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LADO_IZQUIERDO)"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5441595441595442,
+    "boxName": "Instrument Panel Fuse Block",
+    "boxDescription": "The instrument panel fuse block access door is located on the driver side edge of the instrument panel.\nPull off the cover to access the fuse block.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/ce6ceedb_gmc-sierra-2009.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/173286af_gmc-sierra-2008.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/8ab50397_gmc-sierra-2008.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/7da57af7_gmc-sierra-2008.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/d325211e_gmc-sierra-2008.jpg"
+      }
+    ],
+    "templateId": "61674463271ef50004848a66",
+    "templateRenameMap": {
+      "1": "F18a",
+      "2": "F19a",
+      "3": "F20a",
+      "4": "F1",
+      "5": "F4",
+      "6": "F21",
+      "7": "F2",
+      "8": "F5",
+      "9": "F7",
+      "10": "F8",
+      "11": "F13",
+      "12": "F22",
+      "13": "F3",
+      "14": "F6",
+      "15": "F9",
+      "16": "F14",
+      "17": "F23",
+      "18": "F10",
+      "19": "F15",
+      "20": "F24",
+      "21": "F11",
+      "22": "F16",
+      "23": "F25",
+      "24": "F12",
+      "25": "F17",
+      "26": "F26",
+      "LT DR_CB": "F27",
+      "LT DR": "Connector 1",
+      "BODY1": "Connector 2",
+      "BODY2": "Connector 3"
+    },
+    "imageClusters": [
+      "61e86abcfab64b0004ba0d02"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-gmc-sierra-3500-2011-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "BODY 2",
+        "layout": {
+          "top": 11.811023622047244,
+          "left": 26.962025316455694,
+          "width": 11.39240506329114,
+          "height": 12.007874015748031
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": false
+        },
+        "description": "Body Harness Connector 2"
+      },
+      {
+        "id": "BODY 1",
+        "layout": {
+          "top": 26.968503937007878,
+          "left": 26.962025316455694,
+          "width": 11.39240506329114,
+          "height": 12.007874015748031
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": false
+        },
+        "description": "Body Harness Connector 1"
+      },
+      {
+        "id": "BODY 3",
+        "layout": {
+          "top": 42.125984251968504,
+          "left": 26.962025316455694,
+          "width": 11.39240506329114,
+          "height": 12.007874015748031
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": false
+        },
+        "description": "Body Harness Connector 3"
+      },
+      {
+        "id": "HEADLINER 3",
+        "layout": {
+          "top": 12.007874015748031,
+          "left": 57.21518987341773,
+          "width": 11.139240506329113,
+          "height": 11.811023622047244
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": false
+        },
+        "description": "Headliner Harness Connector 3"
+      },
+      {
+        "id": "HEADLINER 2",
+        "layout": {
+          "top": 27.36220472440945,
+          "left": 57.21518987341773,
+          "width": 11.139240506329113,
+          "height": 11.811023622047244
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": false
+        },
+        "description": "Headliner Harness Connector 2"
+      },
+      {
+        "id": "HEADLINER 1",
+        "layout": {
+          "top": 42.51968503937008,
+          "left": 57.21518987341773,
+          "width": 11.139240506329113,
+          "height": 11.614173228346457
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": false
+        },
+        "description": "Headliner Harness Connector 1"
+      },
+      {
+        "id": "SEO/UPFITTER",
+        "layout": {
+          "top": 82.28346456692913,
+          "left": 41.265822784810126,
+          "width": 11.89873417721519,
+          "height": 11.811023622047244
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": false
+        },
+        "description": "Special Equipment Option Upfitter Harness Connector"
+      },
+      {
+        "id": "CB1",
+        "layout": {
+          "top": 5.511811023622047,
+          "left": 42.278481012658226,
+          "width": 10.886075949367088,
+          "height": 5.905511811023622
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false
+        },
+        "description": "Passenger Side Power Window Circuit Breaker",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "CB2",
+        "layout": {
+          "top": 11.811023622047244,
+          "left": 42.278481012658226,
+          "width": 10.886075949367088,
+          "height": 6.299212598425196
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false
+        },
+        "description": "Passenger Seat Circuit Breaker",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "CB3",
+        "layout": {
+          "top": 18.30708661417323,
+          "left": 42.278481012658226,
+          "width": 10.886075949367088,
+          "height": 6.692913385826772
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false
+        },
+        "description": "Driver Seat Circuit Breaker",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "CB4",
+        "layout": {
+          "top": 25.196850393700785,
+          "left": 42.278481012658226,
+          "width": 10.886075949367088,
+          "height": 6.299212598425196
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false
+        },
+        "description": "Rear Sliding Window"
+      }
+    ],
+    "boxAspectRatio": 0.6430379746835443,
+    "processed": false,
+    "boxName": "Center Instrument Panel Fuse Block",
+    "boxDescription": "The center instrument panel fuse block is located underneath the instrument panel, to the left of the steering column.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/510bc693_gmc-sierra-2008.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/12cb318f_gmc-sierra-2008.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/bc5f050c_gmc-sierra-2008.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/2e1af1a4_gmc-sierra-2008.jpg"
+      }
+    ],
+    "templateId": "61672d4d271ef50004848a62",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-gmc-sierra-3500-2011-genid-g2-1.webp"
+  },
+  {
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/4b7457d0_2008-gmc-sierra.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/4a36748c_2008-gmc-sierra.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/29d7e6d6_2008-gmc-sierra.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/a26c04e4_2008-gmc-sierra.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/c59398b7_2008-gmc-sierra.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/21de3e4e_2008-gmc-sierra.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/4d267b33_2008-gmc-sierra.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/7bd5177c_2008-gmc-sierra.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/553c4942_gmc-sierra-2009.png"
+    },
+    "boxDescription": "If the vehicle has a diesel engine, see the Duramax Diesel supplement for more information.\nIf the vehicle is a hybrid, see the hybrid supplement for more information.\nThe Engine Compartment Fuse Block is located in the engine compartment, on the driver side of the vehicle. Lift the cover to access the fuse block.\nTo remove fuses, hold the end of the fuse between your thumb and index finger and pull straight out.",
+    "boxName": "Engine Compartment Fuse Block",
+    "processed": false,
+    "boxAspectRatio": 0.5975460122699386,
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 20.70639342873128,
+          "left": 3.9956532858515486,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Cooling Fan 2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/cooling-fan-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 7.434748683319301,
+          "left": 33.15566697658538,
+          "width": 4.531033845963537,
+          "height": 6.889496006693308
+        },
+        "description": "Cooling Fan 1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/cooling-fan-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 16.77508966910234,
+          "left": 49.90468344934335,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 26.622311313417985,
+          "left": 45.025688571008004,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Starter",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/starter-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 54.29718034109336,
+          "left": 1.842931966650652,
+          "width": 5.320954743909539,
+          "height": 7.418157382472398
+        },
+        "description": "Stud 2 (Trailer Brakes)",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 62.66724665673462,
+          "left": 1.842931966650652,
+          "width": 5.320954743909539,
+          "height": 7.418157382472398
+        },
+        "description": "Stud 1 (Trailer Connector Battery Power) (Optional - 40A Fuse Required)",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 55.07299921241739,
+          "left": 15.853668239190029,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Left Bussed Electrical Center 1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "CENTRAL_ELECTRICA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 55.07299921241739,
+          "left": 21.555017193991436,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 66.32200692260383,
+          "left": 15.853668239190029,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Mid-Bussed Electrical Center 1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "CENTRAL_ELECTRICA(ubicacion=LADO_MEDIO)"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 66.32200692260383,
+          "left": 21.555017193991436,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Climate Control Blower",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 12.420511644627368,
+          "left": 74.6429877895194,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 12.57674786282441,
+          "left": 80.25087200735683,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Heavy Duty Antilock Brake System",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 23.031168932872713,
+          "left": 74.9278691364384,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Antilock Brake System 1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 23.031168932872713,
+          "left": 80.57690846762321,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 55.07299921241739,
+          "left": 52.610600324262705,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Heated Windshield Washer System",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 55.07299921241739,
+          "left": 58.209687860974164,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Transfer Case",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "CAJA_DE_TRANSFERENCIA"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 66.32200692260383,
+          "left": 52.610600324262705,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 66.32200692260383,
+          "left": 58.21848454210014,
+          "width": 4.080469578482654,
+          "height": 8.675298908048605
+        },
+        "description": "Left Bussed Electrical Center 2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "CENTRAL_ELECTRICA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 68.0534193068014,
+          "left": 10.511374942654715,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Airbag System (Battery)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "AIRBAG",
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 72.63182126132422,
+          "left": 10.511374942654715,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Heated Mirrors",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 72.63182126132422,
+          "left": 4.8080819132346635,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Rear Defogger",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 40.59147785209243,
+          "left": 14.201741020514746,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Passenger Side High-Beam Headlamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 45.07785986596691,
+          "left": 14.201741020514746,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Driver Side High-Beam Headlamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 49.283843003974226,
+          "left": 14.201741020514746,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Daytime Running Lights 2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 40.59147785209243,
+          "left": 20.408265787824785,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Daytime Running Lamps (DRL)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 20.48680455730885,
+          "left": 24.842390979861815,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Front Washer",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "SAPITO(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 24.762887414282943,
+          "left": 24.842390979861815,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Driver Side Low-Beam Headlamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 29.038970271257035,
+          "left": 24.842390979861815,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Passenger Side Low-Beam Headlamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F29",
+        "layout": {
+          "top": 33.31505312823113,
+          "left": 24.842390979861815,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 37.59113598520523,
+          "left": 24.842390979861815,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Horn",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/horn-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 60.0138718473022,
+          "left": 28.124485768804856,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "SEO B2 Upfitter Usage (Battery)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 64.21985498530952,
+          "left": 28.124485768804856,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Amplifier",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ]
+      },
+      {
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 68.43165507941255,
+          "left": 28.124485768804856,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F34",
+        "layout": {
+          "top": 72.63182126132422,
+          "left": 28.124485768804856,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "SEO B1 Upfitter Usage (Battery)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 55.52748983342774,
+          "left": 33.32454706033487,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Sunroof",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/sunroof-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F36",
+        "layout": {
+          "top": 68.70623699918399,
+          "left": 33.8277787982249,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Instrument Panel Cluster",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "F37",
+        "layout": {
+          "top": 72.63182126132422,
+          "left": 33.8277787982249,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Cigarette Lighter, Auxiliary Power Outlet",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/cigarette-lighter-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 60.0138718473022,
+          "left": 40.74076704131495,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Electric Adjustable Pedals",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "REGULACION_ELECTRICA_PEDALES"
+        ]
+      },
+      {
+        "id": "F39",
+        "layout": {
+          "top": 64.35600042893925,
+          "left": 40.74076704131495,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Audio System",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/radio-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F40",
+        "layout": {
+          "top": 68.69812901057631,
+          "left": 40.74076704131495,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Power Take-Off",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F41",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 73.04025759221335,
+          "left": 40.74076704131495,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.465688814382947,
+          "left": 38.86009617712497,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 20.962755458474305,
+          "left": 38.86009617712497,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F44",
+        "layout": {
+          "top": 25.45982210256566,
+          "left": 38.86009617712497,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Engine Control Module (Battery)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ECU",
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "F45",
+        "layout": {
+          "top": 29.956888746657018,
+          "left": 38.86009617712497,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Air Conditioning Compressor",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/air-conditioning-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F46",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 12.174920957637383,
+          "left": 50.95428793907339,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F47",
+        "layout": {
+          "top": 55.52748983342774,
+          "left": 46.228375685519104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Key Ignition System, Theft Deterrent System",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "F48",
+        "layout": {
+          "top": 59.9204055553465,
+          "left": 46.228375685519104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Climate Controls (Battery)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR",
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "F49",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.31332127726526,
+          "left": 46.228375685519104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F50",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 68.70623699918401,
+          "left": 46.228375685519104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F51",
+        "layout": {
+          "top": 16.832444963760537,
+          "left": 56.80869482853509,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Engine Controls",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F52",
+        "layout": {
+          "top": 21.10852782073464,
+          "left": 56.80869482853509,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Oxygen Sensor",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "F53",
+        "layout": {
+          "top": 25.384610677708743,
+          "left": 56.80869482853509,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Fuel Injectors, Ignition Coils (Right Side)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F54",
+        "layout": {
+          "top": 29.66069353468285,
+          "left": 56.80869482853509,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Oxygen Sensors",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "F55",
+        "layout": {
+          "top": 33.93677639165695,
+          "left": 56.80869482853509,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Fuel Injectors, Ignition Coils (Left Side)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F56",
+        "layout": {
+          "top": 16.832444963760537,
+          "left": 62.344243945325104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Engine Control Module, Throttle Control",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ECU",
+          "MOTOR"
+        ]
+      },
+      {
+        "id": "F57",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.10852782073464,
+          "left": 62.344243945325104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F58",
+        "layout": {
+          "top": 25.384610677708743,
+          "left": 62.344243945325104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Transmission Control Module (Battery)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION",
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "F59",
+        "layout": {
+          "top": 29.66069353468285,
+          "left": 62.344243945325104,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Transmission Controls (Ignition)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F60",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.780040002607805,
+          "left": 62.442052243804184,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F61",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 45.54755984343621,
+          "left": 62.442052243804184,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F62",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.71826883720347,
+          "left": 64.64205224380417,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F63",
+        "layout": {
+          "top": 60.294270723169404,
+          "left": 64.64205224380417,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Airbag System (Ignition)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "AIRBAG",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/starter-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F64",
+        "layout": {
+          "top": 64.50025386117673,
+          "left": 64.64205224380417,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Miscellaneous (Ignition), Cruise Control",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "CRUISE_CONTROL"
+        ]
+      },
+      {
+        "id": "F65",
+        "layout": {
+          "top": 68.70623699918399,
+          "left": 64.64205224380417,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Auxiliary Climate Control (Ignition)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F66",
+        "layout": {
+          "top": 73.19261901305849,
+          "left": 64.64205224380417,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "SEO Upfitter Usage",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F67",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 7.40740111680898,
+          "left": 68.71851262526523,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F68",
+        "layout": {
+          "top": 12.346062949886052,
+          "left": 68.71851262526523,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Electronic Suspension Control, Automatic Level Control Exhaust",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F69",
+        "layout": {
+          "top": 21.038428101767835,
+          "left": 68.71851262526523,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Antilock Brakes System 2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "F70",
+        "layout": {
+          "top": 28.391984218742042,
+          "left": 68.71851262526523,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Fuel Pump",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/fuel-pump-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F71",
+        "layout": {
+          "top": 33.3011070795465,
+          "left": 68.71851262526523,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Trailer Park Lamps",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(of=REMOLQUE)"
+        ]
+      },
+      {
+        "id": "F72",
+        "layout": {
+          "top": 7.5792820601444495,
+          "left": 74.25406174205524,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Right Trailer Stop/Turn Lamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F73",
+        "layout": {
+          "top": 33.3011070795465,
+          "left": 76.29883764882923,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Driver Side Park Lamps",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F74",
+        "layout": {
+          "top": 33.3011070795465,
+          "left": 81.41019099909524,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Passenger Side Park Lamps",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "F75",
+        "layout": {
+          "top": 64.50025386117673,
+          "left": 70.51308918585416,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F76",
+        "layout": {
+          "top": 68.42583812331692,
+          "left": 70.51308918585416,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Center High-Mounted Stoplamp (CHMSL)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F77",
+        "layout": {
+          "top": 73.19261901305849,
+          "left": 70.51308918585416,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Climate Controls (Ignition)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/starter-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F78",
+        "layout": {
+          "top": 77.11820327519864,
+          "left": 70.51308918585416,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Engine Control Module, Secondary Fuel Pump (Ignition)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ECU",
+          "MOTOR"
+        ]
+      },
+      {
+        "id": "F79",
+        "layout": {
+          "top": 55.52748983342774,
+          "left": 75.26052521783527,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Windshield Wiper",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "F80",
+        "layout": {
+          "top": 7.737460437085263,
+          "left": 87.28748044885432,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Left Trailer Stop/Turn Lamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F81",
+        "layout": {
+          "top": 12.223842450959744,
+          "left": 87.28748044885432,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Trailer Brake Controller",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F82",
+        "layout": {
+          "top": 16.429825588967052,
+          "left": 87.28748044885432,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Trailer Back-up Lamps",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_RETROCESO(of=REMOLQUE)"
+        ]
+      },
+      {
+        "id": "F83",
+        "layout": {
+          "top": 20.63580872697437,
+          "left": 87.28748044885432,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Vehicle Back-up Lamps",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F84",
+        "layout": {
+          "top": 24.841791864981683,
+          "left": 87.28748044885432,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Fuel System Control Module",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F85",
+        "layout": {
+          "top": 33.3011070795465,
+          "left": 7.0331067480566904,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F86",
+        "layout": {
+          "top": 37.50709021755378,
+          "left": 7.0331067480566904,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "description": "Fog Lamps",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/fog-light-fuse",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F87",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 58.89661539775574,
+          "left": 10.511374942654715,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F88",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 63.47501735227857,
+          "left": 10.511374942654715,
+          "width": 3.830066466726069,
+          "height": 2.5426661189491186
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 2.8170327142374063,
+          "left": 9.320110923767269,
+          "width": 9.44190948781908,
+          "height": 15.906771395663666
+        },
+        "description": "Cooling Fan High Speed",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_ALTA)"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 2.660796496040374,
+          "left": 21.377061992117778,
+          "width": 9.44190948781908,
+          "height": 15.906771395663666
+        },
+        "description": "Cooling Fan Low Speed",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA)"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 20.70639342873128,
+          "left": 12.778306191433712,
+          "width": 9.44190948781908,
+          "height": 15.906771395663666
+        },
+        "description": "Cooling Fan Control",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 42.57946397631584,
+          "left": 4.36049701664133,
+          "width": 5.394813691765379,
+          "height": 9.074173091821962
+        },
+        "description": "Front Fog Lamps",
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 39.377402779636526,
+          "left": 40.773023128684905,
+          "width": 5.806524767310057,
+          "height": 9.233561779483201
+        },
+        "description": "Air Conditioning Compressor",
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/air-conditioning-relay",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 39.377402779636526,
+          "left": 69.62497610104518,
+          "width": 5.806524767310057,
+          "height": 9.233561779483201
+        },
+        "description": "Fuel Pump",
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/fuel-pump-relay",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 5.333042051114169,
+          "left": 39.36407361334005,
+          "width": 8.763892145454896,
+          "height": 8.947818934122765
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 5.333042051114169,
+          "left": 57.501519367183576,
+          "width": 8.763892145454896,
+          "height": 8.947818934122765
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 76.79519576146619,
+          "left": 7.450816184488114,
+          "width": 8.763892145454896,
+          "height": 8.947818934122765
+        },
+        "description": "Rear Defogger",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 76.79519576146619,
+          "left": 32.24203994036484,
+          "width": 8.763892145454896,
+          "height": 8.947818934122765
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 38.26731721454449,
+          "left": 47.80638054395395,
+          "width": 6.026993069746537,
+          "height": 15.425319912628071
+        },
+        "description": "Starter",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/gmc/sierra-3500/info/fusebox/2011/starter-relay",
+            "urlWithAnchor": "/gmc/sierra-3500/info/fusebox/2011/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 38.26731721454449,
+          "left": 55.16350180480922,
+          "width": 6.026993069746537,
+          "height": 15.425319912628071
+        },
+        "description": "Powertrain",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 77.63195140828346,
+          "left": 59.97799835823229,
+          "width": 8.763892145454896,
+          "height": 8.947818934122765
+        },
+        "description": "Switched Power",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 38.26731721454449,
+          "left": 77.67346183259154,
+          "width": 6.026993069746537,
+          "height": 15.425319912628071
+        },
+        "description": "Parking Lamps",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "R15",
+        "layout": {
+          "top": 20.385132652554447,
+          "left": 29.957781892543863,
+          "width": 6.026993069746537,
+          "height": 15.425319912628071
+        },
+        "description": "Low-Beam Headlamp",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_BAJA"
+        ]
+      },
+      {
+        "id": "TP1",
+        "kind": {
+          "type": "",
+          "format": ""
+        },
+        "description": "UNIDENTIFIED",
+        "relatedEntities": []
+      },
+      {
+        "id": "TP2",
+        "kind": {
+          "type": "",
+          "format": ""
+        },
+        "description": "UNIDENTIFIED",
+        "relatedEntities": []
+      }
+    ],
+    "templateId": "61673f67271ef50004848a65",
+    "templateRenameMap": {
+      "1": "F72",
+      "2": "F68",
+      "3": "F80",
+      "4": "F51",
+      "5": "F56",
+      "6": "F81",
+      "7": "F26",
+      "8": "F52",
+      "9": "F69",
+      "10": "F82",
+      "11": "F27",
+      "12": "F44",
+      "13": "F53",
+      "14": "F58",
+      "15": "F83",
+      "16": "F28",
+      "17": "F45",
+      "18": "F54",
+      "19": "F59",
+      "20": "F70",
+      "21": "F84",
+      "22": "F85",
+      "23": "F29",
+      "24": "F55",
+      "25": "F71",
+      "26": "F73",
+      "27": "F74",
+      "28": "F86",
+      "29": "F30",
+      "30": "F22",
+      "31": "F25",
+      "32": "F23",
+      "33": "F24",
+      "34": "F35",
+      "35": "F47",
+      "36": "F79",
+      "37": "F31",
+      "38": "F38",
+      "39": "F48",
+      "40": "F63",
+      "41": "F32",
+      "42": "F39",
+      "43": "F64",
+      "44": "F75",
+      "45": "F19",
+      "46": "F36",
+      "47": "F40",
+      "48": "F65",
+      "49": "F76",
+      "50": "F21",
+      "51": "F20",
+      "52": "F34",
+      "53": "F37",
+      "54": "F66",
+      "55": "F77",
+      "56": "F78",
+      "57": "F2",
+      "58": "F11",
+      "59": "F12",
+      "60": "F1",
+      "61": "F13",
+      "62": "F4",
+      "63": "F5",
+      "64": "F7",
+      "65": "F8",
+      "66": "F15",
+      "67": "F16",
+      "68": "F6",
+      "69": "F9",
+      "70": "F10",
+      "71": "F17",
+      "72": "F18",
+      "FAN HI": "R1",
+      "FAN LO": "R2",
+      "FAN CNTRL": "R3",
+      "HDLP LO/HID": "R15",
+      "FOG LAMP": "R4",
+      "A/C CMPRSR": "R5",
+      "STRTR": "R11",
+      "PWR/TRN": "R12",
+      "FUEL PMP": "R6",
+      "PRK LAMP": "R14",
+      "REAR DEFOG": "R9",
+      "RUN/CRNK": "R13"
+    },
+    "imageClusters": [
+      "63601a33381693e073f65569",
+      "617ab8ed03e9790004409ace"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-gmc-sierra-3500-2011-genid-g2-2.webp"
+  }
+]

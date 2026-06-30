@@ -1,0 +1,1218 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F01",
+        "layout": {
+          "top": 19.12442396313364,
+          "left": 18.666666666666668,
+          "width": 16.666666666666664,
+          "height": 8.294930875576037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "Body Controller"
+      },
+      {
+        "id": "F02",
+        "layout": {
+          "top": 85.9447004608295,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 9.216589861751153
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Body Controller Rear Distribution Unit"
+      },
+      {
+        "id": "F03",
+        "layout": {
+          "top": 60.59907834101382,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 8.294930875576037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Ignition Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "F04",
+        "layout": {
+          "top": 27.64976958525346,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 8.294930875576037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Anti-Lock Brake Pump",
+        "relatedEntities": [
+          "BOMBA_ABS"
+        ]
+      },
+      {
+        "id": "F05",
+        "layout": {
+          "top": 36.175115207373274,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 8.064516129032258
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "Electric Power Steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "F06",
+        "layout": {
+          "top": 44.47004608294931,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 7.603686635944701
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Radiator Fan - Low Speed",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_BAJA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/cooling-fan-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 10.829493087557603,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 8.064516129032258
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "Radiator Fan - High Speed",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/cooling-fan-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F08",
+        "layout": {
+          "top": 31.336405529953915,
+          "left": 80.66666666666666,
+          "width": 12,
+          "height": 6.682027649769585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Blower Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "F09",
+        "layout": {
+          "top": 59.44700460829493,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.299539170506913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Transmission (Aisin)"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 24.65437788018433,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.529953917050691
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/horn-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 10.829493087557603,
+          "left": 82.44444444444444,
+          "width": 9.333333333333334,
+          "height": 5.299539170506913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Powertrain"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 19.12442396313364,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.529953917050691
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 30.184331797235025,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.76036866359447
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission (Aisin)"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 76.95852534562212,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.76036866359447
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Transmission Powertrain"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 16.359447004608295,
+          "left": 82.44444444444444,
+          "width": 9.555555555555555,
+          "height": 5.0691244239631335
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Powertrain"
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 36.175115207373274,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.76036866359447
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Powertrain (Multiair - If Equipped)"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 13.36405529953917,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.299539170506913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Air Conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/air-conditioning-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 70.96774193548387,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.529953917050691
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Rear Defroster",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 53.45622119815668,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.76036866359447
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/fuel-pump-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 41.935483870967744,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.299539170506913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Anti-Lock Brake Valves",
+        "relatedEntities": [
+          "VALVULA(of=SISTEMA_ABS)"
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 82.94930875576037,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.529953917050691
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 47.465437788018434,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.76036866359447
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "After Run Pump"
+      },
+      {
+        "id": "F81",
+        "layout": {
+          "top": 77.64976958525345,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 8.064516129032258
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "PTC (Secondary)"
+      },
+      {
+        "id": "F82",
+        "layout": {
+          "top": 69.12442396313364,
+          "left": 18.88888888888889,
+          "width": 16.444444444444446,
+          "height": 8.064516129032258
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F83",
+        "layout": {
+          "top": 52.30414746543779,
+          "left": 18.666666666666668,
+          "width": 16.666666666666664,
+          "height": 8.294930875576037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "PTC (Primary)"
+      },
+      {
+        "id": "F84",
+        "layout": {
+          "top": 65.2073732718894,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.299539170506913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F85",
+        "layout": {
+          "top": 41.013824884792626,
+          "left": 80.66666666666666,
+          "width": 12,
+          "height": 6.682027649769585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Front Power Outlet 12V",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "F86",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "USB Charger Sockets"
+      },
+      {
+        "id": "F88",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Heated Mirrors",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 21.658986175115206,
+          "left": 82.44444444444444,
+          "width": 9.333333333333334,
+          "height": 5.0691244239631335
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Powertrain"
+      },
+      {
+        "id": "F87",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 88.94009216589862,
+          "left": 6.666666666666667,
+          "width": 9.333333333333334,
+          "height": 5.76036866359447
+        }
+      },
+      {
+        "id": "T2",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 79.72350230414746,
+          "left": 53.55555555555556,
+          "width": 9.777777777777779,
+          "height": 15.43778801843318
+        }
+      },
+      {
+        "id": "T3",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 79.72350230414746,
+          "left": 63.77777777777778,
+          "width": 9.777777777777779,
+          "height": 15.43778801843318
+        }
+      },
+      {
+        "id": "T5",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 79.72350230414746,
+          "left": 73.77777777777777,
+          "width": 10.222222222222223,
+          "height": 15.43778801843318
+        }
+      },
+      {
+        "id": "T6",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 34.331797235023046,
+          "left": 49.111111111111114,
+          "width": 10.888888888888888,
+          "height": 14.746543778801843
+        }
+      },
+      {
+        "id": "T7",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 16.82027649769585,
+          "left": 47.333333333333336,
+          "width": 14.000000000000002,
+          "height": 14.285714285714285
+        }
+      },
+      {
+        "id": "T8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 25.34562211981567,
+          "left": 64.22222222222223,
+          "width": 13.333333333333334,
+          "height": 9.216589861751153
+        }
+      },
+      {
+        "id": "T9",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 16.82027649769585,
+          "left": 64.22222222222223,
+          "width": 13.333333333333334,
+          "height": 8.294930875576037
+        }
+      },
+      {
+        "id": "T10",
+        "layout": {
+          "top": 79.72350230414746,
+          "left": 84.22222222222221,
+          "width": 9.777777777777779,
+          "height": 15.43778801843318
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "T14",
+        "layout": {
+          "top": 65.89861751152074,
+          "left": 64.88888888888889,
+          "width": 14.000000000000002,
+          "height": 10.138248847926267
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "T17",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 55.76036866359447,
+          "left": 64.88888888888889,
+          "width": 14.000000000000002,
+          "height": 9.90783410138249
+        }
+      },
+      {
+        "id": "T19",
+        "layout": {
+          "top": 65.89861751152074,
+          "left": 79.11111111111111,
+          "width": 14.000000000000002,
+          "height": 10.138248847926267
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "T20",
+        "layout": {
+          "top": 55.76036866359447,
+          "left": 79.11111111111111,
+          "width": 14.000000000000002,
+          "height": 9.90783410138249
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "T30",
+        "layout": {
+          "top": 58.294930875576036,
+          "left": 47.77777777777778,
+          "width": 14.000000000000002,
+          "height": 14.285714285714285
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "T31",
+        "layout": {
+          "top": 35.02304147465438,
+          "left": 64.22222222222223,
+          "width": 13.333333333333334,
+          "height": 9.44700460829493
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Unidentified"
+      }
+    ],
+    "boxName": "Underhood Fuses",
+    "boxDescription": "The Front Distribution Unit is located on the right side of the engine compartment, next to the battery. To access the fuses, push the release tabs and remove the cover.",
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/61002992abf9ed0004c50cb0/fragment-61002992abf9ed0004c50cb0-d3dfeaaf22.jpg",
+        "source": "61238230a5d9fa000472259b"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/61002992abf9ed0004c50cb0/fragment-61002992abf9ed0004c50cb0-d444f7f699.jpg",
+        "source": "61238238a5d9fa000472259c"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.9644444444444444,
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/93db4c66_fiat-500l-2018.png"
+    },
+    "templateId": "616f67ae7acc940004201d2f",
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-500l-2018-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F12",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 49.40559354491111,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Right Low Beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/headlight-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 25.862721829286112,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Front and Rear Ceiling Lights Trunk and Door Courtesy Lights",
+        "relatedEntities": [
+          "LUZ_CORTESIA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "F53",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 63.53131657428709,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument Panel Node"
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 43.8643942145936,
+          "left": 63.53131657428709,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Central Door Locking"
+      },
+      {
+        "id": "F36",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 21.1541474861602,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Diagnostic Socket, Vehicle Radio, Climate Control System, TPMS, Sunroof",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR",
+          "TESTIGO_PRESION_DE_NEUMATICOS",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/sunroof-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F90",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 44.697019201786745,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Left High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/headlight-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F91",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 39.98844485866065,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Right High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/headlight-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F92",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 35.27987051553596,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Left Fog Light",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F93",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 30.57129617241166,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Right Fog Light",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "F42",
+        "layout": {
+          "top": 9.254697959360207,
+          "left": 63.53131657428709,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "BSM, ESP",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 43.8643942145936,
+          "left": 39.98844485866065,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Left Passenger Window",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LADO_DERECHO(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "F34",
+        "layout": {
+          "top": 43.8643942145936,
+          "left": 58.822742231161065,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Right Passenger Window",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LADO_DERECHO(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "F43",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 58.822742231161065,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Bi-Directional Washer"
+      },
+      {
+        "id": "F48",
+        "layout": {
+          "top": 43.8643942145936,
+          "left": 49.40559354491111,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Passenger Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 81.25877867427124,
+          "left": 54.1141678880367,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Left Low Beam, Headlamp Leveling",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/headlight-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F50",
+        "layout": {
+          "top": 9.254697959360207,
+          "left": 58.822742231161065,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "F51",
+        "layout": {
+          "top": 9.254697959360207,
+          "left": 49.40559354491111,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Vehicle Radio Switch, Climate Control System, Stop Light, Reverse Gear, Sunroof, Parking Sensor, Rear Camera",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR",
+          "TESTIGO_STOP",
+          "TECHO_SOLAR",
+          "CAMARA_REVERSA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/500l/info/fusebox/2018/sunroof-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/fiat/500l/info/fusebox/2018/brake-light-fuse",
+            "urlWithAnchor": "/fiat/500l/info/fusebox/2018/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F37",
+        "layout": {
+          "top": 9.254697959360207,
+          "left": 54.1141678880367,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Stop Light Switch, Instrument Panel Node"
+      },
+      {
+        "id": "F49",
+        "layout": {
+          "top": 9.254697959360207,
+          "left": 44.697019201786745,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Exterior Mirror, GPS, Electric Mirror, Parking Sensor",
+        "relatedEntities": [
+          "ESPEJO(ubicacion=EXTERIOR)",
+          "NAVEGADOR",
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 9.254697959360207,
+          "left": 39.98844485866065,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Climate Control, Seat Regulation",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "F47",
+        "layout": {
+          "top": 43.8643942145936,
+          "left": 44.697019201786745,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Driver Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F89",
+        "layout": {
+          "top": 43.8643942145936,
+          "left": 54.1141678880367,
+          "width": 2.7036620662271513,
+          "height": 12.840328817060286
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      }
+    ],
+    "boxName": "Interior Fuses",
+    "boxDescription": "The interior fuse panel is part of the Body Control Module (BCM) and is located on the driver’s side under the instrument panel.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/61002992abf9ed0004c50cb0/fragment-61002992abf9ed0004c50cb0-51743188ec.jpg",
+      "source": "6123824ca5d9fa000472259d"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/61002992abf9ed0004c50cb0/fragment-61002992abf9ed0004c50cb0-d49246ec27.jpg",
+        "source": "61238252a5d9fa000472259e"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/61002992abf9ed0004c50cb0/fragment-61002992abf9ed0004c50cb0-7901e9c6d8.jpg",
+        "source": "6123825ea5d9fa000472259f"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/61002992abf9ed0004c50cb0/fragment-61002992abf9ed0004c50cb0-27278ceda8.jpg",
+        "source": "61238268a5d9fa00047225a0"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.4682926829268293,
+    "templateId": "615ef22c7eaa4400046f7a36",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-500l-2018-genid-g1-1.webp"
+  }
+]

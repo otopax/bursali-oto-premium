@@ -1,0 +1,961 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 21.813031161473088,
+          "left": 8.641975308641975,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver's seat control unit with heating, Passenger seat control unit with heating, Glove box light, Left/right windshield washer nozzle heating element",
+        "relatedEntities": [
+          "LUZ_DE_GUANTERA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.762039660056658,
+          "left": 8.641975308641975,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Turn signal relay, Front left/right turn signal bulb, Rear left/right turn signal bulb",
+        "relatedEntities": [
+          "RELAY(protects=TESTIGO_LUZ_DIRECCIONAL)",
+          "LAMPARA(of=TESTIGO_LUZ_DIRECCIONAL(warns=LUZ_DIRECCIONAL(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))))",
+          "LAMPARA(of=TESTIGO_LUZ_DIRECCIONAL(warns=LUZ_DIRECCIONAL(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.813031161473088,
+          "left": 20.452674897119344,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Light switch, Switch and instrument illumination regulator, Fog light relay",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/fog-light-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.762039660056658,
+          "left": 20.452674897119344,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "License plate light",
+        "relatedEntities": [
+          "LUZ_PATENTE"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 15.58073654390935,
+          "left": 32.345679012345684,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Cruise control system switch, Fresh air/recirculation air flap switch, Exterior mirror heating button (only for manual windows), Clutch pedal switch (manual transmission only, BPS, BPR engines), Brake pedal switch, High pressure sensor, Daytime running light switching relay, Radiator fan control unit, Tire pressure monitoring unit, 16-pin diagnostic connector, Digital clock, Automatic anti-dazzle interior mirror",
+        "relatedEntities": [
+          "RELOJ",
+          "ESPEJO_RETROVISOR_ELECTRICO_ANTIDESLUMBRANTE"
+        ]
+      },
+      {
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "id": "6",
+        "layout": {
+          "top": 21.813031161473088,
+          "left": 32.345679012345684,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        }
+      },
+      {
+        "layout": {
+          "top": 27.762039660056658,
+          "left": 32.345679012345684,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Reverse light switch, Multifunction switch, Speedometer sensor, Starter inhibitor relay and reverse light, P/N selector lever position indicator, Left/right reverse light bulb, 1-pin connector, self-diagnosis",
+        "relatedEntities": [
+          "SENSOR_DE_VELOCIDAD",
+          "TESTIGO_CRUISE_CONTROL",
+          "RELAY(protects=INMOVILIZADOR)",
+          "LUZ_RETROCESO",
+          "LUZ_RETROCESO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "id": "8",
+        "layout": {
+          "top": 9.631728045325778,
+          "left": 44.13580246913581,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        }
+      },
+      {
+        "layout": {
+          "top": 15.58073654390935,
+          "left": 44.13580246913581,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "TCS and ESP button, ABS control unit, Steering angle sensor (only for TCS/ESP)",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "MODULO_ABS"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 21.813031161473088,
+          "left": 44.13580246913581,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster control unit, Central control unit for comfort system (only models with power windows), Radio, Digital clock",
+        "relatedEntities": [
+          "ESTEREO",
+          "RELOJ"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/radio-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.762039660056658,
+          "left": 44.13580246913581,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Instrument cluster control unit, Selector lever lock solenoid"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 9.631728045325778,
+          "left": 55.92592592592594,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "16-pin connector, self-diagnosis, Tire pressure monitor control unit"
+      },
+      {
+        "layout": {
+          "top": 15.58073654390935,
+          "left": 55.92592592592593,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake light switch"
+      },
+      {
+        "layout": {
+          "top": 21.813031161473088,
+          "left": 55.884773662551446,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Motronic control unit, Motronic power supply relay, Central control unit for comfort system (models with power windows)"
+      },
+      {
+        "layout": {
+          "top": 27.762039660056658,
+          "left": 55.884773662551446,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Steering angle sensor for TCS/ESP, Automatic transmission control unit, Instrument cluster control unit, Digital clock",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "MODULO_DE_TRANSMISION",
+          "RELOJ"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 9.631728045325778,
+          "left": 67.71604938271605,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Radiator fan control unit"
+      },
+      {
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "id": "17",
+        "layout": {
+          "top": 15.58073654390935,
+          "left": 67.71604938271605,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        }
+      },
+      {
+        "layout": {
+          "top": 21.813031161473088,
+          "left": 67.69547325102882,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fog light relay, Instrument cluster control unit, Right high beam light bulb",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)",
+          "LAMPARA(of=LUZ_ALTA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/fog-light-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.762039660056658,
+          "left": 67.69547325102882,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left high beam light bulb",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ALTA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 9.631728045325778,
+          "left": 79.50617283950618,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right headlight low beam bulb",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.58073654390935,
+          "left": 79.50617283950618,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left headlight low beam bulb",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.813031161473088,
+          "left": 79.50617283950618,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Instrument cluster control unit, Right side light bulb, Right rear and brake light bulb, Right front position light bulb, Right front turn signal and side position light bulb, Right rear side position light bulb",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_DIRECCIONAL(ubicacion=LADO_DERECHO))",
+          "LAMPARA(of=LUCES_TRASERAS)",
+          "LAMPARA(of=LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA)))",
+          "LAMPARA(of=LUZ_DIRECCIONAL(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA)))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/tail-light-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.762039660056658,
+          "left": 79.50617283950618,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Instrument cluster control unit, Left side light bulb, Left rear and brake light bulb, Left front side position light bulb, Left front position and turn signal light bulb, Left rear side position light bulb",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_DIRECCIONAL(ubicacion=LADO_IZQUIERDO))",
+          "LAMPARA(of=LUCES_TRASERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/tail-light-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 36.30215160540459,
+          "left": 8.953797223768055,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Intermittent wiper switch, Automatic intermittent wiper and washer relay (only for headlight washer system)",
+        "relatedEntities": [
+          "RELAY(protects=SAPITO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.47873328623557,
+          "left": 8.953797223768053,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Fresh air fan switch"
+      },
+      {
+        "layout": {
+          "top": 50.65531496706654,
+          "left": 8.953797223768053,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Heated rear window switch, Heated rear window"
+      },
+      {
+        "layout": {
+          "top": 57.83189664789751,
+          "left": 8.953797223768053,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Cigarette lighter, Blocking diode",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.00847832872847,
+          "left": 8.953797223768053,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fuel system pressurization pump"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 72.18506000955945,
+          "left": 8.953797223768053,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Motronic control unit (engines with BPR and BPS engine codes only), N30/ N31/ N32/ N33/ Injector, cylinder; Engine control unit (engine code CBPA only)",
+        "relatedEntities": [
+          "INYECTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.36164169039043,
+          "left": 8.953797223768053,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Sunroof control unit"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 36.30215160540459,
+          "left": 26.244244130950463,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Automatic transmission control unit, Brake servo control unit",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 43.47873328623557,
+          "left": 26.25074042084892,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Air conditioning system compressor control valve; N30/ N31/ N32/ Injector, cylinders (engine code CBPA only)",
+        "relatedEntities": [
+          "INYECTOR"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 50.65531496706654,
+          "left": 26.237747841052,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Vacant"
+      },
+      {
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "id": "34",
+        "layout": {
+          "top": 57.83189664789751,
+          "left": 26.25074042084892,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        }
+      },
+      {
+        "layout": {
+          "top": 65.00847832872847,
+          "left": 26.237747841052,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        }
+      },
+      {
+        "layout": {
+          "top": 72.18506000955945,
+          "left": 26.25074042084892,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fog light switch"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 79.36164169039043,
+          "left": 26.25074042084892,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Motronic control unit, Engine control unit (engine code CBPA only), Motronic power supply relay, Central control unit for comfort system (models with power windows), Brake vacuum pump fuse"
+      },
+      {
+        "layout": {
+          "top": 36.30215160540459,
+          "left": 43.53469103813288,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Remote fuel cap release button, Remote tailgate release button, Driver's door control unit, Passenger door control unit"
+      },
+      {
+        "layout": {
+          "top": 43.47873328623557,
+          "left": 43.53469103813288,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "39",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Hazard light switch",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 50.65531496706654,
+          "left": 43.53469103813288,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "40",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Horn or dual-tone horn, Dual-tone horn relay"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 57.83189664789751,
+          "left": 43.53469103813288,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "12V socket, 12V socket 2, 12V socket 3 in the trunk",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.00847832872847,
+          "left": 43.53469103813288,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "42",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/beetle/info/fusebox/2007/radio-fuse",
+            "urlWithAnchor": "/volkswagen/beetle/info/fusebox/2007/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 72.18506000955945,
+          "left": 43.53469103813288,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lambda sensor (engine codes BPS, BPR, CBPA only), Lambda sensor after the catalyst (engine codes BPS, BPR, CBPA only), Central lambda sensor for catalyst bank 1 (engine code BPR only), Mass air flow meter/Intake air temperature sensor (engine codes BPS, BPR), Activated carbon filter solenoid valve 1 (engine codes BPS, BPR, CBPA), Fuel system diagnostic pump (engine codes BPS, BPR)"
+      },
+      {
+        "layout": {
+          "top": 79.36164169039043,
+          "left": 43.53469103813288,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        },
+        "id": "44",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Driver's seat control unit with heating, Front passenger seat control unit with heating"
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 35.79506945243008,
+          "left": 63.50617283950618,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 42.971651133261055,
+          "left": 63.50617283950618,
+          "width": 16.57343422513566,
+          "height": 6.469916370007504
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 50.64022662889521,
+          "left": 63.50617283950618,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        }
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.87252124645895,
+          "left": 63.50617283950618,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        }
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 62.821529745042525,
+          "left": 63.50617283950618,
+          "width": 11.647879763821795,
+          "height": 5.776573469639117
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8716049382716049,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/cd32267d_volkswagen-beetle-1998.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b9af916b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b56828fd_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/724ed7c7_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2779a4ac_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d2a26c24_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0a90b39b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d2842077_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7217c5b5_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/e2f9d3da_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/5369bf40_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/c265ae96_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/db8766ca_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9712b665_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1bac9c1b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ca3b2d48_image.jpg"
+      }
+    ],
+    "boxName": "Interior Fuse Panel",
+    "imageClusters": [
+      "61ef0295b231e80004f10260"
+    ],
+    "templateId": "61984b63c294220004394c95",
+    "isTranslated": true,
+    "boxScaleMultiplier": "0.6",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-beetle-2007-genid-g2-0.webp"
+  }
+]

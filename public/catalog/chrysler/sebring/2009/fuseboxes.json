@@ -1,0 +1,754 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 5.063732260961518,
+          "left": 10.46790685989556,
+          "width": 4.712333753803257,
+          "height": 13.092987108087431
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Power Top Module (If Equipped)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 20.251766281909887,
+          "left": 11.034094978241201,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "AWD Module",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 28.31321304573826,
+          "left": 11.008708548394345,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Battery Feed - Center High Mounted Stop Light (CHMSL)/ Brake Switch",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA",
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 36.37465980956664,
+          "left": 11.008708548394345,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Battery Feed - Ignition Switch",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA",
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 44.436106573395016,
+          "left": 11.008708548394345,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Yellow"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 52.49755333722339,
+          "left": 10.89453755346788,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Off Draw (IOD) - Power Mirror Switch/Climate Controls",
+        "relatedEntities": [
+          "FUSIBLE_IOD",
+          "INTERRUPTOR",
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 63.56183799029756,
+          "left": 7.8815090107903565,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Ignition Off Draw (IOD) Sense 1"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 71.17549522593042,
+          "left": 7.8815090107903565,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Ignition Off Draw (IOD) Sense 2"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 5.063732260961518,
+          "left": 18.037079970560736,
+          "width": 4.712333753803257,
+          "height": 13.092987108087431
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Battery Feed - Power Seats - if equipped/PZEV Air Pump - if equipped",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 27.169237212152478,
+          "left": 18.3880489112154,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Battery Feed - Cabin Compartment Node (CCN)",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 35.90698354510504,
+          "left": 18.470289134908807,
+          "width": 9.869233193387865,
+          "height": 5.109900561741881
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Selectable Power Outlet"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 44.27629561450581,
+          "left": 22.191815871166977,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "-"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 54.410846143536865,
+          "left": 24.159572259866483,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "-"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 55.92899278471362,
+          "left": 17.380551144384434,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Off Draw (IOD) - Cabin Compartment Node (CCN)/ Interior Lighting",
+        "relatedEntities": [
+          "FUSIBLE_IOD",
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 8.399638678059848,
+          "left": 24.968436249063984,
+          "width": 4.719880918661543,
+          "height": 12.887488503599245
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Battery Feed - Radiator Fan Relay",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA",
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/sebring/info/fusebox/2009/cooling-fan-fuse",
+            "urlWithAnchor": "/chrysler/sebring/info/fusebox/2009/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 36.79566190366881,
+          "left": 29.075980989901275,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IGN Run/ACC - Cigar Lighter/ PWR Sunroof Mod",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/sebring/info/fusebox/2009/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chrysler/sebring/info/fusebox/2009/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 64.23914973996314,
+          "left": 29.42926031882106,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Off Draw (IOD) - Wireless Control Module (WCM)/ Clock/Steering Control Module (SCM)",
+        "relatedEntities": [
+          "FUSIBLE_IOD"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 8.399638678059848,
+          "left": 31.801717529525558,
+          "width": 4.719880918661543,
+          "height": 12.887488503599245
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Battery Feed - Auto Shutdown (ASD) Relay",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 16.440136999665,
+          "left": 38.352654749076166,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition Off Draw (IOD) - Power Amp Feed 2 - if equipped",
+        "relatedEntities": [
+          "FUSIBLE_IOD",
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 60.18594019744693,
+          "left": 35.98815096316034,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Ignition Off Draw (IOD) - Radio",
+        "relatedEntities": [
+          "FUSIBLE_IOD",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/sebring/info/fusebox/2009/radio-fuse",
+            "urlWithAnchor": "/chrysler/sebring/info/fusebox/2009/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 16.440136999665,
+          "left": 41.90284768597308,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 32.13010052120885,
+          "left": 43.7724514384218,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Run - Climate Controls/Hot Cupholder - if equipped",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 44.565933039416585,
+          "left": 43.47930770030697,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Auto Shutdown (ASD) Relay Feed 3"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 16.440136999665,
+          "left": 45.26113830195662,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Battery Feed - PWR Sunroof Feed",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 32.13010052120885,
+          "left": 47.37621839837335,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Run - Heated Mirrors - If Equipped",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL",
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 44.565933039416585,
+          "left": 47.180270147827336,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Auto Shutdown (ASD) Relay Feed 2"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 61.546108854327485,
+          "left": 49.02379361569017,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Run - Occupant Classification Module (OCM)/Occupant Restraint Controller (ORC)"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 69.09987490211991,
+          "left": 49.02379361569017,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Run - Occupant Classification Module (OCM)/Occupant Restraint Controller (ORC)"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 17.286776686746972,
+          "left": 57.06310987405553,
+          "width": 5.798181273618349,
+          "height": 10.092511857549246
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "notUsed": false
+        },
+        "description": "Hot Car (No Fuse Required)"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 36.79821980263278,
+          "left": 57.256568147473395,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition Run - Heated Seats - If Equipped",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 44.351985850425024,
+          "left": 57.256568147473395,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "-"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 52.363808662282345,
+          "left": 57.13319934630468,
+          "width": 5.859857208574047,
+          "height": 11.552818661329477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Auto Shutdown (ASD) Relay Feed 1"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 18.32317702124175,
+          "left": 63.86877198324741,
+          "width": 1.9948071225140036,
+          "height": 9.422279199337588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Battery Feed - Switch Bank/ Diagnostic Link Connector/ Powertrain Control Module (PCM)",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA",
+          "CONECTOR_OBD",
+          "PCM"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 11.510367356082263,
+          "left": 68.08379085543851,
+          "width": 6.024337655960868,
+          "height": 9.923183920132852
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Battery Feed - Anti-Lock Brakes (ABS) Module - if equipped/ Electronic Stability Program (ESP) Module - If Equipped",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA",
+          "SISTEMA_ABS",
+          "MODULO",
+          "ECU",
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 41.185038792774264,
+          "left": 68.61543774384089,
+          "width": 6.353298550734498,
+          "height": 9.404397127140927
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Battery Feed - Anti-Lock Brakes (ABS) Module - If Equipped/ Electronic Stability Program (ESP) Module - If Equipped",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA",
+          "SISTEMA_ABS",
+          "MODULO",
+          "ECU",
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 30.786671086450138,
+          "left": 80.76967128685259,
+          "width": 6.5177789981213206,
+          "height": 8.229904545968912
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Battery Feed - Passenger Door Module (PDM)/ Driver Door Module (DDM)",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)",
+          "ALIMENTACION_ELECTRICA"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 43.74670584077108,
+          "left": 78.59024609957639,
+          "width": 5.313272009725716,
+          "height": 4.289675351238705
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Power Top Module (If Equipped)"
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 1.8100 A 1.8100 1.8100 0 0 1 1.8100 0.0000 L 22.7881 0.0000 A 0.1726 0.1726 0 0 1 22.9607 0.1726 L 22.9607 1.5537 A 0.1726 0.1726 0 0 0 23.1333 1.7263 L 27.7946 1.7263 A 0.1726 0.1726 0 0 0 27.9672 1.5537 L 27.9672 0.1726 A 0.1726 0.1726 0 0 1 28.1398 0.0000 L 75.0971 0.0000 A 0.1726 0.1726 0 0 1 75.2697 0.1726 L 75.2697 1.5537 A 0.1726 0.1726 0 0 0 75.4423 1.7263 L 80.3194 1.7263 A 0.1726 0.1726 0 0 0 80.4920 1.5537 L 80.4920 0.1726 A 0.1726 0.1726 0 0 1 80.6646 0.0000 L 98.1900 0.0000 A 1.8100 1.8100 0 0 1 100.0000 1.8100 L 100.0000 23.2892 A 1.7000 1.7000 0 0 1 98.3000 24.9892 L 97.8408 24.9892 A 20.3700 20.3700 0 0 0 77.4708 45.3592 L 77.4708 45.3599 A 1.7700 1.7700 0 0 1 75.7008 47.1299 L 1.8100 47.1299 A 1.8100 1.8100 0 0 1 0.0000 45.3199 L 0.0000 41.6486 A 0.1726 0.1726 0 0 1 0.1726 41.4760 L 1.4243 41.4760 A 0.1726 0.1726 0 0 0 1.5969 41.3034 L 1.5969 37.4622 A 0.1726 0.1726 0 0 0 1.4243 37.2896 L 0.1726 37.2896 A 0.1726 0.1726 0 0 1 0.0000 37.1170 L 0.0000 36.4264 A 0.1726 0.1726 0 0 1 0.1726 36.2538 L 0.8200 36.2538 A 0.1726 0.1726 0 0 0 0.9927 36.0812 L 0.9927 30.2114 A 0.1726 0.1726 0 0 0 0.8200 30.0388 L 0.1726 30.0388 A 0.1726 0.1726 0 0 1 0.0000 29.8662 Z"
+        ],
+        "svgViewBoxH": 47.129900002819916,
+        "layout": {
+          "top": 2.7820036246742426,
+          "left": 2.2532623151997226,
+          "width": 95.27566643750683,
+          "height": 92.45298654132206
+        }
+      }
+    ],
+    "boxName": "Totally Integrated Power Module (TIPM)",
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-b965c573db.jpg",
+        "source": "6126d01757026a0004f332f6"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-056f8aa5e3.jpg",
+        "source": "6126d01d57026a0004f332f8"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-1a8b6d0e4c.jpg",
+        "source": "6126d02557026a0004f332fa"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-8dd4f5b00a.jpg",
+        "source": "6126d02d57026a0004f332fd"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-d2806e234e.jpg",
+        "source": "6126d03257026a0004f332ff"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-adb98f73bf.jpg",
+        "source": "6126d03857026a0004f33302"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-758c257898.jpg",
+        "source": "6126d03e57026a0004f33303"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-e8d194de9b.jpg",
+        "source": "6126d04357026a0004f33305"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e97abf9ed0004c50ba8/fragment-60ff3e97abf9ed0004c50ba8-cd67553ee1.jpg",
+        "source": "6126d04c57026a0004f33306"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.48568655992236776,
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/5914a543_chrysler-sebring-2009.png"
+    },
+    "templateId": "6165eb54bff5fd00046f4b3f",
+    "imageClusters": [
+      "6234911ac58310471e044bbe",
+      "61e1f05f599e6d0004406dea"
+    ],
+    "boxRotation": 90,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chrysler-sebring-2009-genid-g3-0.webp"
+  }
+]

@@ -1,0 +1,787 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "amp": ""
+        },
+        "layout": {
+          "top": 18.71862799700555,
+          "left": 10.76942522197993,
+          "width": 9.945040590413617,
+          "height": 34.82299120490686
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "amp": ""
+        },
+        "layout": {
+          "top": 25.99785949831309,
+          "left": 50.06567146459799,
+          "width": 9.945040590413617,
+          "height": 34.82299120490686
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "amp": ""
+        },
+        "layout": {
+          "top": 25.99785949831309,
+          "left": 73.59356443797236,
+          "width": 9.945040590413617,
+          "height": 34.82299120490686
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm",
+          "amp": ""
+        },
+        "layout": {
+          "top": 75.87747394160904,
+          "left": 8.649161057920152,
+          "width": 15.35972446045438,
+          "height": 20.068870350528922,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 5",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 3.551901478551826,
+          "left": 52.57055947570196,
+          "width": 9.13563370935633,
+          "height": 17.943976613701707,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 9.51602052053093,
+          "left": 29.85047799267243,
+          "width": 6.330612244897968,
+          "height": 2.788834154351395
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Diesel engine preheating unit"
+      },
+      {
+        "layout": {
+          "top": 17.337413145471196,
+          "left": 29.85047799267243,
+          "width": 6.330612244897968,
+          "height": 2.788834154351395
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/citroen/c2/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/citroen/c2/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 9.51602052053093,
+          "left": 42.040954183148635,
+          "width": 6.330612244897968,
+          "height": 2.788834154351395
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Electronic control units (ZBU)"
+      },
+      {
+        "layout": {
+          "top": 17.337413145471196,
+          "left": 42.040954183148635,
+          "width": 6.330612244897968,
+          "height": 2.788834154351395
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ECU",
+        "relatedEntities": [
+          "ECU"
+        ],
+        "extendedDescription": "Engine control unit"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 9.51602052053093,
+          "left": 66.02885622446706,
+          "width": 6.330612244897968,
+          "height": 2.788834154351395
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "layout": {
+          "top": 9.51602052053093,
+          "left": 77.16074436863212,
+          "width": 6.330612244897968,
+          "height": 2.788834154351395
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fog lights",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "extendedDescription": "Fog lights",
+        "individualFusePages": [
+          {
+            "url": "/citroen/c2/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/citroen/c2/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 38.48375743760914,
+          "left": 92.6030271431731,
+          "width": 2.4483478071914306,
+          "height": 9.99832852815761
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Headlight washer"
+      },
+      {
+        "layout": {
+          "top": 64.9205390468046,
+          "left": 14.1230785684057,
+          "width": 6.330612244897968,
+          "height": 2.788834154351395
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Repeat of the engine control system"
+      },
+      {
+        "layout": {
+          "top": 76.59612048170366,
+          "left": 42.13112536446572,
+          "width": 2.4483478071914306,
+          "height": 9.99832852815761
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left low beam headlamp",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/citroen/c2/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/citroen/c2/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.59612048170366,
+          "left": 47.86459136821612,
+          "width": 2.4483478071914306,
+          "height": 9.99832852815761
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right-hand dipped beam headlamp",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/citroen/c2/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/citroen/c2/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.10553045416094,
+          "left": 53.59805737196652,
+          "width": 2.4483478071914306,
+          "height": 9.99832852815761
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left high beam headlamp",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/citroen/c2/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/citroen/c2/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.10553045416094,
+          "left": 59.33152337571691,
+          "width": 2.4483478071914306,
+          "height": 9.99832852815761
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right high beam headlamp",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/citroen/c2/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/citroen/c2/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.10553045416094,
+          "left": 65.0649893794673,
+          "width": 2.4483478071914306,
+          "height": 9.99832852815761
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Sound warning signal"
+      },
+      {
+        "layout": {
+          "top": 69.10553045416094,
+          "left": 70.79845538321771,
+          "width": 2.4483478071914306,
+          "height": 9.99832852815761
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Washers",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 9.51602052053093,
+          "left": 12.833911587196257,
+          "width": 11.63333333333334,
+          "height": 3.921839080459779
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine control system devices"
+      },
+      {
+        "layout": {
+          "top": 53.9968109750412,
+          "left": 42.504970455335425,
+          "width": 3.3047619047619157,
+          "height": 17.68390804597701
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Air pump",
+        "relatedEntities": [
+          "BOMBA_AIRE_SECUNDARIO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.770345090627586,
+          "left": 91.02195831609566,
+          "width": 3.1047619047619155,
+          "height": 16.683908045976995
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windshield wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.10553045416094,
+          "left": 76.32432774038611,
+          "width": 3.1047619047619155,
+          "height": 16.683908045976995
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Electro fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/citroen/c2/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/citroen/c2/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/3ef31ca9_citroën-c2-2004.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.7205651491365777,
+    "boxName": "Engine compartment fuse box",
+    "imageClusters": [
+      "664607b80d0a55bb21315ebf"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/907b811b_image.jpg"
+      }
+    ],
+    "templateId": "68c0a3979ee4a2b1282379ed",
+    "templateRenameMap": {},
+    "boxScaleMultiplier": "1",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-citroen-c2-2005-genid-g1a-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 19.609411736495865,
+          "left": 13.270803374665949,
+          "width": 14.2907365937056,
+          "height": 29.243723664171608,
+          "rotation": -40
+        },
+        "kind": {
+          "amp": "",
+          "format": "pins-18-lg",
+          "type": "connector"
+        },
+        "id": "Conector 1"
+      },
+      {
+        "layout": {
+          "top": 33.490157480315226,
+          "left": 44.21651376146796,
+          "width": 11.946788990825704,
+          "height": 17.97952755905514,
+          "rotation": 180
+        },
+        "kind": {
+          "amp": "",
+          "format": "pins-3-sm",
+          "type": "connector"
+        },
+        "id": "Conector 2"
+      },
+      {
+        "layout": {
+          "top": 42.29330708661439,
+          "left": 58.18073394495415,
+          "width": 9.177064220183498,
+          "height": 6.692913385826772
+        },
+        "kind": {
+          "amp": "",
+          "format": "pins-3-sm",
+          "type": "connector"
+        },
+        "id": "Conector 3"
+      },
+      {
+        "layout": {
+          "top": 33.50688976377975,
+          "left": 73.41192660550463,
+          "width": 13.195412844036703,
+          "height": 17.322834645669293
+        },
+        "kind": {
+          "amp": "",
+          "format": "pins-10-lg",
+          "type": "connector"
+        },
+        "id": "Conector 4"
+      },
+      {
+        "id": "F1",
+        "layout": {
+          "top": 80.40354330708666,
+          "left": 86.10366972477055,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Circuit of the diagnostic socket * Hitch"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 80.40354330708666,
+          "left": 19.933027522935785,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Display 7 Navigation system * Electronic anti-theft alarm unit * Car radio"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 80.40354330708666,
+          "left": 80.13241590214061,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        }
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 80.40354330708666,
+          "left": 73.69449541284402,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Flywheel angular position sensor"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 80.40354330708666,
+          "left": 25.437614678899088,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Light sensor * Electronic anti-theft alarm unit"
+      },
+      {
+        "layout": {
+          "top": 58.07086614173228,
+          "left": 15.142046758989915,
+          "width": 5.107033639143731,
+          "height": 18.30708661417323
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "id": "F9"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 58.07086614173228,
+          "left": 40.95045871559634,
+          "width": 5.107033639143731,
+          "height": 18.30708661417323
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Electric heated exterior mirrors"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 80.40354330708666,
+          "left": 67.18990825688078,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        }
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 58.07086614173228,
+          "left": 33.02568807339453,
+          "width": 5.107033639143731,
+          "height": 18.30708661417323
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Electric sliding sunroof * Power windows for front doors"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 80.40354330708666,
+          "left": 14.428440366972477,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Electronic control unit (ECU) of airbags * Fuse box in the engine compartment"
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 62.490157480314934,
+          "left": 86.10366972477055,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Display - Navigation system * Air conditioning * Parking sensors * Car radio",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 58.07086614173228,
+          "left": 6.972477064220184,
+          "width": 5.107033639143731,
+          "height": 18.30708661417323
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Super blocking system"
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 62.490157480314934,
+          "left": 79.89908256880729,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 62.490157480314934,
+          "left": 73.69449541284402,
+          "width": 2.9412844036697257,
+          "height": 10.111023622047254
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Additional brake light"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 58.07086614173228,
+          "left": 59.63302752293578,
+          "width": 5.107033639143731,
+          "height": 18.30708661417323
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Cigarette lighter * Interior lighting * Adjustment and folding"
+      },
+      {
+        "layout": {
+          "top": 67.7893700787401,
+          "left": 51.559633027522935,
+          "width": 5.107033639143731,
+          "height": 18.30708661417323
+        },
+        "kind": {
+          "amp": "",
+          "format": "ato",
+          "type": "fuse-shunt"
+        },
+        "id": "SFI"
+      }
+    ],
+    "boxAspectRatio": 0.7707979626485568,
+    "boxName": "Passenger compartment fuse box",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/d617a7f2_citroën-c2-2004.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bf568e53_image.jpg"
+      }
+    ],
+    "templateId": "619cf805faaf4100041b0551",
+    "imageClusters": [
+      "61d61546bae6ba0004441975",
+      "61dc7cecd53fbf00041bb6e7",
+      "63b5ed6d1ab01b43d3a7fb04",
+      "649c43d5864fbd93fde39dcf"
+    ],
+    "boxScaleMultiplier": "",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-citroen-c2-2005-genid-g1a-1.webp"
+  }
+]

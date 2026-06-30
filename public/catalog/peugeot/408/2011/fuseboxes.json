@@ -1,0 +1,898 @@
+[
+  {
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/863aea3d_peugeot-408-2010.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/d23f398d_peugeot-408-2010.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/334d25d1_peugeot-408-2010.png"
+    },
+    "boxDescription": "The fuse box is located in the lower part of the dashboard (on the left side).",
+    "boxName": "Fuses in the dashboard",
+    "boxAspectRatio": 0.3981042654028436,
+    "processed": false,
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 37.31002879852354,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Not used",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 7.1221780362803075,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Locking ground",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 55.31982612827092,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Airbag and pyrotechnic pretensioner ECU",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "relatedEntities": [
+          "MODULO(of=AIRBAG)",
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 48.97351659302661,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Clutch pedal and dual-function brake switches, electrochromic interior rearview mirror, air conditioning, steering wheel angle sensor and ESP gyroscope, switching and protection unit, diagnostic socket",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "RELAY(protects=PEDAL_DE_EMBRAGUE)",
+          "AIRE_ACONDICIONADO",
+          "CONECTOR_OBD",
+          "PEDAL_DE_EMBRAGUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/air-conditioning-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 31.30676302194108,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Front sequential electric windows, folding mirrors power supply, sunroof",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/sunroof-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 25.30349724535862,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Rear sequential electric windows, trailer service box",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 43.48481645443693,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Front and rear dome lights, map reading lights, sun visor light, glove box light, trunk light",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO(ubicacion=PARTE_DELANTERA)",
+          "LUZ_DE_GUANTERA",
+          "TESTIGO_BAUL",
+          "LUZ_BAUL",
+          "LUZ_DE_HABITACULO(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 67.32635768143584,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Car radio, radiotelephone, multifunction display, steering wheel controls, alarm ECU, alarm siren",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "ESTEREO",
+          "RADIOTELEFONO",
+          "PANTALLA",
+          "MODULO_ALARMA",
+          "AVISO_SONORO",
+          "COMPUTADORA_ABORDO",
+          "COMANDOS_VOLANTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/radio-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 19.471753348107086,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Front 12 V socket, front cigarette lighter, rear 12 V socket",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)",
+          "ENCENDEDOR(ubicacion=PARTE_DELANTERA)",
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 61.49461378418432,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Automatic gearbox ECU, brake switch",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION",
+          "RELAY(protects=FRENO)",
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 17.342111385903987,
+          "left": 13.468487571524623,
+          "width": 2.401306310632986,
+          "height": 19.81955586960456
+        },
+        "description": "Low current anti-theft switch, diagnostic socket",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 81.3911517865719,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Driver's power seat, parking assist",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 75.04484225132758,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Engine sensor service box, trailer service box, rain/light sensor",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "relatedEntities": [
+          "SENSOR_DE_LLUVIA"
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 31.560488422794215,
+          "left": 87.22289568382344,
+          "width": 2.5728281899639116,
+          "height": 18.096116228769375
+        },
+        "description": "Multifunction display, amplifier, hands-free kit, instrument panel, airbag, automatic air conditioning, USB Box",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "PANTALLA",
+          "AMPLIFICADOR",
+          "MANOS_LIBRES",
+          "TABLERO",
+          "AIRBAG",
+          "AIRE_ACONDICIONADO",
+          "COMPUTADORA_ABORDO",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/air-conditioning-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 45.348005549475644,
+          "left": 13.468487571524623,
+          "width": 2.401306310632986,
+          "height": 19.81955586960456
+        },
+        "description": "Locking",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 14.326092014442423,
+          "left": 75.04484225132758,
+          "width": 12.006531553164926,
+          "height": 9.048058114384691
+        },
+        "description": "Rear window and exterior mirrors demisting",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "LUNETA_TRASERA",
+          "VENTANILLA(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "FSH",
+        "layout": {
+          "top": 14.326092014442423,
+          "left": 46.05764464440084,
+          "width": 12.006531553164926,
+          "height": 9.048058114384691
+        },
+        "description": "PARK Shunt",
+        "kind": {
+          "format": "ato",
+          "type": "fuse-shunt",
+          "notUsed": false
+        }
+      }
+    ],
+    "templateId": "619cfcdffaaf4100041b0558",
+    "isTranslated": true,
+    "imageClusters": [
+      "61eee85db231e80004f101dd"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-peugeot-408-2011-genid-g1-0.webp"
+  },
+  {
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/cf7e0d4b_peugeot-408-2010 motor.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/abc3ff44_peugeot-408-2010.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/2c85a942_peugeot-408-2010.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/962d19cc_peugeot-408-2010.png"
+    },
+    "boxDescription": "The fuse box is located in the engine compartment near the battery (on the left side).",
+    "boxName": "Fuses in the engine compartment",
+    "processed": false,
+    "fuses": [
+      {
+        "layout": {
+          "top": 69.54902557178572,
+          "left": 12.416147397905334,
+          "width": 2.9665065793993275,
+          "height": 10.880558667230474
+        },
+        "id": "F1",
+        "description": "Engine control unit power supply, solenoid valves, injection pump",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "ECU",
+          "ELECTROVALVULA",
+          "BOMBA_INYECTORA",
+          "ALIMENTACION_ELECTRICA(of=ECU)",
+          "SOLENOIDE"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 53.791107584264395,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Horn",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/horn-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 66.8288859049781,
+          "left": 55.82082261227447,
+          "width": 7.025936635419463,
+          "height": 4.698423060849521
+        },
+        "description": "Windshield washer",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 49.73167752824426,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Headlight washer",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "LAVA_FAROS"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 51.991760449663815,
+          "left": 65.03260620093553,
+          "width": 7.962728186808732,
+          "height": 5.192993909359998
+        },
+        "description": "Canister purge solenoid valves",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 71.74627898589192,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Vehicle speed sensor, ABS/ESP control unit, automatic gearbox, xenon headlights, directional headlights control unit",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "MODULO_ABS",
+          "CONTROL_DE_ESTABILIDAD",
+          "CAJA_DE_TRANSMISION",
+          "CAJA_AUTOMATICA",
+          "SENSOR_DE_VELOCIDAD"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 51.991760449663815,
+          "left": 73.30759823820735,
+          "width": 7.962728186808732,
+          "height": 5.192993909359998
+        },
+        "description": "Power steering control unit, engine water level detector",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "MODULO_DIRECCION_ASISTIDA"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 64.80114542608516,
+          "left": 77.0004397490156,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Starter control",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 25
+        }
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 58.00666956551608,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Diagnostic socket",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "layout": {
+          "top": 37.89649126711524,
+          "left": 12.260015472673789,
+          "width": 3.903298130788592,
+          "height": 17.804550546377143
+        },
+        "id": "F10",
+        "description": "Engine control unit actuators (ignition coils, solenoid valves, oxygen sensors, injectors, heaters, fuel pump, controlled thermostat)",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "ELECTROVALVULA",
+          "SENSOR_OXIGENO",
+          "INYECTOR",
+          "PRECALENTADOR",
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "SOLENOIDE",
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/fuel-pump-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 62.37774826838381,
+          "left": 18.505292481935534,
+          "width": 11.709894392365776,
+          "height": 5.9348501821257145
+        },
+        "description": "Air conditioning blower",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": "40"
+        },
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 58.66846690455524,
+          "left": 64.876474275704,
+          "width": 11.241498616671137,
+          "height": 5.934850182125722
+        },
+        "description": "Low/High speed windshield wipers",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "layout": {
+          "top": 70.78545269306191,
+          "left": 43.486400518982514,
+          "width": 11.241498616671144,
+          "height": 6.923991879146655
+        },
+        "id": "F13",
+        "description": "Smart service box power supply (+ after ignition)",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        }
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 66.33431505646762,
+          "left": 63.78355079908319,
+          "width": 10.929234766208054,
+          "height": 6.429421030636192
+        },
+        "description": "Not used",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 37.55338736018386,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Right high beam headlights",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 33.33782537893218,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Left high beam headlights",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 29.122263397680502,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Left low beam headlight",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 24.906701416428824,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "description": "Right low beam headlight",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/408/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/peugeot/408/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 20.84727136040869,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "id": "F19",
+        "description": "Oxygen sensors",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 16.631709379157012,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "id": "F20",
+        "description": "Controlled thermostat, variable valve timing solenoid valves",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 40.12206008541238,
+          "left": 75.96184096714359,
+          "width": 3.4349023550939606,
+          "height": 10.385987818720004
+        },
+        "id": "F21",
+        "description": "Fan unit relay power supply",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        }
+      },
+      {
+        "layout": {
+          "top": 76.44588080002296,
+          "left": 60.149776777626116,
+          "width": 16.607684224511743,
+          "height": 10.282456694118437
+        },
+        "id": "conector",
+        "kind": {
+          "amp": "",
+          "format": "generic",
+          "type": "connector"
+        }
+      },
+      {
+        "layout": {
+          "top": 17.333711153835118,
+          "left": 15.878319951401364,
+          "width": 22.621444873738497,
+          "height": 17.217136790151795
+        },
+        "id": "conector 1",
+        "kind": {
+          "amp": "10",
+          "format": "generic",
+          "type": "connector",
+          "notUsed": false
+        }
+      },
+      {
+        "layout": {
+          "top": 17.907615713506843,
+          "left": 66.33806803305814,
+          "width": 22.621444873738497,
+          "height": 17.217136790151795
+        },
+        "id": "conector 2",
+        "kind": {
+          "amp": "10",
+          "format": "generic",
+          "type": "connector",
+          "notUsed": false
+        }
+      },
+      {
+        "layout": {
+          "top": 54.86069263903636,
+          "left": 31.18151874670439,
+          "width": 14.467712441939184,
+          "height": 13.39110639234029
+        },
+        "id": "conector 3",
+        "kind": {
+          "amp": "10",
+          "format": "generic",
+          "type": "connector",
+          "notUsed": false
+        }
+      }
+    ],
+    "boxAspectRatio": 0.6669750231267345,
+    "templateId": "619d141dfaaf4100041b068d",
+    "isTranslated": true,
+    "imageClusters": [
+      "649c3ca2864fbd93fde39123"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-peugeot-408-2011-genid-g1-1.webp"
+  }
+]

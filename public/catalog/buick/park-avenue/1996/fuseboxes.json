@@ -1,0 +1,1334 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 4.935834155972359,
+          "left": 14.819427148194272,
+          "width": 8.094645080946451,
+          "height": 18.460019743336623
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Circuit Breaker-Power Windows, Astroroof",
+        "relatedEntities": [
+          "CIRCUIT_BREAKER(protects=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 4.935834155972359,
+          "left": 30.01245330012453,
+          "width": 8.094645080946451,
+          "height": 18.460019743336623
+        }
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 4.935834155972359,
+          "left": 45.33001245330012,
+          "width": 8.094645080946451,
+          "height": 18.460019743336623
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Circuit Breaker-Power Seats",
+        "relatedEntities": [
+          "CIRCUIT_BREAKER(protects=COMANDO_AJUSTE_ASIENTO)",
+          "CIRCUIT_BREAKER(protects=ASIENTO_ELECTRICO)"
+        ]
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 4.935834155972359,
+          "left": 60.39850560398505,
+          "width": 8.21917808219178,
+          "height": 18.460019743336623
+        }
+      },
+      {
+        "id": "5",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 4.935834155972359,
+          "left": 75.84059775840598,
+          "width": 8.094645080946451,
+          "height": 18.460019743336623
+        }
+      },
+      {
+        "id": "1A",
+        "layout": {
+          "top": 32.181638696939785,
+          "left": 12.702366127023662,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Start-Up Signal - Air Bag, PASS-Key II",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "2A",
+        "layout": {
+          "top": 32.181638696939785,
+          "left": 20.921544209215444,
+          "width": 4.10958904109589,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "3A",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 32.181638696939785,
+          "left": 29.389788293897883,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "4A",
+        "layout": {
+          "top": 32.181638696939785,
+          "left": 37.359900373599004,
+          "width": 4.10958904109589,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lamps",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ],
+        "extendedDescription": "Interior lights"
+      },
+      {
+        "id": "5A",
+        "layout": {
+          "top": 32.181638696939785,
+          "left": 45.33001245330012,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Base Cluster, Automatic A/C, Lamp Monitors - - Low Coolant, Oil Level"
+      },
+      {
+        "id": "6A",
+        "layout": {
+          "top": 32.28035538005923,
+          "left": 56.78704856787049,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Courtesy Lamps, Power Mirrors, Memory Seat Switch",
+        "relatedEntities": [
+          "LUZ_CORTESIA",
+          "ESPEJO_ELECTRICO",
+          "INTERRUPTOR(of=MEMORIA_ASIENTO)"
+        ]
+      },
+      {
+        "id": "7A",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 32.28035538005923,
+          "left": 65.1307596513076,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        }
+      },
+      {
+        "id": "8A",
+        "layout": {
+          "top": 32.28035538005923,
+          "left": 73.47447073474471,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Perimeter Lighting"
+      },
+      {
+        "id": "9A",
+        "layout": {
+          "top": 32.28035538005923,
+          "left": 81.69364881693649,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Front Ashtray Cigarette Lighter"
+      },
+      {
+        "id": "1B",
+        "layout": {
+          "top": 45.70582428430405,
+          "left": 12.826899128268993,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Turn Signal, Back-up Lamps, Cornering Lamps, Brake-Transaxle Shift Interlock",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL",
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "2B",
+        "layout": {
+          "top": 45.6071076011846,
+          "left": 21.668742216687424,
+          "width": 4.10958904109589,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "3B",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 45.6071076011846,
+          "left": 29.389788293897883,
+          "width": 4.10958904109589,
+          "height": 8.884501480750247
+        }
+      },
+      {
+        "id": "4B",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 45.70582428430405,
+          "left": 37.733499377334994,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "5B",
+        "layout": {
+          "top": 45.70582428430405,
+          "left": 45.45454545454545,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Anti-Lock Brake System",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "6B",
+        "layout": {
+          "top": 45.70582428430405,
+          "left": 56.78704856787049,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Brake and Hazard Lamps",
+        "relatedEntities": [
+          "FRENO",
+          "TESTIGO_FRENO_DE_MANO",
+          "LAMPARA(of=LUZ_BALIZA)",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "7B",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 45.70582428430405,
+          "left": 65.1307596513076,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        }
+      },
+      {
+        "id": "8B",
+        "layout": {
+          "top": 45.70582428430405,
+          "left": 73.47447073474471,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lighting",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "9B",
+        "layout": {
+          "top": 45.70582428430405,
+          "left": 81.69364881693649,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electronic Level Control"
+      },
+      {
+        "id": "1C",
+        "layout": {
+          "top": 59.03257650542941,
+          "left": 13.325031133250311,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Air Bag",
+        "relatedEntities": [
+          "AIRBAG"
+        ],
+        "extendedDescription": "Airbag"
+      },
+      {
+        "id": "2C",
+        "layout": {
+          "top": 59.03257650542941,
+          "left": 21.419676214196762,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "3C",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 59.03257650542941,
+          "left": 29.8879202988792,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "4C",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 59.03257650542941,
+          "left": 38.10709838107098,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "5C",
+        "layout": {
+          "top": 59.03257650542941,
+          "left": 45.82814445828144,
+          "width": 4.10958904109589,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cooling Fans, Transaxle",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "CAJA_DE_TRANSMISION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/1996/cooling-fan-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/1996/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "6C",
+        "layout": {
+          "top": 58.93385982230998,
+          "left": 56.911581569115825,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ],
+        "extendedDescription": "Parking lights"
+      },
+      {
+        "id": "7C",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 58.93385982230998,
+          "left": 65.25529265255294,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "8C",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 58.93385982230998,
+          "left": 73.59900373599004,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "9C",
+        "layout": {
+          "top": 58.93385982230998,
+          "left": 81.81818181818183,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Chime, Radio, Cluster",
+        "relatedEntities": [
+          "ESTEREO",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/1996/radio-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/1996/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "1D",
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 13.449564134495642,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "2D",
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 21.54420921544209,
+          "width": 4.10958904109589,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "3D",
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 30.01245330012453,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heated Mirror",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ],
+        "extendedDescription": "Mirror heater"
+      },
+      {
+        "id": "4D",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 38.35616438356164,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        }
+      },
+      {
+        "id": "5D",
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 46.07721046077211,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Base A/C"
+      },
+      {
+        "id": "6D",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 56.911581569115825,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        }
+      },
+      {
+        "id": "7D",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 65.25529265255294,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        }
+      },
+      {
+        "id": "8D",
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 73.59900373599004,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Radio and audio system",
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/1996/radio-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/1996/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "9D",
+        "layout": {
+          "top": 72.26061204343534,
+          "left": 81.81818181818183,
+          "width": 3.9850560398505603,
+          "height": 8.884501480750247
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Cigarette Lighters",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "1E",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 13.449564134495642,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "2E",
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 21.54420921544209,
+          "width": 4.10958904109589,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Air Bag/PASS-Key II"
+      },
+      {
+        "id": "3E",
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 30.01245330012453,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Ignition (Off/Unlock)"
+      },
+      {
+        "id": "4E",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 38.35616438356164,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "5E",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 46.07721046077211,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "6E",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 56.911581569115825,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "7E",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 65.25529265255294,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        }
+      },
+      {
+        "id": "8E",
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 73.59900373599004,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Wipers, Washer",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ],
+        "extendedDescription": "Wipers; Windshield washer"
+      },
+      {
+        "id": "9E",
+        "layout": {
+          "top": 85.5873642645607,
+          "left": 81.81818181818183,
+          "width": 3.9850560398505603,
+          "height": 8.7857847976308
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Defog",
+        "extendedDescription": "Rear window defogger"
+      }
+    ],
+    "boxName": "Driver’s side fuse panel",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f88f85fb94e300040e1fc5/fragment-60f88f85fb94e300040e1fc5-8da7d57ea0.jpg",
+      "source": "68e92465f1d737c06c3d33f3"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f88f85fb94e300040e1fc5/fragment-60f88f85fb94e300040e1fc5-22c41777c0.jpg",
+        "source": "68e92468f1d737c06c3d33f7"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f88f85fb94e300040e1fc5/fragment-60f88f85fb94e300040e1fc5-7457fc2165.jpg",
+        "source": "68e9246ef1d737c06c3d33f9"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f88f85fb94e300040e1fc5/fragment-60f88f85fb94e300040e1fc5-0b8237c2b0.jpg",
+        "source": "68e92472f1d737c06c3d33fb"
+      }
+    ],
+    "boxDescription": "The left side fuse panel is located under the instrument panel, next to the parking brake. Snap off the cover to reveal the fuses. You’ll find a fuse puller clipped to the inside of the cover. Place the wide end of the fuse puller over the plastic end of the fuse. Squeeze the ends over the fuse and pull it out. Spare fuses are located in the slots labeled “Spare” on the following chart. ",
+    "boxAspectRatio": 0.9966101694915255,
+    "processed": false,
+    "templateId": "614250f7eac899000496b6ea",
+    "templateRenameMap": {
+      "1": "1",
+      "3": "3",
+      "1A": "1A",
+      "2A": "2A",
+      "4A": "4A",
+      "5A": "5A",
+      "6A": "6A",
+      "8A": "8A",
+      "9A": "9A",
+      "1B": "1B",
+      "2B": "2B",
+      "5B": "5B",
+      "6B": "6B",
+      "8B": "8B",
+      "9B": "9B",
+      "1C": "1C",
+      "2C": "2C",
+      "5C": "5C",
+      "6C": "6C",
+      "9C": "9C",
+      "2D": "2D",
+      "3D": "3D",
+      "5D": "5D",
+      "8D": "8D",
+      "9D": "9D",
+      "2E": "2E",
+      "3E": "3E",
+      "8E": "8E",
+      "9E": "9E"
+    },
+    "imageClusters": [
+      "681500935337fe9751a0815e"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-buick-park-avenue-1996-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 55.085694208106666,
+          "left": 26.73777247233192,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Door Locks, Trunk Pull-Down, Fuel Door Release",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 63.34791631890945,
+          "left": 26.73777247233192,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Antenna, Lock Switch, Trunk Release",
+        "relatedEntities": [
+          "ANTENA_ELECTRICA",
+          "CERRADURA(of=PUERTA_BAUL)"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 71.71744001556681,
+          "left": 26.73777247233192,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Horns",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/1996/horn-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/1996/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 79.44315419709666,
+          "left": 26.73777247233192,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 55.085694208106666,
+          "left": 32.88744752107874,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cruise Control, Misc. Engine Controls",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "ECU"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 63.240614733054834,
+          "left": 32.88744752107874,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/1996/fuel-pump-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/1996/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 71.50283684385765,
+          "left": 32.88744752107874,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Injectors",
+        "relatedEntities": [
+          "INYECTOR"
+        ],
+        "extendedDescription": "Fuel injectors"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 79.5504557829512,
+          "left": 32.88744752107874,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Powertrain Control Module, PASS-Key®II",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.085694208106666,
+          "left": 38.406386667390024,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 63.34791631890945,
+          "left": 38.406386667390024,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 71.50283684385765,
+          "left": 38.406386667390024,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "A/C Programmer"
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 79.76505895466038,
+          "left": 38.406386667390024,
+          "width": 2.2075756585245045,
+          "height": 6.077460262474065
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 13.502405202156305,
+          "left": 28.005459801178823,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 21.26058723192501,
+          "left": 28.005459801178823,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 29.936591873116015,
+          "left": 28.005459801178823,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 39.617615604449284,
+          "left": 28.005459801178823,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 46.691252161003014,
+          "left": 28.005459801178823,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 13.502405202156305,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 21.26058723192501,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 29.936591873116015,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 39.38943378004433,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 46.691252161003014,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R11",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 55.48876472661395,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R12",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 63.43307814037085,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R13",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 71.37739155412775,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R14",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 79.32170496788467,
+          "left": 47.12190401720091,
+          "width": 9.088145610895744,
+          "height": 6.38909108333884
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Passenger’s Side Fuse Panel ",
+    "boxDescription": "Additional fuses are located in the relay center, on the far right side, below the instrument panel. You must remove the sound insulator on the right side of the passenger footwell to replace these fuses. Replacing these fuses is difficult. We recommend that you see your dealer if you need one replaced. ",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f88f85fb94e300040e1fc5/fragment-60f88f85fb94e300040e1fc5-953eba5992.jpg",
+      "source": "68e924d1f1d737c06c3d3420"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f88f85fb94e300040e1fc5/fragment-60f88f85fb94e300040e1fc5-716239d24c.jpg",
+        "source": "68e924d7f1d737c06c3d3425"
+      }
+    ],
+    "boxAspectRatio": 1.3733552631578947,
+    "processed": false,
+    "templateId": "61425655eac899000496b6ec",
+    "templateRenameMap": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "11": "11"
+    },
+    "imageClusters": [
+      "67d2c853f4851ac65f87a90a"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-buick-park-avenue-1996-genid-g1-1.webp"
+  }
+]

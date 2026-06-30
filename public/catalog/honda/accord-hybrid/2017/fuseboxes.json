@@ -1,0 +1,1921 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 43.52916924213362,
+          "left": 13.212721668953336,
+          "width": 4.841767982017911,
+          "height": 31.824359659555736
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 150
+        },
+        "description": "Battery",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "id": "2-1",
+        "layout": {
+          "top": 14.401180124748203,
+          "left": 5.94509827044177,
+          "width": 4.083746939047793,
+          "height": 3.800723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 70
+        },
+        "description": "EPS",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA"
+        ],
+        "extendedDescription": "Electric power steering"
+      },
+      {
+        "id": "2-2",
+        "layout": {
+          "top": 14.401180124748203,
+          "left": 9.783296138769181,
+          "width": 4.083746939047793,
+          "height": 3.800723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "ESB",
+        "extendedDescription": "Electric servo brake system"
+      },
+      {
+        "id": "2-3",
+        "layout": {
+          "top": 14.401180124748203,
+          "left": 13.621494007096594,
+          "width": 4.083746939047793,
+          "height": 3.800723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Right EPB [Not available on all models]",
+        "relatedEntities": [
+          "FRENO_DE_MANO_ELECTRONICO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "2-4",
+        "layout": {
+          "top": 14.401180124748203,
+          "left": 17.459691875424014,
+          "width": 4.083746939047793,
+          "height": 3.800723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "Fuse Box Option 1"
+      },
+      {
+        "id": "2-5",
+        "layout": {
+          "top": 14.401180124748203,
+          "left": 21.297889743751455,
+          "width": 4.083746939047793,
+          "height": 3.800723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Shift By Wire [Not available on all models]"
+      },
+      {
+        "id": "2-6",
+        "layout": {
+          "top": 14.401180124748203,
+          "left": 25.136087612078853,
+          "width": 4.083746939047793,
+          "height": 3.800723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "RFC"
+      },
+      {
+        "id": "2-7",
+        "layout": {
+          "top": 14.401180124748203,
+          "left": 28.974285480406266,
+          "width": 4.083746939047793,
+          "height": 3.800723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "IG Main 1",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO"
+        ],
+        "extendedDescription": "Protects several circuits"
+      },
+      {
+        "id": "3-1",
+        "layout": {
+          "top": 52.00994656328488,
+          "left": 20.889306423116324,
+          "width": 3.9030344801296057,
+          "height": 3.456118531907079
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Headlight Low Beam Main",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA)"
+        ],
+        "extendedDescription": "Headlights low beam"
+      },
+      {
+        "id": "3-2",
+        "layout": {
+          "top": 52.00994656328488,
+          "left": 24.55765777917142,
+          "width": 3.9030344801296057,
+          "height": 3.456118531907079
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Engine Electric Water Pump"
+      },
+      {
+        "id": "3-3",
+        "layout": {
+          "top": 52.00994656328488,
+          "left": 28.226009135226512,
+          "width": 3.9030344801296057,
+          "height": 3.456118531907079
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "IG Main 2",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO"
+        ],
+        "extendedDescription": "Protects several circuits"
+      },
+      {
+        "id": "3-4",
+        "layout": {
+          "top": 52.00994656328488,
+          "left": 31.790714331028425,
+          "width": 3.9030344801296057,
+          "height": 3.456118531907079
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Wiper Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ],
+        "extendedDescription": "Wipers"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 23.832605917023162,
+          "left": 14.232033775685608,
+          "width": 1.6558641245209813,
+          "height": 7.782982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "FI Main"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 23.832605917023162,
+          "left": 17.19422132989545,
+          "width": 1.6558641245209813,
+          "height": 7.782982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "PCU Electric Water Pump"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 23.832605917023162,
+          "left": 20.156408884105282,
+          "width": 1.6558641245209813,
+          "height": 7.782982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "EVTC"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 23.832605917023162,
+          "left": 23.118596438315116,
+          "width": 1.6558641245209813,
+          "height": 7.782982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IG Hold"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 23.832605917023162,
+          "left": 26.080783992524953,
+          "width": 1.6558641245209813,
+          "height": 7.782982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DBW",
+        "extendedDescription": "Drive-by-Wire Throttle System"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 28.017874299288916,
+          "left": 29.340557533393266,
+          "width": 4.373339010581763,
+          "height": 3.2376536301839387
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IG Coil",
+        "relatedEntities": [
+          "RELAY(protects=ACCESORIO_ELECTRICO)"
+        ],
+        "extendedDescription": "Ignition coil"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 33.583324899462205,
+          "left": 29.340557533393266,
+          "width": 4.373339010581763,
+          "height": 3.2376536301839387
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Stop Light",
+        "relatedEntities": [
+          "TESTIGO_STOP"
+        ],
+        "extendedDescription": "Stop lights",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/brake-light-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 39.14877549963548,
+          "left": 29.340557533393266,
+          "width": 4.373339010581763,
+          "height": 3.2376536301839387
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "VBU"
+      },
+      {
+        "id": "12-1",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 35.36010461512986,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Fuse Box Main 2"
+      },
+      {
+        "id": "12-2",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 39.07907490419643,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50
+        },
+        "description": "Rear Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "12-3",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 42.798045193263,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Fuse Box Main 1"
+      },
+      {
+        "id": "12-4",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 46.51701548232956,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "ABS/VSA FSR",
+        "extendedDescription": "Anti-lock braking system/vehicle stability assist"
+      },
+      {
+        "id": "12-5",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 50.23598577139613,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Fuse Box"
+      },
+      {
+        "id": "12-6",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 53.9549560604627,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "ABS/VSA Motor",
+        "extendedDescription": "Anti-lock braking system/vehicle stability assist"
+      },
+      {
+        "id": "12-7",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 57.67392634952926,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "Heater Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "12-8",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 61.39289663859583,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Left EPB [Not available on all models]",
+        "relatedEntities": [
+          "FRENO_DE_MANO_ELECTRONICO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "12-9",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 65.11186692766245,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 20
+        },
+        "description": "Small Light",
+        "relatedEntities": [
+          "LUZ_POSICION"
+        ],
+        "extendedDescription": "Small lights"
+      },
+      {
+        "id": "12-10",
+        "layout": {
+          "top": 79.70339565166883,
+          "left": 68.81784853968554,
+          "width": 3.9951368444288153,
+          "height": 4.000723826737671
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "Fuse Box Option 2"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 61.99087655194871,
+          "left": 66.65232836179842,
+          "width": 4.967592373562937,
+          "height": 10.416798636243989
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "A/C PTC 4"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 39.81155397168598,
+          "left": 38.460339590134204,
+          "width": 5.913800444717793,
+          "height": 8.868355595721233
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "A/CPTC 2"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 39.4853983338853,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Front Fog Light + DRL"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 42.45544033501023,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/horn-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 45.42548233613516,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IG Hold 3-L/R"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 48.3955243372601,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Interior Light",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ],
+        "extendedDescription": "Interior lights"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 53.126564693034325,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "—"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 56.07032313662718,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Premium Amp [Not available on all models]",
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 59.014081580220044,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Back Up",
+        "extendedDescription": "Backup lights"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 64.12988306250199,
+          "left": 61.957840023812906,
+          "width": 1.5558641245209812,
+          "height": 7.682982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/radio-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 35.526577313923454,
+          "left": 17.29180731655391,
+          "width": 4.057936320196813,
+          "height": 2.815350982768642
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "P-ACT Drive [Not available on all models]"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 34.709465292569654,
+          "left": 23.071520744338454,
+          "width": 1.6558641245209813,
+          "height": 7.782982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right Headlight Low Beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_DERECHO))"
+        ],
+        "extendedDescription": "Right-hand headlight low beam",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/headlight-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 34.709465292569654,
+          "left": 26.03370829854829,
+          "width": 1.6558641245209813,
+          "height": 7.782982751752206
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left Headlight Low Beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "extendedDescription": "Left-hand headlight low beam",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/headlight-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 57.53103670806207,
+          "left": 39.91620371465518,
+          "width": 4.257936320196812,
+          "height": 2.815350982768642
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IGPS LAF",
+        "extendedDescription": "Lean air flow sensor (special O2 sensor)"
+      },
+      {
+        "id": "Other",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 10.051313374768824,
+          "left": 46.07046559350899,
+          "width": 45.5294806894703,
+          "height": 24.648948255256627
+        }
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 14.541947673886636,
+          "left": 35.62746201368848,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 41.00624691191189,
+          "left": 46.26655617716169,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 41.00624691191189,
+          "left": 53.86546236063144,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 41.00624691191189,
+          "left": 61.46436854410119,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 41.00624691191189,
+          "left": 69.06327472757094,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 41.00624691191189,
+          "left": 76.6621809110407,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 41.00624691191189,
+          "left": 84.26108709451046,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 61.31453207973334,
+          "left": 73.23739562142221,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 61.31453207973334,
+          "left": 80.36867095220089,
+          "width": 6.760008515872643,
+          "height": 17.69978138799618
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Box",
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff0d98abf9ed0004c5089f/fragment-60ff0d98abf9ed0004c5089f-766eb3b7be.jpg",
+        "source": "69c7f2e3fe33f2a37f4dadfb"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff0d98abf9ed0004c5089f/fragment-60ff0d98abf9ed0004c5089f-42f5d6db24.jpg",
+        "source": "69c7f2f5fe33f2a37f4dadff"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff0d98abf9ed0004c5089f/fragment-60ff0d98abf9ed0004c5089f-6421b62fa2.jpg",
+        "source": "69c7f2fbfe33f2a37f4dae03"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/acb40c71_image.jpg"
+      }
+    ],
+    "templateId": "68373ed22eee7875a29237bb",
+    "processed": false,
+    "boxAspectRatio": 0.5601436265709157,
+    "imageClusters": [
+      "64483853018de7b24e85a53f"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/dc37bd55_honda-accord hybrid-2017.jpg"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-honda-accord-hybrid-2017-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 4.396984924623116,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "A/C",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "extendedDescription": "Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 9.673366834170855,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "DRL",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "extendedDescription": "Daytime running lights",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/headlight-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 14.949748743718594,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        }
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 20.22613065326633,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        }
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 25.502512562814072,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Meter",
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 30.778894472361806,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "SRS",
+        "relatedEntities": [
+          "AIRBAG",
+          "TESTIGO_SRS"
+        ],
+        "extendedDescription": "Airbag"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 36.05527638190954,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Option"
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 41.33165829145729,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 46.608040201005025,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/fuel-pump-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 51.88442211055276,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "ABS/VSA",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ],
+        "extendedDescription": "Anti-lock braking system/vehicle stability assist"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 57.1608040201005,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "VB SOL"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 62.437185929648244,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Front Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA)"
+        ],
+        "extendedDescription": "Front wipers"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 76.67342799188641,
+          "left": 67.71356783919597,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ACG",
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 9.673366834170855,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Accessory Power Socket [Console Compartment]",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 14.949748743718594,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Driver’s Power Seat Reclining"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 20.22613065326633,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Moonroof [Not available on all models]",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/sunroof-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 25.502512562814072,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Seat Heaters",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 30.778894472361806,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        }
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 36.05527638190954,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Passenger Side Door Unlock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 41.33165829145729,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver Side Rear Door Unlock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 46.608040201005025,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver’s Door Lock"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 51.88442211055276,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Passenger Side Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_DERECHO)",
+          "CERRADURA(of=PUERTA(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 57.1608040201005,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver’s Door Unlock"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 58.21501014198783,
+          "left": 62.437185929648244,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SRS",
+        "relatedEntities": [
+          "AIRBAG",
+          "TESTIGO_SRS"
+        ],
+        "extendedDescription": "Airbag"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 9.673366834170855,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Illumination",
+        "relatedEntities": [
+          "BACKLIGHT"
+        ],
+        "extendedDescription": "Illumination"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 14.949748743718594,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Key Lock"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 20.22613065326633,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Parking Lights",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 25.502512562814072,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Lumbar Support",
+        "extendedDescription": "Power seats"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 30.778894472361806,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right Headlight High Beam",
+        "extendedDescription": "Right-hand headlight high beam"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 36.05527638190954,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Washer",
+        "relatedEntities": [
+          "SAPITO"
+        ],
+        "extendedDescription": "Windshield washer"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 41.33165829145729,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C Main",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "extendedDescription": "Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/honda/accord-hybrid/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/honda/accord-hybrid/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 46.608040201005025,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Driver’s Power Window"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 51.88442211055276,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Passenger’s Power Window"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 57.1608040201005,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Driver Side Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 41.17647058823529,
+          "left": 62.437185929648244,
+          "width": 3.391959798994975,
+          "height": 15.415821501014198
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Passenger Side Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 32.657200811359026,
+          "left": 4.396984924623116,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Driver’s Power Seat Sliding"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 32.657200811359026,
+          "left": 14.07035175879397,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "ACCESSORY",
+        "relatedEntities": [
+          "ACCESORIO"
+        ],
+        "extendedDescription": "Protects several accesory circuits"
+      },
+      {
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 32.657200811359026,
+          "left": 23.743718592964825,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        }
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 32.657200811359026,
+          "left": 33.41708542713568,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left Headlight High Beam",
+        "extendedDescription": "Left-hand headlight high beam"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 32.657200811359026,
+          "left": 43.09045226130653,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Accessory Power Socket [Console Panel]",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 32.657200811359026,
+          "left": 52.76381909547738,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver Side Rear Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))",
+          "CERRADURA(of=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA)))"
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 32.657200811359026,
+          "left": 62.437185929648244,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ],
+        "extendedDescription": "Power door lock system"
+      },
+      {
+        "id": "a",
+        "layout": {
+          "top": 39.75659229208925,
+          "left": 88.81909547738694,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SMART",
+        "extendedDescription": "Smart key system"
+      },
+      {
+        "id": "b",
+        "layout": {
+          "top": 48.275862068965516,
+          "left": 88.81909547738694,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "SHIFTER [Not available on all models]"
+      },
+      {
+        "id": "c",
+        "layout": {
+          "top": 56.79513184584179,
+          "left": 88.81909547738694,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hybrid System"
+      },
+      {
+        "id": "d",
+        "layout": {
+          "top": 65.31440162271805,
+          "left": 88.81909547738694,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Hazard",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ],
+        "extendedDescription": "Hazard light"
+      },
+      {
+        "id": "e",
+        "layout": {
+          "top": 39.75659229208925,
+          "left": 78.26633165829145,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Passenger's Power Seat Reclining [Not available on all models]"
+      },
+      {
+        "id": "f",
+        "layout": {
+          "top": 48.275862068965516,
+          "left": 78.26633165829145,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Passenger's Power Seat Sliding [Not available on all models]"
+      },
+      {
+        "id": "g",
+        "layout": {
+          "top": 56.79513184584179,
+          "left": 78.26633165829145,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear Seat Heaters [Not available on all models]",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "h",
+        "layout": {
+          "top": 65.31440162271805,
+          "left": 78.26633165829145,
+          "width": 8.668341708542714,
+          "height": 5.476673427991886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ACL [Not available on all models]"
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "amp": 20,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "layout": {
+          "top": 7.099391480730223,
+          "left": 4.396984924623116,
+          "width": 15.7035175879397,
+          "height": 15.415821501014198
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "amp": 20,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "layout": {
+          "top": 7.099391480730223,
+          "left": 29.899497487437188,
+          "width": 15.7035175879397,
+          "height": 15.415821501014198
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "amp": 20,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "layout": {
+          "top": 7.099391480730223,
+          "left": 55.40201005025126,
+          "width": 15.7035175879397,
+          "height": 15.415821501014198
+        }
+      },
+      {
+        "id": "j",
+        "kind": {
+          "amp": 7.5,
+          "type": "",
+          "format": ""
+        },
+        "description": "IG MON [Not available on all models]",
+        "layout": {},
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Interior Fuse Box",
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff0d98abf9ed0004c5089f/fragment-60ff0d98abf9ed0004c5089f-b2aa988941.jpg",
+        "source": "69c7f318fe33f2a37f4dae0b"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff0d98abf9ed0004c5089f/fragment-60ff0d98abf9ed0004c5089f-5d74d89b93.jpg",
+        "source": "69c7f320fe33f2a37f4dae0f"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff0d98abf9ed0004c5089f/fragment-60ff0d98abf9ed0004c5089f-d270b127be.jpg",
+        "source": "69c7f32bfe33f2a37f4dae13"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.6193467336683417,
+    "templateId": "6137e70d2416030004dbf743",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/2187a703_honda-accord hybrid-2017.jpg"
+    },
+    "imageClusters": [
+      "66745e173851d3b245258f47"
+    ],
+    "boxScaleMultiplier": "0.7",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-honda-accord-hybrid-2017-genid-g2-1.webp"
+  }
+]

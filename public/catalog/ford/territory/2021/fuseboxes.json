@@ -1,0 +1,2749 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F01",
+        "layout": {
+          "top": 77.57847533632287,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Gateway"
+      },
+      {
+        "id": "F02",
+        "layout": {
+          "top": 72.72047832585949,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.185351270553064
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument panel",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "F03",
+        "layout": {
+          "top": 68.08669656203288,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Diagnostic interface, combination switch, electric rearview mirror switch"
+      },
+      {
+        "id": "F04",
+        "layout": {
+          "top": 63.22869955156951,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.185351270553064
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right rear fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA)))",
+          "LUZ_ANTINIEBLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "F05",
+        "layout": {
+          "top": 58.594917787742894,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "F06",
+        "layout": {
+          "top": 53.88639760837071,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Passive antenna for key recognition"
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 49.10313901345291,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "F08",
+        "layout": {
+          "top": 44.39461883408072,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Door lock motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=CERRADURA(of=PUERTA))"
+        ]
+      },
+      {
+        "id": "F09",
+        "layout": {
+          "top": 39.61136023916293,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Conditioning Control Module 1",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/air-conditioning-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 34.902840059790734,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Emergency lights",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 30.119581464872947,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Electric seat",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 25.411061285500747,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/sunroof-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 20.62780269058296,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.185351270553064
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sun visor"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 15.919282511210762,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Left rear window [TREND]",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))",
+          "LUNETA_TRASERA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 11.136023916292975,
+          "left": 3.2679738562091507,
+          "width": 14.052287581699346,
+          "height": 4.185351270553064
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Right rear window [TREND]",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))",
+          "LUNETA_TRASERA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 17.189835575485798,
+          "left": 18.40958605664488,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake lamp, high-speed braking lamp, AT shift lever",
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 12.556053811659194,
+          "left": 18.40958605664488,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Electric interior rearview mirror, reading lamp, makeup lamp, overhead front lamp, ambient lighting, trunk lamp",
+        "relatedEntities": [
+          "LUZ_LECTURA",
+          "LUZ_DE_HABITACULO",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 7.698056801195814,
+          "left": 18.40958605664488,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right position lamp"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 3.0642750373692076,
+          "left": 18.40958605664488,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left position lamp"
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 82.7354260089686,
+          "left": 74.29193899782135,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "5"
+        },
+        "description": "Wireless Charger / Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/radio-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 82.7354260089686,
+          "left": 74.29193899782135,
+          "width": 14.052287581699346,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Wireless Charger / Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/radio-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 77.87742899850522,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.260089686098654
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Rear defogger relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 73.24364723467862,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Conditioning Control Module 2",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/air-conditioning-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 68.38565022421524,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.260089686098654
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "360° Monitoring Camera"
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 63.751868460388636,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Window regulator"
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 58.893871449925264,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.260089686098654
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Control panel, Switch panel, Electronic parking brake switch",
+        "relatedEntities": [
+          "COMANDO"
+        ]
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 54.26008968609865,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Vehicle tilt sensor, left console switch, panel switch box, BCM IG"
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 49.40209267563528,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.260089686098654
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ACU"
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 44.76831091180867,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Passive antenna for key recognition, transmission",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F29",
+        "layout": {
+          "top": 40.134529147982065,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 35.276532137518686,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Reserved"
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 30.642750373692078,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Tire pressure monitoring system",
+        "relatedEntities": [
+          "SENSOR_PRESION_NEUMATICOS"
+        ]
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 25.784753363228702,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Gateway IG"
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 21.150971599402094,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rearview mirror regulator, BCM ADC, Modem, ACC",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "id": "F34",
+        "layout": {
+          "top": 16.292974588938712,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Audio 2",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/radio-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 11.659192825112108,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Lighter, USB",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "CONECTOR_USB"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet; USB charger",
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F36",
+        "layout": {
+          "top": 6.801195814648729,
+          "left": 74.29193899782135,
+          "width": 14.052287581699346,
+          "height": 4.260089686098654
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Vehicle power supply",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=TOMA_12V)"
+        ]
+      },
+      {
+        "id": "F37",
+        "layout": {
+          "top": 2.167414050822123,
+          "left": 74.29193899782135,
+          "width": 13.943355119825709,
+          "height": 4.0358744394618835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rearview mirror heater"
+      },
+      {
+        "id": "DF01",
+        "layout": {
+          "top": 88.49028400597906,
+          "left": 24.727668845315904,
+          "width": 9.803921568627452,
+          "height": 8.669656203288492
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ACC power supply",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=GENERIC_FUSE_NAME(protects=MODO_POWER))",
+          "ALIMENTACION_ELECTRICA(of=GENERIC_FUSE_NAME)"
+        ]
+      },
+      {
+        "id": "DF02",
+        "layout": {
+          "top": 88.49028400597906,
+          "left": 36.710239651416124,
+          "width": 9.803921568627452,
+          "height": 8.669656203288492
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "IG1 power supply"
+      },
+      {
+        "id": "DF03",
+        "layout": {
+          "top": 88.49028400597906,
+          "left": 48.69281045751634,
+          "width": 9.803921568627452,
+          "height": 8.669656203288492
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "IG2 power supply",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=GENERIC_FUSE_NAME(protects=MODO_POWER))",
+          "ALIMENTACION_ELECTRICA(of=GENERIC_FUSE_NAME)"
+        ]
+      },
+      {
+        "id": "DF04",
+        "layout": {
+          "top": 88.49028400597906,
+          "left": 60.78431372549019,
+          "width": 9.803921568627452,
+          "height": 8.669656203288492
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Rear defogger power supply"
+      },
+      {
+        "id": "DF05",
+        "layout": {
+          "top": 88.49028400597906,
+          "left": 72.98474945533769,
+          "width": 9.803921568627452,
+          "height": 8.669656203288492
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "id": "DF06",
+        "layout": {
+          "top": 12.03288490284006,
+          "left": 33.33333333333333,
+          "width": 9.803921568627452,
+          "height": 8.669656203288492
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Left front window [SEL Plus]",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "DF06",
+        "layout": {
+          "top": 12.03288490284006,
+          "left": 33.33333333333333,
+          "width": 9.803921568627452,
+          "height": 8.669656203288492
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Front and rear left windows [Titanium]",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "DF07",
+        "layout": {
+          "top": 3.0642750373692076,
+          "left": 33.11546840958606,
+          "width": 9.803921568627452,
+          "height": 7.473841554559043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Right front window [SEL Plus]",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "DF07",
+        "layout": {
+          "top": 3.0642750373692076,
+          "left": 33.11546840958606,
+          "width": 9.803921568627452,
+          "height": 7.473841554559043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Front and rear right windows [Titanium]",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "R01",
+        "layout": {
+          "top": 63.59618678145011,
+          "left": 45.31590413943355,
+          "width": 23.093681917211327,
+          "height": 16.380402941556405
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "IG2 relay",
+        "relatedEntities": [
+          "RELAY(protects=GENERIC_FUSE_NAME)",
+          "GENERIC_FUSE_NAME(protects=RELAY)"
+        ],
+        "extendedDescription": "Protects several circuits"
+      },
+      {
+        "id": "R02",
+        "layout": {
+          "top": 42.82511210762332,
+          "left": 45.31590413943355,
+          "width": 23.093681917211327,
+          "height": 18.90881913303438
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "IG1 relay",
+        "relatedEntities": [
+          "RELAY(protects=ACCESORIO_ELECTRICO)"
+        ],
+        "extendedDescription": "Protects several circuits"
+      },
+      {
+        "id": "R03",
+        "layout": {
+          "top": 23.693550168951067,
+          "left": 45.31590413943355,
+          "width": 23.093681917211327,
+          "height": 17.951944140930667
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "ACC relay",
+        "relatedEntities": [
+          "RELAY(protects=GENERIC_FUSE_NAME)",
+          "GENERIC_FUSE_NAME(protects=RELAY)"
+        ],
+        "extendedDescription": "Protects several accesory circuits"
+      },
+      {
+        "id": "R04",
+        "layout": {
+          "top": 3.0642750373692076,
+          "left": 45.31590413943355,
+          "width": 23.093681917211327,
+          "height": 18.53512705530643
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear defogger relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "R05",
+        "layout": {
+          "top": 24.70354507843945,
+          "left": 22.113289760348582,
+          "width": 22.875816993464053,
+          "height": 16.83113594148874
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Reserved"
+      },
+      {
+        "id": "R06",
+        "layout": {
+          "top": 68.23617339312406,
+          "left": 22.113289760348582,
+          "width": 22.875816993464053,
+          "height": 12.481315396113603
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Position lamp relay",
+        "extendedDescription": "Parking lights"
+      },
+      {
+        "id": "R07",
+        "layout": {
+          "top": 55.530642750373694,
+          "left": 22.113289760348582,
+          "width": 22.875816993464053,
+          "height": 12.406576980568012
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Interior lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_DE_HABITACULO)"
+        ],
+        "extendedDescription": "Dome light and interior light"
+      },
+      {
+        "id": "R08",
+        "layout": {
+          "top": 42.82511210762332,
+          "left": 22.113289760348582,
+          "width": 22.875816993464053,
+          "height": 12.406576980568012
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Position lamp relay (12V)"
+      }
+    ],
+    "boxName": "INTERNAL FUSE BOX",
+    "boxDiagramImg": {
+      "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-8c2aac44c4.jpg",
+      "source": "620c13be731dd7323a7186b0"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-12a8edc9d8.jpg",
+        "source": "620c13c7731dd7323a7186b2"
+      },
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-08e268302e.jpg",
+        "source": "620c13ce731dd7323a7186b4"
+      },
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-5b616aa006.jpg",
+        "source": "620c13d5731dd7323a7186b6"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.457516339869281,
+    "templateId": "624cda7c58d7d294efe63cc4",
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxScaleMultiplier": "0.7",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-territory-2021-genid-g3-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "EF01",
+        "layout": {
+          "top": 75.68710359408034,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF02",
+        "layout": {
+          "top": 73.0091613812544,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF03",
+        "layout": {
+          "top": 70.19027484143763,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Conditioning Compressor"
+      },
+      {
+        "id": "EF04",
+        "layout": {
+          "top": 67.51233262861169,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear Windshield Wiper"
+      },
+      {
+        "id": "EF05",
+        "layout": {
+          "top": 64.6229739252995,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Tire Pressure Monitoring System"
+      },
+      {
+        "id": "EF06",
+        "layout": {
+          "top": 61.94503171247357,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Brake Pedal Switch"
+      },
+      {
+        "id": "EF07",
+        "layout": {
+          "top": 59.05567300916138,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump"
+      },
+      {
+        "id": "EF08",
+        "layout": {
+          "top": 56.37773079633545,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF09",
+        "layout": {
+          "top": 53.48837209302325,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF10",
+        "layout": {
+          "top": 50.810429880197326,
+          "left": 17.7732379979571,
+          "width": 8.478038815117467,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF11",
+        "layout": {
+          "top": 47.70965468639887,
+          "left": 17.364657814096017,
+          "width": 8.88661899897855,
+          "height": 2.6074700493305145
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF12",
+        "layout": {
+          "top": 49.54193093727978,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Windshield Washer Motor"
+      },
+      {
+        "id": "EF13",
+        "layout": {
+          "top": 46.582100070472165,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn"
+      },
+      {
+        "id": "EF14",
+        "layout": {
+          "top": 43.97463002114165,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front Windshield Wiper"
+      },
+      {
+        "id": "EF15",
+        "layout": {
+          "top": 41.014799154334035,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Transmission Control Module"
+      },
+      {
+        "id": "EF16",
+        "layout": {
+          "top": 38.3368569415081,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.1846370683579983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine Control Module"
+      },
+      {
+        "id": "EF17",
+        "layout": {
+          "top": 35.44749823819591,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF18",
+        "layout": {
+          "top": 32.62861169837914,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "EFI",
+        "relatedEntities": [
+          "EFI"
+        ],
+        "extendedDescription": "Sistema de injeção de combustível multiponto"
+      },
+      {
+        "id": "EF19",
+        "layout": {
+          "top": 29.950669485553206,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Power Supply for Engine Sensors and Actuators"
+      },
+      {
+        "id": "EF20",
+        "layout": {
+          "top": 27.061310782241016,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF21",
+        "layout": {
+          "top": 24.4538407329105,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake Pedal Switch"
+      },
+      {
+        "id": "EF21",
+        "layout": {
+          "top": 24.4538407329105,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "Brake Pedal Switch"
+      },
+      {
+        "id": "EF22",
+        "layout": {
+          "top": 21.56448202959831,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Oxygen Sensor"
+      },
+      {
+        "id": "EF23",
+        "layout": {
+          "top": 18.816067653276956,
+          "left": 26.96629213483146,
+          "width": 7.252298263534218,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Ignition Coil"
+      },
+      {
+        "id": "EF24",
+        "layout": {
+          "top": 76.25088090204369,
+          "left": 36.36363636363637,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left Low Beam Headlight"
+      },
+      {
+        "id": "EF25",
+        "layout": {
+          "top": 73.78435517970402,
+          "left": 36.36363636363637,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right Low Beam Headlight"
+      },
+      {
+        "id": "EF26",
+        "layout": {
+          "top": 71.31782945736434,
+          "left": 36.46578140960163,
+          "width": 8.273748723186927,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left High Beam Headlight"
+      },
+      {
+        "id": "EF27",
+        "layout": {
+          "top": 68.63988724453841,
+          "left": 36.36363636363637,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right High Beam Headlight"
+      },
+      {
+        "id": "EF28",
+        "layout": {
+          "top": 66.17336152219873,
+          "left": 36.46578140960163,
+          "width": 8.273748723186927,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF29",
+        "layout": {
+          "top": 63.63636363636363,
+          "left": 36.46578140960163,
+          "width": 8.273748723186927,
+          "height": 2.1846370683579983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF30",
+        "layout": {
+          "top": 60.9584214235377,
+          "left": 36.46578140960163,
+          "width": 8.273748723186927,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF31",
+        "layout": {
+          "top": 58.491895701198025,
+          "left": 36.46578140960163,
+          "width": 8.273748723186927,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF32",
+        "layout": {
+          "top": 55.81395348837209,
+          "left": 36.36363636363637,
+          "width": 8.375893769152196,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF33",
+        "layout": {
+          "top": 53.13601127554616,
+          "left": 36.36363636363637,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF34",
+        "layout": {
+          "top": 50.59901338971107,
+          "left": 36.46578140960163,
+          "width": 8.273748723186927,
+          "height": 2.1846370683579983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF35",
+        "layout": {
+          "top": 42.77660324171952,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fog Light",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/fog-light-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "EF36",
+        "layout": {
+          "top": 40.09866102889359,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF37",
+        "layout": {
+          "top": 37.279774489076814,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Modem"
+      },
+      {
+        "id": "EF38",
+        "layout": {
+          "top": 34.53136011275546,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Electronic Battery Sensor"
+      },
+      {
+        "id": "EF39",
+        "layout": {
+          "top": 31.712473572938688,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF40",
+        "layout": {
+          "top": 29.03453136011275,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF41",
+        "layout": {
+          "top": 26.145172656800565,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF42",
+        "layout": {
+          "top": 23.46723044397463,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF43",
+        "layout": {
+          "top": 20.577871740662438,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF44",
+        "layout": {
+          "top": 17.899929527836505,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF45",
+        "layout": {
+          "top": 15.221987315010571,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF46",
+        "layout": {
+          "top": 12.121212121212121,
+          "left": 46.06741573033708,
+          "width": 8.375893769152196,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF47",
+        "layout": {
+          "top": 68.78083157152925,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Reverse Lights"
+      },
+      {
+        "id": "EF48",
+        "layout": {
+          "top": 66.17336152219873,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Stability Control Module",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "MODULO(of=CONTROL_DE_ESTABILIDAD)"
+        ]
+      },
+      {
+        "id": "EF49",
+        "layout": {
+          "top": 63.213530655391125,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.3960535588442564
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission Control Module"
+      },
+      {
+        "id": "EF50",
+        "layout": {
+          "top": 60.60606060606061,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.1141649048625792
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine Control Module"
+      },
+      {
+        "id": "EF51",
+        "layout": {
+          "top": 57.71670190274841,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.3255813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "DC/DC Converter Module"
+      },
+      {
+        "id": "EF52",
+        "layout": {
+          "top": 55.03875968992248,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF53",
+        "layout": {
+          "top": 52.14940098661028,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF54",
+        "layout": {
+          "top": 49.54193093727978,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Automatic Parking Assistant"
+      },
+      {
+        "id": "EF55",
+        "layout": {
+          "top": 46.79351656095842,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.1846370683579983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ACC",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME"
+        ],
+        "extendedDescription": "Protege vários circuitos acessórios"
+      },
+      {
+        "id": "EF55",
+        "layout": {
+          "top": 46.79351656095842,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.1846370683579983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "ACC",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME"
+        ],
+        "extendedDescription": "Protege vários circuitos acessórios"
+      },
+      {
+        "id": "EF56",
+        "layout": {
+          "top": 43.97463002114165,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "360° Monitoring Camera"
+      },
+      {
+        "id": "EF57",
+        "layout": {
+          "top": 41.29668780831571,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.04369274136716
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF58",
+        "layout": {
+          "top": 38.40732910500353,
+          "left": 67.21144024514811,
+          "width": 8.580183861082737,
+          "height": 2.255109231853418
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF59",
+        "layout": {
+          "top": 31.57152924594785,
+          "left": 72.11440245148111,
+          "width": 4.290091930541369,
+          "height": 5.355884425651867
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF60",
+        "layout": {
+          "top": 24.735729386892178,
+          "left": 72.11440245148111,
+          "width": 4.290091930541369,
+          "height": 6.624383368569416
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF61",
+        "layout": {
+          "top": 18.39323467230444,
+          "left": 72.11440245148111,
+          "width": 4.290091930541369,
+          "height": 6.0606060606060606
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "EF62",
+        "layout": {
+          "top": 11.768851303735024,
+          "left": 72.11440245148111,
+          "width": 4.290091930541369,
+          "height": 6.342494714587738
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "SF01",
+        "layout": {
+          "top": 72.86821705426357,
+          "left": 46.6802860061287,
+          "width": 7.763023493360572,
+          "height": 4.0169133192389
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Cooling System Fan 1"
+      },
+      {
+        "id": "SF02",
+        "layout": {
+          "top": 67.92811839323468,
+          "left": 46.6802860061287,
+          "width": 7.865168539325842,
+          "height": 4.0169133192389
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Cooling System Fan 2"
+      },
+      {
+        "id": "SF03",
+        "layout": {
+          "top": 62.95278365045807,
+          "left": 46.6802860061287,
+          "width": 7.763023493360572,
+          "height": 4.08738548273432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "DC/DC Converter"
+      },
+      {
+        "id": "SF04",
+        "layout": {
+          "top": 57.94221282593376,
+          "left": 46.6802860061287,
+          "width": 7.6608784473953015,
+          "height": 4.2283298097251585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Air Conditioning Fan"
+      },
+      {
+        "id": "SF05",
+        "layout": {
+          "top": 53.00211416490487,
+          "left": 46.6802860061287,
+          "width": 7.252298263534218,
+          "height": 4.2283298097251585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Reserved"
+      },
+      {
+        "id": "SF06",
+        "layout": {
+          "top": 48.20295983086681,
+          "left": 46.6802860061287,
+          "width": 6.8437180796731365,
+          "height": 3.9464411557434813
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "Starter Motor",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/starter-fuse",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "SF07",
+        "layout": {
+          "top": 72.28372093023258,
+          "left": 26.557711950970376,
+          "width": 7.967313585291114,
+          "height": 4.2283298097251585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Stability Control Module NO1"
+      },
+      {
+        "id": "SF08",
+        "layout": {
+          "top": 67.40870331219169,
+          "left": 26.557711950970376,
+          "width": 7.967313585291114,
+          "height": 4.298801973220578
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Stability Control Module NO2"
+      },
+      {
+        "id": "SF09",
+        "layout": {
+          "top": 62.568921775898524,
+          "left": 26.557711950970376,
+          "width": 7.967313585291114,
+          "height": 4.298801973220578
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "SF010",
+        "layout": {
+          "top": 57.72914023960535,
+          "left": 26.557711950970376,
+          "width": 7.967313585291114,
+          "height": 4.298801973220578
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "SF011",
+        "layout": {
+          "top": 52.924594785059895,
+          "left": 26.557711950970376,
+          "width": 7.967313585291114,
+          "height": 4.2283298097251585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "SF012",
+        "layout": {
+          "top": 42.98801973220578,
+          "left": 17.466802860061286,
+          "width": 7.865168539325842,
+          "height": 4.2283298097251585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "SF013",
+        "layout": {
+          "top": 38.05496828752643,
+          "left": 17.56894790602656,
+          "width": 7.763023493360572,
+          "height": 4.157857646229739
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Main Relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ]
+      },
+      {
+        "id": "SF014",
+        "layout": {
+          "top": 33.051444679351654,
+          "left": 17.466802860061286,
+          "width": 7.865168539325842,
+          "height": 4.2283298097251585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "EMS IG",
+        "extendedDescription": "Sistema de gerenciamento do motor"
+      },
+      {
+        "id": "SF015",
+        "layout": {
+          "top": 28.047921071176884,
+          "left": 17.56894790602656,
+          "width": 7.763023493360572,
+          "height": 4.2283298097251585
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "CCCC IG"
+      },
+      {
+        "id": "SF016",
+        "layout": {
+          "top": 23.044397463002113,
+          "left": 17.56894790602656,
+          "width": 7.763023493360572,
+          "height": 4.298801973220578
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "SF017",
+        "layout": {
+          "top": 18.040873854827343,
+          "left": 17.466802860061286,
+          "width": 7.865168539325842,
+          "height": 4.298801973220578
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "RY01",
+        "layout": {
+          "top": 72.44538407329105,
+          "left": 55.7711950970378,
+          "width": 21.246169560776302,
+          "height": 11.909795630725863
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling Fan, High Speed",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA)"
+        ]
+      },
+      {
+        "id": "RY02",
+        "layout": {
+          "top": 73.57293868921776,
+          "left": 78.0388151174668,
+          "width": 14.81103166496425,
+          "height": 10.218463706835799
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter Motor Relay 1",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/starter-relay",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "RY03",
+        "layout": {
+          "top": 61.52219873150106,
+          "left": 78.0388151174668,
+          "width": 14.81103166496425,
+          "height": 10.218463706835799
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter Motor Relay 2",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/territory/info/fusebox/2021/starter-relay",
+            "urlWithAnchor": "/ford/territory/info/fusebox/2021/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "RY04",
+        "layout": {
+          "top": 49.54193093727978,
+          "left": 78.0388151174668,
+          "width": 14.81103166496425,
+          "height": 10.077519379844961
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Air Conditioning Fan Relay"
+      },
+      {
+        "id": "RY05",
+        "layout": {
+          "top": 37.63213530655391,
+          "left": 78.0388151174668,
+          "width": 14.81103166496425,
+          "height": 10.14799154334038
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling Fan, Low Speed"
+      },
+      {
+        "id": "RY06",
+        "layout": {
+          "top": 25.510923185341788,
+          "left": 78.0388151174668,
+          "width": 14.81103166496425,
+          "height": 10.218463706835799
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "RY07",
+        "layout": {
+          "top": 60.394644115574344,
+          "left": 56.281920326864146,
+          "width": 8.682328907048008,
+          "height": 10.711768851303734
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Compressor Relay"
+      },
+      {
+        "id": "RY08",
+        "layout": {
+          "top": 48.907681465821,
+          "left": 56.281920326864146,
+          "width": 8.78447395301328,
+          "height": 10.711768851303734
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Brake Light Relay"
+      },
+      {
+        "id": "RY09",
+        "layout": {
+          "top": 37.63213530655391,
+          "left": 56.07763023493361,
+          "width": 8.88661899897855,
+          "height": 10.782241014799155
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn Relay"
+      },
+      {
+        "id": "RY010",
+        "layout": {
+          "top": 30.937279774489078,
+          "left": 55.464759959141986,
+          "width": 16.036772216547497,
+          "height": 6.13107822410148
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front Windshield Wiper Switch Relay"
+      },
+      {
+        "id": "RY011",
+        "layout": {
+          "top": 24.171952078928825,
+          "left": 55.362614913176714,
+          "width": 15.730337078651685,
+          "height": 6.0606060606060606
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front Fog Light Relay"
+      },
+      {
+        "id": "RY012",
+        "layout": {
+          "top": 12.544045102184636,
+          "left": 55.7711950970378,
+          "width": 14.81103166496425,
+          "height": 10.14799154334038
+        },
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "RY013",
+        "layout": {
+          "top": 4.651162790697675,
+          "left": 61.899897854954034,
+          "width": 16.036772216547497,
+          "height": 6.553911205073996
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear Wiper Relay"
+      },
+      {
+        "id": "RY014",
+        "layout": {
+          "top": 4.651162790697675,
+          "left": 45.25025536261491,
+          "width": 15.628192032686414,
+          "height": 6.553911205073996
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front Wiper Relay"
+      },
+      {
+        "id": "RY015",
+        "layout": {
+          "top": 38.54827343199436,
+          "left": 35.5464759959142,
+          "width": 8.682328907048008,
+          "height": 10.993657505285412
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "High Beam Headlight Relay"
+      },
+      {
+        "id": "RY016",
+        "layout": {
+          "top": 27.061310782241016,
+          "left": 35.5464759959142,
+          "width": 8.682328907048008,
+          "height": 11.064129668780831
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Low Beam Headlight Relay"
+      },
+      {
+        "id": "RY017",
+        "layout": {
+          "top": 15.574348132487668,
+          "left": 35.5464759959142,
+          "width": 8.682328907048008,
+          "height": 10.993657505285412
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front Wiper High and Low Speed Relay"
+      },
+      {
+        "id": "RY018",
+        "layout": {
+          "top": 4.2283298097251585,
+          "left": 35.5464759959142,
+          "width": 8.98876404494382,
+          "height": 10.852713178294573
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Reverse Light Relay"
+      },
+      {
+        "id": "RY019",
+        "layout": {
+          "top": 4.2283298097251585,
+          "left": 16.649642492339122,
+          "width": 18.181818181818183,
+          "height": 13.107822410147993
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Main Relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ]
+      },
+      {
+        "id": "RY020",
+        "layout": {
+          "top": 4.08738548273432,
+          "left": 7.252298263534218,
+          "width": 8.88661899897855,
+          "height": 10.993657505285412
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Pump Relay"
+      },
+      {
+        "id": "RY021",
+        "layout": {
+          "top": 15.574348132487668,
+          "left": 7.252298263534218,
+          "width": 8.88661899897855,
+          "height": 10.993657505285412
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear Windshield Wiper Relay"
+      },
+      {
+        "id": "RY022",
+        "layout": {
+          "top": 51.37420718816068,
+          "left": 8.273748723186927,
+          "width": 8.98876404494382,
+          "height": 10.993657505285412
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "RY023",
+        "layout": {
+          "top": 62.86116983791402,
+          "left": 8.273748723186927,
+          "width": 9.090909090909092,
+          "height": 10.923185341789992
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "RY24",
+        "layout": {
+          "top": 74.34813248766737,
+          "left": 8.273748723186927,
+          "width": 8.98876404494382,
+          "height": 10.923185341789992
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Spare (not available)"
+      },
+      {
+        "id": "MF04",
+        "layout": {
+          "top": 79.77448907681466,
+          "left": 30.337078651685395,
+          "width": 15.423901940755874,
+          "height": 5.990133897110642
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        }
+      }
+    ],
+    "boxName": "FRONT CABIN FUSE BOX",
+    "boxDiagramImg": {
+      "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-248509e0aa.jpg",
+      "source": "620c1403731dd7323a7186b8"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-4776582c2a.jpg",
+        "source": "620c140b731dd7323a7186ba"
+      },
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-cff0c1632b.jpg",
+        "source": "620c1414731dd7323a7186bc"
+      },
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-0772b7f510.jpg",
+        "source": "620c141d731dd7323a7186be"
+      },
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-471c549842.jpg",
+        "source": "620c1425731dd7323a7186c0"
+      },
+      {
+        "url": "https://opicarros-images.s3.amazonaws.com/manual-screenshots/620a79199d18b1e1204c7dbd/fragment-620a79199d18b1e1204c7dbd-791e7144ed.jpg",
+        "source": "620c142c731dd7323a7186c2"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.449438202247191,
+    "templateId": "624cdb9f58d7d294efe63cea",
+    "imageClusters": [
+      "6453039667355f96f9baa83f"
+    ],
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-territory-2021-genid-g3-1.webp"
+  }
+]

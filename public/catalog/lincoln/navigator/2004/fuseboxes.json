@@ -1,0 +1,1649 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 12.665684830633284,
+          "width": 2.6509572901325478,
+          "height": 7.87037037037037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Run/Accessory - Instrument cluster, Front wiper motor, Rear wiper motor, Tire Pressure Monitor System (TPMS) module",
+        "relatedEntities": [
+          "TABLERO",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))",
+          "SENSOR_PRESION_NEUMATICOS",
+          "TESTIGO_PRESION_DE_NEUMATICOS",
+          "MODULO",
+          "ECU"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 16.789396170839467,
+          "width": 2.6509572901325478,
+          "height": 7.87037037037037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Brake On/Off (stoplamp) switch, Turn signal/Hazard flasher, AdvanceTrac stoplamps relay (if equipped), Stoplamps, Center High-Mounted Stoplamp (CHMSL), Turn signal lamps",
+        "relatedEntities": [
+          "SENSOR_FRENO",
+          "LUZ_FRENO",
+          "TAMBOR_DE_ENCENDIDO",
+          "LUZ_DIRECCIONAL",
+          "LUZ_BALIZA",
+          "LAMPARA(of=LUZ_DIRECCIONAL)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/brake-light-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 20.765832106038292,
+          "width": 2.798232695139912,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Power mirror switch, Memory module (logic power), Driver seat switch (memory)",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ESPEJO_ELECTRICO)"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 24.889543446244478,
+          "width": 2.6509572901325478,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear seat audio controls, Navigation module, DVD player",
+        "relatedEntities": [
+          "NAVEGADOR",
+          "MODULO_GPS"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 29.16053019145803,
+          "width": 2.6509572901325478,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Brake On/Off (stoplamp) switch, Powertrain Control Module (PCM) (keep alive power), EATC control head, Body Security Module (BSM) (keep alive power), Speed control deactivation switch, Speed control servo, SecuriLock LED, 3rd row seat relay coils, Power liftgate module, Clock, Brake Shift Interlock (BSI) solenoid",
+        "relatedEntities": [
+          "SENSOR_FRENO",
+          "LUZ_FRENO",
+          "TAMBOR_DE_ENCENDIDO",
+          "RELAY(protects=3RA_FILA_ASIENTO)",
+          "BOBINA(of=RELAY(protects=3RA_FILA_ASIENTO))",
+          "RELAY(protects=RELAY(protects=3RA_FILA_ASIENTO))",
+          "PORTON_TRASERO",
+          "RELOJ"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/brake-light-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 33.136966126656844,
+          "width": 2.798232695139912,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlamp switch (parklamps and switch backlighting feed), Parklamps, License lamps, Foglamp relay coil, Trailer tow electric brake controller (illumination), BSM (autolamp parklamps), Floor console gear selector lighting, Switch backlighting module, Foglamp indicator",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BACKLIGHT(of=TAMBOR_DE_ENCENDIDO))",
+          "LUZ_DE_ESTACIONAMIENTO",
+          "BOBINA(of=RELAY(protects=LUZ_ANTINIEBLA))",
+          "RELAY(protects=RELAY(protects=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)",
+          "CONTROLADOR_ELECTRONICO_FRENO",
+          "BACKLIGHT",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/fog-light-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 37.4079528718704,
+          "width": 2.6509572901325478,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Radio (Start signal)"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 41.384388807069215,
+          "width": 2.6509572901325478,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear window defroster switch, Heated outside mirrors, Rear window defroster indicator (climate control head)",
+        "relatedEntities": [
+          "INTERRUPTOR(of=DESEMPANADOR_TRASERO)",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 45.50810014727541,
+          "width": 2.798232695139912,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel pump relay, Fuel pump shut-off switch, Fuel pump motor",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "MOTOR_IMPULSOR(of=BOMBA_DE_COMBUSTIBLE)",
+          "MOTOR_IMPULSOR(of=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/fuel-pump-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 49.779086892488955,
+          "width": 2.6509572901325478,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Trailer tow back-up lamps relay, Trailer tow 7-wire connector (back-up lamps), Trailer tow parklamps relay, Trailer tow 7and 4-wire connectors (parklamps)",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_RETROCESO(of=REMOLQUE))",
+          "RELAY(protects=LUZ_DE_ESTACIONAMIENTO(of=REMOLQUE))"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 53.90279823269514,
+          "width": 2.798232695139912,
+          "height": 8.101851851851851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C compressor clutch relay, A/C compressor clutch solenoid, Air suspensión compressor relay, 4x4 Integrated Wheel Ends (IWE) solenoid",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)",
+          "RELAY(protects=COMPRESOR(of=SUSPENSION_NEUMATICA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/air-conditioning-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 76.62037037037037,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.398148148148148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Speed control relay, Speed control servo",
+        "relatedEntities": [
+          "RELAY(protects=CRUISE_CONTROL)"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 70.13888888888889,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear window defroster relay coil, A/C refrigerant containment switch, A/C compressor thermistor, DEATC control head, DEATC solenoids, DEATC blower controller, Trailer tow battery charge relay coil",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=DESEMPANADOR_TRASERO))",
+          "RELAY(protects=RELAY(protects=DESEMPANADOR_TRASERO))",
+          "RELAY(protects=DESEMPANADOR_TRASERO)",
+          "BOBINA(of=RELAY_BATERIA_DE_TRAILER)",
+          "RELAY(protects=RELAY_BATERIA_DE_TRAILER)",
+          "RELAY_BATERIA_DE_TRAILER"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 63.888888888888886,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Daytime Running Lamps (DRL) ignition relay coil, Digital Transmission Range Sensor (DTRS back-up lamps), Trailer tow back-up lamps relay coil, Electrochromatic mirror",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "BOBINA",
+          "RELAY",
+          "BOBINA(of=RELAY(protects=LUZ_RETROCESO(of=REMOLQUE)))",
+          "RELAY(protects=RELAY(protects=LUZ_RETROCESO(of=REMOLQUE)))",
+          "RELAY(protects=LUZ_RETROCESO(of=REMOLQUE))",
+          "ESPEJO_RETROVISOR_ELECTRICO_ANTIDESLUMBRANTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 57.17592592592593,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.398148148148148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "AdvanceTrac switch, Instrument cluster (Run/Start feed)"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 50.92592592592593,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS/AdvanceTrac module (Run/Start feed)"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 44.21296296296296,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Foglamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/fog-light-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 37.73148148148148,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.398148148148148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Auxiliary A/C temperature blend door actuator, Auxiliary A/C front auxiliary control, Park brake release relay coils, Turn signal flasher, Electrochromatic mirror, Auxiliary mode motor, Climate controlled seat modules",
+        "relatedEntities": [
+          "ESPEJO_RETROVISOR_ELECTRICO_ANTIDESLUMBRANTE",
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "MODULO(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "MODULO(of=CALEFACCION_DE_ASIENTO)"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 31.48148148148148,
+          "left": 58.173784977908696,
+          "width": 5.154639175257731,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Restraints Control Module (RCM)"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 25,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "4x4 module, Air suspensión module (air spring solenoids and height sensors)",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 18.287037037037038,
+          "left": 58.173784977908696,
+          "width": 5.007363770250368,
+          "height": 4.398148148148148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Instrument cluster (B+), Interior (courtesy) lamps, TPMS module, Park brake release relays, Park brake release motor, Puddle lamps (outside mirrors)",
+        "relatedEntities": [
+          "TABLERO",
+          "ALIMENTACION_ELECTRICA",
+          "ALIMENTACION_ELECTRICA(of=TABLERO)",
+          "TESTIGO_PRESION_DE_NEUMATICOS"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 18.262150220913107,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Moonroof switch illumination, Flip window switch, Flip window relays, Flip window motors, Electronic hidden antenna amplifier (navigation radio), Radio (delayed accessory feed), Left front window motor, Navigation module",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA)))",
+          "NAVEGADOR",
+          "MODULO_GPS"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 26.362297496318117,
+          "width": 2.6509572901325478,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "RH low beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 30.486008836524302,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Interior demand lamps (front map/dome lamps, glove compartment lamp, cargo lamp, roof rail lamps, vanity mirror lamps), Battery saver relay coil, Battery saver relay power",
+        "relatedEntities": [
+          "LUZ_DE_CAJA",
+          "LUZ_DE_HABITACULO",
+          "RELAY_DELAY_BATERIA",
+          "BOBINA(of=RELAY(protects=RELAY_DELAY_BATERIA))",
+          "BOBINA(of=RELAY_DELAY_BATERIA)",
+          "RELAY(protects=RELAY(protects=RELAY_DELAY_BATERIA))",
+          "RELAY(protects=RELAY_DELAY_BATERIA)"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 34.75699558173785,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "LH low beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 38.733431516936676,
+          "width": 2.6509572901325478,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Horn relay, Horns",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)",
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/horn-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 43.004418262150224,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Brake Shift Interlock solenoid, Overdrive cancel switch, Reverse park aid system module, Air suspensión module (Run/Start), Compass module",
+        "relatedEntities": [
+          "SOLENOIDE_PARKING",
+          "INTERRUPTOR_OVERDRIVE_OFF",
+          "MODULO",
+          "ARRANQUE",
+          "SUSPENSION_NEUMATICA",
+          "BRUJULA",
+          "MODULO(of=BRUJULA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/starter-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 46.98085419734904,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "PCM relay coil, Speed control relay coil, SecuriLock transceiver",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=PCM))",
+          "RELAY(protects=RELAY(protects=PCM))",
+          "RELAY(protects=PCM)",
+          "BOBINA(of=RELAY(protects=CRUISE_CONTROL))",
+          "RELAY(protects=RELAY(protects=CRUISE_CONTROL))",
+          "RELAY(protects=CRUISE_CONTROL)"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 55.08100147275405,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Trailer tow electric brake controller, Trailer tow 7-wire connector (electric brake)",
+        "relatedEntities": [
+          "CONTROLADOR_ELECTRONICO_FRENO(of=REMOLQUE)"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 59.20471281296024,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "BSM (door locks, liftgate glass release relay), Liftgate glass release motor, Left front window motor, Door/Liftgate lock motors",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA)))",
+          "PUERTA",
+          "MOTOR_IMPULSOR"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 7.175925925925926,
+          "left": 63.03387334315169,
+          "width": 2.503681885125184,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Radio (B+), Subwoofer, Navigation radio audio amplifier",
+        "relatedEntities": [
+          "ESTEREO",
+          "ALIMENTACION_ELECTRICA",
+          "ALIMENTACION_ELECTRICA(of=ESTEREO)",
+          "SUBWOOFER"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/radio-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 64.81481481481481,
+          "left": 7.363770250368189,
+          "width": 5.007363770250368,
+          "height": 4.398148148148148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Catalyst Monitor Sensors (CMS), Transmission solenoids",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 58.56481481481482,
+          "left": 7.363770250368189,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HEGO sensors, EGR vacuum regulator (EVR) solenoid, Canister vent solenoid, Vapor Management valve (VMV) solenoid, A/C compressor clutch relay coil",
+        "relatedEntities": [
+          "SENSOR_OXIGENO",
+          "VALVULA_PURGA_CANISTER",
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)",
+          "RELAY(protects=RELAY(protects=CLUTCH_AIRE_ACONDICIONADO))",
+          "BOBINA(of=RELAY(protects=CLUTCH_AIRE_ACONDICIONADO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/air-conditioning-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 52.083333333333336,
+          "left": 7.363770250368189,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "PCM, Idle Air Control (IAC) solenoid, Mass Air Flow (MAF) sensor, Fuel injectors",
+        "relatedEntities": [
+          "PCM",
+          "SENSOR_CAUDAL_DE_AIRE",
+          "SENSOR",
+          "LUZ_TESTIGO"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 32.870370370370374,
+          "left": 7.511045655375552,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "High beam headlamps, Instrument cluster high beam indicator",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "TESTIGO_LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 26.38888888888889,
+          "left": 7.511045655375552,
+          "width": 5.007363770250368,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Trailer tow right turn/stop lamps",
+        "relatedEntities": [
+          "LUCES_TRASERAS(of=REMOLQUE,ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/tail-light-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 22.685185185185187,
+          "left": 66.56848306332842,
+          "width": 5.154639175257731,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cargo area power point"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 29.398148148148145,
+          "left": 66.56848306332842,
+          "width": 5.154639175257731,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Rear wiper motor, Washer pump (rear window wash)",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 35.879629629629626,
+          "left": 66.56848306332842,
+          "width": 5.154639175257731,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Console power points",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 42.592592592592595,
+          "left": 66.56848306332842,
+          "width": 5.154639175257731,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "DRL relays, DRL foglamps, DRL headlamp relay coil, Headlamp switch (headlamps), Multifunction switch (flash-to-pass), BSM (autolamp headlamps relay), High beam relay coil, Fuse 25 (LH low beam), Fuse 23 (RH low beam)",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_CIRCULACION_DIURNA)",
+          "BOBINA(of=RELAY(protects=LUCES_CIRCULACION_DIURNA))",
+          "RELAY(protects=RELAY(protects=LUCES_CIRCULACION_DIURNA))",
+          "COMANDO_DE_LUCES",
+          "LUCES_DELANTERAS",
+          "BOBINA(of=RELAY(protects=LUZ_ALTA))",
+          "RELAY(protects=RELAY(protects=LUZ_ALTA))",
+          "RELAY(protects=LUZ_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 86.11111111111111,
+          "left": 62.15022091310751,
+          "width": 5.154639175257731,
+          "height": 4.166666666666666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cigar lighter, OBD II diagnostic connector",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "CONECTOR_OBD(of=SISTEMA_OBD)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 86.57407407407408,
+          "left": 5.007363770250368,
+          "width": 4.712812960235641,
+          "height": 3.4722222222222223
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Trailer tow left turn/stop lamps",
+        "relatedEntities": [
+          "LUCES_TRASERAS(of=REMOLQUE,ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/tail-light-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "101",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 73.04860088365243,
+          "width": 4.860088365243005,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Starter motor relay, Starter motor solenoid",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)",
+          "BENDIX"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/starter-fuse",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "102",
+        "layout": {
+          "top": 8.564814814814815,
+          "left": 72.7540500736377,
+          "width": 4.712812960235641,
+          "height": 7.4074074074074066
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Ignition switch power",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "103",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 80.26509572901325,
+          "width": 4.860088365243005,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS/AdvanceTract module (pump motor)"
+      },
+      {
+        "id": "104",
+        "layout": {
+          "top": 72.69486397378186,
+          "left": 77.14108620156743,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "LH 3rd row seat relay, LH 3rd row seat switch, LH 3rd row seat motor",
+        "relatedEntities": [
+          "RELAY(protects=3RA_FILA_ASIENTO(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "105",
+        "layout": {
+          "top": 62.22217878859668,
+          "left": 77.14108620156743,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power liftgate module, Power liftgate motors, Power running boards control",
+        "relatedEntities": [
+          "PORTON_TRASERO"
+        ]
+      },
+      {
+        "id": "106",
+        "layout": {
+          "top": 51.749493603411494,
+          "left": 77.14108620156743,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Trailer tow battery charge relay, Trailer tow 7-wire connector (battery charge)",
+        "relatedEntities": [
+          "RELAY_BATERIA_DE_TRAILER"
+        ]
+      },
+      {
+        "id": "107",
+        "layout": {
+          "top": 41.27680841822631,
+          "left": 77.14108620156743,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Auxiliary A/C blower relay, Auxiliary A/C blower motor"
+      },
+      {
+        "id": "108",
+        "layout": {
+          "top": 30.804123233041153,
+          "left": 77.14108620156743,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Passenger seat motor switch, Passenger seat lumbar switch and motor",
+        "relatedEntities": [
+          "MOTOR"
+        ]
+      },
+      {
+        "id": "109",
+        "layout": {
+          "top": 20.331438047855972,
+          "left": 77.14108620156743,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Driver seat lumbar switch and motor, Memory module, Power memory mirrors, Adjustable pedals switch and motor",
+        "relatedEntities": [
+          "MOTOR",
+          "INTERRUPTOR(of=REGULACION_ELECTRICA_PEDALES)"
+        ]
+      },
+      {
+        "id": "110",
+        "layout": {
+          "top": 8.564814814814815,
+          "left": 79.97054491899853,
+          "width": 4.712812960235641,
+          "height": 7.4074074074074066
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power running boards"
+      },
+      {
+        "id": "111",
+        "layout": {
+          "top": 84.49074074074075,
+          "left": 87.48159057437408,
+          "width": 4.860088365243005,
+          "height": 7.638888888888889
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Air suspensión compressor relay, Air suspensión compressor",
+        "relatedEntities": [
+          "RELAY(protects=COMPRESOR(of=SUSPENSION_NEUMATICA))",
+          "COMPRESOR(of=SUSPENSION_NEUMATICA)"
+        ]
+      },
+      {
+        "id": "112",
+        "layout": {
+          "top": 72.69486397378186,
+          "left": 85.98197421771316,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS/AdvanceTracT module (valves)"
+      },
+      {
+        "id": "113",
+        "layout": {
+          "top": 62.22217878859668,
+          "left": 85.98197421771316,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Front wiper motor, Washer pump (windshield wash)",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "114",
+        "layout": {
+          "top": 51.749493603411494,
+          "left": 85.98197421771316,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Rear window defroster relay, Rear window defroster grid, Heated mirrors (Fuse 8)",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)",
+          "DESEMPANADOR_ESPEJOS",
+          "FUSIBLE",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "115",
+        "layout": {
+          "top": 41.27680841822631,
+          "left": 85.98197421771316,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "4x4 module, Transfer case shift motor",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "116",
+        "layout": {
+          "top": 30.804123233041153,
+          "left": 85.98197421771316,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Front blower motor relay, Front blower motor",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA)))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA))",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA))",
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "117",
+        "layout": {
+          "top": 20.331438047855972,
+          "left": 85.98197421771316,
+          "width": 6.7232695139911565,
+          "height": 6.519598765432101
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "RH 3rd row seat relay, RH 3rd row seat switch, RH 3rd row seat motor",
+        "relatedEntities": [
+          "RELAY(protects=3RA_FILA_ASIENTO(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "118",
+        "layout": {
+          "top": 8.564814814814815,
+          "left": 87.33431516936672,
+          "width": 4.712812960235641,
+          "height": 7.4074074074074066
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Driver and passenger climate control seat module"
+      },
+      {
+        "id": "401",
+        "layout": {
+          "top": 51.157407407407405,
+          "left": 65.97938144329896,
+          "width": 6.185567010309279,
+          "height": 22.916666666666664
+        },
+        "kind": {
+          "amp": 30,
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Power windows (circuit breaker), Main window switch, Window motors, Window switches, Moonroof module",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "CIRCUIT_BREAKER",
+          "MOTOR_IMPULSOR(of=VENTANILLA)",
+          "TECHO_SOLAR"
+        ]
+      },
+      {
+        "id": "R01",
+        "layout": {
+          "top": 64.58333333333334,
+          "left": 18.998527245949926,
+          "width": 10.1620029455081,
+          "height": 15.972222222222221
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter motor solenoid",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "id": "R02",
+        "layout": {
+          "top": 42.129629629629626,
+          "left": 18.998527245949926,
+          "width": 10.1620029455081,
+          "height": 15.972222222222221
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuse 22, CB 401, Power windows, Moonroof, Flip windows, Radio, Navigation module, Navigation antenna amplifier",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "TECHO_SOLAR",
+          "ESTEREO",
+          "NAVEGADOR",
+          "MODULO_GPS"
+        ]
+      },
+      {
+        "id": "R03",
+        "layout": {
+          "top": 20.13888888888889,
+          "left": 18.851251840942563,
+          "width": 10.309278350515463,
+          "height": 15.972222222222221
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuse 35, Hi-beam headlamps, Hi-beam indicator",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "TESTIGO_LUZ_ALTA"
+        ]
+      },
+      {
+        "id": "R04",
+        "layout": {
+          "top": 64.35185185185185,
+          "left": 43.59351988217968,
+          "width": 10.1620029455081,
+          "height": 15.972222222222221
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuse 8 (heated mirrors), Rear window defroster, Heated outside mirrors, Rear window defroster indicator (climate control head)",
+        "relatedEntities": [
+          "FUSIBLE",
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL",
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R05",
+        "layout": {
+          "top": 41.898148148148145,
+          "left": 43.59351988217968,
+          "width": 10.1620029455081,
+          "height": 15.972222222222221
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Trailer tow 7-wire connector (battery charge)"
+      },
+      {
+        "id": "R06",
+        "layout": {
+          "top": 19.90740740740741,
+          "left": 43.446244477172314,
+          "width": 10.309278350515463,
+          "height": 15.972222222222221
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Front blower motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA))",
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "R201",
+        "layout": {
+          "top": 71.06481481481481,
+          "left": 4.418262150220913,
+          "width": 11.192930780559648,
+          "height": 11.11111111111111
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "lightgray",
+          "notUsed": false
+        },
+        "description": "Trailer tow 7and 4-wire connectors (park lamps)"
+      },
+      {
+        "id": "R202",
+        "layout": {
+          "top": 38.657407407407405,
+          "left": 4.418262150220913,
+          "width": 11.192930780559648,
+          "height": 11.11111111111111
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "lightgray",
+          "notUsed": false
+        },
+        "description": "Front foglamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "R203",
+        "layout": {
+          "top": 6.481481481481481,
+          "left": 6.774668630338733,
+          "width": 6.332842415316642,
+          "height": 17.59259259259259
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "lightgray",
+          "notUsed": false
+        },
+        "description": "Fuse 32, Fuse 33, Fuse 34, Fuel pump relay, PCM solenoids and sensors",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "LUZ_TESTIGO",
+          "SENSOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/fuel-pump-relay",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R301",
+        "layout": {
+          "top": 71.50104329681793,
+          "left": 33.81093908362053,
+          "width": 5.894357188487206,
+          "height": 8.763693270735526
+        },
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "description": "Trailer tow 7-wire connector (back-up lamps)"
+      },
+      {
+        "id": "R302",
+        "layout": {
+          "top": 59.19014084507041,
+          "left": 33.81093908362053,
+          "width": 5.894357188487206,
+          "height": 8.763693270735526
+        },
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "description": "Speed control servo"
+      },
+      {
+        "id": "R303",
+        "layout": {
+          "top": 46.75404277516953,
+          "left": 33.81093908362053,
+          "width": 5.894357188487206,
+          "height": 8.763693270735526
+        },
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "description": "Fuel pump shut-off switch, PCM (fuel pump monitor), Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/navigator/info/fusebox/2004/fuel-pump-relay",
+            "urlWithAnchor": "/lincoln/navigator/info/fusebox/2004/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R304",
+        "layout": {
+          "top": 33.23291601460616,
+          "left": 33.81093908362053,
+          "width": 5.894357188487206,
+          "height": 8.763693270735526
+        },
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "description": "Roof rail lamps, Vanity mirror lamps, Map/Dome lamp, Glove box lamp, Cargo area lamp, Outside mirror puddle lamps, Instrument cluster (interior lamps)",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "SENSOR_MAP",
+          "LAMPARA",
+          "LUZ_DE_GUANTERA",
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "R305",
+        "layout": {
+          "top": 20.0039123630673,
+          "left": 33.81093908362053,
+          "width": 5.894357188487206,
+          "height": 8.763693270735526
+        },
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "description": "Dual note horn"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.9019230769230769,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/7317cb2d_lincoln-navigator-2002.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0c908ead_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/17cb9147_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6b4d8ee5_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/e76215c3_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/fe9b7609_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9e2c9080_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9a1cca8b_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "62cd73ed6c9613d9cd225af6"
+    ],
+    "boxName": "Passenger compartment fuse box",
+    "templateId": "615b523443e5840004fad6e4",
+    "boxRotation": 90,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lincoln-navigator-2004-genid-g2-0.webp"
+  }
+]

@@ -1,0 +1,709 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "A",
+        "layout": {
+          "top": 7.371550579454868,
+          "left": 22.153455819173946,
+          "width": 14.524353218230184,
+          "height": 15.88949431466985
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Electric door lock control box."
+      },
+      {
+        "id": "B",
+        "layout": {
+          "top": 7.371550579454868,
+          "left": 43.321112870922406,
+          "width": 14.524353218230184,
+          "height": 15.88949431466985
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Intake heater pad."
+      },
+      {
+        "id": "C",
+        "layout": {
+          "top": 7.371550579454868,
+          "left": 64.41272960708048,
+          "width": 14.524353218230184,
+          "height": 15.88949431466985
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "No function."
+      },
+      {
+        "id": "D",
+        "layout": {
+          "top": 27.51955128205131,
+          "left": 5.370387779083431,
+          "width": 10.791226008617313,
+          "height": 7.970512820512815
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear window wiper [depending on version]."
+      },
+      {
+        "id": "E",
+        "layout": {
+          "top": 37.13493589743585,
+          "left": 5.370387779083431,
+          "width": 10.791226008617313,
+          "height": 7.970512820512815
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Climate control fan.",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "F",
+        "layout": {
+          "top": 27.92868589743593,
+          "left": 18.05898942420679,
+          "width": 14.524353218230184,
+          "height": 15.88949431466985
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Load exclusion for starting."
+      },
+      {
+        "id": "G",
+        "layout": {
+          "top": 27.51955128205131,
+          "left": 35.922679200940074,
+          "width": 10.791226008617313,
+          "height": 7.970512820512815
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Heated rear window.",
+        "relatedEntities": [
+          "LUNETA_TRASERA"
+        ]
+      },
+      {
+        "id": "H",
+        "layout": {
+          "top": 37.13493589743585,
+          "left": 35.922679200940074,
+          "width": 10.791226008617313,
+          "height": 7.970512820512815
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "No function."
+      },
+      {
+        "id": "I",
+        "layout": {
+          "top": 27.92868589743593,
+          "left": 49.82878965922443,
+          "width": 14.524353218230184,
+          "height": 15.88949431466985
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Flasher.",
+        "relatedEntities": [
+          "RELAY_INTERMINTENTES"
+        ]
+      },
+      {
+        "id": "J",
+        "layout": {
+          "top": 27.51955128205131,
+          "left": 67.18002350176262,
+          "width": 10.791226008617313,
+          "height": 7.970512820512815
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn.",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/horn-relay",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "K",
+        "layout": {
+          "top": 37.13493589743585,
+          "left": 67.18002350176262,
+          "width": 10.791226008617313,
+          "height": 7.970512820512815
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning compressor.",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/air-conditioning-relay",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "F1",
+        "layout": {
+          "top": 47.27564102564102,
+          "left": 4.932667450058752,
+          "width": 3.122914218566397,
+          "height": 11.698717948717949
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Parking light.",
+        "relatedEntities": [
+          "LUZ_POSICION"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 47.27564102564102,
+          "left": 10.8081081081081,
+          "width": 3.240423031727385,
+          "height": 11.698717948717949
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Parking light.",
+        "relatedEntities": [
+          "LUZ_POSICION"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 47.43589743589743,
+          "left": 16.801057579318453,
+          "width": 3.240423031727385,
+          "height": 11.698717948717949
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Low beam light.",
+        "relatedEntities": [
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 47.43589743589743,
+          "left": 22.911515863689814,
+          "width": 3.122914218566397,
+          "height": 11.698717948717949
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Low beam light.",
+        "relatedEntities": [
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 47.43589743589743,
+          "left": 28.786956521739167,
+          "width": 3.0054054054054093,
+          "height": 11.858974358974358
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "High beam light.",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 47.43589743589743,
+          "left": 34.66239717978852,
+          "width": 3.357931844888372,
+          "height": 11.858974358974358
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "High beam light.",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 47.43589743589743,
+          "left": 40.890364277320835,
+          "width": 3.357931844888372,
+          "height": 11.858974358974358
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Supplementary projectors."
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 47.43589743589743,
+          "left": 47.00082256169217,
+          "width": 3.122914218566397,
+          "height": 12.01923076923077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Central door locking.",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 47.43589743589743,
+          "left": 52.99377203290251,
+          "width": 3.240423031727385,
+          "height": 12.179487179487179
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Emergency flasher light."
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 47.59615384615385,
+          "left": 58.98672150411285,
+          "width": 3.357931844888372,
+          "height": 12.01923076923077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Power window.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 47.756410256410255,
+          "left": 65.0971797884841,
+          "width": 3.122914218566397,
+          "height": 11.858974358974358
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Power window.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 62.33974358974359,
+          "left": 4.815158636897766,
+          "width": 3.122914218566397,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": "15"
+        },
+        "description": "Interior lights, Lighter, Stop light, Trunk light, Radio.",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "ENCENDEDOR",
+          "LUZ_FRENO",
+          "TESTIGO_STOP",
+          "TESTIGO_BAUL",
+          "LUZ_BAUL",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/cigarette-lighter-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/fiat/uno/info/fusebox/1997/radio-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          },
+          {
+            "url": "/fiat/uno/info/fusebox/1997/brake-light-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 62.33974358974359,
+          "left": 10.690599294947111,
+          "width": 3.240423031727385,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Horn.",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/horn-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 62.66025641025641,
+          "left": 16.683548766157465,
+          "width": 3.357931844888372,
+          "height": 12.339743589743591
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Heated rear window.",
+        "relatedEntities": [
+          "LUNETA_TRASERA"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 62.66025641025641,
+          "left": 22.794007050528826,
+          "width": 3.0054054054054093,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": "15"
+        },
+        "description": "Windshield wiper. Air conditioning compressor.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/1997/air-conditioning-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/1997/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 62.66025641025641,
+          "left": 28.55193889541719,
+          "width": 3.240423031727385,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Turn signal light.",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 62.82051282051282,
+          "left": 34.66239717978852,
+          "width": 3.240423031727385,
+          "height": 12.339743589743591
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Instrument panel, reverse light.",
+        "relatedEntities": [
+          "TABLERO",
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 62.980769230769226,
+          "left": 40.65534665099886,
+          "width": 3.357931844888372,
+          "height": 12.339743589743591
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Climate control fan.",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 62.980769230769226,
+          "left": 46.76580493537019,
+          "width": 3.357931844888372,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "- No function."
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 62.980769230769226,
+          "left": 52.87626321974152,
+          "width": 3.240423031727385,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Radiator fan."
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 63.141025641025635,
+          "left": 58.751703877790874,
+          "width": 3.357931844888372,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "- Radiator fan."
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 63.30128205128205,
+          "left": 64.74465334900117,
+          "width": 3.240423031727385,
+          "height": 12.5
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "7.5"
+        },
+        "description": "Command module, Main relay of electronic injection, Immobilizer, Fuel level indicator, Cold start relay.",
+        "relatedEntities": [
+          "COMANDO",
+          "INMOVILIZADOR",
+          "TESTIGO_NIVEL_COMBUSTIBLE",
+          "RELAY(of=SISTEMA_DE_ARRANQUE_EN_FRIO)"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": -1.0775593364121805,
+          "left": 56.56024497001079,
+          "width": 9.86494725487627,
+          "height": 4.287760777939273
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": "15"
+        },
+        "description": "HEGO (Lambda Sensor) and CANP supply, Cold start"
+      }
+    ],
+    "boxName": "Fuse Box",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/6075fd77270b1a000483c73d/fragment-6075fd77270b1a000483c73d-577b4e1611.jpg",
+      "source": "61b2898e6866ff00046f1e10"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3fe94d1c_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7ad1969a_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a31083cb_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b4fcdb86_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/81c8b502_image.png"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.7332549941245593,
+    "imageClusters": [
+      "61e70ce5dd76840004c927c9"
+    ],
+    "templateId": "645c0b43fd1aca75b357b751",
+    "isTranslated": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-uno-1997-genid-g1-0.webp"
+  }
+]

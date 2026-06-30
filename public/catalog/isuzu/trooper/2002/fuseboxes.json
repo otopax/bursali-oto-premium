@@ -1,0 +1,2873 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 80.62499999999991,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        }
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 76.12499999999991,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(O2 SENSOR HEATER) Lambda probe",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 71.37499999999991,
+          "width": 2.149999999999999,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HORN HAZARD) Horn, Horn relay, Horn SW, Hazard warning Sw, Flasher unit, Anti-theft horn, Anti-theft controller",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/horn-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 66.87499999999991,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(H/LAMP - LH) Headlight (LH), High beam indicator light, Dimmer passing SW, Cornering light SW, Fog light SW, Fog light relay, Cornering light, Cornering light relay",
+        "relatedEntities": [
+          "TESTIGO_CONTROL_DE_ESTABILIDAD",
+          "TESTIGO_LUZ_ALTA",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 66.87499999999991,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(H/LAMP ARA-LH (HI)) Left hand headlight (high beam)"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 62.25000000000003,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(H/LAMP ARA-RH) Headlight (RH), Dimmer passing SW"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 62.25000000000003,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(H/LAMP ARA-RH (HI)) Right hand headlight (high beam)"
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 57.50000000000003,
+          "width": 2.149999999999999,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(H/LAMP - LH (LOW)) Left hand headlight (low beam)"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 53.00000000000002,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(H/LAMP - RH (LOW)) Right hand headlight (low beam)"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 53.00000000000002,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(ANTI-THEFT) EXCLUSIVE ANTI-THEFT ALARM SYSTEM"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 48.37500000000002,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "description": "(FRTFOG / FOG) Fog light, fog light relay",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 43.87500000000002,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(ABS) Hydraulic unit, rear wheel anti-lock brake controller, electronic brake control module"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 39.12500000000002,
+          "width": 2.149999999999999,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Fuel Pump) Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fuel-pump-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 34.62500000000002,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(TAILLH) Left side tail light",
+        "relatedEntities": [
+          "LUCES_TRASERAS(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 30.000000000000018,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(TAIL) Tail relay, Lighting SW, FRT side marker light, Parking light, Tail light, Trailer harness connector, Lighting controller, Illumination light, Glove box SW, License plate light, A/T shift indicator control unit",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO",
+          "LUCES_TRASERAS",
+          "LUZ_PATENTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/tail-light-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 30.000000000000018,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(TAILRH) Right side tail light",
+        "relatedEntities": [
+          "LUCES_TRASERAS(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "FL1",
+        "layout": {
+          "top": 52.579852579852584,
+          "left": 63.150000000000084,
+          "width": 12.474999999999989,
+          "height": 11.19950859950859
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-283",
+          "amp": 80
+        },
+        "description": "(MAIN) Battery",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "FL2",
+        "layout": {
+          "top": 66.58476658476658,
+          "left": 63.150000000000084,
+          "width": 12.474999999999989,
+          "height": 11.445208845208835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-283",
+          "amp": 50
+        },
+        "description": "(KEY SW) Ignition switch, starter",
+        "relatedEntities": [
+          "BOTON_DE_ENCENDIDO",
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/starter-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "FL3",
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 50.127149612255316,
+          "width": 6.274999999999993,
+          "height": 14.356511056511044
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "(ECM) Engine Control Module Main Relay"
+      },
+      {
+        "id": "FL4",
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 43.35631627892198,
+          "width": 6.149999999999993,
+          "height": 14.356511056511044
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "(CONDENSER FAN) CONDENSER FAN"
+      },
+      {
+        "id": "FL5",
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 36.52298294558865,
+          "width": 6.149999999999993,
+          "height": 14.356511056511044
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 50
+        },
+        "description": "(GLOW) 4JG2: Glow"
+      },
+      {
+        "id": "FL6",
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 29.502149612255316,
+          "width": 6.524999999999993,
+          "height": 14.356511056511044
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 40
+        },
+        "description": "((4 WHEEL ABS ONLY)) ABS hydraulic unit, F9 fuse (ABS)"
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 43.194103194103235,
+          "left": 57.075000000000024,
+          "width": 1.9499999999999988,
+          "height": 10.407616707616718
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine control module",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 43.194103194103235,
+          "left": 50.95000000000003,
+          "width": 1.9499999999999988,
+          "height": 10.407616707616718
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cornering light"
+      },
+      {
+        "id": "X1",
+        "layout": {
+          "top": 9.729729729729735,
+          "left": 2.474999999999999,
+          "width": 8.574999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Lights",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "LUZ",
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "X2",
+        "layout": {
+          "top": 29.140049140049125,
+          "left": 2.474999999999999,
+          "width": 8.574999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X3",
+        "layout": {
+          "top": 48.79606879606883,
+          "left": 2.474999999999999,
+          "width": 8.574999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Dimmer"
+      },
+      {
+        "id": "X4",
+        "layout": {
+          "top": 68.20638820638824,
+          "left": 2.349999999999999,
+          "width": 8.699999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X5",
+        "layout": {
+          "top": 11.351351351351337,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning thermostat"
+      },
+      {
+        "id": "X6",
+        "layout": {
+          "top": 29.28746928746927,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X7",
+        "layout": {
+          "top": 47.22358722358717,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/air-conditioning-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "X8",
+        "layout": {
+          "top": 64.91400491400485,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn"
+      },
+      {
+        "id": "X9",
+        "layout": {
+          "top": 11.351351351351337,
+          "left": 28.725000000000023,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn or tail light"
+      },
+      {
+        "id": "X10",
+        "layout": {
+          "top": 29.28746928746927,
+          "left": 28.725000000000023,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X11",
+        "layout": {
+          "top": 11.351351351351337,
+          "left": 40.97500000000002,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fuel-pump-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "X12",
+        "layout": {
+          "top": 29.28746928746927,
+          "left": 40.97500000000002,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Main ECM"
+      },
+      {
+        "id": "X13",
+        "layout": {
+          "top": 4.71744471744472,
+          "left": 48.49999999999995,
+          "width": 13.849999999999994,
+          "height": 36.0501228501229
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Windshield wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "X16",
+        "layout": {
+          "top": 7.125307125307126,
+          "left": 64.52500000000006,
+          "width": 8.774999999999991,
+          "height": 16.461916461916463
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Upshift-1 (M/T) or anti-theft alarm system"
+      },
+      {
+        "id": "X17",
+        "layout": {
+          "top": 26.78132678132678,
+          "left": 64.52500000000006,
+          "width": 8.774999999999991,
+          "height": 16.461916461916463
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter (Gasoline)",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/starter-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "X18",
+        "layout": {
+          "top": 7.371007371007371,
+          "left": 77.02500000000006,
+          "width": 8.899999999999991,
+          "height": 16.216216216216218
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Shift on the fly"
+      },
+      {
+        "id": "X19",
+        "layout": {
+          "top": 26.78132678132678,
+          "left": 77.02500000000006,
+          "width": 8.899999999999991,
+          "height": 16.461916461916463
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Condenser fan"
+      },
+      {
+        "id": "X20",
+        "layout": {
+          "top": 6.061540097006665,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cruise control",
+        "relatedEntities": [
+          "CRUISE_CONTROL"
+        ]
+      },
+      {
+        "id": "X21",
+        "layout": {
+          "top": 23.75195778742438,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Upshift-2 (M/T; with ABS)"
+      },
+      {
+        "id": "X22",
+        "layout": {
+          "top": 41.68807572354223,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cornering light or rear fog light"
+      },
+      {
+        "id": "X23",
+        "layout": {
+          "top": 59.378493413959916,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog light",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.50875,
+    "boxName": "Fuse box in the engine compartment (Ver. 1)",
+    "imageClusters": [
+      "61fd891537dc92000493dc2e"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/c6a0d040_isuzu-trooper-1992.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/87246793_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d5c785e7_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b25980e9_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/5e4eca29_image.jpg"
+      }
+    ],
+    "templateId": "666734b0cc5a887ec41a2509",
+    "boxRotation": 270,
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-isuzu-trooper-2002-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 80.62499999999991,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        }
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 76.12499999999991,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": "20"
+        },
+        "description": "(02 SENSOR HEATER) Lambda sensor",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 71.37499999999991,
+          "width": 2.149999999999999,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HORN - HAZARD) Horn, Horn relay, Horn SW, Hazard warning SW, Flasher unit, Anti-theft horn, Anti-theft controller",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/horn-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 66.87499999999991,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(H/LIGHT - LH) Headlight (LH), High beam indicator light, Dimmer pass SW, Cornering light SW, Fog light SW, Fog light relay, Cornering light, Cornering light relay",
+        "relatedEntities": [
+          "TESTIGO_CONTROL_DE_ESTABILIDAD",
+          "TESTIGO_LUZ_ALTA",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 62.25000000000003,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(H/LIGHT-RH) Headlight (RH), Dimmer pass SW"
+      },
+      {
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 57.50000000000003,
+          "width": 2.149999999999999,
+          "height": 11.056511056511056
+        }
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 53.00000000000002,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": false
+        },
+        "description": "ACC SOCKET",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME(protects=TOMA_12V)"
+        ],
+        "extendedDescription": "Encendedor de cigarrillos / enchufes de corriente"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 48.37500000000002,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "(FRTFOG / FOG) Fog light, Fog light relay",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 43.87500000000002,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(ABS) Hydraulic unit, Rear wheel anti-lock brake controller, Brake electronic control module"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 39.12500000000002,
+          "width": 2.149999999999999,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(FUEL PUMP) Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fuel-pump-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 34.62500000000002,
+          "width": 1.8999999999999981,
+          "height": 11.056511056511056
+        }
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 82.55528255528255,
+          "left": 30.000000000000018,
+          "width": 2.0249999999999986,
+          "height": 11.056511056511056
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(TAIL LIGHT) Tail relay, Lighting SW, FRT side marker light, Parking light, Tail light, Trailer harness connector, Lighting controller, Illumination light, Glove box SW, License plate light, A/T shift indicator control unit",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO",
+          "LUCES_TRASERAS",
+          "LUZ_PATENTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/tail-light-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "FL1",
+        "layout": {
+          "top": 52.579852579852584,
+          "left": 63.150000000000084,
+          "width": 12.474999999999989,
+          "height": 11.19950859950859
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-283",
+          "amp": 80
+        },
+        "description": "(MAIN) Battery",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "FL2",
+        "layout": {
+          "top": 66.58476658476658,
+          "left": 63.150000000000084,
+          "width": 12.474999999999989,
+          "height": 11.445208845208835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-283",
+          "amp": 50
+        },
+        "description": "(KEY SW) Ignition switch, Starter",
+        "relatedEntities": [
+          "BOTON_DE_ENCENDIDO",
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/starter-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "FL3",
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 50.127149612255316,
+          "width": 6.274999999999993,
+          "height": 14.356511056511044
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "(ECM) Engine control module Main relay"
+      },
+      {
+        "id": "FL4",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf"
+        },
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 43.35631627892198,
+          "width": 6.149999999999993,
+          "height": 14.356511056511044
+        }
+      },
+      {
+        "id": "FL5",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf"
+        },
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 36.52298294558865,
+          "width": 6.149999999999993,
+          "height": 14.356511056511044
+        }
+      },
+      {
+        "id": "FL6",
+        "layout": {
+          "top": 59.61408543891203,
+          "left": 29.502149612255316,
+          "width": 6.524999999999993,
+          "height": 14.356511056511044
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 40
+        },
+        "description": "((ABS)) ABS hydraulic unit, fuse F9 (ABS)"
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 43.194103194103235,
+          "left": 57.075000000000024,
+          "width": 1.9499999999999988,
+          "height": 10.407616707616718
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine control module",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 43.194103194103235,
+          "left": 50.95000000000003,
+          "width": 1.9499999999999988,
+          "height": 10.407616707616718
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cornering light"
+      },
+      {
+        "id": "X1",
+        "layout": {
+          "top": 9.729729729729735,
+          "left": 2.474999999999999,
+          "width": 8.574999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Lights",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "LUZ",
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "X2",
+        "layout": {
+          "top": 29.140049140049125,
+          "left": 2.474999999999999,
+          "width": 8.574999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X3",
+        "layout": {
+          "top": 48.79606879606883,
+          "left": 2.474999999999999,
+          "width": 8.574999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "X4",
+        "layout": {
+          "top": 68.20638820638824,
+          "left": 2.349999999999999,
+          "width": 8.699999999999992,
+          "height": 14.961916461916461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X5",
+        "layout": {
+          "top": 11.351351351351337,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning thermostat"
+      },
+      {
+        "id": "X6",
+        "layout": {
+          "top": 29.28746928746927,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X7",
+        "layout": {
+          "top": 47.22358722358717,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/air-conditioning-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "X8",
+        "layout": {
+          "top": 64.91400491400485,
+          "left": 16.600000000000005,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/horn-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "X9",
+        "layout": {
+          "top": 11.351351351351337,
+          "left": 28.725000000000023,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn or tail light"
+      },
+      {
+        "id": "X10",
+        "layout": {
+          "top": 29.28746928746927,
+          "left": 28.725000000000023,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "X11",
+        "layout": {
+          "top": 11.351351351351337,
+          "left": 40.97500000000002,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/fuel-pump-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "X12",
+        "layout": {
+          "top": 29.28746928746927,
+          "left": 40.97500000000002,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Main ECM"
+      },
+      {
+        "id": "X13",
+        "layout": {
+          "top": 4.71744471744472,
+          "left": 48.49999999999995,
+          "width": 13.849999999999994,
+          "height": 36.0501228501229
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Windshield wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ],
+        "extendedDescription": "Limpiaparabrisas"
+      },
+      {
+        "id": "X16",
+        "layout": {
+          "top": 7.125307125307126,
+          "left": 64.52500000000006,
+          "width": 8.774999999999991,
+          "height": 16.461916461916463
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Upshift-1 (M/T) or anti-theft alarm system"
+      },
+      {
+        "id": "X17",
+        "layout": {
+          "top": 26.78132678132678,
+          "left": 64.52500000000006,
+          "width": 8.774999999999991,
+          "height": 16.461916461916463
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter (Gasoline)",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/starter-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "X18",
+        "layout": {
+          "top": 7.371007371007371,
+          "left": 77.02500000000006,
+          "width": 8.899999999999991,
+          "height": 16.216216216216218
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Shift-on-the-fly"
+      },
+      {
+        "id": "X19",
+        "layout": {
+          "top": 26.78132678132678,
+          "left": 77.02500000000006,
+          "width": 8.899999999999991,
+          "height": 16.461916461916463
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Condenser fan"
+      },
+      {
+        "id": "X20",
+        "layout": {
+          "top": 6.061540097006665,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "X21",
+        "layout": {
+          "top": 23.75195778742438,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Upshift-2 (M/T; with ABS)"
+      },
+      {
+        "id": "X21",
+        "layout": {
+          "top": 23.75195778742438,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "ACC SOCKET ",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME(protects=TOMA_12V)"
+        ],
+        "extendedDescription": "Encendedor de cigarrillos / enchufes de corriente"
+      },
+      {
+        "id": "X22",
+        "layout": {
+          "top": 41.68807572354223,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cornering light or rear fog light"
+      },
+      {
+        "id": "X23",
+        "layout": {
+          "top": 59.378493413959916,
+          "left": 90.31837723747772,
+          "width": 5.741666666666672,
+          "height": 16.117936117936104
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog light",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.50875,
+    "boxName": "Fuse box in the engine compartment (Ver. 2)",
+    "imageClusters": [
+      "61fd891537dc92000493dc2e"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/c140e6ee_isuzu-trooper-1992.jpg"
+    },
+    "boxTablesImages": [],
+    "templateId": "666734b0cc5a887ec41a2509",
+    "boxRotation": 270,
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-isuzu-trooper-2002-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "C1",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 85.59835216810897,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Starter relay, clutch start SW (M/T), mode SW (A/T), anti-theft controller, DERM (SRS)"
+      },
+      {
+        "id": "C2",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 77.99440687748334,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Seat heater SW (LH & RH), Seat heater (LH & RH)"
+      },
+      {
+        "id": "C3",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 70.3904615868577,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Transmission control module, Turn signal SW, Front turn signal light, Rear turn signal light, Turn signal indicator light, Flasher unit, Cornering light relay, Backup light SW (M/T), Mode SW (A/T), A/T shift indicator control unit, Illumination SW, A/T shift lock control unit, A/T shift indicator, Cruise control unit, Cancel SW"
+      },
+      {
+        "id": "C3",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 70.3904615868577,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Transmission control module, Turn signal SW, Front turn signal light, Rear turn signal light, Turn signal indicator light, Flasher unit, Cornering light relay, Backup light SW (M/T), Mode SW (A/T), A/T shift indicator control unit, Illumination SW, A/T shift lock control unit, A/T shift indicator, Cruise control unit, Cancel SW"
+      },
+      {
+        "id": "C4",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 62.90350006993412,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Cruise control unit, Rear defogger SW, Rear defogger relay, Defogger indicator light SW, Clutch SW (M/T), Transmission SW-1, 2 (M/T), Transmission SW-3, 4 (M/T), Cancel SW (Combination SW), Main cruise control SW, Main cruise control relay, Cruise control indicator light, Cruise control SW, Rearview mirror, Door mirror defogger SW, A/T shift lock control unit, Power window relay, Electronic brake control module, Transmission control module, G sensor, Upshift-2 relay, Upshift indicator (meter)",
+        "relatedEntities": [
+          "TESTIGO_CRUISE_CONTROL",
+          "ESPEJO_RETROVISOR",
+          "ESPEJO_LATERAL",
+          "RELAY(protects=LEVANTAVIDRIOS)",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "C5",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 55.299554779308494,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Windshield wiper and washer SW, Wiper motor, Washer motor, Wiper intermittent relay",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "C6",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 47.695609488682855,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Rear wiper and washer SW, Rear washer motor, Rear wiper motor, Rear wiper intermittent relay",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "C7",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 40.09166419805716,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Wiper SW, Headlight wiper motor, Headlight washer motor, Headlight wiper timer"
+      },
+      {
+        "id": "C8",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 32.487718907431564,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Generator, ECM main relay, V.S.V; EGR, V.S.V: canister, V.S.V: intake air (DOHC)",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/alternator-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "C9",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 24.88377361680591,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fuel cut-off (4JG2)"
+      },
+      {
+        "id": "C10",
+        "layout": {
+          "top": 61.31845291873392,
+          "left": 17.279828326180272,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Vehicle speed sensor, Remind Buzzer, Meter and gauge (Voltmeter, Engine coolant temperature gauge, Tachometer, Speedometer, Oil pressure gauge, Fuel gauge), Indicator and warning light (Anti-lock brake system, Rear wheel anti-lock, Seat belt, Check engine, Low fuel, 4WD, Oil pressure, Upshift, Brake system, Charging, A/T oil temperature, Cruise control indicator light, Trans check indicator light, Power drive indicator light, Winter drive indicator light), 4WD SW, Parking brake SW, Seat belt SW, Brake differential SW, Electronic brake control module, Engine control module, Rear wheel anti-lock brake controller",
+        "relatedEntities": [
+          "INDICADOR",
+          "LUZ_TESTIGO",
+          "CINTURON_DE_SEGURIDAD",
+          "DOBLE_TRACCION",
+          "PRESION_DE_ACEITE",
+          "FRENO",
+          "PROP_CARGA",
+          "TESTIGO_CRUISE_CONTROL",
+          "ECU"
+        ]
+      },
+      {
+        "id": "C11",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 85.59835216810897,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Audio, Door mirror, Door mirror control SW, Folding door mirror SW, Digital clock, Speaker",
+        "relatedEntities": [
+          "ESTEREO",
+          "RELOJ",
+          "PARLANTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/radio-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "C12",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 77.99440687748334,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/cigarette-lighter-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "C13",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 70.3904615868577,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Anti-theft controller"
+      },
+      {
+        "id": "C14",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 62.90350006993412,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Stop light SW (without cruise control), Brake SW (with cruise control), Rear wheel anti-lock brake controller, Stop light, Transmission control module, Electronic brake control module, Trailer harness connector, Cruise control unit, A/T shift lock control unit, Power-off lock relay",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "C15",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 55.299554779308494,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Horn, Horn relay, Horn SW, Hazard warning light SW, Flasher unit, Anti-theft horn, Hazard warning light, Audio / Phone",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY(protects=BOCINA)",
+          "ESTEREO",
+          "TELEFONO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/horn-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/radio-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "C16",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 47.695609488682855,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Digital clock, Audio, Dome light, Map light, Luggage room light, Courtesy light, Door SW (front, rear, tailgate), Antenna, Anti-theft controller, Key reminder SW, Seat belt, Key and light reminder buzzer",
+        "relatedEntities": [
+          "ANTENA",
+          "CINTURON_DE_SEGURIDAD",
+          "LLAVE"
+        ]
+      },
+      {
+        "id": "C17",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 40.09166419805716,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Rear defogger, rear defogger relay",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "C18",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 32.487718907431564,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Anti-theft indicator light, front door lock and power window SW, door lock key SW, door lock actuator (front and rear)",
+        "relatedEntities": [
+          "TESTIGO_INMOVILIZADOR",
+          "CERRADURA(of=PUERTA(ubicacion=PARTE_DELANTERA))",
+          "CERRADURA_DE_PUERTA(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "C19",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 24.88377361680591,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Blower motor, Blower resistor fan SW",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/cooling-fan-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "C20",
+        "layout": {
+          "top": 76.21530236556873,
+          "left": 17.279828326180272,
+          "width": 4.1400975857257665,
+          "height": 11.912430795026582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Pressure SW, A/C thermostat relay, A/C compressor relay, Magnetic clutch (A/C compressor), A/C SW, Electrostat, Fan SW"
+      },
+      {
+        "id": "C21",
+        "layout": {
+          "top": 4.455433270971229,
+          "left": 63.40350006993413,
+          "width": 4.1400975857257665,
+          "height": 10.512430795026587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "SRS warning light (meter)"
+      },
+      {
+        "id": "C22",
+        "layout": {
+          "top": 4.455433270971229,
+          "left": 70.8904615868577,
+          "width": 4.1400975857257665,
+          "height": 10.512430795026587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "DERM"
+      },
+      {
+        "id": "C23",
+        "layout": {
+          "top": 4.455433270971229,
+          "left": 78.49440687748331,
+          "width": 4.1400975857257665,
+          "height": 10.512430795026587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Passenger inflator module, DERM"
+      },
+      {
+        "id": "C24",
+        "layout": {
+          "top": 4.455433270971229,
+          "left": 86.09835216810895,
+          "width": 4.1400975857257665,
+          "height": 10.512430795026587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Dual pole arming sensor, DERM, SRS coil assembly, Driver inflator module"
+      },
+      {
+        "id": "CB2",
+        "layout": {
+          "top": 53.19953991836828,
+          "left": 54.731487267209076,
+          "width": 15.765770334053483,
+          "height": 4.093825862379261
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "Power window relay, Power window SW, Power window motor, Sunroof motor, Sunroof control unit, Sunroof SW, Safety stop SW, Limit SW, Power seat switch, Front tilt motor and SW, Rear tilt motor and SW, Slide motor, Recline motor and SW",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)",
+          "MOTOR_IMPULSOR(of=TECHO_SOLAR)"
+        ]
+      },
+      {
+        "id": "CB1",
+        "layout": {
+          "top": 53.19953991836828,
+          "left": 33.698487289068595,
+          "width": 15.765770334053483,
+          "height": 4.093825862379261
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 34.312497124949665,
+          "left": 27.855144079336984,
+          "width": 19.46066798936274,
+          "height": 11.431371420408915
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Heater and air conditioning",
+        "relatedEntities": [
+          "PRECALENTADOR",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/air-conditioning-relay",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 34.312497124949665,
+          "left": 48.29018169916226,
+          "width": 19.46066798936274,
+          "height": 11.431371420408915
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 34.312497124949665,
+          "left": 68.72521931898754,
+          "width": 19.46066798936274,
+          "height": 11.431371420408915
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 9.395919224831427,
+          "left": 8.701567277795446,
+          "width": 19.46066798936274,
+          "height": 11.431371420408915
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Direction indicator switch"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 36.962628256614884,
+          "left": 16.544291544245446,
+          "width": 3.4158347311288626,
+          "height": 7.693035078637237
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Dome light Anti-theft"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 53.99408278007967,
+          "left": 16.544291544245446,
+          "width": 7.5081618674188775,
+          "height": 2.8054312827655163
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Anti-theft (DOHC)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 92.72307593224869,
+          "left": 16.544291544245446,
+          "width": 7.5081618674188775,
+          "height": 2.8054312827655163
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Anti-theft light reminder"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 92.72307593224869,
+          "left": 37.57729152238593,
+          "width": 7.5081618674188775,
+          "height": 2.8054312827655163
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Mode switch (DOHC)"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 92.72307593224869,
+          "left": 58.61029150052641,
+          "width": 7.5081618674188775,
+          "height": 2.8054312827655163
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "RWAL cruise control (rear wheel anti-lock)"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 92.72307593224869,
+          "left": 79.6432914786669,
+          "width": 7.5081618674188775,
+          "height": 2.8054312827655163
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 53.99408278007967,
+          "left": 79.6432914786669,
+          "width": 7.5081618674188775,
+          "height": 2.8054312827655163
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electronic brake control module (DOHC)"
+      }
+    ],
+    "boxAspectRatio": 1.1217038539553752,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/5068a9f2_isuzu-trooper-1992.jpg"
+    },
+    "processed": false,
+    "imageClusters": [
+      "656931f8e183398dca6b7746"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/49ea4c1e_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8e08ad0b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2923d932_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/df6b0018_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/760783ae_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8dd30735_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f5b5e1f4_image.jpg"
+      }
+    ],
+    "boxName": "Passenger compartment fuse box",
+    "templateId": "68837e553e2dd0b21164cc3a",
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-isuzu-trooper-2002-genid-g2-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 15.911654492486312,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Starter) Starter system",
+        "relatedEntities": [
+          "ARRANQUE",
+          "SISTEMA_DE_IGNICION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/starter-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 22.847096200098758,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Seat Heater) Seat heater"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 29.782537907711202,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Luz de cruce y retroceso",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "MARCHA_REVERSA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 36.71797961532365,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Elec. IG.) Protects several circuits"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 43.6534213229361,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Lavaparabrisas frontal",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 50.588863030548545,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lavaparabrisas trasero",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 57.524304738160986,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lavafaros",
+        "relatedEntities": [
+          "LAVA_FAROS"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 64.45974644577343,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Engine) Engine control system"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 71.39518815338587,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(IG. Coil) Ignition coil",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 70.01869646893668,
+          "left": 78.33062986099833,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Medidores del tablero de instrumentos ",
+        "relatedEntities": [
+          "INDICADOR"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 15.911654492486312,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Audio, Mirror) Audio system; Power control mirror"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 22.847096200098758,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(Cigar) Cigar lighter / power outlet",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/isuzu/trooper/info/fusebox/2002/cigarette-lighter-fuse",
+            "urlWithAnchor": "/isuzu/trooper/info/fusebox/2002/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 29.782537907711202,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Tail, Illumi) Tail lights; Illumination"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 36.71797961532365,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Stop, A/T Cont.) Stop lights; Automatic transmission controller"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 43.6534213229361,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Horn, Hazard) Horn; Hazard light"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 50.588863030548545,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "(RR Def.) Rear window defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 57.524304738160986,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(Clock, Room) Instrument cluster; Interior lights"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 64.45974644577343,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(Door Lock) Power door lock system"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 71.39518815338587,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "(Blower) AC blower motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 47.98883257051047,
+          "left": 78.33062986099833,
+          "width": 3.491970649986687,
+          "height": 14.238814470934017
+        }
+      },
+      {
+        "id": "21",
+        "kind": {
+          "type": "diode",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 15.481350476491308,
+          "left": 25.996325614325542,
+          "width": 3.664963312483362,
+          "height": 10.052245702833263
+        }
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "diode",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 31.555830283856654,
+          "left": 25.996325614325542,
+          "width": 3.664963312483362,
+          "height": 10.052245702833263
+        }
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 37.77987125172759,
+          "left": 35.03574123303725,
+          "width": 8.502189465597537,
+          "height": 5.4358237825813625
+        }
+      },
+      {
+        "id": "24",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 37.77987125172759,
+          "left": 46.2755217626819,
+          "width": 8.502189465597537,
+          "height": 5.4358237825813625
+        }
+      },
+      {
+        "id": "25",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 37.77987125172759,
+          "left": 57.51530229232655,
+          "width": 8.502189465597537,
+          "height": 5.4358237825813625
+        }
+      },
+      {
+        "id": "26",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 12.403969524110337,
+          "left": 15.03866182998964,
+          "width": 6.638685796845879,
+          "height": 27.810462036096798
+        }
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 12.403969524110337,
+          "left": 74.40216287976331,
+          "width": 6.638685796845879,
+          "height": 27.810462036096798
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "amp": "30",
+          "notUsed": false
+        },
+        "description": "(P/Window, S/Roof, P/Seat) Power windows; Sunroof; Power seats"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 17.820160000300845,
+          "left": 33.30800407366807,
+          "width": 17.896349581181774,
+          "height": 13.970157594123936
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(RR DEF Relay) Rear window defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 17.820160000300845,
+          "left": 53.42333164233985,
+          "width": 17.896349581181774,
+          "height": 13.970157594123936
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(Blower Relay) AC blower motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/29cd1e71_diagrama2.JPG"
+    },
+    "imageClusters": [
+      "61e1d9d85132680004aa7b85"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/63d247dd_isuzu-trooper-1992.jpg"
+    },
+    "boxName": "Passenger Compartment Fuse Box (Type 2)",
+    "templateId": "68838cfc3e2dd0b21164cd69",
+    "boxAspectRatio": 0.8123791102514507,
+    "useAcronyms": true,
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-isuzu-trooper-2002-genid-g2-3.webp"
+  }
+]

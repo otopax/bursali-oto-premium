@@ -1,0 +1,2348 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 75.82249414077182,
+          "left": 33.13629483439681,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Anti-lock brake system module.",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.82249414077182,
+          "left": 38.38020811201804,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Anti-lock brake system module.",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.575514082991916,
+          "left": 36.75093920337018,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Fuel pump relay.",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/fuel-pump-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.377551615728436,
+          "left": 36.75093920337018,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Blower motor relay.",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.575514082991916,
+          "left": 41.25953619823577,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Run start relay."
+      },
+      {
+        "layout": {
+          "top": 48.377551615728436,
+          "left": 41.25953619823577,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Powertrain control module relay.",
+        "relatedEntities": [
+          "RELAY(protects=PCM)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.575514082991916,
+          "left": 45.76813319310137,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Starter relay.",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/starter-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.377551615728436,
+          "left": 45.76813319310137,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Memory seat.",
+        "relatedEntities": [
+          "MEMORIA_ASIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.575514082991916,
+          "left": 50.27673018796696,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Wipers and washers relay.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "RELAY(protects=SAPITO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.377551615728436,
+          "left": 50.27673018796696,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "Cooling fan.",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.17499548594197,
+          "left": 68.9894460124257,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Cooling fan 1 [600W].",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.17499548594197,
+          "left": 68.9894460124257,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Cooling fan 1 [750W].",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.80565295993415,
+          "left": 68.9894460124257,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Cooling fan 2 [600W].",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.80565295993415,
+          "left": 68.9894460124257,
+          "width": 3.962589360243187,
+          "height": 6.6306823704590885
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Cooling fan 2 [750W].",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.59797579626202,
+          "left": 43.759063758541956,
+          "width": 1.5214256075704924,
+          "height": 5.181656633683231
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Anti-lock brake system module run/start."
+      },
+      {
+        "layout": {
+          "top": 61.71298792629612,
+          "left": 74.27119929854024,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Horn relay.",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/horn-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.71298792629612,
+          "left": 77.69934170091288,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake pedal switch.",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.06345458071938,
+          "left": 74.88260747914944,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Windshield wipers and washer.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.44005701139336,
+          "left": 75.01761414860924,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Run/start relay coil.",
+        "relatedEntities": [
+          "RELAY(protects=ARRANQUE)",
+          "RELAY(protects=RELAY(protects=ARRANQUE))",
+          "BOBINA(of=RELAY(protects=ARRANQUE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/starter-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.71298792629612,
+          "left": 81.12748410328552,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Transmission range control module.",
+        "relatedEntities": [
+          "SENSOR_POSICION_CAMBIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.06345458071938,
+          "left": 80.3081091490265,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air conditioning clutch.",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/air-conditioning-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.44005701139336,
+          "left": 78.90998046077824,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Powertrain control module relay coil.",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=PCM))",
+          "RELAY(protects=RELAY(protects=PCM))",
+          "RELAY(protects=PCM)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.44005701139336,
+          "left": 82.80234677294719,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Washer pump relay.",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_LIMPIAPARABRISAS)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 39.27335559984937,
+          "left": 81.6960281808555,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Alternator sensor."
+      },
+      {
+        "layout": {
+          "top": 34.009989272892696,
+          "left": 81.6960281808555,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rain sensor. Rear wiper. Rear washer pump relay coil.",
+        "relatedEntities": [
+          "SENSOR_DE_LLUVIA",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)",
+          "BOBINA(of=RELAY(protects=BOMBA_LIMPIAPARABRISAS))",
+          "RELAY(protects=RELAY(protects=BOMBA_LIMPIAPARABRISAS))",
+          "RELAY(protects=BOMBA_LIMPIAPARABRISAS)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.71298792629612,
+          "left": 84.61004146442598,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 61.71298792629612,
+          "left": 88.09259882556644,
+          "width": 1.5157555352432834,
+          "height": 4.36342640959738
+        },
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 55.06345458071938,
+          "left": 86.42152985073254,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Vehicle power 1 (powertrain control module)."
+      },
+      {
+        "layout": {
+          "top": 49.80008825376271,
+          "left": 86.42152985073254,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Vehicle power 2 (canister vent solenoid, universal exhausted gas oxygen sensor, variable camshaft timing, catalyst monitor sensor, canister purge solenoid).",
+        "relatedEntities": [
+          "SENSOR_OXIGENO",
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.53672192680604,
+          "left": 86.42152985073254,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Vehicle power 3 (A/C clutch control relay coil, variable A/C compressor, fan control relay coil, engine charge air bypass valve solenoid, active grill shutters)."
+      },
+      {
+        "layout": {
+          "top": 39.27335559984937,
+          "left": 86.42152985073254,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Vehicle power 4 (ignition coils)."
+      },
+      {
+        "layout": {
+          "top": 34.009989272892696,
+          "left": 86.42152985073254,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 62.40254839931849,
+          "left": 13.233632109624681,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 57.00407654887093,
+          "left": 13.233632109624681,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Voltage quality module run/start [vehicles equipped with stop/start]"
+      },
+      {
+        "layout": {
+          "top": 51.60560469842337,
+          "left": 13.233632109624681,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F39",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Powertrain control ignition start power - run."
+      },
+      {
+        "layout": {
+          "top": 46.20713284797581,
+          "left": 13.233632109624681,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Electronic power assist steering run/start."
+      },
+      {
+        "layout": {
+          "top": 40.80866099752825,
+          "left": 13.233632109624681,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F41",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Extended power module run/start."
+      },
+      {
+        "layout": {
+          "top": 58.18765190831687,
+          "left": 18.653065181992183,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Adaptive cruise control. Blind spot information system. Heads-up display. Rear video camera [vehicles with stop/start]",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "DETECCION_PUNTO_CIEGO",
+          "DISPLAY_HUD",
+          "CAMARA_REVERSA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.18765190831687,
+          "left": 18.653065181992183,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used (spare) [vehicles without stop/start]"
+      },
+      {
+        "layout": {
+          "top": 52.87063314508718,
+          "left": 18.653065181992183,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 47.5536143818575,
+          "left": 18.653065181992183,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F44",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Heated rear window relay coil. Heated wiper park. Electronic transmission pump run/stop feed (vehicles equipped with stop/start).",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=DESEMPANADOR_TRASERO))",
+          "RELAY(protects=RELAY(protects=DESEMPANADOR_TRASERO))",
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 42.23659561862782,
+          "left": 18.653065181992183,
+          "width": 3.034422452413347,
+          "height": 2.056340757392921
+        },
+        "id": "F45",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Transmission range control module run/start."
+      },
+      {
+        "layout": {
+          "top": 48.01439974378984,
+          "left": 23.840277754773744,
+          "width": 4.941341447218092,
+          "height": 5.555541938564082
+        },
+        "id": "F46",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heated rear window relay. Heated wiper park.",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.35113593031564,
+          "left": 24.270731611417173,
+          "width": 1.3816249110343655,
+          "height": 4.798641644842246
+        },
+        "id": "F47",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Electronic transmission pump B+ feed (vehicles equipped with stop/start)."
+      },
+      {
+        "layout": {
+          "top": 40.35113593031564,
+          "left": 27.984864754957158,
+          "width": 1.5070665717699891,
+          "height": 4.798641644842246
+        },
+        "id": "F48",
+        "kind": {
+          "format": "mini",
+          "type": "fuse"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 29.21143211193179,
+          "left": 12.033632109624685,
+          "width": 8.906357912229327,
+          "height": 8.569002937218308
+        },
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Run start."
+      },
+      {
+        "layout": {
+          "top": 15.501027412382477,
+          "left": 11.71349037771657,
+          "width": 6.272083036781225,
+          "height": 11.996604112105631
+        },
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn.",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/horn-relay",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 29.21143211193179,
+          "left": 22.445289950681524,
+          "width": 8.780916251493709,
+          "height": 8.569002937218308
+        },
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel pump.",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/fuel-pump-relay",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.501027412382477,
+          "left": 19.66543168258964,
+          "width": 6.272083036781225,
+          "height": 11.996604112105631
+        },
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear window washer pump."
+      },
+      {
+        "layout": {
+          "top": 15.501027412382477,
+          "left": 27.617372987462712,
+          "width": 6.272083036781225,
+          "height": 11.996604112105631
+        },
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay 3 [750W]",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-relay",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.25837113449677,
+          "left": 32.86048107762333,
+          "width": 9.659007876643088,
+          "height": 8.569002937218308
+        },
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Windshield wipers.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 31.78213299309726,
+          "left": 32.556947791738345,
+          "width": 10.787982823263697,
+          "height": 15.081445169504207
+        },
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay 1 [600W]. Cooling fan relay 5 [750W]."
+      },
+      {
+        "layout": {
+          "top": 15.329647353638133,
+          "left": 35.69298931012896,
+          "width": 10.787982823263697,
+          "height": 15.081445169504207
+        },
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter.",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/starter-relay",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.25837113449677,
+          "left": 43.52302224015136,
+          "width": 9.533566215907447,
+          "height": 8.569002937218308
+        },
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 31.78213299309726,
+          "left": 44.82478888309389,
+          "width": 10.787982823263697,
+          "height": 15.081445169504207
+        },
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay 4 [750W]",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-relay",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.214827999826145,
+          "left": 47.40994708001327,
+          "width": 6.773849679723709,
+          "height": 13.024884464571825
+        },
+        "id": "R11",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning clutch.",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/air-conditioning-relay",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.524547379219364,
+          "left": 69.24032933389701,
+          "width": 10.913424483999313,
+          "height": 15.081445169504207
+        },
+        "id": "R12",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay 1 [750W]. Cooling fan relay 3 [600W]."
+      },
+      {
+        "layout": {
+          "top": 16.072061739760212,
+          "left": 68.9894460124257,
+          "width": 10.913424483999313,
+          "height": 15.081445169504207
+        },
+        "id": "R13",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay 2.",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cooling-fan-relay",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.900681681015838,
+          "left": 81.65905374672376,
+          "width": 10.787982823263697,
+          "height": 15.252825228248586
+        },
+        "id": "R14",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Powertrain control module.",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.99988609309081,
+          "left": 7.266849001670976,
+          "width": 10.787982823263697,
+          "height": 15.081445169504207
+        },
+        "id": "R15",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Heated rear window. Heated wiper park.",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 68.62884562313607,
+          "left": 19.309248432290904,
+          "width": 10.913424483999313,
+          "height": 15.252825228248586
+        },
+        "id": "R16",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Blower motor.",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 15.477216557785416,
+          "left": 57.258356863435466,
+          "width": 9.4450888580489,
+          "height": 34.60693379301789
+        },
+        "ignoreAndCrop": false,
+        "relatedEntities": []
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/0b8bf658_lincoln-mkc-2018.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.700312174817898,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/c721613f_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0923a469_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/87151a64_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/35953294_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/460a8cd7_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/62533341_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a6786cd2_image.jpg"
+      }
+    ],
+    "boxName": "Power Distribution Box",
+    "templateId": "618c232771f81b3b1c4d9707",
+    "imageClusters": [
+      "61ccbc4e43bb03000428c8d8"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lincoln-mkc-2019-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 11.826844175440671,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Demand lamp battery saver"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 16.952753902712917,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Memory seats",
+        "relatedEntities": [
+          "MEMORIA_ASIENTO"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 22.34844835247321,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Driver door unlock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 32.465375445773574,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "5"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 39.199038725692596,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Subwoofer amplifier. THX amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=SUBWOOFER)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 44.872883877134,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 44.872883877134,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 49.988455577137195,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 49.999163472562806,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 55.10402727714039,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Keypad. Power liftgate logic",
+        "relatedEntities": [
+          "TECLADO"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 55.12544306799161,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 60.21959897714358,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Climate control, Gear shift module, Push-button ignition",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 60.251722663420416,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Cluster. Datalink module logic. Steering column module logic",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 65.33517067714678,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Extended Power Module (supplies power for Restraint Control Module and Occupant Classification System)",
+        "relatedEntities": [
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 65.37800225884922,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Datalink module"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 31.104549249801376,
+          "left": 70.31284508781636,
+          "width": 2.839997589381687,
+          "height": 9.966061153262952
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 75.2531047626969,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Cellphone passport module"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 75.2531047626969,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "5"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 80.51867646270009,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "7.5"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 80.33847551275144,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "7.5"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 85.58424816270329,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Humidity and in-car temperature",
+        "relatedEntities": [
+          "SENSOR_TEMPERATURA_HABITACULO"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 85.6238462628061,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "5"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 11.857428261118963,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Delayed accessory (driver window switch, moonroof logic, power inverter logic)"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 16.983337988391213,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": "20"
+        },
+        "description": "Central lock and unlock"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 22.37903243815139,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Driver door (window, mirror)",
+        "relatedEntities": [
+          "ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 27.39043919463175,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Front passenger door (window, mirror)",
+        "relatedEntities": [
+          "ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 32.49595953145187,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Moonroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/sunroof-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 39.228603341848114,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "THX amplifier"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 44.972883877134,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Rear driver side door (window)",
+        "relatedEntities": [
+          "PUERTA",
+          "VENTANILLA"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 50.116243762195914,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Rear passenger side door (window)",
+        "relatedEntities": [
+          "PUERTA",
+          "VENTANILLA"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 55.25960364725782,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 60.40296353231973,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Display, GPS, Radio frequency receiver, Voice control",
+        "relatedEntities": [
+          "PANTALLA",
+          "NAVEGADOR"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 65.54632341738164,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Radio and active noise control",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/radio-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 70.68968330244354,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Run/start bus (fuse #19, 20, 21, 22, 35, 36, 37, circuit breaker)",
+        "relatedEntities": [
+          "CIRCUIT_BREAKER"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 75.83304318750545,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "notUsed": false,
+          "amp": "5"
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 80.97640307256736,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Auto-dimming rear view mirror. Continuous control damping suspension. Lane keeping system module. Rear heated seats module",
+        "relatedEntities": [
+          "ESPEJO_RETROVISOR_ELECTRICO_ANTIDESLUMBRANTE"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 86.11976295762928,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "All-wheel drive relay. Heated steering wheel",
+        "relatedEntities": [
+          "RELAY(protects=DOBLE_TRACCION)"
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 20.22444287128107,
+          "left": 3.1095644581706687,
+          "width": 6.317217637081323,
+          "height": 34.750154175746445
+        },
+        "kind": {
+          "format": "maxi-ford",
+          "type": "circuitbreaker",
+          "amp": "30",
+          "notUsed": true
+        },
+        "description": "Not used (spare)"
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 0.6441 A 0.6441 0.6441 0 0 1 0.6441 0.0000 L 99.3559 0.0000 A 0.6441 0.6441 0 0 1 100.0000 0.6441 L 100.0000 44.3639 A 0.6441 0.6441 0 0 1 99.3559 45.0081 L 0.6441 45.0081 A 0.6441 0.6441 0 0 1 0.0000 44.3639 Z"
+        ],
+        "svgViewBoxH": 45.008051529790656,
+        "layout": {
+          "top": 10.010230067692575,
+          "left": 1.731360286700922,
+          "width": 94.32650203514935,
+          "height": 77.87040463182639
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxAspectRatio": 0.5451919108543128,
+    "boxName": "Passenger Compartment Fuse Box",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/d798bcec_lincoln-mkc-2018.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/aa305780_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2271b60b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8638ebd4_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d0047c22_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/03b39aa7_image.jpg"
+      }
+    ],
+    "templateId": "61391465c09d3500045b2236",
+    "backgroundColor": "#2e2e2e",
+    "imageClusters": [
+      "6324b7410e6bddc6fbc33b8c",
+      "6352bad79b7c022fad4ac93a",
+      "6226448363a3a7cea51f1a0f",
+      "63599e06ac5de77993129e4e",
+      "619c025ade0c030004a82257"
+    ],
+    "boxScaleMultiplier": "",
+    "boxRotation": 90,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lincoln-mkc-2019-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 49.594429589581345,
+          "left": 78.75374003256934,
+          "width": 6.8794010197942015,
+          "height": 3.9177660897756077
+        }
+      },
+      {
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 38.65733258895777,
+          "left": 78.75374003256934,
+          "width": 6.8794010197942015,
+          "height": 3.9177660897756077
+        }
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 31.638001678109802,
+          "left": 78.75374003256934,
+          "width": 6.8794010197942015,
+          "height": 3.9177660897756077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Hands free liftgate"
+      },
+      {
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 20.70090467748623,
+          "left": 78.75374003256934,
+          "width": 6.8794010197942015,
+          "height": 3.9177660897756077
+        }
+      },
+      {
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 49.594429589581345,
+          "left": 70.33417460535854,
+          "width": 6.8794010197942015,
+          "height": 3.9177660897756077
+        }
+      },
+      {
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 38.65733258895777,
+          "left": 70.33417460535854,
+          "width": 6.8794010197942015,
+          "height": 3.9177660897756077
+        }
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 21.19062543870818,
+          "left": 71.2582732498085,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Rear heated seats."
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 21.19062543870818,
+          "left": 63.454773585564354,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power cinch latch. Power liftgate.",
+        "relatedEntities": [
+          "PORTON_TRASERO"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 35.22928726040412,
+          "left": 52.77630036080918,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Heated front seats.",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 21.19062543870818,
+          "left": 55.445918666997976,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Trailer tow.",
+        "relatedEntities": [
+          "REMOLQUE"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 35.22928726040412,
+          "left": 44.83589719368354,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Climate control seats."
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 21.19062543870818,
+          "left": 47.847774257076026,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.61253293372118,
+          "left": 36.89549402655791,
+          "width": 2.4338813580553786,
+          "height": 10.194415224439023
+        }
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 50.165770477673625,
+          "left": 36.89549402655791,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power seats.",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 35.22928726040412,
+          "left": 36.89549402655791,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Auxiliary power point - inside of floor console.",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 21.19062543870818,
+          "left": 40.04427459283187,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Auxiliary power point - rear of floor console.",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 65.10225369494313,
+          "left": 28.955090859432275,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        }
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 50.165770477673625,
+          "left": 28.955090859432275,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Auxiliary power point - cargo area.",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lincoln/mkc/info/fusebox/2019/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lincoln/mkc/info/fusebox/2019/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 35.22928726040412,
+          "left": 28.955090859432275,
+          "width": 5.133881358055376,
+          "height": 9.794415224439025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Inverter power outlet."
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 47.47230629095289,
+          "left": 9.549019325982984,
+          "width": 6.674045765471979,
+          "height": 20.07855121010001
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 45.08760562576446,
+          "left": 16.839130854421605,
+          "width": 6.674045765471979,
+          "height": 20.07855121010001
+        }
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 23.149508483595987,
+          "left": 11.397216614882916,
+          "width": 9.959729834627417,
+          "height": 15.834304612843088
+        }
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 17.43609960267322,
+          "left": 27.620281706337877,
+          "width": 9.959729834627417,
+          "height": 15.834304612843088
+        }
+      }
+    ],
+    "boxAspectRatio": 0.6290097629009763,
+    "boxName": "Rear Cargo Fuse Box",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/52b48062_lincoln-mkc-2018.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0c9c4108_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8179c186_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/e90d0661_image.jpg"
+      }
+    ],
+    "templateId": "66e41fdb460ef2429d9cf170",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lincoln-mkc-2019-genid-g1-2.webp"
+  }
+]

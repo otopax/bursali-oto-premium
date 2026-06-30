@@ -1,0 +1,1538 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 26.27450980392157,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Canister vent control solenoid"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 26.27450980392157,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Blower relay (coil), Pressure switch to PCM",
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 30.980392156862745,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear wiper motor, Rear washer motor, Rear wiper relay (coil)",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))",
+          "RELAY",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 30.980392156862745,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Four-wheel drive control module, Cluster (restraints control warning)",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 35.68627450980392,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ABS unit (EVAC & FILL), ASC unit, Restraints Control Module (RCM), ASC main SW to ASC unit, Clock spring switch",
+        "relatedEntities": [
+          "MODULO(of=CONTROL_DE_ESTABILIDAD)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 35.68627450980392,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Flasher unit, Reversing lamps, Park Aid Module (PAM)",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 40.19607843137255,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Passive Anti-theft Transceiver (PATS), RCM, EEC fuse",
+        "relatedEntities": [
+          "ECU",
+          "FUSIBLE(protects=ECU)"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 40.19607843137255,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cluster, Shift lock relay (coil), O/D signal to PCM, GEM, E/C autolamp mirror",
+        "relatedEntities": [
+          "TABLERO",
+          "RELAY",
+          "BOBINA_DE_IGNICION",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 44.90196078431373,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 3
+        },
+        "description": "PCM relay (coil), Fan relay 1, 2, 3 (coil), A/C relay (coil)",
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 44.90196078431373,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front wiper motor, Front washer motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 49.6078431372549,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ACC relay (coil), Key interlock solenoid, GEM",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "RELAY",
+          "BOBINA_DE_IGNICION",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 49.6078431372549,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 54.31372549019608,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.156862745098039
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 54.31372549019608,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.156862745098039
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cigar lighter",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 58.82352941176471,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Park lamp relay, Front position lamps, License lamps, Tail lamps, Park lamp relay (coil), Trailer fuse, Illumination fuse",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_DE_ESTACIONAMIENTO)",
+          "LUCES_TRASERAS",
+          "RELAY",
+          "BOBINA_DE_IGNICION",
+          "REMOLQUE",
+          "BACKLIGHT",
+          "FUSIBLE(protects=BACKLIGHT)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/tail-light-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.82352941176471,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cluster, Power mirror, GEM, Heated seats",
+        "relatedEntities": [
+          "TABLERO",
+          "ESPEJO_ELECTRICO",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 63.52941176470588,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Sun roof motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=TECHO_SOLAR)",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/sunroof-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 63.52941176470588,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Illumination for: Cluster, Heater unit, Radio, Hazard switch, Rear defrost switch, 4WD switch, Front fog switch",
+        "relatedEntities": [
+          "MODULO(of=CALEFACCION_DE_ASIENTO)",
+          "ESTEREO",
+          "BOTON_DE_BALIZA",
+          "INTERRUPTOR(of=DESEMPANADOR_TRASERO)",
+          "INTERRUPTOR(of=DOBLE_TRACCION)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 68.23529411764706,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Subwoofer amp",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=SUBWOOFER)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 68.23529411764706,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Turn Indicators, Front Side Turn Lamps, Front turn lamps, Rear turn lamps, Trailer turn, Flasher unit",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=PARTE_DELANTERA)",
+          "LUZ_DIRECCIONAL(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 72.94117647058823,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.156862745098039
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Trailer position lamps"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 72.94117647058823,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.156862745098039
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 77.45098039215686,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 77.45098039215686,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Stoplamps, High mounted stoplamp, Trailer stoplamp, ABS unit, ASC unit (Brake Pedal Position Switch), PCM, Shift solenoid",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TERCERA_LUZ_DE_FRENO",
+          "LUZ_FRENO(of=REMOLQUE)",
+          "MODULO",
+          "SENSOR_FRENO",
+          "PCM",
+          "SOLENOIDE_DE_TRANSMISION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/brake-light-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 82.35294117647058,
+          "left": 29.30232558139535,
+          "width": 8.13953488372093,
+          "height": 8.03921568627451
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power window motors"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 82.35294117647058,
+          "left": 40,
+          "width": 8.13953488372093,
+          "height": 8.03921568627451
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power door lock motors, GEM (door lock relay coil), Power seat, 4WD relay",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "BOBINA",
+          "MODULO_CARROCERIA",
+          "RELAY",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "RELAY(protects=DOBLE_TRACCION)"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 82.74509803921568,
+          "left": 51.162790697674424,
+          "width": 2.558139534883721,
+          "height": 5.88235294117647
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "GEM, Audio, Cluster, Interior lamp, Map lamp, Cargo lamp, Datalink connector",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "ESTEREO",
+          "TABLERO",
+          "LUZ_DE_HABITACULO",
+          "LUZ_DE_CAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "ACC",
+        "layout": {
+          "top": 49.6078431372549,
+          "left": 51.3953488372093,
+          "width": 18.6046511627907,
+          "height": 12.745098039215685
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Accessory relay",
+        "relatedEntities": [
+          "RELAY(protects=ACCESORIO)"
+        ]
+      }
+    ],
+    "boxName": "Passenger compartment fuse panel",
+    "boxDescription": "The fuse panel is located on the left hand side kick panel. Remove the panel cover to access the fuses. To remove a fuse use the fuse puller tool provided on the fuse panel cover.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-873cddca3c.jpg",
+      "source": "610ff7b1fd7d47000477150c"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-0eb7014a4f.jpg",
+        "source": "610ff7b7fd7d47000477150d"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-af401a3a37.jpg",
+        "source": "610ff7c0fd7d47000477150e"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-d952c4e09c.jpg",
+        "source": "610ff7cafd7d47000477150f"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.186046511627907,
+    "templateId": "613926a0c09d3500045b223a",
+    "imageClusters": [
+      "63c726d0e78809b31143afe2",
+      "61e873d6fab64b0004ba0d53"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-maverick-2005-genid-g4-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "Horn",
+        "layout": {
+          "top": 31.809145129224653,
+          "left": 7.859531772575251,
+          "width": 1.1705685618729096,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "H/L LH",
+        "layout": {
+          "top": 25.646123260437374,
+          "left": 7.859531772575251,
+          "width": 1.1705685618729096,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlamp (high/low left, High beams)",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "H/L RH",
+        "layout": {
+          "top": 19.681908548707753,
+          "left": 7.859531772575251,
+          "width": 1.1705685618729096,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlamp (high/low right, High beams)",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "EEC",
+        "layout": {
+          "top": 13.717693836978132,
+          "left": 7.859531772575251,
+          "width": 1.1705685618729096,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "EEC (KPWR)"
+      },
+      {
+        "id": "HEGO",
+        "layout": {
+          "top": 31.610337972166995,
+          "left": 11.705685618729097,
+          "width": 1.3377926421404682,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "HEGO 1,2, CMS 1,2, VMV",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "FUEL",
+        "layout": {
+          "top": 25.646123260437374,
+          "left": 11.705685618729097,
+          "width": 1.3377926421404682,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel pump, EEC (FPM)",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "DIODE1",
+        "layout": {
+          "top": 19.681908548707753,
+          "left": 11.705685618729097,
+          "width": 1.3377926421404682,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "-"
+      },
+      {
+        "id": "DIODE2",
+        "layout": {
+          "top": 13.518886679920477,
+          "left": 11.705685618729097,
+          "width": 1.3377926421404682,
+          "height": 4.3737574552683895
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "-"
+      },
+      {
+        "id": "H/L RELAY MICRO",
+        "layout": {
+          "top": 25.24850894632207,
+          "left": 14.54849498327759,
+          "width": 4.51505016722408,
+          "height": 8.548707753479125
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Headlamp (high/low, right/ left relay)"
+      },
+      {
+        "id": "HTD SEATS",
+        "layout": {
+          "top": 31.01391650099404,
+          "left": 20.5685618729097,
+          "width": 4.1806020066889635,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Heated seats (if equipped)",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "INJ",
+        "layout": {
+          "top": 25.44731610337972,
+          "left": 20.5685618729097,
+          "width": 4.1806020066889635,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "EEC (VPWR), EVR, MAF, IAC, Bulkhead, HEGO fuse",
+        "relatedEntities": [
+          "ECU",
+          "TOMA_12V",
+          "SENSOR_CAUDAL_DE_AIRE",
+          "VALVULA_IAC",
+          "SENSOR_OXIGENO",
+          "FUSIBLE(protects=SENSOR_OXIGENO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "MAIN",
+        "layout": {
+          "top": 15.904572564612327,
+          "left": 19.063545150501675,
+          "width": 6.688963210702341,
+          "height": 5.36779324055666
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": 120
+        },
+        "description": "Main"
+      },
+      {
+        "id": "ALT",
+        "layout": {
+          "top": 32.40556660039761,
+          "left": 26.421404682274247,
+          "width": 1.1705685618729096,
+          "height": 4.3737574552683895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Alternator/ Regulator",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/alternator-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "(DRL)",
+        "layout": {
+          "top": 26.44135188866799,
+          "left": 26.421404682274247,
+          "width": 1.1705685618729096,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Daytime Running Lamps (DRL) unit (feed), DRL relay",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "ECU",
+          "ALIMENTACION_ELECTRICA",
+          "MODULO",
+          "RELAY(protects=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "(DRL2) (HLEV)",
+        "layout": {
+          "top": 32.40556660039761,
+          "left": 30.434782608695656,
+          "width": 1.3377926421404682,
+          "height": 4.3737574552683895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "DRL module",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "(DRL2) (HLEV)",
+        "layout": {
+          "top": 32.40556660039761,
+          "left": 30.434782608695656,
+          "width": 1.3377926421404682,
+          "height": 4.3737574552683895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "HLEV"
+      },
+      {
+        "id": "PWR 1",
+        "layout": {
+          "top": 26.44135188866799,
+          "left": 30.434782608695656,
+          "width": 1.3377926421404682,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Auxiliary power point",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "FOG",
+        "layout": {
+          "top": 32.20675944333996,
+          "left": 33.27759197324415,
+          "width": 1.1705685618729096,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Foglamps, Foglamp indicator",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "A/C",
+        "layout": {
+          "top": 26.24254473161034,
+          "left": 33.27759197324415,
+          "width": 1.1705685618729096,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "A/C clutch",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "(ABS)1",
+        "layout": {
+          "top": 32.20675944333996,
+          "left": 37.29096989966555,
+          "width": 1.3377926421404682,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Anti-Lock Brake System (ABS) SOL, EVAC & FILL"
+      },
+      {
+        "id": "PWR 2",
+        "layout": {
+          "top": 26.24254473161034,
+          "left": 37.29096989966555,
+          "width": 1.3377926421404682,
+          "height": 4.174950298210735
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Auxiliary power point",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "IG MAIN",
+        "layout": {
+          "top": 19.4831013916501,
+          "left": 31.93979933110368,
+          "width": 3.3444816053511706,
+          "height": 4.7713717693836974
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/starter-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "HTR",
+        "layout": {
+          "top": 13.12127236580517,
+          "left": 31.93979933110368,
+          "width": 3.3444816053511706,
+          "height": 4.970178926441352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Blower motor, Blower motor relay",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)",
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "BTN 1",
+        "layout": {
+          "top": 19.4831013916501,
+          "left": 36.45484949832776,
+          "width": 3.511705685618729,
+          "height": 4.7713717693836974
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "JB - Accessory relay, Radio, TNS relay, Cigar lighter, Cluster, Power mirror, GEM, Accessory delay relay, Power windows, Power moonroof",
+        "relatedEntities": [
+          "FUSIBLERA",
+          "RELAY(protects=ACCESORIO)",
+          "ESTEREO",
+          "ENCENDEDOR",
+          "TABLERO",
+          "ESPEJO_ELECTRICO",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "LEVANTAVIDRIOS",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/sunroof-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/ford/maverick/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "(ABS)2",
+        "layout": {
+          "top": 13.12127236580517,
+          "left": 36.45484949832776,
+          "width": 3.511705685618729,
+          "height": 4.970178926441352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "ABS motor, EVAC & FILL"
+      },
+      {
+        "id": "BTN 2",
+        "layout": {
+          "top": 19.4831013916501,
+          "left": 40.96989966555184,
+          "width": 3.511705685618729,
+          "height": 4.7713717693836974
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "JB - Radio, CD changer, Cluster, Dome lamps, Map lamps, Cargo lamps, Horn relay, GEM, Power locks, Speed control",
+        "relatedEntities": [
+          "FUSIBLERA",
+          "ESTEREO",
+          "TABLERO",
+          "LUZ_DE_HABITACULO",
+          "LAMPARA(of=LUZ_DE_HABITACULO)",
+          "LUZ_DE_CAJA",
+          "RELAY(protects=BOCINA)",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "CIERRE_CENTRALIZADO",
+          "CRUISE_CONTROL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/ford/maverick/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "MAIN FAN",
+        "layout": {
+          "top": 13.154507232481592,
+          "left": 40.96989966555184,
+          "width": 3.511705685618729,
+          "height": 5.132741001818147
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "40"
+        },
+        "description": "Main fan (2.0L engine)"
+      },
+      {
+        "id": "MAIN FAN",
+        "layout": {
+          "top": 13.154507232481592,
+          "left": 40.96989966555184,
+          "width": 3.511705685618729,
+          "height": 5.132741001818147
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "50"
+        },
+        "description": "Main fan (3.0L engine)"
+      },
+      {
+        "id": "R DEF",
+        "layout": {
+          "top": 19.4831013916501,
+          "left": 45.48494983277592,
+          "width": 3.511705685618729,
+          "height": 4.7713717693836974
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Rear defroster",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "ADD FAN",
+        "layout": {
+          "top": 13.12127236580517,
+          "left": 45.48494983277592,
+          "width": 3.511705685618729,
+          "height": 5.132741001818147
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Add fan"
+      },
+      {
+        "id": "EEC MAIN ISO",
+        "layout": {
+          "top": 26.043737574552683,
+          "left": 40.635451505016725,
+          "width": 7.859531772575251,
+          "height": 9.74155069582505
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "EEC relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ]
+      },
+      {
+        "id": "FUEL PUMP ISO",
+        "layout": {
+          "top": 26.24254473161034,
+          "left": 51.00334448160535,
+          "width": 7.859531772575251,
+          "height": 9.74155069582505
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/fuel-pump-relay",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "MAIN FAN ISO",
+        "layout": {
+          "top": 13.518886679920477,
+          "left": 51.00334448160535,
+          "width": 7.859531772575251,
+          "height": 9.542743538767395
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Low-speed fan control relay (2.0L engine), High-speed fan control relay 1 (3.0L engine)"
+      },
+      {
+        "id": "ADD FAN ISO",
+        "layout": {
+          "top": 26.44135188866799,
+          "left": 61.7056856187291,
+          "width": 8.02675585284281,
+          "height": 9.74155069582505
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "High-speed fan control relay 1 (2.0L engine), Low-speed fan control relay (3.0L engine)"
+      },
+      {
+        "id": "DEF RELAY ISO",
+        "layout": {
+          "top": 13.717693836978132,
+          "left": 61.7056856187291,
+          "width": 8.02675585284281,
+          "height": 9.542743538767395
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear defroster relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "ST RELAY ISO",
+        "layout": {
+          "top": 26.640159045725646,
+          "left": 72.90969899665552,
+          "width": 7.859531772575251,
+          "height": 9.542743538767395
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/starter-relay",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "ADD FAN 2 ISO",
+        "layout": {
+          "top": 13.916500994035786,
+          "left": 72.90969899665552,
+          "width": 7.859531772575251,
+          "height": 9.542743538767395
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "High-speed fan control relay 2 (3.0L engine), Medium-speed fan control relay (2.0L engine)"
+      },
+      {
+        "id": "FOG RELAY MICRO",
+        "layout": {
+          "top": 27.634194831013914,
+          "left": 83.4448160535117,
+          "width": 4.682274247491638,
+          "height": 8.34990059642147
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Foglamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ]
+      },
+      {
+        "id": "A/C RELAY MICRO",
+        "layout": {
+          "top": 17.693836978131213,
+          "left": 83.4448160535117,
+          "width": 4.682274247491638,
+          "height": 8.548707753479125
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/C clutch relay",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/maverick/info/fusebox/2005/air-conditioning-relay",
+            "urlWithAnchor": "/ford/maverick/info/fusebox/2005/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      }
+    ],
+    "boxName": "Power distribution box",
+    "boxDescription": "Power distribution box The power distribution box is located in the engine compartment. The power distribution box contains high-current fuses that protect your vehicle ’ s main electrical systems from overloads.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-6028af5b45.jpg",
+      "source": "610ff7e5fd7d470004771510"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-91423e4ded.jpg",
+        "source": "610ff7ebfd7d470004771511"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-7a518af7d9.jpg",
+        "source": "610ff7f2fd7d470004771512"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec8323eb1d52d000c68ca2f/fragment-5ec8323eb1d52d000c68ca2f-3cfb462a68.jpg",
+        "source": "610ff7fffd7d470004771513"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8411371237458194,
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/ea0c5ccf_2004-ford-escape.jpg"
+    },
+    "templateId": "61392deec09d3500045b223b",
+    "imageClusters": [
+      "6226254963a3a7cea51f10cd"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-maverick-2005-genid-g4-1.webp"
+  }
+]

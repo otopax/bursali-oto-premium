@@ -1,0 +1,2094 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 3.2977450709133223,
+          "left": 80.17638976673786,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Anti-lock brake system module.",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 3.2977450709133223,
+          "left": 80.17638976673786,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Stability assist, Anti-lock brake system module.",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 13.769223546269677,
+          "left": 80.17638976673786,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Engine cooling fan relay.",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/cooling-fan-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 13.769223546269677,
+          "left": 80.17638976673786,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "High speed engine cooling fan relay. [1.6L Ecoboost]",
+        "relatedEntities": [
+          "RELAY(protects=VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_ALTA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.00556909014573,
+          "left": 80.17638976673786,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Passenger compartment fuse box."
+      },
+      {
+        "layout": {
+          "top": 33.291592128801426,
+          "left": 79.9194991055457,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Body control module. Door locks.",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA",
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 38.88789505068575,
+          "left": 79.9194991055457,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.48419797257007,
+          "left": 79.9194991055457,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Blower motor relay. Blower motor.",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)",
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 50.988717495030784,
+          "left": 81.21906485386384,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.41189071560292,
+          "left": 81.21906485386384,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.81081737034353,
+          "left": 81.21906485386384,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Foglamp relay coil. High beam relay coil.",
+        "relatedEntities": [
+          "BOBINA(of=RELAY(protects=LUZ_ANTINIEBLA))",
+          "RELAY(protects=RELAY(protects=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)",
+          "BOBINA(of=RELAY(protects=LUZ_ALTA))",
+          "RELAY(protects=RELAY(protects=LUZ_ALTA))",
+          "RELAY(protects=LUZ_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/headlight-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/fog-light-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.20974402508414,
+          "left": 81.21906485386384,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Body control module. Right-hand side exterior lighting.",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA",
+          "LUZ_EXTERIOR(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.60867067982475,
+          "left": 81.21906485386384,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Body control module. Left-hand side exterior lighting.",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA",
+          "LUZ_EXTERIOR(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 3.5623136553369084,
+          "left": 67.24806201550388,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 9.478831246273094,
+          "left": 67.24806201550388,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.395348837209283,
+          "left": 67.24806201550388,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.31186642814547,
+          "left": 67.24806201550388,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.22838401908166,
+          "left": 67.24806201550388,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.14490161001785,
+          "left": 67.24806201550388,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Fuel injectors."
+      },
+      {
+        "layout": {
+          "top": 43.05953572866558,
+          "left": 67.33319760804113,
+          "width": 9.391771019677996,
+          "height": 2.2280549962937095
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.22826887467421,
+          "left": 67.33319760804113,
+          "width": 9.391771019677996,
+          "height": 2.2280549962937095
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Mass air flow sensor. [1.0L and 1.6L EcoBoost]",
+        "relatedEntities": [
+          "SENSOR_CAUDAL_DE_AIRE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.22826887467421,
+          "left": 67.33319760804113,
+          "width": 9.391771019677996,
+          "height": 2.2280549962937095
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Fuel injector driver."
+      },
+      {
+        "layout": {
+          "top": 50.988717495030784,
+          "left": 72.94139643915057,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Powertrain control module.",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.39370579122927,
+          "left": 72.94139643915057,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F23",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Camshaft sensor. Heated exhaust gas oxygen sensors."
+      },
+      {
+        "layout": {
+          "top": 57.79869408742776,
+          "left": 72.94139643915057,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Ignition coil. [1.6L Sigma]",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.79869408742776,
+          "left": 72.94139643915057,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Ignition coil. [1.0L and 1.6L EcoBoost]",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.20368238362626,
+          "left": 72.94139643915057,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F25",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Variable cam timing 1, Variable cam timing 2, Canister purge valve, R5, R6 and R7 relay coil.",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.60867067982474,
+          "left": 72.94139643915057,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "ECSS system [1.6L Flex-fuel]."
+      },
+      {
+        "layout": {
+          "top": 64.60867067982474,
+          "left": 72.94139643915057,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Active grill shutter [1.0L EcoBoost], Water pump [1.0L EcoBoost], Air conditioning [1.0L EcoBoost].",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/air-conditioning-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 50.988717495030784,
+          "left": 64.39029704139274,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F27",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.39370579122927,
+          "left": 64.39029704139274,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F28",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.79869408742776,
+          "left": 64.39029704139274,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F29",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.20368238362626,
+          "left": 64.39029704139274,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F30",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.60867067982474,
+          "left": 64.39029704139274,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 3.2977450709133223,
+          "left": 55.31606256257295,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Passenger compartment fuse box."
+      },
+      {
+        "layout": {
+          "top": 13.769223546269677,
+          "left": 55.31606256257295,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Power windows.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.00556909014573,
+          "left": 55.31606256257295,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Transmission control module [6-Speed PowerShift Transmission.].",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.00556909014573,
+          "left": 55.31606256257295,
+          "width": 8.34218702082464,
+          "height": 7.026169258546404
+        },
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "High speed engine cooling fan [1.0L EcoBoost].",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_ALTA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.16636851520572,
+          "left": 55.42635658914717,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F35",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Stability assist/anti-lock brake system valve.."
+      },
+      {
+        "layout": {
+          "top": 38.756708407871194,
+          "left": 55.42635658914717,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Starter inhibit relay. Starter motor solenoid.",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.34704830053667,
+          "left": 55.42635658914717,
+          "width": 8.527131782945736,
+          "height": 3.667262969588551
+        },
+        "id": "F37",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Heated rear window. Heated mirrors.",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 50.988717495030784,
+          "left": 55.611576863694516,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F38",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Body control module. Battery saver.",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA",
+          "RELAY_DELAY_BATERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.39370579122927,
+          "left": 55.611576863694516,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F39",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Body control module. Direction indicators.",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.79869408742776,
+          "left": 55.611576863694516,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F40",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.20368238362626,
+          "left": 55.611576863694516,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F41",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Air condition clutch solenoid."
+      },
+      {
+        "layout": {
+          "top": 64.60867067982474,
+          "left": 55.611576863694516,
+          "width": 7.89498256767254,
+          "height": 2.650283157998003
+        },
+        "id": "F42",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Powertrain control module, Transmission control module, Canister vent valve.",
+        "relatedEntities": [
+          "PCM",
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 52.59391771019678,
+          "left": 32.889087656529554,
+          "width": 10.468097793679148,
+          "height": 2.5044722719141324
+        },
+        "id": "F48",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left-hand fog lamp.",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=LADO_IZQUIERDO))",
+          "LUZ_ANTINIEBLA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.066189624329155,
+          "left": 32.889087656529554,
+          "width": 10.468097793679148,
+          "height": 2.5044722719141324
+        },
+        "id": "F49",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right-hand fog lamp.",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=LADO_DERECHO))",
+          "LUZ_ANTINIEBLA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 52.59391771019678,
+          "left": 20.34585569469299,
+          "width": 10.468097793679148,
+          "height": 2.5044722719141324
+        },
+        "id": "F55",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left-hand high beam.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/headlight-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.066189624329155,
+          "left": 20.34585569469299,
+          "width": 10.468097793679148,
+          "height": 2.5044722719141324
+        },
+        "id": "F56",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right-hand high beam.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/headlight-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.25652277662756,
+          "left": 72.53705649996348,
+          "width": 13.148467662512898,
+          "height": 16.382583121519943
+        },
+        "id": "R12",
+        "description": "Powertrain control module relay.",
+        "relatedEntities": [
+          "RELAY(protects=PCM)"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "layout": {
+          "top": 86.7464225466568,
+          "left": 72.12976554288464,
+          "width": 13.3481729206659,
+          "height": 16.328035164875992
+        },
+        "id": "R13",
+        "description": "High beam relay.",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ALTA)"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "layout": {
+          "top": 68.6201791221801,
+          "left": 58.271326416468355,
+          "width": 12.533044559248617,
+          "height": 16.928669225570612
+        },
+        "id": "R43",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 86.7464225466568,
+          "left": 57.91638460073555,
+          "width": 13.3481729206659,
+          "height": 16.328035164875992
+        },
+        "id": "R44",
+        "description": "Foglamp relay.",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "layout": {
+          "top": 2.0786293524339428,
+          "left": 31.890545072642144,
+          "width": 13.248293964397604,
+          "height": 16.391869603803414
+        },
+        "id": "R45",
+        "description": "Air conditioning clutch relay.",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/air-conditioning-relay",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.1249090314472,
+          "left": 31.890545072642144,
+          "width": 13.248293964397604,
+          "height": 16.391869603803414
+        },
+        "id": "R46",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.631484794275494,
+          "left": 31.890545072642144,
+          "width": 13.248293964397604,
+          "height": 16.391869603803414
+        },
+        "id": "R47",
+        "description": "Fuel pump relay.",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/fuel-pump-relay",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 62.42044488796776,
+          "left": 18.602527348863934,
+          "width": 25.767196309842177,
+          "height": 20.96081001410036
+        },
+        "id": "R50",
+        "description": "High speed cooling fan. [1.0L and 1.6L EcoBoost]",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_ALTA)"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "layout": {
+          "top": 86.84408929481528,
+          "left": 32.570739165587604,
+          "width": 11.672758622719968,
+          "height": 15.692944602297892
+        },
+        "id": "R51",
+        "description": "Starter inhibit relay.",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "layout": {
+          "top": 2.0786293524339428,
+          "left": 18.467252631359063,
+          "width": 13.442092414010007,
+          "height": 16.391869603803414
+        },
+        "id": "R52",
+        "description": "Blower motor relay.",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "layout": {
+          "top": 17.1249090314472,
+          "left": 18.467252631359063,
+          "width": 13.442092414010007,
+          "height": 16.391869603803414
+        },
+        "id": "R53",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.631484794275494,
+          "left": 18.467252631359063,
+          "width": 13.442092414010007,
+          "height": 16.391869603803414
+        },
+        "id": "R54",
+        "description": "Reversing lamp.",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "layout": {
+          "top": 86.73898042845968,
+          "left": 18.774253027168168,
+          "width": 11.841929037541998,
+          "height": 15.920378582041327
+        },
+        "id": "R57",
+        "description": "Engine cooling fan relay.",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/cooling-fan-relay",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.0833333333333333,
+    "boxName": "Engine Compartment Fuse Box - 4-door and 5-door",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/e16f1c17_Captura de Pantalla 2021-07-28 a la(s) 09.54.05.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/4ce9d45d_Captura de Pantalla 2021-07-28 a la(s) 09.54.27.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/89119dca_Captura de Pantalla 2021-07-28 a la(s) 09.56.03.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/860e08e8_Captura de Pantalla 2021-07-28 a la(s) 09.58.39.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/1db4dbff_Captura de Pantalla 2021-07-28 a la(s) 10.05.33.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/4ba1515e_Captura de Pantalla 2021-07-28 a la(s) 10.06.18.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/7f7c7a12_Captura de Pantalla 2021-07-28 a la(s) 10.07.03.jpg"
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/91cc739d_ford-fiesta-2016.jpg"
+    },
+    "templateId": "61548856d95e0e0004681225",
+    "imageClusters": [
+      "61e6e934dd76840004c92790"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-fiesta-2016-genid-g6-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 8.149405772495756,
+          "left": 73.51598173515981,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Ignition switch.",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.563667232597622,
+          "left": 68.72146118721462,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Auto-dimming interior mirror, Autowipers, Heater relay control."
+      },
+      {
+        "layout": {
+          "top": 17.020373514431242,
+          "left": 73.51598173515981,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument cluster.",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.39219015280136,
+          "left": 68.72146118721462,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Passenger airbag deactivation indicator, Passenger sensing system.",
+        "relatedEntities": [
+          "TESTIGO_AIRBAG_PASAJERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 25.891341256366726,
+          "left": 73.51598173515981,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "On-board diagnostics connector."
+      },
+      {
+        "layout": {
+          "top": 30.220713073005097,
+          "left": 68.72146118721462,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Reversing lamps.",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.76230899830221,
+          "left": 73.51598173515981,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument panel, Information and entertainment display.",
+        "relatedEntities": [
+          "TABLERO",
+          "SISTEMA_ENTRETENIMIENTO",
+          "PANTALLA(of=SISTEMA_ENTRETENIMIENTO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 39.04923599320883,
+          "left": 68.72146118721462,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Moonroof.",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/sunroof-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.63327674023769,
+          "left": 73.51598173515981,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Remote keyless entry, Remote keyless starting.",
+        "relatedEntities": [
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.149405772495756,
+          "left": 60.273972602739725,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Audio unit, SYNC module.",
+        "relatedEntities": [
+          "SYNC",
+          "MODULO(of=SYNC)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.563667232597622,
+          "left": 55.47945205479452,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Windshield wipers.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.020373514431242,
+          "left": 60.273972602739725,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Climate control.",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.44878324844369,
+          "left": 55.47945205479452,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear window wiper.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 25.891341256366726,
+          "left": 60.273972602739725,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Remote keyless entry, Remote keyless starting.",
+        "relatedEntities": [
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.33389926428976,
+          "left": 55.47945205479452,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Windshield wipers.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.76230899830221,
+          "left": 60.273972602739725,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Exterior mirrors, Power windows.",
+        "relatedEntities": [
+          "ESPEJO(ubicacion=EXTERIOR)",
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 39.21901528013583,
+          "left": 55.47945205479452,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated seats.",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.63327674023769,
+          "left": 60.273972602739725,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake lamp.",
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 5.942275042444821,
+          "left": 36.3013698630137,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument cluster.",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.62818336162988,
+          "left": 36.3013698630137,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Airbags",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.31409168081494,
+          "left": 36.3013698630137,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Electronic power assist steering, Instrument cluster, Ignition, Windshield wipers, Passive anti-theft system.",
+        "relatedEntities": [
+          "TABLERO",
+          "ARRANQUE",
+          "LIMPIA_PARABRISAS",
+          "INMOVILIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/starter-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 20,
+          "left": 36.3013698630137,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Transmission control unit, Powertrain control module, Anti-lock brake system, Stability assist.",
+        "relatedEntities": [
+          "PCM",
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.68590831918506,
+          "left": 36.3013698630137,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Transmission control unit."
+      },
+      {
+        "layout": {
+          "top": 29.37181663837012,
+          "left": 36.3013698630137,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Audio unit."
+      },
+      {
+        "layout": {
+          "top": 5.942275042444821,
+          "left": 23.059360730593607,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Exterior mirrors.",
+        "relatedEntities": [
+          "ESPEJO(ubicacion=EXTERIOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.62818336162988,
+          "left": 23.059360730593607,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Central locking system."
+      },
+      {
+        "layout": {
+          "top": 15.31409168081494,
+          "left": 23.059360730593607,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 20,
+          "left": 23.059360730593607,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.68590831918506,
+          "left": 23.059360730593607,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 29.37181663837012,
+          "left": 23.059360730593607,
+          "width": 8.668188736681888,
+          "height": 2.1279003961516696
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.45840407470288,
+          "left": 71.23287671232876,
+          "width": 10.730593607305936,
+          "height": 6.791171477079796
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power windows.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 78.09847198641766,
+          "left": 71.00456621004567,
+          "width": 10.95890410958904,
+          "height": 6.960950764006792
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Battery back-up sounder."
+      },
+      {
+        "layout": {
+          "top": 85.90831918505943,
+          "left": 71.23287671232876,
+          "width": 10.95890410958904,
+          "height": 6.791171477079796
+        },
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Auxiliary power points.",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.45840407470288,
+          "left": 58.44748858447488,
+          "width": 10.95890410958904,
+          "height": 6.791171477079796
+        },
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power windows.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 78.09847198641766,
+          "left": 58.675799086758,
+          "width": 10.730593607305936,
+          "height": 6.791171477079796
+        },
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Moonroof.",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/sunroof-fuse",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 85.90831918505943,
+          "left": 58.675799086758,
+          "width": 10.95890410958904,
+          "height": 6.791171477079796
+        },
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 35.22139219015271,
+          "left": 24.429223744292237,
+          "width": 20.54794520547945,
+          "height": 15.789473684210526
+        },
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Ignition relay.",
+        "relatedEntities": [
+          "RELAY(protects=ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/fiesta/info/fusebox/2016/starter-relay",
+            "urlWithAnchor": "/ford/fiesta/info/fusebox/2016/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.4804753820034,
+          "left": 72.14611872146118,
+          "width": 10.730593607305936,
+          "height": 12.563667232597622
+        },
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.4804753820034,
+          "left": 57.534246575342465,
+          "width": 10.730593607305936,
+          "height": 12.563667232597622
+        },
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.4804753820034,
+          "left": 37.21461187214612,
+          "width": 10.95890410958904,
+          "height": 12.73344651952462
+        },
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Driver heated seat."
+      },
+      {
+        "layout": {
+          "top": 67.57215619694398,
+          "left": 37.44292237442922,
+          "width": 10.730593607305936,
+          "height": 12.563667232597622
+        },
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Passenger heated seat."
+      },
+      {
+        "layout": {
+          "top": 81.66383701188455,
+          "left": 37.21461187214612,
+          "width": 10.95890410958904,
+          "height": 12.563667232597622
+        },
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Remote keyless starting."
+      },
+      {
+        "layout": {
+          "top": 53.4804753820034,
+          "left": 22.602739726027394,
+          "width": 10.95890410958904,
+          "height": 12.73344651952462
+        },
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Remote keyless starting."
+      },
+      {
+        "layout": {
+          "top": 67.74193548387096,
+          "left": 22.831050228310502,
+          "width": 10.95890410958904,
+          "height": 12.563667232597622
+        },
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Battery back-up sounder."
+      },
+      {
+        "layout": {
+          "top": 81.66383701188455,
+          "left": 22.831050228310502,
+          "width": 10.95890410958904,
+          "height": 12.563667232597622
+        },
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Accessory delay."
+      }
+    ],
+    "boxAspectRatio": 1.3447488584474885,
+    "processed": false,
+    "boxName": "Passenger Compartment Fuse Box",
+    "boxDescription": "This fuse box is located behind the glove box. Open the glove box and empty the contents. Press the sides inwards and swivel the glove box downward.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/667579a2_Captura de Pantalla 2021-07-28 a la(s) 10.12.32.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/d9b9803b_Captura de Pantalla 2021-07-28 a la(s) 10.12.52.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/d1a539c9_Captura de Pantalla 2021-07-28 a la(s) 10.15.00.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/badb98f7_Captura de Pantalla 2021-07-28 a la(s) 10.17.44.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/acbfc0d0_Captura de Pantalla 2021-07-28 a la(s) 10.18.15.jpg"
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/bfb778e3_ford-fiesta-2016.jpg"
+    },
+    "templateId": "61547fcdd95e0e000468121f",
+    "imageClusters": [
+      "61e6e4a2dd76840004c9276f"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-fiesta-2016-genid-g6-1.webp"
+  }
+]

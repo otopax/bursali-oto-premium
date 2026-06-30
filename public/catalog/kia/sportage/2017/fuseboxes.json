@@ -1,0 +1,2489 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "MDPS",
+        "layout": {
+          "top": 8.203125,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "MDPS Unit"
+      },
+      {
+        "id": "MODULE 2",
+        "layout": {
+          "top": 8.203125,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Headlamp LH/RH"
+      },
+      {
+        "id": "SMART KEY 1",
+        "layout": {
+          "top": 8.203125,
+          "left": 28.730703259005146,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Smart Key Control Module/Immobilizer Module"
+      },
+      {
+        "id": "A/BAG IND",
+        "layout": {
+          "top": 8.072916666666668,
+          "left": 39.62264150943396,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Instrument Cluster [Audio & Manual A/C] Hazard Switch [Audio & Auto A/C] A/C Control Module [Navigation] Center Facia Lamp"
+      },
+      {
+        "id": "MODULE 4",
+        "layout": {
+          "top": 8.203125,
+          "left": 61.492281303602056,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Console Switch, Blind Spot Detection Radar LH/RH, AWD ECM, Crash Pad Switch, BCM, Lane Departure Warning Control Module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "A/BAG",
+        "layout": {
+          "top": 8.203125,
+          "left": 72.38421955403086,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "SRS Control Module",
+        "relatedEntities": [
+          "TESTIGO_SRS",
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "START",
+        "layout": {
+          "top": 17.1875,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "[W/O Smart Key & IMMO.] ICM Relay Box (Burglar Alarm Relay), Ignition Switch [With Smart Key / IMMO.] Transaxle Range Switch, ECM, Smart Key Control Module",
+        "relatedEntities": [
+          "ECU",
+          "LLAVE_INTELIGENTE"
+        ]
+      },
+      {
+        "id": "MODULE 3",
+        "layout": {
+          "top": 17.1875,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Front/Rear Seat Warmer Control Module, ATM Shift Lever ILL., Front Air Ventilation Seat Control Module, A/V & Navigation Head Unit, Electro Chromic Mirror, Audio, A/C Control Module, Multipurpose Check Connector, Adaptive Front Lighting Module",
+        "relatedEntities": [
+          "ESTEREO",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/kia/sportage/info/fusebox/2017/radio-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "CLUSTER",
+        "layout": {
+          "top": 17.1875,
+          "left": 28.730703259005146,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Instrument Cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "MODULE 9",
+        "layout": {
+          "top": 17.1875,
+          "left": 39.62264150943396,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "PCB Block (Fuse - ABS 3, VACUUM PUMP 2, ECU 6. AEB, TCU 2, MODULE)",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "BOMBA_DE_VACIO",
+          "ECU",
+          "MODULO"
+        ]
+      },
+      {
+        "id": "HTD STRG",
+        "layout": {
+          "top": 17.1875,
+          "left": 50.60034305317325,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "BCM",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "MODULE 6",
+        "layout": {
+          "top": 17.1875,
+          "left": 61.492281303602056,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Front/Rear Seat Warmer Control Module, Front Air Ventilation Seat Control Module"
+      },
+      {
+        "id": "MODULE 5",
+        "layout": {
+          "top": 17.1875,
+          "left": 83.2761578044597,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "BCM, Smart Key Control Module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "LLAVE_INTELIGENTE"
+        ]
+      },
+      {
+        "id": "A/CON 2",
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "A/C Control Module",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "MODULE 1",
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "BCM, ATM Shift Lever",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "P/ WINDOW LH",
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 28.730703259005146,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Power Window Main Switch"
+      },
+      {
+        "id": "A/CON 1",
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 61.492281303602056,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "A/C Control Module, Cluster lonizer, E/R Junction Block (Blower Relay)",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR",
+          "FUSIBLERA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "RR WIPER",
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 72.38421955403086,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Rear Wiper Motor, ICM Relay Box (Rear Wiper Relay)",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "WASHER",
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 83.2761578044597,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Multifunction Switch",
+        "relatedEntities": [
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "SMART KEY 3",
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "[W/O Smart Key] Immobilizer Module [With Smart Key] Smart Key Control Module, Start/Stop Button Switch"
+      },
+      {
+        "id": "STOP LAMP",
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Smart Key Control Module, Stop Lamp Switch",
+        "relatedEntities": [
+          "LLAVE_INTELIGENTE"
+        ]
+      },
+      {
+        "id": "P/ WINDOW RH",
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 28.730703259005146,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Power Window Main Switch, Passenger Power Window Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "MEMORY",
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 39.62264150943396,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Wireless Charger, Instrument Cluster, Data Link Connector, BCM, ICM Relay Box (Outside Mirror Folding/Unfolding Relay), Electro Chromic Mirror, A/C Control Module, Console Switch",
+        "relatedEntities": [
+          "TABLERO",
+          "CONECTOR_OBD",
+          "MODULO_CARROCERIA",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "E-CALL",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 50.60034305317325,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        }
+      },
+      {
+        "id": "SUN ROOF 1",
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 61.492281303602056,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Panorama Sunroof"
+      },
+      {
+        "id": "TAIL GATE",
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 72.38421955403086,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Tail Gate Relay"
+      },
+      {
+        "id": "INTERIOR LAMP",
+        "layout": {
+          "top": 35.41666666666667,
+          "left": 83.2761578044597,
+          "width": 7.032590051457976,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Ignition Key III.& Door Warning Switch, Room Lamp, Overhead Console Lamp, Front Vanity Lamp LH/RH, Rear Personal Lamp LH/RH Luggage Lamp, Glove Box Lamp",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LUZ_DE_GUANTERA"
+        ]
+      },
+      {
+        "id": "SMART KEY 2",
+        "layout": {
+          "top": 44.40104166666667,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Smart Key Control Module",
+        "relatedEntities": [
+          "LLAVE_INTELIGENTE"
+        ]
+      },
+      {
+        "id": "MODULE 8",
+        "layout": {
+          "top": 44.40104166666667,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Key Solenoid"
+      },
+      {
+        "id": "MULTI MEDIA",
+        "layout": {
+          "top": 44.40104166666667,
+          "left": 50.60034305317325,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Audio, A/V & Navigation Head Unit, Rear USB Charger",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/radio-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "S/HEATER FRT",
+        "layout": {
+          "top": 44.40104166666667,
+          "left": 61.492281303602056,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Front Seat Warmer Control Module, Front Air Ventilation Seat Control Module"
+      },
+      {
+        "id": "SUN ROOF 2",
+        "layout": {
+          "top": 44.40104166666667,
+          "left": 72.38421955403086,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Panorama Sunroof"
+      },
+      {
+        "id": "P/SEAT PASS",
+        "layout": {
+          "top": 44.40104166666667,
+          "left": 83.2761578044597,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Passenger Seat Manual Switch"
+      },
+      {
+        "id": "RR FOG LAMP",
+        "layout": {
+          "top": 53.515625,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "10"
+        }
+      },
+      {
+        "id": "POWER OUTLET",
+        "layout": {
+          "top": 53.515625,
+          "left": 50.60034305317325,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Front Power Outlet #1 (Front Cigarette Lighter)",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/cigarette-lighter-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "S/HEATER RR",
+        "layout": {
+          "top": 53.515625,
+          "left": 61.492281303602056,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Rear Seat Warmer Control Module"
+      },
+      {
+        "id": "DOOR LOCK",
+        "layout": {
+          "top": 53.515625,
+          "left": 72.38421955403086,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Door Lock/Unlock Relay",
+        "relatedEntities": [
+          "RELAY(protects=PROP_OR(0=CIERRE_CENTRALIZADO,1=CIERRE_CENTRALIZADO))"
+        ]
+      },
+      {
+        "id": "AWD",
+        "layout": {
+          "top": 53.515625,
+          "left": 83.2761578044597,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "AWD ECM"
+      },
+      {
+        "id": "MODULE 7",
+        "layout": {
+          "top": 62.630208333333336,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Hazard Switch, Driver/Passenger Smart Key Outside Handle, AEB Sensor",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA"
+        ]
+      },
+      {
+        "id": "AMP",
+        "layout": {
+          "top": 62.630208333333336,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "AMP",
+        "relatedEntities": [
+          "AMPLIFICADOR"
+        ]
+      },
+      {
+        "id": "SAFETY P/WINDOW",
+        "layout": {
+          "top": 62.630208333333336,
+          "left": 61.492281303602056,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Driver Safety Power Window Module"
+      },
+      {
+        "id": "HTD MIRROR",
+        "layout": {
+          "top": 62.630208333333336,
+          "left": 72.38421955403086,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Driver/Passenger Power Outside Mirror, A/C Control Module",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "P/SEAT DRV",
+        "layout": {
+          "top": 62.630208333333336,
+          "left": 83.2761578044597,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Driver Seat Manual Switch"
+      },
+      {
+        "id": "ACC",
+        "layout": {
+          "top": 71.74479166666666,
+          "left": 50.60034305317325,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Rear USB Charger, AMP, Power Outside Mirror Switch, PCB Block(Power Outlet Relay), Smart Key Control Module, Audio, A/V & Navigation Head Unit, BCM, Wireless Charger",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "INTERRUPTOR(of=ESPEJO_ELECTRICO)",
+          "LLAVE_INTELIGENTE",
+          "ESTEREO",
+          "MODULO_CARROCERIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/radio-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "FUSE SWITCH",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 47.65625,
+          "left": 30.874785591766724,
+          "width": 17.409948542024015,
+          "height": 30.208333333333332
+        }
+      },
+      {
+        "id": "SPARE 1",
+        "layout": {
+          "top": 8.072916666666668,
+          "left": 83.2761578044597,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "SPARE 2",
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 50.60034305317325,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 71.74479166666666,
+          "left": 6.86106346483705,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 71.74479166666666,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 53.515625,
+          "left": 17.83876500857633,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        }
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 26.302083333333332,
+          "left": 39.62264150943396,
+          "width": 7.032590051457976,
+          "height": 8.984375
+        }
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 8.203125,
+          "left": 50.60034305317325,
+          "width": 6.86106346483705,
+          "height": 8.854166666666668
+        }
+      },
+      {
+        "id": "U6",
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 62.630208333333336,
+          "left": 50.60034305317325,
+          "width": 6.946826758147513,
+          "height": 8.854166666666668
+        }
+      },
+      {
+        "id": "U7",
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 17.1875,
+          "left": 72.38421955403086,
+          "width": 6.946826758147513,
+          "height": 8.984375
+        }
+      }
+    ],
+    "boxName": "Driver's side fuse panel",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/bec4e011_kia-sportage-2018.jpg"
+    },
+    "boxAspectRatio": 0.6586620926243568,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/952c3afe_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ed63014f_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a055f107_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4d34eebf_image.jpg"
+      }
+    ],
+    "templateId": "624cc606bad370ed95a75192",
+    "templateRenameMap": {
+      "HEATED STEERING": "HTD STRG",
+      "WIPER RR": "RR WIPER",
+      "TAIL GATE OPEN": "TAIL GATE",
+      "S/HEATER DRV/PASS": "S/HEATER FRT",
+      "P/SEAT (PASS)": "P/SEAT PASS",
+      "S/HEATER REAR": "S/HEATER RR",
+      "4WD": "AWD",
+      "SAFETY P/ WINDOW": "SAFETY P/WINDOW",
+      "HEATED MIRROR": "HTD MIRROR",
+      "P/SEAT (DRV)": "P/SEAT DRV",
+      "MDPS": "MDPS",
+      "MODULE 2": "MODULE 2",
+      "SMART KEY 1": "SMART KEY 1",
+      "A/BAG IND": "A/BAG IND",
+      "MODULE 4": "MODULE 4",
+      "A/BAG": "A/BAG",
+      "START": "START",
+      "MODULE 3": "MODULE 3",
+      "CLUSTER": "CLUSTER",
+      "MODULE 9": "MODULE 9",
+      "MODULE 6": "MODULE 6",
+      "MODULE 5": "MODULE 5",
+      "A/CON 2": "A/CON 2",
+      "MODULE 1": "MODULE 1",
+      "P/ WINDOW LH": "P/ WINDOW LH",
+      "A/CON 1": "A/CON 1",
+      "WASHER": "WASHER",
+      "SMART KEY 3": "SMART KEY 3",
+      "STOP LAMP": "STOP LAMP",
+      "P/ WINDOW RH": "P/ WINDOW RH",
+      "MEMORY": "MEMORY",
+      "SUN ROOF 1": "SUN ROOF 1",
+      "INTERIOR LAMP": "INTERIOR LAMP",
+      "SMART KEY 2": "SMART KEY 2",
+      "MODULE 8": "MODULE 8",
+      "MULTI MEDIA": "MULTI MEDIA",
+      "SUN ROOF 2": "SUN ROOF 2",
+      "POWER OUTLET": "POWER OUTLET",
+      "DOOR LOCK": "DOOR LOCK",
+      "MODULE 7": "MODULE 7",
+      "AMP": "AMP",
+      "ACC": "ACC"
+    },
+    "imageClusters": [
+      "61eed3adb231e80004f101d6"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-sportage-2017-genid-g4-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 43.899018232819074,
+          "left": 20.919302071973814,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "1",
+        "kind": {
+          "amp": 20,
+          "type": "fuse",
+          "format": "micro"
+        },
+        "description": "Rear Power Outlet",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.899018232819074,
+          "left": 28.661941112322776,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "2",
+        "kind": {
+          "amp": 10,
+          "type": "fuse",
+          "format": "micro"
+        },
+        "description": "Rear Bumper Lamp LH/RH, Electro Chromic Mirror"
+      },
+      {
+        "layout": {
+          "top": 43.899018232819074,
+          "left": 36.40458015267174,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "3",
+        "kind": {
+          "amp": 15,
+          "type": "fuse",
+          "format": "micro"
+        },
+        "description": "Transaxle Range Switch",
+        "relatedEntities": [
+          "SENSOR_POSICION_CAMBIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.899018232819074,
+          "left": 44.1472191930207,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.827455455558535,
+          "left": 20.919302071973814,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Front Power Outlet #2",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.73639579803898,
+          "left": 28.66194111232278,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Vacuum Pump, Cooling Fan Motor, Vacuum Switch",
+        "relatedEntities": [
+          "BOMBA_DE_VACIO",
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/cooling-fan-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.73639579803898,
+          "left": 36.40458015267174,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "ESC Module",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "MODULO(of=CONTROL_DE_ESTABILIDAD)"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 48.73639579803898,
+          "left": 44.14721919302071,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 53.50401017214398,
+          "left": 20.919302071973814,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "BI-Function H/LP Relay"
+      },
+      {
+        "layout": {
+          "top": 53.57377336325888,
+          "left": 28.66194111232278,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "E/R Junction Block (B/Alarm Horn Relay)"
+      },
+      {
+        "layout": {
+          "top": 53.57377336325888,
+          "left": 36.40458015267174,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Stop Lamp Switch"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 53.57377336325888,
+          "left": 44.14721919302071,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "AEB Sensor"
+      },
+      {
+        "layout": {
+          "top": 60.57195258620175,
+          "left": 15.708108369114948,
+          "width": 6.515775430207171,
+          "height": 6.077536058009669
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Engine Control Relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.41115092847878,
+          "left": 28.66194111232278,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Fuel Pump Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/fuel-pump-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.41115092847878,
+          "left": 36.40458015267174,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "E/R Junction Block (Deicer Relay)",
+        "relatedEntities": [
+          "FUSIBLERA",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.41115092847878,
+          "left": 44.14721919302071,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Vacuum Pump",
+        "relatedEntities": [
+          "BOMBA_DE_VACIO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.248528493698686,
+          "left": 28.66194111232278,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "E/R Junction Block (Cooling Fan 1 Relay), Canister Close Valve"
+      },
+      {
+        "layout": {
+          "top": 63.248528493698686,
+          "left": 36.40458015267174,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.248528493698686,
+          "left": 44.14721919302071,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "15"
+        }
+      },
+      {
+        "layout": {
+          "top": 68.0859060589186,
+          "left": 13.285714285714288,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Ignition Coil #1/#2/#3/#4"
+      },
+      {
+        "layout": {
+          "top": 68.0859060589186,
+          "left": 20.919302071973814,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Oxygen Sensor (Up/Down)"
+      },
+      {
+        "layout": {
+          "top": 68.0859060589186,
+          "left": 28.66194111232278,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Fuel Pump Relay, Oil Control Valve, Purge Control Solenoid Valve, Variable Intake Solenoid Valve, RCV Control Solenoid Valve",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "VALVULA_PURGA_CANISTER",
+          "VALVULA_MULTIPLE_ADMISION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/fuel-pump-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 68.0859060589186,
+          "left": 36.40458015267174,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "23",
+        "kind": {
+          "amp": 10,
+          "type": "fuse",
+          "format": "micro"
+        },
+        "description": "Battery Sensor",
+        "relatedEntities": [
+          "TESTIGO_BATERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 68.0859060589186,
+          "left": 44.14721919302071,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Horn Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/horn-fuse",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 72.92328362413849,
+          "left": 13.285714285714288,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.92328362413849,
+          "left": 20.919302071973814,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "26",
+        "kind": {
+          "amp": 10,
+          "type": "fuse",
+          "format": "micro"
+        },
+        "description": "BCM, PCM",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "PCM"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 72.92328362413849,
+          "left": 28.66194111232278,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.92328362413849,
+          "left": 36.40458015267174,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "28",
+        "kind": {
+          "amp": 15,
+          "type": "fuse",
+          "format": "micro"
+        },
+        "description": "PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.92328362413849,
+          "left": 44.14721919302071,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "[W/O Smart Key] Ignition Switch, [With Smart Key] PDM (IG2) Relay",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 77.76066118935839,
+          "left": 13.286266202002407,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 77.76066118935839,
+          "left": 21.07393540128398,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 77.76066118935839,
+          "left": 28.66194111232278,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "20"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 5.230829420970267,
+          "left": 56.76015127419835,
+          "width": 3.3059221544777957,
+          "height": 10.974356496720619
+        },
+        "id": "33",
+        "kind": {
+          "amp": 30,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "Start Relay, [W/O Smart Key] Ignition Switch, [With Smart Key] PCB Block (PDM (IG2) Relay)",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.992957746478872,
+          "left": 56.76015127419835,
+          "width": 3.3059221544777957,
+          "height": 10.974356496720619
+        },
+        "id": "34",
+        "kind": {
+          "amp": 40,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "[W/O Smart Key] Ignition Switch, [With Smart Key] PCB Block (PDM (IG1)/PDM (ACC) Relay)",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 20.75778558559177,
+          "left": 56.76015127419835,
+          "width": 3.3059221544777957,
+          "height": 10.974356496720619
+        },
+        "id": "35",
+        "kind": {
+          "amp": 40,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "Rear Heated Relay"
+      },
+      {
+        "layout": {
+          "top": 29.48398167160818,
+          "left": 56.888511942840104,
+          "width": 3.3525756440201437,
+          "height": 9.34416355404058
+        },
+        "id": "36",
+        "kind": {
+          "amp": 40,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "Blower Relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 37.60836656460557,
+          "left": 56.888511942840104,
+          "width": 3.3525756440201437,
+          "height": 9.34416355404058
+        },
+        "id": "37",
+        "kind": {
+          "amp": 50,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "Smart Junction Block (Fuse - SUNROOF 1, SUNROOF 2, S/HEATER DRV/PASS, S/HEATER REAR, SAFETY P/WINDOW, Power Window Relay)",
+        "relatedEntities": [
+          "TECHO_SOLAR",
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 45.27973489909584,
+          "left": 56.888511942840104,
+          "width": 3.3525756440201437,
+          "height": 9.34416355404058
+        },
+        "id": "38",
+        "kind": {
+          "amp": 60,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "Smart Junction Block (IPS 1 (5CH), Fuse - MODULE 7, SMART KEY 2, SMART KET 3, MODULE 8, STOP LAMP)",
+        "relatedEntities": [
+          "FUSIBLE",
+          "MODULO",
+          "ECU",
+          "LLAVE_INTELIGENTE",
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.35356155648869,
+          "left": 56.87809587169079,
+          "width": 3.3064630608054175,
+          "height": 9.514057436841322
+        },
+        "id": "39",
+        "kind": {
+          "amp": 60,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "Smart Junction Block (IPS 2 (5CH), IPS 3 (2CH), IPS 4 (2CH), IPS 5 (2CH), IPS 6 (1CH), Fuse - AMP)",
+        "relatedEntities": [
+          "FUSIBLE",
+          "AMPLIFICADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.02566691053823,
+          "left": 56.898928013989384,
+          "width": 3.398688227234869,
+          "height": 9.174269671239834
+        },
+        "id": "40",
+        "kind": {
+          "amp": 80,
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "description": "MDPS Unit"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 69.31534484137966,
+          "left": 56.898928013989384,
+          "width": 3.398688227234869,
+          "height": 9.174269671239834
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 80
+        },
+        "description": "Cooling Fan Motor",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ]
+      },
+      {
+        "id": "42",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 77.74217328396509,
+          "left": 56.898928013989384,
+          "width": 3.398688227234869,
+          "height": 9.174269671239834
+        }
+      },
+      {
+        "layout": {
+          "top": 10.799438990182328,
+          "left": 67.98126274309584,
+          "width": 5.693938657012648,
+          "height": 5.67150385090973
+        },
+        "id": "43",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "ESC Module",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "MODULO(of=CONTROL_DE_ESTABILIDAD)"
+        ]
+      },
+      {
+        "id": "44",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 20.254303599374023,
+          "left": 67.97544581606925,
+          "width": 5.69861373882658,
+          "height": 5.584249945511118
+        }
+      },
+      {
+        "layout": {
+          "top": 29.453015427769984,
+          "left": 67.97544581606925,
+          "width": 5.69861373882658,
+          "height": 5.584249945511118
+        },
+        "id": "45",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Power Tail Gate Module"
+      },
+      {
+        "layout": {
+          "top": 38.849929873772794,
+          "left": 67.9696288890427,
+          "width": 5.703288820640512,
+          "height": 5.496996040112507
+        },
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "ESC Control Module, Multipurpose Check Connector",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "MODULO(of=CONTROL_DE_ESTABILIDAD)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.10659186535764,
+          "left": 67.9696288890427,
+          "width": 5.703288820640512,
+          "height": 5.496996040112507
+        },
+        "id": "47",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        }
+      },
+      {
+        "layout": {
+          "top": 57.3632538569425,
+          "left": 67.97544581606925,
+          "width": 5.69861373882658,
+          "height": 5.584249945511118
+        },
+        "id": "48",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        }
+      },
+      {
+        "layout": {
+          "top": 66.9578165012937,
+          "left": 66.90316248636856,
+          "width": 8.397818974918204,
+          "height": 7.776157082748952
+        },
+        "id": "49",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Cooling Fan 1 Relay"
+      },
+      {
+        "layout": {
+          "top": 76.14544179523142,
+          "left": 66.90316248636856,
+          "width": 8.397818974918204,
+          "height": 7.776157082748952
+        },
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Smart Junction Block (Fuse - AWD, - P/SEAT (DRV), P/SEAT (PASS), TAIL GATE OPEN, DOOR LOCK, Leak Current Autocut Device Relay)",
+        "relatedEntities": [
+          "DOBLE_TRACCION",
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "51",
+        "layout": {
+          "top": 10.48904538341158,
+          "left": 77.93922979221895,
+          "width": 6.158402584001012,
+          "height": 5.849865999951941
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Cooling Fan 1 Relay"
+      },
+      {
+        "id": "52",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 20.254303599374023,
+          "left": 77.89167589814669,
+          "width": 6.143975162136431,
+          "height": 5.584249945511118
+        }
+      },
+      {
+        "id": "53",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 53.003630629080625,
+          "left": 78.55498295275301,
+          "width": 3.1502723672092197,
+          "height": 9.069484883449658
+        }
+      },
+      {
+        "id": "54",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 61.18291466663931,
+          "left": 78.55498295275301,
+          "width": 3.1502723672092197,
+          "height": 9.069484883449658
+        }
+      },
+      {
+        "id": "55",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 69.47712436929973,
+          "left": 78.55498295275301,
+          "width": 3.1502723672092197,
+          "height": 9.069484883449658
+        }
+      },
+      {
+        "id": "56",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 77.04118931452665,
+          "left": 78.55498295275301,
+          "width": 3.1502723672092197,
+          "height": 9.069484883449658
+        }
+      },
+      {
+        "id": "57",
+        "layout": {
+          "top": 33.88866282237948,
+          "left": 4.751397856726958,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "30"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 33.88866282237948,
+          "left": 12.55617221456976,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "25"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 38.78860498171132,
+          "left": 12.41575838353706,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "20"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "60",
+        "layout": {
+          "top": 43.64485524256651,
+          "left": 12.41575838353706,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "15"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "61",
+        "layout": {
+          "top": 48.652679968701094,
+          "left": 12.41575838353706,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "62",
+        "layout": {
+          "top": 53.66050469483567,
+          "left": 12.41575838353706,
+          "width": 5.2537550998501725,
+          "height": 3.172220184537155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": "7.5"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "DIAGNOSIS",
+        "kind": {
+          "type": "connector",
+          "format": "obd2"
+        },
+        "layout": {
+          "top": 2.1068073440279376,
+          "left": 4.544532288012693,
+          "width": 8.466570071243636,
+          "height": 27.47712514675405
+        }
+      },
+      {
+        "id": "FUSE PULLER",
+        "kind": {
+          "type": "fusepuller",
+          "format": ""
+        },
+        "layout": {
+          "top": 35.82012910798122,
+          "left": 78.25266678997136,
+          "width": 8.39608085547546,
+          "height": 11.893583724569645
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 4.482537938398663,
+          "left": 18.00402938871657,
+          "width": 9.318511938659128,
+          "height": 9.45894627021388
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "brown"
+        },
+        "description": "Blower",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 4.482537938398663,
+          "left": 30.818709875251237,
+          "width": 9.318511938659128,
+          "height": 9.45894627021388
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "brown"
+        },
+        "description": "Start"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 4.482537938398663,
+          "left": 43.63339036178591,
+          "width": 9.318511938659128,
+          "height": 9.45894627021388
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "brown"
+        },
+        "description": "Cooling fan 2",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/cooling-fan-relay",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 15.593649049509779,
+          "left": 18.00402938871657,
+          "width": 9.318511938659128,
+          "height": 9.45894627021388
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 15.593649049509779,
+          "left": 30.818709875251237,
+          "width": 9.318511938659128,
+          "height": 9.45894627021388
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 15.593649049509779,
+          "left": 43.63339036178591,
+          "width": 9.318511938659128,
+          "height": 9.45894627021388
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 3.582257433489828,
+          "left": 87.98725328907334,
+          "width": 10.586362817773406,
+          "height": 13.302034428794991
+        },
+        "description": "Cooling Fan 1",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "individualFusePages": [
+          {
+            "url": "/kia/sportage/info/fusebox/2017/cooling-fan-relay",
+            "urlWithAnchor": "/kia/sportage/info/fusebox/2017/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 20.014182316118937,
+          "left": 88.47398261402844,
+          "width": 9.977951161579526,
+          "height": 10.172143974960875
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "brown"
+        },
+        "description": "Rear Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 31.021126760563376,
+          "left": 88.47398261402844,
+          "width": 9.977951161579526,
+          "height": 10.172143974960875
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 42.03834115805947,
+          "left": 88.47398261402844,
+          "width": 9.977951161579526,
+          "height": 10.172143974960875
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 52.72153755868545,
+          "left": 87.98725328907334,
+          "width": 10.586362817773406,
+          "height": 11.111111111111121
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 63.989143192488264,
+          "left": 87.98725328907334,
+          "width": 10.586362817773406,
+          "height": 11.111111111111121
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 75.10025430359939,
+          "left": 87.98725328907334,
+          "width": 10.464680486534633,
+          "height": 11.1111111111111
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "green"
+        },
+        "description": "B/Alarm Horn"
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 86.5243544600939,
+          "left": 88.10893562031211,
+          "width": 10.34299815529586,
+          "height": 10.798122065727696
+        },
+        "description": "Deicer",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      }
+    ],
+    "boxAspectRatio": 0.777535441657579,
+    "boxName": "Engine compartment fuse panel",
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a01ee3dd_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/68350a1d_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1687195e_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9057ccbe_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9df86d2e_image.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/e58372da_kia-sportage-2018.jpg"
+    },
+    "templateId": "613a791557da1c0004f057de",
+    "templateRenameMap": {
+      "MDPS": "40",
+      "B+1": "39",
+      "B+3": "37",
+      "BLOWER": "36",
+      "REAR HEATED": "35",
+      "IG1": "34",
+      "IG2": "33",
+      "ECU 3": "25",
+      "HORN": "24",
+      "BATTERY MANAGEMENT": "23",
+      "ECU4": "18",
+      "B/ALARM HORN": "10",
+      "B/UP LAMP": "2",
+      "DEICER": "15",
+      "U10": "8",
+      "H/LAMP WASHER": "32",
+      "U13": "27",
+      "ECU5": "19",
+      "U1": "R9",
+      "U2": "R10",
+      "U15": "R4",
+      "U16": "R6",
+      "H/LAMP WASHER_R": "R5",
+      "PTC HEATER 1 R": "R12",
+      "PTC HEATER 2 R": "R11",
+      "SPARE 2": "57",
+      "SPARE 3": "58",
+      "SPARE 4": "59",
+      "SPARE 5": "60",
+      "SPARE 6": "61",
+      "SPARE 7": "62",
+      "COOLING FAN 2": "41",
+      "B+ 2": "38",
+      "B+ 4": "50",
+      "COOLING FAN 1": "49",
+      "ABS 1": "46",
+      "POWER TAIL GATE": "45",
+      "ABS 2": "43",
+      "COOLING FAN 3": "51",
+      "E-CVVT 1": "31",
+      "E-CVVT 2": "30",
+      "WIPER FRT 1": "29",
+      "TCU 1": "28",
+      "WIPER FRT 2": "26",
+      "SENSOR 2": "22",
+      "SENSOR 1": "21",
+      "ECU 2": "20",
+      "ECU 4": "18",
+      "SENSOR 3": "17",
+      "FUEL PUMP": "14",
+      "AEB": "12",
+      "MODULE": "11",
+      "H/LAMP HI": "9",
+      "ABS 3": "7",
+      "POWER OUTLET 1": "5",
+      "ECU 6": "4",
+      "TCU 2": "3",
+      "POWER OUTLET 2": "1",
+      "ECU 1": "13",
+      "VACUUM PUMP 1": "16",
+      "VACUUM PUMP 2": "6",
+      "Cooling Fan 1 Relay": "R7",
+      "Rear Defogger Relay": "R8",
+      "B/A Horn Relay": "R13",
+      "Deicer Relay": "R14",
+      "Cooling Fan 2 Relay": "R3",
+      "Start Relay": "R2",
+      "Blower Relay": "R1"
+    },
+    "imageClusters": [
+      "627d06d00b0fffc9d6c76a92"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-sportage-2017-genid-g4-1.webp"
+  }
+]

@@ -1,0 +1,5188 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 19.044006042548034,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 27.864073459936076,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS control unit [depending on the configuration]"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 27.864073459936076,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "ABS control unit [depending on the configuration]"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 52.211926468390374,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine control unit [for petrol engines]",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 52.211926468390374,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Engine control unit [for diesel engines]",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 49.10327305335525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Engine electronics, low heating output relay, high heating output relay, reducing agent dosing system relay, radiator fan control unit [for diesel engines]"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 49.10327305335525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics, radiator fan control unit [for petrol engines]"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 45.99461963832013,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine component supply relay, engine electronics [for petrol engines, not valid for engine code CZCA, CZEA, CZDA] / Engine electronics [for diesel engines] / Engine electronics [for engine letter codes CZCA, CZEA, CZDA]"
+      },
+      {
+        "layout": {
+          "top": 42.88596622328501,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Brake pedal switch",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Coolant shut-off valve, gearbox coolant valve [for engine code CZPA]"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics [for engine letter codes CZCA, CZEA, CZDA, CRGB, DBGC, DFGA, DFHA]"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 36.66865939321477,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lambda probe, lambda probe after catalytic converter [for engine code CZCA, CZEA, CZDA]"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 36.66865939321477,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Lambda probe, lambda probe after catalytic converter [for engine code CZPA]"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 33.560005978179646,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Control unit for temporary automatic glow plug, heating resistor for engine oil pan ventilation, air mass meter [for diesel engines]"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 33.560005978179646,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics [for engine code CZPA]"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 33.560005978179646,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Ignition [for engine code CZCA, CZEA, CZDA]",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 30.451352563144525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fuel pump relay [for petrol engines]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/fuel-pump-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 30.451352563144525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fuel pump relay [for diesel engines]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/fuel-pump-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 37.99143812001065,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Additional air heating element [for vehicles with additional air heating [PTC]]"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 37.99143812001065,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Heated windscreen [for vehicles without additional air heating [PTC]]"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 46.81150553739869,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heating element of additional air heater"
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 71.70079210880287,
+          "left": 56.433397265458375,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Mechatronics of the dual clutch transmission [for vehicles with dual clutch transmission 0D9, 0DL] / Mechatronics of the dual clutch transmission [for vehicles with dual clutch transmission 0D9, 0DL]"
+      },
+      {
+        "layout": {
+          "top": 68.19787985865725,
+          "left": 69.19431279620854,
+          "width": 6.872037914691943,
+          "height": 6.18374558303887
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 63.78091872791519,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Horn relay, high-tone horn, low-tone horn / Horn relay, high-tone horn, low-tone horn",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/horn-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 60.677044687949056,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Engine component supply relay [for engine code CZPA] / Engine component supply relay [for engine code CZPA]"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 57.57317064798292,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Main relay, Engine control unit, ABS control unit / Main relay, Engine control unit, ABS control unit",
+        "relatedEntities": [
+          "RELAY_ASD",
+          "ECU"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 54.469296608016776,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Diagnosis of the data bus interface [for vehicles without independent heating / without start-stop system] / Battery control and monitoring unit [for vehicles with independent heating / with start-stop system]"
+      },
+      {
+        "layout": {
+          "top": 51.36542256805064,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windscreen wiper motor control unit"
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 48.261548528084504,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Anti-theft device sound signal"
+      },
+      {
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 45.15767448811837,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 23.994918547302348,
+          "left": 71.66805916821953,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 20.64713794649529,
+          "left": 71.66805916821953,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 12.51681363024959,
+          "left": 64.29127551004045,
+          "width": 7.216418796044763,
+          "height": 6.33687042295621
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heating element of additional air heater"
+      },
+      {
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 50.538036167986846,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 47.51478531929884,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 44.49153447061084,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 41.468283621922836,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F35",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 38.445032773234836,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 35.421781924546835,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 32.39853107585883,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F37",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Additional heater control unit"
+      },
+      {
+        "id": "F38",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 29.375280227170826,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 37.010546364427064,
+          "left": 68.94185651193597,
+          "width": 12.348094384343256,
+          "height": 5.619488865640413
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Start relay 1",
+        "extendedDescription": "Starter system"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 29.35847641972523,
+          "left": 68.94185651193597,
+          "width": 12.348094384343256,
+          "height": 5.619488865640413
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Start relay 2",
+        "extendedDescription": "Starter system"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 57.59228814825885,
+          "left": 56.27303240332404,
+          "width": 8.338972830985057,
+          "height": 9.565087430877306
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/horn-relay",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 63.895550956323866,
+          "left": 37.99143812001065,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Relay for high heating output [for vehicles with additional air heater (AAH)]",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "variation": "lightgreen"
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 63.895550956323866,
+          "left": 37.99143812001065,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Heated windscreen relay [for vehicles without additional air heating (PTC)]",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "variation": "lightgreen"
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 57.15498446571072,
+          "left": 19.228749250294268,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "main relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ],
+        "extendedDescription": "Main fuse"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 10.125541772530266,
+          "left": 23.23787080365247,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Automatic preheating time control unit"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 10.245105365416231,
+          "left": 45.688951502458394,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Low heat output relay"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 45.99461963832013,
+          "left": 33.18049225598081,
+          "width": 12.187729522208926,
+          "height": 6.456434015842174
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Power supply relay for engine components"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 31.35740745699168,
+          "left": 30.937870803652466,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Heated windscreen relay [for vehicles with additional air heating (PTC)]",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "SA1",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 21.975142075366406,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 125,
+          "notUsed": false
+        },
+        "description": "Power supply terminal 30_1"
+      },
+      {
+        "id": "SA2",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 31.921772803129198,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 400,
+          "notUsed": false
+        },
+        "description": "Generator with voltage regulator"
+      },
+      {
+        "id": "SA3",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80,
+          "notUsed": false
+        },
+        "description": "Power steering control unit"
+      },
+      {
+        "id": "SA4",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 61.76166498641758,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80,
+          "notUsed": false
+        },
+        "description": "Power supply terminal 30_2"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "Radiator fan control unit"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Radiator fan control unit [only for vehicles with increased fan power]"
+      },
+      {
+        "id": "SA6",
+        "layout": {
+          "top": 94.07479029936601,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 50
+        },
+        "description": "Heated windscreen [for vehicles with additional air heating (PTC)]"
+      },
+      {
+        "id": "508",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 41.86840353089199,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "notUsed": false
+        },
+        "description": "Battery",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system"
+      }
+    ],
+    "boxName": "Engine fuse panel (SB) (up to June 2018)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b2f782e4_2018-skoda-kodiaq.jpg"
+    },
+    "boxTablesImages": [],
+    "processed": false,
+    "boxAspectRatio": 1.4230769230769231,
+    "templateId": "66a7edb6adc3bc9d30b3761a",
+    "templateRenameMap": {
+      "508": "",
+      "SA1": "",
+      "SA2": "",
+      "SA3": "",
+      "SA4": "",
+      "SA5": ""
+    },
+    "boxDescription": "Fuse box assembly place (SB) on the E-box, in the engine compartment on the left",
+    "imageClusters": [
+      "67423b74e36b2c65dbd0bf2d"
+    ],
+    "boxScaleMultiplier": "",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-skoda-kodiaq-2018-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 19.044006042548034,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 27.864073459936076,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS control unit [depending on the configuration]"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 27.864073459936076,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "ABS control unit [depending on the configuration]"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 52.211926468390374,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine control unit [for petrol engines]",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 52.211926468390374,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Engine control unit [for diesel engines]",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 49.10327305335525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Engine electronics, low heating output relay, high heating output relay, reducing agent dosing system relay, radiator fan control unit, air mass meter, glow plug timing control unit [for diesel engines]"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 49.10327305335525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics, radiator fan control unit [for petrol engines]"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 45.99461963832013,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine component supply relay, engine electronics [for petrol engines, not valid for engine code CZCA, CZDA, DADA] / Engine electronics [for diesel engines] / Engine electronics [for engine letter codes CZCA, CZDA, DADA]"
+      },
+      {
+        "layout": {
+          "top": 42.88596622328501,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Brake pedal switch",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Coolant shut-off valve [for engine code CZPA] / Gearbox coolant valve [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics [for engine letter codes CZCA, CZDA, DADA, DFGC, CRGB, DBGC, DFGA, DFHA]"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine electronics [for engine letter code CUAA]"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 36.66865939321477,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Lambda probe, NOx sensor control unit, particulate sensor, NOx sensor 2 control unit [for diesel engines, not valid for engine code CRGB] / Lambda probe, lambda probe after catalytic converter [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 36.66865939321477,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lambda probe, lambda probe after catalytic converter [for engine code CZCA, CZDA, DADA]"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 33.560005978179646,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 33.560005978179646,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Ignition [for engine code CZCA, CZDA, DADA]",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 30.451352563144525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fuel pump control unit [for petrol engines, without all-wheel drive]"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 30.451352563144525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fuel pump control unit [for diesel engines, for petrol engines, with all-wheel drive]"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 37.99143812001065,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Additional air heating element [for vehicles with additional air heating [PTC]]"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 37.99143812001065,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Heated windscreen [for vehicles without additional air heating [PTC]]"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 46.81150553739869,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heating element of additional air heater"
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 71.70079210880287,
+          "left": 56.433397265458375,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Additional hydraulic pump 1 transmission oil"
+      },
+      {
+        "layout": {
+          "top": 68.19787985865725,
+          "left": 69.19431279620854,
+          "width": 6.872037914691943,
+          "height": 6.18374558303887
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 63.78091872791519,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Horn relay, high-tone horn, low-tone horn",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/horn-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 60.677044687949056,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Engine component supply relay [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 57.57317064798292,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Main relay, Engine control unit, ABS control unit / Main relay, Engine control unit, ABS control unit",
+        "relatedEntities": [
+          "RELAY_ASD",
+          "ECU"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 54.469296608016776,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Diagnosis of the data bus interface [for vehicles without independent heating / without start-stop system - not valid for engine code CUAA] / Battery control and monitoring unit [for vehicles with independent heating / with start-stop system - not valid for engine code CUAA]"
+      },
+      {
+        "layout": {
+          "top": 51.36542256805064,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windscreen wiper motor control unit [not valid for engine code CUAA]"
+      },
+      {
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 48.261548528084504,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 45.15767448811837,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Mechatronics dual clutch gearbox [for vehicles with dual clutch gearbox 0D9, 0GC, 0DL - not valid for engine code CUAA] / Mechatronics dual clutch gearbox [for vehicles with dual clutch gearbox 0D9, 0GC, 0DL - not valid for engine code CUAA] / Mechatronics dual clutch gearbox [for vehicles with dual clutch gearbox 0D9, 0GC, 0DL - not valid for engine code CUAA]"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 23.994918547302348,
+          "left": 71.66805916821953,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 20.64713794649529,
+          "left": 71.66805916821953,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 12.51681363024959,
+          "left": 64.29127551004045,
+          "width": 7.216418796044763,
+          "height": 6.33687042295621
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heating element of additional air heater"
+      },
+      {
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 50.538036167986846,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 47.51478531929884,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 44.49153447061084,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Mechatronics of the dual clutch gearbox [for vehicles with dual clutch gearbox 0DL - for engine code CUAA]"
+      },
+      {
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 41.468283621922836,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 38.445032773234836,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windscreen wiper motor control unit [for engine code CUAA]"
+      },
+      {
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 35.421781924546835,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 32.39853107585883,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F37",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Additional heater control unit"
+      },
+      {
+        "id": "F38",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 29.375280227170826,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 37.010546364427064,
+          "left": 68.94185651193597,
+          "width": 12.348094384343256,
+          "height": 5.619488865640413
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Start relay 1",
+        "extendedDescription": "Starter system"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 29.35847641972523,
+          "left": 68.94185651193597,
+          "width": 12.348094384343256,
+          "height": 5.619488865640413
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Start relay 2",
+        "extendedDescription": "Starter system"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 57.59228814825885,
+          "left": 56.27303240332404,
+          "width": 8.338972830985057,
+          "height": 9.565087430877306
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/horn-relay",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 63.895550956323866,
+          "left": 37.99143812001065,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Relay for high heating output [for vehicles with additional air heater (AAH)]",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "variation": "lightgreen"
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 63.895550956323866,
+          "left": 37.99143812001065,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Heated windscreen relay [for vehicles without additional air heating (PTC)]",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "variation": "lightgreen"
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 57.15498446571072,
+          "left": 19.228749250294268,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "main relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ],
+        "extendedDescription": "Main fuse"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 10.125541772530266,
+          "left": 23.23787080365247,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Automatic preheating time control unit"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 10.245105365416231,
+          "left": 45.688951502458394,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Low heat output relay"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 45.99461963832013,
+          "left": 33.18049225598081,
+          "width": 12.187729522208926,
+          "height": 6.456434015842174
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Power supply relay for engine components"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 31.35740745699168,
+          "left": 30.937870803652466,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Heated windscreen relay [for vehicles with additional air heating (PTC)]",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "SA1",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 21.975142075366406,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 125
+        },
+        "description": "Power supply terminal 30_1 [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA1",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 21.975142075366406,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Radiator fan control unit [for cars with battery in trunk]"
+      },
+      {
+        "id": "SA1",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 21.975142075366406,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 100
+        },
+        "description": "Radiator fan control unit [for cars with battery in trunk]"
+      },
+      {
+        "id": "SA2",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 31.921772803129198,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 400,
+          "notUsed": false
+        },
+        "description": "Generator with voltage regulator [for vehicles with battery in engine compartment][for cars with battery in trunk]"
+      },
+      {
+        "id": "SA3",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Power steering control unit [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA3",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "notUsed": true
+        },
+        "description": "Not used [for cars with battery in trunk]",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "SA4",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 61.76166498641758,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Power supply terminal 30_2 [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA4",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 61.76166498641758,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Power steering control unit [for cars with battery in trunk]"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 50
+        },
+        "description": "Radiator fan control unit [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 100
+        },
+        "description": "Radiator fan control unit [only for vehicles with increased fan power] [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "description": "Power supply terminal SA4 (threaded connection 2 (30) on E-box) [for cars with battery in trunk]",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        }
+      },
+      {
+        "id": "SA6",
+        "layout": {
+          "top": 94.07479029936601,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "Heated windscreen [for vehicles with additional air heating (PTC)] [for vehicles with battery in engine compartment][for cars with battery in trunk]"
+      },
+      {
+        "id": "508",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 41.86840353089199,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "description": "Battery [for vehicles with battery in engine compartment][for cars with battery in trunk]",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        }
+      }
+    ],
+    "boxName": "Engine fuse panel (SB) (from July 2018)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b2f782e4_2018-skoda-kodiaq.jpg"
+    },
+    "boxTablesImages": [],
+    "processed": false,
+    "boxAspectRatio": 1.4230769230769231,
+    "templateId": "66a7edb6adc3bc9d30b3761a",
+    "templateRenameMap": {
+      "511": "SA5"
+    },
+    "boxDescription": "Fuse box assembly place (SB) on the E-box, in the engine compartment on the left",
+    "imageClusters": [
+      "67423b74e36b2c65dbd0bf2d"
+    ],
+    "boxScaleMultiplier": "",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-skoda-kodiaq-2018-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 19.044006042548034,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 27.864073459936076,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS control unit [depending on the configuration]"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 71.35214747091854,
+          "left": 27.864073459936076,
+          "width": 6.578607968850736,
+          "height": 5.739052458526373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "ABS control unit [depending on the configuration]"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 52.211926468390374,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine control unit [for petrol engines]",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 52.211926468390374,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Engine control unit [for diesel engines]",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 49.10327305335525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Engine electronics, low heating output relay, high heating output relay, reducing agent dosing system relay, radiator fan control unit, air mass meter, glow plug timing control unit [for diesel engines]"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 49.10327305335525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics, radiator fan control unit [for petrol engines]"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 45.99461963832013,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine component supply relay, engine electronics [for petrol engines, not valid for engine code CZCA, CZDA, DADA] / Engine electronics [for diesel engines]"
+      },
+      {
+        "layout": {
+          "top": 42.88596622328501,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Brake pedal switch",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Coolant shut-off valve [for engine code CZPA] / Gearbox coolant valve [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics [for engine letter codes CZCA, CZDA, DADA, DFGC, CRGB, DBGC, DFGA, DFHA]"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.77731280824989,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine electronics [for engine letter code CUAA]"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 36.66865939321477,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Lambda probe, NOx sensor control unit, particulate sensor, NOx sensor 2 control unit [for diesel engines, not valid for engine code CRGB] / Lambda probe, lambda probe after catalytic converter [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 36.66865939321477,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lambda probe, lambda probe after catalytic converter [for engine code CZCA, CZDA, DADA]"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 36.66865939321477,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Lambda probe, lambda probe after catalytic converter [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 33.560005978179646,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine electronics [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 33.560005978179646,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Ignition [for engine code CZCA, CZDA, DADA]",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 30.451352563144525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fuel pump control unit [for petrol engines, without all-wheel drive]"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 30.451352563144525,
+          "left": 18.061611374407583,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fuel pump control unit [for diesel engines, for petrol engines, with all-wheel drive]"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 37.99143812001065,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Additional air heating element [for vehicles with additional air heating [PTC]]"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 37.99143812001065,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Heated windscreen [for vehicles without additional air heating [PTC]]"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 54.364071140337764,
+          "left": 46.81150553739869,
+          "width": 6.895689071776111,
+          "height": 6.934688387386046
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heating element of additional air heater"
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 71.70079210880287,
+          "left": 56.433397265458375,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Additional hydraulic pump 1 transmission oil"
+      },
+      {
+        "layout": {
+          "top": 68.19787985865725,
+          "left": 69.19431279620854,
+          "width": 6.872037914691943,
+          "height": 6.18374558303887
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 63.78091872791519,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Horn relay, high-tone horn, low-tone horn",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/horn-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 60.677044687949056,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Engine component supply relay [for engine code CZPA, DKZA]"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 57.57317064798292,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Main relay, Engine control unit, ABS control unit",
+        "relatedEntities": [
+          "RELAY_ASD",
+          "ECU"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 54.469296608016776,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Diagnosis of the data bus interface [for vehicles without independent heating / without start-stop system - not valid for engine code CUAA] / Battery control and monitoring unit [for vehicles with independent heating / with start-stop system - not valid for engine code CUAA]"
+      },
+      {
+        "layout": {
+          "top": 51.36542256805064,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windscreen wiper motor control unit [not valid for engine code CUAA]"
+      },
+      {
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 48.261548528084504,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 45.15767448811837,
+          "left": 67.77251184834124,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Mechatronics dual clutch gearbox [for vehicles with dual clutch gearbox 0D9, 0GC, 0DL - not valid for engine code CUAA] / Mechatronics dual clutch gearbox [for vehicles with dual clutch gearbox 0D9, 0GC, 0DL - not valid for engine code CUAA] / Mechatronics dual clutch gearbox [for vehicles with dual clutch gearbox 0D9, 0GC, 0DL - not valid for engine code CUAA]"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 23.994918547302348,
+          "left": 71.66805916821953,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 20.64713794649529,
+          "left": 71.66805916821953,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 12.51681363024959,
+          "left": 64.29127551004045,
+          "width": 7.216418796044763,
+          "height": 6.33687042295621
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heating element of additional air heater"
+      },
+      {
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 50.538036167986846,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 47.51478531929884,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 44.49153447061084,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Mechatronics of the dual clutch gearbox [for vehicles with dual clutch gearbox 0DL - for engine code CUAA]"
+      },
+      {
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 41.468283621922836,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 38.445032773234836,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windscreen wiper motor control unit [for engine code CUAA]"
+      },
+      {
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 35.421781924546835,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 32.39853107585883,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "id": "F37",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Additional heater control unit"
+      },
+      {
+        "id": "F38",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 29.375280227170826,
+          "left": 52.3696682464455,
+          "width": 11.176850148444252,
+          "height": 2.4122116486024696
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 37.010546364427064,
+          "left": 68.94185651193597,
+          "width": 12.348094384343256,
+          "height": 5.619488865640413
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Start relay 1",
+        "extendedDescription": "Starter system"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 29.35847641972523,
+          "left": 68.94185651193597,
+          "width": 12.348094384343256,
+          "height": 5.619488865640413
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Start relay 2",
+        "extendedDescription": "Starter system"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 57.59228814825885,
+          "left": 56.27303240332404,
+          "width": 8.338972830985057,
+          "height": 9.565087430877306
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/horn-relay",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 63.895550956323866,
+          "left": 37.99143812001065,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Relay for high heating output [for vehicles with additional air heater (AAH)]",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "variation": "lightgreen"
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 63.895550956323866,
+          "left": 37.99143812001065,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Heated windscreen relay [for vehicles without additional air heating (PTC)]",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "variation": "lightgreen"
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 57.15498446571072,
+          "left": 19.228749250294268,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "main relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ],
+        "extendedDescription": "Main fuse"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 10.125541772530266,
+          "left": 23.23787080365247,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Automatic preheating time control unit"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 10.245105365416231,
+          "left": 45.688951502458394,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "Low heat output relay"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 45.99461963832013,
+          "left": 33.18049225598081,
+          "width": 12.187729522208926,
+          "height": 6.456434015842174
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Power supply relay for engine components"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 31.35740745699168,
+          "left": 30.937870803652466,
+          "width": 17.0765774289664,
+          "height": 13.381886115677775
+        },
+        "description": "Heated windscreen relay [for vehicles with additional air heating (PTC)]",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "SA1",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 21.975142075366406,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 125
+        },
+        "description": "Power supply terminal 30_1 [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA1",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 21.975142075366406,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Radiator fan control unit [for cars with battery in trunk]"
+      },
+      {
+        "id": "SA1",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 21.975142075366406,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 100
+        },
+        "description": "Radiator fan control unit [for cars with battery in trunk]"
+      },
+      {
+        "id": "SA2",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 31.921772803129198,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 400,
+          "notUsed": false
+        },
+        "description": "Generator with voltage regulator [for vehicles with battery in engine compartment][for cars with battery in trunk]"
+      },
+      {
+        "id": "SA3",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Power steering control unit [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA3",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "description": "Not busy [for cars with battery in trunk]",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        }
+      },
+      {
+        "id": "SA4",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 61.76166498641758,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Power supply terminal 30_2 [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA4",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 61.76166498641758,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 80
+        },
+        "description": "Power steering control unit [for cars with battery in trunk]"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 50
+        },
+        "description": "Radiator fan control unit [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 100
+        },
+        "description": "Radiator fan control unit [only for vehicles with increased fan power] [for vehicles with battery in engine compartment]"
+      },
+      {
+        "id": "SA5",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 71.70829571418037,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "description": "Power supply terminal SA4 (threaded connection 2 (30) on E-box) [for cars with battery in trunk]",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        }
+      },
+      {
+        "id": "SA6",
+        "layout": {
+          "top": 94.07479029936601,
+          "left": 51.815034258654784,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "Heated windscreen [for vehicles with additional air heating (PTC)] [for vehicles with battery in engine compartment][for cars with battery in trunk]"
+      },
+      {
+        "id": "508",
+        "layout": {
+          "top": 79.26487280665731,
+          "left": 41.86840353089199,
+          "width": 6.037735849056606,
+          "height": 11.25376599240532
+        },
+        "description": "Battery [for vehicles with battery in engine compartment][for cars with battery in trunk]",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        }
+      }
+    ],
+    "boxName": "Engine fuse panel (SB) (from November 2018)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b2f782e4_2018-skoda-kodiaq.jpg"
+    },
+    "boxTablesImages": [],
+    "processed": false,
+    "boxAspectRatio": 1.4230769230769231,
+    "templateId": "66a7edb6adc3bc9d30b3761a",
+    "templateRenameMap": {
+      "511": "SA5"
+    },
+    "boxDescription": "Fuse box assembly place (SB) on the E-box, in the engine compartment on the left",
+    "imageClusters": [
+      "67423b74e36b2c65dbd0bf2d"
+    ],
+    "boxScaleMultiplier": "",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-skoda-kodiaq-2018-genid-g1-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 14.289195187565388,
+          "left": 5.996999362174066,
+          "width": 4.125242357988531,
+          "height": 10.001370164332283,
+          "rotation": -15
+        },
+        "id": "F1",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Control unit for reducing agent heating [for diesel engines, not valid for engine code CRGB, DBGC]"
+      },
+      {
+        "layout": {
+          "top": 14.762410380681944,
+          "left": 72.69419292806528,
+          "width": 2.763200687378545,
+          "height": 5.4296640213887075
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse"
+        },
+        "id": "F2",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 23.088993113342774,
+          "left": 10.878739540352914,
+          "width": 7.35954724140181,
+          "height": 7.302574304917403
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse"
+        },
+        "id": "F3",
+        "relatedEntities": []
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 19.66778752581072,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Heated steering wheel",
+        "extendedDescription": "Heated steering wheel"
+      },
+      {
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 24.752168087137523,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F5",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Diagnostics of the data bus interface"
+      },
+      {
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 29.852219911251975,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F6",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Preselector lever sensors control unit, Tiptronic switch"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 35.096336817418184,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Heated rear window relay, heater control unit, air conditioning control unit, climate control system control unit, heated front window relay, rear air conditioning display and control unit, tyre pressure monitoring control unit / Heated rear window relay, heater control unit, air conditioning control unit, climate control system control unit, heated front window relay, rear air conditioning display and control unit, tyre pressure monitoring control unit",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 40.39990063640825,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Air humidity sensor / Air humidity, rain and light recognition sensor, Headlight switch, Cornering fog light and headlight range adjustment control unit, Left front door edge light, Right front door edge light, Left rear door edge light, Right rear door edge light, Interior monitoring sensor, Vehicle tilt sensor",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES"
+        ]
+      },
+      {
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 45.810446586706874,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F9",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Steering column electronics control unit"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 50.76595719170703,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Multimedia system control unit"
+      },
+      {
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 55.51723399326634,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F11",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 60.57352188873558,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Information electronics control unit 1"
+      },
+      {
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 65.62980978420481,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F13",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Front left seat belt tensioner control unit"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 70.68609767967405,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Fresh air fan control unit"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 19.816634063800958,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F15",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Electronic steering column lock control unit"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 24.94410552137839,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Plug connection, 16-pin on diagnostic socket, two-way signal amplifier for portable radio, compartment with mobile phone connection, USB distributor, USB charging socket 1"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 30.071576978955814,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F17",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Control unit in dash panel insert, control unit for emergency call module and communication unit"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 35.199048436533246,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F18",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Rear view camera, Surrounding camera control unit",
+        "relatedEntities": [
+          "CAMARA_REVERSA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 40.326519894110675,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F19",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Access and Starting System Interface"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 45.45399135168811,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F20",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Control unit for reducing agent heating [for diesel engines, not valid for engine code CRGB, DBGC]"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 50.581462809265545,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F21",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "All-wheel drive control unit"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 33.79217800373427,
+          "left": 55.57410619818739,
+          "width": 16.041960188039674,
+          "height": 2.627895283628739
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 41.924493073111954,
+          "left": 17.277881406151653,
+          "width": 7.899687065530252,
+          "height": 6.859650945429129
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Sliding roof control unit"
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 26.442552824958398,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 31.441134622680906,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F25",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Driver's side door control unit, rear left power window motor, rear left door control unit [left-hand drive vehicles only] / Door control unit, front passenger side, Rear left electric window motor, Rear left door control unit [right-hand drive vehicles only]"
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 36.439716420403414,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Vehicle electrical system control unit [for vehicles with seat heating]"
+      },
+      {
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 41.43829821812592,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F27",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 46.43688001584842,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "layout": {
+          "top": 37.11576307193032,
+          "left": 55.041244490421505,
+          "width": 8.250484715977066,
+          "height": 2.3912718577193246
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse"
+        },
+        "id": "F29",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 41.60695657279501,
+          "left": 51.7093179705077,
+          "width": 13.486369247270204,
+          "height": 1.7934538932894952
+        },
+        "id": "F30",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Control unit for adjustable attenuation electronics"
+      },
+      {
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse"
+        },
+        "id": "F31",
+        "layout": {
+          "top": 36.59526630627158,
+          "left": 66.26874632354716,
+          "width": 11.392116655274549,
+          "height": 6.482141699617557
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 22.432621464587964,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F32",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Parking assistant control unit, Navigation park assist control unit"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 27.217318592467304,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F33",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Airbag control unit"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 32.16934205557653,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F34",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Headlight switch, reversing light switch, coolant circuit pressure sensor, AUTO HOLD button, ASR and electronic stability program button, air quality sensor, front passenger airbag deactivation indicator, auto-dimming interior rearview mirror, rear seat heating control unit, USB charging port 1",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "CONTROL_DE_TRACCION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 37.12136551868576,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F35",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Plug connection, 16-pin on the diagnostic socket of the distance control control unit, front camera for driver assistance systems"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 42.073388981794984,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F36",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Actuator module 1 for right LED headlight"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 47.02541244490421,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F37",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Actuator module 1 for left LED headlight"
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 44.3207293379166,
+          "left": 51.58672354861354,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "layout": {
+          "top": 44.3207293379166,
+          "left": 56.82032099305952,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F39",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Door control unit, front passenger side, Rear right electric window motor, Rear right door control unit [left-hand drive vehicles only] / Door control unit, driver's side, Rear right electric window motor, Rear right door control unit [right-hand drive vehicles only]"
+      },
+      {
+        "id": "F40",
+        "layout": {
+          "top": 48.57798590508959,
+          "left": 61.9539184375055,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Socket, cigarette lighter, 12 V socket, rear cigarette lighter, socket 2, 12 V",
+        "relatedEntities": [
+          "TOMA_12V",
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/cigarette-lighter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.17001505220232,
+          "left": 66.78751588195148,
+          "width": 3.9930395646857346,
+          "height": 10.177493627823774
+        },
+        "id": "F41",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Front right seat belt tensioner control unit"
+      },
+      {
+        "id": "F42",
+        "layout": {
+          "top": 44.17001505220232,
+          "left": 71.82111332639744,
+          "width": 3.9930395646857346,
+          "height": 10.177493627823774
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "id": "F43",
+        "layout": {
+          "top": 58.064347443048014,
+          "left": 20.751342585308127,
+          "width": 9.546100712585858,
+          "height": 6.550089354510953,
+          "rotation": -15
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Soundpaket digital audio recording and playback control unit"
+      },
+      {
+        "id": "F44",
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 32.17585248891417,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "layout": {
+          "top": 56.83070014091423,
+          "left": 38.022948723237505,
+          "width": 5.87053720175291,
+          "height": 10.999850545508892
+        },
+        "id": "F45",
+        "kind": {
+          "format": "ato",
+          "type": "circuitbreaker",
+          "amp": 15,
+          "notUsed": false
+        },
+        "description": "Driver's seat adjustment control unit"
+      },
+      {
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 46.55688957040522,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "id": "F46",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Inverter with socket, 12V-230V"
+      },
+      {
+        "id": "F47",
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 51.96876360454318,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Rear window wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 57.380637638681144,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "id": "F48",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Blind angle recognition control unit 2, dead angle recognition control unit 2"
+      },
+      {
+        "layout": {
+          "top": 63.09725259944062,
+          "left": 63.14643436263422,
+          "width": 8.091821548362127,
+          "height": 2.27170826483335
+        },
+        "id": "F49",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Starter relay 1, starter relay 2, clutch pedal position sensor",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.28212780494054,
+          "left": 68.52761373769171,
+          "width": 10.947758565431101,
+          "height": 6.097743237184282
+        },
+        "id": "F50",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Rear bonnet control unit"
+      },
+      {
+        "layout": {
+          "top": 66.82479631487926,
+          "left": 56.62787616657094,
+          "width": 13.346201259679496,
+          "height": 2.7426416718907842
+        },
+        "id": "F51",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Control unit for rear seat heating, control and monitor for rear air conditioning",
+        "relatedEntities": [
+          "COMANDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.26102264235539,
+          "left": 72.3768665928354,
+          "width": 2.763200687378545,
+          "height": 5.4296640213887075
+        },
+        "id": "F52",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Fan 1, backrest of left front seat, Fan 1, front seat left, Fan 1, backrest of right front seat, Fan 1, front seat right",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/cooling-fan-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F53",
+        "layout": {
+          "top": 62.303367743450686,
+          "left": 78.35833950873649,
+          "width": 13.346201259679496,
+          "height": 2.7426416718907842
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Heated rear window",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 14.740799916225848,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R1",
+        "description": "Relay for reducing agent dosing system [for vehicles with reducing agent dosing system]",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay"
+        }
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 14.740799916225848,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R1",
+        "description": "Vacuum pump relay [for engine code DADA, DPCA]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_VACIO)"
+        ],
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay"
+        }
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 34.25636953286391,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R2",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Air conditioner relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "extendedDescription": "Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/air-conditioning-relay",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 53.77193914950196,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R3",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": true
+        }
+      },
+      {
+        "layout": {
+          "top": 71.76721705062239,
+          "left": 55.46252883703069,
+          "width": 15.875727073965594,
+          "height": 11.51076072335974
+        },
+        "id": "R4",
+        "kind": {
+          "amp": "",
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Power supply relay connector 15"
+      },
+      {
+        "layout": {
+          "top": 67.84864562205094,
+          "left": 78.3647301298182,
+          "width": 13.327706079655272,
+          "height": 5.739052458526388,
+          "rotation": -5
+        },
+        "id": "R5",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Rear window heating device relay"
+      },
+      {
+        "layout": {
+          "top": 75.01444461643572,
+          "left": 78.96473012981816,
+          "width": 13.327706079655272,
+          "height": 5.739052458526388,
+          "rotation": -5
+        },
+        "id": "R6",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": true
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 7.8337 1.1605 A 3.2254 3.2254 0 0 0 10.3115 2.3211 L 26.0155 2.3211 A 1.0638 1.0638 0 0 0 27.0793 1.2573 L 27.0793 1.2573 A 1.0638 1.0638 0 0 1 28.1431 0.1934 L 30.5609 0.1934 A 1.0638 1.0638 0 0 1 31.6248 1.2573 L 31.6248 1.2573 A 1.0638 1.0638 0 0 0 32.6886 2.3211 L 47.5099 2.3211 A 1.9562 1.9562 0 0 0 49.2747 1.2089 L 49.2747 1.2089 A 1.9562 1.9562 0 0 1 51.0394 0.0967 L 52.8530 0.0967 A 1.1122 1.1122 0 0 1 53.9652 1.2089 L 53.9652 1.2089 A 1.1122 1.1122 0 0 0 55.0774 2.3211 L 68.8681 2.3211 A 2.4249 2.4249 0 0 0 70.8414 1.3056 L 70.8414 1.3056 A 2.5151 2.5151 0 0 1 72.8141 0.2534 L 74.3145 0.2093 A 0.8467 0.8467 0 0 1 75.0967 0.6770 L 75.0967 0.6770 A 0.8748 0.8748 0 0 0 75.8791 1.1605 L 83.2689 1.1605 A 1.5474 1.5474 0 0 1 84.8162 2.7079 L 84.8162 8.0754 A 1.4023 1.4023 0 0 1 83.4139 9.4778 L 83.2530 9.4778 A 1.2414 1.2414 0 0 0 82.0116 10.7192 L 82.0116 10.7192 A 1.3698 1.3698 0 0 1 80.6418 12.0890 L 80.4642 12.0890 A 1.5474 1.5474 0 0 0 78.9168 13.6364 L 78.9168 57.9304 A 1.4537 1.4537 0 0 0 80.4612 59.3812 L 80.4672 59.3809 A 1.4537 1.4537 0 0 1 82.0116 60.8317 L 82.0116 61.6054 A 1.4963 1.4963 0 0 0 83.5581 63.1009 L 94.8751 62.7211 A 1.4963 1.4963 0 0 1 96.4217 64.2166 L 96.4217 66.2943 A 0.6801 0.6801 0 0 0 97.1470 66.9729 L 97.1470 66.9729 A 0.6801 0.6801 0 0 1 97.8723 67.6515 L 97.8723 74.4292 A 0.8422 0.8422 0 0 0 98.9362 75.2418 L 98.9362 75.2418 A 0.8422 0.8422 0 0 1 100.0000 76.0543 L 100.0000 98.1625 A 1.5965 1.5965 0 0 1 98.4534 99.7582 L 82.9780 100.2418 A 1.4723 1.4723 0 0 1 81.4600 98.7430 L 81.5039 96.3731 A 1.2817 1.2817 0 0 0 80.2224 95.0677 L 80.0312 95.0677 A 1.2561 1.2561 0 0 0 78.7841 96.1741 L 78.7841 96.1741 A 1.7915 1.7915 0 0 1 77.3275 97.7230 L 70.8102 98.9143 A 3.6546 3.6546 0 0 0 68.8104 100.0000 L 68.8104 100.0000 A 3.0076 3.0076 0 0 1 66.7931 100.9377 L 62.1125 101.2014 A 2.3233 2.3233 0 0 1 60.3965 100.5803 L 60.3965 100.5803 A 0.4312 0.4312 0 0 0 59.6712 100.8955 L 59.6712 102.6112 A 1.5910 1.5910 0 0 1 58.1244 104.2016 L 57.7363 104.2124 A 2.2958 2.2958 0 0 1 55.5693 102.8377 L 54.6851 100.8167 A 1.7847 1.7847 0 0 0 52.8530 99.7582 L 52.7593 99.7686 A 1.6428 1.6428 0 0 0 51.3254 101.1022 L 51.3254 101.1022 A 1.9099 1.9099 0 0 1 49.6344 102.6552 L 28.0390 104.7807 A 1.4347 1.4347 0 0 1 26.4641 103.3853 L 26.1388 88.9906 A 1.0197 1.0197 0 0 0 24.9516 88.0077 L 24.8220 88.0293 A 0.8501 0.8501 0 0 1 23.8329 87.1568 L 23.8348 87.1087 A 1.8900 1.8900 0 0 0 22.6594 85.2829 L 22.6594 85.2829 A 2.2207 2.2207 0 0 1 21.2766 83.2264 L 21.2766 80.8511 A 10.4457 10.4457 0 0 0 20.8280 77.8227 L 13.6981 54.2856 A 5.1836 5.1836 0 0 1 13.6861 51.3201 L 13.7800 51.0010 A 4.1685 4.1685 0 0 0 13.5789 48.1066 L 13.0169 46.8644 A 0.8833 0.8833 0 0 0 11.4894 46.7206 L 10.7543 47.7668 A 0.7576 0.7576 0 0 1 9.4103 47.5537 L 6.1319 36.8800 A 9.6640 9.6640 0 0 1 5.7060 34.0426 L 5.7060 33.7160 A 1.1719 1.1719 0 0 1 6.8291 32.5451 L 6.8291 32.5451 A 2.4819 2.4819 0 0 1 8.8108 33.4026 L 8.8532 33.4517 A 0.4122 0.4122 0 0 0 9.5699 33.1038 L 8.8200 29.2391 A 1.2401 1.2401 0 0 0 7.4952 28.2398 L 7.4952 28.2398 A 1.2185 1.2185 0 0 1 6.1895 27.2371 L 4.8136 19.4157 A 30.8611 30.8611 0 0 0 4.1262 16.4022 L 0.4192 3.2303 A 1.5076 1.5076 0 0 1 1.4999 1.3605 L 5.4022 0.3712 A 2.3980 2.3980 0 0 1 7.8337 1.1605 Z"
+        ],
+        "svgViewBoxH": 104.93230174081238,
+        "layout": {
+          "top": 13.326595888769651,
+          "left": 2.990501735126989,
+          "width": 91.49303875347371,
+          "height": 72.34765213948594
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Interior fuse panel (SC) (up to June 2018)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/28132601_2018-skoda-kodiaq.jpg"
+    },
+    "boxTablesImages": [],
+    "processed": false,
+    "boxAspectRatio": 1.3270142180094786,
+    "templateId": "619b9e7b188b7c0004a6c58a",
+    "templateRenameMap": {},
+    "boxDescription": "Fuse box assembly position (SC) under instrument panel to the left",
+    "imageClusters": [
+      "66afb81f49fc0016d6ebc25e"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-skoda-kodiaq-2018-genid-g1-3.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 14.289195187565388,
+          "left": 5.996999362174066,
+          "width": 4.125242357988531,
+          "height": 10.001370164332283,
+          "rotation": -15
+        },
+        "id": "F1",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Control unit for reducing agent heating [for diesel engines, not valid for engine code CRGB, DBGC]"
+      },
+      {
+        "layout": {
+          "top": 14.762410380681944,
+          "left": 72.69419292806528,
+          "width": 2.763200687378545,
+          "height": 5.4296640213887075
+        },
+        "id": "F2",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Heated steering wheel",
+        "extendedDescription": "Heated steering wheel"
+      },
+      {
+        "layout": {
+          "top": 23.088993113342774,
+          "left": 10.878739540352914,
+          "width": 7.35954724140181,
+          "height": 7.302574304917403
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse"
+        },
+        "id": "F3",
+        "relatedEntities": []
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 19.66778752581072,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Anti-theft device sound signal"
+      },
+      {
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 24.752168087137523,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F5",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Diagnostics of the data bus interface"
+      },
+      {
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 29.852219911251975,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F6",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Preselector lever sensors control unit, Tiptronic switch"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 35.096336817418184,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Heated rear window relay, heater control unit, air conditioning control unit, climate control system control unit, heated front window relay, rear air conditioning display and control unit, tyre pressure monitoring control unit",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 40.39990063640825,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Air humidity sensor / Air humidity, rain and light recognition sensor, Headlight switch, Cornering fog light and headlight range adjustment control unit, Left front door edge light, Right front door edge light, Left rear door edge light, Right rear door edge light, Interior monitoring sensor, Vehicle tilt sensor",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES"
+        ]
+      },
+      {
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 45.810446586706874,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F9",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Steering column electronics control unit"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 23.235690931341008,
+          "left": 50.76595719170703,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Multimedia system control unit"
+      },
+      {
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 55.51723399326634,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F11",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 60.57352188873558,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Information electronics control unit 1"
+      },
+      {
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 65.62980978420481,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F13",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Front left seat belt tensioner control unit"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 22.431031451144953,
+          "left": 70.68609767967405,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Fresh air fan control unit"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 19.816634063800958,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F15",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Electronic steering column lock control unit"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 24.94410552137839,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Plug connection, 16-pin on diagnostic socket, two-way signal amplifier for portable radio, compartment with mobile phone connection, USB distributor, USB charging socket 1"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 30.071576978955814,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F17",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Control unit in dash panel insert, control unit for emergency call module and communication unit"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 35.199048436533246,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F18",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Rear view camera, Surrounding camera control unit",
+        "relatedEntities": [
+          "CAMARA_REVERSA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 40.326519894110675,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F19",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Access and Starting System Interface"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 45.45399135168811,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F20",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Control unit for reducing agent heating [for diesel engines, not valid for engine code CRGB, DBGC]"
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 45.45399135168811,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F20",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Vacuum pump relay [for engine code DADA]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_VACIO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.85039140790028,
+          "left": 50.581462809265545,
+          "width": 2.8651621357939163,
+          "height": 6.076426613134943
+        },
+        "id": "F21",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "All-wheel drive control unit"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 33.79217800373427,
+          "left": 55.57410619818739,
+          "width": 16.041960188039674,
+          "height": 2.627895283628739
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 41.924493073111954,
+          "left": 17.277881406151653,
+          "width": 7.899687065530252,
+          "height": 6.859650945429129
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Sliding roof control unit"
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 26.442552824958398,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 31.441134622680906,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F25",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Driver's side door control unit, rear left power window motor, rear left door control unit [left-hand drive vehicles only] / Door control unit, front passenger side, Rear left electric window motor, Rear left door control unit [right-hand drive vehicles only]"
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 36.439716420403414,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Vehicle electrical system control unit [for vehicles with seat heating]"
+      },
+      {
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 41.43829821812592,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F27",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 38.925574905020255,
+          "left": 46.43688001584842,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "layout": {
+          "top": 37.11576307193032,
+          "left": 55.041244490421505,
+          "width": 8.250484715977066,
+          "height": 2.3912718577193246
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse"
+        },
+        "id": "F29",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 41.60695657279501,
+          "left": 51.7093179705077,
+          "width": 13.486369247270204,
+          "height": 1.7934538932894952
+        },
+        "id": "F30",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Control unit for adjustable attenuation electronics"
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 36.59526630627158,
+          "left": 66.26874632354716,
+          "width": 11.392116655274549,
+          "height": 6.482141699617557
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Rear bonnet control unit"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 22.432621464587964,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F32",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Parking assistance control unit, Parking assistance navigation control unit, Blind spot recognition control unit, Blind spot recognition control unit 2"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 27.217318592467304,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F33",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Airbag control unit"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 32.16934205557653,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F34",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Headlight switch, reversing light switch, coolant circuit pressure sensor, AUTO HOLD button, ASR and electronic stability program button, air quality sensor, front passenger airbag deactivation indicator, auto-dimming interior rearview mirror, rear seat heating control unit, USB charging port 1",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "CONTROL_DE_TRACCION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 37.12136551868576,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F35",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Plug connection, 16-pin on the diagnostic socket of the distance control control unit, front camera for driver assistance systems"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 42.073388981794984,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F36",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Actuator module 1 for right LED headlight"
+      },
+      {
+        "layout": {
+          "top": 51.07561452484148,
+          "left": 47.02541244490421,
+          "width": 2.763200687378545,
+          "height": 4.4296640213887075
+        },
+        "id": "F37",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Actuator module 1 for left LED headlight"
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 44.3207293379166,
+          "left": 51.58672354861354,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "layout": {
+          "top": 44.3207293379166,
+          "left": 56.82032099305952,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "id": "F39",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Door control unit, front passenger side, Rear right electric window motor, Rear right door control unit [left-hand drive vehicles only] / Door control unit, driver's side, Rear right electric window motor, Rear right door control unit [right-hand drive vehicles only]"
+      },
+      {
+        "id": "F40",
+        "layout": {
+          "top": 48.57798590508959,
+          "left": 61.9539184375055,
+          "width": 3.9930395646857346,
+          "height": 10.277493627823773
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Socket, cigarette lighter, 12 V socket, rear cigarette lighter, socket 2, 12 V",
+        "relatedEntities": [
+          "TOMA_12V",
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/cigarette-lighter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.17001505220232,
+          "left": 66.78751588195148,
+          "width": 3.9930395646857346,
+          "height": 10.177493627823774
+        },
+        "id": "F41",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Front right seat belt tensioner control unit"
+      },
+      {
+        "id": "F42",
+        "layout": {
+          "top": 44.17001505220232,
+          "left": 71.82111332639744,
+          "width": 3.9930395646857346,
+          "height": 10.177493627823774
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Vehicle electrical system control unit"
+      },
+      {
+        "id": "F43",
+        "layout": {
+          "top": 58.064347443048014,
+          "left": 20.751342585308127,
+          "width": 9.546100712585858,
+          "height": 6.550089354510953,
+          "rotation": -15
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Soundpaket digital audio recording and playback control unit"
+      },
+      {
+        "id": "F44",
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 32.17585248891417,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Trailer detection control unit"
+      },
+      {
+        "layout": {
+          "top": 56.83070014091423,
+          "left": 38.022948723237505,
+          "width": 5.87053720175291,
+          "height": 10.999850545508892
+        },
+        "id": "F45",
+        "kind": {
+          "format": "ato",
+          "type": "circuitbreaker",
+          "amp": 15,
+          "notUsed": true
+        },
+        "description": "Driver's seat adjustment control unit"
+      },
+      {
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 46.55688957040522,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "id": "F46",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Inverter with socket, 12V-230V"
+      },
+      {
+        "id": "F47",
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 51.96876360454318,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Rear window wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.146825390928115,
+          "left": 57.380637638681144,
+          "width": 4.157240556705582,
+          "height": 10.379813759223714
+        },
+        "id": "F48",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Engine noise emission control unit"
+      },
+      {
+        "layout": {
+          "top": 63.09725259944062,
+          "left": 63.14643436263422,
+          "width": 8.091821548362127,
+          "height": 2.27170826483335
+        },
+        "id": "F49",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Starter relay 1, starter relay 2, clutch pedal position sensor",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/starter-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.28212780494054,
+          "left": 68.52761373769171,
+          "width": 10.947758565431101,
+          "height": 6.097743237184282
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse"
+        },
+        "id": "F50",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 66.82479631487926,
+          "left": 56.62787616657094,
+          "width": 13.346201259679496,
+          "height": 2.7426416718907842
+        },
+        "id": "F51",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Control unit for rear seat heating, control and monitor for rear air conditioning",
+        "relatedEntities": [
+          "COMANDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.26102264235539,
+          "left": 72.3768665928354,
+          "width": 2.763200687378545,
+          "height": 5.4296640213887075
+        },
+        "id": "F52",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Fan 1, backrest of left front seat, Fan 1, front seat left, Fan 1, backrest of right front seat, Fan 1, front seat right",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/cooling-fan-fuse",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F53",
+        "layout": {
+          "top": 62.303367743450686,
+          "left": 78.35833950873649,
+          "width": 13.346201259679496,
+          "height": 2.7426416718907842
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Heated rear window",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 14.740799916225848,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R1",
+        "description": "Relay for reducing agent dosing system [for vehicles with reducing agent dosing system]",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay"
+        }
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 14.740799916225848,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R1",
+        "description": "Vacuum pump relay [for engine code DADA, DPCA]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_VACIO)"
+        ],
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay"
+        }
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 34.25636953286391,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R2",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Air conditioner relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "extendedDescription": "Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/skoda/kodiaq/info/fusebox/2018/air-conditioning-relay",
+            "urlWithAnchor": "/skoda/kodiaq/info/fusebox/2018/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 14.908085487968915,
+          "left": 53.77193914950196,
+          "width": 13.4863692472702,
+          "height": 6.336870422956206
+        },
+        "id": "R3",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": true
+        }
+      },
+      {
+        "layout": {
+          "top": 71.76721705062239,
+          "left": 55.46252883703069,
+          "width": 15.875727073965594,
+          "height": 11.51076072335974
+        },
+        "id": "R4",
+        "kind": {
+          "amp": "",
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Power supply relay connector 15"
+      },
+      {
+        "layout": {
+          "top": 67.84864562205094,
+          "left": 78.3647301298182,
+          "width": 13.327706079655272,
+          "height": 5.739052458526388,
+          "rotation": -5
+        },
+        "id": "R5",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Rear window heating device relay"
+      },
+      {
+        "layout": {
+          "top": 75.01444461643572,
+          "left": 78.96473012981816,
+          "width": 13.327706079655272,
+          "height": 5.739052458526388,
+          "rotation": -5
+        },
+        "id": "R6",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": true
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 7.8337 1.1605 A 3.2254 3.2254 0 0 0 10.3115 2.3211 L 26.0155 2.3211 A 1.0638 1.0638 0 0 0 27.0793 1.2573 L 27.0793 1.2573 A 1.0638 1.0638 0 0 1 28.1431 0.1934 L 30.5609 0.1934 A 1.0638 1.0638 0 0 1 31.6248 1.2573 L 31.6248 1.2573 A 1.0638 1.0638 0 0 0 32.6886 2.3211 L 47.5099 2.3211 A 1.9562 1.9562 0 0 0 49.2747 1.2089 L 49.2747 1.2089 A 1.9562 1.9562 0 0 1 51.0394 0.0967 L 52.8530 0.0967 A 1.1122 1.1122 0 0 1 53.9652 1.2089 L 53.9652 1.2089 A 1.1122 1.1122 0 0 0 55.0774 2.3211 L 68.8681 2.3211 A 2.4249 2.4249 0 0 0 70.8414 1.3056 L 70.8414 1.3056 A 2.5151 2.5151 0 0 1 72.8141 0.2534 L 74.3145 0.2093 A 0.8467 0.8467 0 0 1 75.0967 0.6770 L 75.0967 0.6770 A 0.8748 0.8748 0 0 0 75.8791 1.1605 L 83.2689 1.1605 A 1.5474 1.5474 0 0 1 84.8162 2.7079 L 84.8162 8.0754 A 1.4023 1.4023 0 0 1 83.4139 9.4778 L 83.2530 9.4778 A 1.2414 1.2414 0 0 0 82.0116 10.7192 L 82.0116 10.7192 A 1.3698 1.3698 0 0 1 80.6418 12.0890 L 80.4642 12.0890 A 1.5474 1.5474 0 0 0 78.9168 13.6364 L 78.9168 57.9304 A 1.4537 1.4537 0 0 0 80.4612 59.3812 L 80.4672 59.3809 A 1.4537 1.4537 0 0 1 82.0116 60.8317 L 82.0116 61.6054 A 1.4963 1.4963 0 0 0 83.5581 63.1009 L 94.8751 62.7211 A 1.4963 1.4963 0 0 1 96.4217 64.2166 L 96.4217 66.2943 A 0.6801 0.6801 0 0 0 97.1470 66.9729 L 97.1470 66.9729 A 0.6801 0.6801 0 0 1 97.8723 67.6515 L 97.8723 74.4292 A 0.8422 0.8422 0 0 0 98.9362 75.2418 L 98.9362 75.2418 A 0.8422 0.8422 0 0 1 100.0000 76.0543 L 100.0000 98.1625 A 1.5965 1.5965 0 0 1 98.4534 99.7582 L 82.9780 100.2418 A 1.4723 1.4723 0 0 1 81.4600 98.7430 L 81.5039 96.3731 A 1.2817 1.2817 0 0 0 80.2224 95.0677 L 80.0312 95.0677 A 1.2561 1.2561 0 0 0 78.7841 96.1741 L 78.7841 96.1741 A 1.7915 1.7915 0 0 1 77.3275 97.7230 L 70.8102 98.9143 A 3.6546 3.6546 0 0 0 68.8104 100.0000 L 68.8104 100.0000 A 3.0076 3.0076 0 0 1 66.7931 100.9377 L 62.1125 101.2014 A 2.3233 2.3233 0 0 1 60.3965 100.5803 L 60.3965 100.5803 A 0.4312 0.4312 0 0 0 59.6712 100.8955 L 59.6712 102.6112 A 1.5910 1.5910 0 0 1 58.1244 104.2016 L 57.7363 104.2124 A 2.2958 2.2958 0 0 1 55.5693 102.8377 L 54.6851 100.8167 A 1.7847 1.7847 0 0 0 52.8530 99.7582 L 52.7593 99.7686 A 1.6428 1.6428 0 0 0 51.3254 101.1022 L 51.3254 101.1022 A 1.9099 1.9099 0 0 1 49.6344 102.6552 L 28.0390 104.7807 A 1.4347 1.4347 0 0 1 26.4641 103.3853 L 26.1388 88.9906 A 1.0197 1.0197 0 0 0 24.9516 88.0077 L 24.8220 88.0293 A 0.8501 0.8501 0 0 1 23.8329 87.1568 L 23.8348 87.1087 A 1.8900 1.8900 0 0 0 22.6594 85.2829 L 22.6594 85.2829 A 2.2207 2.2207 0 0 1 21.2766 83.2264 L 21.2766 80.8511 A 10.4457 10.4457 0 0 0 20.8280 77.8227 L 13.6981 54.2856 A 5.1836 5.1836 0 0 1 13.6861 51.3201 L 13.7800 51.0010 A 4.1685 4.1685 0 0 0 13.5789 48.1066 L 13.0169 46.8644 A 0.8833 0.8833 0 0 0 11.4894 46.7206 L 10.7543 47.7668 A 0.7576 0.7576 0 0 1 9.4103 47.5537 L 6.1319 36.8800 A 9.6640 9.6640 0 0 1 5.7060 34.0426 L 5.7060 33.7160 A 1.1719 1.1719 0 0 1 6.8291 32.5451 L 6.8291 32.5451 A 2.4819 2.4819 0 0 1 8.8108 33.4026 L 8.8532 33.4517 A 0.4122 0.4122 0 0 0 9.5699 33.1038 L 8.8200 29.2391 A 1.2401 1.2401 0 0 0 7.4952 28.2398 L 7.4952 28.2398 A 1.2185 1.2185 0 0 1 6.1895 27.2371 L 4.8136 19.4157 A 30.8611 30.8611 0 0 0 4.1262 16.4022 L 0.4192 3.2303 A 1.5076 1.5076 0 0 1 1.4999 1.3605 L 5.4022 0.3712 A 2.3980 2.3980 0 0 1 7.8337 1.1605 Z"
+        ],
+        "svgViewBoxH": 104.93230174081238,
+        "layout": {
+          "top": 13.326595888769651,
+          "left": 2.990501735126989,
+          "width": 91.49303875347371,
+          "height": 72.34765213948594
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Interior fuse panel (SC) (from July 2018)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/28132601_2018-skoda-kodiaq.jpg"
+    },
+    "boxTablesImages": [],
+    "processed": false,
+    "boxAspectRatio": 1.3270142180094786,
+    "templateId": "619b9e7b188b7c0004a6c58a",
+    "templateRenameMap": {},
+    "boxDescription": "Fuse box assembly position (SC) under instrument panel to the left",
+    "imageClusters": [
+      "66afb81f49fc0016d6ebc25e"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-skoda-kodiaq-2018-genid-g1-4.webp"
+  }
+]

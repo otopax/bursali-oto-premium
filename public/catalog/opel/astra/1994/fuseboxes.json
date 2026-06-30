@@ -1,0 +1,888 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "CONNECTOR",
+        "layout": {
+          "top": 59.55056179775281,
+          "left": 6.2409288824383164,
+          "width": 6.386066763425253,
+          "height": 28.314606741573034,
+          "rotation": 180
+        },
+        "kind": {
+          "type": "connector",
+          "format": "obd2"
+        }
+      },
+      {
+        "id": "F1",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 17.432510885341074,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Central locking"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 22.813376874697628,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/fuel-pump-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 28.194242864054182,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Horn, windshield wiper / washer, glass wiper off delay, windshield / rear window wiper motors, headlight washers",
+        "relatedEntities": [
+          "BOCINA",
+          "LIMPIA_PARABRISAS",
+          "SAPITO",
+          "PARABRISA",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/horn-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 33.57510885341074,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left headlight - low beam, electric headlamp - left, lamp control",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)",
+          "LUZ_BAJA",
+          "BACKLIGHT(of=COMANDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/headlight-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 38.95597484276729,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Right headlight - low beam, electric headlight drive - right, lamp control",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)",
+          "LUZ_BAJA",
+          "BACKLIGHT(of=COMANDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/headlight-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 44.33684083212385,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Automatic transmission control system, ABS control system, ESP",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 49.717706821480405,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Warning indicator / buzzer, mirrors, glove box light, audio system, rear defogger relay, radiator fan (diesel)",
+        "relatedEntities": [
+          "ESPEJO_LATERAL",
+          "LUZ_DE_GUANTERA",
+          "ESTEREO",
+          "RELAY(protects=DESEMPANADOR_TRASERO)",
+          "VENTILADOR_RADIADOR",
+          "GASOIL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/opel/astra/info/fusebox/1994/radio-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 55.098572810836956,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Output of the connector of the electrical equipment of the trailer"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 60.479438800193506,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlight on indicator, trip computer, daytime running lights",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/headlight-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 65.86030478955007,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Power windows, luggage compartment cover",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 71.24117077890662,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Rear fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/fog-light-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 76.62203676826317,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "High beam - left headlight",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/headlight-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 54.38202247191012,
+          "left": 82.00290275761974,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "High beam - right headlight",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/headlight-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 61.267640449438176,
+          "left": 88.22786647314949,
+          "width": 5.680281982168773,
+          "height": 24.98555377207063
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Electric fan heater, air conditioning control",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 61.267640449438176,
+          "left": 96.34310595065308,
+          "width": 5.680281982168773,
+          "height": 24.98555377207063
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Radiator fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 17.432510885341074,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Heated rear window",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 22.813376874697628,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fog lights / fog lights",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/fog-light-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 28.194242864054182,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left parking lights",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 33.57510885341074,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "License Plate Lights, Instrument Cluster Lights, Right Parking Lights, Audio Unit",
+        "relatedEntities": [
+          "LUZ_PATENTE",
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)",
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 38.95597484276729,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Reversing lights , cigarette lighter fuse , heated seats",
+        "relatedEntities": [
+          "LUZ_RETROCESO",
+          "TOMA_12V",
+          "FUSIBLE_ENCENDEDOR",
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/cigarette-lighter-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 44.33684083212385,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Air conditioning control air conditioner radiator fan motor"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 49.717706821480405,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 55.098572810836956,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Headlight washers"
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 60.479438800193506,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Trip computer, turn signal / hazard flasher, audio system, interior lamps, clock, hazard warning lights, backlight / trunk lamp",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL",
+          "LUZ_BALIZA",
+          "ESTEREO",
+          "LUZ_DE_HABITACULO",
+          "RELOJ",
+          "BACKLIGHT",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/radio-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 65.86030478955007,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Electronic control unit for automatic transmission"
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 71.24117077890662,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Radiator Fan - Diesel",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "FUSE_DESCRIPTION_CONDITION",
+          "GASOIL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 76.62203676826317,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Daytime running lights",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/headlight-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 74.30674157303368,
+          "left": 82.00290275761974,
+          "width": 3.6802819821687747,
+          "height": 17.98555377207062
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Stop lights, turn signals, ABS anti-lock brakes, hazard warning lights",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LUZ_DIRECCIONAL",
+          "TESTIGO_ABS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/astra/info/fusebox/1994/brake-light-fuse",
+            "urlWithAnchor": "/opel/astra/info/fusebox/1994/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 4.519101123595505,
+          "left": 4.2089985486211905,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Heated mirror relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_ESPEJOS)",
+          "RELAY(protects=CALENTADOR_ESPEJO_LATERAL)"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 4.519101123595505,
+          "left": 19.77503628447024,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay - turn signal interrupter",
+        "relatedEntities": [
+          "RELAY"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 4.519101123595505,
+          "left": 35.34107402031929,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay for intermittent operation of the rear window wiper"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 3.84494382022472,
+          "left": 57.9100145137881,
+          "width": 6.821480406386067,
+          "height": 11.235955056179774
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 3.84494382022472,
+          "left": 71.63076923076909,
+          "width": 6.966618287373004,
+          "height": 11.235955056179774
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 28.539325842696623,
+          "left": 4.2089985486211905,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay for intermittent operation of the windshield wiper / washer",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 28.539325842696623,
+          "left": 19.775036284470247,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Heated rear window relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 28.539325842696623,
+          "left": 35.3410740203193,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Headlights on warning buzzer"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 28.539325842696623,
+          "left": 50.90711175616836,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Intake Air Switch Motor Relay 1 (Air Conditioning)"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 28.539325842696623,
+          "left": 66.47314949201741,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Headlight washer delay relay"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 4.519101123595505,
+          "left": 84.01262699564573,
+          "width": 11.756168359941945,
+          "height": 17.777777777777775
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Air intake flap motor relay 2 (air conditioning)"
+      }
+    ],
+    "boxName": "Passenger Compartment Fuse Box ",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/ced39e0b_opel-astra-1995.jpg"
+    },
+    "boxAspectRatio": 0.6458635703918723,
+    "imageClusters": [
+      "61dc93a1d53fbf00041bb740"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/471f185f_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f2cba498_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/01c93d48_image.jpg"
+      }
+    ],
+    "templateId": "670b3143d464f2db3d974e23",
+    "boxScaleMultiplier": "0.9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-opel-astra-1994-genid-g1-0.webp"
+  }
+]

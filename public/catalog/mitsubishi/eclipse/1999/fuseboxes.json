@@ -1,0 +1,1868 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 60.412013298548146,
+          "left": 13.33028008027314,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ]
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 60.412013298548146,
+          "left": 25.099440847270387,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        }
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 60.412013298548146,
+          "left": 36.868601614267625,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Back-up lamp, combination meter [2.0 non turbo], EATX-ECM [2.0 non turbo] and SRS-ECU",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 60.412013298548146,
+          "left": 48.63776238126483,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Turn-signal and hazard frasher unit",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 60.412013298548146,
+          "left": 60.406923148262074,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Theft-alarm horn and theft-alarm horn relay"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 71.48155128873931,
+          "left": 13.33028008027314,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Defogger and defogger switch",
+        "relatedEntities": [
+          "DESEMPANADOR",
+          "INTERRUPTOR(of=DESEMPANADOR)"
+        ]
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 71.48155128873931,
+          "left": 25.099440847270387,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        }
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 71.48155128873931,
+          "left": 36.86860161426764,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Combination meter, ETACS-ECU, SRS-ECU, sunroof-ECU, immobilizer-ECU, motor antenna assembly and auto-cruise control main switch"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 71.48155128873931,
+          "left": 48.63776238126483,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Windshield intermittent wiper relay, windshield wiper motor, windshield washer motor, rear intermittent wiper relay, rear wiper motor, rear washer motor and headlamp washer relay",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 71.48155128873931,
+          "left": 60.406923148262074,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Door lock power relay, door lock actuator and diagnosis connector",
+        "relatedEntities": [
+          "RELAY(protects=CERRADURA(of=PUERTA))",
+          "RELAY(protects=PROP_OR(0=CIERRE_CENTRALIZADO,1=CIERRE_CENTRALIZADO))",
+          "ACTUADOR(of=CERRADURA(of=PUERTA))"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 71.48155128873931,
+          "left": 72.1760839152593,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Blower motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.55108927893038,
+          "left": 13.33028008027314,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 82.55108927893038,
+          "left": 25.099440847270387,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "DRL-ECU, DRL relay (1), power window relay, blower relay, A/C-ECU, radiator tan relay, condensor fan relay (HI), defogger relay and ABS-ECU",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)",
+          "RELAY(protects=DESEMPANADOR)"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 82.55108927893038,
+          "left": 36.86860161426764,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 82.55108927893038,
+          "left": 48.63776238126483,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Auto-cruise-ECU [2.0 turbo], combination meter [2.0 turbo] and ELC 4-speed automatic transaxle control module [2.0 turbo]"
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.55108927893038,
+          "left": 60.406923148262074,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        }
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 82.55108927893038,
+          "left": 72.1760839152593,
+          "width": 6.077281847212448,
+          "height": 9.033284997095805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Sunroof-ECU"
+      },
+      {
+        "id": "Fuse Puller",
+        "layout": {
+          "top": 61.18347395179701,
+          "left": 70.98813425034052,
+          "width": 15.641424822924446,
+          "height": 6.171205343664907
+        },
+        "kind": {
+          "type": "fusepuller"
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 40.188633654402665,
+          "left": 7.008750957314319,
+          "width": 31.55734681337028,
+          "height": 14.277836133873203
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 40.188633654402665,
+          "left": 61.732480679857396,
+          "width": 31.55734681337028,
+          "height": 14.277836133873203
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 89.1849 0.0000 A 3.8500 3.8500 0 0 1 93.0349 3.8500 L 93.0349 74.8307 A 1.7316 1.7316 0 0 0 94.8621 76.5596 L 96.1559 76.4881 A 3.6411 3.6411 0 0 1 99.9980 80.1255 L 99.9788 116.4286 A 3.8519 3.8519 0 0 1 96.1267 120.2785 L 94.1405 120.2785 A 1.8300 1.8300 0 0 0 92.3105 122.1084 L 92.3105 125.2068 A 1.3499 1.3499 0 0 0 93.6604 126.5568 L 93.6636 126.5568 A 2.8299 2.8299 0 0 1 96.4936 129.3867 L 96.4939 213.0956 A 3.6700 3.6700 0 0 1 92.8239 216.7656 L 65.7542 216.7656 A 1.7600 1.7600 0 0 0 63.9942 218.5256 L 63.9942 218.6470 A 6.7939 6.7939 0 0 1 57.2848 225.4404 L 41.1377 225.6411 A 6.9824 6.9824 0 0 1 34.0685 218.6590 L 34.0685 218.5256 A 1.7599 1.7599 0 0 0 32.3086 216.7656 L 9.8944 216.7654 A 3.7193 3.7193 0 0 1 6.1756 213.1058 L 4.8334 129.4966 A 2.8933 2.8933 0 0 1 7.7263 126.5569 L 7.7302 126.5569 A 1.4001 1.4001 0 0 0 9.1302 125.1568 L 9.1303 122.1082 A 1.8300 1.8300 0 0 0 7.3003 120.2783 L 3.8501 120.2783 A 3.8500 3.8500 0 0 1 0.0001 116.4283 L 0.0000 79.9009 A 3.2400 3.2400 0 0 1 3.2400 76.6609 L 3.2464 76.6609 A 1.5400 1.5400 0 0 0 4.7864 75.1209 L 4.7863 3.8529 A 3.8529 3.8529 0 0 1 8.6392 0.0000 Z"
+        ],
+        "svgViewBoxH": 225.72896836855364,
+        "layout": {
+          "top": 5.94543724433281,
+          "left": 3.981812391109211,
+          "width": 92.26401353354242,
+          "height": 93.30720023866799
+        },
+        "ignoreAndCrop": true
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 7.86981705311558,
+          "left": 14.604731567302535,
+          "width": 45.7940095926399,
+          "height": 5.553652915204977
+        },
+        "ignoreAndCrop": true
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 16.04602828938957,
+          "left": 14.260415705703739,
+          "width": 18.2487406647362,
+          "height": 23.14022048002074
+        },
+        "ignoreAndCrop": true
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 16.9716371085904,
+          "left": 41.80568463360744,
+          "width": 18.93737238793379,
+          "height": 22.214611660819912
+        },
+        "ignoreAndCrop": true
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 14.8118831971218,
+          "left": 69.69526942310993,
+          "width": 16.871477218341028,
+          "height": 24.682901845355445
+        },
+        "ignoreAndCrop": true
+      }
+    ],
+    "boxAspectRatio": 2.231974921630094,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/cd7a0660_mitsubishi-eclipse-1995.jpg"
+    },
+    "imageClusters": [
+      "6284210b193d42be50516190"
+    ],
+    "boxName": "Passenger Compartment Fuse Box",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9adb5a97_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f67d3505_image.jpg"
+      }
+    ],
+    "templateId": "663d3968c4e98e58198c25f6",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mitsubishi-eclipse-1999-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 8.333813520018637,
+          "left": 9.353125206442146,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 60
+        },
+        "description": "Circuits using dedicated fuses 17 and 20 (engine compartment), circuit using multi-purpose fuses N°1, 5, 6, 10, and 11 (instrument panel)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 8.333813520018637,
+          "left": 18.75711018867303,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 100
+        },
+        "description": "Charging system, fusible links and 4 (engine compartment).",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 8.333813520018637,
+          "left": 18.75711018867303,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 120
+        },
+        "description": "Charging system, fusible links and 4 (engine compartment).",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 5.091164396220648,
+          "left": 29.078728061852726,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Convertible top"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 5.091164396220648,
+          "left": 38.821613595476194,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Power seat and power windows",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 5.091164396220648,
+          "left": 38.821613595476194,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 40
+        },
+        "description": "Power seat and power windows",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 5.091164396220648,
+          "left": 68.93218382668536,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 20
+        },
+        "description": "MPI/MFI system, ELC 4-speed AT and immobilizer system",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 19.855118758280007,
+          "left": 32.29487819378125,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 40
+        },
+        "description": "Charging system, fog lights, circuits using headlamp relay, and circuit using tail lamp relay",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          },
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 19.855118758280007,
+          "left": 41.45420460200728,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Fuse 17 (instrument panel) and ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 19.855118758280007,
+          "left": 50.61353101023331,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Air conditioner and cooling system / Radiator fan",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/air-conditioning-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 19.855118758280007,
+          "left": 59.77285741845933,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 50
+        },
+        "description": "Anti-skid braking system (ABS)"
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf"
+        },
+        "layout": {
+          "top": 19.855118758280007,
+          "left": 68.93218382668536,
+          "width": 7.962764627621857,
+          "height": 11.42848870890538
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 4.378372804004764,
+          "left": 50.03708235484014,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Anti-lock braking system, auto-cruise control system and stop lamp",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/brake-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 4.378372804004764,
+          "left": 56.376239174203874,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/horn-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 4.378372804004764,
+          "left": 62.71539599356761,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Turn-signal lamp and hazard lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_DIRECCIONAL)",
+          "LUZ_DIRECCIONAL",
+          "LAMPARA(of=LUZ_BALIZA)",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 80.23741961511271,
+          "left": 36.46063575426808,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Tail lamp, position lamp and licence plate lamp (10A); Glove compartment light, license plate fight, lighting monitor buzzer, rheostat, side marker light, taillight and illumination light (15A)",
+        "relatedEntities": [
+          "LUCES_TRASERAS",
+          "LUCES_LATERALES"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 80.23741961511271,
+          "left": 36.46063575426808,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Tail lamp, position lamp and licence plate lamp (10A); Glove compartment light, license plate fight, lighting monitor buzzer, rheostat, side marker light, taillight and illumination light (15A)",
+        "relatedEntities": [
+          "LUCES_TRASERAS",
+          "LUCES_LATERALES"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 80.23741961511271,
+          "left": 43.125597124179016,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Front fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 80.23741961511271,
+          "left": 49.79055849408994,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlamp and headlamp leveling system / Hight-beam indicator light",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 80.23741961511271,
+          "left": 56.45551986400088,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Air conditionen"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 80.23741961511271,
+          "left": 63.1204812339118,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Air conditionen and cooling system"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 80.23741961511271,
+          "left": 69.78544260382273,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Air conditioner, auto-cruise control system, cigarette lighter, front fog lamp, glove box lamp, heater, headlamp leveling system, headlamp washer, lighting monitor buzzer, meter and gauge, radio with tape player, rear fog lamp, rear window defogger, rear wiper and washer, remote controlled mirror, tail lamp, position lamp, licence plate lamp, turn-signal lamp and hazard lamp",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "TOMA_12V",
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)",
+          "LUZ_DE_GUANTERA",
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "SENSOR",
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)",
+          "DESEMPANADOR_TRASERO",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)",
+          "SAPITO",
+          "LUCES_TRASERAS",
+          "LAMPARA(of=LUZ_DIRECCIONAL)",
+          "LUZ_DIRECCIONAL",
+          "LAMPARA(of=LUZ_BALIZA)",
+          "LUZ_BALIZA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          },
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/air-conditioning-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 79.01394720110407,
+          "left": 82.06891921973981,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Anti-lock braking system, auto-cruise control system, central door locking system, door lamp, foot lamp, luggage compartment lamp, ignition key cylinder illumination lamp, immobilizer system, lighting monitor buzzer, meter and gauge, MPI system, radio with tape player, rear window, defogger and supplemental restraint system",
+        "relatedEntities": [
+          "TESTIGO_APERTURA_DE_PUERTAS",
+          "LUZ_DE_PIES",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL",
+          "INMOVILIZADOR",
+          "SENSOR",
+          "TECNOLOGIA_MOTOR",
+          "LUNETA_TRASERA",
+          "VENTANILLA(ubicacion=PARTE_TRASERA)",
+          "DESEMPANADOR"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 79.01394720110407,
+          "left": 88.92796422585913,
+          "width": 2.2065858072503284,
+          "height": 9.654906096720264
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Auto-cruise control system and radio with tape player"
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 40.3260697674301,
+          "left": 36.91601919740656,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 40.3260697674301,
+          "left": 48.25812357664412,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 40.3260697674301,
+          "left": 59.60022795588168,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 40.3260697674301,
+          "left": 70.94233233511923,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 40.3260697674301,
+          "left": 82.28443671435679,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 60.69453793517921,
+          "left": 36.91601919740656,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 60.69453793517921,
+          "left": 48.25812357664412,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 60.69453793517921,
+          "left": 59.60022795588168,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 60.69453793517921,
+          "left": 70.94233233511923,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 60.69453793517921,
+          "left": 82.28443671435679,
+          "width": 7.739002416997334,
+          "height": 12.678290780717305
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG2",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0081 4.6140 A 0.8519 0.8519 0 0 1 0.8600 3.7541 L 19.1736 3.7541 A 7.9368 7.9368 0 0 0 20.5041 3.6418 L 20.5077 3.6412 A 4.1580 4.1580 0 0 0 23.7089 0.9888 L 23.7766 0.8064 A 1.2365 1.2365 0 0 1 24.9358 0.0001 L 83.8180 0.0000 A 0.8600 0.8600 0 0 1 84.6780 0.8600 L 84.6780 28.9258 L 84.6780 31.3315 A 4.6179 4.6179 0 0 0 89.2959 35.9495 L 89.2959 35.9495 L 99.1400 35.9495 A 0.8600 0.8600 0 0 1 100.0000 36.8095 L 100.0000 104.7891 L 100.0000 104.7891 L 26.4813 104.7892 A 0.8600 0.8600 0 0 1 25.6213 103.9292 L 25.6213 47.1854 L 25.6213 47.1854 L 23.3574 47.1854 A 0.8600 0.8600 0 0 1 22.4974 46.3254 L 22.4974 32.0988 L 22.4974 32.0988 L 8.9279 32.0988 A 0.8600 0.8600 0 0 1 8.0679 31.2388 L 8.0679 28.5938 L 6.9927 28.5938 A 0.8586 0.8586 0 0 1 6.1341 27.7352 L 6.1341 21.8886 L 1.0318 21.8885 A 0.8682 0.8682 0 0 1 0.1637 21.0286 Z"
+        ],
+        "svgViewBoxH": 104.78921838437711,
+        "layout": {
+          "top": 2.89895500814205,
+          "left": 7.627822421044969,
+          "width": 88.88896200236383,
+          "height": 94.13793958495764
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 25.7821 104.3669 A 0.8800 0.8800 0 0 0 26.6621 105.2469 L 98.9440 105.2469 A 0.8823 0.8823 0 0 0 99.8263 104.3669 L 99.9977 37.5284 A 0.8777 0.8777 0 0 0 99.1200 36.6484 L 77.0113 36.6484 L 77.0113 39.3108 L 54.3520 39.3108 L 54.3520 36.6484 L 49.4526 36.6484 L 36.8980 36.6484 L 36.8980 39.3108 L 26.4868 39.3108 L 26.4868 34.7690 L 22.3530 34.7690 L 22.3531 45.0087 A 0.8800 0.8800 0 0 0 23.2331 45.8887 L 24.9021 45.8887 A 0.8800 0.8800 0 0 1 25.7821 46.7687 Z",
+          "M 92.0516 36.6484 L 84.7810 36.6485 A 0.8800 0.8800 0 0 1 83.9010 35.7685 L 83.9010 18.0109 L 83.9010 5.1683 L 83.9011 0.8800 A 0.8800 0.8800 0 0 0 83.0211 0.0000 L 24.4640 0.0000 A 1.0258 1.0258 0 0 0 23.5557 0.5489 L 23.5543 0.5517 A 5.2713 5.2713 0 0 1 18.9992 3.3713 L 17.2519 3.4084 A 66.7528 66.7528 0 0 1 15.5121 3.4227 L 0.8700 3.3522 A 0.8658 0.8658 0 0 0 0.0000 4.2180 L 0.0000 19.1770 A 0.8700 0.8700 0 0 0 0.8700 20.0470 L 5.2054 20.0470 L 22.3530 20.0470 L 24.6497 20.0470 L 24.6497 23.8058 L 26.4868 23.8058 L 26.4868 30.6969 L 24.6497 30.6969 L 22.3530 30.6969 L 22.3530 34.7690 L 38.7352 34.7690 L 38.7352 32.4589 L 54.3520 32.4589 L 54.3520 34.7690 L 54.3520 36.6484 L 74.1023 36.6484 L 74.1023 36.6484 L 74.1023 36.6484 L 74.1023 34.7690 L 80.0734 34.7690 L 80.0734 30.6969 L 83.9010 30.6969 L 84.0541 36.6484 Z",
+          "M 5.5578 20.0470 L 5.5577 25.7058 A 0.8800 0.8800 0 0 0 6.4377 26.5858 L 6.9282 26.5858 A 0.8800 0.8800 0 0 1 7.8082 27.4658 L 7.8082 29.8170 A 0.8800 0.8800 0 0 0 8.6882 30.6970 L 21.4721 30.6969 L 23.2340 30.6969 L 26.4868 30.6969 L 26.4868 23.8058 L 26.4868 23.8058 L 24.6497 23.8058 L 24.6497 20.0470 Z",
+          "M 80.0734 18.0109 L 80.0734 5.1683 L 83.9010 5.1683 L 83.9010 18.0109 Z"
+        ],
+        "svgViewBoxH": 105.24692459632129,
+        "layout": {
+          "top": 4.098762549241161,
+          "left": 8.933903673350423,
+          "width": 86.63311384316424,
+          "height": 92.14962910030697
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.9894736842105263,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/46521093_mitsubishi-eclipse-1995.jpg"
+    },
+    "boxName": "Engine Compartment fuse box (2.4L and 2.0L non-turbo)",
+    "imageClusters": [
+      "61fd6a3137dc92000493dbe8"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/820cb772_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/099c7e4d_image.jpg"
+      }
+    ],
+    "templateId": "663d3702c4e98e58198c25d9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mitsubishi-eclipse-1999-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 21.092181069958855,
+          "left": 3.642652329749102,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 60
+        },
+        "description": "Circuits using dedicated fuses 17 and 20 (engine compartment), circuit using multi-purpose fuses N°1, 5, 6, 10, and 11 (instrument panel)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 21.092181069958855,
+          "left": 11.68637992831541,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 100
+        },
+        "description": "Charging system, fusible links and 4 (engine compartment).",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 11.522633744855966,
+          "left": 20.25089605734767,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Convertible top"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 11.522633744855966,
+          "left": 27.649221425726807,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Power seat and power windows",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 11.522633744855966,
+          "left": 52.179211469534046,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 20
+        },
+        "description": "MPI/MFI system, ELC 4-speed AT and immobilizer system",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 22.939068100358423,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 40
+        },
+        "description": "Charging system, fog lights, circuits using headlamp relay, and circuit using tail lamp relay",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          },
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 30.24910394265233,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Fuse 17 (instrument panel) and ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 37.55913978494623,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "Air conditioner and cooling system / Radiator fan",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/air-conditioning-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 44.86917562724014,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 50
+        },
+        "description": "Anti-skid braking system (ABS)"
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf"
+        },
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 52.179211469534046,
+          "width": 5.25010752688172,
+          "height": 19.58189300411523
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 36.37096774193549,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Anti-lock braking system, auto-cruise control system and stop lamp",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/brake-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 41.347311827956986,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/horn-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 46.32365591397849,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Turn-signal lamp and hazard lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_DIRECCIONAL)",
+          "LUZ_DIRECCIONAL",
+          "LAMPARA(of=LUZ_BALIZA)",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 64.06559139784946,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Glove compartment light, license plate fight, lighting monitor buzzer, rheostat, side marker light, taillight and illumination light",
+        "relatedEntities": [
+          "LUCES_LATERALES",
+          "LUCES_TRASERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 74.8182795698925,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Glove compartment light, license plate fight, lighting monitor buzzer, rheostat, side marker light, taillight and illumination light",
+        "relatedEntities": [
+          "LUCES_LATERALES",
+          "LUCES_TRASERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 80.19462365591399,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlamp and headlamp leveling system / Hight-beam indicator light",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 85.75017921146954,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Air conditionen"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 91.12652329749105,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Air conditionen and cooling system"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 70.53168724279836,
+          "left": 35.03727598566309,
+          "width": 2.942652329749104,
+          "height": 22.045267489711936
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Anti-lock braking system, auto-cruise control system, central door locking system, door lamp, foot lamp, luggage compartment lamp, ignition key cylinder illumination lamp, immobilizer system, lighting monitor buzzer, meter and gauge, MPI system, radio with tape player, rear window, defogger and supplemental restraint system",
+        "relatedEntities": [
+          "TESTIGO_APERTURA_DE_PUERTAS",
+          "LUZ_DE_PIES",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL",
+          "INMOVILIZADOR",
+          "SENSOR",
+          "TECNOLOGIA_MOTOR",
+          "LUNETA_TRASERA",
+          "VENTANILLA(ubicacion=PARTE_TRASERA)",
+          "DESEMPANADOR"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 70.53168724279836,
+          "left": 29.660931899641586,
+          "width": 2.763440860215054,
+          "height": 22.045267489711936
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Auto-cruise control system and radio with tape player"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 11.799999999999999,
+          "left": 69.44193548387098,
+          "width": 2.6032656312226203,
+          "height": 19.52446273433928
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "ABS system (AWD)",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 60.24372759856631,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Headlamp",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 69.74193548387096,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Tail lamp",
+        "relatedEntities": [
+          "LUCES_TRASERAS"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 79.24014336917563,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog lamp",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 39.57201646090535,
+          "left": 88.73835125448028,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/horn-relay",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 69.61316872427983,
+          "left": 41.247311827956985,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/C comp"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 69.61316872427983,
+          "left": 50.74551971326165,
+          "width": 8.064516129032258,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rad. Fan (HI)",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MARCHA_HIGH"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-relay",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 69.61316872427983,
+          "left": 60.24372759856631,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rad. Fan (HI)",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MARCHA_HIGH"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-relay",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 69.61316872427983,
+          "left": 69.74193548387096,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rad. Fan (LO)"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 69.61316872427983,
+          "left": 79.24014336917563,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cond. Fan (HI)",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MARCHA_HIGH"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-relay",
+            "urlWithAnchor": "/mitsubishi/eclipse/info/fusebox/1999/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 69.61316872427983,
+          "left": 88.73835125448028,
+          "width": 7.885304659498208,
+          "height": 26.74897119341564
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cond. Fan (LO)"
+      }
+    ],
+    "boxAspectRatio": 0.43548387096774194,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/7e80b7b5_mitsubishi-eclipse-1995.jpg"
+    },
+    "processed": false,
+    "boxName": "Engine Compartment fuse box (2.0L Turbo)",
+    "imageClusters": [
+      "62e302b8b23e80b3c5152629"
+    ],
+    "templateId": "66424b83c7c6f3199944fb7b",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mitsubishi-eclipse-1999-genid-g2-2.webp"
+  }
+]

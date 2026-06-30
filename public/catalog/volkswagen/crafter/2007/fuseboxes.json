@@ -1,0 +1,945 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 69.53808752025931,
+          "left": 36.67903861882195,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "High tone signal"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 69.53808752025931,
+          "left": 40.41993041682253,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Electronic ignition key, Control unit for electric steering column lock"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 69.53808752025931,
+          "left": 44.16082221482312,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Electronic ignition key, control unit in the instrument cluster"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 69.53808752025931,
+          "left": 47.9017140128237,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Light switch, control panel in the center of the dashboard",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 69.53808752025931,
+          "left": 51.642605810824286,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windshield wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 69.53808752025931,
+          "left": 55.38349760882487,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fuel lift pump"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 69.53808752025931,
+          "left": 59.12438940682546,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Steering column electronics control unit"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 29.197472532122255,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 32.9382555754721,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        }
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 36.67903861882195,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Fuel pressure valve"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 40.41982166217179,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Relay discharge 2 terminals 15 (only for 3.8 t mass class vehicles), Fuse 1 in fuse box D, Fuse 2 in fuse box D",
+        "relatedEntities": [
+          "FUSIBLE(numero=UNO,protects=MARCHA_DIRECTA)",
+          "FUSIBLE(numero=DOS,protects=MARCHA_DIRECTA)"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 44.160604705521635,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Airbag control unit",
+        "relatedEntities": [
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 47.901387748871485,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Glove box light switch, Cigarette lighter, Connector, 16 pins -T16a- (audio preparation)",
+        "relatedEntities": [
+          "CONECTOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/crafter/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/crafter/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 51.64217079222133,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Light switch, Control unit in the instrument cluster, Diagnostic socket",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "CONECTOR_OBD",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 78.51817550358878,
+          "left": 55.38295383557117,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Operating mode and heating selector switch, Headlight range control regulator, Left headlight range control actuator motor, Right headlight range control actuator motor",
+        "relatedEntities": [
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 29.192904836791204,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Start/stop system master switch, Gearbox neutral switch, Oil level and temperature sensor, Fuel pump relay, Coolant continuous circulation relay, Glow plug control module terminal, Voltage supply relay 50, Boost pressure limiting solenoid valve, Coolant circulation valve, Fuel metering valve, EGR cooler switching valve, Lambda probe heater",
+        "relatedEntities": [
+          "TEMPERATURA_MOTOR",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "TESTIGO_RECALENTAMIENTO",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/crafter/info/fusebox/2007/fuel-pump-fuse",
+            "urlWithAnchor": "/volkswagen/crafter/info/fusebox/2007/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 32.934340408045486,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Airbag control unit",
+        "relatedEntities": [
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 36.67903861882195,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Brake light switch, brake pedal switch, load relief relay terminal 15",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 40.41721155055405,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "On-board power supply control unit (interior lights)"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 44.15864712180833,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 47.900082693062615,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Air mass meter, engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 51.64151826431689,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Brake light switch (before June 2006), Brake pedal switch (before June 2006), Lateral acceleration sensor (from July 2006), Longitudinal acceleration sensor (from July 2006), ABS control unit (from July 2006)"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 55.38295383557117,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Starter, On-board network control unit",
+        "relatedEntities": [
+          "ARRANQUE",
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/crafter/info/fusebox/2007/starter-fuse",
+            "urlWithAnchor": "/volkswagen/crafter/info/fusebox/2007/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 86.1337475056799,
+          "left": 59.12438940682546,
+          "width": 1.9980912351964975,
+          "height": 6.5755962028247374
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Reserve Kl. 15"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 66.85575364667747,
+          "left": 29.604072345006887,
+          "width": 3.6435781347700775,
+          "height": 10.74322759898125
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "12V socket",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/crafter/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/crafter/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "Connector",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 50.21978798586573,
+          "left": 30.697458893871453,
+          "width": 9.93316250266923,
+          "height": 9.725727746929161
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 10.71849234393404,
+          "left": 48.4304932735426,
+          "width": 10.612855007473842,
+          "height": 5.005889281507656
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/crafter/info/fusebox/2007/horn-relay",
+            "urlWithAnchor": "/volkswagen/crafter/info/fusebox/2007/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 12.014134275618375,
+          "left": 29.895366218236173,
+          "width": 10.93316250266923,
+          "height": 9.725727746929161
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Inverter relay 2 for windshield wiper motor"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 19.199057714958776,
+          "left": 48.4304932735426,
+          "width": 10.612855007473842,
+          "height": 5.005889281507656
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/crafter/info/fusebox/2007/fuel-pump-relay",
+            "urlWithAnchor": "/volkswagen/crafter/info/fusebox/2007/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 24.08716136631331,
+          "left": 29.895366218236173,
+          "width": 10.93316250266923,
+          "height": 9.725727746929161
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Inverter relay 1 for windshield wiper motor"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 27.444051825677267,
+          "left": 48.430493273542595,
+          "width": 10.93316250266923,
+          "height": 9.725727746929161
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Power supply relay, terminal 50",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=RELAY)"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 36.160188457008246,
+          "left": 29.895366218236173,
+          "width": 10.93316250266923,
+          "height": 9.725727746929161
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Terminal 15 of the power supply relay"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 41.755005889281506,
+          "left": 48.430493273542595,
+          "width": 10.93316250266923,
+          "height": 9.725727746929161
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Engine electronics power supply relay"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 56.06595995288575,
+          "left": 48.430493273542595,
+          "width": 10.93316250266923,
+          "height": 9.725727746929161
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Power supply relay 2, terminal 15",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=RELAY)"
+        ]
+      }
+    ],
+    "boxAspectRatio": 1.2690582959641257,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/7fb69562_volkswagen-lt-2006-2006>.jpg"
+    },
+    "processed": false,
+    "boxName": "Driver's interior fuse box (No. 1)",
+    "imageClusters": [
+      "61fd9b3b37dc92000493dd1e"
+    ],
+    "templateId": "66438917bfc4cc84390a2a95",
+    "isTranslated": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-crafter-2007-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 16.459252971137516,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Driver's door control unit"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 24.12054329371816,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Diagnostic connector",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 31.781833616298805,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 39.44312393887945,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "ABS control unit",
+        "relatedEntities": [
+          "MODULO_ABS"
+        ]
+      },
+      {
+        "id": "5",
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 47.1044142614601,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        }
+      },
+      {
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 54.76570458404074,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        }
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 62.42699490662139,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Headlight washer pump"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 70.08828522920206,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Switch for rotating beacon and siren, Switch for rotating beacon, Siren alarm, Anti-theft alarm relay 1, Relay 2 for siren",
+        "relatedEntities": [
+          "RELAY(protects=TESTIGO_INMOVILIZADOR)",
+          "RELAY(protects=ALARMA_ANTIRROBO)"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 42.27846441947566,
+          "left": 77.74957555178271,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Roof turn signal repeater relay (from May 2007)"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 16.459252971137516,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Head unit, Control unit with display for radio with navigation",
+        "relatedEntities": [
+          "MODULO(of=LUCES_DELANTERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/crafter/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/crafter/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 24.12054329371816,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Control unit for mobile phone control electronics, Tachograph control unit"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 31.781833616298805,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Operating mode and heating selector switch, Fresh air fan relay, Fresh air fan control unit, Fresh air fan",
+        "relatedEntities": [
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 39.44312393887945,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Timer, additional liquid heater radio signal receiver",
+        "relatedEntities": [
+          "TEMPORIZADOR"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 47.1044142614601,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Control panel in the center of the front panel"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 54.76570458404074,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Loading platform light switch"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 62.42699490662139,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Operating mode and heating selector switch, air conditioning system control unit, CD changer",
+        "relatedEntities": [
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 70.08828522920206,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        }
+      },
+      {
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 61.94138576779026,
+          "left": 77.74957555178271,
+          "width": 3.395397094887758,
+          "height": 15.168539325842694
+        }
+      }
+    ],
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/40ec9fb2_volkswagen-lt-2006-2006>.jpg"
+    },
+    "imageClusters": [
+      "61fd9b3b37dc92000493dd1e"
+    ],
+    "templateId": "66438d37bfc4cc84390a2bf8",
+    "boxAspectRatio": 0.9066213921901528,
+    "boxName": "Driver's interior fuse box (No. 2)",
+    "isTranslated": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-crafter-2007-genid-g1-1.webp"
+  }
+]

@@ -1,0 +1,1144 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 17.66055800601915,
+          "left": 9.819791666666664,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(CHARGE) Battery charging system, Indicator lamp for charging current, Starting automatic"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 27.53909465020577,
+          "left": 9.819791666666664,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(FAN-I / UP) Pre-start engine heating system, Automatic start-up"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 39.893004115226326,
+          "left": 28.35104166666668,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(DOME) Ceiling lamp, Door warning lamps, Tailgate lamp",
+        "relatedEntities": [
+          "TESTIGO_APERTURA_DE_PUERTAS",
+          "TESTIGO_APERTURA_DE_PUERTAS(warns=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 49.76131687242797,
+          "left": 28.35104166666668,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        }
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 39.893004115226326,
+          "left": 41.92395833333334,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(EFI) Electronic petrol injection system"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 49.76131687242797,
+          "left": 41.92395833333334,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HAZ-HORN) Warning flashing signals, Sound signal"
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 18.08230452674897,
+          "left": 82.19999999999996,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        }
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 28.56790123456791,
+          "left": 82.19999999999996,
+          "width": 9.965327380952383,
+          "height": 4.014344503233393
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 15.020576131687244,
+          "left": 61.1875,
+          "width": 12.458333333333332,
+          "height": 11.320576131687243
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "(FAN) Engine cooling system, Fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "RADIADOR_MOTOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/cooling-fan-fuse",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "FLASHER1",
+        "layout": {
+          "top": 40.80658436213992,
+          "left": 8.729166666666666,
+          "width": 10.9375,
+          "height": 17.79835390946502
+        },
+        "kind": {
+          "type": "flasher",
+          "notUsed": false
+        },
+        "description": "(HORN) Signal relay"
+      },
+      {
+        "id": "FLASHER2",
+        "layout": {
+          "top": 43.62139917695473,
+          "left": 79.02083333333334,
+          "width": 10.9375,
+          "height": 17.79835390946502
+        },
+        "kind": {
+          "type": "flasher",
+          "notUsed": false
+        },
+        "description": "(FAN NO.1) Cooling fan relay",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 10.353909465020575,
+          "left": 25.18124999999999,
+          "width": 12.979166666666666,
+          "height": 20.106995884773664
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "brown"
+        },
+        "description": "(HEAD) Headlight relay",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 10.353909465020575,
+          "left": 42.62395833333332,
+          "width": 12.979166666666666,
+          "height": 20.106995884773664
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "brown"
+        },
+        "description": "(EFI)",
+        "relatedEntities": [
+          "EFI"
+        ],
+        "extendedDescription": "Multiport fuel injection system"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 38.26337448559671,
+          "left": 59.32708333333338,
+          "width": 12.979166666666666,
+          "height": 20.106995884773664
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(ENGINE MAIN)",
+        "relatedEntities": [
+          "MOTOR"
+        ],
+        "extendedDescription": "Engine control system"
+      }
+    ],
+    "imageClusters": [
+      "684df39812aba0cf76323416"
+    ],
+    "processed": false,
+    "boxName": "Engine compartment fuse panel (Type 1)",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/8fbfe2d3_toyota-sprinter-1997.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/239f91dc_image.jpg"
+      }
+    ],
+    "templateId": "68703eae228e7dca309fe60c",
+    "boxAspectRatio": 0.6328125,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-sprinter-1991-genid-g7-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "R1",
+        "layout": {
+          "top": 13.965741265858188,
+          "left": 7.538053632957296,
+          "width": 11.803469717821734,
+          "height": 19.422152129833204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "ultra",
+          "notUsed": false
+        },
+        "description": "(HORN) Signal relay"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 15.13107039364818,
+          "left": 22.104037540056456,
+          "width": 16.826222789235235,
+          "height": 26.41412689657316
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(FAN) Cooling fan relay",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/cooling-fan-relay",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 10.469753882488211,
+          "left": 44.20415105427587,
+          "width": 18.33304871065929,
+          "height": 26.41412689657315
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(E/G-MAIN) Main relay",
+        "extendedDescription": "Engine control and emissions control  (EGR)"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 14.354184308454851,
+          "left": 65.80198926135394,
+          "width": 18.83532401780063,
+          "height": 26.802569939169818
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(HEAD) Headlight relay",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 13.055207663047852,
+          "left": 86.56006635056808,
+          "width": 14.425028378554833,
+          "height": 21.037721703866634
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(EFI) Motor relay",
+        "relatedEntities": [
+          "EFI",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 41.54519729022134,
+          "left": 9.844879554381345,
+          "width": 9.402332064251068,
+          "height": 4.493981075054964
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(DOME) Electric drive and interior lighting",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 50.86783031254127,
+          "left": 9.844879554381345,
+          "width": 9.402332064251068,
+          "height": 4.493981075054964
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(HAZ-HORN) Alarm, Sound signal"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 60.578906377457876,
+          "left": 9.844879554381345,
+          "width": 9.402332064251068,
+          "height": 4.493981075054964
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(FAN-I/UP) Increase in idle speed"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 46.12742327677026,
+          "left": 41.08594859714508,
+          "width": 9.402332064251068,
+          "height": 4.493981075054964
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(ALT-S) Charging"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 70.43414433067942,
+          "left": 25.417689382904562,
+          "width": 2.964789496418778,
+          "height": 14.856823002043178
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(SPARE) Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 70.43414433067942,
+          "left": 30.691580107888743,
+          "width": 2.964789496418778,
+          "height": 14.856823002043178
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(SPARE) Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 70.43414433067942,
+          "left": 36.71888379358494,
+          "width": 2.964789496418778,
+          "height": 14.856823002043178
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(SPARE) Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 65.79385656089518,
+          "left": 42.99732513285183,
+          "width": 2.964789496418778,
+          "height": 14.856823002043178
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HEAD (RH)) Right headlights"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 65.79385656089518,
+          "left": 49.52690412568938,
+          "width": 2.964789496418778,
+          "height": 14.856823002043178
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HEAD (LH)) Left headlights"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 44.18520806378694,
+          "left": 71.97587998633806,
+          "width": 9.402332064251068,
+          "height": 4.493981075054964
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(EFI F-HTR) Fuel supply"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 70.98076842249817,
+          "left": 7.2891912865279735,
+          "width": 14.817121560669834,
+          "height": 15.53772170386658
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "(AM2) AM2 circuit of the ignition switch (terminals IG2, ST2)"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 47.76028597176796,
+          "left": 22.104037540056456,
+          "width": 15.319396867811182,
+          "height": 15.149278661269896
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 30
+        },
+        "description": "(FAN) radiator fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/cooling-fan-fuse",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 62.132678547844534,
+          "left": 60.0258232292284,
+          "width": 9.29209318211499,
+          "height": 20.97592430021986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 40
+        },
+        "description": "(AM1) Output circuit AM1 of the ignition switch (terminals ACC, IG1, ST1)",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 62.132678547844534,
+          "left": 60.0258232292284,
+          "width": 9.29209318211499,
+          "height": 20.97592430021986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 80
+        },
+        "description": "(GLOW) Candles [diesel]"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 62.132678547844534,
+          "left": 71.07587998633811,
+          "width": 9.29209318211499,
+          "height": 20.97592430021986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 80
+        },
+        "description": "(ALT) Battery charging [gasoline]"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 62.132678547844534,
+          "left": 71.07587998633811,
+          "width": 9.29209318211499,
+          "height": 20.97592430021986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 100
+        },
+        "description": "(AM1) AM1 (2E) [diesel]"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 62.132678547844534,
+          "left": 81.87479908987714,
+          "width": 9.29209318211499,
+          "height": 20.97592430021986
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 50
+        },
+        "description": "(ABS) ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 54.67317021389687,
+          "left": 41.08594859714508,
+          "width": 9.402332064251068,
+          "height": 4.493981075054964
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b1b51027_toyota-sprinter-1997.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.6465116279069767,
+    "imageClusters": [
+      "66afb87449fc0016d6ebc303"
+    ],
+    "boxName": "Engine compartment fuse panel (Type 2)",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ddb93e93_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/5b07173b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7052d6d7_image.jpg"
+      }
+    ],
+    "templateId": "64711a270314a9e6f6a0ed95",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-sprinter-1991-genid-g7-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 54.769288414762926,
+          "left": 35.78294912149827,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(FOG) fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/fog-light-fuse",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 54.769288414762926,
+          "left": 44.84999449373339,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(IGN) ignition",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/starter-fuse",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 54.769288414762926,
+          "left": 53.91703986596851,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(STOP) brake lights",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TESTIGO_FRENO_DE_MANO",
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/brake-light-fuse",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 54.769288414762926,
+          "left": 62.98408523820363,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(SEAT HTR) seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 65.40431955516482,
+          "left": 35.78294912149827,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(CIG & RADIO) cigarette lighter, radio tape recorder, mirrors",
+        "relatedEntities": [
+          "ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 65.40431955516482,
+          "left": 44.84999449373339,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(ECU-B) ABS, power supply of the central lock"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 65.40431955516482,
+          "left": 53.91703986596851,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(TURN) direction indicators"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 65.40431955516482,
+          "left": 62.98408523820363,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(GAUGE) devices"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 76.03935069556671,
+          "left": 35.78294912149827,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(TAIL) dimensions"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 76.03935069556671,
+          "left": 35.78294912149827,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(TAIL) dimensions"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 76.03935069556671,
+          "left": 44.84999449373339,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(DEF-I / UP) increase in idle speed when the glass heater is turned on"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 76.03935069556671,
+          "left": 53.91703986596851,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(ECU-IG) transmission electronics, ABS, control system lock (automatic transmission)",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 76.03935069556671,
+          "left": 62.98408523820363,
+          "width": 5.095501961782077,
+          "height": 8.462012687032514
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(WIPER) undefined",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "a",
+        "layout": {
+          "top": 21.62128237301475,
+          "left": 36.99593044765076,
+          "width": 15.162266576906049,
+          "height": 5.876649134663417
+        },
+        "description": "(POWER) glass lifters, sunroof and central locking",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/sunroof-fuse",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "b",
+        "layout": {
+          "top": 21.62128237301475,
+          "left": 62.77178362839104,
+          "width": 15.162266576906049,
+          "height": 5.876649134663417
+        },
+        "description": "(FOG) fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "individualFusePages": [
+          {
+            "url": "/toyota/sprinter/info/fusebox/1991/fog-light-fuse",
+            "urlWithAnchor": "/toyota/sprinter/info/fusebox/1991/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "A",
+        "layout": {
+          "top": 8.713095003873558,
+          "left": 27.898570501507123,
+          "width": 23.956381191511554,
+          "height": 11.590058015586177
+        },
+        "description": "(DEFOG) glass heater",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "B",
+        "layout": {
+          "top": 8.713095003873558,
+          "left": 54.58415967686177,
+          "width": 23.956381191511554,
+          "height": 11.590058015586177
+        },
+        "description": "(TAIL) dimensions",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": ""
+        },
+        "layout": {
+          "top": 28.209956349556148,
+          "left": 53.067933019171164,
+          "width": 10.220077266910483,
+          "height": 9.820895731920325
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": ""
+        },
+        "layout": {
+          "top": 32.952643224913444,
+          "left": 30.931023816888338,
+          "width": 16.284983897672877,
+          "height": 17.24614867269348
+        }
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-md"
+        },
+        "layout": {
+          "top": 40.284503416237214,
+          "left": 58.31012232916675,
+          "width": 15.591474560749122,
+          "height": 8.857655478179678,
+          "rotation": -90
+        }
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": ""
+        },
+        "layout": {
+          "top": 88.77209048733745,
+          "left": 40.33162909457009,
+          "width": 23.956381191511554,
+          "height": 7.509051672069916
+        }
+      },
+      {
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 100.0000 5.1020 A 5.1020 5.1020 0 0 0 94.8980 0.0000 L 5.1020 0.0000 A 5.1020 5.1020 0 0 0 0.0000 5.1020 L 0.0000 280.1021 A 5.1020 5.1020 0 0 0 5.1020 285.2041 L 17.8571 285.2041 L 17.8571 285.2041 L 17.8571 292.8572 A 5.1020 5.1020 0 0 0 22.9591 297.9592 L 74.4898 297.9592 A 5.1020 5.1020 0 0 0 79.5918 292.8572 L 79.5918 285.2041 L 94.8980 285.2041 A 5.1020 5.1020 0 0 0 100.0000 280.1021 Z"
+        ],
+        "svgViewBoxH": 297.9592,
+        "layout": {
+          "top": 6.520388639017965,
+          "left": 23.929098966026583,
+          "width": 57.90251107828656,
+          "height": 92.87578472777875
+        },
+        "color": "#f7e6ba"
+      },
+      {
+        "id": "SVG2",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 100.0000 12.6500 A 12.6500 12.6500 0 0 0 87.3500 0.0000 L 12.6500 0.0000 A 12.6500 12.6500 0 0 0 0.0000 12.6500 L 0.0000 119.0672 A 12.6500 12.6500 0 0 0 12.6500 131.7172 L 87.3500 131.7172 A 12.6500 12.6500 0 0 0 100.0000 119.0672 Z"
+        ],
+        "svgViewBoxH": 131.71720000000002,
+        "layout": {
+          "top": 53.16129451991559,
+          "left": 28.274150664697206,
+          "width": 46.690251107828665,
+          "height": 33.1067842056308
+        },
+        "color": "#d7c6aa"
+      },
+      {
+        "id": "SVG3",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 100.0000 12.6545 A 12.6545 12.6545 0 0 0 87.3455 0.0000 L 12.6545 0.0000 A 12.6545 12.6545 0 0 0 0.0000 12.6545 L 0.0000 119.0627 A 12.6545 12.6545 0 0 0 12.6545 131.7172 L 87.3455 131.7172 A 12.6545 12.6545 0 0 0 100.0000 119.0627 Z",
+          "M 7.7419 11.1959 L 92.9032 11.1959 L 92.9032 34.2465 L 7.7419 34.2465 Z",
+          "M 7.7419 54.6626 L 92.9032 54.6626 L 92.9032 79.6889 L 7.7419 79.6889 Z",
+          "M 7.7419 98.7879 L 92.9032 98.7879 L 92.9032 121.8383 L 7.7419 121.8383 Z"
+        ],
+        "svgViewBoxH": 131.7172016031148,
+        "layout": {
+          "top": 53.16129451991559,
+          "left": 28.56957163958642,
+          "width": 46.690251107828665,
+          "height": 33.10678460856964
+        },
+        "color": "#f8eec0"
+      },
+      {
+        "id": "C",
+        "kind": {},
+        "description": "(FLASHER) undefined",
+        "relatedEntities": [
+          "RELAY_INTERMINTENTES"
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/5954a35c_toyota-sprinter-1991-@toyota-sprinter@g7.jpg"
+    },
+    "processed": false,
+    "boxName": "Passenger compartment fuse box ",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/cee003bb_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/753871ac_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "67c47f1ab4368ef2133f21d1"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/293e5a34_toyota-sprinter-1991-@toyota-sprinter@g7.jpg"
+    },
+    "templateId": "6a0890bd366eae98c540f7b5",
+    "boxAspectRatio": 1.8576271186440678,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-sprinter-1991-genid-g7-2.webp"
+  }
+]

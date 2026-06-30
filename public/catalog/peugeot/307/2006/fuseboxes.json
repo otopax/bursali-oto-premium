@@ -1,0 +1,973 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 42.779618192026945,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Rear windshield wiper (307 Sedan)."
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 17.045012165450128,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Locking system."
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 58.220381807973034,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Airbag and pyrotechnic pretensioner calculator.",
+        "relatedEntities": [
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 53.07346060265767,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Brake pedal (STOP) and clutch pedal contacts, engine water level contact, diagnostic socket, electrochromic rearview mirror.",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 37.63269698671158,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Front electric windows, sunroof, anti-frost rearview mirrors.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=PARTE_DELANTERA)",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/sunroof-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 32.485775781396214,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Rear electric windows.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 47.92653939734231,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Front and rear ceiling lights, directional ceiling light, glove compartment lighting.",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 68.51422421860377,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Car radio, multifunction screen, alarm, alarm box, trailer service box, steering wheel controls power supply.",
+        "relatedEntities": [
+          "ESTEREO",
+          "PANTALLA",
+          "ALARMA_ANTIRROBO",
+          "COMANDOS_VOLANTE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 27.338854576080855,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Front 12V socket, rear 12V socket.",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)",
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 63.3673030132884,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Automatic gearbox calculator, STOP contact.",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 45.41530054644812,
+          "left": 22.19193337076549,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Diagnostic socket, low voltage anti-theft contact.",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 78.80806662923449,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Rear proximity radar (307 Sedan)."
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 73.66114542391912,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Engine calculator, rain and light sensor.",
+        "relatedEntities": [
+          "ECU",
+          "SENSOR_DE_LLUVIA"
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 55.25136612021862,
+          "left": 83.95498783454985,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Trailer service box, instrument panel, airbag and pyrotechnic pretensioner calculator, automatic air conditioning, hands-free kit.",
+        "relatedEntities": [
+          "TABLERO",
+          "MODULO(of=AIRBAG)",
+          "AIRE_ACONDICIONADO",
+          "MANOS_LIBRES"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/air-conditioning-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 65.63387978142075,
+          "left": 22.19193337076549,
+          "width": 2.7793998377939975,
+          "height": 17.798542805100166
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Locking system."
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 40.98360655737705,
+          "left": 48.9051094890511,
+          "width": 14.963503649635037,
+          "height": 9.128961748633886
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse-shunt"
+        },
+        "description": "PARC shunt."
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 40.98360655737705,
+          "left": 73.2360097323601,
+          "width": 14.963503649635037,
+          "height": 9.128961748633886
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Rear window with anti-frost circuit."
+      }
+    ],
+    "boxName": "Front Panel Fuses",
+    "boxDescription": "Unscrew the screw 90º with a coin, and release the cover by pulling from the top right corner.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-b4c92ed555.jpg",
+      "source": "61b17422ee4c3300047c107e"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-254f29a340.jpg",
+        "source": "61b17428ee4c3300047c107f"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-fb22cca7bd.jpg",
+        "source": "61b1742eee4c3300047c1080"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/35b1ccfe_image.jpg"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.44525547445255476,
+    "templateId": "619d1832faaf4100041b0694",
+    "isTranslated": true,
+    "imageClusters": [
+      "61dc94d8d53fbf00041bb74c"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-peugeot-307-2006-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 67.23716381418093,
+          "left": 12.187958883994126,
+          "width": 2.3494860499265786,
+          "height": 9.7799511002445
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Engine control unit power supply and high-speed GMV relays.",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 45.08076358296623,
+          "width": 2.3494860499265786,
+          "height": 8.06845965770171
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn.",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/horn-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 67.23716381418093,
+          "left": 51.98237885462555,
+          "width": 2.3494860499265786,
+          "height": 9.535452322738386
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Front and rear windshield washer (307 Sedan)."
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 50.073421439060205,
+          "width": 2.4963289280469896,
+          "height": 8.06845965770171
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Headlight washers (307 Feline / 307 XT/ 307 XS)"
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 64.90455212922174,
+          "width": 2.2026431718061676,
+          "height": 8.06845965770171
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel pump and Canister purge solenoid valve.",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/fuel-pump-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 70.19089574155653,
+          "width": 2.3494860499265786,
+          "height": 8.06845965770171
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Automatic transmission control unit, automatic transmission lever lock, sequential transmission control contact, high-speed GMV relays.",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 75.62408223201174,
+          "width": 2.3494860499265786,
+          "height": 8.06845965770171
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS control unit, power steering electro-pump control unit.",
+        "relatedEntities": [
+          "MODULO_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.73889900832296,
+          "left": 79.95075037492735,
+          "width": 2.080865402194135,
+          "height": 7.9195570987692605
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Starter motor control."
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 54.91923641703378,
+          "width": 2.3494860499265786,
+          "height": 8.06845965770171
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Additional heater box, water level contact."
+      },
+      {
+        "layout": {
+          "top": 43.76528117359413,
+          "left": 15.565345080763581,
+          "width": 3.524229074889868,
+          "height": 13.691931540342297
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Engine control unit actuators (ignition coil, solenoid valves, oxygen sensors, control units, injectors, heaters).",
+        "relatedEntities": [
+          "ELECTROVALVULA",
+          "SENSOR_OXIGENO",
+          "MODULO",
+          "ECU",
+          "INYECTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 67.23716381418093,
+          "left": 21.73274596182085,
+          "width": 3.524229074889868,
+          "height": 13.691931540342297
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Air conditioning fan.",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.47921760391198,
+          "left": 60.939794419970625,
+          "width": 3.3773861967694567,
+          "height": 13.691931540342297
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Front windshield wiper low/high speed."
+      },
+      {
+        "layout": {
+          "top": 67.23716381418093,
+          "left": 45.66813509544787,
+          "width": 3.671071953010279,
+          "height": 13.691931540342297
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Intelligent service box power supply (+ post-contact)."
+      },
+      {
+        "layout": {
+          "top": 58.679706601467,
+          "left": 73.42143906020559,
+          "width": 3.3773861967694567,
+          "height": 13.691931540342297
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Air pump (2-liter gasoline engine)."
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 35.389133627019085,
+          "width": 2.3494860499265786,
+          "height": 8.06845965770171
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right high beam light.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 31.014635340186004,
+          "width": 2.3494860499265786,
+          "height": 8.06845965770171
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left high beam light.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 26.64013705335292,
+          "width": 2.3494860499265786,
+          "height": 8.06845965770171
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left low beam light.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.52078239608802,
+          "left": 22.339060205580044,
+          "width": 2.2026431718061676,
+          "height": 8.06845965770171
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right low beam light.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/307/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/peugeot/307/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 7.572061354939863,
+          "left": 13.328869456713017,
+          "width": 18.931007178967157,
+          "height": 26.587871544947212
+        },
+        "id": "Conector1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        }
+      },
+      {
+        "layout": {
+          "top": 7.572061354939863,
+          "left": 39.66766205353689,
+          "width": 18.60177227150686,
+          "height": 26.587871544947212
+        },
+        "id": "Conector2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        }
+      },
+      {
+        "layout": {
+          "top": 7.846163123444473,
+          "left": 66.33568955782106,
+          "width": 18.766389725237005,
+          "height": 26.3137697764426
+        },
+        "id": "Conector3",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        }
+      },
+      {
+        "layout": {
+          "top": 57.73268499128357,
+          "left": 29.132145014807335,
+          "width": 13.169396298411932,
+          "height": 14.801495499248965
+        },
+        "id": "Conector4",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        }
+      },
+      {
+        "layout": {
+          "top": 79.38672470314779,
+          "left": 58.26943432504375,
+          "width": 16.132510465554617,
+          "height": 13.156884888221299
+        },
+        "id": "Conector5",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        }
+      }
+    ],
+    "boxName": "Engine Compartment (Type 1)",
+    "boxDescription": "To access the fuses located in the engine compartment (next to the battery), unhook the cover.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-42acd15c53.jpg",
+      "source": "61b1744eee4c3300047c1081"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-c8218cdec0.jpg",
+        "source": "61b17456ee4c3300047c1082"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-782936957a.jpg",
+        "source": "61b1745dee4c3300047c1083"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-30932e41a7.jpg",
+        "source": "61b17465ee4c3300047c1084"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0dcf3641af640004af86ad/fragment-5f0dcf3641af640004af86ad-60a59767f3.jpg",
+        "source": "61b17469ee4c3300047c1085"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.6005873715124816,
+    "templateId": "619d10d0faaf4100041b0683",
+    "isTranslated": true,
+    "imageClusters": [
+      "61dc7c18d53fbf00041bb6e2",
+      "61dc94afd53fbf00041bb74a"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-peugeot-307-2006-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 7.163098140522897,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Fan group 200 W."
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 7.163098140522897,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 50
+        },
+        "description": "Fan group 400 W and 460 W."
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 14.656888513318531,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "ABS/ESP pump.",
+        "relatedEntities": [
+          "BOMBA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 23.10443402446997,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "ABS/ESP solenoid valves.",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 32.36948393992639,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 80
+        },
+        "description": "Intelligent service box power supply."
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 45.7220558769077,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 80
+        },
+        "description": "Intelligent service box power supply."
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 54.57835359021163,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 80
+        },
+        "description": "Cabin fuse box."
+      },
+      {
+        "kind": {
+          "format": "maxi",
+          "type": "fuse"
+        },
+        "id": "7",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 62.072143963007264,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        }
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 64.18096872070015,
+          "left": 70.38343874010788,
+          "width": 5.858781564185677,
+          "height": 20.45952955869221
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 70
+        },
+        "description": "Power steering electric pump group."
+      }
+    ],
+    "boxAspectRatio": 0.6393034825870647,
+    "templateId": "619551ce0fed4a00040f0aeb",
+    "processed": false,
+    "boxName": "MAXI Fuses",
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f122feee663e70004cd514b/fragment-5f122feee663e70004cd514b-a6d1e74f40.jpg"
+      }
+    ],
+    "isTranslated": true,
+    "boxDescription": null,
+    "imageClusters": [
+      "65ad8210c312df19eafe4e57"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-peugeot-307-2006-genid-g1-2.webp"
+  }
+]

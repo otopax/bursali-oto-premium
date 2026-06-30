@@ -1,0 +1,2283 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 21.68911795399096,
+          "left": 9.173309431403382,
+          "width": 5.049703510265324,
+          "height": 4.678884553922343
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(WIP-S) Driver support system, Windshield wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 19.72563176895307,
+          "left": 17.916063675832127,
+          "width": 5.024420734777151,
+          "height": 5.793377943767965
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(FAN) Electric cooling fan"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 19.72563176895307,
+          "left": 22.547033285094066,
+          "width": 5.024420734777151,
+          "height": 5.793377943767965
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(H-LP CLN) No circuit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 19.72563176895307,
+          "left": 41.3603473227207,
+          "width": 5.024420734777151,
+          "height": 5.793377943767965
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(HTR) Air conditioning system",
+        "relatedEntities": [
+          "CALEFACCION",
+          "AIRE_ACONDICIONADO",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 8.509406657018815,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 140,
+          "notUsed": false
+        },
+        "description": "(ALT) Charging system [Gasoline vehicles]",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 8.509406657018815,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 120,
+          "notUsed": false
+        },
+        "description": "(DC/DC) Hybrid system [Hybrid vehicles]"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 13.285094066570188,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(ABS NO.2) [Gasoline vehicles]: VSC, ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 17.916063675832127,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(ST/AM2) Starting system [Gasoline vehicles]",
+        "relatedEntities": [
+          "ARRANQUE",
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 17.916063675832127,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(ABS NO.1) [Hybrid vehicles]: VSC, ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 22.547033285094066,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(H-LP-MAIN) H-LP RH-LO, H-LPLH-LO",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_BAJA"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 31.953690303907386,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(ABS NO.1) [Gasoline vehicles]: VSC, ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 31.953690303907386,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(ABS MTR NO.1) VSC, ABS [Hybrid vehicles]",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 41.3603473227207,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 80,
+          "notUsed": false
+        },
+        "description": "(EPS) Electric power steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 52.249097472924184,
+          "left": 9.173309431403382,
+          "width": 4.630969609261939,
+          "height": 3.9711191335740077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(S-HORN) S-HORN"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 52.249097472924184,
+          "left": 24.538835826925016,
+          "width": 4.630969609261939,
+          "height": 3.9711191335740077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/horn-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 52.36252360036645,
+          "left": 62.80527405462337,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(EFI NO.2) Multiport fuel injection system, Sequential multiport fuel system, Electronic controlled transmission",
+        "relatedEntities": [
+          "EFI",
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 52.36252360036645,
+          "left": 66.12365064708344,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(EFI NO.3) [Gasoline vehicles]: Multiport fuel injection system, Sequential multiport fuel system, Air intake system, Exhaust system",
+        "relatedEntities": [
+          "EFI",
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 52.36252360036645,
+          "left": 66.12365064708344,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(EFI NO.3) [Hybrid vehicles]: Multiport fuel injection system, Sequential multiport fuel system, Air intake system",
+        "relatedEntities": [
+          "EFI",
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 52.36252360036645,
+          "left": 71.46145272756131,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(INJ) Multiport fuel injection system, Sequential multiport fuel system"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 52.36252360036645,
+          "left": 74.77982932002138,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-IG2 NO.3) Multiport fuel injection system, Sequential multiport fuel system, Electronic controlled transmission, Power management system, Steering lock system, Cruise control system",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "SISTEMA_DE_INYECCION",
+          "CRUISE_CONTROL"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 52.36252360036645,
+          "left": 78.09820591248145,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(IGN) Starting system",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/starter-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 46.862182770411614,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(D/L-AM2) Power door lock system"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 50.2166286736593,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(IG2-MAIN) INJ, IGN",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/starter-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 53.57107457690699,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ALT-S) Charging system [Gasoline vehicles]"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 53.57107457690699,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(DC/DC-S*1) Hybrid system [Hybrid vehicles]"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 56.925520480154674,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(MAYDAY) MAYDAY"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 60.27996638340236,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(TURN&HAZ) Turn signal lights, Emergency flashers",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 63.63441228665005,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(STRG LOCK) Steering lock system"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 66.98885818989774,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(AMP) Audio system",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 71.46145272756131,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(H-LP, LH-LO) Left-hand headlight"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 74.77982932002138,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(H-LP, RH-LO) Right-hand headlight"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 46.862182770411614,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(EFI-MAIN NO.1) EFINO.2, EFI NO.3, Fuel system",
+        "relatedEntities": [
+          "EFI",
+          "COMBUSTIBLE"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 50.2166286736593,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(SMART) Smart access system with push-button start, Occupant classification system",
+        "relatedEntities": [
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 53.57107457690699,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ETCS) Multiport fuel injection system, Sequential multiport fuel system"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 56.925520480154674,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ABS NO.2) [Hybrid vehicles]: VSC, ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 60.27996638340236,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(EFI NO.1) Multiport fuel injection system, Sequential multiport fuel system, Electronic controlled transmission",
+        "relatedEntities": [
+          "EFI",
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 63.63441228665005,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(A/F) Air intake system [Gasoline vehicles]"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 63.63441228665005,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(EFI-MAIN NO.2) [Hybrid vehicles]: Fuel system, Air intake system, Exhaust system",
+        "relatedEntities": [
+          "EFI",
+          "COMBUSTIBLE"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 66.98885818989774,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(AM2) Power management system, Smart access system with push-button start"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 74.77982932002138,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(PANEL) Switch illumination, Audio system, Multi-information display, Audio display, Shift lever light, Glove box light, Console box light, Remote Touch, Intuitive parking assist switch illumination",
+        "relatedEntities": [
+          "TABLERO",
+          "BACKLIGHT",
+          "PANEL_DE_PUERTA",
+          "ESTEREO",
+          "PANTALLA(of=ESTEREO)",
+          "LUZ_DE_GUANTERA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 78.09820591248145,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(DOME) Clock, Footwell lights, Vanity lights, Ornament lights, Personal lights, Door courtesy lights",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "RELOJ",
+          "LUZ_CORTESIA",
+          "LUZ_CORTESIA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 81.41658250494152,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU-B NO.1) Smart access system with push-button start, Main body ECU, Steering sensor, Gauges and meters, Gateway ECU, Electric tilt and telescopic steering column, Power seats, Overhead module, Outside mirror control ECU, Power trunk opener and closer ECU",
+        "relatedEntities": [
+          "SENSOR",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "U1",
+        "layout": {
+          "top": 52.249097472924184,
+          "left": 38.61070911722142,
+          "width": 4.630969609261939,
+          "height": 3.9711191335740077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(AMP NO.2) Audio system",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "U2",
+        "layout": {
+          "top": 52.249097472924184,
+          "left": 15.890014471780027,
+          "width": 4.630969609261939,
+          "height": 3.9711191335740077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(DEICER) Windshield deicer"
+      },
+      {
+        "id": "U3",
+        "layout": {
+          "top": 52.249097472924184,
+          "left": 31.574772472073217,
+          "width": 4.630969609261939,
+          "height": 3.9711191335740077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(TV) Multi-information display, Audio display, Remote Touch, audio system, Gauges and meters",
+        "relatedEntities": [
+          "PANTALLA(of=ESTEREO)",
+          "ESTEREO",
+          "SENSOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 78.09820591248145,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        }
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 69.06642599277978,
+          "left": 81.41658250494152,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        }
+      },
+      {
+        "id": "U6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 84.7075812274368,
+          "left": 71.46145272756131,
+          "width": 1.5265161803131202,
+          "height": 11.64582416500161
+        }
+      },
+      {
+        "id": "U7",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 27.32272069464544,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50
+        },
+        "description": "(ABS MTR NO.2) [Hybrid vehicles]: VSC, ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "U8",
+        "layout": {
+          "top": 19.72563176895307,
+          "left": 27.32272069464544,
+          "width": 5.024420734777151,
+          "height": 5.793377943767965
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "(ENG W/PMP) Cooling system [Hybrid vehicles]"
+      },
+      {
+        "id": "U9",
+        "layout": {
+          "top": 19.72563176895307,
+          "left": 31.953690303907386,
+          "width": 5.024420734777151,
+          "height": 5.793377943767965
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50
+        },
+        "description": "(PTC HTR NO.2) PTC heater",
+        "relatedEntities": [
+          "CALENTADOR_AIRE_ADMISION"
+        ]
+      },
+      {
+        "id": "U10",
+        "layout": {
+          "top": 19.72563176895307,
+          "left": 36.58465991316932,
+          "width": 5.024420734777151,
+          "height": 5.793377943767965
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50
+        },
+        "description": "(PTC HTR NO.1) PTC heater",
+        "relatedEntities": [
+          "CALENTADOR_AIRE_ADMISION"
+        ]
+      },
+      {
+        "id": "U11",
+        "layout": {
+          "top": 38.12802591041549,
+          "left": 36.58465991316932,
+          "width": 5.359751575699525,
+          "height": 5.559255897327418
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50
+        },
+        "description": "(R/B NO.2) [Hybrid vehicles]: IGCT MAIN, INV W/PMP"
+      },
+      {
+        "id": "U12",
+        "layout": {
+          "top": 0.7667870036101085,
+          "left": 76.36690612151072,
+          "width": 8.005788712011578,
+          "height": 20.44043321299639
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)"
+        ],
+        "description": "H-LP Relay\n",
+        "extendedDescription": "Headlights"
+      },
+      {
+        "id": "U13",
+        "layout": {
+          "top": 0.7667870036101085,
+          "left": 89.09088277858179,
+          "width": 8.005788712011578,
+          "height": 20.44043321299639
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "description": "FAN Relay",
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/cooling-fan-relay",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "U14",
+        "layout": {
+          "top": 33.54151624548737,
+          "left": 89.07380607814763,
+          "width": 8.222865412445731,
+          "height": 11.191335740072201
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "purple",
+          "notUsed": false
+        },
+        "description": "ENG W/PMP Relay"
+      },
+      {
+        "id": "U15",
+        "layout": {
+          "top": 74.96028880866425,
+          "left": 92.88277858176556,
+          "width": 4.413892908827785,
+          "height": 20.162454873646208
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "notUsed": false
+        },
+        "description": "C/OPN Relay"
+      },
+      {
+        "id": "U15",
+        "layout": {
+          "top": 74.96028880866425,
+          "left": 92.88277858176556,
+          "width": 4.413892908827785,
+          "height": 20.162454873646208
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "notUsed": false
+        },
+        "description": "HORN Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/horn-relay",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "U16",
+        "layout": {
+          "top": 74.96028880866425,
+          "left": 85.93905029596621,
+          "width": 4.413892908827785,
+          "height": 20.162454873646208
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "notUsed": false
+        },
+        "description": "S-HORN Relay",
+        "extendedDescription": "Horn"
+      },
+      {
+        "id": "Connector",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 52.73001768421494,
+          "left": 85.07380607814763,
+          "width": 8.222865412445731,
+          "height": 12.191335740072201
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f08e0d39_lexus-es 350-2013.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.40086830680173663,
+    "boxName": "Engine Compartment Fuse Box [Type A]",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3e89e103_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ca4f3c79_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d12f2cf5_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "66b62232a0953261631a0997"
+    ],
+    "templateId": "6154712bd95e0e0004681218",
+    "templateRenameMap": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "U8",
+      "5": "U9",
+      "6": "U10",
+      "7": "4",
+      "8": "5",
+      "9": "6",
+      "10": "7",
+      "11": "8",
+      "12": "U7",
+      "13": "9",
+      "14": "U11",
+      "15": "10",
+      "16": "11",
+      "17": "U2",
+      "18": "12",
+      "19": "U3",
+      "20": "U1",
+      "21": "13",
+      "22": "14",
+      "23": "15",
+      "24": "16",
+      "25": "17",
+      "26": "18",
+      "27": "19",
+      "28": "20",
+      "29": "21",
+      "30": "22",
+      "31": "23",
+      "32": "24",
+      "33": "25",
+      "34": "26",
+      "35": "27",
+      "36": "28",
+      "37": "29",
+      "38": "30",
+      "39": "31",
+      "40": "32",
+      "41": "33",
+      "42": "34",
+      "43": "35",
+      "44": "36"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-2015-genid-g6-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 40.32946635730857,
+          "left": 22.528968228233907,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(BATT FAN) Battery cooling fan"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 40.32946635730857,
+          "left": 27.30615078078362,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(INV W/PMP RLY) INV W/PMP RLY"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 40.32946635730857,
+          "left": 32.083333333333336,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(DC/DC IGCT) Hybrid system"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 40.32946635730857,
+          "left": 60.128968228233916,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(INV) Hybrid system"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 40.32946635730857,
+          "left": 64.9061507807836,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(BATT VL SSR) Hybrid system"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 40.32946635730857,
+          "left": 69.68333333333331,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(PM IGCT) Power management system, hybrid system"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 67.2691415313225,
+          "left": 33.9289682282339,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(IGCT-MAIN) INV W/PMP RLY, INV, DC/DC IGCT, BATT VL SSR, PM IGCT, BATT FAN"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 67.2691415313225,
+          "left": 38.59283312124998,
+          "width": 2.5,
+          "height": 8.120649651972158
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(INV W/PMP) Hybrid system"
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 53.82830626450116,
+          "left": 22.528968228233907,
+          "width": 2.5,
+          "height": 8.120649651972158
+        }
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 53.82830626450116,
+          "left": 27.30615078078362,
+          "width": 2.5,
+          "height": 8.120649651972158
+        }
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 53.82830626450116,
+          "left": 32.083333333333336,
+          "width": 2.5,
+          "height": 8.120649651972158
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 13.721151574868651,
+          "left": 18.316666666666674,
+          "width": 16.222222222222225,
+          "height": 18.804331013147717
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 13.721151574868651,
+          "left": 39.358333333333334,
+          "width": 16.222222222222225,
+          "height": 18.804331013147717
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 15.981438515081205,
+          "left": 61.45000000000001,
+          "width": 9.600000000000001,
+          "height": 16.473317865429234
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 13.911832946635732,
+          "left": 73.53333333333332,
+          "width": 9.600000000000001,
+          "height": 16.473317865429234
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 42.97405180688723,
+          "left": 39.358333333333334,
+          "width": 16.222222222222225,
+          "height": 18.804331013147717
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 54.98839907192577,
+          "left": 59.78333333333334,
+          "width": 14.791666666666666,
+          "height": 10.036890951276101
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 71.57308584686776,
+          "left": 45.61666666666667,
+          "width": 9.600000000000001,
+          "height": 16.473317865429234
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 69.96751740139212,
+          "left": 57.699999999999996,
+          "width": 9.600000000000001,
+          "height": 16.473317865429234
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      }
+    ],
+    "boxAspectRatio": 0.8979166666666667,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/7e6ed5bf_lexus-es 350-2013.jpg"
+    },
+    "processed": false,
+    "boxName": "Engine Compartment Fuse Box [Type B] [Hybrid Vehicles]",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f55e584c_image.jpg"
+      }
+    ],
+    "templateId": "66d0d1cba12e5a176caa9016",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-2015-genid-g6-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 20.68137432188066,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(BKUP LP) Multiport fuel injection system, sequential multiport fuel system, electronic controlled transmission, audio system, navigation system, back-up lights",
+        "relatedEntities": [
+          "ESTEREO",
+          "NAVEGADOR",
+          "LUZ_RETROCESO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 25.64223317938566,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(WIPER) Windshield wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 30.603092036890658,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(A/C-IG1) Air conditioning system, PTC heater, gauges and meters, seat heaters and ventilators",
+        "relatedEntities": [
+          "CALENTADOR_AIRE_ADMISION",
+          "SENSOR",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 35.563950894395646,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(WASHER) Windshield washer",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 40.52480975190065,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(H-LP LVL) Automatic headlight leveling system"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 45.48566860940565,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(DOORR/L) Power window"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 50.44652746691064,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(DOOR F/L) Power window, outside mirror control ECU"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 55.40738632441564,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(DOOR R/R) Power window"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 60.36824518192064,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(DOOR F/R) Power window, outside mirror control ECU"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 65.32910403942563,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(TAIL) Parking lights, side marker lights, license plate lights",
+        "relatedEntities": [
+          "LUCES_LATERALES",
+          "LUZ_PATENTE"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 70.28996289693063,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(PANEL NO.2) Clock",
+        "relatedEntities": [
+          "TABLERO",
+          "RELOJ",
+          "PANEL_DE_PUERTA"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 75.25082175443563,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU-IG1 NO.1) FAN, DEICER, VSC, ABS, charging system, steering sensor, electronic controlled transmission, electric power steering, gateway ECU, electric tilt and telescopic steering column",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "CONTROL_DE_ESTABILIDAD",
+          "SISTEMA_ABS",
+          "ALTERNADOR",
+          "DIRECCION_ELECTROASISTIDA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/alternator-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 80.21168061194062,
+          "left": 11.201754385964902,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU-IG1 NO.2) Main body ECU, audio system, shift lock system, outside mirror control ECU, tension reducer, windshield wipers, heated steering wheel, multi-information display, audio display, intuitive parking assist, tire pressure warning system, moon roof, auto anti-glare inside rear view mirror, raindrop sensor, rear sunshade, wireless door lock system, power trunk opener and closer ECU",
+        "relatedEntities": [
+          "ESTEREO",
+          "DESBLOQUEO_CAJA_AUT",
+          "LIMPIA_PARABRISAS",
+          "PANTALLA(of=ESTEREO)",
+          "TECHO_SOLAR",
+          "ANTI_ENCANDILAMIENTO(of=ESPEJO(ubicacion=INTERIOR))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/sunroof-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/lexus/es/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 17.070524412296564,
+          "left": 37.71929824561403,
+          "width": 21.49122807017544,
+          "height": 5.108499095840868
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "(P/SEAT F/L) Power seats"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 26.115732368896936,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(STOP) Power management system, multiport fuel injection system, sequential multiport fuel system, VSC, ABS, electronic controlled transmission, driver support system, engine room junction block assy, tail lights, high mounted stoplight, smart access system with push-button start, shift lock system",
+        "relatedEntities": [
+          "SISTEMA_DE_INYECCION",
+          "CONTROL_DE_ESTABILIDAD",
+          "SISTEMA_ABS",
+          "LUCES_TRASERAS",
+          "TERCERA_LUZ_DE_FRENO",
+          "DESBLOQUEO_CAJA_AUT"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/brake-light-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          },
+          {
+            "url": "/lexus/es/info/fusebox/2015/tail-light-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 30.989269443100792,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(PTL) Power trunk opener and closer ECU"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 35.86280651730465,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(STRG HTR) Heated steering wheel"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 40.7363435915085,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU-B NO.2) Power window master switch, air conditioning system, smart access system with pushbutton start, tire pressure warning system, rear sunshade",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/air-conditioning-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 45.60988066571236,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(OBD) On-Board diagnosis system"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 50.48341773991622,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(S/HTR&FAN F/L) Seat heaters and ventilators"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 55.35695481412007,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(S/HTR&FAN F/R) Seat heaters and ventilators"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 60.23049188832393,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(RADIO-ACC) Audio system, Remote Touch, multi-information display, audio display, navigation system",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ESTEREO",
+          "PANTALLA(of=ESTEREO)",
+          "NAVEGADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 65.10402896252779,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(P/OUTLET RR) Power outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es/info/fusebox/2015/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lexus/es/info/fusebox/2015/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 69.97756603673164,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(EPS-IG1) Electric power steering"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 74.8511031109355,
+          "left": 40.21929824561406,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(FUEL OPN) Fuel filler door opener"
+      },
+      {
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 80.7920433996383,
+          "left": 37.71929824561403,
+          "width": 21.49122807017544,
+          "height": 5.108499095840868
+        }
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 16.503195446172235,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(S/HTR RR) No circuit"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 21.395991316532808,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU-IG1 NO.3) Intuitive parking assist, driver support system, skid control buzzer, Blind Spot Monitor, radar sensor",
+        "relatedEntities": [
+          "DETECCION_PUNTO_CIEGO"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 26.115732368896936,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-ACC) Main body ECU, gauges and meters, outside rear view mirrors",
+        "relatedEntities": [
+          "SENSOR",
+          "ESPEJO_LATERAL",
+          "ESPEJO(ubicacion=EXTERIOR)"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 30.989269443100792,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(CIG & P/OUTLET) Power outlet"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 35.86280651730465,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-IG2 NO.2) VSC, ABS, gateway ECU, smart access system with push-button start, SRS airbag system",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "CONTROL_DE_ESTABILIDAD",
+          "SISTEMA_ABS",
+          "TESTIGO_SRS",
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 40.7363435915085,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-IG2 NO.1) Gauges and meters",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "SENSOR"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 45.60988066571236,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/B) Occupant classification system, SRS airbag system",
+        "relatedEntities": [
+          "TESTIGO_SRS",
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 50.48341773991622,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(TI&TE) Electric tilt and telescopic steering column"
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 55.35695481412007,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(D/L-AM1) Main body ECU"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 60.84701639924002,
+          "left": 66.87468671679197,
+          "width": 21.49122807017544,
+          "height": 5.108499095840868
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "(PSB) Pre-collision seat belt"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 68.08752272835396,
+          "left": 66.87468671679197,
+          "width": 21.49122807017544,
+          "height": 5.108499095840868
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "(P/SEAT F/R) Power seats"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 75.43193385941461,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(S/ROOF) Moon roof"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 80.32983725135617,
+          "left": 69.23684210526301,
+          "width": 17.229072681704203,
+          "height": 1.7216481529320595
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(A/C-B) Air conditioning system"
+      }
+    ],
+    "boxAspectRatio": 2.425438596491228,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/8a7f3912_lexus-es 350-2013.jpg"
+    },
+    "processed": false,
+    "boxName": "Driver’s Side Instrument Panel",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/87b238c1_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/955ae20b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/fe0cd013_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "66796a83cc6ba5726647450f"
+    ],
+    "templateId": "65e8e9a7112583e966381622",
+    "templateRenameMap": {
+      "1": "13",
+      "2": "12",
+      "3": "11",
+      "4": "10",
+      "5": "9",
+      "6": "8",
+      "7": "7",
+      "8": "6",
+      "9": "5",
+      "10": "4",
+      "11": "3",
+      "12": "2",
+      "13": "1",
+      "14": "25",
+      "15": "24",
+      "16": "23",
+      "17": "22",
+      "18": "21",
+      "19": "20",
+      "20": "19",
+      "21": "18",
+      "22": "17",
+      "23": "16",
+      "24": "15",
+      "25": "14",
+      "26": "39",
+      "27": "38",
+      "28": "37",
+      "29": "36",
+      "30": "35",
+      "31": "34",
+      "32": "33",
+      "33": "32",
+      "34": "31",
+      "35": "30",
+      "36": "29",
+      "37": "28",
+      "38": "27"
+    },
+    "backgroundColor": "#f0ead1",
+    "boxScaleMultiplier": "1.2",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-2015-genid-g6-2.webp"
+  }
+]

@@ -1,0 +1,1776 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "R1",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 6.837606837606838,
+          "width": 4.487179487179487,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Jumper (license plate light)"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 17.200854700854702,
+          "width": 4.487179487179487,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/horn-relay",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 24.465811965811966,
+          "width": 4.487179487179487,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Headlamp high beam relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ALTA)"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 31.73076923076923,
+          "width": 4.487179487179487,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear wiper motor relay",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)))"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 38.995726495726494,
+          "width": 4.594017094017095,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Heated mirror relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_ESPEJOS)",
+          "RELAY(protects=CALENTADOR_ESPEJO_LATERAL)"
+        ],
+        "extendedDescription": "Mirror heater"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 46.36752136752137,
+          "width": 4.38034188034188,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "extendedDescription": "Fog lights"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 53.73931623931624,
+          "width": 4.487179487179487,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))"
+        ],
+        "extendedDescription": "Rear fog lights"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 2.9411306042885013,
+          "left": 60.89743589743589,
+          "width": 7.799145299145299,
+          "height": 15.984405458089668
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Relay - turn signal interrupter",
+        "relatedEntities": [
+          "RELAY"
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 21.65458089668618,
+          "left": 28.73931623931624,
+          "width": 8.44017094017094,
+          "height": 15.009746588693956
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Windshield wiper motor relay",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS))"
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 39.39337231968807,
+          "left": 28.73931623931624,
+          "width": 8.44017094017094,
+          "height": 15.204678362573098
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Heated rear window relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 21.65458089668618,
+          "left": 16.98717948717949,
+          "width": 8.44017094017094,
+          "height": 15.009746588693956
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Heater blower motor relay (with A/ C)"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 39.39337231968807,
+          "left": 16.98717948717949,
+          "width": 8.44017094017094,
+          "height": 15.204678362573098
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Heater blower motor relay (with A/C)"
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 21.65458089668618,
+          "left": 2.9914529914529915,
+          "width": 8.226495726495726,
+          "height": 15.009746588693956
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Air conditioner relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "extendedDescription": "Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/air-conditioning-relay",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 47.96881091617934,
+          "left": 3.0982905982905984,
+          "width": 3.3709401709401714,
+          "height": 15.39961013645224
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 47.96881091617934,
+          "left": 7.585470085470085,
+          "width": 3.157264957264958,
+          "height": 15.39961013645224
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Heater / air conditioner",
+        "relatedEntities": [
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "AIRE_ACONDICIONADO"
+        ],
+        "extendedDescription": "Air conditioning system; Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 74.28460038986353,
+          "left": 3.311965811965812,
+          "width": 3.157264957264958,
+          "height": 15.204678362573098
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Heated rear window",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 74.28460038986353,
+          "left": 7.585470085470085,
+          "width": 3.2641025641025645,
+          "height": 15.204678362573098
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 74.28460038986353,
+          "left": 12.072649572649572,
+          "width": 3.050427350427351,
+          "height": 15.204678362573098
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 19.230769230769234,
+          "width": 2.6709401709401708,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlight range control, right headlight - low beam",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)",
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 19.230769230769234,
+          "width": 2.6709401709401708,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": "15"
+        },
+        "description": "Headlight range control, right headlight - low beam",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)",
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 23.504273504273502,
+          "width": 2.6709401709401708,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Front right side / rear right side lamps",
+        "relatedEntities": [
+          "LUCES_LATERALES(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 28.0982905982906,
+          "width": 2.4572649572649574,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "RH headlamp-high beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 32.26495726495727,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Headlight washers"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 36.75213675213676,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Buzzer"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 41.02564102564102,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Central locking"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 45.4059829059829,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fog lights",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "extendedDescription": "Fog lights",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 49.67948717948718,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 54.166666666666664,
+          "width": 2.4572649572649574,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windshield wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 58.440170940170944,
+          "width": 2.4572649572649574,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Interior lamps",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ],
+        "extendedDescription": "Interior lights"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 62.82051282051282,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Rear fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear fog lights",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 67.09401709401709,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 71.47435897435898,
+          "width": 2.6709401709401708,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "License plate lamp",
+        "relatedEntities": [
+          "LUZ_PATENTE"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 75.74786324786325,
+          "width": 2.6709401709401708,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 80.34188034188034,
+          "width": 2.4572649572649574,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 84.50854700854701,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Audio system, central locking, alarm, e / m automatic transmission selector lock valve (\"P\")",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 88.78205128205127,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Air conditioning, audio system, multifunction display, cooling fan motor, alarm, instrument cluster indicators",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "ESTEREO",
+          "COMPUTADORA_ABORDO",
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)",
+          "LUZ_TESTIGO",
+          "INDICADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/opel/vectra/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 61.49863547758286,
+          "left": 93.26923076923077,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 19.230769230769234,
+          "width": 2.6709401709401708,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Left headlight - low beam, headlight range control",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)",
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 19.230769230769234,
+          "width": 2.6709401709401708,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Left headlight - low beam, headlight range control",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)",
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 23.504273504273502,
+          "width": 2.6709401709401708,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Front left / rear left side lamps",
+        "relatedEntities": [
+          "LUCES_LATERALES(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 28.0982905982906,
+          "width": 2.4572649572649574,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "LH headlamp - high beam",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)",
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F27",
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 32.26495726495727,
+          "width": 2.564102564102564,
+          "height": 13.204678362573105
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 36.75213675213676,
+          "width": 2.564102564102564,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Coolant Heater (Diesel)"
+      },
+      {
+        "id": "F29",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 41.02564102564102,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Power door mirrors, power windows, dipped headlights, turn signals / hazard warning lights, interior light, instrument cluster, instrument cluster indicators, reversing lights, sunroof",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO",
+          "LEVANTAVIDRIOS",
+          "LUZ_DIRECCIONAL",
+          "LUZ_DE_HABITACULO",
+          "TABLERO",
+          "LUZ_TESTIGO",
+          "INDICADOR",
+          "LUZ_RETROCESO",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/sunroof-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 45.4059829059829,
+          "width": 2.4572649572649574,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Hatch",
+        "relatedEntities": [
+          "TIPO_DE_VEHICULO"
+        ]
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 49.67948717948718,
+          "width": 2.564102564102564,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Illumination of a combination of devices"
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 54.166666666666664,
+          "width": 2.3504273504273505,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Daytime running lights",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "extendedDescription": "Daytime running lights",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 58.440170940170944,
+          "width": 2.4572649572649574,
+          "height": 13.399610136452248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Trailer electrical connector"
+      },
+      {
+        "id": "F34",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 62.82051282051282,
+          "width": 2.564102564102564,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "CD changer audio system"
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 67.09401709401709,
+          "width": 2.564102564102564,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Anti-lock braking system (ABS), automatic transmission control system, traction control system (TCS)",
+        "relatedEntities": [
+          "MENSAJE_SERVICE_CONTROL_TRACCION",
+          "CONTROL_DE_TRACCION"
+        ]
+      },
+      {
+        "id": "F36",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 71.47435897435898,
+          "width": 2.6709401709401708,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Air conditioning, seat heaters",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F37",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 75.74786324786325,
+          "width": 2.6709401709401708,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cigarette-lighter-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 80.34188034188034,
+          "width": 2.4572649572649574,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Air conditioning, cruise control, multifunction display, cooling fan motor, brake lights",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "CRUISE_CONTROL",
+          "COMPUTADORA_ABORDO",
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)",
+          "TESTIGO_FRENO_DE_MANO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F39",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 84.50854700854701,
+          "width": 2.564102564102564,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "automatic transmission",
+        "relatedEntities": [
+          "CAJA_AUTOMATICA"
+        ]
+      },
+      {
+        "id": "F40",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 88.99572649572649,
+          "width": 2.3504273504273505,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Air conditioning, cooling fan motor",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F41",
+        "layout": {
+          "top": 80.21208576998052,
+          "left": 93.26923076923077,
+          "width": 2.564102564102564,
+          "height": 13.204678362573105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Heated door mirrors",
+        "relatedEntities": [
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "R14",
+        "kind": {
+          "notUsed": false,
+          "type": "",
+          "format": ""
+        },
+        "description": "Multifunctional control unit",
+        "relatedEntities": []
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5480769230769231,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/eb3711d3_opel-vectra-2000.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/04ac761c_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/46499c22_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/463bd6f0_image.png"
+      }
+    ],
+    "imageClusters": [
+      "61fd88a737dc92000493dc2b"
+    ],
+    "boxName": "Interior Fuse Box",
+    "templateId": "646fc0af9bf8da1d40b5d43f",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-opel-vectra-2001-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "10",
+        "layout": {
+          "top": 80.81877286423057,
+          "left": 10.492772016479728,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay of the pump of the air supply system to the release"
+      },
+      {
+        "id": "11a",
+        "layout": {
+          "top": 69.69455990229764,
+          "left": 10.19277201647973,
+          "width": 37.731103005911194,
+          "height": 6.992362433214992
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuse engine control (F59)"
+      },
+      {
+        "id": "11b",
+        "layout": {
+          "top": 61.03195045158613,
+          "left": 10.19277201647973,
+          "width": 37.34998075332624,
+          "height": 7.310197089270232
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel heater fuse (F56)"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 42.36077948154811,
+          "left": 10.492772016479728,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuel heater relay",
+        "relatedEntities": [
+          "RELAY(protects=CALENTADOR_COMBUSTIBLE)"
+        ],
+        "extendedDescription": "Fuel heater"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 23.131782790206877,
+          "left": 10.492772016479728,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay of delay of a washer of headlights"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 3.902786098865649,
+          "left": 10.492772016479728,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 80.81877286423057,
+          "left": 53.17846430599544,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 61.589776172889344,
+          "left": 53.17846430599544,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay of the glow plug control unit"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 42.36077948154811,
+          "left": 53.17846430599544,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay of the glow plug control unit"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 23.131782790206877,
+          "left": 53.17846430599544,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay of the glow plug control unit"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 3.902786098865649,
+          "left": 53.17846430599544,
+          "width": 37.731103005911216,
+          "height": 15.097146162623279
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay of the glow plug control unit"
+      }
+    ],
+    "boxName": "Engine compartment Box. 1",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/a4686385_opel-vectra-1995-b.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ed86f6f2_image.jpg"
+      }
+    ],
+    "templateId": "6897b558ba08697f00aafadf",
+    "boxAspectRatio": 2.3981900452488687,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-opel-vectra-2001-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 14.155496474654694,
+          "left": 83.0457170026526,
+          "width": 13.829291229068378,
+          "height": 74.13984053320856
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "A/C compressor electromagnetic clutch relay"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 14.155496474654694,
+          "left": 67.00373917693327,
+          "width": 13.829291229068378,
+          "height": 74.13984053320856
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 14.155496474654694,
+          "left": 50.96176135121395,
+          "width": 13.829291229068378,
+          "height": 74.13984053320856
+        },
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Cooling fan timer."
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 14.155496474654694,
+          "left": 34.91978352549463,
+          "width": 13.829291229068378,
+          "height": 74.13984053320856
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 14.155496474654694,
+          "left": 18.87780569977531,
+          "width": 13.829291229068378,
+          "height": 74.13984053320856
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 14.155496474654694,
+          "left": 2.835827874055985,
+          "width": 13.829291229068378,
+          "height": 74.13984053320856
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "Electric cooling fan"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b5eb71d4_opel-vectra-1995-b.jpg"
+    },
+    "processed": false,
+    "boxName": "Engine compartment Box. 2",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/67184163_image.jpg"
+      }
+    ],
+    "templateId": "6897b641ba08697f00aafaf9",
+    "boxAspectRatio": 0.19130434782608696,
+    "imageClusters": [
+      "663ba56f84787c6d2d9b9983"
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-opel-vectra-2001-genid-g2-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "7",
+        "layout": {
+          "top": 30.328336721434457,
+          "left": 68.20043754462407,
+          "width": 18.856525639382667,
+          "height": 36.50441736940461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 30.328336721434457,
+          "left": 43.8517199714406,
+          "width": 18.856525639382667,
+          "height": 36.50441736940461
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-relay",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "9a",
+        "layout": {
+          "top": 30.99814254472629,
+          "left": 26.825924976658182,
+          "width": 12.81511451220182,
+          "height": 35.164805722820944
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling fan fuse",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-relay",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "9b",
+        "layout": {
+          "top": 30.99814254472629,
+          "left": 13.095445142156233,
+          "width": 12.81511451220182,
+          "height": 35.164805722820944
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling fan fuse",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-relay",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      }
+    ],
+    "boxName": "Engine compartment Box. 3 (Type 1)",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/a23bfaeb_opel-vectra-1995-b.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3050e9c7_image.jpg"
+      }
+    ],
+    "templateId": "6897b6dfba08697f00aafb10",
+    "boxAspectRatio": 0.5466666666666666,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-opel-vectra-2001-genid-g2-3.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Cooling fan motor",
+        "layout": {
+          "top": 8.512038760415367,
+          "left": 39.84564535375327,
+          "width": 9.614650092590395,
+          "height": 81.79788989172178
+        },
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Compressor",
+        "layout": {
+          "top": 8.512038760415367,
+          "left": 54.07005918936646,
+          "width": 9.614650092590395,
+          "height": 81.79788989172178
+        },
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "extendedDescription": "Air conditioning compressor",
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Cooling fan motor",
+        "layout": {
+          "top": 8.512038760415367,
+          "left": 72.3774066259427,
+          "width": 9.614650092590395,
+          "height": 81.79788989172178
+        },
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Cooling fan motor",
+        "layout": {
+          "top": 8.512038760415367,
+          "left": 85.81157524846627,
+          "width": 9.614650092590395,
+          "height": 81.79788989172178
+        },
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/opel/vectra/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.38,
+    "boxName": "Engine compartment Box. 3 (Type 2)",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/4967691a_opel-vectra-1995-b.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1573bafc_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "6657acfb7d174ea83edf889e"
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-opel-vectra-2001-genid-g2-4.webp"
+  }
+]

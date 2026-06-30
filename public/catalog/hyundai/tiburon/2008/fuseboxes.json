@@ -1,0 +1,1702 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 1.5771414620535713,
+          "left": 8.975753744567154,
+          "width": 17.486327037358862,
+          "height": 21.577142857142857
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 43.085712890625,
+          "left": 5.747508753054748,
+          "width": 13.720041213927722,
+          "height": 19.200000000000003
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 66.06964417995968,
+          "left": 9.53911933180752,
+          "width": 3.4777549739917513,
+          "height": 5.518988491308865
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 66.06964417995968,
+          "left": 15.729928471537766,
+          "width": 3.4777549739917513,
+          "height": 5.518988491308865
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 46.02079809235512,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(Ignition switch, Start relay) Ignition switch; Starter system",
+        "unmappedId": "IGN"
+      },
+      {
+        "layout": {
+          "top": 52.87756978364723,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Engine control relay, Fuel pump relay, A/T control relay, Generator, PCM[2.0L]",
+        "relatedEntities": [
+          "RELAY(protects=ECU)",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "ALTERNADOR",
+          "PCM"
+        ],
+        "unmappedId": "ECU 1",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/alternator-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/fuel-pump-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.73434147493934,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(Radiator fan relay) Radiator fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "unmappedId": "RAD",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/cooling-fan-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 66.59111316623145,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(Condenser fan relay) AC condenser fan",
+        "unmappedId": "COND"
+      },
+      {
+        "layout": {
+          "top": 73.44788485752356,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "BCM BOX(Tail lamp relay, Power connector, Fuse(2,7,12,13,19,20,24)",
+        "unmappedId": "BATT 2"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 40.12731286640346,
+          "width": 3.2461465525299165,
+          "height": 5.5700216274126975
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(Injector) Fuel injectors",
+        "unmappedId": "INJ"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 46.13119015726039,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Oxygen sensor,Camshaft position sensor, Idle speed control actuator",
+        "relatedEntities": [
+          "SENSOR_OXIGENO",
+          "SENSOR_ARBOL_DE_LEVAS"
+        ],
+        "unmappedId": "SNSR"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 52.34115688780608,
+          "width": 3.2461465525299165,
+          "height": 5.5700216274126975
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(DRL control module) Daytime running lights",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "unmappedId": "DRL",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 58.345034178663006,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "HID [Some models]",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 64.45195618936432,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(Front fog lamp relay) Front fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "unmappedId": "F/FOG",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 70.55887820006562,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TCM(2.7L),ECM[2.7L]",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION",
+          "ECU"
+        ],
+        "unmappedId": "ECU 2"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 76.66580021076693,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn relay,A/C relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)",
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "unmappedId": "HORN,A/CON",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/horn-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 82.77272222146823,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Head lamp relay(High)",
+        "relatedEntities": [
+          "RELAY",
+          "MARCHA_HIGH"
+        ],
+        "unmappedId": "H/LP (HI)"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 88.98268895201392,
+          "width": 3.2461465525299165,
+          "height": 5.5700216274126975
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Head lamp relay(Low)",
+        "relatedEntities": [
+          "RELAY",
+          "MARCHA_LOW"
+        ],
+        "unmappedId": "H/LP (LO)"
+      },
+      {
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 51.62877646326825,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS/ESP control module,ESP Air bleeding connector",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO"
+        ],
+        "unmappedId": "ABS 1"
+      },
+      {
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 61.89196007600363,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS/ESP control module, ESP Air bleeding connector",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO"
+        ],
+        "unmappedId": "ABS 2"
+      },
+      {
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 72.15514368873902,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(Blower relay) AC blower motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "unmappedId": "BLOWER"
+      },
+      {
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 82.41832730147439,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 83.30214689237071,
+          "left": 7.623845825656597,
+          "width": 17.815565409840328,
+          "height": 9.053300110237636,
+          "rotation": 45
+        },
+        "id": "F21",
+        "kind": {
+          "amp": 120,
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "notUsed": false
+        },
+        "description": "(Generator[2.0L]) Battery and charging system",
+        "relatedEntities": [
+          "BATERIA",
+          "ALTERNADOR"
+        ],
+        "unmappedId": "BATT 1",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/alternator-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 90.09697718345495,
+          "left": 40.32963807690213,
+          "width": 9.631692820030427,
+          "height": 6.533165469292721
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 1",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 35.07073409262576,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 2",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 42.379122059521904,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 3",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 49.68751002641805,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 4",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 56.995897993314195,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 5",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 64.30428596021034,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 6",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 71.61267392710648,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 7",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 78.92106189400263,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 8",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 88.60579686853984,
+          "width": 7.801592062821654,
+          "height": 19.93142857142857
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 20.80853111281294,
+          "left": 32.51868295531486,
+          "width": 16.988200467530824,
+          "height": 8.9565694695754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "notUsed": false
+        },
+        "description": "(H/LP (LO)) Headlights low beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA)"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 20.80853111281294,
+          "left": 53.41276307080928,
+          "width": 16.988200467530824,
+          "height": 8.9565694695754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "notUsed": false
+        },
+        "description": "(RAD) Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 31.429526141025743,
+          "left": 24.926196801768015,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "notUsed": false
+        },
+        "description": "(COND 1) AC condenser fan"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 31.42952614102574,
+          "left": 41.29972900122946,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "notUsed": false
+        },
+        "description": "(F/PUMP) Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/fuel-pump-relay",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 31.42952614102574,
+          "left": 57.673261200690895,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "notUsed": false
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/horn-relay",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 45.77452324141796,
+          "left": 41.29972900122946,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "notUsed": false
+        },
+        "description": "(A/CON) Air conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/air-conditioning-relay",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 45.77452324141796,
+          "left": 57.673261200690895,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cream",
+          "notUsed": false
+        },
+        "description": "(WIPER) Wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 60.11952034181018,
+          "left": 41.29972900122946,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "notUsed": false
+        },
+        "description": "(H/LP (HI)) Headlights high beam"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 60.11952034181018,
+          "left": 57.673261200690895,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "notUsed": false
+        },
+        "description": "(F/FOG) Front fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 22.454245398527224,
+          "left": 74.76409855825852,
+          "width": 20.11288955192281,
+          "height": 13.311510798901805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "description": "(START) Starter system",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/starter-relay",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 40.34210511917533,
+          "left": 74.76409855825852,
+          "width": 20.11288955192281,
+          "height": 13.311510798901805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "description": "(MAIN) Main fuse",
+        "relatedEntities": [
+          "FUSIBLE_PRINCIPAL"
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 58.229964839823424,
+          "left": 74.76409855825852,
+          "width": 20.11288955192281,
+          "height": 13.311510798901805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "cyan",
+          "notUsed": false
+        },
+        "description": "(COND 2) AC condenser fan"
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Box",
+    "boxDescription": "NOTE: Not all fuse panel descriptions in this manual may be applicable to your vehicle. It is accurate at the time of printing. When you inspect the fuse box on your vehicle, refer to the fuse box label. ",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/68292254ae31cf96d89557e8/fragment-68292254ae31cf96d89557e8-684dd791a5.jpg",
+      "source": "6829235cae31cf96d89557f8"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/68292254ae31cf96d89557e8/fragment-68292254ae31cf96d89557e8-a731ce1dcd.jpg",
+        "source": "68292364ae31cf96d89557fa"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f66f8b9d_image.jpg"
+      }
+    ],
+    "boxAspectRatio": 1.4712041884816753,
+    "processed": false,
+    "templateId": "614cd4823f549d0004e394b0",
+    "templateRenameMap": {
+      "BATT": "F21",
+      "BATT2": "F7",
+      "COND": "F6",
+      "RAD": "F5",
+      "ECU": "F4",
+      "IGN": "F3",
+      "ABS.1": "F17",
+      "ABS.2": "F18",
+      "BLOWER": "F19",
+      "INJ.": "F8",
+      "SNSR": "F9",
+      "DRL": "F10",
+      "F/FOG": "F12",
+      "ECU2": "F13",
+      "HORN & A/C": "F14",
+      "H/LP (HI)": "F15",
+      "H/LP (LO)": "F16",
+      "H/LP(LO)": "R1",
+      "RAD_R": "R2",
+      "COND 1": "R3",
+      "F/PUMP": "R4",
+      "HORN_R": "R5",
+      "A/CON": "R6",
+      "WIPER": "R7",
+      "H/LP(HI)": "R8",
+      "F/FOG_R": "R9",
+      "START": "R10",
+      "MAIN": "R11",
+      "COND2": "R12",
+      "BATT 1": "F21",
+      "BATT 2": "F7",
+      "ECU 1": "F4",
+      "ABS 1": "F17",
+      "ABS 2": "F18",
+      "INJ": "F8",
+      "ECU 2": "F13",
+      "HORN,A/CON": "F14",
+      "A1": "F11"
+    },
+    "useAcronyms": true,
+    "imageClusters": [
+      "61ead06f05876e00041791a5"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-tiburon-2008-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 30.879804662945475,
+          "left": 35.72173385500579,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition coil [2.7L], Electronic chrome mirror",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 30.879804662945475,
+          "left": 45.26231447637209,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "AMP",
+        "relatedEntities": [
+          "AMPLIFICADOR"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 30.879804662945475,
+          "left": 54.88174287146869,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Back-up lamp switch, Transaxle range switch, Cruise control module, Cluster R postion",
+        "relatedEntities": [
+          "SENSOR_POSICION_CAMBIOS",
+          "CRUISE_CONTROL"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 30.879804662945475,
+          "left": 64.42232349283502,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster (A/BAG IND.)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 30.879804662945475,
+          "left": 74.04175188793167,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "SRS control module, S/Buckle DRV, ASS",
+        "relatedEntities": [
+          "TESTIGO_SRS",
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 37.88776551728807,
+          "left": 26.102305459909147,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Mirror defogger",
+        "relatedEntities": [
+          "DESEMPANADOR(of=ESPEJO_LATERAL)"
+        ],
+        "extendedDescription": "Mirror heater"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 37.88776551728807,
+          "left": 35.72173385500579,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_BALIZA)"
+        ],
+        "extendedDescription": "Hazard light"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 37.88776551728807,
+          "left": 45.26231447637209,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear wiper motor, Rear intermittent wiper relay",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 37.88776551728807,
+          "left": 54.88174287146869,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right tail lamps, Glove box lamp, Room lamp, C/Light tail",
+        "relatedEntities": [
+          "LUCES_TRASERAS(ubicacion=LADO_DERECHO)",
+          "LUZ_DE_GUANTERA",
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.88776551728807,
+          "left": 64.42232349283502,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front wiper motor, Front wiper relay",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))",
+          "RELAY(protects=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 37.88776551728807,
+          "left": 74.04175188793167,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 44.895726371630595,
+          "left": 26.102305459909147,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Defogger relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 44.895726371630595,
+          "left": 35.72173385500579,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Stop lamp switch, Burglar alarm horn relay, Folding/Unfolding rely, TPMS",
+        "relatedEntities": [
+          "TESTIGO_PRESION_DE_NEUMATICOS"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 44.895726371630595,
+          "left": 45.26231447637209,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left tail lamps",
+        "relatedEntities": [
+          "LUCES_TRASERAS(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 44.895726371630595,
+          "left": 54.88174287146869,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C control module, Blower relay, Sun roof, Ambieut Display",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/sunroof-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 44.895726371630595,
+          "left": 64.42232349283502,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ECM, Multi gauge unit, TCM, Vehicle speed sensor, TPMS",
+        "relatedEntities": [
+          "ECU",
+          "MODULO_DE_TRANSMISION",
+          "SENSOR_DE_VELOCIDAD",
+          "TESTIGO_PRESION_DE_NEUMATICOS"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 44.895726371630595,
+          "left": 74.04175188793167,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster (Power), Per-excitation resister, DRL Control module, Generator",
+        "relatedEntities": [
+          "TABLERO",
+          "MODO_POWER",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/alternator-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 51.9036872259732,
+          "left": 45.26231447637209,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Trunk lid switch"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 51.9036872259732,
+          "left": 54.88174287146869,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "AQS sensor, Head lamp relay, DRL Control module",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "RELAY(protects=LAMPARA(of=LUCES_DELANTERAS))",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 51.9036872259732,
+          "left": 64.42232349283502,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear fog lights",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 51.9036872259732,
+          "left": 74.04175188793167,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Cigarette lighter, Outside mirror switch",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 58.91164808031583,
+          "left": 45.26231447637209,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Sunroof, Power door lock/Unlock relay",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/sunroof-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 58.91164808031583,
+          "left": 54.88174287146869,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Seat warmer",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 58.91164808031583,
+          "left": 64.42232349283502,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ESC/ABS control module"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 58.91164808031583,
+          "left": 74.04175188793167,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Audio, Digital clock",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/radio-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 53.26854473591126,
+          "left": 19.875975111647588,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Room lamp, Clock, Audio, Data link connector, Multi gauge unit, Cluster, A/Con",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "RELOJ",
+          "ESTEREO",
+          "CONECTOR_OBD",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tiburon/info/fusebox/2008/radio-fuse",
+            "urlWithAnchor": "/hyundai/tiburon/info/fusebox/2008/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 51.73976308129743,
+          "left": 34.84930419268795,
+          "width": 8.77694893771271,
+          "height": 8.464448197753567
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power window relay",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.91960893465841,
+          "left": 45.26231447637209,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        }
+      },
+      {
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.91960893465841,
+          "left": 54.88174287146869,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        }
+      },
+      {
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.91960893465841,
+          "left": 64.42232349283502,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        }
+      },
+      {
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.91960893465841,
+          "left": 74.04175188793167,
+          "width": 7.077770408900414,
+          "height": 2.9364151544399713
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 6.6936 82.1696 A 0.4616 0.4616 0 0 1 6.2320 81.7080 L 6.2320 46.2781 A 0.4616 0.4616 0 0 0 5.7703 45.8165 L 5.4818 45.8165 A 0.4616 0.4616 0 0 1 5.0202 45.3549 L 5.0202 38.0265 A 0.4616 0.4616 0 0 1 5.4818 37.5649 L 5.7703 37.5649 A 0.4616 0.4616 0 0 0 6.2320 37.1033 L 6.2320 27.2937 A 0.4616 0.4616 0 0 0 5.7703 26.8321 L 2.3081 26.8321 A 0.4616 0.4616 0 0 0 1.8465 27.2937 L 1.8465 28.5632 A 0.4616 0.4616 0 0 1 1.3849 29.0248 L 0.4616 29.0248 A 0.4616 0.4616 0 0 1 0.0000 28.5632 L 0.0000 20.0808 A 0.4616 0.4616 0 0 1 0.4616 19.6192 L 1.3849 19.6192 A 0.4616 0.4616 0 0 1 1.8465 20.0808 L 1.8465 21.0040 A 0.4616 0.4616 0 0 0 2.3081 21.4657 L 5.7703 21.4657 A 0.4616 0.4616 0 0 0 6.2320 21.0040 L 6.2320 11.5984 A 0.4616 0.4616 0 0 1 6.6936 11.1368 L 22.0427 11.1368 A 0.4616 0.4616 0 0 0 22.5043 10.6751 L 22.5043 10.2135 A 0.4616 0.4616 0 0 1 22.9660 9.7519 L 30.3520 9.7519 A 0.4616 0.4616 0 0 1 30.8136 10.2135 L 30.8136 10.6751 A 0.4616 0.4616 0 0 0 31.2752 11.1368 L 44.4893 11.1368 A 0.4616 0.4616 0 0 0 44.9510 10.6751 L 44.9510 0.4616 A 0.4616 0.4616 0 0 1 45.4126 0.0000 L 58.5113 0.0000 A 0.4616 0.4616 0 0 1 58.9729 0.4616 L 58.9729 10.6751 A 0.4616 0.4616 0 0 0 59.4345 11.1368 L 69.3018 11.1368 A 0.4616 0.4616 0 0 0 69.7634 10.6751 L 69.7634 10.2135 A 0.4616 0.4616 0 0 1 70.2250 9.7519 L 77.0917 9.7519 A 0.4616 0.4616 0 0 1 77.5534 10.2135 L 77.5534 10.6751 A 0.4616 0.4616 0 0 0 78.0150 11.1368 L 93.1333 11.1368 A 0.4616 0.4616 0 0 1 93.5949 11.5984 L 93.5949 21.0040 A 0.4616 0.4616 0 0 0 94.0565 21.4657 L 98.2112 21.4657 A 0.4616 0.4616 0 0 0 98.6728 21.0040 L 98.6728 20.0808 A 0.4616 0.4616 0 0 1 99.1344 19.6192 L 99.5384 19.6192 A 0.4616 0.4616 0 0 1 100.0000 20.0808 L 100.0000 28.5632 A 0.4616 0.4616 0 0 1 99.5384 29.0248 L 99.1344 29.0248 A 0.4616 0.4616 0 0 1 98.6728 28.5632 L 98.6728 27.2937 A 0.4616 0.4616 0 0 0 98.2112 26.8321 L 94.0565 26.8321 A 0.4616 0.4616 0 0 0 93.5949 27.2937 L 93.5949 37.1033 A 0.4616 0.4616 0 0 0 94.0565 37.5649 L 94.4028 37.5649 A 0.4616 0.4616 0 0 1 94.8644 38.0265 L 94.8644 45.3549 A 0.4616 0.4616 0 0 1 94.4028 45.8165 L 94.0565 45.8165 A 0.4616 0.4616 0 0 0 93.5949 46.2781 L 93.5949 81.7080 A 0.4616 0.4616 0 0 1 93.1333 82.1696 Z"
+        ],
+        "svgViewBoxH": 82.16964800923255,
+        "layout": {
+          "top": 4.391494149883831,
+          "left": 4.163364374876164,
+          "width": 91.56594676705635,
+          "height": 94.9521259415926
+        },
+        "ignoreAndCrop": true
+      },
+      {
+        "description": "",
+        "id": "camera_viewport",
+        "kind": {
+          "type": "misc",
+          "format": "camera-viewport"
+        },
+        "layout": {
+          "top": 3.3035846072394914,
+          "left": 3.8825078303984273,
+          "width": 92.18054933256676,
+          "height": 70.05587562636957
+        }
+      },
+      {
+        "description": "",
+        "id": "Fusepuller1",
+        "kind": {
+          "type": "fusepuller",
+          "format": ""
+        },
+        "layout": {
+          "top": 61.31503219956438,
+          "left": 29.349795574820984,
+          "width": 8.06452840078114,
+          "height": 11.110910486582025
+        }
+      },
+      {
+        "description": "",
+        "id": "Connector1",
+        "kind": {
+          "type": "connector",
+          "format": "obd2"
+        },
+        "layout": {
+          "top": 74.24163917980168,
+          "left": 52.87189417796608,
+          "width": 21.80946938179684,
+          "height": 12.029933954607605
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG2",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 66.0156 L 0.0000 8.5938 A 8.5937 8.5937 0 0 1 8.5938 0.0000 L 91.4063 0.0000 A 8.5937 8.5937 0 0 1 100.0000 8.5938 L 100.0000 66.0156 Z"
+        ],
+        "svgViewBoxH": 66.015625,
+        "layout": {
+          "top": 72.00008706440589,
+          "left": 49.48188999465323,
+          "width": 28.258507390606947,
+          "height": 23.54221535380798
+        },
+        "ignoreAndCrop": true,
+        "color": "#aaaaad"
+      }
+    ],
+    "boxName": " Inner Panel ",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/68292254ae31cf96d89557e8/fragment-68292254ae31cf96d89557e8-d003307d0b.jpg",
+      "source": "68292377ae31cf96d89557fc"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/68292254ae31cf96d89557e8/fragment-68292254ae31cf96d89557e8-25a4eac283.jpg",
+        "source": "68292380ae31cf96d89557fe"
+      }
+    ],
+    "boxAspectRatio": 0.7923976608187134,
+    "processed": false,
+    "imageClusters": [
+      "61ead0f105876e00041791a9"
+    ],
+    "templateId": "61e8d56d3749c80004e48d0d",
+    "templateRenameMap": {
+      "IG COIL": "1",
+      "AMP": "2",
+      "B/UP LAMP": "3",
+      "A/BAG IND": "4",
+      "A/BAG": "5",
+      "HTD MIR": "6",
+      "HAZARD": "7",
+      "R/WIPER": "8",
+      "TAIL-RH": "9",
+      "F/WIPER": "10",
+      "RR DEFOG": "12",
+      "STOP": "13",
+      "TAIL-LH": "14",
+      "A/CON": "15",
+      "ECU": "16",
+      "CLUSTER": "17",
+      "ROOM LP": "18",
+      "P/WINDOW": "19",
+      "T/GATE": "20",
+      "IGN": "21",
+      "RR FOG": "22",
+      "C/LIGHT": "23",
+      "S/ROOF": "24",
+      "S/HTR": "25",
+      "ABS": "26",
+      "AUDIO": "27"
+    },
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-tiburon-2008-genid-g2-1.webp"
+  }
+]

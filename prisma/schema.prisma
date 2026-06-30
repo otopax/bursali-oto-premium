@@ -1,20 +1,44 @@
 // 🚀 V5.0 FEATURE 4 & 5: Embedding Versioning ve Enterprise Knowledge Graph
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["postgresqlExtensions", "fullTextSearch"]
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  extensions = [vector]
 }
 
-// ----- MEVCUT TABLOLAR (Özet) -----
+// ----- SAAS & MULTI-TENANCY (Faz 23) -----
+model Tenant {
+  id               String   @id @default(uuid())
+  name             String   // e.g. "Ahmet Usta Garajı"
+  subdomain        String?  @unique // e.g. "ahmetusta.bursali-oto.com"
+  subscriptionId   String?
+  subscription     SubscriptionTier? @relation(fields: [subscriptionId], references: [id])
+  users            TenantUser[]
+  createdAt        DateTime @default(now())
+}
+
+model TenantUser {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  tenantId  String
+  tenant    Tenant   @relation(fields: [tenantId], references: [id])
+  role      TenantRole @default(MEMBER)
+  createdAt DateTime @default(now())
+  
+  @@unique([userId, tenantId])
+}
+
 model User {
   id             String    @id @default(uuid())
   email          String    @unique
-  role           Role      @default(MECHANIC)
-  subscriptionId String?
-  subscription   SubscriptionTier? @relation(fields: [subscriptionId], references: [id])
+  passwordHash   String?   // V5.0 Güvenlik: bcrytp hash
+  globalRole     Role      @default(MECHANIC)
+  tenants        TenantUser[]
   usageLogs      UsageLog[]
 }
 
@@ -25,7 +49,7 @@ model SubscriptionTier {
   price         Float
   currency      String    @default("TRY")
   features      Json      // Hangi özelliklerin açık olduğu
-  users         User[]
+  tenants       Tenant[]
 }
 
 model UsageLog {
@@ -78,13 +102,14 @@ model Vehicle {
   generation     String?  // e.g. "E210"
   yearStart      Int
   yearEnd        Int?
-  bodyType       String   // Sedan, Hatchback, SUV
-  fuelType       String   // Benzin, Dizel, Hybrid, Electric
+  bodyType       String?  // Sedan, Hatchback, SUV
+  fuelType       String?  // Benzin, Dizel, Hybrid, Electric
   engineDisplacement Float? // cc
   power          Int?     // HP
   engines        Engine[]
   embeddings     VectorEmbedding[]
   faultCodes     FaultCode[]
+  fuseBoxes      FuseBox[]
   createdAt      DateTime @default(now())
 
   @@unique([manufacturerId, model, generation, yearStart])
@@ -136,6 +161,12 @@ model FaultCode {
   sensor      Sensor?  @relation(fields: [sensorId], references: [id])
   repairVideos RepairVideo[]
   parts       Part[]   @relation("FaultCodeParts")
+  
+  // V5.0 Embedding Versioning Support
+  embedding        Unsupported("vector(3072)")?
+  embeddingModel   String?  // e.g. "gemini-embedding-001"
+  embeddingVersion Int?     // e.g. 1
+  
   createdAt   DateTime @default(now())
 
   @@index([code])
@@ -168,6 +199,35 @@ model Part {
   @@index([oemNumber])
 }
 
+// ----- YENİ: Sigorta ve Röle Tabloları (Faz 21) -----
+model FuseBox {
+  id              String   @id @default(uuid())
+  vehicleId       String
+  vehicle         Vehicle  @relation(fields: [vehicleId], references: [id])
+  name            String?
+  diagramImgUrl   String?
+  thumbnailUrl    String?
+  fuses           Fuse[]
+  createdAt       DateTime @default(now())
+
+  @@index([vehicleId])
+}
+
+model Fuse {
+  id              String   @id @default(uuid())
+  fuseBoxId       String
+  fuseBox         FuseBox  @relation(fields: [fuseBoxId], references: [id])
+  originalId      String?  // e.g. "1" or "R1"
+  type            String?  // "fuse", "relay", "connector"
+  format          String?  // "ato", "half", etc.
+  amperage        Float?
+  description     String?
+  isNotUsed       Boolean  @default(false)
+  createdAt       DateTime @default(now())
+
+  @@index([fuseBoxId])
+}
+
 // ----- YENİ: Outbox Event Tablosu (Transactional Outbox için) -----
 model OutboxEvent {
   id          String   @id @default(uuid())
@@ -185,4 +245,10 @@ enum Role {
   MECHANIC
   FLEET_OWNER
   ADMIN
+}
+
+enum TenantRole {
+  OWNER
+  ADMIN
+  MEMBER
 }

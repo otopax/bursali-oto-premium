@@ -1,0 +1,741 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 18.57638888888889,
+          "left": 26.71957671957672,
+          "width": 10.582010582010582,
+          "height": 1.9097222222222223
+        }
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.675857843137255,
+          "left": 26.71957671957672,
+          "width": 10.626102292768959,
+          "height": 1.8601190476190477
+        }
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 24.775326797385624,
+          "left": 26.71957671957672,
+          "width": 10.670194003527337,
+          "height": 1.8105158730158732
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR R/R) Rear right door",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 27.8499941643324,
+          "left": 26.71957671957672,
+          "width": 10.670194003527337,
+          "height": 1.8105158730158732
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(OBD) On-board diagnostics"
+      },
+      {
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 30.924661531279185,
+          "left": 26.71957671957672,
+          "width": 10.670194003527337,
+          "height": 1.8105158730158732
+        }
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 33.99932889822596,
+          "left": 26.71957671957672,
+          "width": 10.846560846560847,
+          "height": 1.8105158730158732
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR F/R) Front right door",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 37.086397058823536,
+          "left": 26.71957671957672,
+          "width": 10.846560846560847,
+          "height": 1.7857142857142856
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR R/L) Rear left door",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 40.17346521942111,
+          "left": 26.71957671957672,
+          "width": 10.890652557319223,
+          "height": 1.7609126984126984
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR F/L) Front left door lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "CERRADURA(of=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA)))"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 43.24813258636789,
+          "left": 26.71957671957672,
+          "width": 10.934744268077601,
+          "height": 1.7609126984126984
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(DOME CUT) Dome light and interior light",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 46.33520074696546,
+          "left": 26.71957671957672,
+          "width": 10.978835978835978,
+          "height": 1.7361111111111112
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(ECU-DCC NO.1) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 49.40986811391224,
+          "left": 26.71957671957672,
+          "width": 10.934744268077601,
+          "height": 1.7361111111111112
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-DCC NO.2) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 52.3357259570495,
+          "left": 26.71957671957672,
+          "width": 11.022927689594356,
+          "height": 2.0337301587301586
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(RADIO) Radio and audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/rav4-phv/info/fusebox/2023/radio-fuse",
+            "urlWithAnchor": "/toyota/rav4-phv/info/fusebox/2023/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.54680205415501,
+          "left": 26.71957671957672,
+          "width": 10.978835978835978,
+          "height": 1.7609126984126984
+        }
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 58.62146942110179,
+          "left": 26.71957671957672,
+          "width": 10.934744268077601,
+          "height": 1.7609126984126984
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(USB NO.1) USB charger",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 61.68373599439777,
+          "left": 26.71957671957672,
+          "width": 10.934744268077601,
+          "height": 1.7857142857142856
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(ECU-ACC) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.70880018674139,
+          "left": 26.71957671957672,
+          "width": 10.978835978835978,
+          "height": 1.8849206349206349
+        }
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 67.79586834733895,
+          "left": 26.71957671957672,
+          "width": 10.978835978835978,
+          "height": 1.8601190476190477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "DOOR BACK",
+        "relatedEntities": [
+          "PUERTA(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 70.88293650793653,
+          "left": 26.71957671957672,
+          "width": 10.934744268077601,
+          "height": 1.8353174603174605
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(FUEL OPN) Fuel lid opener"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 21.675857843137255,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.8601190476190477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(WIPER RR) Rear wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 27.800390989729227,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.8601190476190477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(EPS-IGR) Electric power steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 30.875944127651064,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.8601190476190477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-IGR NO.1) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 33.9514972655729,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.8601190476190477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-IGR NO.4) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 37.027050403494734,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.8601190476190477
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 40.15220671601974,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.7609126984126984
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-IGR NO.2) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 43.24016064759237,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.7361111111111112
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(A/BAG-IGR) Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 46.315713785514205,
+          "left": 40.65255731922399,
+          "width": 10.846560846560847,
+          "height": 1.7361111111111112
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(METER-IGR) Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 49.40366771708683,
+          "left": 40.65255731922399,
+          "width": 10.802469135802468,
+          "height": 1.711309523809524
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(ECU-IGR NO.3) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 52.44201847405628,
+          "left": 40.65255731922399,
+          "width": 10.846560846560847,
+          "height": 1.7857142857142856
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-B NO.2) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 55.52997240562891,
+          "left": 40.65255731922399,
+          "width": 10.846560846560847,
+          "height": 1.7609126984126984
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(STOP) Stop lights",
+        "relatedEntities": [
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/rav4-phv/info/fusebox/2023/brake-light-fuse",
+            "urlWithAnchor": "/toyota/rav4-phv/info/fusebox/2023/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 58.605525543550755,
+          "left": 40.65255731922399,
+          "width": 10.846560846560847,
+          "height": 1.7609126984126984
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(ECU-B NO.1) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 61.643876300520205,
+          "left": 40.65255731922399,
+          "width": 10.890652557319223,
+          "height": 1.8353174603174605
+        }
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 64.70702864479124,
+          "left": 40.65255731922399,
+          "width": 10.934744268077601,
+          "height": 1.8601190476190477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(AM2) Starter system",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/rav4-phv/info/fusebox/2023/starter-fuse",
+            "urlWithAnchor": "/toyota/rav4-phv/info/fusebox/2023/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 67.80738337001466,
+          "left": 40.65255731922399,
+          "width": 10.978835978835978,
+          "height": 1.8105158730158732
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(STRG LOCK) Steering lock"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 70.85813492063491,
+          "left": 40.65255731922399,
+          "width": 10.978835978835978,
+          "height": 1.8601190476190477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(HAZ) Hazard light",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 24.875992063492063,
+          "left": 56.261022927689595,
+          "width": 3.3509700176366843,
+          "height": 6.225198412698413
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(USB NO.2) USB charger",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 32.09118716931217,
+          "left": 56.261022927689595,
+          "width": 3.130511463844797,
+          "height": 6.076388888888888
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(DOME) Dome light and interior light",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 39.21957671957672,
+          "left": 56.261022927689595,
+          "width": 3.0864197530864197,
+          "height": 6.101190476190476
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(P/OUTLET NO.1) Cigar lighter / power outlet",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/rav4-phv/info/fusebox/2023/cigarette-lighter-fuse",
+            "urlWithAnchor": "/toyota/rav4-phv/info/fusebox/2023/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 46.36036706349207,
+          "left": 56.261022927689595,
+          "width": 3.0423280423280423,
+          "height": 6.101190476190476
+        }
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 53.48875661375662,
+          "left": 56.261022927689595,
+          "width": 3.0864197530864197,
+          "height": 6.125992063492063
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR DBL/L) Door double locking"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 60.567542989418,
+          "left": 56.261022927689595,
+          "width": 3.130511463844797,
+          "height": 6.25
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(STRG HTR) Heated steering wheel"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 67.73313492063494,
+          "left": 56.261022927689595,
+          "width": 3.1746031746031744,
+          "height": 6.200396825396826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(DCM) Data communication module (telematics system)"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/269899ec_toyota-rav4 phv.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 1.7777777777777777,
+    "imageClusters": [
+      "6716778da3fffd56c072fb55"
+    ],
+    "boxName": "Interior fuse panel",
+    "templateId": "6411aef158caca1621e8d33f",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/abf06c04_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/269899ec_toyota-rav4%20phv.jpg"
+      }
+    ],
+    "useAcronyms": true,
+    "boxScaleMultiplier": "0.9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-rav4-phv-2023-genid-g1-0.webp"
+  }
+]

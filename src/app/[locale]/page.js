@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Gallery from '@/components/Gallery';
 import TrustBadges from '@/components/TrustBadges';
+import Reviews from '../../components/Reviews';
 import { getTranslations } from 'next-intl/server';
 
 export default async function Home({ params }) {
@@ -11,26 +12,38 @@ export default async function Home({ params }) {
     <main>
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-bg"></div>
+        <div className="hero-bg">
+          <Image 
+            src="/bg.png" 
+            alt="Bursalı Oto Servis Fethiye" 
+            fill 
+            priority
+            quality={85}
+            style={{ objectFit: 'cover', zIndex: -2 }}
+          />
+        </div>
         <div className="hero-overlay"></div>
         
         <div className="container">
-          <div className="hero-content">
-            <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1rem' }}>
-               <span className="badge" style={{ background: 'linear-gradient(90deg, #d4af37 0%, #aa8022 100%)', color: '#111', fontWeight: 'bold', letterSpacing: '1px', border: 'none', padding: '0.6rem 1.2rem' }}>
-                 👑 1986'dan Beri: Babadan Oğula 40 Yıllık Ustalık Mirası
+          <div className="hero-content" style={{ maxWidth: '900px' }}>
+            <div style={{ display: 'flex', marginBottom: '2rem' }}>
+               <span className="badge" style={{ background: 'linear-gradient(90deg, rgba(212, 175, 55, 0.2) 0%, rgba(0,0,0,0) 100%)', color: 'var(--accent-gold)', fontWeight: 'bold', letterSpacing: '3px', borderLeft: '4px solid var(--accent-gold)', padding: '0.8rem 1.5rem', textTransform: 'uppercase', fontSize: '0.9rem', boxShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+                 👑 1986'DAN BERİ 40 YILLIK USTALIK MİRASI
                </span>
             </div>
-            <h1>Fethiye Premium Oto Servis:<br />{t('title')}</h1>
-            <p style={{ fontSize: '1.2rem', marginBottom: '2rem' }}>
+            <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: '1.3', marginBottom: '1.5rem', fontWeight: '900', letterSpacing: '-1px', textShadow: '0 10px 30px rgba(0,0,0,0.8)' }}>
+              <span style={{ color: '#fff' }}>Fethiye Premium Oto Servis:</span><br />
+              <span style={{ background: 'linear-gradient(to right, #d4af37, #f3e5ab, #d4af37)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', display: 'inline-block', filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.3))', marginTop: '0.2rem' }}>{t('title')}</span>
+            </h1>
+            <p style={{ fontSize: '1.3rem', marginBottom: '3rem', color: '#e2e8f0', lineHeight: '1.7', maxWidth: '750px', fontWeight: '400', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
               40 yıllık geleneksel Alman motor mekanik tecrübemizi, en son teknoloji Yapay Zeka arıza tespit cihazlarıyla birleştiriyoruz. {t('subtitle')}
             </p>
-            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-              <a href="tel:+905548812021" className="btn btn-primary" title="Acil Yol Yardım Hattı">
-                Acil Yol Yardım Hattı
+            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
+              <a href="tel:+905548812021" className="btn" style={{ background: 'linear-gradient(135deg, #d4af37 0%, #aa8022 100%)', color: '#000', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', boxShadow: '0 10px 25px rgba(212,175,55,0.3), inset 0 2px 0 rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', border: 'none', transition: 'transform 0.2s' }} title="Acil Yol Yardım Hattı">
+                <span style={{ fontSize: '1.5rem' }}>📞</span> Acil Yol Yardım Hattı
               </a>
-              <a href="https://wa.me/905548812021" className="btn btn-gold" target="_blank" rel="noopener noreferrer" title="WhatsApp ile İletişime Geç">
-                WhatsApp ile İletişime Geç
+              <a href="https://wa.me/905548812021" className="btn" style={{ background: 'rgba(212,175,55,0.1)', backdropFilter: 'blur(10px)', color: 'var(--accent-gold)', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', border: '1px solid rgba(212,175,55,0.5)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', transition: 'transform 0.2s' }} target="_blank" rel="noopener noreferrer" title="WhatsApp ile İletişime Geç">
+                <span style={{ fontSize: '1.5rem' }}>💬</span> WhatsApp ile İletişime Geç
               </a>
             </div>
           </div>
@@ -183,38 +196,7 @@ export default async function Home({ params }) {
           Gerçek müşteri deneyimleri ve 5 yıldızlı hizmet kalitemiz.
         </p>
 
-        <div className="grid">
-          <div className="review-card">
-            <div className="review-stars">★★★★★</div>
-            <p>"Volvo'muzla ilgili bize çok yardımcı oldular. Berlin'den sevgilerle..."</p>
-            <p style={{ color: 'var(--text-light)', fontWeight: 'bold', marginTop: '1rem' }}>- Brian Se</p>
-          </div>
-          
-          <div className="review-card">
-            <div className="review-stars">★★★★★</div>
-            <p>"Almanyadan Fethiye'ye geldim ve arabam arıza verdi. Herkesin tavsiye ettiği İbrahim ustaya gittim ve sorun çözüldü."</p>
-            <p style={{ color: 'var(--text-light)', fontWeight: 'bold', marginTop: '1rem' }}>- Ergün Baysal</p>
-          </div>
-
-          <div className="review-card">
-            <div className="review-stars">★★★★★</div>
-            <p>"Arabada sorunlar vardı w204 kasa (Mercedes) titizlikle ve özenle yaptılar teşekkürler."</p>
-            <p style={{ color: 'var(--text-light)', fontWeight: 'bold', marginTop: '1rem' }}>- Hasan CiL</p>
-          </div>
-
-          <div className="review-card">
-            <div className="review-stars">★★★★★</div>
-            <p>"Excellent car service! Quality, speed of repair, service -..."</p>
-            <p style={{ color: 'var(--text-light)', fontWeight: 'bold', marginTop: '1rem' }}>- Олена (Olena)</p>
-          </div>
-        </div>
-
-        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-          <a href="https://www.google.com/search?sca_esv=00e45183e994fb97&sxsrf=APpeQnv8FzpveGzDWHGHalGPNR3v8pSFEg:1782747111051&si=APenkKnzv9m99ToiohAuzpadUwbOz34nZJ3j2Ukmo5XOUYWApobhvIamGYh507O_hWfQvhj0DJAJqLoCPOsFIYSpxj48vln82opMX7nttH1izvFFGDRTtuNp-__XR2bKs148BG5cuUcfem3FfDsSlCmm2Kt0LELi1g%3D%3D&q=BURSALI+OTO+SERV%C4%B0S+Yorumlar&sa=X&ved=2ahUKEwiQ8JzC4qyVAxVUVPEDHYvDJxEQ0bkNegQIJRAI&biw=1536&bih=695&dpr=1.25" target="_blank" rel="noreferrer" className="btn btn-gold" style={{ padding: '1rem 2rem', fontSize: '1.2rem', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
-            Müşterimiz Misiniz? Bizi Değerlendirin
-          </a>
-        </div>
+        <Reviews />
       </section>
 
       {/* Popular SEO Subpages */}

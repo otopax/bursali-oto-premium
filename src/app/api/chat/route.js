@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { google } from '@ai-sdk/google';
 import { streamText, tool } from 'ai';
 import { z } from 'zod';
@@ -185,3 +186,4 @@ export async function POST(req) {
          result.toUIMessageStreamResponse ? result.toUIMessageStreamResponse() : 
          result.toTextStreamResponse();
 }
+

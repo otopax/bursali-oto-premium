@@ -1,0 +1,2403 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 67.98418972332016,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Body control module 1.",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 68.36981574446989,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Body control module 2.",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 37.90417933204495,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Fuel pump.",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/fuel-pump-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 19.960474308300398,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Powertrain control module power.",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 21.925954880500335,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Exhaust gas recirculation bypass valve [3.0L diesel]. Variable camshaft timing [3.0L gas] Camshaft position sensor [3.0L gas]. Vacuum solenoid valve [2.0L]."
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 18.181818181818183,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Heater positive crankcase ventilation valve [3.0L diesel] Variable oil pump [3.0L diesel]. Coolant pump. Turbocharger bypass valve (3.0L g gas). Active grille shutter motor. Cooling fan relays. A/C clutch solenoid. Auxiliary water pump. Aspirate valve control Auxiliary coolant pump motor [2.0L]",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/cooling-fan-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 20.066754231773995,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Ignition coils [3.0L gas] Glow plug control module [diesel]. Particulate matter sensor (diesel). Nitrous oxide sensor [diesel]. 4x4 relay coil."
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 30.8300395256917,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Front blower motor.",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA))",
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 34.88142292490119,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Rear window washer."
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 32.70750988142292,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Starter motor.",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/starter-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 41.8351812935311,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Anti-lock brake system module.",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 36.26482213438735,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 38.16396121238019,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Automatic headlamp leveling."
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 40.063100290373015,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Transmission control module. Transmission oil pump. Automatic transmission fluid pump [diesel].",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 64.96920249390605,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Driveline control module. Rear camera.",
+        "relatedEntities": [
+          "CAMARA_REVERSA"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 43.60726229668918,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Powertrain control module. Glow plug control module [2.0L, 3.0L diesel] Electronic power assist steering.",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 35.305844606733935,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Anti-lock brake system valves.",
+        "relatedEntities": [
+          "VALVULA(of=SISTEMA_ABS)"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 40.50251405735597,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Anti-lock brake system pump.",
+        "relatedEntities": [
+          "BOMBA_ABS"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 63.14229249011858,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Left-hand power seat.",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 21.419541366478125,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Right-hand power seat.",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 66.62730799301946,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Power point 1 - first row.",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 70.11232349592034,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Power point 2 - rear console.",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 73.59733899882121,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Rear cargo power outlet."
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 8.992094861660078,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 73.81422924901186,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Heated seats control module.",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "MODULO(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "MODULO(of=CALEFACCION_DE_ASIENTO)"
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 16.09514617731021,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Trailer tow brake module."
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 10.770750988142293,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Brake switch.",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 10.770750988142293,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "50",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 70.98357737164555,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Heated backlite.",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 61.26482213438735,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Driveline control module."
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 63.14229249011858,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Third row power seat."
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 10.770750988142293,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 15
+        },
+        "description": "Trailer tow backup lamp.",
+        "relatedEntities": [
+          "LUZ_RETROCESO(of=REMOLQUE)"
+        ]
+      },
+      {
+        "id": "60",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 73.59733899882121,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 25
+        },
+        "description": "Rear blower motor.",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA))",
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "61",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 21.419541366478125,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "62",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 68.623022501481,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Steering column lock.",
+        "relatedEntities": [
+          "BLOQUEO_COLUMAN_DIRECCION"
+        ]
+      },
+      {
+        "id": "63",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 32.70750988142292,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "64",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 32.70750988142292,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "65",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 16.304347826086957,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Trailer tow park lamp.",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(of=REMOLQUE)"
+        ]
+      },
+      {
+        "id": "66",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 70.44993250526848,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "69",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 43.47826086956522,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Wiper motor.",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "71",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 63.14229249011858,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 15
+        },
+        "description": "Rear window wiper.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "91",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 13.432948582726251,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Trailer tow module.",
+        "relatedEntities": [
+          "REMOLQUE"
+        ]
+      },
+      {
+        "id": "100",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 63.14229249011858,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Left-hand headlamps.",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/headlight-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "101",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 64.96920249390605,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Right-hand headlamps.",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/headlight-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "107",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 10.770750988142293,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Trailer tow module - battery charger.",
+        "relatedEntities": [
+          "REMOLQUE"
+        ]
+      },
+      {
+        "id": "120",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 34.88142292490119,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Water in fuel heater relay coils [diesel]."
+      },
+      {
+        "id": "122",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 81.55045654862411,
+          "left": 56.49538519055557,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "124",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 64.96920249390605,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "125",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 68.623022501481,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "139",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 70.44993250526848,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 5
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "140",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 72.27684250905595,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 5
+        },
+        "description": "USB smart charge port - rear console."
+      },
+      {
+        "id": "141",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 74.10375251284343,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 5
+        },
+        "description": "USB smart charge port - top."
+      },
+      {
+        "id": "146",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 14.489152285594974,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "158",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 68.623022501481,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "160",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 72.27684250905595,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Amplifier.",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ]
+      },
+      {
+        "id": "182",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 70.98357737164555,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Drive door module."
+      },
+      {
+        "id": "183",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 18.757343771894167,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Passenger door module.",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "202",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 65.75605411729424,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Body control module B+.",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=MODULO_CARROCERIA)"
+        ]
+      },
+      {
+        "id": "210",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 73.59733899882121,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Body control module start-stop."
+      },
+      {
+        "id": "211",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 12.629951636868633,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "212",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 16.348352934321316,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "213",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 18.207553583047655,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Selective catalytic reduction system heater 2 [2.0L, 3.0L diesel]."
+      },
+      {
+        "id": "214",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 20.066754231773995,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Selective catalytic reduction system heater 3 [diesel only]."
+      },
+      {
+        "id": "215",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 21.925954880500335,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Selective catalytic reduction system heater 1 [diesel only]."
+      },
+      {
+        "id": "216",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 32.70750988142292,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "217",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 37.90417933204495,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "218",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 43.10084878266697,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "219",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 34.48616600790514,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Rear heated seat module - right."
+      },
+      {
+        "id": "220",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 36.26482213438735,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Rear heated seat module - left."
+      },
+      {
+        "id": "221",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 40.063100290373015,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "222",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 63.14229249011858,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Accessory.",
+        "relatedEntities": [
+          "ACCESORIO"
+        ]
+      },
+      {
+        "id": "223",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 66.79611249769353,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "224",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 74.10375251284343,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 5
+        },
+        "description": "Rain sensor.",
+        "relatedEntities": [
+          "SENSOR_DE_LLUVIA"
+        ]
+      },
+      {
+        "id": "225",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 70.88731293276747,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "226",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 12.629951636868633,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "227",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 14.47778177027189,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "228",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 16.325611903675146,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "229",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 18.173442037078402,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "230",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 21.419541366478125,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Water in fuel heater [diesel]."
+      },
+      {
+        "id": "231",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 12.629951636868633,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "232",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 14.489152285594974,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "233",
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 16.348352934321316,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Advanced driver assistance system."
+      },
+      {
+        "id": "234",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 18.1734420370784,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "235",
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 21.925954880500335,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Crankcase ventilation heater [2.0L, 3.0L diesel]."
+      },
+      {
+        "id": "236",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 13.432948582726251,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Front windscreen defrost right-hand."
+      },
+      {
+        "id": "237",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 16.09514617731021,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "238",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 18.757343771894167,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Front windscreen defrost left-hand."
+      },
+      {
+        "id": "239",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 32.70750988142292,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Rear electronic differential lock."
+      },
+      {
+        "id": "240",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 35.305844606733935,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Positive temperature coefficient heater 2 [3.0L diesel]."
+      },
+      {
+        "id": "241",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 40.50251405735597,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Positive temperature coefficient heater 3 [3.0L diesel]."
+      },
+      {
+        "id": "242",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 43.10084878266697,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "243",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 45.89186955550592,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "244",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 63.14229249011858,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Fuel volume control valve [3.0L diesel]. Not used (spare) [2.0L, 3.0L gas]. Transmission control module."
+      },
+      {
+        "id": "245",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 66.79611249769353,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "246",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 65.75605411729424,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Power liftgate control module.",
+        "relatedEntities": [
+          "PORTON_TRASERO"
+        ]
+      },
+      {
+        "id": "247",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 34.48616600790514,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Trailer tow auxiliary."
+      },
+      {
+        "id": "248",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 43.10084878266697,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Automatic transmission fluid pump [diesel]."
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Positive temperature coefficient heater 1 [3.0L diesel]."
+      }
+    ],
+    "boxName": "Under Hood Fuse Box",
+    "processed": false,
+    "imageClusters": [
+      "646226f82e45748e20dabf9a"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/ff430f25_ford-everest-2023.jpg"
+    },
+    "boxAspectRatio": 0.6699604743083004,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4c1825c0_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9397931c_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/28f0d54e_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a5cfda88_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1b5723d4_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f8a54803_image.jpg"
+      }
+    ],
+    "templateId": "65898d4230b4035be1f15edf",
+    "templateRenameMap": {
+      "1": "1",
+      "2": "235",
+      "3": "3",
+      "4": "4",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "244",
+      "13": "13",
+      "14": "248",
+      "16": "16",
+      "18": "18",
+      "21": "23",
+      "22": "22",
+      "23": "21",
+      "24": "26",
+      "25": "25",
+      "26": "24",
+      "28": "28",
+      "29": "29",
+      "30": "30",
+      "31": "31",
+      "32": "32",
+      "33": "33",
+      "34": "34",
+      "36": "36",
+      "38": "38",
+      "40": "216",
+      "41": "246",
+      "42": "42",
+      "44": "44",
+      "48": "219",
+      "50": "50",
+      "51": "245",
+      "53": "239",
+      "54": "54",
+      "55": "65",
+      "58": "58",
+      "68": "62",
+      "69": "69",
+      "71": "71",
+      "78": "238",
+      "79": "236",
+      "83": "249",
+      "84": "240",
+      "85": "241",
+      "86": "213",
+      "88": "60",
+      "91": "91",
+      "92": "222",
+      "100": "100",
+      "101": "101",
+      "107": "107",
+      "109": "160",
+      "110": "247",
+      "120": "120",
+      "121": "230",
+      "124": "224",
+      "125": "125",
+      "131": "55",
+      "134": "124",
+      "136": "220",
+      "137": "233",
+      "139": "139",
+      "140": "140",
+      "141": "141",
+      "179": "215",
+      "180": "214",
+      "182": "182",
+      "183": "183",
+      "202": "202",
+      "210": "210"
+    },
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-everest-2023-genid-g3-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "1",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 11.826844175440671,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 16.952753902712917,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Inverter. Door lock switch, Power window switch Moonroof.",
+        "relatedEntities": [
+          "INVERTER",
+          "INTERRUPTOR(of=CIERRE_CENTRALIZADO)"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 22.34844835247321,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Wireless accessory charging module."
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "4",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 32.465375445773574,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "5",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 39.199038725692596,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 44.872883877134,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Alarm horn, Battery backup sounder."
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 44.872883877134,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 49.988455577137195,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Telematics modem, Power liftgate, Hands-free liftgate actuation module.",
+        "relatedEntities": [
+          "PORTON_TRASERO"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 49.999163472562806,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Combined sensor module."
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "10",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 55.10402727714039,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "11",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 55.12544306799161,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 60.21959897714358,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Climate control module, Gear shift module, Enhanced central gateway module, Rear auxiliary blower controller.",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 60.251722663420416,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Steering column control module, Instrument panel.",
+        "relatedEntities": [
+          "COLUMNA_DE_DIRECCION",
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 65.33517067714678,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": "15"
+        },
+        "description": "Not used.",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 65.37800225884922,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "On board diagnostic connector. SYNC.",
+        "relatedEntities": [
+          "SYNC"
+        ]
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "16",
+        "layout": {
+          "top": 31.104549249801376,
+          "left": 70.31284508781636,
+          "width": 2.839997589381687,
+          "height": 9.966061153262952
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 75.2531047626969,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Trailer brake switch, Adaptive front lighting module."
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 75.2531047626969,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Auxiliary switch, Tachograph.",
+        "relatedEntities": [
+          "INTERRUPTOR_AUXILIAR"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 80.51867646270009,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Headlamp switch pack."
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 80.33847551275144,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Ignition switch, Push button switch.",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 85.58424816270329,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 85.6238462628061,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 11.857428261118963,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 16.983337988391213,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Moonroof.",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/sunroof-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 22.37903243815139,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 27.39043919463175,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 32.49595953145187,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 39.228603341848114,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 44.972883877134,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Display. Tachograph.",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 50.116243762195914,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Brake switch.",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 55.25960364725782,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Terrain management switch, Integrated control module, Driver status monitor module, Radio frequency receiver module."
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 60.40296353231973,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Audio control module.",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/everest/info/fusebox/2023/radio-fuse",
+            "urlWithAnchor": "/ford/everest/info/fusebox/2023/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "33",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 65.54632341738164,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 70.68968330244354,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Run start relay."
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 75.83304318750545,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Not used (spare)."
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 80.97640307256736,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Parking aid module, Rear seat module.",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 86.11976295762928,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Electrochromatic mirror, Heated steering wheel control module.",
+        "relatedEntities": [
+          "ESPEJO_RETROVISOR_ELECTRICO_ANTIDESLUMBRANTE"
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 20.22444287128107,
+          "left": 3.1095644581706687,
+          "width": 6.317217637081323,
+          "height": 34.750154175746445
+        },
+        "kind": {
+          "format": "maxi-ford",
+          "type": "circuitbreaker",
+          "amp": 30
+        },
+        "description": "Power window switch.",
+        "relatedEntities": [
+          "INTERRUPTOR(of=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 0.6441 A 0.6441 0.6441 0 0 1 0.6441 0.0000 L 99.3559 0.0000 A 0.6441 0.6441 0 0 1 100.0000 0.6441 L 100.0000 44.3639 A 0.6441 0.6441 0 0 1 99.3559 45.0081 L 0.6441 45.0081 A 0.6441 0.6441 0 0 1 0.0000 44.3639 Z"
+        ],
+        "svgViewBoxH": 45.008051529790656,
+        "layout": {
+          "top": 10.010230067692575,
+          "left": 1.731360286700922,
+          "width": 94.32650203514935,
+          "height": 77.87040463182639
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxAspectRatio": 0.5451919108543128,
+    "boxName": "Body Control Module Fuse Box",
+    "processed": false,
+    "imageClusters": [
+      "635c269329ce12fd2ba18bea"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/c0df0a0e_ford-everest-2023.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/640a8c7a_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bc9dbc30_image.jpg"
+      }
+    ],
+    "templateId": "61391465c09d3500045b2236",
+    "backgroundColor": "#2e2e2e",
+    "boxScaleMultiplier": "",
+    "boxRotation": 90,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-everest-2023-genid-g3-1.webp"
+  }
+]

@@ -1,0 +1,1894 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 9.962296828220882,
+          "left": 5.421907772310798,
+          "width": 6.071501789910268,
+          "height": 7.9103423033039775
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(HEATER (R)) Rear ventilation relay"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 20.42003750038546,
+          "left": 5.421907772310798,
+          "width": 6.071501789910268,
+          "height": 7.9103423033039775
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(HEATER (F)) Front ventilation relay"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 30.74370457418895,
+          "left": 5.421907772310798,
+          "width": 6.071501789910268,
+          "height": 7.9103423033039775
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "(A/CON) Air-conditioning relay"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 72.05072611613127,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HEAD (H)) Headlamp high beam"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 75.52015571036571,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HEAD (L)) Headlamp low beam"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 78.98958530460015,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(P/WIN (L)) Power window main switch"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 82.4590148988346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(O: SEN) Air-conditioning relay, fan relay, fuel pump relay, engine control unit, O2-sensor, ISC-valve",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "ECU",
+          "SENSOR_OXIGENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/kia/carnival/info/fusebox/2001/fuel-pump-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 85.92844449306902,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(P/WIN (R)) Power window main switch"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 89.39787408730346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(INJ) Injector, purge solenoid, camshaft position sensor, MAF-sensor, crankshaft angle sensor",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER",
+          "SENSOR_ARBOL_DE_LEVAS",
+          "SENSOR_CAUDAL_DE_AIRE"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 72.05072611613127,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(FOG) Front fog lights (Optional)"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 75.52015571036571,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HORN) Horn relay",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/horn-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 78.98958530460015,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(TAIL) TNS relay"
+      },
+      {
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 82.4590148988346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        }
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 85.92844449306902,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(FUEL PUMP) Fuel pump relay",
+        "relatedEntities": [
+          "BOMBA",
+          "RELAY",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/fuel-pump-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 89.39787408730346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(R. FOG) Rear fog lights (Optional)"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 53.53621629557327,
+          "left": 23.47871179684913,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506,
+          "rotation": -45
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(AUDIO 2) Audio, front air-conditioning, electric antenna",
+        "relatedEntities": [
+          "ESTEREO",
+          "ANTENA_ELECTRICA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 34.912059323303524,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(BTN1) Interior lighting, brake lights, sunroof",
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/sunroof-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 40.87842688308548,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(IG KEY 2) Ignition key switch"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 46.84479444286743,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(IG KEY 1) Ignition key switch"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 52.81116200264938,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(EGI) Main relay"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 58.77752956243134,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(BTN2) Power window relay, electric seat adjustment, door lock, rear window defroster, emergency flashers",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)",
+          "DESEMPANADOR_TRASERO",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 64.7438971222133,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "(HEAD LAMP) Headlamp relay",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "RELAY",
+          "LAMPARA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 70.71026468199524,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(C/FAN) Headlamp relay"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 63.57219341062086,
+          "left": 12.887662925202248,
+          "width": 9.302542145684507,
+          "height": 11.153299081998066,
+          "rotation": 45
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 120
+        },
+        "description": "(ALT) For all circuit fuses"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 75.46878241991291,
+          "left": 5.975699701155945,
+          "width": 9.302542145684507,
+          "height": 11.153299081998066,
+          "rotation": 45
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 60
+        },
+        "description": "(ABS) ABS control unit (Optional)"
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 15.514793864629166,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 25.055725248773868,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "C/FAN Relay",
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 34.596656632918574,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "C/FAN (H) Relay",
+        "extendedDescription": "Radiator fan high speed"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 44.13758801706328,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "C/FAN (L) Relay"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 53.67851940120798,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FUEL PUMP Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/fuel-pump-relay",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 63.21945078535269,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HORN Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/horn-relay",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 25.055725248773868,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HEAD LAMP Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "RELAY(protects=LAMPARA(of=LUCES_DELANTERAS))"
+        ],
+        "extendedDescription": "Headlights"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 34.596656632918574,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/COND Relay",
+        "extendedDescription": "Air conditioning"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 44.13758801706328,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 53.678519401207986,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "TNS Relay"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 63.21945078535269,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FOG Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "extendedDescription": "Fog lights"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 55.27917307426738,
+          "left": 34.596656632918574,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "MAIN Relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ],
+        "extendedDescription": "Main fuse"
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 54.87695227918413,
+          "left": 43.50678263629339,
+          "width": 12.30652988703327,
+          "height": 20.80782480334754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "FRT BLOWER Relay",
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 54.87695227918413,
+          "left": 58.4038131199634,
+          "width": 12.30652988703327,
+          "height": 20.80782480334754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "POWER WINDOW Relay",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "R15",
+        "layout": {
+          "top": 69.81110288157174,
+          "left": 77.14912387046415,
+          "width": 12.30652988703327,
+          "height": 20.80782480334754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "Connector",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 47.72844321940835,
+          "left": 73.7854409132485,
+          "width": 16.416342590402287,
+          "height": 15.186611008246865
+        }
+      }
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9aae530a_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/af73c87c_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/5375eebc_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/67b5452a_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/df2dc7c1_image.jpg"
+      }
+    ],
+    "processed": false,
+    "boxName": "Engine Compartment Fuse Box [Gasoline]",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/a94f6994_kia-carnival-2000.jpg"
+    },
+    "imageClusters": [
+      "649b4b3445ef576e680bd6e2"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/57858797_kia-carnival-2000.jpg"
+    },
+    "templateId": "684c89b9563dc3c8d1a3e7c9",
+    "boxAspectRatio": 0.5881147540983607,
+    "templateRenameMap": {
+      "HEATER (R)": "1",
+      "HEATER (F)": "2",
+      "A/CON": "3",
+      "HEAD (H)": "4",
+      "HEAD (L)": "5",
+      "P/WIN (L)": "6",
+      "P/WIN (R)": "8",
+      "O: SEN": "7",
+      "INJ": "9",
+      "HORN": "11",
+      "TAIL": "12",
+      "FUEL PUMP": "14",
+      "R. FOG": "15",
+      "FOG": "10",
+      "AUDIO 2": "16",
+      "ALT": "24",
+      "ABS": "25",
+      "BTN1": "17",
+      "IG KEY 2": "18",
+      "IG KEY 1": "19",
+      "EGI": "20",
+      "BTN2": "21",
+      "HEAD LAMP": "22",
+      "C/FAN": "23"
+    },
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-carnival-2001-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 9.962296828220882,
+          "left": 5.421907772310798,
+          "width": 6.071501789910268,
+          "height": 7.9103423033039775
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "(GLOW 2) Glow plug relay"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 20.42003750038546,
+          "left": 5.421907772310798,
+          "width": 6.071501789910268,
+          "height": 7.9103423033039775
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(HEATER (F)) Front ventilation relay"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 30.74370457418895,
+          "left": 5.421907772310798,
+          "width": 6.071501789910268,
+          "height": 7.9103423033039775
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "(A/CON) Air-conditioning relay"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 72.05072611613127,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HEAD (H)) Headlamp high beam"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 75.52015571036571,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HEAD (L)) Headlamp low beam"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 78.98958530460015,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(P/WIN (L)) Power window main switch"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 82.4590148988346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(P/WIN (R)) Power window main switch"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 85.92844449306902,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(C/FAN I) Fan no. 1"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 13.448210385609075,
+          "left": 89.39787408730346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(C/FAN 2) Fan no. 2"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 72.05072611613127,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(FOG) Front fog lights (Optional)"
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 75.52015571036571,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        }
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 78.98958530460015,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(TAIL) TNS relay"
+      },
+      {
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 82.4590148988346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        }
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 85.92844449306902,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(R. FOG) Rear fog lights (Optional)"
+      },
+      {
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 30.47555737746678,
+          "left": 89.39787408730346,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506
+        }
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 53.53621629557327,
+          "left": 23.47871179684913,
+          "width": 1.7347147971172205,
+          "height": 8.04441590166506,
+          "rotation": -45
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(AUDIO) Audio, front air-conditioning, electric antenna",
+        "relatedEntities": [
+          "ESTEREO",
+          "ANTENA_ELECTRICA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 34.912059323303524,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(BTN1) Interior lighting, brake lights, sunroof",
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/sunroof-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 40.87842688308548,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(IG KEY 2) Ignition key switch"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 46.84479444286743,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(IG KEY 1) Ignition key switch"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 52.81116200264938,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(ABS) ABS control unit (Optional)"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 58.77752956243134,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(BTN2) Power window relay, electric seat adjustment, door lock, rear window defroster, emergency flashers",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)",
+          "DESEMPANADOR_TRASERO",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 64.7438971222133,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "(HEAD LAMP) Headlamp relay",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "RELAY",
+          "LAMPARA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 80.48500956615125,
+          "left": 70.71026468199524,
+          "width": 4.967592373562944,
+          "height": 9.92144627872024
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(C/FAN) Headlamp relay"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 63.57219341062086,
+          "left": 12.887662925202248,
+          "width": 9.302542145684507,
+          "height": 11.153299081998066,
+          "rotation": 45
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 80
+        },
+        "description": "(ALT) For all circuit fuses"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 75.46878241991291,
+          "left": 5.975699701155945,
+          "width": 9.302542145684507,
+          "height": 11.153299081998066,
+          "rotation": 45
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 50
+        },
+        "description": "(GLOW 1) Glow plug relay"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 15.514793864629166,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 25.055725248773868,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "C/FAN Relay",
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 34.596656632918574,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "C/FAN Relay",
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 44.13758801706328,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "C/FAN Relay",
+        "extendedDescription": "Electric cooling fan"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 53.67851940120798,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 8.912773625936815,
+          "left": 63.21945078535269,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HORN Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/horn-relay",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 25.055725248773868,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HEAD LAMP Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "RELAY(protects=LAMPARA(of=LUCES_DELANTERAS))"
+        ],
+        "extendedDescription": "Headlights"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 34.596656632918574,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/COND Relay",
+        "extendedDescription": "Air conditioning"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 44.13758801706328,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/COND Relay",
+        "extendedDescription": "Air conditioning"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 53.678519401207986,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "TNS Relay"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 32.62073495124413,
+          "left": 63.21945078535269,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FOG Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "extendedDescription": "Fog lights"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 55.27917307426738,
+          "left": 34.596656632918574,
+          "width": 6.386904480295216,
+          "height": 16.222905401691204
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 54.87695227918413,
+          "left": 43.50678263629339,
+          "width": 12.30652988703327,
+          "height": 20.80782480334754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "FRT BLOWER Relay",
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 54.87695227918413,
+          "left": 58.4038131199634,
+          "width": 12.30652988703327,
+          "height": 20.80782480334754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "POWER WINDOW Relay",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "R15",
+        "layout": {
+          "top": 69.81110288157174,
+          "left": 77.14912387046415,
+          "width": 12.30652988703327,
+          "height": 20.80782480334754
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "GLOW Relay",
+        "extendedDescription": "Glow plug heater"
+      },
+      {
+        "id": "Connector",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 47.72844321940835,
+          "left": 73.7854409132485,
+          "width": 16.416342590402287,
+          "height": 15.186611008246865
+        }
+      }
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0584dc6c_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9aae530a_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/af73c87c_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/5375eebc_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/67b5452a_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/df2dc7c1_image.jpg"
+      }
+    ],
+    "processed": false,
+    "boxName": "Engine Compartment Fuse Box [Diesel]",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/6f7f4297_kia-carnival-2000.jpg"
+    },
+    "boxAspectRatio": 0.5881147540983607,
+    "templateId": "684c89b9563dc3c8d1a3e7c9",
+    "templateRenameMap": {
+      "HEATER (F)": "2",
+      "A/CON": "3",
+      "(GLOW 1)": "25",
+      "(GLOW 2)": "1",
+      "HEAD (H)": "4",
+      "HEAD (L)": "5",
+      "P/WIN (L)": "6",
+      "P/WIN (R)": "7",
+      "C/FAN I": "8",
+      "C/FAN 2": "9",
+      "TAIL": "12",
+      "R. FOG": "14",
+      "FOG": "10",
+      "ALT": "24",
+      "ABS": "20",
+      "BTN1": "17",
+      "IG KEY 2": "18",
+      "IG KEY 1": "19",
+      "BTN2": "21",
+      "HEAD LAMP": "22",
+      "C/FAN": "23",
+      "AUDIO": "16"
+    },
+    "imageClusters": [
+      "649b4b3445ef576e680bd6e2"
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-carnival-2001-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 20.13287401574803,
+          "left": 68.17404227628671,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(DOOR LOCK 1) Time control unit, automatic door lock"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 33.42421259842519,
+          "left": 68.17404227628671,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(DOOR LOCK 2) Time control unit, automatic door lock"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 46.715551181102356,
+          "left": 68.17404227628671,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(START) Engine control unit (M/T), starter motor (M/T), inhibitor switch (A/T)"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 60.00688976377951,
+          "left": 68.17404227628671,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(CIGAR) Cigarette lighter, time control unit (optional)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 73.29822834645668,
+          "left": 68.17404227628671,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(R. WIPER) Rear wiper motor, rear washer motor, rear heater control switch, roof console, rear window defroster relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 86.58956692913384,
+          "left": 68.17404227628671,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/BAG) Airbag control unit (optional)"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 20.13287401574803,
+          "left": 40.84187228812272,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HAZARD) Hazard warning lights, warning lights, turn signals",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 33.42421259842519,
+          "left": 40.84187228812272,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(R. DEF) Rear window defroster relay (optional)"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 46.715551181102356,
+          "left": 40.84187228812272,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(MIRROR) Air conditioning audio equipment, electric exterior mirror, exterior mirror folding switch, remote door receiver (optional)"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.00688976377951,
+          "left": 40.84187228812272,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(10) AUDIO"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 73.29822834645668,
+          "left": 40.84187228812272,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TURN) Rear combination lights, signal lights"
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 86.58956692913384,
+          "left": 40.84187228812272,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 6.8415354330708675,
+          "left": 13.509702299958725,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(F. WIPER) Front wiper motor, front washer motor"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 20.13287401574803,
+          "left": 13.509702299958729,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(P/SEAT) Electric seat adjustment (optional)"
+      },
+      {
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 33.42421259842519,
+          "left": 13.509702299958725,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        }
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 46.715551181102356,
+          "left": 13.509702299958725,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(E.C.U.) Engine Control Unit (optional)"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 60.00688976377952,
+          "left": 13.509702299958725,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(METER) Instrument panel, air-conditioning backup lights (M/T)"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 73.29822834645668,
+          "left": 13.509702299958725,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ENG) Engine control unit, speed sensor, defogger, EGR valve, ABS control unit, Diagnostic connector, solenoid valve",
+        "relatedEntities": [
+          "SENSOR_DE_VELOCIDAD",
+          "DESEMPANADOR",
+          "CONECTOR_OBD",
+          "SOLENOIDE"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 86.58956692913385,
+          "left": 13.509702299958724,
+          "width": 17.03157644640722,
+          "height": 5.029133858267723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(STOP) Brake lights",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TESTIGO_FRENO_DE_MANO",
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/carnival/info/fusebox/2001/brake-light-fuse",
+            "urlWithAnchor": "/kia/carnival/info/fusebox/2001/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/7f212351_kia-carnival-2000.jpg"
+    },
+    "processed": false,
+    "boxName": "Panel in driver's footwell [Petrol for Europe]",
+    "imageClusters": [
+      "669fda413e5fa6a0d306b6bc"
+    ],
+    "templateId": "684c96b6563dc3c8d1a3e944",
+    "boxAspectRatio": 0.9899497487437185,
+    "templateRenameMap": {
+      "DOOR LOCK 1": "1",
+      "DOOR LOCK 2": "2",
+      "START": "3",
+      "(CIGAR)": "4",
+      "R. WIPER": "5",
+      "(A/BAG)": "6",
+      "HAZARD": "7",
+      "(R. DEF)": "8",
+      "(MIRROR)": "9",
+      "TURN": "11",
+      "F. WIPER": "13",
+      "(P/SEAT)": "14",
+      "(E.C.U.)": "16",
+      "METER": "17",
+      "ENG": "18",
+      "STOP": "19"
+    },
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-carnival-2001-genid-g1-2.webp"
+  }
+]

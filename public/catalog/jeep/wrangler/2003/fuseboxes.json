@@ -1,0 +1,1257 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 87.25728155339806,
+          "left": 21.84901981172057,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Blower Motor Relay (HEVAC)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 81.17218425680018,
+          "left": 21.84901981172057,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Rear Window Defogger Relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 74.71640633556068,
+          "left": 21.84901981172057,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Fuse (Passenger Compartment): \"1\", \"2\", \"3\" / Exterior Lighting",
+        "relatedEntities": [
+          "LUZ_EXTERIOR"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 87.25728155339806,
+          "left": 35.35353535353536,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "High Speed Radiator Fan, Low Speed Radiator Fan",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_ALTA)",
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_BAJA)"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 80.80328266130078,
+          "left": 36.0504031032174,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Transmission Control Relay"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 74.71640633556068,
+          "left": 36.0504031032174,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "30"
+        },
+        "description": " Engine Starter Motor Relay, Ignition Switch (Fuse (Passenger Compartment): \"5\", \"6\", \"7\", \"8\") (30A)",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/starter-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 68.62953000982057,
+          "left": 36.0504031032174,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        }
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 87.25728155339806,
+          "left": 50.25178639471422,
+          "width": 10.85858585858586,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": " ABS Motor"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 80.80328266130078,
+          "left": 50.25178639471422,
+          "width": 10.85858585858586,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "30",
+          "notUsed": false
+        },
+        "description": "Automatic Shut Down Relay, Powertrain Control Module ",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 74.71640633556068,
+          "left": 50.25178639471422,
+          "width": 10.85858585858586,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "40"
+        },
+        "description": " HD/LP "
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 68.44507921207087,
+          "left": 50.25178639471422,
+          "width": 10.85858585858586,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Turn Signal/Hazard Switch / IOD Storage",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL",
+          "LUZ_BALIZA",
+          "BOTON_DE_BALIZA"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 87.25728155339806,
+          "left": 64.64646464646465,
+          "width": 10.85858585858586,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS Valve",
+        "relatedEntities": [
+          "VALVULA(of=SISTEMA_ABS)"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 80.8252427184466,
+          "left": 64.64646464646465,
+          "width": 11.11111111111111,
+          "height": 4.854368932038835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Ignition Switch (Fuse (Passenger Compartment): \"17\", \"18\", \"19\")"
+      },
+      {
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 74.63592233009709,
+          "left": 64.64646464646465,
+          "width": 11.11111111111111,
+          "height": 4.733009708737864
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 68.3252427184466,
+          "left": 64.64646464646465,
+          "width": 10.85858585858586,
+          "height": 4.733009708737864
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "50"
+        },
+        "description": " Fuse: \"26\" / IOD ",
+        "relatedEntities": [
+          "FUSIBLE_IOD"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 67.33837442557267,
+          "left": 22.232840981761026,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Oxygen Sensor Downstream Heater Relay "
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 60.88259650433315,
+          "left": 22.232840981761026,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": " Power Outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/cigarette-lighter-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 54.27691289813728,
+          "left": 22.232840981761026,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Horn Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/horn-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 60.88259650433315,
+          "left": 34.498939593096026,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Multi-Function Switch (Front Fog Lamps)",
+        "relatedEntities": [
+          "COMANDO_LUCES_VOLANTE",
+          "LAMPARA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/fog-light-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 54.27691289813728,
+          "left": 34.448484848484846,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/radio-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 60.88259650433315,
+          "left": 42.55918416394558,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Conditioner Compressor Clutch Relay",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/air-conditioning-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 54.59169363538291,
+          "left": 42.52929292929292,
+          "width": 3.2828282828282833,
+          "height": 4.807863665075849
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition Switch (Fuse (Passenger Compartment): \"9\", \"10\", \"11\", \"12\", \"13\", \"14\", \"22\"), Clutch Pedal Position Switch (Manual Transmission)"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 60.88259650433315,
+          "left": 52.28707107487605,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/fuel-pump-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 54.27691289813728,
+          "left": 52.28707107487605,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "Rear Locker Relay (Off-road Package), Front Locker (Off-road Package) "
+      },
+      {
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 60.88259650433315,
+          "left": 60.3473156457256,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        }
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 54.27691289813728,
+          "left": 60.3473156457256,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Dome Lamp, Instrument Cluster, Data Link Connector, Axle Lock Switch (Off-road Package), Courtesy Lamp, Compass/Temperature Mirror, Underhood Lamp (10A)",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LAMPARA(of=LUZ_DE_HABITACULO)",
+          "TABLERO",
+          "CONECTOR_OBD",
+          "LUZ_CORTESIA"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 60.88259650433315,
+          "left": 70.59430840685832,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Multi-Function Switch",
+        "relatedEntities": [
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 54.27691289813728,
+          "left": 70.59430840685832,
+          "width": 3.2828282828282833,
+          "height": 5.326349782526666
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 42.23300970873786,
+          "left": 19.19191919191919,
+          "width": 13.88888888888889,
+          "height": 10.315533980582524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Automatic Shut Down"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 42.11165048543689,
+          "left": 33.33333333333333,
+          "width": 13.636363636363635,
+          "height": 10.436893203883495
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air Conditioner Compressor Clutch",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/air-conditioning-relay",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 43.203883495145625,
+          "left": 51.76767676767676,
+          "width": 25,
+          "height": 9.466019417475728
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Transmission Control"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 29.413602296336244,
+          "left": 18.939393939393938,
+          "width": 17.67676767676768,
+          "height": 10.654308552079588
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Engine Starter Motor",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/starter-relay",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 29.85436893203883,
+          "left": 36.868686868686865,
+          "width": 12.121212121212121,
+          "height": 9.587378640776699
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 28.989876499179832,
+          "left": 48.98989898989899,
+          "width": 18.434343434343432,
+          "height": 10.997219445848371
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Oxygen Sensor Downstream Heater"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 29.85436893203883,
+          "left": 67.67676767676768,
+          "width": 12.626262626262626,
+          "height": 9.587378640776699
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": " Fog Lamp",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 17.475728155339805,
+          "left": 19.19191919191919,
+          "width": 13.88888888888889,
+          "height": 10.315533980582524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/horn-relay",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 17.475728155339805,
+          "left": 33.33333333333333,
+          "width": 13.636363636363635,
+          "height": 10.315533980582524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/fuel-pump-relay",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 18.09001142640269,
+          "left": 51.787071074876046,
+          "width": 24.94837605262955,
+          "height": 9.960343078483813
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Window Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 5.461165048543689,
+          "left": 19.696969696969695,
+          "width": 29.040404040404038,
+          "height": 10.436893203883495
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Front Locker (Off-road Package)"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 5.461165048543689,
+          "left": 48.73737373737374,
+          "width": 30.555555555555557,
+          "height": 10.436893203883495
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Locker (Off-road Package)"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/0c239c32_jeep-wrangler-2001.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 2.080808080808081,
+    "boxName": "Engine fuse box",
+    "imageClusters": [
+      "61f99af741afc70004753f1a"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/420df7df_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/75d86fbb_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9bea3626_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f34bee00_image.jpg"
+      }
+    ],
+    "templateId": "61684ea5271ef50004848a80",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-jeep-wrangler-2003-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 33.96739130434783,
+          "left": 74,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Headlamp Switch (Multi-Function Switch), Sentry Key Immobilizer Module",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 48.641304347826086,
+          "left": 74,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Brake Lamp Switch"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 63.04347826086957,
+          "left": 74,
+          "width": 12.333333333333334,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "Subwoofer, Radio Choke and Relay ",
+        "relatedEntities": [
+          "SUBWOOFER",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 77.44565217391305,
+          "left": 74,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver Door Ajar Switch, Passanger Door Ajar Switch, Fog Lamp Relay №1, Fog Lamp Relay №2, Rear Fog Lamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/fog-light-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 33.96739130434783,
+          "left": 56.833333333333336,
+          "width": 12.333333333333334,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Airbag Control Module",
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 48.641304347826086,
+          "left": 56.833333333333336,
+          "width": 12.333333333333334,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Wiper Motor (Hard Top), Rear Wiper/Washer Switch (Hard Top)"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 63.04347826086957,
+          "left": 56.833333333333336,
+          "width": 12.333333333333334,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Park/Neutral Position (PNP) Switch (Automatic Transmission), Back-Up Lamp Switch (Manual Transmission), Controller Antilock Brake (ABS), Air Conditioner Compressor Clutch Relay, Rear Window Defogger Relay, ABS Relay",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)",
+          "RELAY(protects=DESEMPANADOR_TRASERO)",
+          "RELAY(protects=SISTEMA_ABS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/air-conditioning-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 77.44565217391305,
+          "left": 56.666666666666664,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C Heater Control, HVAC Unit, Blower Motor Relay, Blend Door Actuator (10A)",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 33.96739130434783,
+          "left": 39.5,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Airbag Control Module, Passenger Airbag On/Off Switch",
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 48.369565217391305,
+          "left": 39.5,
+          "width": 12.5,
+          "height": 8.967391304347826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake Shift Interlock Solenoid, Instrument Cluster, Compass/Temperature Mirror",
+        "relatedEntities": [
+          "SOLENOIDE_PARKING",
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 63.04347826086957,
+          "left": 39.5,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Daytime Running Lamp Module, Torque Converter Clutch Solenoid, Duty Cycle EVAP/Purge Solenoid, Air Conditioner Compressor Clutch Relay",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)",
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/headlight-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/air-conditioning-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 77.44565217391305,
+          "left": 39.5,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Sentry Key Immobilizer Module, Fuel Pump Relay, Automatic Shut Down Relay, Powertrain Control Module, Oxygen Sensor Downstream Heater Relay, Oxygen Sensor Upstream Heater Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "PCM"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/fuel-pump-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 33.96739130434783,
+          "left": 22.5,
+          "width": 12.166666666666668,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Turn Signal/Hazard Switch (Multi-Function Switch)",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL",
+          "BOTON_DE_BALIZA",
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 48.369565217391305,
+          "left": 22.166666666666668,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Radio and audio system",
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/radio-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 63.04347826086957,
+          "left": 22.5,
+          "width": 12.166666666666668,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear Window Defogger Switch (Hard Top)"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 77.44565217391305,
+          "left": 22.5,
+          "width": 12.166666666666668,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Headlamp Leveling Motor, Headlamp Leveling Switch, Rear Fog Lamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/fog-light-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 33.96739130434783,
+          "left": 5.4017331107014215,
+          "width": 12.166666666666668,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "25"
+        },
+        "description": "Windshield Wiper Motor, Windshield Wiper Switch (Multi-Function Switch)",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 48.641304347826086,
+          "left": 5.166666666666667,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "Cigar Lighter/Power Outlet, Switched Auxiliary Power",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/cigarette-lighter-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 63.04347826086957,
+          "left": 5.166666666666667,
+          "width": 12.5,
+          "height": 8.695652173913043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 77.44565217391305,
+          "left": 5.166666666666667,
+          "width": 12.5,
+          "height": 8.967391304347826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Engine Starter Motor Relay, Clutch Pedal Position Switch (Manual Transmission)",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jeep/wrangler/info/fusebox/2003/starter-fuse",
+            "urlWithAnchor": "/jeep/wrangler/info/fusebox/2003/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.6133333333333333,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/15d130b6_jeep-wrangler-2003-@jeep-wrangler@g2.jpg"
+    },
+    "processed": false,
+    "boxName": "Passenger Compartment",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/650babeb_Sem título.jpg"
+      }
+    ],
+    "templateId": "61537907f15f2b0004078014",
+    "imageClusters": [
+      "66453532c5febde8069db959"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-jeep-wrangler-2003-genid-g2-1.webp"
+  }
+]

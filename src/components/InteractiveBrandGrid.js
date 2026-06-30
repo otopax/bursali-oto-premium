@@ -21,9 +21,20 @@ export default function InteractiveBrandGrid({ locale }) {
       <style dangerouslySetInnerHTML={{__html: `
         .brand-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-          gap: 1.5rem;
+          grid-template-columns: repeat(2, 1fr); /* Mobile: 2 columns */
+          gap: 1rem;
           margin-top: 2rem;
+        }
+        @media (min-width: 640px) {
+          .brand-grid {
+            grid-template-columns: repeat(3, 1fr); /* Tablet: 3 columns */
+            gap: 1.5rem;
+          }
+        }
+        @media (min-width: 1024px) {
+          .brand-grid {
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); /* Desktop: Auto fill */
+          }
         }
         .brand-card {
           background: rgba(15, 23, 42, 0.4);

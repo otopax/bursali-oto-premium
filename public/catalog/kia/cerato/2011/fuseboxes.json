@@ -1,0 +1,1795 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 29.54151885095518,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(IGN COIL) Condenser (G4KF), Ignition Coil #1~4"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 35.42891053016487,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(SNSR 2) Oil Control Valve (#1, #2), Camshaft Position Sensor (Intake, Exhaust), F/PUMP Relay, C/FAN LO Relay, Immobilizer Module",
+        "relatedEntities": [
+          "INMOVILIZADOR",
+          "MODULO(of=INMOVILIZADOR)"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 41.31630220937456,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU 2) PCM, Purge Control Solenoid Valve, Oxygen Sensor (Down)",
+        "relatedEntities": [
+          "ECU",
+          "PCM",
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 47.203693888584255,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(INJECTOR) A/CON Relay, Crankshaft Position Sensor, Oxygen Sensor (UP), Injector #1~4, Variable Intake Sensor"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 53.09108556779395,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(SNSR 1) PCM, Canister Close Valve"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 58.97847724700364,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU 1) PCM",
+        "relatedEntities": [
+          "ECU",
+          "PCM"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 58.97847724700364,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(ECU 1) PCM",
+        "relatedEntities": [
+          "ECU",
+          "PCM"
+        ],
+        "unmappedId": "ECU 1"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 64.86586892621335,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/CON) A/CON Relay"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 70.75326060542304,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(F/PUMP) F/FUMP Relay"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 15.28248031496063,
+          "left": 66.78470824802231,
+          "width": 6.301672548325399,
+          "height": 8.69291338582677
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(ECU) Engine Control Relay",
+        "relatedEntities": [
+          "ECU",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 9.73917322834646,
+          "left": 79.2183619575918,
+          "width": 8.531992935004311,
+          "height": 9.070866141732278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "(BATT 2) Battery and charging system",
+        "relatedEntities": [
+          "BATERIA",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/alternator-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 22.355890369473048,
+          "left": 78.86043335711136,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(SPARE3) SPARE3"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 30.796835251362808,
+          "left": 78.86043335711136,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(SPARE2) SPARE2"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 22.841535433070867,
+          "left": 84.70000574458257,
+          "width": 6.41973195103931,
+          "height": 2.9712295578437353
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(B/UP LP) Inhibitor Switch, Pulse Generater 'B', Back Up Lamp Switch"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 27.202730668281898,
+          "left": 84.70000574458257,
+          "width": 6.41973195103931,
+          "height": 2.9712295578437353
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(ECU 3) Ignition Coil (#1~#4), Condenser, PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 31.56392590349293,
+          "left": 84.70000574458257,
+          "width": 6.41973195103931,
+          "height": 2.9712295578437353
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ABS) Multipurpose Check Connector, ESC Control Module, ABS Control Module",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "MODULO(of=CONTROL_DE_ESTABILIDAD)",
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 35.92512113870396,
+          "left": 84.70000574458257,
+          "width": 6.41973195103931,
+          "height": 2.9712295578437353
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(SNSR 3) ECM, PCM, Vehicle Speed Sensor, Pulse Generator 'A', Stop Lamp Switch",
+        "relatedEntities": [
+          "PCM",
+          "SENSOR_DE_VELOCIDAD"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 68.9700635978195,
+          "left": 45.959494487517745,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H/LP LO(LH)) Head Lamp LH"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 68.9700635978195,
+          "left": 50.14434735634421,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H/LP LO(RH)) Head Lamp RH"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 68.9700635978195,
+          "left": 54.95097739243893,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "((SPARE) -) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 78.9228195033313,
+          "left": 27.024500361198875,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(FOG LP (FR)) Multipurpose Check Connector, Front Fog Relay, Battery Sensor",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "TESTIGO_BATERIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/fog-light-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 78.9228195033313,
+          "left": 31.15290756456183,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "AMS",
+        "relatedEntities": [
+          "RADIO_AM"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 77.85801029678979,
+          "left": 35.66886545905703,
+          "width": 6.853512180429308,
+          "height": 8.944881889763778
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(ABS 1) ESC Control Module, ABS Control Module",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 77.85801029678979,
+          "left": 35.66886545905703,
+          "width": 6.853512180429308,
+          "height": 8.944881889763778
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(ABS 1) Anti-lock braking system",
+        "unmappedId": "ABS 1"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 77.85801029678979,
+          "left": 43.13274556781617,
+          "width": 6.853512180429308,
+          "height": 8.944881889763778
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(IGN 1) Ignition Switch, Button Relay Box (ESCL Relay (IGN1))",
+        "relatedEntities": [
+          "ARRANQUE",
+          "INTERRUPTOR",
+          "TAMBOR_DE_ENCENDIDO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/starter-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "FusePuller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 79.01016050878252,
+          "left": 50.628856319834384,
+          "width": 6.0657094400160245,
+          "height": 6.425196850393717,
+          "rotation": 90
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 77.85801029678979,
+          "left": 57.714686377240334,
+          "width": 6.853512180429308,
+          "height": 8.944881889763778
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "(BATT 2) I/P Junction Box (Power Connector (AUDIO, ROOM LP LAMP), FUSE (STOP LP, DEICER, HAZARD LP, DR LOCK, TRUNK OPEN))",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 77.85801029678979,
+          "left": 57.714686377240334,
+          "width": 6.853512180429308,
+          "height": 8.944881889763778
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "40"
+        },
+        "description": "ISG",
+        "unmappedId": "BATT 2"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 78.9228195033313,
+          "left": 66.58414467840454,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H/LP HI) H/LP (HI) Relay,",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "LUCES_DELANTERAS",
+          "MARCHA_HIGH",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 78.9228195033313,
+          "left": 70.82475669042769,
+          "width": 2.966794117217262,
+          "height": 7.674108383510909
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(HORN) Horn Relay",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/horn-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 24.746012057550402,
+          "width": 5.491248597631343,
+          "height": 3.610588537553479
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 80,
+          "notUsed": false
+        },
+        "description": "(MDPS) EPS Control Module"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 29.88282993962286,
+          "width": 5.491248597631343,
+          "height": 3.610588537553479
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "(ABS 2) ESC Control Module, ABS Control Module",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 35.019647821695315,
+          "width": 5.491248597631343,
+          "height": 3.610588537553479
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "(C/FAN) C/Fan LO/HI Relay"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 40.36471507736531,
+          "width": 7.018410670679915,
+          "height": 3.657480314960635
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "(BLOWER) Blower Relay",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 47.16752794821798,
+          "width": 7.018410670679914,
+          "height": 3.657480314960627
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "(HTD GLASS) I/P Junction Box (Rear Defogger Relay)"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 54.039757276936584,
+          "width": 6.810161297082377,
+          "height": 3.610588537553479
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 125,
+          "notUsed": false
+        },
+        "description": "(ALT) Generator, Fuse (MDPS, HTD GLASS, C/FAN, ABS 2, BLOWER, IGN 1, FOG LP (FR), ABS 1)",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR",
+          "SISTEMA_ABS",
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "ARRANQUE"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 60.426071400594175,
+          "width": 6.810161297082368,
+          "height": 3.610588537553479
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 30,
+          "notUsed": false
+        },
+        "description": "(IGN 2) Ignition Switch, Start Relay, Button Relay Box (ESCL Relay)",
+        "relatedEntities": [
+          "ARRANQUE",
+          "INTERRUPTOR",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 66.95121843998358,
+          "width": 5.560665055497187,
+          "height": 3.610588537553479
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(BATT 1) I/P Junction Box (Fuse (TAIL LAMP (LH/RH), P/WDW DR, P/WDW ASS, FOG LP (RR)/SSB, SMK, PDM). Tail Lamp Relay, Power Window Relay)",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "id": "35",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-8"
+        },
+        "layout": {
+          "top": 93.16497577225908,
+          "left": 72.29628569565335,
+          "width": 5.491248597631343,
+          "height": 3.610588537553479
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 12.006889763779528,
+          "left": 28.086701215587432,
+          "width": 14.59723809384632,
+          "height": 15.862204724409443
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(MAIN) Main fuse",
+        "relatedEntities": [
+          "FUSIBLE_PRINCIPAL"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 12.348258631132646,
+          "left": 45.85242371776946,
+          "width": 8.717265566775303,
+          "height": 13.978740157480301
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(F/PUMP) Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/fuel-pump-relay",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 12.348258631132646,
+          "left": 56.83101529176364,
+          "width": 8.717265566775303,
+          "height": 13.978740157480301
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(A/CON) Air conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/air-conditioning-relay",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 43.250984251968504,
+          "left": 26.75872683733487,
+          "width": 14.45568650660273,
+          "height": 15.391338582677163
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(BLOWER) AC blower motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 59.601559660811716,
+          "left": 26.75872683733487,
+          "width": 14.45568650660273,
+          "height": 15.391338582677163
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(START) Starter system",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/starter-relay",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 45.51870078740157,
+          "left": 43.923332568950975,
+          "width": 12.943748106365053,
+          "height": 9.042047244094494
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(H/LP (HI)) Headlights high beam"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 56.548379769836494,
+          "left": 43.923332568950975,
+          "width": 12.943748106365053,
+          "height": 9.042047244094494
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(FOG) Fog lights",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 43.60858570563296,
+          "left": 60.91824691348576,
+          "width": 12.943748106365053,
+          "height": 9.042047244094494
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/horn-relay",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 54.34971229557849,
+          "left": 60.91824691348576,
+          "width": 12.943748106365053,
+          "height": 9.042047244094494
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "lightgray"
+        },
+        "description": "(WIPER) Wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 67.12693821926092,
+          "left": 60.55291541168102,
+          "width": 12.943748106365053,
+          "height": 9.042047244094494
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(H/LP LO) Headlights low beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA)"
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 43.250984251968504,
+          "left": 77.47396680876064,
+          "width": 14.45568650660273,
+          "height": 15.391338582677163
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(C/FAN HI) Radiator fan high speed",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_ALTA)"
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 59.601559660811716,
+          "left": 77.47396680876064,
+          "width": 14.45568650660273,
+          "height": 15.391338582677163
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "(C/FAN LO) Radiator fan low speed",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA)"
+        ]
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 37.70767716535433,
+          "left": 10.586179530025216,
+          "width": 12.535965725325424,
+          "height": 29.48031496062992
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Battery 1",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "large",
+          "notUsed": true
+        },
+        "layout": {
+          "top": 82.9762640563801,
+          "left": 82.75468605554731,
+          "width": 9.31078468189704,
+          "height": 17.213717494484925
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Battery 2",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "large",
+          "notUsed": true
+        },
+        "layout": {
+          "top": 73.5971323219366,
+          "left": 9.810269485144643,
+          "width": 9.31078468189704,
+          "height": 17.213717494484925
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/1c3c1554_kia-forte-2012.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.9285714285714286,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/512f5455_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6077c8fa_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3a36ed4e_image.jpg"
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Panel",
+    "imageClusters": [
+      "62f24f58726ea5a856fa3a7a"
+    ],
+    "useAcronyms": true,
+    "templateId": "666ee61d52eddf2666b5f2b5",
+    "templateRenameMap": {
+      "ALT": "32",
+      "MDPS": "27",
+      "ABS 2": "28",
+      "C/FAN": "29",
+      "BLOWER": "30",
+      "HTD GLASS": "31",
+      "IGN 2": "33",
+      "BATT 1": "34",
+      "ABS 1": "22",
+      "IGN 1": "23",
+      "BATT 2": "24",
+      "ECU": "9",
+      "FOG LP (FR)": "20",
+      "H/LP HI": "25",
+      "HORN": "26",
+      "H/LP LO(LH)": "17",
+      "H/LP LO(RH)": "18",
+      "SPARE": "19",
+      "SNSR 3": "16",
+      "ABS": "15",
+      "ECU 3": "14",
+      "B/UP LP": "13",
+      "IGN COIL": "1",
+      "SNSR 2": "2",
+      "ECU 2": "3",
+      "INJECTOR": "4",
+      "SNSR 1": "5",
+      "ECU 1": "6",
+      "A/CON": "7",
+      "F/PUMP": "8",
+      "SPARE2": "12",
+      "SPARE3": "11"
+    },
+    "boxScaleMultiplier": "1.1",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-cerato-2011-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 17.02432045779685,
+          "left": 23.516666666666747,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transaxle Range Switch (A/T), Ignition Lock Switch (M/T), E/R Fuse & Relay Box (Start Relay)"
+      },
+      {
+        "layout": {
+          "top": 22.031473533619454,
+          "left": 23.308333333333415,
+          "width": 15.866666666666589,
+          "height": 4.291845493562231
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "E/R Fuse & Relay Box (Blower Relay), BCM, Incar Temperature Sensor (Auto), Sunroof Control Module, A/C Control Module",
+        "relatedEntities": [
+          "FUSIBLERA",
+          "RELAY",
+          "MODULO_CARROCERIA",
+          "TECHO_SOLAR",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/sunroof-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/kia/cerato/info/fusebox/2011/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.181688125894134,
+          "left": 23.308333333333415,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver/ Passenger Power Outside Mirror (Defogger), A/C Control Module (Rear Defogger SW)",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO",
+          "DESEMPANADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.18884120171674,
+          "left": 23.10000000000008,
+          "width": 16.074999999999918,
+          "height": 4.291845493562231
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front Seat Warmer LH/RH"
+      },
+      {
+        "layout": {
+          "top": 37.48211731044349,
+          "left": 23.10000000000008,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Air Conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 42.48927038626609,
+          "left": 23.10000000000008,
+          "width": 15.866666666666589,
+          "height": 4.291845493562231
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "E/R Fuse & Relay Box (H/LP (HI/LO) Relay). DRL Control Module"
+      },
+      {
+        "layout": {
+          "top": 47.78254649499284,
+          "left": 22.891666666666747,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Multifunction Switch (Wiper & Washer SW). E/R Fuse & Relay Box (Wiper Relay), Front Wiper Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 52.93276108726752,
+          "left": 22.891666666666747,
+          "width": 15.866666666666589,
+          "height": 4.291845493562231
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "layout": {
+          "top": 58.22603719599427,
+          "left": 22.891666666666747,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DRL Control Module",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "extendedDescription": "Daytime running lights",
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.37625178826896,
+          "left": 22.68333333333341,
+          "width": 16.074999999999918,
+          "height": 4.148783977110158
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "FOG LP (RR)"
+      },
+      {
+        "layout": {
+          "top": 63.37625178826896,
+          "left": 22.68333333333341,
+          "width": 16.074999999999918,
+          "height": 4.148783977110158
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "SMK",
+        "unmappedId": "FOG LP (RR)"
+      },
+      {
+        "layout": {
+          "top": 68.52646638054364,
+          "left": 22.68333333333341,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Power Window Main Switch, Rear Power Window Switch LH"
+      },
+      {
+        "layout": {
+          "top": 17.167381974248926,
+          "left": 43.94583333333337,
+          "width": 15.658333333333257,
+          "height": 4.148783977110158
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Audio, BCM, Clock, Power Outside Mirror Switch",
+        "relatedEntities": [
+          "ESTEREO",
+          "MODULO_CARROCERIA",
+          "RELOJ",
+          "INTERRUPTOR(of=ESPEJO_ELECTRICO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/radio-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 22.17453505007153,
+          "left": 43.73750000000004,
+          "width": 15.866666666666589,
+          "height": 4.291845493562231
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Cigarette Lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/cigarette-lighter-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.32474964234621,
+          "left": 43.94583333333337,
+          "width": 15.658333333333257,
+          "height": 4.291845493562231
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof Control Module, ICM Relay Box (Door Lock/Unlock Relay, Two Turn Unlock Relay)",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/sunroof-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.474964234620884,
+          "left": 43.94583333333337,
+          "width": 15.658333333333257,
+          "height": 4.291845493562231
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ICM Relay Box (Windshield Defogger Relay)"
+      },
+      {
+        "layout": {
+          "top": 37.625178826895564,
+          "left": 43.73750000000004,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Stop Lamp Switch, Sport Mode Switch, Key Solenoid"
+      },
+      {
+        "layout": {
+          "top": 42.77539341917024,
+          "left": 43.94583333333337,
+          "width": 15.658333333333257,
+          "height": 4.148783977110158
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Trunk Room Lamp, BCM, Clock, Instrument Cluster (IND.), Data Link Connector, A/C Control Module, Ignition Key III. & Door Warning Switch Room Lamp, Map Lamp",
+        "relatedEntities": [
+          "LUZ_BAUL",
+          "MODULO_CARROCERIA",
+          "RELOJ",
+          "CONECTOR_OBD",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.92560801144492,
+          "left": 43.94583333333337,
+          "width": 15.658333333333257,
+          "height": 4.148783977110158
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/radio-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.0758226037196,
+          "left": 43.73750000000004,
+          "width": 15.866666666666589,
+          "height": 4.291845493562231
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Trunk Open Relay",
+        "extendedDescription": "Power trunk lid opener"
+      },
+      {
+        "layout": {
+          "top": 58.22603719599427,
+          "left": 43.73750000000004,
+          "width": 15.866666666666589,
+          "height": 4.291845493562231
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "PDM"
+      },
+      {
+        "layout": {
+          "top": 63.519313304721024,
+          "left": 43.73750000000004,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "SAFETY POWER WINDOW"
+      },
+      {
+        "layout": {
+          "top": 68.6695278969957,
+          "left": 43.94583333333337,
+          "width": 15.658333333333257,
+          "height": 4.148783977110158
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Power Window Main Switch, Passenger Power Window Switch, Rear Power Window Switch RH",
+        "relatedEntities": [
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 22.46065808297568,
+          "left": 64.375,
+          "width": 15.449999999999928,
+          "height": 4.148783977110158
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Power Outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Auxiliary power outlet",
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/cigarette-lighter-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.467811158798284,
+          "left": 64.375,
+          "width": 15.449999999999928,
+          "height": 4.291845493562231
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard Switch",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.61802575107296,
+          "left": 64.375,
+          "width": 15.658333333333257,
+          "height": 4.291845493562231
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument Cluster (IND.)"
+      },
+      {
+        "layout": {
+          "top": 37.76824034334764,
+          "left": 64.375,
+          "width": 15.658333333333257,
+          "height": 4.291845493562231
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument Cluster (IND.), BCM, Electronic Chromic Mirror, Rheostat, Steering Angle Sensor",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 42.91845493562232,
+          "left": 64.16666666666667,
+          "width": 15.866666666666589,
+          "height": 4.148783977110158
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "SRS Control Module",
+        "relatedEntities": [
+          "TESTIGO_SRS",
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 48.06866952789699,
+          "left": 64.16666666666667,
+          "width": 15.658333333333257,
+          "height": 4.291845493562231
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(IGN1-A) PDM, EPMESC Switch, EPS Control Module Control Module"
+      },
+      {
+        "layout": {
+          "top": 53.21888412017167,
+          "left": 64.16666666666667,
+          "width": 15.658333333333257,
+          "height": 4.148783977110158
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ICM Relay Box (Hazard Relay), Hazard Switch",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.36909871244635,
+          "left": 63.95833333333333,
+          "width": 15.658333333333257,
+          "height": 4.148783977110158
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TAIL LP (RH)) Rear Combination Lamp (In/Out) RH, Head Lamp RH, Shunt Connector, Passenger Power Window Switch, License Lamp RH (4DR), Illuminations, Rheostat Relay (With DRL)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)",
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LADO_DERECHO))",
+          "BACKLIGHT"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/cerato/info/fusebox/2011/headlight-fuse",
+            "urlWithAnchor": "/kia/cerato/info/fusebox/2011/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.519313304721024,
+          "left": 63.95833333333333,
+          "width": 15.658333333333257,
+          "height": 4.148783977110158
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TAIL LP (LH)) Head Lamp LH, Rear Combination Lamp (In/Out) LH, Power Window Main Switch, License Lamp (2DR), License Lamp LH (4DR)"
+      }
+    ],
+    "boxAspectRatio": 1.45625,
+    "boxName": "Instrument Fuse Panel",
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6f69faf6_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bb76bd1c_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "6462b008234cc71c0b91a8e1"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/8218a0fd_kia-forte-2012.jpg"
+    },
+    "templateId": "618c09f2b6758400043295f3",
+    "templateRenameMap": {
+      "START": "1",
+      "A/CON": "2",
+      "HEAD LAMP": "6",
+      "DRL": "9",
+      "P/WDW DR": "11",
+      "DR LOCK": "14",
+      "DEICER": "15",
+      "ROOM LP": "17",
+      "AUDIO": "18",
+      "SAFETY P/WDW": "21",
+      "P/WDW ASS": "22",
+      "P/OUTLET": "23",
+      "A/BAG IND": "25",
+      "CLUSTER": "26",
+      "A/BAG": "27",
+      "MIRR. HTD": "3",
+      "S/HTR": "4",
+      "WIPER (FR)": "7",
+      "FOG LP (RR)": "10",
+      "D/CLOCK": "12",
+      "STOP LP": "16",
+      "TRUNK OPEN": "19",
+      "PDM": "20",
+      "T/SIG LP": "24",
+      "IGN1-A": "28",
+      "HAZARD LP": "29",
+      "TAIL LP (RH)": "30",
+      "TAIL LP (LH)": "31",
+      "Spare": "8"
+    },
+    "backgroundColor": "#f0ead1",
+    "boxScaleMultiplier": "0.6",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-cerato-2011-genid-g2-1.webp"
+  }
+]

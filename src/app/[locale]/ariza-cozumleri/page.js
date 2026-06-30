@@ -6,6 +6,21 @@ export const metadata = {
   description: 'Aracınızın OBD2 arıza kodunu (Örn: P0171, P0420) seçin, Yapay Zeka destekli belirtiler, sebepler ve detaylı tamir videolarına ulaşın.',
 };
 
+function formatModelName(brand, modelName) {
+  let clean = modelName.replace(/_fuses_and_relays$/i, '').replace(/_fuses$/i, '');
+  
+  const brandPrefix = brand.toLowerCase() + '_';
+  if (clean.toLowerCase().startsWith(brandPrefix)) {
+    clean = clean.substring(brandPrefix.length);
+  }
+
+  clean = clean.replace(/_/g, ' ');
+  clean = clean.replace(/ (\d{4}) (\d{4})$/, ' ($1-$2)');
+  clean = clean.replace(/ (\d{4})$/, ' ($1)');
+
+  return clean.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 export default async function FaultCodesHome({ params }) {
   const { locale } = await params;
   const brands = getAvailableFaultBrands();
@@ -46,18 +61,24 @@ export default async function FaultCodesHome({ params }) {
         
         {showcase.length > 0 ? (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem', textAlign: 'left' }}>
-            {showcase.map((item, idx) => (
-              <Link href={`/${locale}/ariza-cozumleri/${item.brand}/${item.model}/${item.code}`} key={idx}>
-                <div className="glass-panel hover-gold-border" style={{ padding: '1.5rem', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.3s' }}>
-                  <div style={{ color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '1.4rem', marginBottom: '0.5rem' }}>
-                    {item.code}
+            {showcase.map((item, idx) => {
+              const brandClean = item.brand.replace(/[_-]/g, ' ');
+              const brandCapitalized = brandClean.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+              const modelClean = formatModelName(item.brand, item.model);
+
+              return (
+                <Link href={`/${locale}/ariza-cozumleri/${item.brand}/${item.model}/${item.code}`} key={idx}>
+                  <div className="glass-panel hover-gold-border" style={{ padding: '1.5rem', border: '1px solid rgba(255,255,255,0.1)', transition: 'all 0.3s' }}>
+                    <div style={{ color: 'var(--accent-gold)', fontWeight: 'bold', fontSize: '1.4rem', marginBottom: '0.5rem' }}>
+                      {item.code}
+                    </div>
+                    <div style={{ color: 'var(--text-light)', textTransform: 'capitalize' }}>
+                      {brandCapitalized} {modelClean}
+                    </div>
                   </div>
-                  <div style={{ color: 'var(--text-light)', textTransform: 'capitalize' }}>
-                    {item.brand.replace(/-/g, ' ')} {item.model.replace(/-/g, ' ')}
-                  </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              );
+            })}
           </div>
         ) : (
           <p style={{ color: 'var(--text-muted)' }}>Sistem şu an veritabanını oluşturuyor. Lütfen daha sonra tekrar deneyin.</p>

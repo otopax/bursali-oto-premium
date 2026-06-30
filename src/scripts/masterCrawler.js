@@ -66,8 +66,20 @@ async function run() {
   }
 
   if (state.queue.length === 0 && state.completed.length === 0) {
-    console.log("[INFO] Building initial queue from known brands...");
-    for (const brand of KNOWN_BRANDS) {
+    console.log("[INFO] Building initial queue from exhaustive brand list...");
+    const allBrands = [
+      'acura', 'alfa-romeo', 'aston-martin', 'audi', 'bentley', 'bmw', 'buick', 'byd', 'cadillac', 
+      'chery', 'chevrolet', 'chrysler', 'citroen', 'dacia', 'daewoo', 'daihatsu', 'dodge', 'ferrari', 
+      'fiat', 'fisker', 'ford', 'genesis', 'gmc', 'honda', 'hummer', 'hyundai', 'infiniti', 'isuzu', 
+      'iveco', 'jaguar', 'jeep', 'kia', 'lada', 'lamborghini', 'lancia', 'land-rover', 'lexus', 
+      'lincoln', 'lotus', 'mahindra', 'maserati', 'maybach', 'mazda', 'mclaren', 'mercedes-benz', 
+      'mercury', 'mg', 'mini', 'mitsubishi', 'nissan', 'oldsmobile', 'opel', 'peugeot', 'plymouth', 
+      'polestar', 'pontiac', 'porsche', 'ram', 'renault', 'rolls-royce', 'rover', 'saab', 'saturn', 
+      'scion', 'seat', 'skoda', 'smart', 'ssangyong', 'subaru', 'suzuki', 'tata', 'tesla', 'toyota', 
+      'vauxhall', 'volkswagen', 'volvo'
+    ];
+    console.log(`[INFO] Found ${allBrands.length} brands! Building queue...`);
+    for (const brand of allBrands) {
       console.log(`  -> Discovering models for ${brand}...`);
       const html = await fetchWithRetry(`https://www.startmycar.com/${brand}`);
       if (html) {

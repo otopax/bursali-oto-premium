@@ -1,0 +1,1654 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 15.208613728129205,
+          "left": 18.913043478260867,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "RABS/4WABS Module"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 15.208613728129205,
+          "left": 29.130434782608695,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Brake Warning Diode/Resistor, Instrument Cluster, Warning Chime, 4WABS Relay, Warning Indicators",
+        "relatedEntities": [
+          "TABLERO",
+          "AVISO_SONORO",
+          "RELAY(protects=SISTEMA_ABS)"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 15.208613728129205,
+          "left": 39.45652173913044,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Main Light Switch, RKE Module, Radio",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "ACCESO_REMOTO",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/radio-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 15.208613728129205,
+          "left": 49.56521739130435,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Power Locks w/RKE, Illuminated Entry, Warning Chime, Modified Vehicle, Power Mirrors, Main Light Switch, Courtesy Lamps",
+        "relatedEntities": [
+          "AVISO_SONORO",
+          "ESPEJO_ELECTRICO",
+          "COMANDO_DE_LUCES",
+          "LUZ_CORTESIA"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 15.208613728129205,
+          "left": 59.673913043478265,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "RKE Module, Power Lock Switches, Memory Lock, Power Locks with RKE",
+        "relatedEntities": [
+          "ACCESO_REMOTO",
+          "INTERRUPTOR(of=CIERRE_CENTRALIZADO)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 26.379542395693136,
+          "left": 8.58695652173913,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Shift Interlock, Speed Control, DRL Module",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/headlight-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 26.379542395693136,
+          "left": 18.913043478260867,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Multi-Function Switch, Turn Signals",
+        "relatedEntities": [
+          "COMANDO_LUCES_VOLANTE",
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 26.379542395693136,
+          "left": 29.130434782608695,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Radio Capacitor(s), Ignition Coil, PCM Diode, PCM Power Relay, Fuel Heater, Glow Plug Relay [Diesel]",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION",
+          "PCM",
+          "RELAY(protects=PCM)",
+          "CALENTADOR_COMBUSTIBLE",
+          "RELAY(protects=PRECALENTADOR)"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 26.379542395693136,
+          "left": 39.45652173913044,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Wiper Control Module, Windshield Wiper Motor",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 26.379542395693136,
+          "left": 49.56521739130435,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Main Light Switch, (External Lamps) Multi-Function Switch (Flash-to-pass)",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 26.379542395693136,
+          "left": 59.673913043478265,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Brake Pressure Switch, Multi-Function Switch (Hazards), RABS, Brake Pedal Position Switch",
+        "relatedEntities": [
+          "SENSOR_FRENO",
+          "COMANDO_LUCES_VOLANTE",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 37.14670255720054,
+          "left": 8.58695652173913,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Transmission Range (TR) Sensor, Auxiliary Battery Relay"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 37.14670255720054,
+          "left": 18.913043478260867,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Blend Door Actuator, Function Selector Switch"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 37.14670255720054,
+          "left": 29.130434782608695,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Instrument Cluster (Air Bag and Charge Indicator)"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 37.14670255720054,
+          "left": 39.45652173913044,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Trailer Battery Charge Relay.",
+        "relatedEntities": [
+          "RELAY_BATERIA_DE_TRAILER"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 37.14670255720054,
+          "left": 49.56521739130435,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Power Seats",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 37.14670255720054,
+          "left": 59.673913043478265,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 47.64468371467026,
+          "left": 8.58695652173913,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 47.64468371467026,
+          "left": 18.913043478260867,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Bag Diagnostic Monitor"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 47.64468371467026,
+          "left": 29.130434782608695,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Overdrive Cancel Switch",
+        "relatedEntities": [
+          "INTERRUPTOR_OVERDRIVE_OFF"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 47.64468371467026,
+          "left": 39.45652173913044,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Power Windows*",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 47.64468371467026,
+          "left": 49.56521739130435,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Memory Power Radio"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 47.64468371467026,
+          "left": 59.673913043478265,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cigar Lighter, Data Link Connector (DLC)",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "CONECTOR_OBD"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 58.950201884253026,
+          "left": 8.58695652173913,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Illuminated Entry Module"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 58.950201884253026,
+          "left": 18.913043478260867,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left Headlamp (Low Beam)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/headlight-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 58.950201884253026,
+          "left": 29.130434782608695,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 58.950201884253026,
+          "left": 39.45652173913044,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/radio-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 58.950201884253026,
+          "left": 49.56521739130435,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Power Plug"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 58.950201884253026,
+          "left": 59.673913043478265,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 70.5248990578735,
+          "left": 8.58695652173913,
+          "width": 8.91304347826087,
+          "height": 4.306864064602961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlamps (High Beam Indicator), DRL",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "TESTIGO_LUZ_ALTA",
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/headlight-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 70.5248990578735,
+          "left": 18.913043478260867,
+          "width": 8.804347826086957,
+          "height": 4.306864064602961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right Headlamp (Low Beam), DRL",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_BAJA",
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/headlight-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 70.5248990578735,
+          "left": 29.130434782608695,
+          "width": 8.91304347826087,
+          "height": 4.306864064602961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 70.5248990578735,
+          "left": 39.45652173913044,
+          "width": 8.91304347826087,
+          "height": 4.306864064602961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 70.5248990578735,
+          "left": 49.56521739130435,
+          "width": 8.91304347826087,
+          "height": 4.306864064602961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission Range (TR) Sensor"
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 70.5248990578735,
+          "left": 59.673913043478265,
+          "width": 8.804347826086957,
+          "height": 4.306864064602961
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 81.56123822341857,
+          "left": 8.58695652173913,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(Cluster, A/C, Illumination, Radio), Steering Column Assembly",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "BACKLIGHT",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/air-conditioning-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/ford/econoline/info/fusebox/1998/radio-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 81.56123822341857,
+          "left": 18.913043478260867,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 81.56123822341857,
+          "left": 29.130434782608695,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Bag Diagnostic Monitor"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 81.56123822341857,
+          "left": 39.45652173913044,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 81.56123822341857,
+          "left": 49.56521739130435,
+          "width": 8.91304347826087,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Modified Vehicle"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 81.56123822341857,
+          "left": 59.673913043478265,
+          "width": 8.804347826086957,
+          "height": 4.441453566621804
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Modified Vehicle"
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 18.70794078061911,
+          "left": 71.6304347826087,
+          "width": 3.4782608695652173,
+          "height": 11.036339165545089
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 44.145356662180355,
+          "left": 71.6304347826087,
+          "width": 3.4782608695652173,
+          "height": 11.036339165545089
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": "20",
+          "notUsed": false
+        },
+        "description": "Power Windows*",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 69.17900403768506,
+          "left": 71.6304347826087,
+          "width": 3.4782608695652173,
+          "height": 10.901749663526244
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      }
+    ],
+    "boxName": "Passenger compartment fuse panel",
+    "boxDescription": "The fuse panel is located below and to the left of the steering wheel by the brake pedal. Remove the panel cover to access the fuses.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f880b4fb94e300040e1f40/fragment-60f880b4fb94e300040e1f40-87d117cb11.jpg",
+      "source": "611eac80e589910004cd32d6"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f880b4fb94e300040e1f40/fragment-60f880b4fb94e300040e1f40-7668e60eb1.jpg",
+        "source": "611eac83e589910004cd32d7"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f880b4fb94e300040e1f40/fragment-60f880b4fb94e300040e1f40-f4b0c3a2a9.jpg",
+        "source": "611eac8ce589910004cd32d8"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f880b4fb94e300040e1f40/fragment-60f880b4fb94e300040e1f40-3240d7331f.jpg",
+        "source": "611eac93e589910004cd32d9"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8076086956521739,
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/09ef38e9_ford-e-350-1998.jpg"
+    },
+    "templateId": "61424691eac899000496b6e3",
+    "imageClusters": [
+      "62262b6863a3a7cea51f148f",
+      "637cd237a972f05f5a306033"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-econoline-1998-genid-g4.1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 11.093994522691705,
+          "left": 85.34262061066092,
+          "width": 11.283208534208626,
+          "height": 78.09076682316119
+        },
+        "kind": {
+          "type": "other",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 34.01015228426396,
+          "left": 77.44916820702403,
+          "width": 2.865064695009242,
+          "height": 14.720812182741117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 34.01015228426396,
+          "left": 72.08872458410352,
+          "width": 2.7726432532347505,
+          "height": 14.720812182741117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 24.86551251956182,
+          "left": 78.07691814545082,
+          "width": 1.6240981981057985,
+          "height": 5.946791862284821
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PCM Keep Alive Memory, Instrument Cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 24.86551251956182,
+          "left": 72.94818699353779,
+          "width": 1.6240981981057985,
+          "height": 5.946791862284821
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right Trailer Turn Signal"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 15.945324726134585,
+          "left": 78.07691814545082,
+          "width": 1.6240981981057985,
+          "height": 5.946791862284821
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left Trailer Turn Signal"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 15.945324726134585,
+          "left": 72.94818699353779,
+          "width": 1.6240981981057985,
+          "height": 5.946791862284821
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 78.1725888324873,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "I/P Fuses 5, 11, 23, 38, 4, 10, 16, 22, 28"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 69.54314720812182,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "PCM Power Relay, Engine Compartment Fuse 4",
+        "relatedEntities": [
+          "RELAY(protects=PCM)",
+          "VANO_MOTOR"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.74450084602368,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Auxiliary Battery Relay, Engine Compartment Fuses 14, 22",
+        "relatedEntities": [
+          "VANO_MOTOR"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 51.60744500846024,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "IDM Relay (1998 1/2 Vehicles)"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 42.63959390862944,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Engine Compartment Fuses 26, 27",
+        "relatedEntities": [
+          "VANO_MOTOR"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 33.67174280879864,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "Blower Motor Relay (Blower Motor)",
+        "relatedEntities": [
+          "RELAY",
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 24.703891708967852,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Trailer Running Lamps Relay, Trailer Backup Lamps Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_RETROCESO(of=REMOLQUE))"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 15.905245346869712,
+          "left": 59.14972273567468,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Main Light Switch",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 78.1725888324873,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "RKE Module, Auxiliary Blower Motor Relay",
+        "relatedEntities": [
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 69.54314720812182,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Fuel Pump Relay, IDM [Diesel]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/fuel-pump-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 60.74450084602368,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "I/P Fuses 40, 41"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 51.60744500846024,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "4WABS Module",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 42.63959390862944,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Electric Brake Controller",
+        "relatedEntities": [
+          "CONTROLADOR_ELECTRONICO_FRENO"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 33.67174280879864,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "Modified Vehicle Power"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 24.703891708967852,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Trailer Battery Charge Relay (Modified Vehicles Only)",
+        "relatedEntities": [
+          "RELAY_BATERIA_DE_TRAILER"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 15.905245346869712,
+          "left": 46.48798521256931,
+          "width": 9.611829944547134,
+          "height": 5.583756345177665
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Ignition Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 77.91715571205008,
+          "left": 41.15005385167709,
+          "width": 1.4531404930420209,
+          "height": 5.94679186228484
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 77.91715571205008,
+          "left": 35.93584384723219,
+          "width": 1.4531404930420209,
+          "height": 5.94679186228484
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "NGV Module"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 69.15346244131455,
+          "left": 41.15005385167709,
+          "width": 1.4531404930420209,
+          "height": 5.94679186228484
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Generator/Voltage Regulator [Diesel Only]",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "REGULADOR_DE_VOLTAGE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/alternator-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 69.15346244131455,
+          "left": 35.93584384723219,
+          "width": 1.4531404930420209,
+          "height": 5.94679186228484
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DRL Module, Horn Relay",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)",
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/headlight-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/ford/econoline/info/fusebox/1998/horn-fuse",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 51.26903553299492,
+          "left": 40.38817005545287,
+          "width": 2.865064695009242,
+          "height": 14.551607445008461
+        },
+        "kind": {
+          "notUsed": false,
+          "type": "diode",
+          "format": "ato"
+        },
+        "description": "PCM Diode",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 51.26903553299492,
+          "left": 35.304990757855826,
+          "width": 2.7726432532347505,
+          "height": 14.551607445008461
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "A",
+        "layout": {
+          "top": 70.05076142131979,
+          "left": 71.99630314232903,
+          "width": 7.8558225508317925,
+          "height": 13.874788494077833
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": true,
+          "format": "ultra"
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "B",
+        "layout": {
+          "top": 52.115059221658214,
+          "left": 71.99630314232903,
+          "width": 7.8558225508317925,
+          "height": 14.04399323181049
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": true,
+          "format": "ultra"
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "C",
+        "layout": {
+          "top": 33.840947546531304,
+          "left": 35.304990757855826,
+          "width": 7.8558225508317925,
+          "height": 13.874788494077833
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "ultra"
+        },
+        "description": "Trailer Backup Lamps Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_RETROCESO(of=REMOLQUE))"
+        ]
+      },
+      {
+        "id": "D",
+        "layout": {
+          "top": 15.905245346869712,
+          "left": 35.304990757855826,
+          "width": 7.8558225508317925,
+          "height": 14.04399323181049
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "ultra"
+        },
+        "description": "Trailer Running Lamps Relay"
+      },
+      {
+        "id": "E",
+        "layout": {
+          "top": 64.9746192893401,
+          "left": 21.90388170055453,
+          "width": 10.166358595194085,
+          "height": 18.274111675126903
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "Trailer Battery Charge Relay",
+        "relatedEntities": [
+          "RELAY_BATERIA_DE_TRAILER"
+        ]
+      },
+      {
+        "id": "F",
+        "layout": {
+          "top": 40.10152284263959,
+          "left": 21.90388170055453,
+          "width": 10.166358595194085,
+          "height": 18.104906937394247
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "IDM Relay"
+      },
+      {
+        "id": "G",
+        "layout": {
+          "top": 15.228426395939088,
+          "left": 21.90388170055453,
+          "width": 10.166358595194085,
+          "height": 18.104906937394247
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "PCM Relay",
+        "relatedEntities": [
+          "RELAY(protects=PCM)"
+        ]
+      },
+      {
+        "id": "H",
+        "layout": {
+          "top": 64.9746192893401,
+          "left": 8.22550831792976,
+          "width": 10.073937153419593,
+          "height": 18.104906937394247
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "Blower Motor Relay",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "J",
+        "layout": {
+          "top": 40.10152284263959,
+          "left": 8.22550831792976,
+          "width": 10.073937153419593,
+          "height": 18.104906937394247
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "Horn Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/horn-relay",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "K",
+        "layout": {
+          "top": 15.228426395939088,
+          "left": 8.22550831792976,
+          "width": 10.073937153419593,
+          "height": 18.104906937394247
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "Fuel Pump Relay, IDM Relay [Diesel]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/econoline/info/fusebox/1998/fuel-pump-relay",
+            "urlWithAnchor": "/ford/econoline/info/fusebox/1998/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      }
+    ],
+    "boxName": "Power distribution box",
+    "boxDescription": "The power distribution box is located in the engine compartment. The power distribution box contains high-current fuses that protect your vehicle’s main electrical systems from overloads.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f880b4fb94e300040e1f40/fragment-60f880b4fb94e300040e1f40-613a5413b9.jpg",
+      "source": "611eaca9e589910004cd32da"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f880b4fb94e300040e1f40/fragment-60f880b4fb94e300040e1f40-aca3b41048.jpg",
+        "source": "611eacb0e589910004cd32db"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f880b4fb94e300040e1f40/fragment-60f880b4fb94e300040e1f40-ada656fd4c.jpg",
+        "source": "611eacb7e589910004cd32dc"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5462107208872459,
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/4ad54cb8_ford-e-350-1998.jpg"
+    },
+    "templateId": "61424802eac899000496b6e4",
+    "imageClusters": [
+      "61fae07e1600fb00045897b6"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-econoline-1998-genid-g4.1-1.webp"
+  }
+]

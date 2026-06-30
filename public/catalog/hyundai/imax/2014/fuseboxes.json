@@ -1,0 +1,2627 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 8.717073170731702,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(DRL) BCM (optional)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 16.998780487804876,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(S/HTD DRI) Driver seat heating switch (optional)"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 25.280487804878035,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(BCM) BCM",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 33.56219512195119,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H/LP) Low beam and high beam light relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_BAJA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 41.84390243902436,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(HTR) Front/rear fan relay, front/rear air conditioning control module, condenser fan relay, electrochromic mirror. PTC heater relay [D4CB], EGR solenoid valve [D4BH]"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 50.12560975609752,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(RR WIPER) No Data",
+        "relatedEntities": [
+          "NOT_AVAILABLE_FUSE"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 58.407317073170674,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(MIRR HTD) Front air conditioning control module, electric exterior mirror and defroster LEFT/RIGHT",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 7.835127478753537,
+          "left": 66.6890243902438,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(START) Start relay. Anti-theft alarm relay",
+        "relatedEntities": [
+          "RELAY(protects=ALARMA_ANTIRROBO)",
+          "RELAY(protects=TESTIGO_INMOVILIZADOR)"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 8.717073170731702,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(FRT WIPER) Windshield wiper motor, wiper relay",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)",
+          "RELAY(protects=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 17.049941927990723,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(P/WDW LH) Main power window switch, LEFT power window switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 25.382810685249733,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(P/WDW RH) Main power window switch, RIGHT power window switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 33.71567944250874,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/BAG IND) Instrument panel",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 42.04854819976774,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU) Vehicle speed sensor, ECM, airflow sensor [D4CB], injection pump [D4BH], TCM, fuel filter warning sensor.",
+        "relatedEntities": [
+          "ECU",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 50.38141695702674,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(T/SIG LP) Emergency switch",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA",
+          "BOTON_PANICO"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 58.714285714285744,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(B/UP LP) Backup light relay, backup light switch, transmission range switch.",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_RETROCESO)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 20.433427762039646,
+          "left": 67.04715447154463,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(B/ALARM) Anti-theft alarm horn relay"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 8.717073170731702,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(RR P/OUTLET) No Data",
+        "relatedEntities": [
+          "NOT_AVAILABLE_FUSE"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 17.049941927990723,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(FUEL LID) Fuel door relay"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 25.382810685249733,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HAZARD) Emergency relay, emergency switch",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_BALIZA)",
+          "BOTON_PANICO",
+          "BOTON_DE_BALIZA"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 33.71567944250874,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(CLUSTER) Instrument panel, BCM, immobilizer control module [D4BH], A/C relay [D4BH], generator resistor",
+        "relatedEntities": [
+          "TABLERO",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 42.04854819976774,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(BWS) Buzzer"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 50.38141695702674,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(AMP WOOFER) No Data",
+        "relatedEntities": [
+          "NOT_AVAILABLE_FUSE"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 58.714285714285744,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/BAG) SRS control module"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 32.752974504249316,
+          "left": 67.04715447154463,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(FRT FOG LP) Fog light relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 8.717073170731702,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(C/LIGHTER) Cigarette lighter, front power outlet",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 17.049941927990723,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(AUDIO-2) Audio, Digital clock, BCM, electric exterior mirror switch.",
+        "relatedEntities": [
+          "ESTEREO",
+          "RELOJ",
+          "MODULO_CARROCERIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/radio-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 25.382810685249733,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(SAFETY PWR) No Data",
+        "relatedEntities": [
+          "NOT_AVAILABLE_FUSE"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 33.71567944250874,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(STOP LP) Brake light switch"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 42.04854819976774,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(RR S/ROOF) No Data",
+        "relatedEntities": [
+          "NOT_AVAILABLE_FUSE"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 50.38141695702674,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(FRT S/ROOF) No Data",
+        "relatedEntities": [
+          "NOT_AVAILABLE_FUSE"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 58.714285714285744,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(DR LOCK) Door lock/unlock relay"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 45.07252124645896,
+          "left": 67.04715447154463,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ABS) ABS/ESP control module, ESP switch [D4CB]",
+        "relatedEntities": [
+          "MODULO_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 32.69461756373939,
+          "left": 79.24227642276412,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ROOM LP) Digital clock, instrument panel, LEFT/RIGHT courtesy light, LEFT/RIGHT step light, cargo light, cabin light switch, door warning switch, data link connector, BCM, LEFT/RIGHT vanity light switch, roof console light",
+        "relatedEntities": [
+          "RELOJ",
+          "TABLERO",
+          "LUZ_CORTESIA(ubicacion=LADO_IZQUIERDO)",
+          "TESTIGO_BATERIA",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 32.69461756373939,
+          "left": 87.67235772357711,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(AUDIO-1) Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/radio-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 7.835127478753538,
+          "left": 74.97073170731696,
+          "width": 4.416492450638803,
+          "height": 7.282355321732108
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(RR FOG LP) Rear fog light relay",
+        "relatedEntities": [
+          "RELAY(protects=TESTIGO_LUZ_ANTINIEBLA(warns=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)))"
+        ]
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 56.00230747751036,
+          "left": 11.82006484149856,
+          "width": 10.662824207492797,
+          "height": 16.872054753804676
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 62.22039643330453,
+          "left": 43.232168587896254,
+          "width": 18.44380403458213,
+          "height": 7.028987544634077
+        }
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 56.35074940385595,
+          "left": 76.86156340057636,
+          "width": 10.662824207492797,
+          "height": 16.072054753804665
+        }
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 77.02402580309179,
+          "left": 33.66156340057637,
+          "width": 10.662824207492797,
+          "height": 17.472054753804684
+        }
+      },
+      {
+        "id": "Connector 5",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 81.61836394025505,
+          "left": 49.26675072046109,
+          "width": 42.36311239193084,
+          "height": 12.853005795902305
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 78.82492917847019,
+          "left": 8.410569105691053,
+          "width": 18.784959349593464,
+          "height": 7.781728045325787
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 90.1337110481586,
+          "left": 8.6040650406504,
+          "width": 18.784959349593464,
+          "height": 7.781728045325787
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxName": "Interior Fuse Panel",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/cd9c9c10_2010-hyundai-h-1.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0ce8a741af640004af8689/fragment-5f0ce8a741af640004af8689-8f7a74123a.jpg",
+        "source": "61b7cf315d46590004c9821b"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0ce8a741af640004af8689/fragment-5f0ce8a741af640004af8689-a9371057ee.jpg",
+        "source": "61b7cf395d46590004c9821c"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.434959349593496,
+    "templateId": "6578c4dcaa85ffc34ab45e2a",
+    "isTranslated": true,
+    "boxDescription": null,
+    "imageClusters": [
+      "64a42b74f97c97bd46b80d1f"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-imax-2014-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 34.48275862068966,
+          "left": 11.34020618556701,
+          "width": 11.683848797250858,
+          "height": 29.195402298850574
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 50.804597701149426,
+          "left": 54.63917525773196,
+          "width": 10.652920962199312,
+          "height": 23.678160919540232
+        }
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 34.48275862068966,
+          "left": 79.72508591065292,
+          "width": 12.027491408934708,
+          "height": 29.195402298850574
+        }
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 68.96551724137932,
+          "left": 11.34020618556701,
+          "width": 11.683848797250858,
+          "height": 23.448275862068964
+        }
+      },
+      {
+        "id": "Connector 5",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 78.39080459770115,
+          "left": 33.33333333333333,
+          "width": 10.996563573883162,
+          "height": 16.7816091954023
+        }
+      },
+      {
+        "id": "Connector 6",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 78.39080459770115,
+          "left": 54.63917525773196,
+          "width": 14.432989690721648,
+          "height": 16.7816091954023
+        }
+      },
+      {
+        "id": "Connector 7",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 70.11494252873564,
+          "left": 79.72508591065292,
+          "width": 12.027491408934708,
+          "height": 23.218390804597703
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 7.35632183908046,
+          "left": 10.996563573883162,
+          "width": 24.054982817869416,
+          "height": 15.402298850574713
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Fan Relay"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 8.735632183908045,
+          "left": 41.92439862542955,
+          "width": 12.714776632302405,
+          "height": 12.643678160919542
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear Light Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_TRASERAS)"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 7.35632183908046,
+          "left": 61.512027491408936,
+          "width": 24.054982817869416,
+          "height": 15.402298850574713
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Front Fan Relay"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 28.50574712643678,
+          "left": 36.42611683848797,
+          "width": 24.054982817869416,
+          "height": 15.632183908045977
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Defogger Relay",
+        "relatedEntities": [
+          "RELAY",
+          "DESEMPANADOR_TRASERO"
+        ]
+      }
+    ],
+    "boxAspectRatio": 1.4948453608247423,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/71c897a1_hyundai-iload-2010.jpg"
+    },
+    "boxDescription": null,
+    "boxName": "Interior Fuse Panel (Rear Side)",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/09fab2ee_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "64a42b74f97c97bd46b80d1f"
+    ],
+    "templateId": "6578c81aaa85ffc34ab45e53",
+    "isTranslated": true,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-imax-2014-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 24.26933109179237,
+          "left": 17.82833192950381,
+          "width": 5.5391052793928655,
+          "height": 34.62674790935156
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 150
+        },
+        "description": "Fuse and relay box No. 1 in engine compartment, fuses 12, 13, 15, 17 - 19 Alternator Fuse and relay box No. 2 in engine compartment",
+        "relatedEntities": [
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 33.22066386753106,
+          "left": 24.88685755257443,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Ignition switch Starter relay"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 33.22066386753106,
+          "left": 30.844430544426903,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Fuse and relay box in passenger compartment, fuses 16, 24, 31, 33, 34",
+        "relatedEntities": [
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 33.22066386753106,
+          "left": 36.80200353627937,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ],
+        "extendedDescription": "Ignition switch"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 33.22066386753106,
+          "left": 42.759576528131845,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Fuse and relay box in passenger compartment, fuses 18, 19, 27 Multi-purpose check connector Or Fuse and relay box in passenger compartment, fuses 18, 19, 27 Multi-purpose check connector Power window relay",
+        "relatedEntities": [
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 33.22066386753106,
+          "left": 48.71714951998431,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Fuse and relay box in passenger compartment, fuses 28, 31",
+        "relatedEntities": [
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 33.22066386753106,
+          "left": 54.67472251183678,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Engine control relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 33.22066386753106,
+          "left": 54.67472251183678,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "20"
+        },
+        "description": "Engine control relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 35.61448062976599,
+          "left": 61.70448776965268,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission Control Module (TCM)",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ],
+        "extendedDescription": "Transmission control unit"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 35.61448062976599,
+          "left": 64.92206761851753,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/horn-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 35.61448062976599,
+          "left": 69.1373112521563,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel-fired heater control unit"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 35.61448062976599,
+          "left": 69.1373112521563,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "unmappedId": "3",
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/fuel-pump-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 35.61448062976599,
+          "left": 69.1373112521563,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Alternator",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "unmappedId": "3",
+        "extendedDescription": "Battery and charging system",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/alternator-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 35.61448062976599,
+          "left": 72.3548911010212,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlight relay, main beam",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 48.77670486046337,
+          "left": 24.510189629819134,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Front blower relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA))"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 48.77670486046337,
+          "left": 30.32545599508663,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Relay, rear defroster",
+        "relatedEntities": [
+          "RELAY"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 48.77670486046337,
+          "left": 36.14072236035413,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS 1 / Rear Fan",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "unmappedId": "ABS 1 / R FAN"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 48.77670486046337,
+          "left": 41.95598872562162,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Rear blower relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA))"
+        ],
+        "extendedDescription": "Rear air conditioning system"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 48.77670486046337,
+          "left": 47.77125509088912,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Anti-lock Braking System (ABS) 2",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "unmappedId": "ABS 2",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 48.77670486046337,
+          "left": 53.58652145615662,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Condenser fan relay 1",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DEL_CONDENSADOR)"
+        ],
+        "extendedDescription": "AC condenser fan"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 48.77670486046337,
+          "left": 59.401787821424115,
+          "width": 4.997549695682015,
+          "height": 11.434425032602078
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Fuel filter heater relay or not used"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 51.6398196018095,
+          "left": 65.5125685341735,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air-conditioning relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.6398196018095,
+          "left": 68.55282759960961,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 62.53045712499383,
+          "left": 18.24968731072844,
+          "width": 4.9011842726605686,
+          "height": 3.6185146136650728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 67.74632695920461,
+          "left": 18.24968731072844,
+          "width": 4.9011842726605686,
+          "height": 3.6185146136650728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 72.96219679341539,
+          "left": 18.150735094560773,
+          "width": 4.9011842726605686,
+          "height": 3.6185146136650728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 78.17806662762617,
+          "left": 18.150735094560773,
+          "width": 4.9011842726605686,
+          "height": 3.6185146136650728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "25"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 69.50947856328337,
+          "left": 26.582974534057303,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left headlight Rear left combination light Left license plate light"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 69.50947856328337,
+          "left": 30.02082670955845,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right headlight Rear right combination light Right license plate light"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 69.50947856328337,
+          "left": 33.4586788850596,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left headlight Left headlight leveling"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 69.50947856328337,
+          "left": 36.89653106056075,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right headlight Left headlight leveling actuator Right headlight leveling actuator"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 83.73707244714332,
+          "left": 55.76733844768977,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air-conditioning relay Brake light switch Or Air-conditioning relay Condenser fan relay 1 Oxygen sensor Positive Temperature Coefficient (PTC) heater, relay 1 Brake light switch"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 83.73707244714332,
+          "left": 59.056253057837054,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Camshaft position sensor Glow plug relay Exhaust gas recirculation actuator Variable geometry turbocharger (VGT) solenoid valve Wastegate control solenoid Inlet manifold shut-off valve Immobilizer control unit Or Brake light switch or not used Immobilizer control unit Idle speed actuator Camshaft position sensor"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 83.73707244714332,
+          "left": 62.34516766798434,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Ignition Coil",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ],
+        "unmappedId": "13",
+        "extendedDescription": "Ignition coil"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 83.73707244714332,
+          "left": 62.34516766798434,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine Control Unit (ECU)",
+        "relatedEntities": [
+          "ECU"
+        ],
+        "unmappedId": "13",
+        "extendedDescription": "Engine control unit"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 83.73707244714332,
+          "left": 65.63408227813163,
+          "width": 1.9062300464960276,
+          "height": 9.430277404332118
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Engine control unit or not used"
+      },
+      {
+        "id": "Battery 1",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        },
+        "layout": {
+          "top": 14.260828714111836,
+          "left": 7.608426572899228,
+          "width": 8.411215935889713,
+          "height": 13.285505513484788,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Battery 2",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "large"
+        },
+        "layout": {
+          "top": 39.98831558149508,
+          "left": 7.608426572899228,
+          "width": 8.411215935889713,
+          "height": 13.285505513484788,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Battery 3",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        },
+        "layout": {
+          "top": 68.03549388774074,
+          "left": 4.908426572899238,
+          "width": 8.411215935889713,
+          "height": 13.285505513484788,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 11.097613115663076,
+          "left": 20.540671074329662,
+          "width": 5.887851155122799,
+          "height": 11.809338234208699
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 5.980609310211616,
+          "left": 34.90355585893747,
+          "width": 12.469450833444423,
+          "height": 24.098724297238725
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/starter-relay",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 5.980609310211616,
+          "left": 47.64160122822481,
+          "width": 12.469450833444423,
+          "height": 24.098724297238725
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Engine control relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 10.167943364407273,
+          "left": 62.3773103822859,
+          "width": 7.583068777136719,
+          "height": 21.31537884703167
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/horn-relay",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 10.167943364407273,
+          "left": 71.3636338585569,
+          "width": 7.687634402574413,
+          "height": 21.31537884703167
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Headlight relay, main beam",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 10.167943364407273,
+          "left": 79.82310719131296,
+          "width": 7.687634402574413,
+          "height": 21.31537884703167
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Tail light relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_TRASERAS)"
+        ],
+        "extendedDescription": "Tail lights"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 10.167943364407273,
+          "left": 88.38829529702855,
+          "width": 7.583068777136719,
+          "height": 21.31537884703167
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front wiper relay",
+        "relatedEntities": [
+          "RELAY(protects=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ],
+        "extendedDescription": "Front wipers"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 35.15586363441352,
+          "left": 86.92839855722742,
+          "width": 9.984868081777446,
+          "height": 14.158514890630627
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Headlight relay, dipped beam",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "LUZ_BAJA"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 52.993422005956035,
+          "left": 75.6381838787617,
+          "width": 9.984868081777446,
+          "height": 14.158514890630627
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 52.993422005956035,
+          "left": 86.92839855722742,
+          "width": 9.984868081777446,
+          "height": 14.158514890630627
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 65.2803420614426,
+          "left": 53.96954188896183,
+          "width": 9.984868081777446,
+          "height": 14.158514890630627
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air-conditioning relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/air-conditioning-relay",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 70.01148218826387,
+          "left": 70.07736865505247,
+          "width": 12.469450833444423,
+          "height": 24.098724297238725
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Condenser fan relay 1",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DEL_CONDENSADOR)"
+        ],
+        "extendedDescription": "AC condenser fan"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 70.01148218826387,
+          "left": 83.66907639118736,
+          "width": 12.469450833444423,
+          "height": 24.098724297238725
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Radiator fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "unmappedId": "E49",
+        "extendedDescription": "Radiator fan",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/cooling-fan-relay",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 70.01148218826387,
+          "left": 83.66907639118736,
+          "width": 12.469450833444423,
+          "height": 24.098724297238725
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuel filter heater relay",
+        "relatedEntities": [
+          "RELAY(protects=CALENTADOR_FILTRO_COMBUSTIBLE)"
+        ],
+        "unmappedId": "E49"
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Box",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/d72f91fa_2010-hyundai-h-1.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0ce8a741af640004af8689/fragment-5f0ce8a741af640004af8689-ec5c1c82b5.jpg",
+        "source": "61b7cf7b5d46590004c98220"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f0ce8a741af640004af8689/fragment-5f0ce8a741af640004af8689-630119d72b.jpg",
+        "source": "61b7cf815d46590004c98221"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/c35a6879_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/81396d17_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8d769c2b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/45caf1ae_image.jpg"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.49857954545454547,
+    "templateId": "61e8caf33749c80004e48d0a",
+    "isTranslated": true,
+    "boxDescription": null,
+    "imageClusters": [
+      "6512d46c80873e6bfdeb0e04",
+      "64496cff85070df59bfbf321"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-imax-2014-genid-g1-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Rear fog light relay",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 81.51945493934399,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Front fog light relay",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 72.82835671277563,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Flasher unit",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 64.13725848620729,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Hazard warning light relay or not used",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 55.44616025963893,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Security alarm system relay",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 46.75506203307057,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Security system horn relay",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 38.06396380650222,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Rear wiper relay",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 29.37286557993387,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": [
+          "RELAY(protects=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Door lock relay",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 20.68176735336552,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": [
+          "RELAY(protects=CERRADURA(of=PUERTA))",
+          "RELAY(protects=PROP_OR(0=CIERRE_CENTRALIZADO,1=CIERRE_CENTRALIZADO))"
+        ]
+      },
+      {
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Door unlock relay",
+        "layout": {
+          "top": 32.009270000743,
+          "left": 11.990669126797165,
+          "width": 7.609373554592031,
+          "height": 34.277648956548035
+        },
+        "relatedEntities": [
+          "RELAY(protects=PROP_OR(0=CIERRE_CENTRALIZADO,1=CIERRE_CENTRALIZADO))"
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.222,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/eeec9c9d_2010-hyundai-h-1.jpg"
+    },
+    "processed": false,
+    "boxName": "Passenger compartment (additional fuse box).",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/adae434f_image.jpg"
+      }
+    ],
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-imax-2014-genid-g1-3.webp"
+  },
+  {
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/835a08a2_diesel-2010-hyundai-h-1.jpg"
+      }
+    ],
+    "boxDescription": "Under the fuse and relay box covers, there is a label describing their names and capacity",
+    "boxName": "Auxiliary Fuse Box in Engine Compartment (Diesel Engine - Type 2)",
+    "boxAspectRatio": 0.2979539641943734,
+    "processed": false,
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 23.581341775499503,
+          "left": 85.02792013749547,
+          "width": 4.7108790648764955,
+          "height": 5.795401997306618
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "DCU"
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 23.581341775499503,
+          "left": 92.32315082832255,
+          "width": 4.7108790648764955,
+          "height": 5.795401997306618
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 39.723994783562574,
+          "left": 92.67401872482293,
+          "width": 2.0114945632138577,
+          "height": 16.1298841370336
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "DCU"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 39.723994783562574,
+          "left": 95.89320256825843,
+          "width": 2.0114945632138577,
+          "height": 16.1298841370336
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "DCU"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 37.87112670327483,
+          "left": 59.12540767495248,
+          "width": 4.426833766538558,
+          "height": 16.940249243011948
+        },
+        "description": "(PTC 1) PTC Heater Relay #1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        }
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 37.87112670327483,
+          "left": 65.25817115841367,
+          "width": 4.426833766538558,
+          "height": 16.940249243011948
+        },
+        "description": "(PTC 2) PTC Heater Relay #2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        }
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 37.87112670327483,
+          "left": 71.39093464187486,
+          "width": 4.426833766538558,
+          "height": 16.940249243011948
+        },
+        "description": "(ABS 1) ABS/ESP Control Module",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "relatedEntities": [
+          "MODULO_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 37.87112670327483,
+          "left": 77.52369812533605,
+          "width": 4.426833766538558,
+          "height": 16.940249243011948
+        },
+        "description": "(ABS 2) ABS/ESP Control Module",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "relatedEntities": [
+          "MODULO_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 37.87112670327483,
+          "left": 83.65646160879724,
+          "width": 4.426833766538558,
+          "height": 16.940249243011948
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "60"
+        },
+        "description": "(DCU)"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.52252960163104,
+          "left": 59.12540767495248,
+          "width": 4.426833766538558,
+          "height": 16.640249243011944
+        },
+        "description": "(PTC 3) PTC Heater Relay #3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        }
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 60.52252960163104,
+          "left": 65.19453686698726,
+          "width": 4.426833766538558,
+          "height": 16.640249243011944
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 60.95831977438056,
+          "left": 72.24981669278853,
+          "width": 2.0114945632138577,
+          "height": 16.1298841370336
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 60.95831977438056,
+          "left": 75.36515589611322,
+          "width": 2.0114945632138577,
+          "height": 16.1298841370336
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 60.95831977438056,
+          "left": 78.48049509943792,
+          "width": 2.0114945632138577,
+          "height": 16.1298841370336
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "DCU SENSOR"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 60.95831977438056,
+          "left": 81.5958343027626,
+          "width": 2.0114945632138577,
+          "height": 16.1298841370336
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "FUEL PUMP",
+        "relatedEntities": [
+          "BOMBA_DE_COMBUSTIBLE",
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/fuel-pump-fuse",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 60.95831977438056,
+          "left": 84.71117350608729,
+          "width": 2.0114945632138577,
+          "height": 16.1298841370336
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "ECU",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 70.84772172047815,
+          "left": 89.38420070613819,
+          "width": 7.812689257899146,
+          "height": 18.112306210651145,
+          "rotation": -50
+        },
+        "description": "(GLOW) Glow Plug Relay",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 80
+        },
+        "relatedEntities": [
+          "RELAY(protects=PRECALENTADOR)"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": -3.2355727615506185,
+          "left": 4.797849462365569,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "description": "ECM (D4BH)",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": 10
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": -3.2355727615506185,
+          "left": 21.27148905143671,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "PTC HEATER 1"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": -3.2355727615506185,
+          "left": 37.74512864050785,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "PTC HEATER 2",
+        "relatedEntities": [
+          "CALENTADOR_AIRE_ADMISION"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": -3.2355727615506185,
+          "left": 54.21876822957899,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "PTC HEATER 3",
+        "relatedEntities": [
+          "CALENTADOR_AIRE_ADMISION"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": -3.2355727615506185,
+          "left": 70.69240781865014,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "DCU"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": -1.963143840696752,
+          "left": 86.24900804398308,
+          "width": 9.25971636143075,
+          "height": 15.041012994735649
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FUEL PUMP",
+        "relatedEntities": [
+          "BOMBA_DE_COMBUSTIBLE",
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/imax/info/fusebox/2014/fuel-pump-relay",
+            "urlWithAnchor": "/hyundai/imax/info/fusebox/2014/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 43.619745547427414,
+          "left": 4.797849462365567,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 44.024603847022554,
+          "left": 21.27148905143671,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 44.024603847022554,
+          "left": 37.74512864050785,
+          "width": 10.904166666666685,
+          "height": 30.953094274146967
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "DCU SENSOR"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/8259cc1c_Screen Shot 2022-01-31 at 16.57.37.png"
+    },
+    "templateId": "657b8ae27e253a0e6dcce057",
+    "isTranslated": true,
+    "useAcronyms": true,
+    "boxScaleMultiplier": "",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-imax-2014-genid-g1-4.webp"
+  }
+]

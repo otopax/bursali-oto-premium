@@ -1,0 +1,1199 @@
+[
+  {
+    "boxName": "Engine fuse box",
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/39df9b6d_Fusiblera motor Hyundai Accent 2002 (2).JPG"
+    },
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/a78b7d29_Diagrama fusiblera motor Accent 2002.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 1.371571072319202,
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 72.51781323743947,
+          "left": 20.27546730358142,
+          "width": 11.96212775824362,
+          "height": 11.4121224701771,
+          "rotation": -35
+        },
+        "description": "ALT Charge (generator)",
+        "kind": {
+          "format": "cartridge-flf",
+          "type": "fuse",
+          "amp": 120
+        }
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 58.80826813337585,
+          "left": 28.523754208728203,
+          "width": 10.28373354817871,
+          "height": 5.42609052241113
+        },
+        "description": "BATTERY Fuse 6, 7, 8, 9, horn fuse, interior light fuse",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 50
+        },
+        "relatedEntities": [
+          "FUSIBLE_BOCINA",
+          "FUSIBLE_LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 51.664407277773876,
+          "left": 28.523754208728203,
+          "width": 10.28373354817871,
+          "height": 5.42609052241113
+        },
+        "description": "LAMP Headlight fuse, front fog light fuse, tail light relay, headlight washer fuse",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 50
+        },
+        "relatedEntities": [
+          "FUSIBLE_LUZ_ANTINIEBLA_TRASERA(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "FUSIBLE(protects=LAVA_FAROS)"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 44.5205464221719,
+          "left": 28.523754208728203,
+          "width": 10.28373354817871,
+          "height": 5.42609052241113
+        },
+        "description": "ECU Engine control relay, generator, fuel pump relay, ECU #3 fuse",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "ALTERNADOR",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/alternator-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/fuel-pump-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 37.376685566569925,
+          "left": 28.523754208728203,
+          "width": 10.28373354817871,
+          "height": 5.42609052241113
+        },
+        "description": "IGN Power supply for starting, ignition relay",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "RELAY(protects=ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/starter-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 30.23282471096795,
+          "left": 28.523754208728203,
+          "width": 10.28373354817871,
+          "height": 5.42609052241113
+        },
+        "description": "RAD FAN Engine fan control",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 20
+        }
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 67.3823017506028,
+          "left": 42.273104134949236,
+          "width": 8.85645103047573,
+          "height": 8.179930333936385
+        },
+        "description": "BLOWER Air diffuser control",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 67.3823017506028,
+          "left": 62.096276021560726,
+          "width": 8.85645103047573,
+          "height": 8.179930333936385
+        },
+        "description": "ABS ABS control, ABS bleed connector",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 67.3823017506028,
+          "left": 52.18469007825498,
+          "width": 8.85645103047573,
+          "height": 8.179930333936385
+        },
+        "description": "ABS ABS control, ABS bleed connector",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 67.3823017506028,
+          "left": 72.00786196486648,
+          "width": 8.85645103047573,
+          "height": 8.179930333936385
+        },
+        "description": "P/WDW Power window",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "MARCHA_PARKING"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 67.3823017506028,
+          "left": 81.91944790817222,
+          "width": 8.85645103047573,
+          "height": 8.179930333936385
+        },
+        "description": "COND FAN Condenser fan control",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 20
+        }
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 45.663943226899704,
+          "width": 2.4164336911357776,
+          "height": 3.8195539040174458
+        },
+        "description": "ECU #1 Radiator fan, condenser fan, ECM, oxygen sensor, purge control valve, SMATRA, glow plug relay, heater relay, stop light switch",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "ECU",
+          "SENSOR_OXIGENO",
+          "RELAY(protects=PRECALENTADOR)",
+          "RELAY(protects=PROP_OR(0=CALEFACCION,1=CALEFACCION))"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 51.197303091816956,
+          "width": 2.5451164786919986,
+          "height": 3.8195539040174458
+        },
+        "description": "A/CON COMP A/C relay",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 56.730662956734236,
+          "width": 2.4164336911357776,
+          "height": 3.8195539040174458
+        },
+        "description": "HORN Horn relay",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/horn-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 62.1353400340953,
+          "width": 2.5451164786919986,
+          "height": 3.8195539040174458
+        },
+        "description": "TAIL LH Headlights, left combination light, license plate light, DRL control, position light, headlight washer relay",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_PATENTE",
+          "COMANDO_DE_LUCES",
+          "LUZ_POSICION",
+          "RELAY(protects=LAVA_FAROS)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 67.66869989901281,
+          "width": 2.5451164786919986,
+          "height": 3.8195539040174458
+        },
+        "description": "TAIL RH Right combination light, license plate light, position light",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_PATENTE",
+          "LUZ_POSICION"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 73.20205976392998,
+          "width": 2.4164336911357776,
+          "height": 3.8195539040174458
+        },
+        "description": "H/LP LH Left headlight, DRL control, instrument panel",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 78.7354196288473,
+          "width": 2.4164336911357776,
+          "height": 3.8195539040174458
+        },
+        "description": "H/LP RH Right headlight",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 46.12228679051138,
+          "left": 84.1400967062084,
+          "width": 2.5451164786919986,
+          "height": 3.71790936109458
+        },
+        "description": "FRONT FOG Front fog light relay",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        }
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 24.101975682665998,
+          "left": 48.11647275236028,
+          "width": 2.5639041656752046,
+          "height": 4.7251913077128105
+        },
+        "description": "ROOM LP Instrument panel, courtesy light, trunk light, ETACM, DLC, door open warning, multi-check connector",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_CORTESIA",
+          "TESTIGO_BAUL",
+          "LUZ_BAUL",
+          "CONECTOR_OBD",
+          "TESTIGO_APERTURA_DE_PUERTAS"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 24.101975682665998,
+          "left": 53.64983261727753,
+          "width": 2.6925869532314266,
+          "height": 4.7251913077128105
+        },
+        "description": "AUDIO Audio, digital clock, power antenna, air conditioning switch, rear fog light switch",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "RELOJ",
+          "ANTENA"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 24.101975682665998,
+          "left": 75.52590650183426,
+          "width": 2.6925869532314266,
+          "height": 4.7251913077128105
+        },
+        "description": "ECU #2 Idle speed actuator, ECM, camshaft position sensor, EGR actuator, throttle plate actuator",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 24.101975682665998,
+          "left": 81.0592663667514,
+          "width": 2.5639041656752046,
+          "height": 4.7251913077128105
+        },
+        "description": "ECU#3 ECM",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 24.101975682665998,
+          "left": 86.46394344411245,
+          "width": 2.6925869532314266,
+          "height": 4.7251913077128105
+        },
+        "description": "H/L WASHER Headlight washer motor",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 25
+        }
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 78.72102788349422,
+          "left": 60.84828340132907,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "description": "F/PUMP CHK Fuel pump relay, fuel pump motor",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        }
+      },
+      {
+        "layout": {
+          "top": 78.72102788349422,
+          "left": 76.43532220613544,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "26",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "WIPER Windshield wiper relay.",
+        "relatedEntities": [
+          "RELAY(protects=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.921592978404647,
+          "left": 13.774222782601061,
+          "width": 20.73863873198239,
+          "height": 10.917392897002653
+        },
+        "id": "27",
+        "kind": {
+          "amp": "",
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "BLOWER Air diffuser control relay."
+      },
+      {
+        "layout": {
+          "top": 52.36440888839552,
+          "left": 44.25806703158576,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "28",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "START Starter."
+      },
+      {
+        "layout": {
+          "top": 52.36440888839552,
+          "left": 76.43532220613544,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "29",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "TAIL LAMP Brake light."
+      },
+      {
+        "layout": {
+          "top": 52.36440888839552,
+          "left": 60.84828340132907,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "30",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "R/W Diode"
+      },
+      {
+        "layout": {
+          "top": 78.40331021809561,
+          "left": 46.842204151545424,
+          "width": 6.958242735910476,
+          "height": 1.344732756855651
+        },
+        "id": "31",
+        "kind": {
+          "amp": "",
+          "format": "mini",
+          "type": "diode",
+          "notUsed": false
+        },
+        "description": "DIODE 1",
+        "relatedEntities": [
+          "DIODO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 82.64708760852407,
+          "left": 46.842204151545424,
+          "width": 6.958242735910476,
+          "height": 1.344732756855651
+        },
+        "id": "32",
+        "kind": {
+          "amp": "",
+          "format": "mini",
+          "type": "diode",
+          "notUsed": false
+        },
+        "description": "DIODE 2",
+        "relatedEntities": [
+          "DIODO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.470781971462635,
+          "left": 45.26124459652271,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "33",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "HORN Horn"
+      },
+      {
+        "layout": {
+          "top": 33.470781971462635,
+          "left": 60.84828340132907,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "34",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "A/CON Air conditioning."
+      },
+      {
+        "layout": {
+          "top": 33.470781971462635,
+          "left": 76.43532220613544,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "35",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "COND FAN#1 Condenser fan."
+      },
+      {
+        "layout": {
+          "top": 24.101975682665998,
+          "left": 69.99254663691687,
+          "width": 2.6925869532314266,
+          "height": 4.7251913077128105
+        },
+        "id": "36",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": "",
+          "notUsed": false
+        },
+        "description": "F/P CHK"
+      },
+      {
+        "layout": {
+          "top": 11.707357059267164,
+          "left": 45.26124459652271,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "37",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "COND FAN#2 Condenser fan."
+      },
+      {
+        "layout": {
+          "top": 11.592689674965927,
+          "left": 60.84828340132907,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "38",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "FRONT FOG Front fog light"
+      },
+      {
+        "layout": {
+          "top": 11.592689674965927,
+          "left": 76.43532220613544,
+          "width": 10.872694928295369,
+          "height": 10.83386043055767
+        },
+        "id": "39",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "RAD FAN Radiator fan"
+      },
+      {
+        "id": "Connector",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 27.725712890624997,
+          "left": 14.13592104535305,
+          "width": 12.942897126648663,
+          "height": 27.32571428571427
+        },
+        "relatedEntities": []
+      }
+    ],
+    "templateId": "6192c946037c0500048fed87",
+    "imageClusters": [
+      "629621a2507b070eccad2558",
+      "64cd0a53c3245b373a8e4d76"
+    ],
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxScaleMultiplier": "",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-verna-2002-genid-hyundai__accent_g2.1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 11.188811188811188,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard warning lights, reverse light switch, transmission speed switch, A/T shift control module and key lock"
+      },
+      {
+        "layout": {
+          "top": 19.58041958041958,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ETACM, pre-excitation resistor, instrument cluster, seat belt timer",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.73892773892774,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 36.13053613053613,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.52214452214452,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 3.9627039627039626
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ECM, A/T shift lever, transmission speed switch, air flow sensor, vehicle speed sensor, water sensor",
+        "relatedEntities": [
+          "ECU",
+          "SENSOR_CAUDAL_DE_AIRE",
+          "TESTIGO_RECALENTAMIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 52.680652680652685,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Central locking",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.83916083916085,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard warning lights, ETACM"
+      },
+      {
+        "layout": {
+          "top": 69.23076923076923,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake light, A/T shift lever, A/T key lock solenoid",
+        "relatedEntities": [
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/brake-light-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 77.3892773892774,
+          "left": 10.204081632653061,
+          "width": 28.061224489795915,
+          "height": 4.195804195804196
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear window defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 11.188811188811188,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Headlight, power window, headlight leveling, headlight washer, ETACM, front fog light, air diffuser control, rear intermittent wash, fuel filter relay",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LEVANTAVIDRIOS",
+          "NIVELACION(obj=LUCES_DELANTERAS)",
+          "LAVA_FAROS",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)",
+          "RELAY(protects=FILTRO_DE_COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.58041958041958,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front windshield wiper and washer",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.73892773892774,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Seat heater",
+        "relatedEntities": [
+          "ASIENTO_TERMICO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 36.13053613053613,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS control, ABS unit"
+      },
+      {
+        "layout": {
+          "top": 44.28904428904429,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Digital clock, audio, A/T shift control module and key lock",
+        "relatedEntities": [
+          "RELOJ",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/radio-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 52.680652680652685,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/verna/info/fusebox/2002/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/verna/info/fusebox/2002/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.83916083916085,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Power exterior mirrors",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.23076923076923,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear window and exterior mirror defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 77.3892773892774,
+          "left": 50.51020408163265,
+          "width": 28.57142857142857,
+          "height": 4.195804195804196
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear window wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.955710955710956,
+          "left": 84.6938775510204,
+          "width": 9.183673469387756,
+          "height": 17.24941724941725
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.634032634032636,
+          "left": 84.6938775510204,
+          "width": 9.183673469387756,
+          "height": 17.24941724941725
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.312354312354316,
+          "left": 84.6938775510204,
+          "width": 9.183673469387756,
+          "height": 17.24941724941725
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "D1",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 86.86043453291572,
+          "left": 9.878271960958296,
+          "width": 25.35175560907593,
+          "height": 3.0162491373527445
+        }
+      },
+      {
+        "id": "D2",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 92.04838304916244,
+          "left": 9.878271960958296,
+          "width": 25.35175560907593,
+          "height": 3.0162491373527445
+        }
+      }
+    ],
+    "boxAspectRatio": 2.188775510204082,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/6d202c22_image.png"
+    },
+    "boxName": "Interior fuse box",
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/19090755_Fusibles interior Accent 2003.jpg"
+    },
+    "templateId": "6192c9e8037c0500048fed88",
+    "imageClusters": [
+      "620fddcdc92c89c87492ccf5",
+      "66cdb4e572052a9fd83b4e1c",
+      "61fd9a8737dc92000493dd0b"
+    ],
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-verna-2002-genid-hyundai__accent_g2.1-1.webp"
+  }
+]

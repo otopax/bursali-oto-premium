@@ -1,0 +1,1563 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 5.426356589147287,
+          "left": 7.835051546391752,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Trailer tow park lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(of=REMOLQUE)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 5.426356589147287,
+          "left": 15.257731958762887,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 5.426356589147287,
+          "left": 22.061855670103093,
+          "width": 3.5051546391752577,
+          "height": 8.527131782945736
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front and rear park lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 8.041237113402062,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 15.257731958762887,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 2
+        },
+        "description": "Powertrain Control Module (PCM relay), Fuel pump relay, Main fan relay, High/Low speed fan relay 2, PATS module",
+        "relatedEntities": [
+          "PCM",
+          "RELAY",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "MARCHA_HIGH",
+          "INMOVILIZADOR",
+          "MODULO(of=INMOVILIZADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 21.855670103092784,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Center High-Mounted Stop Lamp (CHMSL), Stop lamps, PCM, Anti-lock Brake System (ABS), Speed control, Brake On-Off switch",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO",
+          "PCM",
+          "SISTEMA_ABS",
+          "CRUISE_CONTROL",
+          "SENSOR_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/brake-light-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 28.865979381443296,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster, Diagnostic connector, Power mirror switch, Radio",
+        "relatedEntities": [
+          "TABLERO",
+          "CONECTOR_OBD",
+          "INTERRUPTOR(of=ESPEJO_ELECTRICO)",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 36.08247422680412,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 19.186046511627907,
+          "left": 44.53608247422681,
+          "width": 11.958762886597938,
+          "height": 9.689922480620156
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power door locks, Power seats",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 31.007751937984494,
+          "left": 8.041237113402062,
+          "width": 3.711340206185567,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated mirrors",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 31.007751937984494,
+          "left": 15.257731958762887,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/sunroof-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 31.007751937984494,
+          "left": 22.061855670103093,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 31.007751937984494,
+          "left": 28.865979381443296,
+          "width": 3.711340206185567,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 31.007751937984494,
+          "left": 36.28865979381443,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 30.426356589147286,
+          "left": 44.53608247422681,
+          "width": 11.958762886597938,
+          "height": 9.689922480620156
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 44.18604651162791,
+          "left": 8.041237113402062,
+          "width": 3.711340206185567,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Subwoofer",
+        "relatedEntities": [
+          "SUBWOOFER"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 44.18604651162791,
+          "left": 15.257731958762887,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Low beams",
+        "relatedEntities": [
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 44.18604651162791,
+          "left": 22.061855670103093,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "4WD",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 44.18604651162791,
+          "left": 28.865979381443296,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 44.18604651162791,
+          "left": 36.28865979381443,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 56.97674418604651,
+          "left": 8.041237113402062,
+          "width": 3.711340206185567,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear wiper motor, Rear wiper washer",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))",
+          "SAPITO(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 56.97674418604651,
+          "left": 15.463917525773196,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Electrochromatic mirror, Instrument cluster, Compass",
+        "relatedEntities": [
+          "ESPEJO_RETROVISOR_ELECTRICO_ANTIDESLUMBRANTE",
+          "TABLERO",
+          "BRUJULA"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 56.97674418604651,
+          "left": 21.855670103092784,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 56.97674418604651,
+          "left": 29.07216494845361,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cigar lighter",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 56.97674418604651,
+          "left": 36.28865979381443,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front wiper motor, Front wiper washer",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))",
+          "SAPITO(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 69.76744186046511,
+          "left": 8.041237113402062,
+          "width": 3.711340206185567,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Climate control system mode switch"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 69.76744186046511,
+          "left": 15.257731958762887,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Canister vent, Speed control cancel switch"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 69.76744186046511,
+          "left": 22.061855670103093,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 69.76744186046511,
+          "left": 29.07216494845361,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Reverse park aid",
+        "relatedEntities": [
+          "ASISTENCIA_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 69.76744186046511,
+          "left": 36.49484536082474,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 82.94573643410853,
+          "left": 8.45360824742268,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 82.94573643410853,
+          "left": 15.670103092783505,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake-Transmission shift lock"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 82.94573643410853,
+          "left": 22.061855670103093,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Air bag module, Passenger Air bag Deactivation (PAD) indicator lamp, Occupant Classification Sensor (OCS)",
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)",
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 82.94573643410853,
+          "left": 29.07216494845361,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ABS module, Evac and Fill, Speed control",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CRUISE_CONTROL"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 82.94573643410853,
+          "left": 36.28865979381443,
+          "width": 3.5051546391752577,
+          "height": 8.720930232558139
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Heated seats module, 4WD",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "MODULO(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "MODULO(of=CALEFACCION_DE_ASIENTO)",
+          "DOBLE_TRACCION"
+        ]
+      }
+    ],
+    "boxName": "Passenger compartment fuse panel",
+    "boxDescription": "Passenger compartment fuse panel The fuse panel is located on the right-hand side of the center console, by the instrument panel. Remove the panel cover to access the fuses.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f8779efb94e300040e1df9/fragment-60f8779efb94e300040e1df9-bb63cff3f1.jpg",
+      "source": "6120f39e1c5a5c00047f3d96"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f8779efb94e300040e1df9/fragment-60f8779efb94e300040e1df9-58a79176ad.jpg",
+        "source": "6120f3a31c5a5c00047f3d97"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f8779efb94e300040e1df9/fragment-60f8779efb94e300040e1df9-c68b87a862.jpg",
+        "source": "6120f3a81c5a5c00047f3d98"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f8779efb94e300040e1df9/fragment-60f8779efb94e300040e1df9-d2a2d040e9.jpg",
+        "source": "6120f3b21c5a5c00047f3d99"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.0639175257731959,
+    "templateId": "615cd305a2e0b300048846fe",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mercury-mariner-2005-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 68.13725490196079,
+          "left": 3.871829105473965,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "I/P fuse panel (RUN/START)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 50,
+          "left": 3.871829105473965,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Headlamp power",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 31.372549019607842,
+          "left": 3.871829105473965,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "High beams, Turn signals, Interior lamps, Headlamp power",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "LUZ_DIRECCIONAL",
+          "LUZ_DE_HABITACULO",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 13.23529411764706,
+          "left": 3.871829105473965,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Keep Alive Power (KA PWR)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 68.13725490196079,
+          "left": 6.5420560747663545,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated Exhaust Gas Oxygen (HEGO) sensors"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 50,
+          "left": 6.5420560747663545,
+          "width": 1.335113484646195,
+          "height": 15.686274509803921
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 68.13725490196079,
+          "left": 14.152202937249667,
+          "width": 3.871829105473965,
+          "height": 13.23529411764706
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "RUN/ACC relay - Electrochromatic mirror, Cigar lighter, Front and rear wipers",
+        "relatedEntities": [
+          "ESPEJO_RETROVISOR_ELECTRICO_ANTIDESLUMBRANTE",
+          "ENCENDEDOR",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 50.49019607843137,
+          "left": 14.285714285714285,
+          "width": 3.871829105473965,
+          "height": 13.23529411764706
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Powertrain Control Module (PCM), Injectors and coil",
+        "relatedEntities": [
+          "PCM",
+          "INYECTOR",
+          "BOBINA_DE_IGNICION",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 68.62745098039215,
+          "left": 20.5607476635514,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Alternator",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/alternator-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 50,
+          "left": 20.5607476635514,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Heated seats",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 68.13725490196079,
+          "left": 23.230974632843793,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 50,
+          "left": 23.230974632843793,
+          "width": 1.2016021361815754,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Power point",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 68.13725490196079,
+          "left": 25.901201602136183,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fog lamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 50,
+          "left": 25.901201602136183,
+          "width": 1.2016021361815754,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "A/C clutch, A/C relay",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO",
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 68.13725490196079,
+          "left": 28.437917222963954,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Anti-lock Brake System (ABS) solenoid",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "SOLENOIDE"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 34.31372549019608,
+          "left": 32.176234979973295,
+          "width": 3.871829105473965,
+          "height": 13.23529411764706
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Ignition (main)"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 17.15686274509804,
+          "left": 32.30974632843792,
+          "width": 3.7383177570093453,
+          "height": 13.23529411764706
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Blower motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 33.82352941176471,
+          "left": 37.24966622162884,
+          "width": 4.005340453938585,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Accessory delay relay - Subwoofer and 4WD, Low beam",
+        "relatedEntities": [
+          "SUBWOOFER",
+          "DOBLE_TRACCION",
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 16.666666666666664,
+          "left": 37.38317757009346,
+          "width": 3.871829105473965,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 33.82352941176471,
+          "left": 42.323097463284384,
+          "width": 4.005340453938585,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Horn, CHMSL, Cluster, Power locks and power seats",
+        "relatedEntities": [
+          "BOCINA",
+          "TABLERO",
+          "CIERRE_CENTRALIZADO",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 16.666666666666664,
+          "left": 42.456608811749,
+          "width": 3.871829105473965,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Cooling fan [I4]",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 16.666666666666664,
+          "left": 42.456608811749,
+          "width": 3.871829105473965,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Cooling fan [V6]",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 33.82352941176471,
+          "left": 47.53004005340454,
+          "width": 4.005340453938585,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Rear defroster, Park lamps relay",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "RELAY(protects=LUZ_DE_ESTACIONAMIENTO)"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 16.666666666666664,
+          "left": 47.53004005340454,
+          "width": 4.005340453938585,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "High/Low speed fan [I4]",
+        "relatedEntities": [
+          "MARCHA_HIGH",
+          "VELOCIDAD_VENTILADOR"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 16.666666666666664,
+          "left": 47.53004005340454,
+          "width": 4.005340453938585,
+          "height": 13.725490196078432
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "High/Low speed fan [V6]",
+        "relatedEntities": [
+          "MARCHA_HIGH",
+          "VELOCIDAD_VENTILADOR"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 26.96078431372549,
+          "left": 14.74994982416643,
+          "width": 6.675567423230974,
+          "height": 12.254901960784313
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "notUsed": false
+        },
+        "description": "Shunt"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 54.41176470588235,
+          "left": 40.720961281708945,
+          "width": 7.476635514018691,
+          "height": 23.52941176470588
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "PCM relay",
+        "relatedEntities": [
+          "RELAY(protects=PCM)"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 55.392156862745104,
+          "left": 53.938584779706275,
+          "width": 7.476635514018691,
+          "height": 23.52941176470588
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/fuel-pump-relay",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 22.058823529411764,
+          "left": 54.20560747663551,
+          "width": 7.476635514018691,
+          "height": 24.019607843137255
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "Cooling fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/cooling-fan-relay",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 53.92156862745098,
+          "left": 65.28704939919892,
+          "width": 7.610146862483311,
+          "height": 24.019607843137255
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "High/Low speed fan relay 1",
+        "relatedEntities": [
+          "MARCHA_HIGH",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 52.94117647058824,
+          "left": 77.97062750333778,
+          "width": 7.476635514018691,
+          "height": 24.019607843137255
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "Starter relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/starter-relay",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 22.058823529411764,
+          "left": 77.97062750333778,
+          "width": 7.476635514018691,
+          "height": 24.019607843137255
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "full"
+        },
+        "description": "High/Low speed fan relay 2",
+        "relatedEntities": [
+          "MARCHA_HIGH",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 59.80392156862745,
+          "left": 90.12016021361816,
+          "width": 3.7383177570093453,
+          "height": 22.54901960784314
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "half"
+        },
+        "description": "Fog lamps relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 31.372549019607842,
+          "left": 89.05206942590121,
+          "width": 3.6048064085447264,
+          "height": 22.54901960784314
+        },
+        "kind": {
+          "type": "relay",
+          "notUsed": false,
+          "format": "half"
+        },
+        "description": "A/C relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mercury/mariner/info/fusebox/2005/air-conditioning-relay",
+            "urlWithAnchor": "/mercury/mariner/info/fusebox/2005/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "D1",
+        "layout": {
+          "top": 31.372549019607842,
+          "left": 6.5420560747663545,
+          "width": 1.335113484646195,
+          "height": 16.176470588235293
+        },
+        "kind": {
+          "notUsed": false,
+          "type": "diode",
+          "format": "mini"
+        },
+        "description": "Starter diode",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ]
+      },
+      {
+        "id": "D2",
+        "layout": {
+          "top": 12.77777777777776,
+          "left": 6.5420560747663545,
+          "width": 1.335113484646195,
+          "height": 16.985483164297005
+        },
+        "kind": {
+          "notUsed": false,
+          "type": "diode",
+          "format": "mini"
+        },
+        "description": "A/C diode",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ]
+      }
+    ],
+    "boxName": "Power distribution box",
+    "boxDescription": "The power distribution box is located in the engine compartment. The power distribution box contains high-current fuses that protect your vehicle ’ s main electrical systems from overloads.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f8779efb94e300040e1df9/fragment-60f8779efb94e300040e1df9-4d4b71baf2.jpg",
+      "source": "6120f4041c5a5c00047f3d9a"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f8779efb94e300040e1df9/fragment-60f8779efb94e300040e1df9-cf33c48fb9.jpg",
+        "source": "6120f40a1c5a5c00047f3d9b"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60f8779efb94e300040e1df9/fragment-60f8779efb94e300040e1df9-ea18e2ee3e.jpg",
+        "source": "6120f4131c5a5c00047f3d9c"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.27236315086782376,
+    "templateId": "615cd453a2e0b300048846ff",
+    "imageClusters": [
+      "6222683fde391300f2367b1f"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mercury-mariner-2005-genid-g1-1.webp"
+  }
+]

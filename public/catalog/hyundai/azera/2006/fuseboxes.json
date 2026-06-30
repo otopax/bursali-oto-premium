@@ -1,0 +1,1860 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "Battery 1",
+        "kind": {
+          "type": "battery-terminal",
+          "format": ""
+        },
+        "layout": {
+          "top": 11.664230144658692,
+          "left": 1.017786779718717,
+          "width": 8.96301780912669,
+          "height": 19.517907680296673,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Battery 2",
+        "kind": {
+          "type": "battery-terminal",
+          "format": ""
+        },
+        "layout": {
+          "top": 40.534468588430855,
+          "left": 1.017786779718717,
+          "width": 8.96301780912669,
+          "height": 19.517907680296673,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Battery 3",
+        "kind": {
+          "type": "battery-terminal",
+          "format": ""
+        },
+        "layout": {
+          "top": 69.40470703220308,
+          "left": 1.017786779718717,
+          "width": 8.96301780912669,
+          "height": 19.517907680296673,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 10.320343153012278,
+          "left": 13.039120735507602,
+          "width": 5.2205551789320745,
+          "height": 37.64583989708776
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 85.5493405157221,
+          "left": 13.095767804677019,
+          "width": 16.868253187577746,
+          "height": 11.441415303217413
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 150
+        },
+        "description": "Fusible link(ABS1, ABS2, RR HTD, BLOWER)",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 19.61227440111761,
+          "width": 6.163416299785376,
+          "height": 15.131260412867368
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS/ESC Control module, Multipurpose check connector",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 27.020599278201477,
+          "width": 6.334622308112751,
+          "height": 15.131260412867368
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "ABS/ESC Control module, Multipurpose check connector",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 34.51452715944903,
+          "width": 6.334622308112751,
+          "height": 15.131260412867368
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Fuse(FR P/SEAT, T/LID, T/SIG, TILT, PEDAL, RR CURTAIN)",
+        "relatedEntities": [
+          "PEDAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 53.004543187631164,
+          "left": 26.70481225336736,
+          "width": 6.2214959200048785,
+          "height": 15.354952700875087
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Ignition switch(ACC, IG1)",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 56.91262819868676,
+          "width": 6.505828316440115,
+          "height": 15.131260412867368
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Defogger relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 64.25649814157535,
+          "width": 6.334622308112751,
+          "height": 15.131260412867368
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Blower relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 71.51476508030024,
+          "width": 6.334622308112751,
+          "height": 15.131260412867368
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Fuse(P/WDW LH, P/WDW RH)"
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 78.68742901486146,
+          "width": 6.505828316440115,
+          "height": 15.131260412867368
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Start relay, Ignition switch(IG2, START)"
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 86.03129895775004,
+          "width": 6.334622308112751,
+          "height": 15.131260412867368
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Engine control unit relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.73249699503936,
+          "left": 93.28956589647494,
+          "width": 6.334622308112751,
+          "height": 15.131260412867368
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Fuse(KEY SOL, ECS/RR FOG), Power connector"
+      },
+      {
+        "layout": {
+          "top": 6.166933467072751,
+          "left": 20.43066834185611,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ABS) ABS/ESC Control module, Multipurpose check connector",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.661098687841978,
+          "left": 20.43066834185611,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU (IG1)) PCM"
+      },
+      {
+        "layout": {
+          "top": 25.15526390861119,
+          "left": 20.43066834185611,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(B/UP) Back-up light switch, Stop light switch, Transaxle range switch, Vehicle speed sensor",
+        "relatedEntities": [
+          "SENSOR_POSICION_CAMBIOS",
+          "SENSOR_DE_VELOCIDAD"
+        ]
+      },
+      {
+        "layout": {
+          "top": 74.79066589283289,
+          "left": 12.63119191212886,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(IG1) (Spare)",
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "layout": {
+          "top": 74.79066589283289,
+          "left": 23.283807138082476,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU) PCM",
+        "relatedEntities": [
+          "ECU",
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.57214814289137,
+          "left": 35.84159767157243,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ECU (B+)) PCM"
+      },
+      {
+        "layout": {
+          "top": 65.00300418280304,
+          "left": 35.84159767157243,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(STOP) Stop light switch",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/brake-light-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.779886758146844,
+          "left": 41.85333032760942,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(SNSR1) Mass air flow sensor, PCM, Immobilizer control module, Oil control valve#1/#2 Variable intake manifold valve",
+        "relatedEntities": [
+          "PCM",
+          "INMOVILIZADOR",
+          "MODULO(of=INMOVILIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.779886758146844,
+          "left": 50.0926087081564,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(SNSR3) Injector#1-#6 A/C Relay, Cooling fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/cooling-fan-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.00300418280304,
+          "left": 43.57180178293017,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(ATM) ATM Control relay"
+      },
+      {
+        "layout": {
+          "top": 65.00300418280304,
+          "left": 51.302005894287916,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F23",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 54.57214814289137,
+          "left": 59.03221000564565,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H/LP HI) Headlight relay (HIGH)",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "RELAY",
+          "MARCHA_HIGH"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.57214814289137,
+          "left": 66.7624141170034,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H/LP WASHER) Headlight washer motor"
+      },
+      {
+        "layout": {
+          "top": 65.00300418280304,
+          "left": 59.03221000564565,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(F/PUMP) Fuel pump relay"
+      },
+      {
+        "layout": {
+          "top": 65.00300418280304,
+          "left": 66.7624141170034,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/CON) A/C Relay"
+      },
+      {
+        "layout": {
+          "top": 6.166933467072751,
+          "left": 91.51054849899663,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H/LP LO) Headlight relay(LOW)",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "RELAY",
+          "MARCHA_LOW"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.871490727513503,
+          "left": 91.51054849899663,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(IGN COIL) Ignition coil#1-#6. Condenser"
+      },
+      {
+        "layout": {
+          "top": 25.576047987954233,
+          "left": 91.51054849899663,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(SNSR2) Oxygen Sensor#1-#"
+      },
+      {
+        "layout": {
+          "top": 54.57214814289137,
+          "left": 84.57025820672877,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(S/ROOF) Overhead console lamp"
+      },
+      {
+        "layout": {
+          "top": 54.57214814289137,
+          "left": 92.67963777844795,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(H/LP LO RH) HID Relay",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.00300418280304,
+          "left": 84.57025820672877,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(FR FOG) Front fog light relay",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.00300418280304,
+          "left": 92.67963777844795,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(DRL) Burglar alarm horn relay"
+      },
+      {
+        "layout": {
+          "top": 77.47027664115187,
+          "left": 92.67963777844795,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(TAIL) Tail light relay"
+      },
+      {
+        "layout": {
+          "top": 87.8990680381542,
+          "left": 92.67963777844795,
+          "width": 5.160641210252675,
+          "height": 4.239586830324311
+        },
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HORN) Horn relay",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/horn-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 4.27531348056773,
+          "left": 27.16241833054871,
+          "width": 13.984100609738663,
+          "height": 27.43447665581838
+        },
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 4.27531348056773,
+          "left": 44.06312001606466,
+          "width": 13.984100609738663,
+          "height": 27.43447665581838
+        },
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 4.27531348056773,
+          "left": 60.963821701580606,
+          "width": 13.984100609738663,
+          "height": 27.43447665581838
+        },
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 4.27531348056773,
+          "left": 76.56452338709657,
+          "width": 13.984100609738663,
+          "height": 27.43447665581838
+        },
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 74.83860127235383,
+          "left": 32.71046544053853,
+          "width": 7.826637136826652,
+          "height": 22.012095926481635
+        },
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan"
+        }
+      },
+      {
+        "layout": {
+          "top": 74.83860127235383,
+          "left": 42.4447119729833,
+          "width": 7.826637136826652,
+          "height": 22.012095926481635
+        },
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan"
+        }
+      },
+      {
+        "layout": {
+          "top": 74.83860127235383,
+          "left": 52.17895850542808,
+          "width": 7.826637136826652,
+          "height": 22.012095926481635
+        },
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cream"
+        }
+      },
+      {
+        "layout": {
+          "top": 74.83860127235383,
+          "left": 61.91320503787285,
+          "width": 7.826637136826652,
+          "height": 22.012095926481635
+        },
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan"
+        }
+      },
+      {
+        "layout": {
+          "top": 74.83860127235383,
+          "left": 71.64745157031761,
+          "width": 7.826637136826652,
+          "height": 22.012095926481635
+        },
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan"
+        }
+      },
+      {
+        "layout": {
+          "top": 74.83860127235383,
+          "left": 81.38169810276237,
+          "width": 7.826637136826652,
+          "height": 22.012095926481635
+        },
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan"
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/554dbd69_hyundai-azera-2006.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.4791946308724832,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1c014e55_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bdaa5335_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/30e898d5_image.jpg"
+      }
+    ],
+    "boxName": "Engine Compartment",
+    "templateId": "614a130ea723c700048f204a",
+    "templateRenameMap": {
+      "1": "F36",
+      "2": "F35",
+      "3": "F17",
+      "4": "F16",
+      "5": "F34",
+      "6": "F33",
+      "7": "F27",
+      "8": "F26",
+      "10": "F22",
+      "11": "F19",
+      "12": "F32",
+      "13": "F31",
+      "14": "F25",
+      "15": "F24",
+      "16": "F18",
+      "17": "F21",
+      "18": "F20",
+      "19": "F30",
+      "20": "F15",
+      "21": "F29",
+      "22": "F14",
+      "23": "F28",
+      "24": "F13",
+      "ABS.1": "F3",
+      "ABS.2": "F4",
+      "I/P B+1": "F5",
+      "RRHTD": "F7",
+      "BLOWER": "F8",
+      "P/WDW": "F9",
+      "IGN.2": "F10",
+      "ECU RLY": "F11",
+      "I/P B+2": "F12",
+      "IGN.1": "F6",
+      "ALT": "F2"
+    },
+    "imageClusters": [
+      "64e606a2708491e633dd5a18"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-azera-2006-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 19.64733855306528,
+          "left": 80.8730601895082,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(T/LID) Fuel lid opener & trunk lid switch"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 27.450965330013467,
+          "left": 80.8730601895082,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(FR P/SEAT) Front lumbar support switch, IMS control module, driver/passenger seat manual switch"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 35.45995070635511,
+          "left": 80.8730601895082,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(AUDIO-2) ATM key lock control module, audio, IMS switch, accessory relay, seat/power outlet relay, digital clock & passenger seat belt IND.",
+        "relatedEntities": [
+          "ESTEREO",
+          "RELAY(protects=ACCESORIO)",
+          "ASIENTO",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 43.26357748330331,
+          "left": 80.8730601895082,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(AUDIO-1) Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 51.272562859644914,
+          "left": 80.8730601895082,
+          "width": 12.604023628938545,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(START) Transaxle range switch, burglar alarm relay"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 59.07618963659316,
+          "left": 80.8730601895082,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(P/WDW LH) Left front safety window module, left rear power window switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA)))"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 67.0851750129348,
+          "left": 80.8730601895082,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(P/WDW RH) Right front safety window module, right rear power window switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA)))"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 11.63835317672365,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(RR P/SEAT) Right rear ICM relay box"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 19.64733855306528,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(MODULE-1) Instrument cluster, BCM, rear curtain module, rain sensor, IMS control module, power window main switch",
+        "relatedEntities": [
+          "MODULO",
+          "TABLERO",
+          "ECU",
+          "MODULO_CARROCERIA",
+          "SENSOR_DE_LLUVIA"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 27.450965330013467,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(PEDAL ADJ) Back warning buzzer"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 35.45995070635511,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(MIRR HTD) Left/right outside mirror & mirror folding motor, A/C control module",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 43.26357748330331,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(KEY SOL) Key solenoid, power window main switch"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 51.272562859644914,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(RR FOG) Rear fog light relay",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 59.07618963659316,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/BAG IND) Instrument cluster"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 67.0851750129348,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(A/BAG) Air bag cut off switch, SRS control module",
+        "relatedEntities": [
+          "TESTIGO_SRS",
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 3.8347263997754144,
+          "left": 48.83718874357377,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(TILT) Tilt & telescopic module, sport mode switch"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 11.63835317672365,
+          "left": 48.83718874357377,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TAIL LH) Front fog light relay, left rear combination light, license plate light, left headlight",
+        "relatedEntities": [
+          "LUZ_PATENTE",
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 19.64733855306528,
+          "left": 48.83718874357377,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(TAIL RH) Right rear combination light, license plate light, right headlight",
+        "relatedEntities": [
+          "LUZ_PATENTE",
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 35.45995070635511,
+          "left": 48.83718874357377,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(S/HTR) Driver seat warmer switch"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 43.26357748330331,
+          "left": 48.83718874357377,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(MODULE-2) Instrument cluster, ESC switch, BCM, ATM key lock control module, YAW rate sensor, multi-function switch",
+        "relatedEntities": [
+          "MODULO",
+          "TABLERO",
+          "ECU",
+          "INTERRUPTOR(of=CONTROL_DE_ESTABILIDAD)",
+          "MODULO_CARROCERIA",
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 51.272562859644914,
+          "left": 48.83718874357377,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/CON) A/C control module, tilt & telescopic module, rheostat, electric chromic mirror, overhead console lamp"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 59.07618963659316,
+          "left": 48.83718874357377,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(DIESEL) Spare",
+        "relatedEntities": [
+          "GASOIL",
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 3.8347263997754144,
+          "left": 32.81925302060659,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(C/LIGHTER) Cigarette lighter"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 11.63835317672365,
+          "left": 32.81925302060659,
+          "width": 12.567610833996206,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(T/SIG) BCM"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 19.64733855306528,
+          "left": 32.81925302060659,
+          "width": 12.351772672671347,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(RR CURTAIN) Rear curtain module"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 27.450965330013467,
+          "left": 32.81925302060659,
+          "width": 12.351772672671347,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(H/LP) Headlight relay, AQS & ambient sensor, HID relay, headlight leveling actuator",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "RELAY",
+          "RELAY(protects=LUCES_DELANTERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 35.45995070635511,
+          "left": 32.81925302060659,
+          "width": 12.351772672671347,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(A/CON SW) A/C control module, blower relay, A/C control module (AUTO)",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)",
+          "COMANDO_CLIMATIZADOR",
+          "AUTOMOVIL"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 43.26357748330331,
+          "left": 32.81925302060659,
+          "width": 12.351772672671347,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(MEMORY) Data link connector, A/C control module, instrument cluster, multi-function switch, tilt & telescopic module, BCM, door warning switch, room lamp, left/right foot lamp, door lamp",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR",
+          "TABLERO",
+          "COMANDO_LUCES_VOLANTE",
+          "MODULO_CARROCERIA",
+          "LUZ_DE_HABITACULO",
+          "TESTIGO_APERTURA_DE_PUERTAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 51.272562859644914,
+          "left": 32.81925302060659,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(PIC) Spare"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 27.450965330013467,
+          "left": 16.67519181950587,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(WIPER) Washer relay, wiper relay (High), wiper relay",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "RELAY",
+          "MARCHA_HIGH",
+          "RELAY(protects=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 66.91211930922333,
+          "left": 32.30164608766538,
+          "width": 29.17037921486999,
+          "height": 6.065287870166181
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(POWER CONN) Fuse (MEMORY, AUDIO-1)",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 74.88880178988299,
+          "left": 64.85512446654086,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(SPARE-2) Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 19.64733855306528,
+          "left": 16.67519181950587,
+          "width": 12.477898150804934,
+          "height": 4.852418771401552
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(ACC SOCKET) Rear power outlet",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 74.88880178988299,
+          "left": 32.81925302060659,
+          "width": 12.351772672671347,
+          "height": 4.852418771401552
+        }
+      },
+      {
+        "id": "35",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 82.8977871662245,
+          "left": 40.51290718675623,
+          "width": 13.230429246279902,
+          "height": 4.852418771401552
+        }
+      }
+    ],
+    "boxAspectRatio": 1.1736842105263159,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/dbb33d1f_hyundai-azera-2006.jpg"
+    },
+    "processed": false,
+    "boxName": "Inner Panel",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a7059906_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0965c40e_image.jpg"
+      }
+    ],
+    "templateId": "61e75057fab64b0004ba0b7d",
+    "templateRenameMap": {
+      "T/LID": "1",
+      "FR P/SEAT": "2",
+      "AUDIO-2": "3",
+      "AUDIO-1": "4",
+      "START": "5",
+      "P/WDW LH": "6",
+      "P/WDW RH": "7",
+      "RR P/SEAT": "8",
+      "MODULE-1": "9",
+      "PEDAL ADJ": "10",
+      "MIRR HTD": "11",
+      "KEY SOL": "12",
+      "RR FOG": "13",
+      "A/BAG IND": "14",
+      "A/BAG": "15",
+      "SPARE-2": "16",
+      "TILT": "17",
+      "TAIL LH": "18",
+      "TAIL RH": "19",
+      "S/HTR": "20",
+      "MODULE-2": "21",
+      "A/CON": "22",
+      "DIESEL": "23",
+      "C/LIGHTER": "24",
+      "T/SIG": "25",
+      "RR CURTAIN": "26",
+      "H/LP": "27",
+      "A/CON SW": "28",
+      "MEMORY": "29",
+      "PIC": "30",
+      "ACC SOCKET": "31",
+      "WIPER": "32",
+      "POWER CONN": "33"
+    },
+    "backgroundColor": "#f8eec0",
+    "imageClusters": [
+      "649b4a3b45ef576e680bd2c1"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-azera-2006-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 21.98341725190473,
+          "left": -2.425529350714395,
+          "width": 23.715058754106572,
+          "height": 54.87714285714297
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 60
+        },
+        "description": "AGCS"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 21.98341725190473,
+          "left": 29.851285614986413,
+          "width": 23.715058754106572,
+          "height": 54.87714285714297
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 60
+        },
+        "description": "COOLING"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 9.10508263852416,
+          "left": 62.60692249471103,
+          "width": 6.808781057971096,
+          "height": 29.80571428571428
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "P/AMP",
+        "relatedEntities": [
+          "MARCHA_PARKING",
+          "AMPLIFICADOR",
+          "TESTIGO_DIRECCION_ASISTIDA"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 9.10508263852416,
+          "left": 76.28467139821348,
+          "width": 6.808781057971096,
+          "height": 29.80571428571428
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "FR S/HTR"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 9.10508263852416,
+          "left": 89.96242030171602,
+          "width": 6.808781057971096,
+          "height": 29.80571428571428
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "RR S/HTR"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 60.36793978138132,
+          "left": 62.60692249471103,
+          "width": 6.808781057971096,
+          "height": 29.80571428571428
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 60.36793978138132,
+          "left": 76.28467139821348,
+          "width": 6.808781057971096,
+          "height": 29.80571428571428
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "SEAT P/OUTLET",
+        "relatedEntities": [
+          "TOMA_12V(of=ASIENTO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 60.36793978138132,
+          "left": 89.96242030171602,
+          "width": 6.808781057971096,
+          "height": 29.80571428571428
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "P/OUTLET",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/azera/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/azera/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/69eac0fa_hyundai-azera-2006-@hyundai-azera@g1.jpg"
+    },
+    "processed": false,
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/748ae90d_hyundai-azera-2006-@hyundai-azera@g1.jpg"
+    },
+    "boxName": "Engine auxiliary fuse box",
+    "templateId": "69c75899a92cfd910e32f141",
+    "templateRenameMap": {
+      "AGCS": "1",
+      "COOLING": "2",
+      "P/AMP": "3",
+      "FR S/HTR": "4",
+      "RR S/HTR": "5",
+      "SPARE": "6",
+      "SEAT P/OUTLET": "7",
+      "P/OUTLET": "8"
+    },
+    "boxAspectRatio": 0.6205997392438071,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/30ad7fd6_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "68c57f2c75bf94defc9b8c09"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-azera-2006-genid-g1-2.webp"
+  }
+]

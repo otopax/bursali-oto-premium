@@ -1,0 +1,3999 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 37.19989747986842,
+          "left": 15.30135737816763,
+          "width": 26.69267420881421,
+          "height": 9.148171369793637
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 80
+        },
+        "description": "Power steering control unit"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 74.1048222541269,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Main relay [for cars with a gasoline engine] / Power supply relay terminal 30 [for vehicles with diesel engines] / Engine control unit / ABS control unit",
+        "relatedEntities": [
+          "RELAY_ASD",
+          "ECU"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 69.40695141156144,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fuel pump relay [for cars with 1.6 l engine] / Engine electronics power supply relay [for vehicles with a 2.0 l petrol engine]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/fuel-pump-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 69.40695141156144,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Gas shut-off valve relay [for vehicles with natural gas engines]"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 64.70908056899597,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Headlight front left"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 60.011209726430515,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Headlight front right"
+      },
+      {
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 23.339441785990445,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 29.32929766239912,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Additional hydraulic pump 1 for gearbox oil [Optional]"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 35.319153538807804,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Brake booster",
+        "relatedEntities": [
+          "SERVOFRENO"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 41.30900941521648,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/horn-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 47.29886529162516,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windscreen wiper motor control unit"
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 53.28872116803384,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 59.27857704444252,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Mechatronic unit DSG gearbox [Optional]"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 59.27857704444252,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Automatic transmission control unit [Optional]"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 65.2684329208512,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 71.25828879725988,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Additional heater control unit"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 75.17063785632017,
+          "left": 46.857221871181245,
+          "width": 5.6892157662965825,
+          "height": 20.33775093322504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 75.17063785632017,
+          "left": 39.94567364502566,
+          "width": 5.6892157662965825,
+          "height": 20.33775093322504
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 50.390974780834675,
+          "left": 19.48107588250292,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "[Optional] Heating element for additional air heater [for vehicles with diesel engines]"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 50.390974780834675,
+          "left": 19.48107588250292,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "[Optional] Secondary air pump motor [for cars with a gasoline engine][for cars for American markets]"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 58.50844298755846,
+          "left": 19.48107588250292,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Heating element for additional air heater [for vehicles with diesel engines]"
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 66.62591119428225,
+          "left": 19.48107588250292,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 92.20550953479179,
+          "left": 58.31074056698943,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Control unit for interwheel differential lock"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 55.21984294108061,
+          "left": 68.85364935552418,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 61.64923688047455,
+          "left": 68.85364935552418,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/starter-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 32.737374860456896,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 38.69933997049425,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "[for vehicles with diesel engines]: Radiator Fan / Oil level and temperature sensor / Fuel pressure regulator / Relay for reducing agent dosing system / Glow plug control unit / Boost pressure limitation solenoid valve",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "TESTIGO_RECALENTAMIENTO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/cooling-fan-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 38.69933997049425,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Radiator Fan / Oil level and temperature sensor / Solenoid valve 1 adsorber [for cars with a gasoline engine] [for vehicles with natural gas engines] [for cars with 1.6 l engine] [for vehicles in the Top-Sport package] / Valve 1 for exhaust valve timing control [for cars with a gasoline engine] [for vehicles with natural gas engines] [for cars with 1.6 l engine] [for vehicles in the Top-Sport package] / Valve 1 for intake valve timing control [for cars with a gasoline engine] [for vehicles with natural gas engines] [for cars with 1.6 l engine] / Oil pressure regulating valve [for cars with a gasoline engine] [for vehicles with natural gas engines] [for cars with 1.6 l engine] [for vehicles in the Top-Sport package] / Piston cooling nozzle control valve [for cars with a gasoline engine] [for vehicles with natural gas engines] [for vehicles in the Top-Sport package] / Starter generator [for vehicles with 48 V system] / Inlet cam adjuster cylinder 2 [for cars with a 1.5 l petrol engine] / Exhaust cam adjuster cylinder 2 [for cars with a 1.5 l petrol engine] / Inlet cam adjuster cylinder 3 [for cars with a 1.5 l petrol engine] / Exhaust cam adjuster cylinder 3 [for cars with a 1.5 l petrol engine] / Secondary air pump relay [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package] / Gas cylinder valve [for vehicles with natural gas engines] / Ignition coil 1, 2, 3 & 4 with output stage [for cars with 1.6 l engine] / Inlet manifold flap valve [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package] / Turbocharger bypass valve [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package] / Piston cooling nozzle control valve [for vehicles with a 2.0 l petrol engine] / Oil pressure regulating valve [for vehicles with a 2.0 l petrol engine] / Valve 1 of the intake valve timing control [for vehicles in the Top-Sport package] / Gas shut-off valve relay [for vehicles with natural gas engines]",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "TESTIGO_RECALENTAMIENTO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/cooling-fan-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 44.66130508053161,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Gas supply valve 1, 2, 3 & 4 [for vehicles with natural gas engines] / Injector cylinder 1, 2, 3 & 4 [for cars with 1.6 l engine] / Valve lift control actuator 1, 2, 3, 4, 5, 6, 7 & 8 [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package]"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 50.62327019056897,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Charge air cooling pump [for cars with a gasoline engine] [for vehicles with natural gas engines] / Engine thermal management system actuator [for vehicles with diesel engines] / Coolant control valve [for vehicles with diesel engines] / Piston cooling nozzle control valve [for vehicles with diesel engines] / Heating resistor for engine crankcase ventilation system [for vehicles with diesel engines] / Heater circulation pump [for vehicles with diesel engines] [for vehicles with a 2.0 l petrol engine] / Oil pressure regulating valve [for vehicles with diesel engines] / Solenoid valve 1 adsorber [for vehicles with a 2.0 l petrol engine] / Valve 1 of the exhaust valve timing adjuster [for vehicles with a 2.0 l petrol engine] / Valve 1 of the intake valve timing control [for vehicles with a 2.0 l petrol engine] / Gearbox coolant circuit valve [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package] / Coolant circulation pump [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package] / Exhaust flap unit [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package] / Exhaust valve unit 2 [for vehicles with a 2.0 l petrol engine] [for vehicles in the Top-Sport package] / EGR cooler changeover valve [for vehicles with diesel engines] / Fuel Tank Leak Diagnostic System Module [for cars for American markets] / Secondary air supply control valve [for cars with a gasoline engine][for cars for American markets]"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 56.58523530060633,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "[Optional] Lambda probe 1 before neutralizer [for cars with a gasoline engine] Lambda probe 1 after neutralizer [for cars with a gasoline engine]"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 56.58523530060633,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[Optional] NOx sensor control unit [for vehicles with diesel engines] / Control unit 2 NOx sensors [for vehicles with diesel engines] / Control unit 3 NOx sensors [for vehicles with diesel engines] / Soot Particle Sensor [for vehicles with diesel engines]"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 62.54720041064368,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Ignition coil 1, 2, 3 & 4 with output stage [for cars with a 1.5 l petrol engine] [for cars with 1.6 l engine] [for cars with a 1.4 l petrol engine] / Solenoid valve 1 adsorber [for cars with 1.6 l engine] [for cars with a 1.4 l petrol engine] / Valve 1 of the intake valve timing adjuster [for cars with 1.6 l engine] [for cars with a 1.4 l petrol engine] / Valve 1 of the exhaust valve timing adjuster [for cars with a 1.4 l petrol engine] / Oil pressure regulating valve [for cars with a 1.4 l petrol engine]"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 68.50916552068105,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[Optional] Fuel pump control unit / Fuel pump relay [for cars with 1.6 l engine]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/fuel-pump-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 68.50916552068105,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "[Optional] Fuel pump control unit / Fuel pump relay [for cars with 1.6 l engine]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/fuel-pump-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 74.4711306307184,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 80.43309574075576,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 85.93265279211283,
+          "left": 80.69749646294113,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 15.280265497347449,
+          "left": 6.616478119980294,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 3.507851703311394,
+          "left": 78.90669889189127,
+          "width": 18.42174922727847,
+          "height": 24.469499029773207
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Power supply relay terminal 30 [for cars with diesel engine]"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 49.41856353584563,
+          "left": 36.37468841019937,
+          "width": 17.0046915944109,
+          "height": 21.866360835116488
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "High Power Heating Relay [for cars with diesel engine][for cars with a 1.0 l petrol engine][for cars with additional air heater] / Secondary air pump relay [for cars with a 2.0 l petrol engine]"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 30.479477977048887,
+          "left": 70.04397776713294,
+          "width": 8.75741617112162,
+          "height": 18.74259500152841
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/horn-relay",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 80.18267878698317,
+          "left": 54.22961458433081,
+          "width": 14.624034771193367,
+          "height": 11.271937203381697
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Starter relay 1",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/starter-relay",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 70.81203653531871,
+          "left": 70.91449384251814,
+          "width": 8.75741617112162,
+          "height": 18.74259500152841
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Starter relay 2",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/starter-relay",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 78.84392200115973,
+          "left": 21.24051289117367,
+          "width": 14.624034771193367,
+          "height": 11.271937203381697
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Gas shut-off valve relay [for vehicles running on natural gas]"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 7.444215339675029,
+          "left": 31.93318709998788,
+          "width": 18.42174922727847,
+          "height": 24.469499029773207
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Glow plug control unit"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 7.444215339675029,
+          "left": 11.86765101858302,
+          "width": 18.42174922727847,
+          "height": 24.469499029773207
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Low power heating relay"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b48052af_volkswagen-golf-2020.jpg"
+    },
+    "processed": false,
+    "templateId": "61ee19c8b231e80004f10064",
+    "templateRenameMap": {
+      "SB1": "1",
+      "SB2": "2",
+      "SB3": "3",
+      "SB4": "4",
+      "SB5": "5",
+      "SB7": "7",
+      "SB8": "8",
+      "SB9": "9",
+      "SB10": "10",
+      "SB12": "12",
+      "SB13": "13",
+      "SB14": "14",
+      "SB15": "15",
+      "SB17": "17",
+      "SB18": "18",
+      "SB20": "20",
+      "SB21": "21",
+      "SB22": "22",
+      "SB23": "23",
+      "SB24": "24",
+      "SB25": "25",
+      "SB26": "26",
+      "SB27": "27",
+      "SB28": "28",
+      "SB29": "29"
+    },
+    "boxAspectRatio": 0.7621247113163973,
+    "boxName": "Engine fuse panel (SB)",
+    "imageClusters": [
+      "688fa0c4af21356eaf4d9b2f"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-golf-2022-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 37.19989747986842,
+          "left": 15.30135737816763,
+          "width": 26.69267420881421,
+          "height": 9.148171369793637
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 80
+        },
+        "description": "Power steering control unit"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 74.1048222541269,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Main relay / Engine control unit / ABS control unit",
+        "relatedEntities": [
+          "RELAY_ASD",
+          "ECU"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 69.40695141156144,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Charger 1 high-voltage battery / Electric drive power and control electronics unit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 64.70908056899597,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Headlight front left"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 5.292860751076004,
+          "left": 60.011209726430515,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Headlight front right"
+      },
+      {
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 23.339441785990445,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 29.32929766239912,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 35.319153538807804,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Brake booster",
+        "relatedEntities": [
+          "SERVOFRENO"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 41.30900941521648,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/horn-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 47.29886529162516,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windscreen wiper motor control unit"
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 53.28872116803384,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 59.27857704444252,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 65.2684329208512,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 71.25828879725988,
+          "left": 54.90980224810724,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Additional heater control unit"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 75.17063785632017,
+          "left": 46.857221871181245,
+          "width": 5.6892157662965825,
+          "height": 20.33775093322504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 75.17063785632017,
+          "left": 39.94567364502566,
+          "width": 5.6892157662965825,
+          "height": 20.33775093322504
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "Mechatronic unit DSG gearbox"
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 50.390974780834675,
+          "left": 19.48107588250292,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 58.50844298755846,
+          "left": 19.48107588250292,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 66.62591119428225,
+          "left": 19.48107588250292,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 92.20550953479179,
+          "left": 58.31074056698943,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 55.21984294108061,
+          "left": 68.85364935552418,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 61.64923688047455,
+          "left": 68.85364935552418,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 32.737374860456896,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 38.69933997049425,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Radiator Fan / Oil level and temperature sensor / Solenoid valve 1 adsorber / Valve 1 for exhaust valve timing control / Valve 1 for intake valve timing control / Oil pressure regulating valve",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "TESTIGO_RECALENTAMIENTO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/cooling-fan-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 44.66130508053161,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Gearbox coolant circuit valve / Coolant changeover valve 2 / Coolant pump high temperature circuit"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 50.62327019056897,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Low-temperature coolant pump"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 56.58523530060633,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lambda probe 1 before neutralizer / Lambda probe 1 after neutralizer"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 62.54720041064368,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Ignition coil 1 with output stage / Ignition coil 2 with output stage / Ignition coil 3 with output stage / Ignition coil 4 with output stage"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 68.50916552068105,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fuel pump control unit"
+      },
+      {
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 74.4711306307184,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 80.43309574075576,
+          "left": 82.79749646294113,
+          "width": 12.939760556127908,
+          "height": 4.8768997197854596
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 85.93265279211283,
+          "left": 80.69749646294113,
+          "width": 15.689215766296583,
+          "height": 7.33775093322504
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 15.280265497347449,
+          "left": 6.616478119980294,
+          "width": 3.5709852348262943,
+          "height": 15.663454394134458
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 3.507851703311394,
+          "left": 78.90669889189127,
+          "width": 18.42174922727847,
+          "height": 24.469499029773207
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Power supply relay terminal 30 [for cars with diesel engine]"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 49.41856353584563,
+          "left": 36.37468841019937,
+          "width": 17.0046915944109,
+          "height": 21.866360835116488
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "High Power Heating Relay [for cars with diesel engine][for cars with a 1.0 l petrol engine][for cars with additional air heater] / Secondary air pump relay [for cars with a 2.0 l petrol engine]"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 30.479477977048887,
+          "left": 70.04397776713294,
+          "width": 8.75741617112162,
+          "height": 18.74259500152841
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/horn-relay",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 80.18267878698317,
+          "left": 54.22961458433081,
+          "width": 14.624034771193367,
+          "height": 11.271937203381697
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Starter relay 1",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/starter-relay",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 70.81203653531871,
+          "left": 70.91449384251814,
+          "width": 8.75741617112162,
+          "height": 18.74259500152841
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Starter relay 2",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/starter-relay",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 78.84392200115973,
+          "left": 21.24051289117367,
+          "width": 14.624034771193367,
+          "height": 11.271937203381697
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Gas shut-off valve relay [for vehicles running on natural gas]"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 7.444215339675029,
+          "left": 31.93318709998788,
+          "width": 18.42174922727847,
+          "height": 24.469499029773207
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Glow plug control unit"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 7.444215339675029,
+          "left": 11.86765101858302,
+          "width": 18.42174922727847,
+          "height": 24.469499029773207
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Low power heating relay"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b48052af_volkswagen-golf-2020.jpg"
+    },
+    "processed": false,
+    "templateId": "61ee19c8b231e80004f10064",
+    "templateRenameMap": {
+      "SB1": "1",
+      "SB2": "2",
+      "SB3": "3",
+      "SB4": "4",
+      "SB5": "5",
+      "SB8": "8",
+      "SB9": "9",
+      "SB10": "10",
+      "SB12": "12",
+      "SB13": "13",
+      "SB14": "14",
+      "SB15": "15",
+      "SB16": "16",
+      "SB23": "23",
+      "SB24": "24",
+      "SB25": "25",
+      "SB26": "26",
+      "SB27": "27",
+      "SB28": "28",
+      "SB29": "29"
+    },
+    "boxAspectRatio": 0.7621247113163973,
+    "boxName": "Engine fuse panel (SB) Hybrid",
+    "imageClusters": [
+      "64a34361f97c97bd46b809aa"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-golf-2022-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 15.543921114331093,
+          "left": 4.923652276819683,
+          "width": 4.963250052917004,
+          "height": 14.15602962483667
+        }
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 20.89126536165224,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 25.28332505612786,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Control unit for reducing agent heating [for vehicles with diesel engines]"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 25.28332505612786,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "[for vehicles in the Top-Sport package]: Torque distribution control unit 1 / Torque distribution control unit 2"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 29.67538475060348,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Parking lock actuator"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 34.067444445079104,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 38.459504139554724,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Heating and air conditioning control unit",
+        "relatedEntities": [
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 42.851563834030344,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Sliding sunroof control unit [Optional]"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 47.243623528505964,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Driver's door control unit [for vehicles with left-hand steering] / Front passenger door control unit [for vehicles with right-hand steering] / Rear window lift motor, driver's side [for vehicles with left-hand steering] / Rear window lift motor, front passenger side [for vehicles with right-hand steering]"
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 51.635683222981584,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 56.0277429174572,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Trailer recognition control unit [Optional]"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 63.356903780548016,
+          "left": 7.706461184393774,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "On-board power supply control unit [Optional]"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 68.93491859296635,
+          "left": 7.706461184393774,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 74.51293340538469,
+          "left": 7.706461184393774,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Digital audio package control unit [Optional]"
+      },
+      {
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 20.91692423256815,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Airbag control unit"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 25.334642797959674,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Relay for reducing agent dosing system [for vehicles with diesel engines]"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 29.7523613633512,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Interface for access and start authorization system / Outside driver's door handle [for vehicles with left-hand steering] / Outside door handle front passenger [for vehicles with right-hand steering] / Control unit 2 for burglar protection [Optional] / Anti-burglary protection control unit 3 [Optional] / Control unit 4 anti-burglary protection [Optional] / Anti-burglary protection control unit 5 [Optional] / Electronic steering column lock control unit"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 34.17007992874272,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument cluster / Control unit for emergency call module and communication unit",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Internet access control unit [Optional] / USB connector 1 [Optional] / Phone holder [Optional] / Transmission and reception stabilization control unit [Optional] / TV tuner [for vehicles equipped for the Japanese market] / Control unit for chip card reader [for vehicles equipped for the Japanese market] / USB charging socket 1 [Optional]",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Internet access control unit [Optional] / USB connector 1 [Optional] / Phone holder [Optional] / Transmission and reception stabilization control unit [Optional] / TV tuner [for vehicles equipped for the Japanese market] / Control unit for chip card reader [for vehicles equipped for the Japanese market] / USB charging socket 1 [Optional]",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 43.00551705952577,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Lane change assist control unit [Optional] / Lane change assist control unit 2 [Optional] / Driver's side exterior mirror [Optional] / Outside mirror, front passenger side [Optional] / Trunk lid handle [Optional]",
+        "relatedEntities": [
+          "ESPEJO_LATERAL",
+          "ESPEJO(ubicacion=EXTERIOR)"
+        ]
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 47.4232356249173,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.84095419030883,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 56.25867275570035,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "All-wheel drive control unit"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Front left seat belt [for vehicles with left-hand steering] / Front right seat belt [for vehicles with right-hand steering]",
+        "relatedEntities": [
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 20.89126536165224,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Driver's door control unit [for vehicles with right-hand steering] / Front passenger door control unit [for vehicles with left-hand steering] / Rear window lift motor, driver's side [for vehicles with right-hand steering] / Rear window lift motor, front passenger side [for vehicles with left-hand steering]"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 25.28332505612786,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Front right seat belt [for vehicles with left-hand steering] / Front left seat belt [for vehicles with right-hand steering]",
+        "relatedEntities": [
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))",
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 29.67538475060348,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 34.067444445079104,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Trailer recognition control unit [Optional]"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 38.459504139554724,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Electronic information system control unit 1"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 42.851563834030344,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Trailer recognition control unit [Optional]"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 47.243623528505964,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Rear air conditioning control and display panel",
+        "relatedEntities": [
+          "PANTALLA(of=TABLERO)"
+        ]
+      },
+      {
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 51.635683222981584,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 56.0277429174572,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 63.356903780548016,
+          "left": 26.620343686747617,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 68.93491859296635,
+          "left": 26.620343686747617,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Supply air fan control unit"
+      },
+      {
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 74.51293340538469,
+          "left": 26.620343686747617,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        }
+      },
+      {
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 20.91692423256815,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Steering column electronics control unit"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 25.334642797959674,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Alarm siren"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 29.7523613633512,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Data bus diagnostic interface"
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 34.17007992874272,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Selector lever / Gearbox operating mode indicator"
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Interior temperature sensor / Receiver of radio signal of independent heater [Optional] / Heating and air conditioning control unit / Rear air conditioning control and display panel / Rear window heating relay",
+        "relatedEntities": [
+          "CALEFACCION",
+          "PANTALLA(of=TABLERO)"
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 43.00551705952577,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Parking brake button / Diagnostic connector / Front ceiling module / Security alarm sensor / Lighting control panel / Control unit for adaptive light and headlight range control / Rain and light sensor",
+        "relatedEntities": [
+          "CONECTOR_OBD",
+          "BACKLIGHT(of=COMANDO)",
+          "LUZ_TESTIGO"
+        ]
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 47.4232356249173,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Steering column electronics control unit"
+      },
+      {
+        "id": "46",
+        "layout": {
+          "top": 51.84095419030883,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Head-up display control unit [Optional] / Display for front control, display and information unit",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 56.25867275570035,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Electronic damping control unit [Optional]"
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 60.67639132109188,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "USB charging socket 1 [Optional]"
+      },
+      {
+        "id": "49",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.09410988648341,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 71.5427395502097,
+          "left": 50.61932184114852,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "51",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 76.40263447174806,
+          "left": 50.61932184114852,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 65.59910728323976,
+          "left": 44.788248246368696,
+          "width": 3.3574926828556144,
+          "height": 12.550533327941253
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Socket 12V / Socket 3 12 V",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "53",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "54",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 20.91692423256815,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "55",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.334642797959674,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "56",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 29.7523613633512,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "57",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 34.17007992874272,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Front camera for driver assistance systems [Optional] / Parking assistance system control unit [Optional] / Adaptive cruise control control unit [Optional]"
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 43.00551705952577,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Parking brake button / Automatically dimming interior rearview mirror / Air quality sensor / Refrigerant circuit pressure sensor / Reversing light switch / Socket relay / Symposer control unit",
+        "relatedEntities": [
+          "RELAY(protects=TOMA_12V)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "60",
+        "layout": {
+          "top": 47.4232356249173,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Diagnostic connector",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "61",
+        "layout": {
+          "top": 51.84095419030883,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Starter relay 1 / Starter relay 2",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/starter-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "62",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.25867275570035,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "63",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 60.67639132109188,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "64",
+        "layout": {
+          "top": 65.09410988648341,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Front passenger seat occupied sensor [for American markets]"
+      },
+      {
+        "id": "65",
+        "layout": {
+          "top": 71.5427395502097,
+          "left": 64.9470058280981,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine noise generation control unit"
+      },
+      {
+        "id": "66",
+        "layout": {
+          "top": 76.40263447174806,
+          "left": 64.9470058280981,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Rear window wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "67",
+        "layout": {
+          "top": 73.31167244921977,
+          "left": 80.32066775778053,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Rear window heating relay"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 83.31014699324527,
+          "left": 48.09236149390287,
+          "width": 9.926613133025956,
+          "height": 15.061013840513901
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Socket relay",
+        "relatedEntities": [
+          "RELAY(protects=TOMA_12V)"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 83.31014699324527,
+          "left": 61.95957599601738,
+          "width": 9.926613133025956,
+          "height": 15.061013840513901
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Power supply relay terminal 15"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 84.03110782116728,
+          "left": 74.95403893439834,
+          "width": 18.918956794708294,
+          "height": 16.288207560852058
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear window heating relay"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 2.562076032024596,
+          "left": 4.282424376611433,
+          "width": 15.726869434284263,
+          "height": 9.85880504056805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Relay for reducing agent dosing system [for cars with diesel engine]"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 2.562076032024596,
+          "left": 25.303487481842872,
+          "width": 15.726869434284263,
+          "height": 9.85880504056805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 2.562076032024596,
+          "left": 46.32455058707431,
+          "width": 15.726869434284263,
+          "height": 9.85880504056805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxAspectRatio": 1.0468085106382978,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f63ede63_volkswagen-golf-2020.jpg"
+    },
+    "processed": false,
+    "boxName": "Interior fuse panel (SC)",
+    "templateId": "61ee16ecb231e80004f10062",
+    "templateRenameMap": {
+      "SC3": "3",
+      "SC4": "4",
+      "SC5": "5",
+      "SC6": "6",
+      "SC7": "7",
+      "SC8": "8",
+      "SC9": "9",
+      "SC11": "11",
+      "SC12": "12",
+      "SC13": "13",
+      "SC14": "14",
+      "SC16": "16",
+      "SC17": "17",
+      "SC18": "18",
+      "SC19": "19",
+      "SC20": "20",
+      "SC21": "21",
+      "SC24": "24",
+      "SC25": "25",
+      "SC26": "26",
+      "SC27": "27",
+      "SC29": "29",
+      "SC30": "30",
+      "SC31": "31",
+      "SC32": "32",
+      "SC35": "35",
+      "SC36": "36",
+      "SC39": "39",
+      "SC40": "40",
+      "SC41": "41",
+      "SC42": "42",
+      "SC43": "43",
+      "SC44": "44",
+      "SC45": "45",
+      "SC46": "46",
+      "SC47": "47",
+      "SC48": "48",
+      "SC52": "52",
+      "SC58": "58",
+      "SC59": "59",
+      "SC60": "60",
+      "SC61": "61",
+      "SC64": "64",
+      "SC65": "65",
+      "SC66": "66",
+      "SC67": "67"
+    },
+    "imageClusters": [],
+    "boxScaleMultiplier": "0.8",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-golf-2022-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 15.543921114331093,
+          "left": 4.923652276819683,
+          "width": 4.963250052917004,
+          "height": 14.15602962483667
+        }
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 20.89126536165224,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 25.28332505612786,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 29.67538475060348,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Parking lock actuator"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 34.067444445079104,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 38.459504139554724,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Heating and air conditioning control unit",
+        "relatedEntities": [
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 42.851563834030344,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Sliding sunroof control unit [Optional]"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 47.243623528505964,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Driver's door control unit [for vehicles with left-hand steering] / Front passenger door control unit [for vehicles with right-hand steering] / Rear window lift motor, driver's side [for vehicles with left-hand steering] / Rear window lift motor, front passenger side [for vehicles with right-hand steering]"
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 51.635683222981584,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 56.0277429174572,
+          "left": 12.346681757065218,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Trailer recognition control unit [Optional]"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 63.356903780548016,
+          "left": 7.706461184393774,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "On-board power supply control unit [Optional]"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 68.93491859296635,
+          "left": 7.706461184393774,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 74.51293340538469,
+          "left": 7.706461184393774,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Digital audio package control unit [Optional]"
+      },
+      {
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 20.91692423256815,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Airbag control unit"
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.334642797959674,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 29.7523613633512,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Interface for access and start authorization system / Outside driver's door handle [for vehicles with left-hand steering] / Outside door handle front passenger [for vehicles with right-hand steering] / Control unit 2 for burglar protection [Optional] / Anti-burglary protection control unit 3 [Optional] / Control unit 4 anti-burglary protection [Optional] / Anti-burglary protection control unit 5 [Optional] / Electronic steering column lock control unit"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 34.17007992874272,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument cluster / Control unit for emergency call module and communication unit",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Internet access control unit [Optional] / USB connector 1 [Optional] / Phone holder [Optional] / Transmission and reception stabilization control unit [Optional] / TV tuner [for vehicles equipped for the Japanese market] / Control unit for chip card reader [for vehicles equipped for the Japanese market] / USB charging socket 1 [Optional]",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Internet access control unit [Optional] / USB connector 1 [Optional] / Phone holder [Optional] / Transmission and reception stabilization control unit [Optional] / TV tuner [for vehicles equipped for the Japanese market] / Control unit for chip card reader [for vehicles equipped for the Japanese market] / USB charging socket 1 [Optional]",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 43.00551705952577,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Lane change assist control unit [Optional] / Lane change assist control unit 2 [Optional] / Driver's side exterior mirror [Optional] / Outside mirror, front passenger side [Optional] / Trunk lid handle [Optional]",
+        "relatedEntities": [
+          "ESPEJO_LATERAL",
+          "ESPEJO(ubicacion=EXTERIOR)"
+        ]
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 47.4232356249173,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.84095419030883,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.25867275570035,
+          "left": 26.85957446808511,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Front left seat belt [for vehicles with left-hand steering] / Front right seat belt [for vehicles with right-hand steering]",
+        "relatedEntities": [
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 20.89126536165224,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Driver's door control unit [for vehicles with right-hand steering] / Front passenger door control unit [for vehicles with left-hand steering] / Rear window lift motor, driver's side [for vehicles with right-hand steering] / Rear window lift motor, front passenger side [for vehicles with left-hand steering]"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 25.28332505612786,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Front right seat belt [for vehicles with left-hand steering] / Front left seat belt [for vehicles with right-hand steering]",
+        "relatedEntities": [
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))",
+          "CINTURON_DE_SEGURIDAD(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 29.67538475060348,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "High-voltage system service connector / High voltage battery 1"
+      },
+      {
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 34.067444445079104,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 38.459504139554724,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Electronic information system control unit 1"
+      },
+      {
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 42.851563834030344,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 47.243623528505964,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Rear air conditioning control and display panel",
+        "relatedEntities": [
+          "PANTALLA(of=TABLERO)"
+        ]
+      },
+      {
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 51.635683222981584,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 56.0277429174572,
+          "left": 37.64913053705457,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 63.356903780548016,
+          "left": 26.620343686747617,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 68.93491859296635,
+          "left": 26.620343686747617,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Supply air fan control unit"
+      },
+      {
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 74.51293340538469,
+          "left": 26.620343686747617,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        }
+      },
+      {
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 20.91692423256815,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Steering column electronics control unit"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 25.334642797959674,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Alarm siren"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 29.7523613633512,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Data bus diagnostic interface"
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 34.17007992874272,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Selector lever / Gearbox operating mode indicator"
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Interior temperature sensor / Receiver of radio signal of independent heater [Optional] / Heating and air conditioning control unit / Rear air conditioning control and display panel / Rear window heating relay",
+        "relatedEntities": [
+          "CALEFACCION",
+          "PANTALLA(of=TABLERO)"
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 43.00551705952577,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Parking brake button / Diagnostic connector / Front ceiling module / Security alarm sensor / Lighting control panel / Control unit for adaptive light and headlight range control / Rain and light sensor",
+        "relatedEntities": [
+          "CONECTOR_OBD",
+          "BACKLIGHT(of=COMANDO)",
+          "LUZ_TESTIGO"
+        ]
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 47.4232356249173,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Steering column electronics control unit"
+      },
+      {
+        "id": "46",
+        "layout": {
+          "top": 51.84095419030883,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Head-up display control unit [Optional] / Display for front control, display and information unit",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 56.25867275570035,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Electronic damping control unit [Optional]"
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 60.67639132109188,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "USB charging socket 1 [Optional]"
+      },
+      {
+        "id": "49",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.09410988648341,
+          "left": 52.276595744680854,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 71.5427395502097,
+          "left": 50.61932184114852,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "51",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 76.40263447174806,
+          "left": 50.61932184114852,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        }
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 65.59910728323976,
+          "left": 44.788248246368696,
+          "width": 3.3574926828556144,
+          "height": 12.550533327941253
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Socket 12V / Socket 3 12 V",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "53",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.49920566717662,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "54",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 20.91692423256815,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "55",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.334642797959674,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "56",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 29.7523613633512,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "57",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 34.17007992874272,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 38.58779849413425,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Front camera for driver assistance systems [Optional] / Parking assistance system control unit [Optional] / Adaptive cruise control control unit [Optional]"
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 43.00551705952577,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Parking brake button / Automatically dimming interior rearview mirror / Air quality sensor / Refrigerant circuit pressure sensor / Reversing light switch / Socket relay / Symposer control unit",
+        "relatedEntities": [
+          "RELAY(protects=TOMA_12V)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "60",
+        "layout": {
+          "top": 47.4232356249173,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Diagnostic connector",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "61",
+        "layout": {
+          "top": 51.84095419030883,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Starter relay 1 / Starter relay 2 / High voltage battery 1",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/golf/info/fusebox/2022/starter-fuse",
+            "urlWithAnchor": "/volkswagen/golf/info/fusebox/2022/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "62",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.25867275570035,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "63",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 60.67639132109188,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "64",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.09410988648341,
+          "left": 62.56766754611249,
+          "width": 8.235294117647058,
+          "height": 3.1623625059779994
+        }
+      },
+      {
+        "id": "65",
+        "layout": {
+          "top": 71.5427395502097,
+          "left": 64.9470058280981,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Engine noise generation control unit"
+      },
+      {
+        "id": "66",
+        "layout": {
+          "top": 76.40263447174806,
+          "left": 64.9470058280981,
+          "width": 12.286476846681802,
+          "height": 3.3932923442211536
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Rear window wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "67",
+        "layout": {
+          "top": 73.31167244921977,
+          "left": 80.32066775778053,
+          "width": 13.919943402266195,
+          "height": 4.477090156855768
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Rear window heating relay"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 83.31014699324527,
+          "left": 48.09236149390287,
+          "width": 9.926613133025956,
+          "height": 15.061013840513901
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Socket relay",
+        "relatedEntities": [
+          "RELAY(protects=TOMA_12V)"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 83.31014699324527,
+          "left": 61.95957599601738,
+          "width": 9.926613133025956,
+          "height": 15.061013840513901
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Power supply relay terminal 15"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 84.03110782116728,
+          "left": 74.95403893439834,
+          "width": 18.918956794708294,
+          "height": 16.288207560852058
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear window heating relay"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 2.562076032024596,
+          "left": 4.282424376611433,
+          "width": 15.726869434284263,
+          "height": 9.85880504056805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Relay for reducing agent dosing system [for cars with diesel engine]"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 2.562076032024596,
+          "left": 25.303487481842872,
+          "width": 15.726869434284263,
+          "height": 9.85880504056805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 2.562076032024596,
+          "left": 46.32455058707431,
+          "width": 15.726869434284263,
+          "height": 9.85880504056805
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxAspectRatio": 1.0468085106382978,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f63ede63_volkswagen-golf-2020.jpg"
+    },
+    "processed": false,
+    "boxName": "Interior fuse panel (SC) Hybrid",
+    "templateId": "61ee16ecb231e80004f10062",
+    "templateRenameMap": {
+      "SC3": "3",
+      "SC5": "5",
+      "SC6": "6",
+      "SC7": "7",
+      "SC8": "8",
+      "SC9": "9",
+      "SC11": "11",
+      "SC12": "12",
+      "SC13": "13",
+      "SC14": "14",
+      "SC16": "16",
+      "SC18": "18",
+      "SC19": "19",
+      "SC20": "20",
+      "SC21": "21",
+      "SC25": "25",
+      "SC26": "26",
+      "SC27": "27",
+      "SC28": "28",
+      "SC30": "30",
+      "SC32": "32",
+      "SC35": "35",
+      "SC36": "36",
+      "SC39": "39",
+      "SC40": "40",
+      "SC41": "41",
+      "SC42": "42",
+      "SC43": "43",
+      "SC44": "44",
+      "SC45": "45",
+      "SC46": "46",
+      "SC47": "47",
+      "SC48": "48",
+      "SC52": "52",
+      "SC58": "58",
+      "SC59": "59",
+      "SC60": "60",
+      "SC61": "61",
+      "SC65": "65",
+      "SC66": "66",
+      "SC67": "67"
+    },
+    "imageClusters": [
+      "64430b2181c7af73800ae624"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-golf-2022-3.webp"
+  }
+]

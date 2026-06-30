@@ -1,0 +1,665 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 27.676388089905394,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Front side marker, cornering and ash tray lights"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Cruise control and DFI brake switch",
+        "relatedEntities": [
+          "CRUISE_CONTROL"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 27.441955580680485,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Rheostat controlled instrument panel lights"
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 15.071250267033234,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Back-up lights, diesel fast idle, diesel controller",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 45.81275764027327,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Air conditioning compressor feed, ECC programmer and power module, rear defogger relay coil and generator indicator",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=COMPRESOR_DE_AC)",
+          "MODO_POWER",
+          "BOBINA(of=RELAY(protects=DESEMPANADOR_TRASERO))",
+          "RELAY(protects=RELAY(protects=DESEMPANADOR_TRASERO))",
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Antenna motor feed"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 15.071250267033232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Turn signal lights",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 37.179410097022654,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Opera, license, tail and rear side marker lights",
+        "relatedEntities": [
+          "LUCES_LATERALES(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Stop light switch, hazard warning flasher and ECC control head"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 3.0236276471092705,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fuel gauge, oil pressure and coolant temperature indicator, low brake fluid indicator, seat belt warning chime and indicator and electronic level control compressor",
+        "relatedEntities": [
+          "SENSOR_PRESION_DE_ACEITE",
+          "TESTIGO_RECALENTAMIENTO",
+          "INDICADOR",
+          "LUZ_TESTIGO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 24.79607847053945,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Key warning buzzer, coolant temperature indicator, instrument panel courtesy and compartment lights and cigar lighter",
+        "relatedEntities": [
+          "TESTIGO_RECALENTAMIENTO",
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/de-ville/info/fusebox/1981/cigarette-lighter-fuse",
+            "urlWithAnchor": "/cadillac/de-ville/info/fusebox/1981/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 48.292294419851615,
+          "left": 45.27182682164435,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "14",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 48.18950701691257,
+          "left": 68.42234514672232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 12.72692517478404,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Radio and antenna relay coil",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/de-ville/info/fusebox/1981/radio-fuse",
+            "urlWithAnchor": "/cadillac/de-ville/info/fusebox/1981/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 34.663839505471486,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 55.76502833339506,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Body courtesy and ash tray lights, electronic level control height sensor"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 70.69445298538898,
+          "left": 12.492492665559123,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Windshield wipers and low washer fluid indicator",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 82.009895431737,
+          "left": 22.402385248583432,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Rear window defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "flasher",
+          "format": ""
+        },
+        "layout": {
+          "top": -1.8518714954204212,
+          "left": -3.29937158756767,
+          "width": 26.571430054676622,
+          "height": 20.54878598002677
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "flasher",
+          "format": ""
+        },
+        "layout": {
+          "top": 68.51213289121294,
+          "left": 62.34044672269161,
+          "width": 36.41759544212321,
+          "height": 28.960214551455355
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/5d626fdd_1984-cadillac-de ville.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 1.2820512820512822,
+    "boxName": "Fuse box diagram",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bfc57c35_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bc6cc764_image.jpg"
+      }
+    ],
+    "templateId": "658eef5298879b55ca27bea0",
+    "imageClusters": [
+      "64496ade85070df59bfbeeb2"
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-cadillac-de-ville-1981-genid-g5-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 79.0621436549823,
+          "left": 19.34421845446132,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Fuel injector"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 79.0621436549823,
+          "left": 35.70398798407498,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Fuel injector"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 79.0621436549823,
+          "left": 52.06375751368861,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Fuel pump cranking circuit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 79.0621436549823,
+          "left": 68.42352704330236,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "ECS battery"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 89.13761841599678,
+          "left": 19.34421845446132,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "MDA ignition"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 89.13761841599678,
+          "left": 35.70398798407498,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "extendedDescription": "Fuel pump",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/de-ville/info/fusebox/1981/fuel-pump-fuse",
+            "urlWithAnchor": "/cadillac/de-ville/info/fusebox/1981/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 89.13761841599678,
+          "left": 52.06375751368861,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "ECS ignition"
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 89.13761841599678,
+          "left": 68.42352704330236,
+          "width": 7.776577952774183,
+          "height": 8.196957106468435
+        },
+        "extendedDescription": "-"
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 8.028073733100047,
+          "left": 15.196710212981749,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 22.22760787279109,
+          "left": 15.196710212981749,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 36.42714201248213,
+          "left": 15.196710212981749,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 50.62667615217317,
+          "left": 15.196710212981749,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 64.82621029186421,
+          "left": 15.196710212981749,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 8.028073733100047,
+          "left": 53.46216725744069,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 22.22760787279109,
+          "left": 53.46216725744069,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 36.42714201248213,
+          "left": 53.46216725744069,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 50.62667615217317,
+          "left": 53.46216725744069,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        }
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 64.82621029186421,
+          "left": 53.46216725744069,
+          "width": 30.336163420998194,
+          "height": 11.700908539411024
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/15baa6d8_1984-cadillac-de ville.jpg"
+    },
+    "processed": false,
+    "boxName": "Fuse box diagram 2",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a6ae4b85_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "67e58b088bdd5457339f5602"
+    ],
+    "templateId": "680c043359b5b5ae8b05c8ef",
+    "boxAspectRatio": 2.5641025641025643,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-cadillac-de-ville-1981-genid-g5-1.webp"
+  }
+]

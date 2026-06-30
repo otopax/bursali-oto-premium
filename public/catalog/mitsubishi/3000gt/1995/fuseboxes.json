@@ -1,0 +1,946 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 19.80007385480161,
+          "left": 23.44262422862316,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Battery) Seat belt solenoid, Active aero control unit, MFI relay"
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 19.80007385480161,
+          "left": 28.046250469600665,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        }
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 19.80007385480161,
+          "left": 32.64987671057818,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Ignition switch (IG₂)) Radiator fan motor relay, Air conditioning compressor lock controller, Blower motor relay, Air conditioning control unit, ABS relay [up to October 1993], ECS control unit [up to 1995 models], Condenser fan motor relay",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)",
+          "RELAY(protects=SISTEMA_ABS)",
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DEL_CONDENSADOR))"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 19.80007385480161,
+          "left": 37.25350295155568,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Ignition switch (ACC)) Audio, Motor antenna control unit, Auto-cruise control unit, ETACS unit"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 19.80007385480161,
+          "left": 41.85712919253319,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Ignition switch (ACC)) Remote controlled mirror, Cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 37.45937798842567,
+          "left": 23.44262422862316,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Battery) Door lock power relay, Motor antenna control unit",
+        "relatedEntities": [
+          "BATERIA",
+          "RELAY"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 37.45937798842567,
+          "left": 28.04625046960067,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Ignition switch (IG₂)) ELC-4A/T control module"
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 37.45937798842567,
+          "left": 32.64987671057818,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 37.45937798842567,
+          "left": 37.25350295155569,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Ignition switch (ACC)) Wiper relay, Wiper motor, Washer motor, Rear intermittent wiper relay, keyless control unit",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.45937798842567,
+          "left": 41.85712919253319,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Ignition switch (ACC)) Accessory socket, ETACS unit"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 37.45937798842567,
+          "left": 46.460755433510705,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Ignition switch (IG₁)) Combination meter, Combination gauge, ETACS unit, Speed sensor, Motor antenna control unit, Turn signal and hazard flasher unit, Auto-cruise control main switch, Active aero control unit, SRS diagnosis unit, Auto-cruise relay",
+        "relatedEntities": [
+          "SENSOR_DE_VELOCIDAD",
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 37.45937798842567,
+          "left": 51.06438167448822,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Ignition switch (IG₁)) Ignition coil, Power transistor, MFI relay, Engine control module",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 54.66971676272031,
+          "left": 23.44262422862316,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Battery) Amplifier <radio and tape player> [from 1994 models]"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 54.66971676272031,
+          "left": 28.046250469600665,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Battery) Theft-alarm horn, Theft-alarm horn relay"
+      },
+      {
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 54.66971676272031,
+          "left": 32.64987671057818,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        }
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 54.66971676272031,
+          "left": 37.25350295155568,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "(Battery) Blower motor",
+        "relatedEntities": [
+          "BATERIA",
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 54.66971676272031,
+          "left": 41.85712919253319,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Battery) Stop light, High-mounted stop light",
+        "relatedEntities": [
+          "BATERIA",
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/brake-light-fuse",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 54.66971676272031,
+          "left": 46.4607554335107,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Ignition switch (IG₁)) Back-up light, Light automatic shut-OFF unit, SRS diagnosis unit"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 54.66971676272031,
+          "left": 51.06438167448822,
+          "width": 2.586652871184686,
+          "height": 14.516546618318088
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Battery) Engine control module, ELC-4 A/T control module, ETACS unit, Dome light, Foot light, Door light, Luggage compartment light, Combination meter, Ignition key cylinder illumination light, Air conditioning control unit, Auto-cruise control unit, Audio, Light automatic shut-OFF unit, ECS control unit*3, Active aero control unit",
+        "relatedEntities": [
+          "BATERIA",
+          "ECU",
+          "LUZ_DE_HABITACULO",
+          "LUZ_DE_PIES",
+          "TESTIGO_APERTURA_DE_PUERTAS",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/radio-fuse",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "Fuse puller",
+        "layout": {
+          "top": 22.344210891001687,
+          "left": 46.90726098865568,
+          "width": 6.4666321779617135,
+          "height": 11.224133983235632
+        },
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        }
+      }
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/28145ea8_image.jpg"
+      }
+    ],
+    "processed": false,
+    "boxName": "Interior fuse panel ",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/83743b6f_mitsubishi-3000gt-1993.jpg"
+    },
+    "imageClusters": [
+      "645162073156835bc64c365b",
+      "6446d98ba240dfba08fccb95"
+    ],
+    "templateId": "690676f1d525560208c0ef9e",
+    "boxAspectRatio": 0.6172839506172839,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mitsubishi-3000gt-1995-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 45.39271653543307,
+          "left": 40.672955064717826,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "ECI"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 60.25885826771653,
+          "left": 59.03262091879928,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Taillight circuit"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 60.25885826771653,
+          "left": 54.95269517344784,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Horn circuit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 60.25885826771653,
+          "left": 50.2607805662937,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fog light circuit"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 60.25885826771653,
+          "left": 45.46686781550576,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Upper beam circuit"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 60.25885826771653,
+          "left": 41.57295506471784,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Hazard light circuit"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 73.99114173228347,
+          "left": 40.672955064717826,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "ABS circuit [up to October 1993]"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 73.99114173228347,
+          "left": 40.672955064717826,
+          "width": 2.2439591599432873,
+          "height": 10.582677165354333
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Sunroof circuit [vehicles with sunroof]"
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf"
+        },
+        "layout": {
+          "top": 41.61318897637795,
+          "left": 68.2084575585724,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 41.61318897637795,
+          "left": 60.426595548461,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "40"
+        },
+        "description": "LAMP ",
+        "relatedEntities": [
+          "LUZ",
+          "LUCES_DELANTERAS"
+        ],
+        "extendedDescription": "Headlamps",
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/headlight-fuse",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 41.61318897637795,
+          "left": 52.64473353834959,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "30"
+        },
+        "description": "IGN",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/starter-fuse",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 41.61318897637795,
+          "left": 44.86287152823818,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "40"
+        },
+        "description": "RAD FAN ",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Radiator fan",
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/cooling-fan-fuse",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf"
+        },
+        "layout": {
+          "top": 77.14074803149606,
+          "left": 68.2084575585724,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 77.14074803149606,
+          "left": 60.426595548461,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "30"
+        },
+        "description": "WDO",
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 77.14074803149606,
+          "left": 52.64473353834959,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "40"
+        },
+        "description": "R. DEF",
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 77.14074803149606,
+          "left": 44.86287152823818,
+          "width": 6.629879336196083,
+          "height": 11.968503937007874
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "30"
+        },
+        "description": "ACTIVE AERO"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 42.74704724409449,
+          "left": 78.36830904927518,
+          "width": 10.199814363378593,
+          "height": 8.440944881889763,
+          "rotation": 40
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "120"
+        },
+        "description": "ALT",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR"
+        ],
+        "extendedDescription": "Battery and charging system",
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/alternator-fuse",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 61.39271653543307,
+          "left": 78.36830904927518,
+          "width": 10.199814363378593,
+          "height": 8.440944881889763
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "40"
+        },
+        "description": "BAT",
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 78.6525590551181,
+          "left": 78.36830904927518,
+          "width": 10.199814363378593,
+          "height": 8.440944881889763,
+          "rotation": -45
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": "60"
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 8.605314960629922,
+          "left": 9.257526825511777,
+          "width": 11.423792086984017,
+          "height": 9.196850393700785
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "RAD FAN (HI)",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MARCHA_HIGH"
+        ],
+        "extendedDescription": "Radiator fan high speed",
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/cooling-fan-relay",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 20.65780839895013,
+          "left": 9.257526825511777,
+          "width": 11.423792086984017,
+          "height": 9.196850393700785
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HORN",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/horn-relay",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 32.71030183727034,
+          "left": 9.257526825511777,
+          "width": 11.423792086984017,
+          "height": 9.196850393700785
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "TAIL",
+        "extendedDescription": "Tail lights"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 44.76279527559055,
+          "left": 9.257526825511777,
+          "width": 11.423792086984017,
+          "height": 9.196850393700785
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "RAD FAN (LO)",
+        "extendedDescription": "Radiator fan low speed"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 56.81528871391076,
+          "left": 9.257526825511777,
+          "width": 11.423792086984017,
+          "height": 9.196850393700785
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FOG",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ],
+        "extendedDescription": "Fog lights"
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 68.86778215223097,
+          "left": 9.257526825511777,
+          "width": 11.423792086984017,
+          "height": 9.196850393700785
+        }
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 80.92027559055119,
+          "left": 9.257526825511777,
+          "width": 11.423792086984017,
+          "height": 9.196850393700785
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HEAD",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "extendedDescription": "Headlights"
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 32.164370078740156,
+          "left": 24.659246514213443,
+          "width": 9.587825501575871,
+          "height": 17.889763779527556
+        }
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 54.71555118110236,
+          "left": 23.843261365143157,
+          "width": 11.525790230617801,
+          "height": 13.354330708661415
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "STARTER",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/mitsubishi/3000gt/info/fusebox/1995/starter-relay",
+            "urlWithAnchor": "/mitsubishi/3000gt/info/fusebox/1995/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 74.84836684199061,
+          "left": 23.843261365143157,
+          "width": 11.525790230617801,
+          "height": 13.354330708661415
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "ALT",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR"
+        ],
+        "extendedDescription": "Battery and charging system"
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/0d1aa61c_mitsubishi-3000gt-1993.jpg"
+    },
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/87a8546d_mitsubishi-3000gt-1993.jpg"
+    },
+    "boxName": "Engine compartment fuse panel",
+    "templateId": "69067930d525560208c0f03c",
+    "boxAspectRatio": 0.8096,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a0355479_mitsubishi-3000gt-1993.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/80fbc3c4_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "676857e39f49cc4615ca9417"
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mitsubishi-3000gt-1995-genid-g1-1.webp"
+  }
+]

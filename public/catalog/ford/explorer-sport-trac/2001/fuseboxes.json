@@ -1,0 +1,1991 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 12.865773906674415,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Power Mirror Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ESPEJO_ELECTRICO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 12.865773906674415,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Aux. High Mount Stop Lamp"
+      },
+      {
+        "layout": {
+          "top": 41.130256372514836,
+          "left": 12.865773906674415,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Left Stop/Turn Trailer Tow Connector"
+      },
+      {
+        "layout": {
+          "top": 26.659597530091432,
+          "left": 12.865773906674415,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Subwoofer",
+        "relatedEntities": [
+          "SUBWOOFER"
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 20.98159138849625,
+          "width": 2.6597753488772287,
+          "height": 12.49760471868687
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 20.98159138849625,
+          "width": 2.6597753488772287,
+          "height": 12.672094802665843
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Blower Motor Relay, Airbag Diagnostic Monitor (With rear blower)",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 20.98159138849625,
+          "width": 2.6597753488772287,
+          "height": 12.672094802665843
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Blower Motor Relay, Airbag Diagnostic Monitor (Without rear blower)",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.130256372514836,
+          "left": 20.98159138849625,
+          "width": 2.6597753488772287,
+          "height": 12.49760471868687
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Right Stop/Turn Trailer Tow Connector"
+      },
+      {
+        "layout": {
+          "top": 26.659597530091432,
+          "left": 20.98159138849625,
+          "width": 2.6597753488772287,
+          "height": 12.672094802665843
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 28.97887527484245,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Brake Pedal Position Switch",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 28.97887527484245,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Speed Control/Amplifier Assembly, Generic electronic Module (GEM), Shift Lock Actuator, Blend Door Actuator, A/C - Heater Assembly, Flasher, Overhead Console, 4X4 Module",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "AIRE_ACONDICIONADO",
+          "RELAY_INTERMINTENTES",
+          "CONSOLA_DE_TECHO",
+          "DOBLE_TRACCION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.130256372514836,
+          "left": 28.97887527484245,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument Cluster, 4X4 Module",
+        "relatedEntities": [
+          "TABLERO",
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.659597530091432,
+          "left": 28.97887527484245,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Washer Pump Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_LIMPIAPARABRISAS)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 37.03542595892654,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Brake Pedal Position Switch, Brake Pressure Switch",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 37.03542595892654,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "4 Wheel Anti-Lock Brake System (4WABS) Module",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "MODULO",
+          "ECU"
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.130256372514836,
+          "left": 37.03542595892654,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Instrument Cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.659597530091432,
+          "left": 37.03542595892654,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Windshield Wiper Motor, Wiper Hi-Lo Relay, Wiper Run/Park Relay",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 45.09197664301048,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cigar Lighter, Data Link Connector",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "CONECTOR_OBD"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 45.09197664301048,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Power Door Locks",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.130256372514836,
+          "left": 45.09197664301048,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "PCM Power Diode",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.659597530091432,
+          "left": 45.09197664301048,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Generic Electronic Module (GEM), Radio, Moonroof Relay, Power Window Relay, Power Down Back Window",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "ESTEREO",
+          "RELAY(protects=TECHO_SOLAR)",
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/sunroof-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 53.1485273270946,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Flasher (Hazard)",
+        "relatedEntities": [
+          "RELAY_INTERMINTENTES",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 53.1485273270946,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Auxiliary Power Socket",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.130256372514836,
+          "left": 53.1485273270946,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.659597530091432,
+          "left": 53.1485273270946,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Starter Interrupt Relay, Anti-Theft",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 61.20507801117855,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Generic Electronic Module (GEM), Instrument Cluster, Securi-Lock",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "TABLERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 61.20507801117855,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Battery Saver Relay, Interior Lamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=RELAY_DELAY_BATERIA)",
+          "RELAY_DELAY_BATERIA",
+          "RELAY(protects=LUZ_DE_HABITACULO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.130256372514836,
+          "left": 61.20507801117855,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DRL, Backup Lamps Switch, DTR Sensor",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "SENSOR_REVERSA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.659597530091432,
+          "left": 61.20507801117855,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 69.26162869526253,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 69.26162869526253,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Power Seats",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.42355875727735,
+          "left": 77.31817937934652,
+          "width": 2.7783089443528364,
+          "height": 12.49760471868687
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Rear Blower Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA))",
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.248930515022465,
+          "left": 77.31817937934652,
+          "width": 2.7783089443528364,
+          "height": 12.672094802665843
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.89740827660879,
+          "left": 82.92393812160681,
+          "width": 6.796242230189601,
+          "height": 5.260631156942445
+        },
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlamps, Daytime Running Lamps (DRL) Module, Instrument Cluster",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO",
+          "ECU",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 62.42674943418548,
+          "left": 82.92393812160681,
+          "width": 6.796242230189601,
+          "height": 5.435121240921416
+        },
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Rear Integrated Control Panel"
+      },
+      {
+        "layout": {
+          "top": 43.64741298651849,
+          "left": 72.46635924907117,
+          "width": 6.719788061107831,
+          "height": 6.304038269934216,
+          "rotation": -55
+        },
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "4X4 Module",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.286951180856846,
+          "left": 65.6211978541918,
+          "width": 6.719788061107831,
+          "height": 6.721866947691153,
+          "rotation": -55
+        },
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Trailer Tow Relay",
+        "relatedEntities": [
+          "RELAY(protects=REMOLQUE)"
+        ]
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 1.9600 A 1.9600 1.9600 0 0 1 1.9600 0.0000 L 66.7900 0.0000 A 5.9122 5.9122 0 0 1 70.3218 1.1709 L 98.4281 22.1071 A 3.9040 3.9040 0 0 1 100.0000 25.2380 L 100.0000 38.9110 A 1.9600 1.9600 0 0 1 98.0400 40.8710 L 1.9600 40.8710 A 1.9600 1.9600 0 0 1 0.0000 38.9110 Z",
+          "M 0.771602205044845 12.128297290297956"
+        ],
+        "svgViewBoxH": 40.87099999999999,
+        "layout": {
+          "top": 25.868155784005225,
+          "left": 11.620297926869291,
+          "width": 80.32021217277503,
+          "height": 58.48456537832722
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Passenger compartment fuse panel",
+    "boxDescription": "The fuse panel is located on the left-hand side of the instrument panel facing the driver’s side door. Pull the panel cover outward to access the fuses.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec83269b1d52d000c68caf3/fragment-5ec83269b1d52d000c68caf3-078dbed6fd.jpg",
+      "source": "612160ad1c5a5c00047f416f"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec83269b1d52d000c68caf3/fragment-5ec83269b1d52d000c68caf3-219d593359.jpg",
+        "source": "612160bb1c5a5c00047f4170"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec83269b1d52d000c68caf3/fragment-5ec83269b1d52d000c68caf3-b2371f617a.jpg",
+        "source": "612160c91c5a5c00047f4171"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5633973710819009,
+    "templateId": "61240f1562ddb40004ca55ae",
+    "backgroundColor": "#d05949",
+    "imageClusters": [
+      "6350787a0c0dc712613fa2f1",
+      "619bf593de0c030004a8223b"
+    ],
+    "boxScaleMultiplier": "1",
+    "boxRotation": 90,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-explorer-sport-trac-2001-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 6.126126126126126,
+          "left": 3.771760154738878,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Fuse Panel",
+        "relatedEntities": [
+          "FUSIBLE_TABLERO",
+          "FUSIBLE(protects=PANEL_DE_PUERTA)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 6.126126126126126,
+          "left": 10.638297872340425,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 6.126126126126126,
+          "left": 17.60154738878143,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power Down Back Window"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 6.126126126126126,
+          "left": 24.564796905222437,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 6.126126126126126,
+          "left": 31.52804642166344,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 21.98198198198198,
+          "left": 3.771760154738878,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "ABS Pump Motor"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 21.98198198198198,
+          "left": 10.638297872340425,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Powertrain Control"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 21.98198198198198,
+          "left": 17.60154738878143,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 21.98198198198198,
+          "left": 24.564796905222437,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 21.98198198198198,
+          "left": 31.52804642166344,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 37.83783783783784,
+          "left": 3.771760154738878,
+          "width": 4.545454545454546,
+          "height": 10.99099099099099
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Ignition Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 37.83783783783784,
+          "left": 10.638297872340425,
+          "width": 4.545454545454546,
+          "height": 10.99099099099099
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 37.83783783783784,
+          "left": 17.60154738878143,
+          "width": 4.545454545454546,
+          "height": 10.99099099099099
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "4X4 Motor"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 37.83783783783784,
+          "left": 24.564796905222437,
+          "width": 4.545454545454546,
+          "height": 10.99099099099099
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 37.83783783783784,
+          "left": 31.52804642166344,
+          "width": 4.545454545454546,
+          "height": 10.99099099099099
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 53.51351351351351,
+          "left": 3.771760154738878,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Blower Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 53.51351351351351,
+          "left": 10.638297872340425,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 53.51351351351351,
+          "left": 17.60154738878143,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 53.51351351351351,
+          "left": 24.564796905222437,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 53.51351351351351,
+          "left": 31.52804642166344,
+          "width": 4.545454545454546,
+          "height": 11.17117117117117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 4.864864864864865,
+          "left": 39.071566731141196,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PCM Memory"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 4.864864864864865,
+          "left": 46.518375241779495,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/horn-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 4.864864864864865,
+          "left": 53.9651837524178,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=BOMBA_DE_COMBUSTIBLE)",
+          "MOTOR_IMPULSOR(of=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/fuel-pump-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 4.864864864864865,
+          "left": 61.41199226305609,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Headlamps",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 16.756756756756758,
+          "left": 39.071566731141196,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C Clutch Solenoid"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 16.756756756756758,
+          "left": 46.518375241779495,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 16.756756756756758,
+          "left": 53.9651837524178,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Power Point",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 16.756756756756758,
+          "left": 61.41199226305609,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "4WABS Module",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 24.864864864864867,
+          "left": 39.071566731141196,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Foglamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 24.864864864864867,
+          "left": 46.518375241779495,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 24.864864864864867,
+          "left": 53.9651837524178,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DRL",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 24.864864864864867,
+          "left": 61.41199226305609,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 36.93693693693694,
+          "left": 39.071566731141196,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Park Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 36.93693693693694,
+          "left": 46.518375241779495,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 36.93693693693694,
+          "left": 53.9651837524178,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 36.93693693693694,
+          "left": 61.41199226305609,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 45.22522522522522,
+          "left": 39.071566731141196,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 45.22522522522522,
+          "left": 46.518375241779495,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left Low Beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 45.22522522522522,
+          "left": 53.9651837524178,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 45.22522522522522,
+          "left": 61.41199226305609,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 57.83783783783784,
+          "left": 39.071566731141196,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated Oxygen Sensors"
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 57.83783783783784,
+          "left": 46.518375241779495,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right Low Beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 57.83783783783784,
+          "left": 53.9651837524178,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 57.83783783783784,
+          "left": 61.41199226305609,
+          "width": 5.319148936170213,
+          "height": 4.504504504504505
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "45A",
+        "layout": {
+          "top": 83.7409009009009,
+          "left": 7.117214700193427,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Wiper Hi/Low Relay"
+      },
+      {
+        "id": "45B",
+        "layout": {
+          "top": 71.99243243243242,
+          "left": 7.117214700193427,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Wiper Run/Park Relay"
+      },
+      {
+        "id": "46A",
+        "layout": {
+          "top": 83.7409009009009,
+          "left": 22.349323017408118,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Park Lamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_DE_ESTACIONAMIENTO)"
+        ]
+      },
+      {
+        "id": "46B",
+        "layout": {
+          "top": 71.99243243243242,
+          "left": 22.349323017408118,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front Washer Pump Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_LIMPIAPARABRISAS)"
+        ]
+      },
+      {
+        "id": "47A",
+        "layout": {
+          "top": 83.7409009009009,
+          "left": 37.58143133462281,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": 20
+        },
+        "description": "Windows/Roof"
+      },
+      {
+        "id": "47B",
+        "layout": {
+          "top": 71.99243243243242,
+          "left": 37.58143133462281,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 73.19603603603603,
+          "left": 52.89148936170212,
+          "width": 11.330560928433265,
+          "height": 20.771171171171165
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Window Safety Relay"
+      },
+      {
+        "id": "49",
+        "layout": {
+          "top": 73.19603603603603,
+          "left": 68.26866537717603,
+          "width": 11.330560928433265,
+          "height": 20.771171171171165
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter Relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/starter-relay",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "50A",
+        "layout": {
+          "top": 82.80936936936936,
+          "left": 85.48471953578354,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "50B",
+        "layout": {
+          "top": 72.17873873873873,
+          "left": 85.48471953578354,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Pump Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/fuel-pump-relay",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "51",
+        "layout": {
+          "top": 44.14414414414414,
+          "left": 71.47001934235976,
+          "width": 3.2882011605415857,
+          "height": 12.612612612612612
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 40.54054054054054,
+          "left": 76.40232108317214,
+          "width": 3.2882011605415857,
+          "height": 12.612612612612612
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 40.54054054054054,
+          "left": 81.04448742746615,
+          "width": 3.2882011605415857,
+          "height": 12.612612612612612
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "PCM Diode",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 42.02486486486487,
+          "left": 87.4176015473888,
+          "width": 11.330560928433265,
+          "height": 20.771171171171165
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "PCM Relay",
+        "relatedEntities": [
+          "RELAY(protects=PCM)"
+        ]
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 6.889729729729732,
+          "left": 70.87988394584141,
+          "width": 11.330560928433265,
+          "height": 20.771171171171165
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Blower Relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "56A",
+        "layout": {
+          "top": 16.695495495495493,
+          "left": 85.48471953578354,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/C Clutch Solenoid"
+      },
+      {
+        "id": "56B",
+        "layout": {
+          "top": 6.2450450450450425,
+          "left": 85.48471953578354,
+          "width": 10.576131528046409,
+          "height": 11.155675675675663
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/explorer-sport-trac/info/fusebox/2001/horn-relay",
+            "urlWithAnchor": "/ford/explorer-sport-trac/info/fusebox/2001/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      }
+    ],
+    "boxName": "Power distribution box",
+    "boxDescription": "The power distribution box is located in the engine compartment. The power distribution box contains high-current fuses that protect your vehicle’s main electrical systems from overloads.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec83269b1d52d000c68caf3/fragment-5ec83269b1d52d000c68caf3-60ae54aeba.jpg",
+      "source": "612160ec1c5a5c00047f4172"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec83269b1d52d000c68caf3/fragment-5ec83269b1d52d000c68caf3-3d6f733517.jpg",
+        "source": "612160f61c5a5c00047f4173"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec83269b1d52d000c68caf3/fragment-5ec83269b1d52d000c68caf3-ec4b81b2f0.jpg",
+        "source": "612161051c5a5c00047f4174"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/5ec83269b1d52d000c68caf3/fragment-5ec83269b1d52d000c68caf3-ac15b869ed.jpg",
+        "source": "612161131c5a5c00047f4175"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5367504835589942,
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/06f5ed25_2001-ford-explorer-sport trac.jpg"
+    },
+    "templateId": "6148f1d7e44edf0004befee5",
+    "backgroundColor": "#e1c772",
+    "imageClusters": [
+      "61f196deb970bc00040a21f0",
+      "61f19758b970bc00040a21f3"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-explorer-sport-trac-2001-genid-g1-1.webp"
+  }
+]

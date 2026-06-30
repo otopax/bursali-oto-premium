@@ -1,7 +1,7 @@
 const IORedis = require('ioredis');
 const { Queue, Worker, QueueEvents } = require('bullmq');
 
-const connection = new IORedis(process.env.REDIS_URL || 'redis://127.0.0.1:6379');
+const connection = new IORedis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', { maxRetriesPerRequest: null });
 
 /**
  * Enterprise Queue Manager

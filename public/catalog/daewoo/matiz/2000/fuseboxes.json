@@ -1,0 +1,1159 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 3.4390034584714133,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Fuel cut-off Switch (Inertia Switch)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 10.637646715169133,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Fuel, EBCM, Generator, VSS, Fuel Pump Relay, Main Relay, Ignition Coil",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "COMBUSTIBLE",
+          "ALTERNADOR",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "RELAY_ASD",
+          "BOBINA_DE_IGNICION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/alternator-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/fuel-pump-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 17.83628997186685,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 25.03493322856457,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Blower Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 32.23357648526229,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Rear Window Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 39.432219741960004,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlamp Hi Beam, Right Side",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "LAMPARA(of=LUZ_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/headlight-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 46.630862998657726,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlamp Hi Beam, Left Side",
+        "relatedEntities": [
+          "LUZ_ALTA",
+          "LAMPARA(of=LUZ_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/headlight-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 53.82950625535544,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlamp Lo Beam, Right Side",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/headlight-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 61.02814951205316,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Headlamp Lo Beam, Left Side",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/headlight-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 68.22679276875088,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Tail and Illumination Lamps, Right Side",
+        "relatedEntities": [
+          "LAMPARA(of=BACKLIGHT)"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 75.42543602544859,
+          "left": 43.52597144476808,
+          "width": 14.032649632674332,
+          "height": 3.278237768280766
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Tail and Illumination Lamps, Left Side",
+        "relatedEntities": [
+          "LAMPARA(of=BACKLIGHT)"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 8.752422558679132,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "A/C Compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "extendedDescription": "Air conditioning compressor",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/air-conditioning-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 18.16735059683233,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Radiator Fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Radiator fan",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/cooling-fan-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 27.582278634985528,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 36.99720667313872,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/horn-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 46.41213471129193,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Headlamp Relay, Hi Beam Passing, DRL Module",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/headlight-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 55.82706274944512,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "ECM, Main Relay",
+        "relatedEntities": [
+          "ECU",
+          "RELAY_ASD"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 65.24199078759831,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Front Fog Lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "extendedDescription": "Front fog lights",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/fog-light-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 84.67024144047956,
+          "left": 74.65691882575152,
+          "width": 4.068790981302104,
+          "height": 10.661607107709337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 64.24752475028552,
+          "left": 64.60615491247759,
+          "width": 23.21623760376572,
+          "height": 5.267359957005969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 73.70009758578993,
+          "left": 64.60615491247759,
+          "width": 23.21623760376572,
+          "height": 5.267359957005969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Ignition Switch, Instrument Panel Fuse Block (F5, F11 ~ F13)",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 2.6528954006653582,
+          "left": 9.770449626707233,
+          "width": 29.160454147990507,
+          "height": 22.259730054923477
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=ARRANQUE)"
+        ],
+        "description": "IGNITION RELAY",
+        "extendedDescription": "Ignition",
+        "unmappedId": "IGNITION RELAY",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/starter-relay",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 29.3530170916046,
+          "left": 9.770449626707233,
+          "width": 29.160454147990507,
+          "height": 22.259730054923477
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "description": "FUEL PUMP RELAY",
+        "extendedDescription": "Fuel pump",
+        "unmappedId": "FUEL PUMP RELAY",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/fuel-pump-relay",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 55.53967490387194,
+          "left": 9.770449626707233,
+          "width": 29.160454147990507,
+          "height": 22.259730054923477
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "COOLING FAN RELAY",
+        "unmappedId": "COOL´G FAN RELAY",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/cooling-fan-relay",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 3.9904062374365585,
+          "left": 65.7356616794846,
+          "width": 12.222872185386372,
+          "height": 13.946225612605202
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FRT FOG RELAY",
+        "extendedDescription": "Front fog lights",
+        "unmappedId": "HEARTER "
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 3.9904062374365585,
+          "left": 79.57192835297889,
+          "width": 12.222872185386372,
+          "height": 13.946225612605202
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "FUEL PUMP RELAY",
+        "unmappedId": "H/PUMP RELAY",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/fuel-pump-relay",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 19.993363789377707,
+          "left": 65.7356616794846,
+          "width": 12.222872185386372,
+          "height": 13.946225612605202
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "COOLING FAN LOW RELAY",
+        "unmappedId": "COOL'G FAN RELAY",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA))"
+        ],
+        "extendedDescription": "Radiator fan low speed"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 19.993363789377707,
+          "left": 79.57192835297889,
+          "width": 12.222872185386372,
+          "height": 13.946225612605202
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "HORN RELAY AIRBAG",
+        "unmappedId": "HORN RELAY AIRBAG"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 35.99632134131874,
+          "left": 65.7356616794846,
+          "width": 12.222872185386372,
+          "height": 13.946225612605202
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "ILLUMINATION RELAY",
+        "unmappedId": "TAILLAMPS RELAY",
+        "relatedEntities": [
+          "RELAY(protects=BACKLIGHT)"
+        ],
+        "extendedDescription": "Illumination"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 35.99632134131874,
+          "left": 79.57192835297889,
+          "width": 12.222872185386372,
+          "height": 13.946225612605202
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "RELAY(protects=LAMPARA(of=LUCES_DELANTERAS))"
+        ],
+        "description": "HEAD LAMP RELAY",
+        "extendedDescription": "Headlights",
+        "unmappedId": "HEAD LAMP RELAY"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 51.913292313658516,
+          "left": 66.21270228152677,
+          "width": 18.976953389470726,
+          "height": 8.04426743252656
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=COMPRESOR_DE_AC)"
+        ],
+        "description": "A/C COMPRESSOR RELAY",
+        "extendedDescription": "Air conditioning compressor",
+        "unmappedId": "AIRCON RELAY",
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/air-conditioning-relay",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Box",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f36e760a_daewoo-matiz-1998.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/649c3d359d84467e5e5d088c/fragment-649c3d359d84467e5e5d088c-c7a0bb4f7d.jpg",
+        "source": "68307ff6a7152f27ffa08bb8"
+      }
+    ],
+    "boxAspectRatio": 1.3409090909090908,
+    "processed": false,
+    "imageClusters": [
+      "61eefbbbb231e80004f10238"
+    ],
+    "templateId": "61fad9ad1600fb00045897ab",
+    "templateRenameMap": {
+      "Ef1 (Engine Fuse)": "20",
+      "Ef2": "21",
+      "Ef3": "1",
+      "Ef4": "2",
+      "Ef5": "3",
+      "Ef6": "4",
+      "Ef7": "5",
+      "Ef8": "6",
+      "Ef9": "7",
+      "Ef10": "8",
+      "Ef11": "9",
+      "Ef12": "10",
+      "Ef13": "11",
+      "Ef14": "12",
+      "Ef15": "13",
+      "Ef16": "14",
+      "Ef17": "15",
+      "Ef18": "16",
+      "Ef19": "17",
+      "Ef20": "18",
+      "Ef21": "19"
+    },
+    "boxScaleMultiplier": "",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-daewoo-matiz-2000-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 23.280627548141577,
+          "left": 27.021396804967846,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(IGN 1) Cluster, Clock, IMMO, Anti-Theft Control Unit, DRL Relay",
+        "relatedEntities": [
+          "ARRANQUE",
+          "TABLERO",
+          "RELOJ",
+          "RELAY(protects=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/headlight-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/starter-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 31.553470139280726,
+          "left": 27.021396804967846,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(IGN 1) SDM"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 39.82631273041988,
+          "left": 27.021396804967846,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "(IGN 1) Hazard Switch, DRL Module",
+        "relatedEntities": [
+          "ARRANQUE",
+          "LUZ_BALIZA",
+          "BOTON_DE_BALIZA",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/headlight-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/starter-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 48.099155321559024,
+          "left": 27.021396804967846,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(IGN 1) Turn Signal Lamp",
+        "relatedEntities": [
+          "ARRANQUE",
+          "LAMPARA",
+          "LUZ_DIRECCIONAL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/starter-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 56.37199791269818,
+          "left": 27.021396804967846,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(BAT) Stop Lamp"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 64.64484050383733,
+          "left": 27.021396804967846,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(ACC) Audio",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/radio-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 72.91768309497648,
+          "left": 27.021396804967846,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(ACC) Cigar Light"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 23.280627548141577,
+          "left": 48.217223327630194,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(IGN 2) Wiper",
+        "relatedEntities": [
+          "ARRANQUE",
+          "LIMPIA_PARABRISAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/starter-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 31.553470139280726,
+          "left": 48.217223327630194,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(IGN 2) Rear Wiper Motor, Front & Rear Washer, Backup Lamp",
+        "relatedEntities": [
+          "ARRANQUE",
+          "MOTOR_IMPULSOR",
+          "LUZ_RETROCESO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/starter-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 39.82631273041988,
+          "left": 48.217223327630194,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(IGN 2) Auto Miror Switch"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 48.099155321559024,
+          "left": 48.217223327630194,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(Ef2) IMMO, Audio, Room Lamp",
+        "relatedEntities": [
+          "ESTEREO",
+          "LUZ_DE_HABITACULO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/radio-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 56.37199791269818,
+          "left": 48.217223327630194,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(Ef2) Hazard, Clock",
+        "relatedEntities": [
+          "RELOJ"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 64.64484050383733,
+          "left": 48.217223327630194,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(Ef2) Anti-Theft Control Unit, Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 72.91768309497648,
+          "left": 48.217223327630194,
+          "width": 16.040084936068805,
+          "height": 5.090980056085627
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(ST) Starter Motor",
+        "relatedEntities": [
+          "ARRANQUE",
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/daewoo/matiz/info/fusebox/2000/starter-fuse",
+            "urlWithAnchor": "/daewoo/matiz/info/fusebox/2000/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 23.492751717145147,
+          "left": 3.9160363613449234,
+          "width": 18.713432425413608,
+          "height": 22.909410252385335
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Blinker unit (Turn signal lamp Relay)"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 56.15987374369461,
+          "left": 3.5341295771528087,
+          "width": 18.713432425413608,
+          "height": 22.909410252385335
+        },
+        "extendedDescription": "Wipers",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Wiper Relay",
+        "relatedEntities": [
+          "RELAY(protects=LIMPIA_PARABRISAS)"
+        ]
+      }
+    ],
+    "boxName": "Passenger Compartment Fuse Box",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/649c3d359d84467e5e5d088c/fragment-649c3d359d84467e5e5d088c-ee890c6688.jpg",
+      "source": "68308047a7152f27ffa08bbe"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/649c3d359d84467e5e5d088c/fragment-649c3d359d84467e5e5d088c-4446661e8f.jpg",
+        "source": "6830804fa7152f27ffa08bc0"
+      }
+    ],
+    "processed": false,
+    "imageClusters": [
+      "61eefbcdb231e80004f1023a",
+      "63ea98ee9f2df4e23cf0b00e"
+    ],
+    "templateId": "6855a37c9dd9d1bc216334b4",
+    "boxAspectRatio": 0.9001814882032668,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-daewoo-matiz-2000-genid-g1-1.webp"
+  }
+]

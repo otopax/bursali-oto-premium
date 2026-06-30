@@ -1,0 +1,1484 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "Battery",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "large"
+        },
+        "layout": {
+          "top": 83.22733691237075,
+          "left": 11.663596666893723,
+          "width": 16.629506112504725,
+          "height": 14.105700319609804
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "CB1",
+        "layout": {
+          "top": 76.48347402605395,
+          "left": 2.7343987386020716,
+          "width": 26.195573983499354,
+          "height": 4.131013475670624
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false
+        },
+        "description": "CB1"
+      },
+      {
+        "id": "F1",
+        "layout": {
+          "top": 3.499619257338225,
+          "left": 6.027162012758175,
+          "width": 11.444111069307386,
+          "height": 3.994114823237687
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Powertrain Control Module (PCM) Trans Range"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 9.127690144627692,
+          "left": 6.027162012758175,
+          "width": 11.444111069307386,
+          "height": 4.1756654970212175
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Starter Solenoid",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 14.755761031917162,
+          "left": 6.027162012758175,
+          "width": 11.444111069307386,
+          "height": 3.994114823237687
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "PZEV Motor/Flex Fuel"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 20.565382592990165,
+          "left": 3.849729146637973,
+          "width": 11.444111069307386,
+          "height": 3.994114823237687
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Front/Rear Washer"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 26.011902806496092,
+          "left": 3.849729146637973,
+          "width": 11.444111069307386,
+          "height": 3.994114823237687
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Front Wiper LO/HI",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "MARCHA_HIGH",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 31.458423020002034,
+          "left": 6.027162012758175,
+          "width": 11.444111069307386,
+          "height": 4.1756654970212175
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Anti-Lock Brake System (ABS) Valve/ESP",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "VALVULA_DE_MOTOR",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 34.54732584266417,
+          "left": 47.955392508317026,
+          "width": 9.617630942645928,
+          "height": 5.140425777506898
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Headlamp Wash Relay/Manifold Tuning Valve"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 42.57924862778165,
+          "left": 36.180878682335276,
+          "width": 9.394021592446054,
+          "height": 5.128685557450712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Anti-Lock Brake System (ABS) Pump/ESP",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "BOMBIN_DE_EMBRAGUE",
+          "CONTROL_DE_ESTABILIDAD",
+          "BOMBA"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 42.57924862778165,
+          "left": 48.08965316541404,
+          "width": 9.394021592446054,
+          "height": 5.128685557450712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Rear Window Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 42.57924862778165,
+          "left": 60.69894379455614,
+          "width": 9.394021592446054,
+          "height": 5.128685557450712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power Liftgate Module",
+        "relatedEntities": [
+          "PORTON_TRASERO"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 42.57924862778165,
+          "left": 72.60771827763482,
+          "width": 9.394021592446054,
+          "height": 5.128685557450712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Radiator Fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Radiator fan",
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/cooling-fan-fuse",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 42.57924862778165,
+          "left": 84.86675083374527,
+          "width": 9.394021592446054,
+          "height": 5.128685557450712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Power Folding Seat"
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 50.022826252906434,
+          "left": 72.13868208895866,
+          "width": 9.176495078417807,
+          "height": 5.60543754153355
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Rear Blower",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear air conditioning system"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 50.022826252906434,
+          "left": 84.11384637938049,
+          "width": 9.176495078417807,
+          "height": 5.60543754153355
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Rear Door Module (RR Door Node)"
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 66.9749389520426,
+          "left": 57.666131871277514,
+          "width": 10.299699962376645,
+          "height": 5.446520213505937
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Ignition Off Draw (IOD) - Main",
+        "relatedEntities": [
+          "FUSIBLE_IOD"
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 69.4713816935002,
+          "left": 15.447934478155876,
+          "width": 11.8255814382843,
+          "height": 4.994114823237684
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power Sliding Door Module/Thatchum Relay Lock Feed"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 76.05247264121917,
+          "left": 40.47548197970546,
+          "width": 10.299699962376645,
+          "height": 5.446520213505937
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "Sunroof Module",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/sunroof-fuse",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 90.34825745539774,
+          "left": 60.867391674019494,
+          "width": 10.681170331353563,
+          "height": 5.809621561072999
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Power Memory Seat [If Equipped]"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 90.34825745539774,
+          "left": 72.60146964088968,
+          "width": 10.681170331353563,
+          "height": 5.628070887289469
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "Driver Door Node"
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 90.34825745539774,
+          "left": 84.33554760775985,
+          "width": 10.681170331353563,
+          "height": 5.809621561072999
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 25
+        },
+        "description": "Passenger Door Node"
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 20.230236306049417,
+          "left": 48.27886949778137,
+          "width": 9.827598410185427,
+          "height": 2.694095911900025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Spare Fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 23.116767640228012,
+          "left": 48.27886949778137,
+          "width": 9.827598410185427,
+          "height": 2.5016604896214525
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear View Mirror (RR VW MIR), Cabin Compartment Node (CCN), Multi-Function Control Switch (MULTIFTCN SW), Tire Pressure Monitor (TPM), Glow Plug Module (GLW PLG MOD) - [Export Diesel Only], Assy-Shifter (Hall Effect), Acoustic Noise Cancellation (ANC)",
+        "relatedEntities": [
+          "SENSOR_PRESION_NEUMATICOS",
+          "TESTIGO_PRESION_DE_NEUMATICOS"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 26.003298974406622,
+          "left": 48.27886949778137,
+          "width": 9.827598410185427,
+          "height": 2.5016604896214525
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Next Generation Controller (NGC), Global Powertrain Engine Controller (GPEC), TCM",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 28.889830308585204,
+          "left": 48.27886949778137,
+          "width": 9.827598410185427,
+          "height": 2.5016604896214525
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Door Lock/Unlock Motors (LOCK/ UNLOCK MTRS), Liftgate Lock/ Unlock Motors",
+        "relatedEntities": [
+          "CERRADURA(of=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 17.343704971870814,
+          "left": 61.018348918392114,
+          "width": 10.191583536488595,
+          "height": 2.694095911900025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Auto Shut Down (ASD #1 and #2)"
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 20.230236306049417,
+          "left": 61.018348918392114,
+          "width": 10.191583536488595,
+          "height": 2.694095911900025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Auto Shut Down (ASD #3)"
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 23.116767640228012,
+          "left": 61.018348918392114,
+          "width": 10.191583536488595,
+          "height": 2.694095911900025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Back-Up Lamps (B/U LAMPS)"
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 26.003298974406622,
+          "left": 61.018348918392114,
+          "width": 10.191583536488595,
+          "height": 2.5016604896214525
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right Horn (RT HORN (HI/LOW)"
+      },
+      {
+        "id": "F29",
+        "layout": {
+          "top": 23.309203062506587,
+          "left": 78.85362010724718,
+          "width": 9.827598410185427,
+          "height": 2.694095911900025
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Next Generation Controller (NGC), PCM, Transmission Feed (TRANS FEED), TCM",
+        "relatedEntities": [
+          "PCM",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 26.195734396685182,
+          "left": 78.85362010724718,
+          "width": 9.827598410185427,
+          "height": 2.5016604896214525
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Power Mirror Switch (PWR MIRR SW), Driver Window Switch (DRVR WIND SW)"
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 30.187568303517313,
+          "left": 63.2477173592951,
+          "width": 10.681170331353563,
+          "height": 2.5417094329694367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right Tail/Park/ Run Lamp (RTTAIL/PRK/RUN LMP)"
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 32.910828410270284,
+          "left": 63.2477173592951,
+          "width": 10.681170331353563,
+          "height": 2.5417094329694367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left Horn (LT HORN (HI/LOW)"
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 35.63408851702326,
+          "left": 63.2477173592951,
+          "width": 10.681170331353563,
+          "height": 2.5417094329694367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left Tail/License/ Park Lamp (LTTAIL/LIC/PRK LMP), Running Lamps"
+      },
+      {
+        "id": "F34",
+        "layout": {
+          "top": 50.022826252906434,
+          "left": 57.921813588114084,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Heated Mirrors",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 50.022826252906434,
+          "left": 65.2594230008386,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear Wiper Module (RR WIPER MOD), Power Folding Mirror (PWR FOLD MIR), J1962 Diagnostic Feed"
+      },
+      {
+        "id": "F36",
+        "layout": {
+          "top": 58.98719321330341,
+          "left": 57.921813588114084,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Anti-Lock Brake System (ABS), Electronic Stability Program (ESP), Stop Lamp Switch (STP LP SW), Fuel Pump Rly Hi Control",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "F37",
+        "layout": {
+          "top": 58.98719321330341,
+          "left": 64.92706346950611,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Ignition Off Draw - Vehicle Entertainment System (IOD-VES), Satellite Digital Audio Receiver (SDARS), DVD, Hands-Free Module (HFM), Universal Garage Door Opener (UGDO), Vanity Lamp (VANITY LP), Streaming Video Module",
+        "relatedEntities": [
+          "FUSIBLE_IOD",
+          "DVD"
+        ]
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 58.98719321330341,
+          "left": 70.4292957218987,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Amplifier (AMP)/ Radio",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/radio-fuse",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F39",
+        "layout": {
+          "top": 58.98719321330341,
+          "left": 76.3245445637479,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Ignition Off Draw) IOD-HVAC/ATC"
+      },
+      {
+        "id": "F40",
+        "layout": {
+          "top": 64.45537895709292,
+          "left": 37.62967268447807,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Occupant Restraint Controller (ORC), TT EUROPE",
+        "relatedEntities": [
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "F41",
+        "layout": {
+          "top": 64.31909497482118,
+          "left": 43.524921526327304,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Occupant Restraint Controller/ Occupant Classification Module (ORC/OCM)",
+        "relatedEntities": [
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "F42",
+        "layout": {
+          "top": 65.36361623374675,
+          "left": 77.32434821959625,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition Off DrawCabin Compartment Node (IOD-CCN), SIREN, Clock Module (CLK MOD), MultiFunction Control Switch (MULTIFCTN SW)/ITM"
+      },
+      {
+        "id": "F43",
+        "layout": {
+          "top": 59.23664392435469,
+          "left": 84.01207061829551,
+          "width": 10.681170331353563,
+          "height": 2.5417094329694367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Rear Wiper (REAR WIPER)",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "F44",
+        "layout": {
+          "top": 62.42267286895018,
+          "left": 84.01207061829551,
+          "width": 10.681170331353563,
+          "height": 2.5417094329694367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump (FUEL PUMP), Diesel Lift Pump [DSL LIFT PUMP] - [Export Only]",
+        "relatedEntities": [
+          "BOMBA",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/fuel-pump-fuse",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F45",
+        "layout": {
+          "top": 75.25740209334491,
+          "left": 56.3044286407923,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Park Assist (PRK ASST), Heater Ventilation, Air Conditioning Module (HVAC MOD), Headlamp Wash (HDLP WASH), Compass (COMPAS), IR Sensor, Rear Camera, Lamp Door FT Drv/Pass, Lamp Flashlight, AHLM, Relay Diesel Cabin Heater, Rad Fan Diesel",
+        "relatedEntities": [
+          "CLIMATIZADOR",
+          "CAMARA_REVERSA",
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/cooling-fan-fuse",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F46",
+        "layout": {
+          "top": 75.25740209334491,
+          "left": 61.80666089318493,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Heated Seat [If Equipped]"
+      },
+      {
+        "id": "F47",
+        "layout": {
+          "top": 75.25740209334491,
+          "left": 67.70190973503418,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Spare Fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "F48",
+        "layout": {
+          "top": 75.25740209334491,
+          "left": 73.59715857688343,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Heated Seat [If Equipped]"
+      },
+      {
+        "id": "F49",
+        "layout": {
+          "top": 82.33787837090263,
+          "left": 56.3044286407923,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Center High Mounted Stop Light (CHMSL)/ Brake Switch",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "F50",
+        "layout": {
+          "top": 82.33787837090263,
+          "left": 61.80666089318493,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 0,
+          "notUsed": true
+        },
+        "description": "- Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "F51",
+        "layout": {
+          "top": 82.33787837090263,
+          "left": 67.70190973503418,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Trailer Tow",
+        "relatedEntities": [
+          "REMOLQUE"
+        ],
+        "extendedDescription": "Trailer"
+      },
+      {
+        "id": "F52a",
+        "layout": {
+          "top": 82.33787837090263,
+          "left": 73.59715857688343,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Power Outlet #2 (BATT/ACC: SELECT)"
+      },
+      {
+        "id": "F52b",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 84.31495408083805,
+          "left": 73.59715857688343,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F53",
+        "layout": {
+          "top": 76.70980748361316,
+          "left": 85.09848834571368,
+          "width": 10.299699962376645,
+          "height": 2.5417094329694367
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Power Outlet #3 (BATT)",
+        "relatedEntities": [
+          "TOMA_12V",
+          "BATERIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F54",
+        "layout": {
+          "top": 79.43306759036611,
+          "left": 85.09848834571368,
+          "width": 10.299699962376645,
+          "height": 2.360158759185906
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Occupant Classification Module (OCM)"
+      },
+      {
+        "id": "F55",
+        "layout": {
+          "top": 82.15632769711908,
+          "left": 85.09848834571368,
+          "width": 10.299699962376645,
+          "height": 2.360158759185906
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Power Outlet #1 (ACC), Rain Sensor",
+        "relatedEntities": [
+          "TOMA_12V",
+          "GENERIC_FUSE_NAME",
+          "SENSOR_DE_LLUVIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F56",
+        "layout": {
+          "top": 84.87958780387206,
+          "left": 85.09848834571368,
+          "width": 10.299699962376645,
+          "height": 2.360158759185906
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Inverter",
+        "relatedEntities": [
+          "INVERTER"
+        ],
+        "extendedDescription": "Power outlet (DC/AC inverter)"
+      },
+      {
+        "id": "F57",
+        "layout": {
+          "top": 90.18934012737012,
+          "left": 48.90765637037222,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Cabin Compartment Node Interior Light (CCN INT LIGHT), Switch Bank (SW BANK), Steering Control Module (SCM), Switch Steering Wheel"
+      },
+      {
+        "id": "F58",
+        "layout": {
+          "top": 90.18934012737012,
+          "left": 54.80290521222146,
+          "width": 4.348073653833197,
+          "height": 4.708029490372202
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Switch (IGN SW), Window Module (WIN MOD), PEM, Steering Column Lock",
+        "relatedEntities": [
+          "BLOQUEO_COLUMAN_DIRECCION"
+        ]
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 69.21780791821477,
+          "left": 1.4657551085103562,
+          "width": 12.29212559964547,
+          "height": 5.879941137021717
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 43.66855267048284,
+          "left": 4.086300075972047,
+          "width": 23.398124611001997,
+          "height": 11.597096177508334
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "RUN RELAY"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 56.586322895373925,
+          "left": 4.086300075972047,
+          "width": 23.398124611001997,
+          "height": 11.597096177508334
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "RUN / ACCESSORY RELAY",
+        "relatedEntities": [
+          "RELAY(protects=ACCESORIO)"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 48.52418635565396,
+          "left": 29.91029840737702,
+          "width": 24.5636004654491,
+          "height": 12.6416149430518
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "RUN / START RELAY"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 2.7729326544679127,
+          "left": 19.369598122659553,
+          "width": 23.398124611001997,
+          "height": 11.597096177508334
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "PCM RELAY",
+        "relatedEntities": [
+          "RELAY(protects=PCM)"
+        ],
+        "extendedDescription": "Engine control unit"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 14.755277124180973,
+          "left": 19.369598122659553,
+          "width": 23.398124611001997,
+          "height": 11.597096177508334
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "STARTER RELAY",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/starter-relay",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 26.919172267677574,
+          "left": 19.369598122659553,
+          "width": 23.398124611001997,
+          "height": 11.597096177508334
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "REAR WINDOW DEFOGGER RELAY",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 2.7729326544679127,
+          "left": 47.21693505797418,
+          "width": 23.398124611001997,
+          "height": 11.597096177508334
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "RADIATOR FAN LOW SPEED RELAY",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA))"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 65.79510152631772,
+          "left": 83.4811033983919,
+          "width": 14.886371194390172,
+          "height": 10.371989566889575
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "REAR BLOWER MOTOR RELAY",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA)))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 15.459814289031556,
+          "left": 73.91986088635814,
+          "width": 21.7528378359746,
+          "height": 7.058810747274181
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "FUEL PUMP RELAY",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/chrysler/town-and-country/info/fusebox/2009/fuel-pump-relay",
+            "urlWithAnchor": "/chrysler/town-and-country/info/fusebox/2009/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 29.779684172174612,
+          "left": 74.33484134723658,
+          "width": 24.887077454913456,
+          "height": 11.370276318830898
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "AUTO SHUT DOWN RELAY"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 4.588923300039413,
+          "left": 80.79535433223312,
+          "width": 9.91822959339974,
+          "height": 7.988229646475374
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "gray"
+        },
+        "description": "SPARE RELAY",
+        "relatedEntities": [
+          "RELAY(protects=FUSIBLE_DE_REPUESTO)"
+        ],
+        "extendedDescription": "Spare fuse"
+      }
+    ],
+    "boxName": "Totally Integrated Power Module (TIPM)",
+    "boxDescription": "The Totally Integrated Power Module (TIPM) is located in the engine compartment near the battery. ",
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-d8aae06be5.jpg",
+        "source": "61238609a5d9fa00047225d0"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-6d0d833c2c.jpg",
+        "source": "61238611a5d9fa00047225d1"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-c496bf08a6.jpg",
+        "source": "61238616a5d9fa00047225d2"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-846cbf7280.jpg",
+        "source": "6123861da5d9fa00047225d3"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-85ed0d8e30.jpg",
+        "source": "61238620a5d9fa00047225d4"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-c0956fc650.jpg",
+        "source": "61238628a5d9fa00047225d5"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-c0ecb89fa7.jpg",
+        "source": "6123862ba5d9fa00047225d6"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-bca9550c4c.jpg",
+        "source": "61238634a5d9fa00047225d7"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-8653d2c76b.jpg",
+        "source": "61238638a5d9fa00047225d8"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-0e9201057b.jpg",
+        "source": "6123863fa5d9fa00047225d9"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-fd7d17d44f.jpg",
+        "source": "61238642a5d9fa00047225da"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-cee4c7b030.jpg",
+        "source": "6123864aa5d9fa00047225db"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-26cb2abe6c.jpg",
+        "source": "6123864ea5d9fa00047225dc"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-4587e9daa2.jpg",
+        "source": "61238656a5d9fa00047225dd"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60ff3e99abf9ed0004c50ba9/fragment-60ff3e99abf9ed0004c50ba9-7dcbbf2d91.jpg",
+        "source": "61238659a5d9fa00047225de"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 2.0353982300884956,
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/6d8b00c6_Captura de Pantalla 2021-10-12 a la(s) 21.38.36.png"
+    },
+    "templateId": "61673a88271ef50004848a64",
+    "imageClusters": [
+      "63125b6da237e93b2509d5be"
+    ],
+    "templateRenameMap": {
+      "J1": "F12",
+      "J2": "F10",
+      "J3": "F14",
+      "J4": "F19",
+      "J5": "F20",
+      "J6": "F8",
+      "J7": "F6",
+      "J8": "F18",
+      "J9": "F3",
+      "J10": "F7",
+      "J11": "F16",
+      "J13": "F15",
+      "J14": "F9",
+      "J15": "F13",
+      "J17": "F2",
+      "J18": "F1",
+      "J19": "F11",
+      "J20": "F5",
+      "J21": "F4",
+      "J22": "F17",
+      "M1": "F49",
+      "M2": "F50",
+      "M3": "F21",
+      "M4": "F51",
+      "M5": "F56",
+      "M6": "F55",
+      "M7": "F52a",
+      "M8": "F46",
+      "M9": "F48",
+      "M10": "F37",
+      "M11": "F39",
+      "M12": "F38",
+      "M13": "F42",
+      "M14": "F47",
+      "M15": "F22",
+      "M16": "F41",
+      "M17": "F33",
+      "M18": "F31",
+      "M19": "F25",
+      "M20": "F57",
+      "M21": "F26",
+      "M22": "F28",
+      "M23": "F32",
+      "M24": "F43",
+      "M25": "F44",
+      "M26": "F30",
+      "M27": "F58",
+      "M28": "F29",
+      "M29": "F54",
+      "M30": "F35",
+      "M31": "F27",
+      "M32": "F40",
+      "M33": "F23",
+      "M34": "F45",
+      "M35": "F34",
+      "M36": "F53",
+      "M37": "F36",
+      "M38": "F24",
+      "PCM RELAY": "R4",
+      "RADIATOR FAN LOW SPEED RELAY": "R7",
+      "SPARE RELAY": "R11",
+      "FUEL PUMP RELAY": "R9",
+      "STARTER RELAY": "R5",
+      "REAR WINDOW DEFOGGER RELAY": "R6",
+      "AUTO SHUT DOWN RELAY": "R10",
+      "RUN RELAY": "R1",
+      "RUN / START RELAY": "R3",
+      "RUN / ACCESSORY RELAY": "R2",
+      "REAR BLOWER MOTOR RELAY": "R8"
+    },
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chrysler-town-and-country-2009-genid-g5-0.webp"
+  }
+]

@@ -1,0 +1,1772 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "SA1",
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "format": ""
+        },
+        "layout": {
+          "top": 48.99777387306446,
+          "left": 57.48217299989938,
+          "width": 18.021292156683124,
+          "height": 3.0236220472440962
+        }
+      },
+      {
+        "id": "SA2",
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "format": ""
+        },
+        "layout": {
+          "top": 42.72375812503296,
+          "left": 57.48217299989938,
+          "width": 18.021292156683124,
+          "height": 3.0236220472440962
+        }
+      },
+      {
+        "id": "SA3",
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "format": ""
+        },
+        "layout": {
+          "top": 36.44974237700147,
+          "left": 57.48217299989938,
+          "width": 18.021292156683124,
+          "height": 3.0236220472440962
+        }
+      },
+      {
+        "id": "SA4",
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "format": ""
+        },
+        "layout": {
+          "top": 30.17572662896997,
+          "left": 57.48217299989938,
+          "width": 18.021292156683124,
+          "height": 3.0236220472440962
+        }
+      },
+      {
+        "id": "SA5",
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "format": ""
+        },
+        "layout": {
+          "top": 23.901710880938474,
+          "left": 57.48217299989938,
+          "width": 18.021292156683124,
+          "height": 3.0236220472440962
+        }
+      },
+      {
+        "id": "SA6",
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "format": ""
+        },
+        "layout": {
+          "top": 17.627695132907064,
+          "left": 57.48217299989938,
+          "width": 18.021292156683124,
+          "height": 3.0236220472440962
+        }
+      },
+      {
+        "id": "SB1",
+        "layout": {
+          "top": 53.009712710357654,
+          "left": 43.41531670919191,
+          "width": 2.402838954224414,
+          "height": 6.5511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "SB2",
+        "layout": {
+          "top": 53.009712710357654,
+          "left": 38.54956782688747,
+          "width": 2.402838954224414,
+          "height": 6.5511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Fuel pump relay [only cars with diesel engine] / Fuel lift pump [only cars with diesel engine]",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/fuel-pump-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "SB3",
+        "layout": {
+          "top": 53.009712710357654,
+          "left": 33.683818944583024,
+          "width": 2.402838954224414,
+          "height": 6.5511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "SB4",
+        "layout": {
+          "top": 53.009712710357654,
+          "left": 28.818070062278586,
+          "width": 2.402838954224414,
+          "height": 6.5511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Battery monitoring control unit [only vehicles with start-stop system (7L6)] / On-board power supply control unit , reference voltage"
+      },
+      {
+        "id": "SB5",
+        "layout": {
+          "top": 53.009712710357654,
+          "left": 23.952321179974142,
+          "width": 2.402838954224414,
+          "height": 6.5511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used [until April 2011]",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "SB5",
+        "layout": {
+          "top": 53.009712710357654,
+          "left": 23.952321179974142,
+          "width": 2.402838954224414,
+          "height": 6.5511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Rear window heating relay [since May 2011] [only vehicles equipped with a hard removable roof] / Heating element for rear window of hard top [since May 2011] [only vehicles equipped with a hard removable roof]"
+      },
+      {
+        "id": "SB6",
+        "layout": {
+          "top": 53.009712710357654,
+          "left": 19.086572297669697,
+          "width": 2.402838954224414,
+          "height": 6.5511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/febe5824_volkswagen-amarok-2011.jpg"
+    },
+    "processed": false,
+    "boxName": "Fuse box A -SA-",
+    "templateId": "6740e39e3b65d07db2775e63",
+    "boxAspectRatio": 1.192,
+    "templateRenameMap": {
+      "1": "SB1",
+      "2": "SB2",
+      "3": "SB3",
+      "4": "SB4",
+      "5": "SB5",
+      "6": "SB6"
+    },
+    "imageClusters": [
+      "6610468fb450b659e4a2a62e"
+    ],
+    "boxDescription": "Fuse box A -SA- (as of November 2009)",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-amarok-2010-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 9.523809523809524,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS control unit / ASR and ESP deactivation button / Driving program button",
+        "relatedEntities": [
+          "CONTROL_DE_TRACCION"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 17.9421768707483,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Heating resistor for left washer nozzle / Heating resistor for right washer nozzle / Steering column switch unit / Windscreen wiper switch / Intermittent windscreen wiper switch / Windscreen washer pump and headlamp cleaning system switch",
+        "relatedEntities": [
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 26.36054421768707,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "On-board power supply control unit [only cars with automatic transmission] [only vehicles without start-stop system (7L3)] / Right reversing light bulb (RFL) [only cars with automatic transmission] [only vehicles without start-stop system (7L3)] / Left reversing light bulb (RFL) [only cars with automatic transmission] [only vehicles without start-stop system (7L3)] / Interface for external use [only cars with automatic transmission] [only vehicles without start-stop system (7L3)]"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 34.77891156462585,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "On-board power supply control unit / Direction indicator (cl [49]. / Brake light (cl [54]."
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 43.197278911564624,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Air flow meter"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 51.61564625850339,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 60.03401360544217,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Interface for external use"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 68.45238095238095,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Ignition and starter switch [since May 2011]",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/starter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 76.87074829931973,
+          "left": 11.806256306760847,
+          "width": 5.449041372351161,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Airbag control unit / Front passenger airbag off indicator lamp"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 9.523809523809524,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 17.9421768707483,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Differential lock control unit"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 26.36054421768707,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuel pressure regulator / Fuel metering valve / Turbocharger bypass valve / Boost pressure control solenoid valve / Activated carbon filter solenoid valve 1 Intake / manifold camshaft adjuster valve 1 / Intake manifold flap valve"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 34.77891156462585,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Exhaust gas flap valve / Exhaust gas recirculation cooler changeover valve / Boost pressure limitation solenoid valve"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 43.197278911564624,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Continued coolant circulation pump / Fuel pressure regulator"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 51.61564625850339,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Terminal 30 power supply relay / Circulation pump"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 60.03401360544217,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Voltage stabilizer [only vehicles with start-stop system (7L6)] / Data bus diagnostic interface [only vehicles with start-stop system (7L6)]"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 68.45238095238095,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 76.87074829931973,
+          "left": 19.677093844601412,
+          "width": 5.437829353066487,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Windscreen washer pump",
+        "relatedEntities": [
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 9.523809523809524,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "On-board power supply control unit / Heating element for outside mirror on driver's side / Heating element for exterior mirror, front passenger side"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 17.9421768707483,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "On-board power supply control unit / Internal nutrition"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 26.36054421768707,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "On-board power supply control unit / Interior Monitoring System Switch (30G) / Front interior light (30G) / Central interior light (30G) / Front side light, left (58L) / Front side light, right (58R)",
+        "relatedEntities": [
+          "LUCES_LATERALES(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 34.77891156462585,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Vehicle tracking system control unit [only vehicles with vehicle position monitoring system control unit -J895-]"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 43.197278911564624,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 51.61564625850339,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Alarm siren"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 60.03401360544217,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Heating resistor for engine crankcase ventilation system"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 68.45238095238095,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Daytime running light bulb right [only vehicles with 17-pin connector -T17- on light switch -E1- (exterior lights 7L3/8K0/8K1)]"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 76.87074829931973,
+          "left": 27.648839556004035,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Daytime running light bulb left [only vehicles with 17-pin connector -T17- on light switch -E1- (exterior lights 7L3/8K0/8K1)]"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 9.523809523809524,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "On-board power supply control unit [only cars with automatic transmission] [only vehicles with start-stop system (7L6)] / Left fog light bulb (NL) [only cars with automatic transmission] [only vehicles with start-stop system (7L6)] / Right fog light bulb (NL) [only cars with automatic transmission] [only vehicles with start-stop system (7L6)] / Right reversing light bulb (RFL) [only cars with automatic transmission] [only vehicles with start-stop system (7L6)] / Left reversing light bulb (RFL) [only cars with automatic transmission] [only vehicles with start-stop system (7L6)] / Interface for external use [only cars with automatic transmission] [only vehicles with start-stop system (7L6)]"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 17.9421768707483,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Light switch [only vehicles with 10-pin connector -T10j- on light switch -E1- (exterior lights 7L3/8K3/8K8 or 7L6/8K0/8K1/8K3/8K8)] [only vehicles with start-stop system (7L6)]",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 26.36054421768707,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Starter relay 1 [only vehicles with start-stop system (7L6)] / Starter relay 2 [only vehicles with start-stop system (7L6)]",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/starter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 34.77891156462585,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Automatic transmission control unit [only cars with automatic transmission] / Selector lever sensors control unit [only cars with automatic transmission] /"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 43.197278911564624,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right high beam headlight bulb"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 51.61564625850339,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Exterior mirror position adjuster"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 60.03401360544217,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 68.45238095238095,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Lambda probe heating element / Lambda probe heating element 1 after catalytic converter"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 76.87074829931973,
+          "left": 35.51967709384461,
+          "width": 5.247225025227043,
+          "height": 4.812295288485765
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Fuel pump relay / Terminal 30 power supply relay / Clutch pedal switch / Radiator fan control unit / Glow plug control unit",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/fuel-pump-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 7.2562358276643995,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Ignition coil 1 with output stage / Ignition coil 2 with output stage / Ignition coil 3 with output stage / Ignition coil 4 with output stage"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 15.192743764172336,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Socket 12V",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 23.12925170068027,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 31.065759637188208,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 39.002267573696145,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 46.93877551020408,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Brake light switch / High pressure sender / Air quality sensor / Oil level and temperature sender / Differential lock control unit / Control unit in dash panel insert [only vehicles without vehicle position monitoring system control unit -J895-] / Parking aid control unit [only cars with automatic transmission] [only vehicles with start-stop system (7L6)] / Transfer case control unit / Vehicle position monitoring system control unit [only vehicles with vehicle position monitoring system control unit -J895-] / Normal mode indicator lamp on transfer case control panel / Downshift indicator lamp on transfer case control panel / Center differential lock indicator lamp on transfer case control panel / High-mounted brake light / Fuse 16 on fuse panel C [only vehicles with start-stop system (7L6)] / Diagnostic connector / Steering column switch unit / Steering wheel angle sensor / Cruise control switch / Cruise control SET button",
+        "relatedEntities": [
+          "CONECTOR_OBD",
+          "INTERRUPTOR(of=CRUISE_CONTROL)"
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 54.87528344671202,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "On-board power supply control unit / Windscreen wiper motor control unit / Windscreen wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 62.811791383219955,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit / Rear window heating element"
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 70.74829931972789,
+          "left": 43.390514631685164,
+          "width": 8.924767350599843,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Diagnostic socket / Control unit in instrument cluster / Anti-theft alarm sensor / Air conditioning control unit / Climatronic control unit / Heater and operating mode selector switch / Steering column switch unit / Spiral cable / Multifunction steering wheel control unit",
+        "relatedEntities": [
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "CLOCK_SPRING"
+        ]
+      },
+      {
+        "id": "46",
+        "layout": {
+          "top": 7.2562358276644,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Transfer case control unit"
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 15.189594356261026,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "On-board power supply control unit / High tone signal / Low tone signal"
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 23.12295288485765,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Driver's door control unit"
+      },
+      {
+        "id": "49",
+        "layout": {
+          "top": 31.056311413454274,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Front passenger door control unit"
+      },
+      {
+        "id": "50",
+        "layout": {
+          "top": 38.989669942050895,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Rear left door control unit"
+      },
+      {
+        "id": "51",
+        "layout": {
+          "top": 46.92302847064752,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Rear right door control unit"
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 54.85638699924415,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Socket",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 62.789745527840765,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "On-board power supply control unit [only vehicles with 10-pin connector -T10j- on light switch -E1- (exterior lights 7L3/8K3/8K8 or 7L6/8K0/8K1/8K3/8K8)]"
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 70.72310405643739,
+          "left": 54.9949545913219,
+          "width": 8.879919273461153,
+          "height": 6.147644242882338
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 7.2562358276643995,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 6.349206349206349
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "On-board power supply control unit [only vehicles with 10-pin connector -T10j- on light switch -E1- (exterior lights 7L3/8K3/8K8 or 7L6/8K0/8K1/8K3/8K8)] / Daytime running light bulb right [only vehicles with 10-pin connector -T10j- on light switch -E1- (exterior lights 7L3/8K3/8K8 or 7L6/8K0/8K1/8K3/8K8)] / Right low beam headlight bulb [only vehicles with 10-pin connector -T10j- on light switch -E1- (exterior lights 7L3/8K3/8K8 or 7L6/8K0/8K1/8K3/8K8)] / Interface for external use [only vehicles with 10-pin connector -T10j- on light switch -E1- (exterior lights 7L3/8K3/8K8 or 7L6/8K0/8K1/8K3/8K8)]"
+      },
+      {
+        "id": "56",
+        "layout": {
+          "top": 15.391156462585034,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 5.895691609977324
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Fuel pump control unit"
+      },
+      {
+        "id": "57",
+        "layout": {
+          "top": 23.07256235827664,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 6.349206349206349
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Left seat heating button / Right seat heating button / Seat heating control unit"
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 31.207482993197274,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 5.895691609977324
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Automatic gearbox control unit [only cars with automatic transmission] / Selector lever sensors control unit [only cars with automatic transmission] / Ignition key removal lock solenoid [only cars with automatic transmission]"
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 38.888888888888886,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 6.349206349206349
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Socket 2 12V"
+      },
+      {
+        "id": "60",
+        "layout": {
+          "top": 47.13718820861678,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 5.6689342403628125
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Trailer recognition control unit [only vehicles with towing hitch - back to list → Chapter]"
+      },
+      {
+        "id": "61",
+        "layout": {
+          "top": 54.59183673469388,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 6.575963718820861
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Trailer recognition control unit [only vehicles with towing hitch - back to list → Chapter]"
+      },
+      {
+        "id": "62",
+        "layout": {
+          "top": 62.84013605442177,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 5.895691609977324
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Additional water heater control unit / Coolant pump relay / Additional water heater relay / Circulation pump",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_REFRIGERANTE)"
+        ]
+      },
+      {
+        "id": "63",
+        "layout": {
+          "top": 70.52154195011337,
+          "left": 66.70030272452068,
+          "width": 8.879919273461152,
+          "height": 6.349206349206349
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Load platform lighting lamp"
+      },
+      {
+        "id": "64",
+        "layout": {
+          "top": 7.2562358276643995,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Heater and operating mode selector switch / Climatronic control unit / Air conditioning control unit",
+        "relatedEntities": [
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "65",
+        "layout": {
+          "top": 15.164399092970521,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "66",
+        "layout": {
+          "top": 23.07256235827664,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit / Actuator for central locking of fuel filler flap / Driver's door central lock drive / Front passenger door central locking drive / Central locking drive rear left door / Central locking drive rear right door"
+      },
+      {
+        "id": "67",
+        "layout": {
+          "top": 30.980725623582764,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Head unit [only vehicles without start-stop system (7L3)] / Control unit with display for audio system with navigation [only vehicles without start-stop system (7L3)] / Voltage stabilizer [only vehicles with start-stop system (7L6)] / Data bus diagnostic interface [only vehicles with start-stop system (7L6)]",
+        "relatedEntities": [
+          "MODULO(of=LUCES_DELANTERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "68",
+        "layout": {
+          "top": 38.888888888888886,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Telephone control panel control unit"
+      },
+      {
+        "id": "69",
+        "layout": {
+          "top": 46.79705215419501,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Interface for external use"
+      },
+      {
+        "id": "70",
+        "layout": {
+          "top": 54.70521541950113,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Interface for external use"
+      },
+      {
+        "id": "71",
+        "layout": {
+          "top": 62.61337868480725,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Interface for external use"
+      },
+      {
+        "id": "72",
+        "layout": {
+          "top": 70.52154195011337,
+          "left": 78.30474268415742,
+          "width": 8.879919273461153,
+          "height": 6.122448979591836
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Interface for external use"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/fa42bb95_Captura de pantalla 2024-10-21 144918.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.4450050454086781,
+    "boxName": "Fuse holder C – Instrument Panel Fuse Block",
+    "imageClusters": [
+      "649b1ab03d72c58318e86853"
+    ],
+    "boxTablesImages": [],
+    "templateId": "6411c56c58caca1621e8d3e0",
+    "boxDescription": "Fuse holder C – Instrument Panel Fuse Block (72 slots) (Since November 2009)",
+    "boxScaleMultiplier": "",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-amarok-2010-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 86.02225820109433,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Additional liquid heater relay"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 71.85041290418606,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay 1 power supply"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 58.325822740251624,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuel pump relay"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 58.325822740251624,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Power supply relay cl. 30"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 44.801232576317204,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Starter relay [Only for vehicles without start-stop system]"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 31.464840277159368,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.369714247003529
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 17.94025011322494,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.369714247003529
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not used"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 4.415659949290516,
+          "left": 39.84575835475578,
+          "width": 13.881748071979436,
+          "height": 11.369714247003529
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Starter relay [Only for vehicles with start-stop system]"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 86.02225820109433,
+          "left": 59.12596401028277,
+          "width": 14.138817480719796,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Coolant pump relay"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 71.85041290418606,
+          "left": 59.12596401028277,
+          "width": 14.138817480719796,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Relay 2 power supply"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 58.325822740251624,
+          "left": 59.12596401028277,
+          "width": 14.138817480719796,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Power supply relay cl. 15"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 44.801232576317204,
+          "left": 59.12596401028277,
+          "width": 14.138817480719796,
+          "height": 11.536915927106524
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Main relay (Valid since July 2010)"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 31.464840277159368,
+          "left": 59.12596401028277,
+          "width": 14.138817480719796,
+          "height": 11.369714247003529
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Starter relay 2 [Only for vehicles with start-stop system]"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 17.94025011322494,
+          "left": 59.12596401028277,
+          "width": 14.138817480719796,
+          "height": 11.369714247003529
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Starter relay 1 [Only for vehicles with start-stop system]"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 4.415659949290516,
+          "left": 59.12596401028277,
+          "width": 14.138817480719796,
+          "height": 11.369714247003529
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Headlight relay [Only for vehicles with start-stop system]"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 87.73103228861288,
+          "left": 77.2051779116973,
+          "width": 14.091758326660765,
+          "height": 10.655737704918032
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Power supply relay"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 76.89156526365933,
+          "left": 77.16930669586908,
+          "width": 14.323160778818552,
+          "height": 7.00798954123013
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Unload relay class 58b"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 4.774590163934426,
+          "left": 78.60545113574108,
+          "width": 14.265016786772874,
+          "height": 10.860655737704917
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "description": "Main relay (Valid until July 2010)"
+      }
+    ],
+    "boxName": "Relay box under the front panel on the left (LHD)",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/2c08a7b5_image.jpg"
+    },
+    "templateId": "6411cac058caca1621e8d402",
+    "boxAspectRatio": 1.2544987146529563,
+    "templateRenameMap": {
+      "3a": "3",
+      "3b": "3"
+    },
+    "boxDescription": "Relay box under the front panel on the left (left-hand drive vehicles) (before May 2012)",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-amarok-2010-genid-g1-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "layout": {
+          "top": 35.75343897433111,
+          "left": 36.02568183447705,
+          "width": 25.67287210052664,
+          "height": 25.024830839903167
+        },
+        "description": "Fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2010/cooling-fan-relay",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2010/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 1.1922290388548058,
+    "boxName": "Relay box for engine dust protection kit, on power steering expansion tank",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/07038fd6_volkswagen-amarok-2011.jpg"
+    },
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-amarok-2010-genid-g1-3.webp"
+  }
+]

@@ -1,0 +1,1719 @@
+[
+  {
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/99f22982_hyundai-santa fe.jpg"
+      }
+    ],
+    "boxName": "Engine Compartment",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/5ed7bca7_hyundai-santa fe.png"
+    },
+    "boxAspectRatio": 1.2141119221411192,
+    "processed": false,
+    "fuses": [
+      {
+        "layout": {
+          "top": 31.715389583215615,
+          "left": 51.82872659702982,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "id": "Diodo 1",
+        "kind": {
+          "amp": 10,
+          "format": "mini",
+          "type": "diode",
+          "notUsed": false
+        },
+        "description": "AIR CON DIODE"
+      },
+      {
+        "id": "Diodo 2",
+        "layout": {
+          "top": 39.24711117620852,
+          "left": 51.82872659702982,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true,
+          "amp": ""
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F01",
+        "layout": {
+          "top": 9.120224804236909,
+          "left": 12.442857142857124,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ],
+        "description": "Fog lamp relay",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F02",
+        "layout": {
+          "top": 16.65194639722981,
+          "left": 12.442857142857124,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "LAMPARA(of=LUCES_DELANTERAS(ubicacion=LADO_DERECHO))",
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "description": "Right head lamp",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F03",
+        "layout": {
+          "top": 24.183667990222713,
+          "left": 12.442857142857124,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "LAMPARA(of=LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO))",
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)",
+          "TABLERO",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "description": "Left head lamp, Instrument cluster, DRL control module",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F04",
+        "layout": {
+          "top": 31.715389583215615,
+          "left": 12.442857142857124,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ],
+        "description": "Ignition failure sensor, Oxygen sensor",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        }
+      },
+      {
+        "id": "F05",
+        "layout": {
+          "top": 39.24711117620852,
+          "left": 12.442857142857124,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "ECU",
+          "PCM"
+        ],
+        "description": "Check engine ind, ECM, PCM",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "F06",
+        "layout": {
+          "top": 9.120224804236909,
+          "left": 24.974998549629685,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "description": "Horn relay",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 16.65194639722981,
+          "left": 24.974998549629685,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ],
+        "description": "ATM contor relay, 4WD control module",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        }
+      },
+      {
+        "id": "F08",
+        "layout": {
+          "top": 24.183667990222713,
+          "left": 24.974998549629685,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "ALTERNADOR",
+          "PCM"
+        ],
+        "description": "Fuel pump relay, ECM TCM, Generator, PCM",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/alternator-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F09",
+        "layout": {
+          "top": 31.715389583215615,
+          "left": 24.974998549629685,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "INYECTOR"
+        ],
+        "description": "Injector",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        }
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 39.24711117620852,
+          "left": 24.974998549629685,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "description": "A/C relay",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 6.978741838305035,
+          "left": 36.874509803921576,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ],
+        "description": "Engine control relay",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 40
+        }
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 16.62672097780959,
+          "left": 36.874509803921576,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ],
+        "description": "Power window relay, Fuse 26",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 26.27470011731415,
+          "left": 36.874509803921576,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "description": "Radiator fan relay",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 40
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 35.92267925681872,
+          "left": 37.01456582633054,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DEL_CONDENSADOR)"
+        ],
+        "description": "Condenser fan relay",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 20
+        }
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 13.742138380336952,
+          "left": 55.47959143408871,
+          "width": 29.88838373743057,
+          "height": 7.779772527231304
+        },
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "description": "Generator",
+        "kind": {
+          "format": "cartridge-j-pal-283",
+          "type": "fuse",
+          "amp": 140
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/alternator-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 25.96008130994707,
+          "left": 65.62773109243719,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "RELAY(protects=LUCES_TRASERAS)"
+        ],
+        "description": "Tail lamp relay, Fuse 11-17, Power connector",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 50
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/tail-light-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 35.73843854593143,
+          "left": 65.62773109243719,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ],
+        "description": "Start relay, Ignition switch",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 50
+        }
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 47.11259055813839,
+          "left": 70.40167858140624,
+          "width": 6.88375414521549,
+          "height": 2.5520769984816942
+        },
+        "relatedEntities": [
+          "PCM",
+          "ECU"
+        ],
+        "description": "PCM, ECM",
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 25.96008130994707,
+          "left": 80.63277310924377,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "description": "ABS control module, Air bleeding connector",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 25.96008130994707,
+          "left": 80.63277310924377,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": " ",
+          "notUsed": false
+        },
+        "description": "F/PUMP CHK"
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 35.73843854593143,
+          "left": 80.63277310924377,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "description": "ABS control module, Air bleeding connector",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 30
+        }
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 45.51679578191578,
+          "left": 80.63277310924377,
+          "width": 9.280547774665433,
+          "height": 6.532087498189204
+        },
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "description": "A/C Fuse, Blower relay",
+        "kind": {
+          "format": "cartridge-j",
+          "type": "fuse",
+          "amp": 40
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up",
+          "notUsed": true
+        },
+        "layout": {
+          "top": 22.744107293175304,
+          "left": 51.62380770069965,
+          "width": 7.678283492940444,
+          "height": 6.02996155531828
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 45.52581895619802,
+          "left": 8.84496467937074,
+          "width": 11.482253302055817,
+          "height": 14.090132881315753
+        },
+        "id": "R01",
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "FRT FOG"
+      },
+      {
+        "id": "R02",
+        "layout": {
+          "top": 45.52581895619802,
+          "left": 24.755365938483187,
+          "width": 11.482253302055817,
+          "height": 14.090132881315753
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": " ",
+          "notUsed": true
+        },
+        "description": "Unidentified"
+      },
+      {
+        "layout": {
+          "top": 45.52581895619802,
+          "left": 40.750080387391634,
+          "width": 11.313626922463815,
+          "height": 14.090132881315753
+        },
+        "id": "R03",
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "AIR CON"
+      },
+      {
+        "layout": {
+          "top": 45.52581895619802,
+          "left": 56.57616845670808,
+          "width": 11.482253302055817,
+          "height": 14.090132881315753
+        },
+        "id": "R04",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "FUEL PUMP",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/fuel-pump-relay",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 62.65691710835986,
+          "left": 8.84496467937074,
+          "width": 11.482253302055817,
+          "height": 14.090132881315753
+        },
+        "id": "R05",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "RAD FAN",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/cooling-fan-relay",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 62.65691710835986,
+          "left": 24.755365938483187,
+          "width": 11.482253302055817,
+          "height": 14.090132881315753
+        },
+        "id": "R06",
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "START"
+      },
+      {
+        "layout": {
+          "top": 62.65691710835986,
+          "left": 40.750080387391634,
+          "width": 11.313626922463815,
+          "height": 14.090132881315753
+        },
+        "id": "R07",
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "C/FAN #1"
+      },
+      {
+        "layout": {
+          "top": 62.65691710835986,
+          "left": 56.74479483630009,
+          "width": 11.313626922463815,
+          "height": 14.090132881315753
+        },
+        "id": "R08",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "HORN",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/horn-relay",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.7880152605217,
+          "left": 8.84496467937074,
+          "width": 11.482253302055817,
+          "height": 14.090132881315753
+        },
+        "id": "R09",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ],
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "variation": "cream",
+          "notUsed": false
+        },
+        "description": "WIPER"
+      },
+      {
+        "layout": {
+          "top": 79.7880152605217,
+          "left": 24.755365938483187,
+          "width": 11.482253302055817,
+          "height": 14.090132881315753
+        },
+        "id": "R10",
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "variation": "cream",
+          "notUsed": false
+        },
+        "description": "C/FAN #2"
+      },
+      {
+        "layout": {
+          "top": 79.7880152605217,
+          "left": 40.750080387391634,
+          "width": 11.313626922463815,
+          "height": 14.090132881315753
+        },
+        "id": "R11",
+        "kind": {
+          "amp": " ",
+          "format": "half",
+          "type": "relay",
+          "variation": "cream",
+          "notUsed": false
+        },
+        "description": "B/ALARM"
+      },
+      {
+        "layout": {
+          "top": 55.675441348910795,
+          "left": 72.6117903631835,
+          "width": 20.2553678746851,
+          "height": 16.63431978764319
+        },
+        "id": "R12",
+        "relatedEntities": [
+          "ECU"
+        ],
+        "kind": {
+          "amp": 10,
+          "format": "full",
+          "type": "relay",
+          "variation": "yellow",
+          "notUsed": false
+        },
+        "description": "ECU"
+      }
+    ],
+    "templateId": "6193d3c15871aa0004a19bcb",
+    "templateRenameMap": {
+      "ALT": "F15",
+      "B+": "F16",
+      "IGN": "F17",
+      "BLR": "F21",
+      "ABS1": "F20",
+      "ABS2": "F19",
+      "ECU": "F11",
+      "P/W": "F12",
+      "RAD FAN": "F13",
+      "C/FAN": "F14",
+      "FRT FOG": "F01",
+      "H/LP-LH": "F03",
+      "H/LP-RH": "F02",
+      "ECU#1": "F04",
+      "ECU#2": "F09",
+      "ECU#3": "F05",
+      "ECU-B+": "F08",
+      "ATM": "F07",
+      "HORN": "F06",
+      "AIR CON": "F10",
+      "SIG": "F18",
+      "ECU Relay": "R12",
+      "AIR CON Diode": "Diodo 1",
+      "U1": "Diodo 2",
+      "FRT FOG Relay": "R01",
+      "U2": "R02",
+      "AIR CON Relay": "R03",
+      "FUEL PUMP": "R04",
+      "RAD FAN Relay": "R05",
+      "START": "R06",
+      "C/FAN Relay": "R07",
+      "HORN Relay": "R08",
+      "WIPER": "R09",
+      "C/FAN#2": "R10",
+      "B/ALARM": "R11",
+      "F/PUMP CHK": "F19"
+    },
+    "imageClusters": [
+      "62a34c76619bb6ba1a333f1d"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-santa-fe-2005-genid-g1-0.webp"
+  },
+  {
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/6418f4da_hyundai-santa fe.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/8b74a599_hyundai-santa fe.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/33d69591_hyundai-santa fe.png"
+    },
+    "boxName": "Inner Panel",
+    "processed": false,
+    "boxAspectRatio": 0.5160550458715596,
+    "fuses": [
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 11.312605574853928,
+          "left": 3.8397712661943695,
+          "width": 22.301871764237358,
+          "height": 15.743753434299157
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-md"
+        },
+        "layout": {
+          "top": 11.312605574853928,
+          "left": 27.575334786704126,
+          "width": 13.381123058542414,
+          "height": 18.52206286388136
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 40.63920510933275,
+          "left": 4.158369434254904,
+          "width": 20.390282755874154,
+          "height": 19.44816600707542
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 40.947906157064104,
+          "left": 25.82304486237119,
+          "width": 8.92074870569494,
+          "height": 17.287258672955936
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 5",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 66.87879416649801,
+          "left": 3.9990703502246365,
+          "width": 15.292712066905613,
+          "height": 19.139464959344068
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 6",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 70.58320673927429,
+          "left": 20.566175089372386,
+          "width": 18.95659099960175,
+          "height": 14.50894924337372
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F01",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 44.777694118419,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 49.272296568234,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F02",
+        "description": "Rear wiper motor control",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 53.766899018049,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F03",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "description": "Seat warmer",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        }
+      },
+      {
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 58.261501467864,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F04",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "RELAY(protects=LAMPARA(of=LUCES_DELANTERAS))"
+        ],
+        "description": "Head lamp relay",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 62.756103917679,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F05",
+        "relatedEntities": [
+          "CRUISE_CONTROL"
+        ],
+        "description": "Cruise control",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 67.25070636749399,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F06",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ],
+        "description": "Digital clock, Rear power outlet",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        }
+      },
+      {
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 71.745308817309,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F07",
+        "relatedEntities": [
+          "ESTEREO",
+          "ESPEJO_ELECTRICO"
+        ],
+        "description": "Audio, Power outside mirror",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 13.957089384362028,
+          "left": 76.239911267124,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F08",
+        "description": "Cigarette lighter & Power outlet",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        }
+      },
+      {
+        "layout": {
+          "top": 29.164651152499665,
+          "left": 58.261501467864,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F09",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "description": "Digital clock, ETACM, Audio, Siren",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 29.164651152499665,
+          "left": 62.756103917679006,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F10",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "TESTIGO_APERTURA_DE_PUERTAS"
+        ],
+        "description": "Room lamp, Door warning switch, Door lamp, Manual A/C control, Homelink controller",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 29.164651152499665,
+          "left": 67.250706367494,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F11",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "description": "Not used",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 29.164651152499665,
+          "left": 71.74530881730901,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F12",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "description": "A/C control, Sunroof controller, Electrical chrome mirror",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 29.164651152499665,
+          "left": 76.23991126712401,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F13",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "ESPEJO_ELECTRICO"
+        ],
+        "description": "Rear window defogger, Power outside mirror",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 44.372212920637345,
+          "left": 58.261501467864,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F14",
+        "description": "Sunroof controller",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        }
+      },
+      {
+        "layout": {
+          "top": 44.372212920637345,
+          "left": 62.756103917679006,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F15",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ],
+        "description": "Power seat, Rear wiper motor control",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        }
+      },
+      {
+        "layout": {
+          "top": 44.372212920637345,
+          "left": 67.250706367494,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F16",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BALIZA)",
+          "LUZ_BALIZA"
+        ],
+        "description": "Hazard lamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 44.372212920637345,
+          "left": 71.74530881730901,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F17",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO",
+          "CONECTOR_OBD"
+        ],
+        "description": "Stop lamp, Data link connector, Multipurpose check connector",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/brake-light-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.372212920637345,
+          "left": 76.23991126712401,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F18",
+        "description": "AMP speakers",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        }
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 44.777694118419,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F19",
+        "relatedEntities": [
+          "LUZ_RETROCESO",
+          "MODULO_DE_TRANSMISION",
+          "SENSOR_DE_VELOCIDAD"
+        ],
+        "description": "Back-up lamps, TCM, Vehicle speed sensor, ETS control module, Ignition failure sensor",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 49.272296568234,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F20",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_DIRECCIONAL)",
+          "LUZ_DIRECCIONAL"
+        ],
+        "description": "Turn signal lamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 53.766899018049,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F21",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "DOBLE_TRACCION"
+        ],
+        "description": "ABS control module, G-Sensor, Air bledding connector, 4WD control module",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 58.261501467864,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F22",
+        "description": "Instrument cluster (Airbag IND)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 62.756103917679,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F23",
+        "relatedEntities": [
+          "ECU"
+        ],
+        "description": "ECM [V6 2.7L]",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 67.25070636749399,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F24",
+        "relatedEntities": [
+          "TESTIGO_SRS"
+        ],
+        "description": "SRS control module",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        }
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 71.745308817309,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F25",
+        "relatedEntities": [
+          "TABLERO",
+          "LUZ_TESTIGO(shapeOf=VEHICULO)",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)",
+          "ALTERNADOR"
+        ],
+        "description": "Instrument cluster, Pre-excitation resistor, ETACM, Auto light sensor, DRL control module, Generator",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/alternator-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.579774688774926,
+          "left": 76.239911267124,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F26",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR)"
+        ],
+        "description": "Defogger relay",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        }
+      },
+      {
+        "layout": {
+          "top": 74.78733645691257,
+          "left": 53.766899018049,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F27",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))",
+          "RELAY(protects=LIMPIA_PARABRISAS)"
+        ],
+        "description": "Front wiper motor, Wiper relay, Washer motor",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        }
+      },
+      {
+        "layout": {
+          "top": 74.78733645691257,
+          "left": 58.26150146786401,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F28",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)",
+          "RELAY(protects=VENTILADOR_DEL_CONDENSADOR)"
+        ],
+        "description": "Radiator fan relay, Condenser fan relay",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 74.78733645691257,
+          "left": 62.756103917679006,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F29",
+        "description": "ETS control module [V6 3.5L], Fail safety relay",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        }
+      },
+      {
+        "layout": {
+          "top": 74.78733645691257,
+          "left": 67.250706367494,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F30",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA))",
+          "RELAY(protects=LUZ_ANTINIEBLA)",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)"
+        ],
+        "description": "Tail & parking lamp (RH), Fog lamp relay, Switch illumination",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "individualFusePages": [
+          {
+            "url": "/hyundai/santa-fe/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/santa-fe/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 74.78733645691257,
+          "left": 71.74530881730901,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F31",
+        "description": "Tail & parking lamp (LH), Turn signal lamp License lamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "layout": {
+          "top": 74.78733645691257,
+          "left": 76.23991126712401,
+          "width": 2.379040767265716,
+          "height": 11.472428527520934
+        },
+        "id": "F32",
+        "relatedEntities": [
+          "RELAY(protects=PROP_OR(0=CIERRE_CENTRALIZADO,1=CIERRE_CENTRALIZADO))"
+        ],
+        "description": "Door lock/unlock relay, Key lock/unlock relay",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        }
+      },
+      {
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 93.42708427139462,
+          "left": 46.53192578630588,
+          "width": 5.734767025089605,
+          "height": 4.9392167637016975
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 93.42708427139462,
+          "left": 54.81547815587975,
+          "width": 5.734767025089605,
+          "height": 4.9392167637016975
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 93.42708427139462,
+          "left": 63.09903052545363,
+          "width": 5.734767025089605,
+          "height": 4.9392167637016975
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 93.42708427139462,
+          "left": 71.3825828950275,
+          "width": 5.734767025089605,
+          "height": 4.9392167637016975
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 73.97891826431919,
+          "left": 44.95753311406374,
+          "width": 5.971963361210669,
+          "height": 11.3567429569856,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R01",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "cyan"
+        },
+        "layout": {
+          "top": 12.547409765779353,
+          "left": 82.85211694520672,
+          "width": 14.974113898845076,
+          "height": 25.930888009433904
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R02",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "cyan"
+        },
+        "layout": {
+          "top": 62.86568054599038,
+          "left": 82.85211694520672,
+          "width": 14.974113898845076,
+          "height": 25.930888009433904
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/a72db717_hyundai-santa fe-2006.jpg"
+    },
+    "templateId": "6193d4d45871aa0004a19bcc",
+    "templateRenameMap": {
+      "1": "F08",
+      "2": "F07",
+      "3": "F06",
+      "4": "F05",
+      "5": "F04",
+      "6": "F03",
+      "7": "F02",
+      "8": "F13",
+      "9": "F12",
+      "10": "F11",
+      "11": "F10",
+      "12": "F09",
+      "13": "F18",
+      "14": "F17",
+      "15": "F16",
+      "16": "F15",
+      "17": "F14",
+      "18": "F26",
+      "19": "F25",
+      "20": "F24",
+      "21": "F23",
+      "22": "F22",
+      "23": "F21",
+      "24": "F20",
+      "25": "F19",
+      "26": "F32",
+      "27": "F31",
+      "28": "F30",
+      "29": "F29",
+      "30": "F28",
+      "31": "F27"
+    },
+    "imageClusters": [
+      "61e1d0a25132680004aa7b70"
+    ],
+    "boxScaleMultiplier": "1",
+    "boxRotation": 90,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-santa-fe-2005-genid-g1-1.webp"
+  }
+]

@@ -1,0 +1,847 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 69.72606076007352,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Alarm ECU, BBUS"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 64.7972271083712,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Windscreen wiper switch, windscreen wiper motor, windscreen wiper delay ECU",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 59.86839345666888,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Hazard warning switch, rear window wash/wipe switch, rear window wiper motor, instrument pack coolant temperature gauge, fuel gauge, blower relay, aircon unit",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 54.93955980496656,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "ABS ECU",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 50.01072615326423,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "ECU",
+        "relatedEntities": [
+          "ECU"
+        ],
+        "extendedDescription": "Engine control unit"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 45.08189250156191,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Brake pedal switch, reverse lamp switch, speed transducer, alternator/generator",
+        "relatedEntities": [
+          "SENSOR_FRENO",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/alternator-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 40.15305884985959,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Dim-Dip relay, headlamp relay, HRW relay, instrument pack",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 35.224225198157264,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Diagnostic socket"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 30.29539154645494,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Blower relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 19.595874746564622,
+          "left": 25.366557894752617,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Aircon compressor clutch relay, cooling fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/cooling-fan-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 69.72606076007352,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lighting switch, LH front side lamp, LH tail lamp, trailer pick-up",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)",
+          "LUCES_LATERALES(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "LUCES_TRASERAS(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 64.7972271083712,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lighting switch, RH front side lamp, RH tail lamp, cigar lighter, dim-dip relay, headlamp levelling switch,coolant temperature gauge sensor, fuel gauge, LH heater control illumination, RH heater control illumination, clock illumination, instrument pack, blower motor switch, RH headlamp levelling motor, LH headlamp levelling motor, aircon switch pack",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)",
+          "LUCES_LATERALES(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))",
+          "LUCES_TRASERAS(ubicacion=LADO_DERECHO)",
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/cigarette-lighter-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 59.86839345666888,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Cigar lighter, blower motor",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet; AC blower motor",
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/cigarette-lighter-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 54.93955980496656,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Radio/Cassette player"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 50.01072615326423,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Dim-Dip relay, RH headlamp",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 45.08189250156191,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Dim-Dip relay, LH headlamp",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 40.15305884985959,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "RH headlamp, instrument pack, column switch",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 35.224225198157264,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "LH headlamp, instrument pack, column switch",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 30.29539154645494,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Rear fog lamp ECU, column switch, headlamp relay, dim-dip relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_DELANTERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 41.304665345026784,
+          "left": 25.366557894752617,
+          "width": 3.143769049743412,
+          "height": 18.90557714525785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Alarm sounder relay, horn switch, LH horn, RH horn"
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 73.6016929681756,
+          "left": 6.737624440858188,
+          "width": 14.820625520218925,
+          "height": 22.930732065959525
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 73.6016929681756,
+          "left": 22.180579553824323,
+          "width": 14.820625520218925,
+          "height": 22.930732065959525
+        }
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 73.6016929681756,
+          "left": 37.62353466679053,
+          "width": 14.820625520218925,
+          "height": 22.930732065959525
+        }
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 73.6016929681756,
+          "left": 53.066489779756736,
+          "width": 14.820625520218925,
+          "height": 22.930732065959525
+        }
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 73.6016929681756,
+          "left": 68.50944489272321,
+          "width": 14.820625520218925,
+          "height": 22.930732065959525
+        }
+      }
+    ],
+    "boxName": "Passenger compartment fuse box",
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/68517df03cf17b4ce6a1105c/fragment-68517df03cf17b4ce6a1105c-beacffccac.jpg",
+        "source": "68517e3c3cf17b4ce6a11096"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7ceb554a_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b8076bb1_image.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/68aab284_land rover-defender-1999.jpg"
+    },
+    "processed": false,
+    "imageClusters": [
+      "67d4329a557cca351d4bf899"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/b1b0c686_land rover-defender-1999.jpg"
+    },
+    "templateId": "68518c7e3cf17b4ce6a11149",
+    "boxAspectRatio": 0.5701492537313433,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-land-rover-defender-1999-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 87.09311926605504,
+          "left": 84.240097799511,
+          "width": 15.136919315403421,
+          "height": 7.691743119266057
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Rear interior lamp, accessory socket, trailer pick-up",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO(ubicacion=PARTE_TRASERA)",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/cigarette-lighter-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 73.3316513761468,
+          "left": 84.240097799511,
+          "width": 15.136919315403421,
+          "height": 7.691743119266057
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "ABS ECU",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 59.57018348623853,
+          "left": 84.240097799511,
+          "width": 15.136919315403421,
+          "height": 7.691743119266057
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Column switch, HRW relay"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 45.80871559633028,
+          "left": 84.240097799511,
+          "width": 15.136919315403421,
+          "height": 7.691743119266057
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/fuel-pump-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 32.04724770642202,
+          "left": 84.240097799511,
+          "width": 15.136919315403421,
+          "height": 7.691743119266057
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Main relay, inertia switch",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 18.28577981651377,
+          "left": 84.240097799511,
+          "width": 15.136919315403421,
+          "height": 7.691743119266057
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Alarm ECU"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 4.524311926605504,
+          "left": 84.240097799511,
+          "width": 15.136919315403421,
+          "height": 7.691743119266057
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Radio/Cassette player, interior lamps, hazard warning switch, clock, speedometer",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "RELOJ",
+          "INDICADOR_DE_VELOCIDAD"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 10.442176417967435,
+          "left": 64.61600837194608,
+          "width": 9.4755154630863,
+          "height": 78.34836969511761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-295",
+          "amp": 30
+        },
+        "description": "Lighting switch, alarm relay, alarm LED",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 10.442176417967435,
+          "left": 52.43095510823345,
+          "width": 9.4755154630863,
+          "height": 78.34836969511761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-295",
+          "amp": 60
+        },
+        "description": "Ignition switch, starter relay, fuse 8 (P), BBUS, dir dip resistor",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO",
+          "RELAY(protects=BURRO_DE_ARRANQUE)",
+          "FUSIBLE",
+          "MARCHA_PARKING",
+          "TESTIGO_DIRECCION_ASISTIDA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/land-rover/defender/info/fusebox/1999/starter-fuse",
+            "urlWithAnchor": "/land-rover/defender/info/fusebox/1999/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 10.442176417967435,
+          "left": 40.245901844520816,
+          "width": 9.4755154630863,
+          "height": 78.34836969511761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-295",
+          "amp": 30
+        },
+        "description": "ABS return pump relay"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 10.442176417967435,
+          "left": 28.06084858080819,
+          "width": 9.4755154630863,
+          "height": 78.34836969511761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-295",
+          "amp": 60
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 10.442176417967435,
+          "left": 15.875795317095559,
+          "width": 9.4755154630863,
+          "height": 78.34836969511761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-295",
+          "amp": 60
+        },
+        "description": "Glow plug relay, fuse 9 (P), fuse 10 (P)",
+        "relatedEntities": [
+          "RELAY(protects=PRECALENTADOR)",
+          "FUSIBLE",
+          "MARCHA_PARKING",
+          "TESTIGO_DIRECCION_ASISTIDA"
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 10.442176417967435,
+          "left": 3.690742053382932,
+          "width": 9.4755154630863,
+          "height": 78.34836969511761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-295",
+          "amp": 100
+        },
+        "description": "Link 2. link 3, link 4, fuse 1 (E), fuse 2 (E), fuse 3 (E)"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/207d8c5e_land rover-defender-1999.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/68517df03cf17b4ce6a1105c/fragment-68517df03cf17b4ce6a1105c-3cff28aaf2.jpg",
+        "source": "68517e5b3cf17b4ce6a110a7"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1436be62_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6e7c21e2_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/097b7d3f_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/094b8dfa_image.jpg"
+      }
+    ],
+    "boxName": "Under seat fuse box",
+    "processed": false,
+    "boxAspectRatio": 0.5330073349633252,
+    "templateId": "6769f7cce854b18795d6b5a8",
+    "templateRenameMap": {
+      "1": "F1",
+      "2": "F2",
+      "3": "F3",
+      "4": "F4",
+      "5": "F5",
+      "6": "F6",
+      "7": "F7",
+      "8": "F13",
+      "9": "F12",
+      "10": "F11",
+      "11": "F10",
+      "12": "F9",
+      "13": "F8"
+    },
+    "boxRotation": 180,
+    "imageClusters": [
+      "6638efd6ccfb72521a39f7a7"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-land-rover-defender-1999-genid-g1-1.webp"
+  }
+]

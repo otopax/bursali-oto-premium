@@ -1,0 +1,1423 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 48.73050771533757,
+          "left": 12.384561136212977,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(ECU-IG) Cruise control system, power steering control system, shift lock system, anti-lock brake system. SRS airbag system, power door lock and theft deterrent system, power antenna, telephone, electronic cooling fan system",
+        "relatedEntities": [
+          "DESBLOQUEO_CAJA_AUT",
+          "SISTEMA_ABS",
+          "TESTIGO_SRS",
+          "AIRBAG",
+          "CIERRE_CENTRALIZADO",
+          "INMOVILIZADOR",
+          "ANTENA_ELECTRICA"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 48.73050771533757,
+          "left": 18.99428251103502,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(GAUGE) Gauges and meters warning lights and buzzers (except discharge and open door warning lights), back-up lights, electronically, controlled automatic transmission system, automatic transmission overdrive system, rear window and outside rear view mirror defogger",
+        "relatedEntities": [
+          "SENSOR",
+          "TESTIGO_APERTURA_DE_PUERTAS",
+          "LUZ_RETROCESO",
+          "LUNETA_TRASERA",
+          "VENTANILLA(ubicacion=PARTE_TRASERA)",
+          "DESEMPANADOR(of=ESPEJO(ubicacion=EXTERIOR))",
+          "DESEMPANADOR(of=ESPEJO_LATERAL)"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 48.73050771533757,
+          "left": 25.604003885857065,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "(STOP) Stop lights, cruise control system cancel device, shift lock system, anti-lock brake system",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TESTIGO_STOP",
+          "DESBLOQUEO_CAJA_AUT",
+          "SISTEMA_ABS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/brake-light-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 48.73050771533757,
+          "left": 32.21372526067911,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(SEAT HTR) Seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 59.81409622141102,
+          "left": 12.384561136212977,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(WIPER) Windshield wipers and washer, headlight cleaner",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 59.81409622141102,
+          "left": 18.99428251103502,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(TURN) Turn signal lights"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 59.81409622141102,
+          "left": 25.604003885857065,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(IGN) Multiport fuel injection system/sequential multiport fuel injection system, electronic cooling fan system, SRS airbag system",
+        "relatedEntities": [
+          "ARRANQUE",
+          "SISTEMA_DE_INYECCION",
+          "TESTIGO_SRS",
+          "AIRBAG"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/starter-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 59.81409622141102,
+          "left": 32.21372526067911,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(CIG/RADIO) Radio, cassette tape player, compact disc player, power antenna, power rear view mirrors, cigarette lighter, theft deterrent system, shift lock system, SRS airbag system, clock",
+        "relatedEntities": [
+          "TOMA_12V",
+          "ESTEREO",
+          "ANTENA_ELECTRICA",
+          "ESPEJO_ELECTRICO",
+          "INMOVILIZADOR",
+          "DESBLOQUEO_CAJA_AUT",
+          "TESTIGO_SRS",
+          "AIRBAG",
+          "RELOJ"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/radio-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 72.00379172858872,
+          "left": 12.384561136212977,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(MIR HTR) Outside rear view mirror defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "DESEMPANADOR"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 72.00379172858872,
+          "left": 18.99428251103502,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(TAIL) Tail lights, parking lights",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 72.00379172858872,
+          "left": 25.604003885857065,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(SRS) SRS airbag system, anti-lock brake system, daytime running light system",
+        "relatedEntities": [
+          "TESTIGO_SRS",
+          "AIRBAG",
+          "SISTEMA_ABS",
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/headlight-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 72.00379172858872,
+          "left": 32.21372526067911,
+          "width": 4.249106598099887,
+          "height": 9.033207175684824
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 31.637816764132555,
+          "left": 70.82857142857146,
+          "width": 7.303686635944703,
+          "height": 9.72124756335283
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(AM1) Ignition system",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/starter-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 40.01988304093567,
+          "left": 87.77011553071304,
+          "width": 7.303686635944703,
+          "height": 9.72124756335283
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(POWER) Electronic moon roof, power windows",
+        "relatedEntities": [
+          "MODO_POWER",
+          "TECHO_SOLAR",
+          "LEVANTAVIDRIOS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/sunroof-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 50.744639376218366,
+          "left": 87.98801843317972,
+          "width": 7.303686635944703,
+          "height": 9.72124756335283
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(DEFOG) Rear window and outside rear view mirror defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "LUNETA_TRASERA",
+          "VENTANILLA",
+          "DESEMPANADOR(of=ESPEJO(ubicacion=EXTERIOR))",
+          "DESEMPANADOR(of=ESPEJO_LATERAL)"
+        ]
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 33.23498430368403,
+          "left": 2.8272971886308174,
+          "width": 18.776201066740146,
+          "height": 11.126172565506911
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 34.50292397660819,
+          "left": 24.193548387096776,
+          "width": 20.737327188940093,
+          "height": 7.992202729044834
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 27.542616626342813,
+          "left": 81.91428402729551,
+          "width": 13.110725602606967,
+          "height": 9.46701206385052
+        }
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 86.70799220272914,
+          "left": 10.135156032536417,
+          "width": 28.026108985191048,
+          "height": 11.185175360310119
+        }
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 65.50646389875224,
+          "left": 89.52218860941092,
+          "width": 6.754989976466476,
+          "height": 5.530535005521301
+        }
+      },
+      {
+        "id": "U6",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 75.82846003898635,
+          "left": 87.32718894009217,
+          "width": 9.216589861751153,
+          "height": 15.984405458089668
+        }
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 46.02584176107139,
+          "left": 45.687899408678774,
+          "width": 36.56139632179899,
+          "height": 44.21298237787195
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/49df93f5_lexus-es 300.jpg"
+    },
+    "processed": false,
+    "boxName": "Instrument Panel Fuse Box",
+    "imageClusters": [
+      "66bfa35158f98b7f6e6302f5"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0dac7d20_image.jpg"
+      }
+    ],
+    "templateId": "672167098b7d51a699cd389b",
+    "boxAspectRatio": 1.1820276497695852,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-300-1991-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "R1",
+        "layout": {
+          "top": 63.510000000000005,
+          "left": 4.643083003952569,
+          "width": 17.58656126482213,
+          "height": 15.16666666666667
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Power Main Relay"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 60.510000000000005,
+          "left": 26.08695652173913,
+          "width": 16.796047430830036,
+          "height": 15.16666666666667
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Taillight",
+        "relatedEntities": [
+          "LUCES_TRASERAS"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 78.779,
+          "left": 37.75415019762847,
+          "width": 17.58656126482213,
+          "height": 15.500000000000002
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR"
+        ]
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 30.666666666666664,
+          "left": 4.643083003952569,
+          "width": 20.337498903292925,
+          "height": 8.4267178917109
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 47.803648833149296,
+          "left": 4.643083003952569,
+          "width": 20.337498903292925,
+          "height": 8.4267178917109
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 34.47,
+          "left": 31.12529644268774,
+          "width": 25.491699604743083,
+          "height": 10.26666666666667
+        }
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 48.64026354959113,
+          "left": 29.592577461857466,
+          "width": 12.696964185786232,
+          "height": 7.1583978408791324
+        }
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 58.615613166114535,
+          "left": 48.1194297418112,
+          "width": 20.050910451194515,
+          "height": 10.387785997791491
+        }
+      },
+      {
+        "id": "U6",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 37.95213716464218,
+          "left": 71.30010876753713,
+          "width": 26.39598527795166,
+          "height": 12.776845001840442
+        }
+      },
+      {
+        "id": "U7",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 55.112167804420615,
+          "left": 77.35859514219587,
+          "width": 20.337498903292925,
+          "height": 8.4267178917109
+        }
+      },
+      {
+        "id": "U8",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 67.9220713340695,
+          "left": 71.30010876753713,
+          "width": 26.39598527795166,
+          "height": 12.776845001840442
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/1e95168a_lexus-es 300.jpg"
+    },
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2da62742_image.jpg"
+      }
+    ],
+    "boxName": "Relay-Instrument Panel",
+    "templateId": "672162078b7d51a699cd3811",
+    "boxAspectRatio": 1.1857707509881423,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-300-1991-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 72.88051057278066,
+          "left": 58.611919838972234,
+          "width": 5.202901326976331,
+          "height": 14.37939101435542
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fog lights",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/fog-light-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 23.385300668151448,
+          "left": 61.42857142857143,
+          "width": 31.71428571428571,
+          "height": 25.612472160356347
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        }
+      },
+      {
+        "id": "U1",
+        "layout": {
+          "top": 23.16258351893096,
+          "left": 10,
+          "width": 28.857142857142858,
+          "height": 31.403118040089083
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "U2",
+        "layout": {
+          "top": 57.23830734966593,
+          "left": 55.14285714285714,
+          "width": 42.75870531543941,
+          "height": 10.54443797810259
+        },
+        "kind": {
+          "type": "connector",
+          "format": "generic",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/bceaa57d_lexus-es 300.jpg"
+    },
+    "processed": false,
+    "boxName": "Left Kick Panel Fuse Box",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a8d70e12_image.jpg"
+      }
+    ],
+    "templateId": "672162198b7d51a699cd381c",
+    "boxAspectRatio": 1.282857142857143,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-300-1991-genid-g2-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "R1",
+        "layout": {
+          "top": 17.358490566037734,
+          "left": 10.666666666666666,
+          "width": 15.2,
+          "height": 63.10754716981132
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear Fog Light or Starter"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 6.60377358490566,
+          "left": 39.27752412651547,
+          "width": 17.666666666666668,
+          "height": 83.9622641509434
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Circuit Opening Relay"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 10.304449533731017,
+          "left": 65.8372923848523,
+          "width": 31.435511736357384,
+          "height": 74.63152979930369
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Turn Signal Flasher"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f0e7901d_lexus-es 300.jpg"
+    },
+    "processed": false,
+    "boxName": "Relays Behind Glove Box",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0d205696_image.jpg"
+      }
+    ],
+    "templateId": "67215e1b8b7d51a699cd37c4",
+    "boxAspectRatio": 0.35333333333333333,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-300-1991-genid-g2-3.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 22.624303355306537,
+          "left": 42.851579333489866,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "(STARTER) Starting system, electronic fuel injection system",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE",
+          "ARRANQUE",
+          "EFI"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/starter-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 22.624303355306537,
+          "left": 55.14681742872802,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(ALT-S) Charging system"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 22.624303355306537,
+          "left": 67.44205552396616,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(EFI) Electronic fuel injection system",
+        "relatedEntities": [
+          "EFI"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 33.85180481581996,
+          "left": 42.851579333489866,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HEAD HI [RH] or HEAD [RH]) \"Right-hand headlight\", \"Right-hand headlight (high beam)\""
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 33.85180481581996,
+          "left": 55.14681742872801,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(DOME) Radio, cassette tape player, compact disc player, power antenna, interior light, personal lights, door courtesy lights, ignition switch light, trunk room light, electronic moon roof system, instrument panel lights, door lock and theft deterrent system, locking with wireless remote control system",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "ESTEREO",
+          "ANTENA_ELECTRICA",
+          "LUZ_CORTESIA(of=PUERTA)",
+          "BACKLIGHT(of=TAMBOR_DE_ENCENDIDO)",
+          "BACKLIGHT(of=INTERRUPTOR(of=ARRANQUE))",
+          "LUZ_BAUL",
+          "TECHO_SOLAR",
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)",
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)",
+          "INMOVILIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/sunroof-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/radio-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 33.85180481581996,
+          "left": 67.44205552396616,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HAZHORN) Emergency flashers, horns",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/horn-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 45.079306276333384,
+          "left": 42.851579333489866,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HEAD [LH] or HEAD HI [LH]) \"Left-hand headlight\", \"Left-hand headlight (high beam)\""
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 45.079306276333384,
+          "left": 55.14681742872801,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 45.079306276333384,
+          "left": 67.44205552396616,
+          "width": 9.981422692533808,
+          "height": 4.750977107761031
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "(AM2) Ignition system, electronic fuel injection system",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ARRANQUE",
+          "EFI"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/starter-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 22.32729102908743,
+          "left": 9.01696308932096,
+          "width": 11.921452475720876,
+          "height": 13.104179074750155
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 100
+        },
+        "description": "(ALT) Charging system",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/alternator-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 43.78249064153729,
+          "left": 12.031008157634433,
+          "width": 7.671957671957672,
+          "height": 20.100502512562816
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 60
+        },
+        "description": "(ABS) Anti-lock brake system",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 20.052748745582857,
+          "left": 81.32802022782997,
+          "width": 8.20593223083544,
+          "height": 11.727631829747589
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "(ST MAIN) Starting system",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/starter-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 55.54852357217448,
+          "left": 43.54562436967615,
+          "width": 8.20593223083544,
+          "height": 11.727631829747589
+        }
+      },
+      {
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 69.77778754973342,
+          "left": 43.723845720593985,
+          "width": 8.20593223083544,
+          "height": 11.727631829747589
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 17.92449324533542,
+          "left": 24.435121458092368,
+          "width": 15.935146741040874,
+          "height": 27.073697895521732
+        },
+        "kind": {
+          "type": "flasher",
+          "notUsed": false
+        },
+        "description": "Engine control unit (EFI Main)",
+        "relatedEntities": [
+          "ECU",
+          "EFI"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 55.69073613579938,
+          "left": 53.75212228628866,
+          "width": 18.660917548383615,
+          "height": 26.75015838630521
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 55.69073613579938,
+          "left": 75.50255486064162,
+          "width": 18.660917548383615,
+          "height": 26.75015838630521
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Headlight",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 35.428891289538534,
+          "left": 79.00865539445212,
+          "width": 11.978176774631038,
+          "height": 15.732737102937481
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/horn-relay",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 55.14861848874057,
+          "left": 25.682670914517256,
+          "width": 15.360917548383581,
+          "height": 26.75015838630521
+        }
+      }
+    ],
+    "boxAspectRatio": 0.5533854166666666,
+    "boxName": "Engine Compartment",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/3173bbce_lexus-es 300.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b5635fff_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/891c1dfe_image.jpg"
+      }
+    ],
+    "templateId": "6679c0f56bc28e957d5e7941",
+    "imageClusters": [
+      "61f456e234934c0004941c34"
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-300-1991-genid-g2-4.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 23.010752688172072,
+          "left": 9.96666666666667,
+          "width": 2.9,
+          "height": 35.86021505376337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HEAD (LWR-LH) Left-hand headlight (low beam)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 23.010752688172072,
+          "left": 16.29999999999999,
+          "width": 3.2333333333333334,
+          "height": 35.86021505376337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(HEAD (LWR RH) Right-hand headlight (low beam)"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 23.010752688172072,
+          "left": 23.29999999999999,
+          "width": 2.9,
+          "height": 35.86021505376337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "(FOG) Fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/fog-light-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 23.010752688172072,
+          "left": 29.633333333333326,
+          "width": 3.2333333333333334,
+          "height": 35.86021505376337
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "(RADIO) Radio, cassette tape player, compact disc player, power antenna",
+        "relatedEntities": [
+          "ESTEREO",
+          "ANTENA_ELECTRICA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/radio-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 16.236559139784944,
+          "left": 37.93333333333335,
+          "width": 15.133333333333333,
+          "height": 50.788172043010725
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 16.236559139784944,
+          "left": 58.89999999999975,
+          "width": 16.799999999999997,
+          "height": 52.938709677419325
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "A/C Magnetic Clutch"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 16.236559139784944,
+          "left": 81.19999999999948,
+          "width": 15.8,
+          "height": 52.938709677419325
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Daytime Running Light Relay N°2"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/518cefb1_lexus-es 300.jpg"
+    },
+    "processed": false,
+    "boxName": "Additional Fuse Boxes 1",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3224d3c2_image.jpg"
+      }
+    ],
+    "templateId": "67215e248b7d51a699cd37c9",
+    "boxAspectRatio": 0.31,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-300-1991-genid-g2-5.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 18.70406163114762,
+          "left": 85.0494940441396,
+          "width": 7.100000000000003,
+          "height": 50.348085915105464
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "(DRL) Daytime Running Light",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/es-300/info/fusebox/1991/headlight-fuse",
+            "urlWithAnchor": "/lexus/es-300/info/fusebox/1991/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 17.298027549765877,
+          "left": 7.738178558902616,
+          "width": 31.27324674595108,
+          "height": 58.149373987156984
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Daytime Running Light Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_CIRCULACION_DIURNA)"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 17.298027549765877,
+          "left": 48.00572479151394,
+          "width": 31.27324674595108,
+          "height": 58.149373987156984
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Daytime Running Light Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_CIRCULACION_DIURNA)"
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/3f30a806_lexus-es 300.jpg"
+    },
+    "processed": false,
+    "boxName": "Additional Fuse Boxes 2",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b42ffaec_image.jpg"
+      }
+    ],
+    "templateId": "67215e298b7d51a699cd37cf",
+    "boxAspectRatio": 0.448,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-es-300-1991-genid-g2-6.webp"
+  }
+]

@@ -1,0 +1,1582 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F01",
+        "layout": {
+          "top": 44.8866079611451,
+          "left": 1.540847913062409,
+          "width": 23.021950252459778,
+          "height": 6.289192079819488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "Direct Battery Feed #1 To BCM (Body Control Module)"
+      },
+      {
+        "id": "F02",
+        "layout": {
+          "top": 53.40744884348126,
+          "left": 1.540847913062409,
+          "width": 23.021950252459778,
+          "height": 6.289192079819488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Direct Battery Feed #2 To BCM (Body Control Module)"
+      },
+      {
+        "id": "F03",
+        "layout": {
+          "top": 70.24625344428824,
+          "left": 25.938431049113174,
+          "width": 23.22882596914985,
+          "height": 6.086314915954341
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Output For Starter Relay #1"
+      },
+      {
+        "id": "F04",
+        "layout": {
+          "top": 70.24625344428824,
+          "left": 1.540847913062409,
+          "width": 23.021950252459778,
+          "height": 6.086314915954341
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "ESP Pump Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=BOMBA(of=CONTROL_DE_ESTABILIDAD))"
+        ]
+      },
+      {
+        "id": "F05",
+        "layout": {
+          "top": 53.40744884348126,
+          "left": 25.938431049113174,
+          "width": 23.22882596914985,
+          "height": 6.289192079819488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "DOCT Feed #1 (SDU) - Transmission Control Module #1",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F06",
+        "layout": {
+          "top": 78.5642171627592,
+          "left": 25.938431049113174,
+          "width": 23.22882596914985,
+          "height": 6.289192079819488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Direct Battery Feed #3 To BCM"
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 61.92828972581729,
+          "left": 25.938431049113174,
+          "width": 23.22882596914985,
+          "height": 6.086314915954341
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Run RLY Output [For EBL RLY Coil], Run RLY Output (For ORC). Run RLY Output [For Blower Motor RLY Coil], Run RLY Output [For PPC)"
+      },
+      {
+        "id": "F09",
+        "layout": {
+          "top": 29.062189179663832,
+          "left": 52.156641335234205,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Radiator Fan Enable RLY Output, Radiator Fan Enable RLY Coil Output"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 37.98878438973022,
+          "left": 92.91115752318262,
+          "width": 2.6893843169712084,
+          "height": 7.709332226875503
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ORC - Occupant Restraint Controller",
+        "relatedEntities": [
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 7.962964137688774,
+          "left": 4.575226496512873,
+          "width": 7.861277234223532,
+          "height": 2.434525966381738
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ECM, EPS, Backup Lamp Switch, Run/Start RLY Output [For A/C Clutch RLY Coil, Fuel Pump RLY Coil, Starter RLY #1)",
+        "relatedEntities": [
+          "ECU",
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA",
+          "SENSOR_REVERSA",
+          "BOBINA(of=RELAY(protects=BOMBA(fluid=COMBUSTIBLE)))",
+          "BOBINA(of=RELAY(protects=BOMBA_DE_COMBUSTIBLE))",
+          "RELAY(protects=RELAY(protects=BOMBA(fluid=COMBUSTIBLE)))",
+          "RELAY(protects=RELAY(protects=BOMBA_DE_COMBUSTIBLE))",
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/starter-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 19.324085314136873,
+          "left": 52.156641335234205,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DOCT Feed #2 - Transmission Control Module #2",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 9.383104284744794,
+          "left": 37.05471401685741,
+          "width": 2.6893843169712084,
+          "height": 7.709332226875503
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DOCT Feed #3 - Transmission Control Module #3",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 24.598891574630667,
+          "left": 89.39427033945101,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Ignition Coils, Coil Capacitor",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 2.891035041060155,
+          "left": 4.575226496512873,
+          "width": 7.861277234223532,
+          "height": 2.434525966381738
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ESC. Brake Pedal Switch, OCM"
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 53.40744884348126,
+          "left": 54.639149935515306,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ECM - Engine Control Module",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 34.94562693175303,
+          "left": 52.156641335234205,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C Compressor Clutch",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/air-conditioning-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 6.542823990632763,
+          "left": 49.88100845164317,
+          "width": 7.861277234223532,
+          "height": 2.434525966381738
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "EBL - Rear Defroster",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 9.383104284744794,
+          "left": 43.05410980087015,
+          "width": 2.48250860028111,
+          "height": 7.709332226875503
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/fuel-pump-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 13.034893234317392,
+          "left": 4.575226496512873,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ORC - Occupant Restraint Controlle",
+        "relatedEntities": [
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 9.383104284744794,
+          "left": 31.055318232844744,
+          "width": 2.48250860028111,
+          "height": 7.709332226875503
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "ESC",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 30.482329326719867,
+          "left": 89.39427033945101,
+          "width": 7.861277234223532,
+          "height": 2.434525966381738
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ECM, Fuel Injectors, Active Grill Shutter (AGS)",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 48.13264258298741,
+          "left": 54.639149935515306,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Power Outlet (Console)",
+        "relatedEntities": [
+          "TOMA_12V",
+          "CONSOLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/cigarette-lighter-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F81",
+        "layout": {
+          "top": 61.92828972581729,
+          "left": 1.540847913062409,
+          "width": 23.021950252459778,
+          "height": 6.086314915954341
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Interior PDC Battery Feed, Power Seats",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "F82",
+        "layout": {
+          "top": 78.5642171627592,
+          "left": 1.540847913062409,
+          "width": 23.021950252459778,
+          "height": 6.289192079819488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ]
+      },
+      {
+        "id": "F83",
+        "layout": {
+          "top": 19.859571138911917,
+          "left": 25.938431049113174,
+          "width": 23.22882596914985,
+          "height": 6.289192079819488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "HVAC Blower Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "F84",
+        "layout": {
+          "top": 42.24920483089822,
+          "left": 52.156641335234205,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "description": " Run/Accessory RLY Output, Cigar\nLighter",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/cigarette-lighter-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F85",
+        "layout": {
+          "top": 48.13264258298741,
+          "left": 66.01731435347043,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Sunroof, LRSM, Power Outlet (Console). UCI/AUX Port, Cigar Lighter",
+        "relatedEntities": [
+          "TECHO_SOLAR",
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/sunroof-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/dodge/dart/info/fusebox/2014/cigarette-lighter-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F86",
+        "layout": {
+          "top": 53.40744884348126,
+          "left": 66.01731435347043,
+          "width": 7.861277234223532,
+          "height": 2.637403130246882
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20",
+          "notUsed": false
+        },
+        "description": "-"
+      },
+      {
+        "id": "F87",
+        "layout": {
+          "top": 18.918330986406602,
+          "left": 89.39427033945101,
+          "width": 7.861277234223532,
+          "height": 2.434525966381738
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Wastegate, Purge Solenoid, OBD Vent Valve, Oxygen Sensor Heaters",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER",
+          "CALANETADOR_SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "F88",
+        "layout": {
+          "top": 12.426261742721971,
+          "left": 49.88100845164317,
+          "width": 7.861277234223532,
+          "height": 2.434525966381738
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Heated Outside Mirrors",
+        "relatedEntities": [
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "F08",
+        "layout": {
+          "top": 39.408924536786266,
+          "left": 65.39668720340015,
+          "width": 23.22882596914985,
+          "height": 6.289192079819488
+        },
+        "kind": {
+          "amp": "",
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T02",
+        "layout": {
+          "top": 61.725412561952155,
+          "left": 79.46423593832654,
+          "width": 17.17068448527769,
+          "height": 11.158244012582962
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T03",
+        "layout": {
+          "top": 87.8862783677878,
+          "left": 5.330232230033618,
+          "width": 16.963808768587604,
+          "height": 10.955366848717814
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T05",
+        "layout": {
+          "top": 74.70955104932156,
+          "left": 79.46423593832654,
+          "width": 17.17068448527769,
+          "height": 11.158244012582962
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T06",
+        "layout": {
+          "top": 87.8862783677878,
+          "left": 27.465933915873546,
+          "width": 16.963808768587604,
+          "height": 10.955366848717814
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T07",
+        "layout": {
+          "top": 59.37946476154289,
+          "left": 54.21852278544506,
+          "width": 20.89444738569939,
+          "height": 20.287716386514482
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T08",
+        "layout": {
+          "top": 29.670820671259293,
+          "left": 27.745306765803264,
+          "width": 20.89444738569939,
+          "height": 20.287716386514482
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T09",
+        "layout": {
+          "top": 18.309699494811163,
+          "left": 4.782102213202964,
+          "width": 17.17068448527769,
+          "height": 11.158244012582962
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T10",
+        "layout": {
+          "top": 3.0939122049253003,
+          "left": 60.01791856945772,
+          "width": 16.963808768587604,
+          "height": 11.158244012582962
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T14",
+        "layout": {
+          "top": 87.4908123728256,
+          "left": 79.46423593832654,
+          "width": 17.17068448527769,
+          "height": 11.158244012582962
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T17",
+        "layout": {
+          "top": 3.0939122049253003,
+          "left": 79.67111165501663,
+          "width": 16.963808768587604,
+          "height": 11.158244012582962
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T19",
+        "layout": {
+          "top": 31.496715146045574,
+          "left": 4.782102213202964,
+          "width": 17.17068448527769,
+          "height": 11.158244012582962
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T20",
+        "layout": {
+          "top": 48.944151238448065,
+          "left": 79.46423593832654,
+          "width": 17.17068448527769,
+          "height": 10.955366848717814
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T30",
+        "layout": {
+          "top": 16.48380502002486,
+          "left": 63.948557186569495,
+          "width": 20.89444738569939,
+          "height": 20.287716386514482
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "Connector",
+        "kind": {
+          "type": "connector",
+          "format": "pins-3-sm"
+        },
+        "layout": {
+          "top": 80.66584583464999,
+          "left": 50.680168936963,
+          "width": 27.125800631673684,
+          "height": 18.50250303524207,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Battery",
+        "kind": {
+          "type": "battery-terminal",
+          "format": "rounded"
+        },
+        "layout": {
+          "top": 1.6691311246987302,
+          "left": 15.974099907057333,
+          "width": 11.14470878665663,
+          "height": 13.720957307033448,
+          "rotation": 180
+        },
+        "relatedEntities": []
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.0114649681528662,
+    "boxName": "Underhood Fuses",
+    "boxDescription": "The Power Distribution Center is located on the right side of the engine compartment, behind the battery.",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/30c84a72_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/65c66ff0_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9add1630_image.png"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/d8c37fea_Captura de Pantalla 2021-07-21 a la(s) 18.08.42.png"
+    },
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/fe62a82f_dodge-dart-2013.jpg"
+    },
+    "templateId": "614100aebea2580004428838",
+    "imageClusters": [
+      "6362933756a62a92b1fb82d9"
+    ],
+    "boxScaleMultiplier": "",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-dodge-dart-2014-genid-g5-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 6.095551894563426,
+          "left": 17.857142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Heated Seats"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 24.546952224052717,
+          "left": 17.857142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Heated Seats, Heated Steer ing Wheel"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 42.998352553542006,
+          "left": 17.857142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PAM, Rear Camera, LBSS, RBSS, Compass",
+        "relatedEntities": [
+          "CAMARA_REVERSA",
+          "BRUJULA"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 61.28500823723228,
+          "left": 17.857142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IPC"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 80.88962108731467,
+          "left": 17.857142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "HVAC, Humidity Sensor, In-Car Temperature Sensor, Inside Mirror Assembly",
+        "relatedEntities": [
+          "CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 6.095551894563426,
+          "left": 56.07142857142857,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/radio-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 42.998352553542006,
+          "left": 56.07142857142857,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SCCM, SAS, Switch Bank"
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 61.28500823723228,
+          "left": 56.07142857142857,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Diagnostic Port"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 80.88962108731467,
+          "left": 56.29110090025051,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "UGDO, EOM"
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 6.095551894563426,
+          "left": 73.57142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/sunroof-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 24.546952224052717,
+          "left": 73.57142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Direct Battery For Underhood PDC [RLY Coils]"
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 42.998352553542006,
+          "left": 73.57142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "DOCT Feed #4"
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 61.28500823723228,
+          "left": 73.57142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Stop Lamp Switch"
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 80.88962108731467,
+          "left": 73.57142857142858,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Pneumatic Lumbar Support [Solenoid), Pneumatic Lumbar Support [Pump Motor)"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 24.546952224052717,
+          "left": 56.07142857142857,
+          "width": 6.785714285714286,
+          "height": 14.332784184514002
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuel Door"
+      }
+    ],
+    "boxAspectRatio": 2.1678571428571427,
+    "processed": false,
+    "boxName": "Interior Fuses",
+    "boxDescription": "The interior fuse panel is located on the driver's side under the instrument panel.",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/123df90f_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7e71e2d5_image.png"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/d880df5d_dodge-dart-2013.png"
+    },
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/09c0276b_dodge-dart-2013.jpg"
+    },
+    "templateId": "61410060bea2580004428837",
+    "boxScaleMultiplier": "1.2",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-dodge-dart-2014-genid-g5-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F12",
+        "layout": {
+          "top": 59.591836734693885,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.510204081632653
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 66.12244897959184,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.3061224489795915
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left Headlamp",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 46.93877551020408,
+          "left": 76,
+          "width": 13.25,
+          "height": 4.8979591836734695
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 26.93877551020408,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Interior Lighting/Decklid/Liftgate Release",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "PORTON_TRASERO",
+          "CERRADURA"
+        ]
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 46.326530612244895,
+          "left": 47.5,
+          "width": 13,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Window Motor - Driver",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTANILLA)"
+        ]
+      },
+      {
+        "id": "F34",
+        "layout": {
+          "top": 72.6530612244898,
+          "left": 47.5,
+          "width": 13.25,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Window Motor - Passenger",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTANILLA)"
+        ]
+      },
+      {
+        "id": "F36",
+        "layout": {
+          "top": 20.408163265306122,
+          "left": 18,
+          "width": 13,
+          "height": 5.714285714285714
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Intrusion Module"
+      },
+      {
+        "id": "F37",
+        "layout": {
+          "top": 66.12244897959184,
+          "left": 76.25,
+          "width": 13.25,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument Panel Cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "F38",
+        "layout": {
+          "top": 79.18367346938776,
+          "left": 47.5,
+          "width": 13.25,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Door Locks",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "F42",
+        "layout": {
+          "top": 79.38775510204081,
+          "left": 76.25,
+          "width": 13.25,
+          "height": 5.510204081632653
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "F43",
+        "layout": {
+          "top": 72.44897959183673,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.714285714285714
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Windshield Washer Pump",
+        "relatedEntities": [
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "F47",
+        "layout": {
+          "top": 52.85714285714286,
+          "left": 47.5,
+          "width": 13,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Transmission Control Module (Tcm)",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "F48",
+        "layout": {
+          "top": 59.591836734693885,
+          "left": 47.5,
+          "width": 13,
+          "height": 5.3061224489795915
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F49",
+        "layout": {
+          "top": 52.85714285714286,
+          "left": 76,
+          "width": 13.25,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Stop Lamp Switch"
+      },
+      {
+        "id": "F50",
+        "layout": {
+          "top": 72.6530612244898,
+          "left": 76.25,
+          "width": 13.25,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Pneumatic Lumbar Support"
+      },
+      {
+        "id": "F51",
+        "layout": {
+          "top": 59.38775510204082,
+          "left": 76,
+          "width": 13.5,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Cd/Hands-Free Module - Bluetooth/ Radio Display",
+        "relatedEntities": [
+          "BLUETOOTH",
+          "PANTALLA(of=ESTEREO)"
+        ]
+      },
+      {
+        "id": "F53",
+        "layout": {
+          "top": 79.18367346938776,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Driver Window Switch/Power Mirrors"
+      },
+      {
+        "id": "F89",
+        "layout": {
+          "top": 66.12244897959184,
+          "left": 47.5,
+          "width": 13.25,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Trunk Lamp",
+        "relatedEntities": [
+          "LUZ_BAUL",
+          "TESTIGO_BAUL"
+        ]
+      },
+      {
+        "id": "F90",
+        "layout": {
+          "top": 53.06122448979592,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Front Fog Lamps - Right",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/fog-light-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F91",
+        "layout": {
+          "top": 46.53061224489796,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Front Fog Lamps - Left",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/fog-light-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F92",
+        "layout": {
+          "top": 40,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.510204081632653
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "High Beams (Shutters)"
+      },
+      {
+        "id": "F93",
+        "layout": {
+          "top": 33.46938775510204,
+          "left": 18.25,
+          "width": 12.75,
+          "height": 5.714285714285714
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right Headlamp",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/dart/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/dodge/dart/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 1.225,
+    "processed": false,
+    "boxName": "Body Control Module (BCM) Fuses",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/61985eaf_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/dc278166_image.png"
+      }
+    ],
+    "templateId": "6140e8f2bea2580004428831",
+    "imageClusters": [
+      "6362937256a62a92b1fb8311"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-dodge-dart-2014-genid-g5-2.webp"
+  }
+]

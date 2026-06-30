@@ -1,26 +1,72 @@
 import { NextResponse } from 'next/server';
+import createMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
+import { getToken } from 'next-auth/jwt';
 
-export function middleware(request) {
-  // 🚀 V4.0 OBSERVABILITY: Enterprise Request Tracing (Correlation ID)
-  // crypto.randomUUID() is natively available in the Edge runtime.
+const intlMiddleware = createMiddleware(routing);
+
+// V5.0 Güvenlik: Korumalı Rotalar (Login zorunlu)
+const protectedRoutes = [
+  '/sanal-usta', 
+  '/teknik-kutuphane', 
+  '/bilgi-bankasi', 
+  '/katalog',
+  '/ariza-cozumleri',
+  '/ariza-kodlari'
+];
+
+export async function middleware(request) {
+  // 1. Trace ID for observability
   const correlationId = request.headers.get('x-correlation-id') || crypto.randomUUID();
+  request.headers.set('x-correlation-id', correlationId);
+
+  const pathname = request.nextUrl.pathname;
   
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set('x-correlation-id', correlationId);
+  // 2. Güvenlik Kontrolü (Authentication)
+  // Route'un başındaki dili (/tr veya /en) kesip ana rotayı buluyoruz
+  const pathWithoutLocale = pathname.replace(/^\/[^\/]+/, '') || pathname;
+  
+  const isProtected = protectedRoutes.some(route => 
+    pathWithoutLocale === route || pathWithoutLocale.startsWith(`${route}/`)
+  );
 
-  const response = NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  });
+  if (isProtected) {
+    // NextAuth token kontrolü
+    const token = await getToken({ 
+      req: request, 
+      secret: process.env.NEXTAUTH_SECRET || "BursaliOtoEnterpriseSecretKey2026" 
+    });
 
-  // Attach Trace ID to the response for E2E debugging from Client to Server
-  response.headers.set('x-correlation-id', correlationId);
+    if (!token) {
+      // Kullanıcı giriş yapmamışsa, bulunduğu dilin login sayfasına yönlendir
+      const locale = pathname.split('/')[1] || 'tr';
+      const url = request.nextUrl.clone();
+      url.pathname = `/${locale}/login`;
+      url.searchParams.set('callbackUrl', pathname);
+      url.searchParams.set('error', 'login_required');
+      return NextResponse.redirect(url);
+    }
+  }
 
-  return response;
+  // 3. Execute next-intl middleware for language routing (redirects / to /tr)
+  let response;
+  
+  // Skip next-intl for API routes, just pass them through
+  if (request.nextUrl.pathname.startsWith('/api')) {
+    response = NextResponse.next();
+  } else {
+    response = intlMiddleware(request);
+  }
+
+  // 4. Attach Trace ID to the response
+  if (response) {
+    response.headers.set('x-correlation-id', correlationId);
+  }
+
+  return response || NextResponse.next();
 }
 
 export const config = {
-  // Apply this tracing middleware to all API routes
-  matcher: '/api/:path*',
+  // Match all paths except internal Next.js files, images, and static assets
+  matcher: ['/((?!_next|.*\\..*).*)', '/api/:path*']
 };

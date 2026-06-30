@@ -1,0 +1,483 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 10.455849825720131,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Warning lights, instrument panel, hazard warning lights and direction indicators, instrument panel, immobilizer, clock, reversing light.",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "TABLERO",
+          "INMOVILIZADOR",
+          "RELOJ",
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 17.08265315559843,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Speed recorder."
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 23.70945648547673,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Tracking unit, heated seats, headlight washer.",
+        "relatedEntities": [
+          "LAVA_FAROS",
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 30.336259815355028,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Electric mirrors, ABS [Diesel]",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO",
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 36.96306314523333,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Left front position light, right front parking light, fog light, clock, instrument illumination, speed recorder.",
+        "relatedEntities": [
+          "LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "RELOJ",
+          "ILUMINACION_DEL_TABLERO",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 43.58986647511162,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Right front position light, left parking lights, instrument illumination, radio.",
+        "relatedEntities": [
+          "ESTEREO",
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_IZQUIERDO)",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 50.21666980498993,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left low beam.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 56.843473134868226,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Right low beam.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 63.470276464746526,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left main beam, headlight leveling.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)",
+          "NIVELACION(obj=LUCES_DELANTERAS)",
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 70.09707979462482,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Right main beam.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)",
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 76.72388312450312,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Interior lighting, cigarette lighter, radio.",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "ENCENDEDOR",
+          "ESTEREO",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/cigarette-lighter-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 83.35068645438142,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Horn, central locking, power windows.",
+        "relatedEntities": [
+          "BOCINA",
+          "CIERRE_CENTRALIZADO",
+          "LEVANTAVIDRIOS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/horn-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 27.04919846268399,
+          "left": 89.97748978425972,
+          "width": 2.529877886010133,
+          "height": 11.976263793938001
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Heater blower, auxiliary heater, air conditioning, auxiliary heater 2.",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 46.58721804983754,
+          "left": 11.576587491047754,
+          "width": 9.571645678755457,
+          "height": 3.484824712842382
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 7.5
+        },
+        "description": "Rear fog light, rear fog light warning lamp.",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)",
+          "TESTIGO_LUZ_ANTINIEBLA(warns=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 46.58721804983754,
+          "left": 29.45234832006122,
+          "width": 9.571645678755457,
+          "height": 3.484824712842382
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Heated exterior mirrors, heated rear window, rear heater blower, electric start/stop valve.",
+        "relatedEntities": [
+          "LUNETA_TRASERA(ubicacion=PARTE_TRASERA)",
+          "CAMBIO_MARCHA",
+          "DESEMPANADOR_TRASERO",
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 46.58721804983754,
+          "left": 47.328109149074685,
+          "width": 9.571645678755457,
+          "height": 3.484824712842382
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Electric start/stop valve.",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/starter-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 46.58721804983754,
+          "left": 65.20386997808815,
+          "width": 9.571645678755457,
+          "height": 3.484824712842382
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Hazard lights and direction indicators, warning lights, instrument panel, brake light, electric start/stop valve.",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "TABLERO",
+          "LUZ_FRENO",
+          "CAMBIO_MARCHA",
+          "LUZ_BALIZA",
+          "TESTIGO_FRENO_DE_MANO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/ducato/info/fusebox/2001/brake-light-fuse",
+            "urlWithAnchor": "/fiat/ducato/info/fusebox/2001/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 46.58721804983754,
+          "left": 83.07963080710161,
+          "width": 9.571645678755457,
+          "height": 3.484824712842382
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Engine management (gasoline), fuel heater.",
+        "relatedEntities": [
+          "PRECALENTADOR",
+          "CALENTADOR_COMBUSTIBLE"
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/55f39cb3_fiat-ducato-2000.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.75,
+    "boxName": "Interior fuse box",
+    "imageClusters": [
+      "62863ce2f48c39ee4838f9f8"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4f066df8_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/87039f8a_image.jpg"
+      }
+    ],
+    "templateId": "6691909a0d9e0583b28a5184",
+    "isTranslated": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-ducato-2001-genid-g2-0.webp"
+  }
+]

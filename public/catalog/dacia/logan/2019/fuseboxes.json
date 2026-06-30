@@ -1,0 +1,1359 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "Terminal",
+        "kind": {
+          "type": "battery-terminal",
+          "format": ""
+        },
+        "layout": {
+          "top": 64.94993333290527,
+          "left": 10.61860737433683,
+          "width": 7.807014958503504,
+          "height": 13.725557605732456,
+          "rotation": 180
+        }
+      },
+      {
+        "id": "F1",
+        "layout": {
+          "top": 18.779504403782276,
+          "left": 25.49019607843137,
+          "width": 18.910675381263616,
+          "height": 6.283185840707965
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Right windscreen heating element"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 26.489440249739353,
+          "left": 25.49019607843137,
+          "width": 18.910675381263616,
+          "height": 6.283185840707965
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Left windshield heating element"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 34.19937609569643,
+          "left": 25.054466230936818,
+          "width": 18.910675381263616,
+          "height": 6.283185840707965
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "ABS/ESP",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 41.909311941653506,
+          "left": 25.49019607843137,
+          "width": 18.910675381263616,
+          "height": 6.283185840707965
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Immobilizer, passenger compartment fuse supply circuit F28-F31",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 49.61924778761058,
+          "left": 25.054466230936818,
+          "width": 18.910675381263616,
+          "height": 6.283185840707965
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Power supply for passenger compartment fuses F11, F23 - F27, F34 and F39"
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 57.90567006314386,
+          "left": 25.06536177105533,
+          "width": 11.468419735647332,
+          "height": 3.1477023837146656
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "ABS/ESP",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 63.16150677403255,
+          "left": 26.983727502685607,
+          "width": 6.5438801753519,
+          "height": 2.576545227809861
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Heated rear window and mirrors",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 58.413413425975726,
+          "left": 37.622054312790674,
+          "width": 6.5438801753519,
+          "height": 2.576545227809861
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/fog-light-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 63.16150677403255,
+          "left": 37.622054312790674,
+          "width": 6.5438801753519,
+          "height": 2.576545227809861
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated seats",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 81.94685276218173,
+          "left": 23.62674304951124,
+          "width": 3.3408354373823506,
+          "height": 8.061851149353693
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Air conditioner clutch (equipment with air conditioning) / 25A First speed of the electric fan (equipment without air conditioning)"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 78.98272738350745,
+          "left": 28.566665206460836,
+          "width": 3.3408354373823506,
+          "height": 11.011469818965042
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Fuse for the relay of the engine management system"
+      },
+      {
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 93.0457953507212,
+          "left": 23.62674304951124,
+          "width": 3.3408354373823506,
+          "height": 8.061851149353693
+        }
+      },
+      {
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 93.0457953507212,
+          "left": 28.291544364678007,
+          "width": 3.3408354373823506,
+          "height": 8.061851149353693
+        }
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 80.80663716814165,
+          "left": 34.11427218619406,
+          "width": 5.88235294117647,
+          "height": 17.463760658739925
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Electro cooling fan"
+      },
+      {
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 80.80663716814165,
+          "left": 40.969247767538505,
+          "width": 5.88235294117647,
+          "height": 17.463760658739925
+        }
+      },
+      {
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 80.80663716814165,
+          "left": 47.82422334888295,
+          "width": 5.88235294117647,
+          "height": 17.463760658739925
+        }
+      },
+      {
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 66.23266121358633,
+          "left": 51.27842416097889,
+          "width": 11.14692491332144,
+          "height": 3.637423144936626
+        }
+      },
+      {
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 71.49808185695535,
+          "left": 51.27842416097889,
+          "width": 11.14692491332144,
+          "height": 3.637423144936626
+        }
+      },
+      {
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 67.20128249354491,
+          "left": 64.42045928750318,
+          "width": 6.5438801753519,
+          "height": 2.576545227809861
+        }
+      },
+      {
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.00582521978718,
+          "left": 64.42045928750318,
+          "width": 6.5438801753519,
+          "height": 2.576545227809861
+        }
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 67.48843157029074,
+          "left": 74.91098418869198,
+          "width": 3.3408354373823506,
+          "height": 8.061851149353693
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine management system",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 67.48843157029074,
+          "left": 79.23469186101578,
+          "width": 3.3408354373823506,
+          "height": 8.061851149353693
+        }
+      },
+      {
+        "id": "F23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 67.48843157029074,
+          "left": 83.55839953333957,
+          "width": 3.3408354373823506,
+          "height": 8.061851149353693
+        }
+      },
+      {
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 67.48843157029074,
+          "left": 87.88210720566337,
+          "width": 3.3408354373823506,
+          "height": 8.061851149353693
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 0.7605960050120917,
+          "left": 51.75807929990154,
+          "width": 19.188932754710446,
+          "height": 19.150899902555782
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": 35,
+          "notUsed": false
+        },
+        "description": "Relay for left glass heating"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 0.7605960050120917,
+          "left": 72.4010799503657,
+          "width": 19.188932754710446,
+          "height": 19.150899902555782
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": 35,
+          "notUsed": false
+        },
+        "description": "Relay for the right glass heating"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 49.46795731419391,
+          "left": 50.37422502917944,
+          "width": 9.95427314693199,
+          "height": 14.189249246182122
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": 20,
+          "notUsed": false
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/fuel-pump-relay",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 49.46795731419391,
+          "left": 62.32071094861059,
+          "width": 9.95427314693199,
+          "height": 14.189249246182122
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": 20,
+          "notUsed": false
+        },
+        "description": "Relay for the air conditioner compressor or the first speed of the electric fan (depending on the configuration)"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 47.44357079995956,
+          "left": 73.8562091503268,
+          "width": 19.188932754710446,
+          "height": 19.150899902555782
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": 35,
+          "notUsed": false
+        },
+        "description": "Engine control relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 68.14975071118586,
+          "left": 26.684070253048574,
+          "width": 15.271004060479605,
+          "height": 9.95765547817966
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/8793ca36_dacia-logan.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.9847494553376906,
+    "boxName": "Passenger compartment",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b207a7c8_image.jpg"
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/add6d049_dacia-logan-2015.jpg"
+    },
+    "imageClusters": [
+      "65bbbc78881874a68bc8d4ce"
+    ],
+    "templateId": "670f14a83882345901f02b23",
+    "templateRenameMap": {
+      "Ef1": "F1",
+      "Ef2": "F2",
+      "Ef3": "F3",
+      "Ef4": "F4",
+      "Ef5": "F5",
+      "Ef6": "F6",
+      "Ef7": "F7",
+      "Ef8": "F8",
+      "Ef9": "F9",
+      "Ef10": "F10",
+      "Ef11": "F11",
+      "Ef12": "F14",
+      "Ef13": "F21",
+      "Er1": "R1",
+      "Er2": "R2",
+      "Er3": "R3",
+      "Er4": "R4",
+      "Er5": "R5"
+    },
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-dacia-logan-2019-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 8.501931110363596,
+          "left": 15.780476914342488,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Electric glass front lifts"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 8.501931110363596,
+          "left": 23.289993689502907,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "High beam left headlight"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 8.501931110363596,
+          "left": 30.799510464663324,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "High beam right headlight"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 8.501931110363596,
+          "left": 38.30902723982374,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Low beam left headlight"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 8.501931110363596,
+          "left": 45.818544014984155,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "High beam right headlight"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 8.501931110363596,
+          "left": 53.328060790144576,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Rear dimensions, number illumination, illumination",
+        "relatedEntities": [
+          "BACKLIGHT"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 8.501931110363596,
+          "left": 60.837577565305,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Front dimensions"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 15.780476914342488,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Electric glass rear lifts"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 23.289993689502907,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Rear fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear fog lights",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/fog-light-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 30.799510464663324,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/horn-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 38.30902723982374,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Central locking"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 45.818544014984155,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 3
+        },
+        "description": "ABS/ESP",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 45.818544014984155,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": "5"
+        },
+        "description": "ABS/ESP",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 53.328060790144576,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Interior lighting, air conditioning",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/air-conditioning-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 22.5286869632064,
+          "left": 60.837577565305,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Steering angle sensor"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 17.86512252402382,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Glass washer, parking radar, reversing light",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 25.70908844593681,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Audio system, heated glass, speed limiter",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/radio-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 33.5530543678498,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "DRL",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "extendedDescription": "Daytime running lights",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/headlight-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 41.39702028976279,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Brake light",
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO"
+        ],
+        "extendedDescription": "Stop lights"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 52.20305864937942,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Control system",
+        "relatedEntities": [
+          "COMANDO"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 60.086048351230836,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Airbags",
+        "relatedEntities": [
+          "AIRBAG"
+        ],
+        "extendedDescription": "Airbag"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 67.96903805308224,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Reversing lamp, AMT control unit",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 75.85202775493366,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Electric power steering pump"
+      },
+      {
+        "kind": {
+          "format": "mini",
+          "type": "fuse"
+        },
+        "id": "23",
+        "layout": {
+          "top": 35.55896371942219,
+          "left": 83.73501745678507,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 17.75764179179319,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Direction indicator"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 25.601607713706173,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Anti-theft system",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 33.445573635619155,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Electrical control unit"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 41.28953955753214,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Steering column switches (low beam input)"
+      },
+      {
+        "kind": {
+          "format": "mini",
+          "type": "fuse"
+        },
+        "id": "28",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 52.20305864937942,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        }
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 60.086048351230836,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 25
+        },
+        "description": "Steering column switches (high beam input)"
+      },
+      {
+        "kind": {
+          "format": "mini",
+          "type": "fuse"
+        },
+        "id": "30",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 67.96903805308224,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        }
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 75.85202775493366,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ],
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 51.71864361915194,
+          "left": 83.73501745678507,
+          "width": 3.9566176470588252,
+          "height": 10.224786324786322
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/radio-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 65.76040435233232,
+          "left": 77.29630228473394,
+          "width": 11.406267044633374,
+          "height": 3.9498426608038324
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/cigarette-lighter-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 72.65807183951547,
+          "left": 77.29630228473394,
+          "width": 11.406267044633374,
+          "height": 3.9498426608038324
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Diagnostic connector",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 79.55573932669863,
+          "left": 77.29630228473394,
+          "width": 11.406267044633374,
+          "height": 3.9498426608038324
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Heated exterior mirrors"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 86.45340681388178,
+          "left": 77.29630228473394,
+          "width": 11.406267044633374,
+          "height": 3.9498426608038324
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Mirror drive"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 8.299228091253477,
+          "left": 70.32315394091982,
+          "width": 20.87585139318889,
+          "height": 5.5555555555555545
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/starter-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 16.95893947487793,
+          "left": 70.32315394091982,
+          "width": 20.87585139318889,
+          "height": 5.5555555555555545
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ],
+        "extendedDescription": "Wipers"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 25.618650858502384,
+          "left": 70.32315394091982,
+          "width": 20.87585139318889,
+          "height": 5.5555555555555545
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Air conditioner",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "extendedDescription": "Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/air-conditioning-fuse",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 67.66043599535209,
+          "left": 13.457980435736575,
+          "width": 29.665882079022172,
+          "height": 24.93834687212123
+        },
+        "id": "R1",
+        "kind": {
+          "amp": 35,
+          "format": "full",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "Air conditioner relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)"
+        ],
+        "extendedDescription": "Air conditioning",
+        "individualFusePages": [
+          {
+            "url": "/dacia/logan/info/fusebox/2019/air-conditioning-relay",
+            "urlWithAnchor": "/dacia/logan/info/fusebox/2019/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 67.66043599535209,
+          "left": 44.95604113548103,
+          "width": 29.665882079022172,
+          "height": 24.93834687212123
+        },
+        "id": "R2",
+        "kind": {
+          "amp": 35,
+          "format": "full",
+          "type": "relay",
+          "notUsed": false,
+          "variation": "cyan"
+        },
+        "description": "Rear defogger relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      }
+    ],
+    "boxAspectRatio": 1.1311475409836065,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/5da79c01_dacia-logan.jpg"
+    },
+    "processed": false,
+    "boxName": "Engine compartment",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2d9a9813_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/59f86dbc_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "649b465a45ef576e680bc6be"
+    ],
+    "templateId": "619becdb188b7c0004a6c5a8",
+    "boxScaleMultiplier": "",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-dacia-logan-2019-genid-g2-1.webp"
+  }
+]

@@ -1,0 +1,1010 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F01",
+        "layout": {
+          "top": 49.30232558139535,
+          "left": 72.43589743589743,
+          "width": 19.12393162393162,
+          "height": 5.116279069767443
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Ignition switch",
+        "relatedEntities": [
+          "BOTON_DE_ENCENDIDO",
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "F04",
+        "layout": {
+          "top": 39.06976744186046,
+          "left": 72.59615384615384,
+          "width": 19.12393162393162,
+          "height": 5.116279069767443
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Body Computer (high/low beams right side, front and rear right side position lights, license plate light, right side direction lights, brake lights, right and left position lights, reverse lights).",
+        "relatedEntities": [
+          "LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))",
+          "LUZ_PATENTE",
+          "LUZ_FRENO",
+          "TESTIGO_FRENO_DE_MANO",
+          "LUZ_RETROCESO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/brake-light-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F05",
+        "layout": {
+          "top": 49.14728682170543,
+          "left": 45.3525641025641,
+          "width": 19.12393162393162,
+          "height": 5.116279069767443
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Body Computer (high/low beams left side, front and rear left side position lights, glove box light, interior light, left side direction lights, third brake light).",
+        "relatedEntities": [
+          "LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "LUZ_DE_GUANTERA",
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "F06",
+        "layout": {
+          "top": 38.759689922480625,
+          "left": 45.032051282051285,
+          "width": 19.12393162393162,
+          "height": 5.116279069767443
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Radiator cooling fan"
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 57.20930232558139,
+          "left": 72.43589743589743,
+          "width": 19.12393162393162,
+          "height": 5.116279069767443
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Radiator cooling fan"
+      },
+      {
+        "id": "F08",
+        "layout": {
+          "top": 50.5626881435237,
+          "left": 26.550820721481863,
+          "width": 11.108621560012056,
+          "height": 2.7374340825872956
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Rear window defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F09",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 16.859464567190873,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Body Computer (windshield wiper and windshield/rear window washer motor)",
+        "relatedEntities": [
+          "LUNETA_TRASERA(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 49.64939673030195,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/horn-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 75.1144186046511,
+          "left": 24.358974358974358,
+          "width": 2.4749902660536547,
+          "height": 6.441880293476022
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Electronic injection control unit"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 55.1143854241538,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cold start tank fuel pump motor [Fire Flex engines]."
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 44.1844080364501,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Body Computer (rear wiper)"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 76.9743401995612,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Electronic injection control unit [only in vehicles without satellite tracker], start signal for electronic injection control unit, starter motor (relay T17)"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 75.1144186046511,
+          "left": 29.7008547008547,
+          "width": 2.4749902660536547,
+          "height": 6.441880293476022
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Lambda sensor, canister solenoid valve, phase variator",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 38.71941934259826,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Relay T09 - Power supply for fuses F11, F17, F22, satellite tracker, electronic injection control unit"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 60.579374118005646,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Air conditioning compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/air-conditioning-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 5.929487179487179,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Diagnostic socket, power window control unit, original alarm (volumetric sensor and siren), aftermarket alarm control unit, radio, USB port, radio stabilization unit.",
+        "relatedEntities": [
+          "ESTEREO",
+          "CONECTOR_USB"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/radio-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 22.32445326104272,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/fuel-pump-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 75.1144186046511,
+          "left": 35.042735042735046,
+          "width": 2.4749902660536547,
+          "height": 6.441880293476022
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Injectors and ignition coil, electronic injection control unit",
+        "relatedEntities": [
+          "INYECTOR",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 33.254430648746414,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 71.50935150570935,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 27.789441954894563,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F83",
+        "layout": {
+          "top": 57.36434108527132,
+          "left": 45.3525641025641,
+          "width": 19.12393162393162,
+          "height": 5.116279069767443
+        },
+        "kind": {
+          "format": "maxi",
+          "type": "fuse",
+          "amp": 40
+        },
+        "description": "Air box electric fan"
+      },
+      {
+        "id": "F84",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 11.394475873339026,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Fog lights",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/fog-light-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F87",
+        "layout": {
+          "top": 87.51276155598839,
+          "left": 66.0443628118575,
+          "width": 2.3898323837076383,
+          "height": 6.4408973151527835
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Fog lights (relay T35), heated rear window (relay T08), air conditioning compressor (relay T05), cold start tank fuel level sensor, cold start tank electric pump."
+      },
+      {
+        "id": "F100",
+        "layout": {
+          "top": 29.767441860465116,
+          "left": 73.71794871794873,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F101",
+        "layout": {
+          "top": 24.573643410852714,
+          "left": 73.71794871794873,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Battery voltage sensor"
+      },
+      {
+        "id": "F102",
+        "layout": {
+          "top": 29.92248062015504,
+          "left": 57.21153846153846,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Front electric power window control unit"
+      },
+      {
+        "id": "F103",
+        "layout": {
+          "top": 24.496124031007753,
+          "left": 57.21153846153846,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Rear electric power window control unit"
+      },
+      {
+        "id": "F104",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 73.71794871794873,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Body Computer (door locking)"
+      },
+      {
+        "id": "F105",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 57.21153846153846,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "F106",
+        "layout": {
+          "top": 29.76744186046512,
+          "left": 83.99183640219027,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Airbag control unit"
+      },
+      {
+        "id": "F107",
+        "layout": {
+          "top": 29.92248062015504,
+          "left": 45.993589743589745,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Ignition signal for body computer, air box electric fan, power outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/cigarette-lighter-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F108",
+        "layout": {
+          "top": 24.573643410852714,
+          "left": 83.99183640219027,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Power outlet lighting, steering wheel button lighting, central dashboard control lighting, aftermarket alarm control unit",
+        "relatedEntities": [
+          "BACKLIGHT(of=TOMA_12V)",
+          "BACKLIGHT(of=COMANDOS_VOLANTE)"
+        ]
+      },
+      {
+        "id": "F109",
+        "layout": {
+          "top": 8.992248062015504,
+          "left": 83.99183640219027,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Brake switch NC contact (signal for body computer), reverse switch (lights and signal for electronic injection control unit), air box, air box lighting, radio, parking control unit",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/radio-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F110",
+        "layout": {
+          "top": 19.37984496124031,
+          "left": 83.99183640219027,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Ignition signal for the body computer"
+      },
+      {
+        "id": "F111",
+        "layout": {
+          "top": 75.1144186046511,
+          "left": 40.38461538461539,
+          "width": 2.4749902660536547,
+          "height": 6.441880293476022
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F112",
+        "layout": {
+          "top": 6.106758642306093,
+          "left": 16.08058282836055,
+          "width": 3.395562678691487,
+          "height": 7.2268259780304485
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F113",
+        "layout": {
+          "top": 24.651162790697676,
+          "left": 45.993589743589745,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F114",
+        "layout": {
+          "top": 6.3565891472868215,
+          "left": 10.576923076923077,
+          "width": 2.8846153846153846,
+          "height": 6.666666666666667
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F115",
+        "layout": {
+          "top": 19.379844961240313,
+          "left": 45.993589743589745,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "Free"
+      },
+      {
+        "id": "F116",
+        "layout": {
+          "top": 14.186046511627907,
+          "left": 83.99183640219027,
+          "width": 6.476524454033942,
+          "height": 2.263152910586883
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Brake switch NO contact (Functions: signal for body computer, brake light activation, signal for electronic injection control unit), instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "F85",
+        "layout": {
+          "top": 68.29597976667998,
+          "left": 26.550820721481863,
+          "width": 11.108621560012056,
+          "height": 2.7374340825872956
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Power outlet and cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V",
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/uno/info/fusebox/2019/cigarette-lighter-fuse",
+            "urlWithAnchor": "/fiat/uno/info/fusebox/2019/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "T35",
+        "layout": {
+          "top": 3.7936511006589693,
+          "left": 59.70178350517293,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T14",
+        "layout": {
+          "top": 3.7936511006589693,
+          "left": 42.38876411459122,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T02",
+        "layout": {
+          "top": 3.7936511006589693,
+          "left": 24.77574472400952,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T10",
+        "layout": {
+          "top": 15.182981977469959,
+          "left": 24.77574472400952,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T05",
+        "layout": {
+          "top": 26.907293174187153,
+          "left": 24.77574472400952,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T20",
+        "layout": {
+          "top": 37.96164373109193,
+          "left": 24.77574472400952,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T19",
+        "layout": {
+          "top": 56.38556132593324,
+          "left": 24.44444278495135,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T03",
+        "layout": {
+          "top": 15.182981977469959,
+          "left": 7.416464945616154,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T17",
+        "layout": {
+          "top": 27.242273494093354,
+          "left": 7.416464945616154,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T06",
+        "layout": {
+          "top": 38.29662405099814,
+          "left": 7.416464945616154,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T08",
+        "layout": {
+          "top": 50.020935247715336,
+          "left": 7.416464945616154,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T31",
+        "layout": {
+          "top": 61.075285804620115,
+          "left": 7.416464945616154,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T09",
+        "layout": {
+          "top": 72.1296363615249,
+          "left": 7.416464945616154,
+          "width": 14.914681440443214,
+          "height": 9.92057101260686
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T30",
+        "layout": {
+          "top": 65.76501028330699,
+          "left": 46.89014915614247,
+          "width": 15.235457063711905,
+          "height": 17.08399631521648
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": ""
+        }
+      },
+      {
+        "id": "T07",
+        "layout": {
+          "top": 65.76501028330699,
+          "left": 73.20593862982668,
+          "width": 15.235457063711905,
+          "height": 17.08399631521648
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": ""
+        }
+      }
+    ],
+    "boxName": "Engine Fuse Box",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ef39f4a5d2b0a00043cd38e/fragment-5ef39f4a5d2b0a00043cd38e-00d84e36cf.jpg",
+      "source": "61b28afb6866ff00046f1e17"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ef39f4a5d2b0a00043cd38e/fragment-5ef39f4a5d2b0a00043cd38e-d8ed5fe811.jpg",
+        "source": "61b28b016866ff00046f1e18"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ef39f4a5d2b0a00043cd38e/fragment-5ef39f4a5d2b0a00043cd38e-df51176fdf.jpg",
+        "source": "61b28b076866ff00046f1e19"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.0336538461538463,
+    "templateId": "61981c52c294220004394c91",
+    "imageClusters": [
+      "61e70e80dd76840004c927d1"
+    ],
+    "isTranslated": true,
+    "boxRotation": 180,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-uno-2019-genid-g2-0.webp"
+  }
+]

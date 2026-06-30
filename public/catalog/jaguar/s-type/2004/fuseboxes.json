@@ -1,0 +1,2580 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 5.269138057629972,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        }
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 7.96800220276151,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Engine management system (EMS) engine control module. Vacuum solenoid.",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 10.666866347893048,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Auxiliary fuel fired heater."
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 13.365730493024587,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "ABS valves, vbatt.",
+        "relatedEntities": [
+          "VALVULA(of=SISTEMA_ABS)"
+        ]
+      },
+      {
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 16.064594638156127,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        }
+      },
+      {
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 21.62584394419671,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 25.983053361748365,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 30.340262779300016,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 34.69747219685167,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Gasoline HEGO sensors, ignition EMS relays."
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 39.05468161440332,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 43.41189103195497,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Headlight powerwash."
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 43.41189103195497,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Headlight powerwash."
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 11.55658631012196,
+          "left": 47.769100449506624,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Wipers.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 7.9029850746268675,
+          "left": 53.462665878686956,
+          "width": 4.990476190476195,
+          "height": 10.832835820895532
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 80
+        },
+        "description": "Cooling fan.",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/cooling-fan-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 75.41046580347067,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right-hand dipped beam high intensity discharge (HID) light."
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 77.74759924805836,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front fog light.",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/fog-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 80.08473269264606,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horns.",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/horn-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 82.42186613723375,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel injectors."
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 84.75899958182129,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Throttle motor."
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 84.75899958182129,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Throttle motor."
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 87.09613302640898,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "[Petrol] Ignition coil on plugs supply. [Diesel] Pressure control valve, volume control valve"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 87.09613302640898,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "[Petrol] Ignition coil on plugs supply. [Diesel] Pressure control valve, volume control valve"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 89.43326647099667,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "[Petrol] Right-hand oxygen sensor heaters. [Diesel] Engine management system engine control unit."
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 89.43326647099667,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "[Petrol] Right-hand oxygen sensor heaters. [Diesel] Engine management system engine control unit."
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 91.77039991558435,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Rain sense module."
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 11.0250483937506,
+          "left": 94.10753336017204,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        }
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 22.406835418936495,
+          "left": 5.628970791024194,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 22.406835418936495,
+          "left": 10.634168307510578,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 21.62584394419671,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Right-hand windscreen heater."
+      },
+      {
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 25.983053361748365,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 30.340262779300016,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Starter motor solenoid.",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 34.69747219685167,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS pump motor."
+      },
+      {
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 39.05468161440332,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        }
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 43.41189103195497,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Left-hand windscreen heater."
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 47.769100449506624,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "ABS module (ABS valves)."
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 22.052476808022252,
+          "left": 47.769100449506624,
+          "width": 3.9779761904761903,
+          "height": 7.162313432835826
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS module (ABS valves)."
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 75.41046580347067,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air compressor clutch, auxiliary coolant pump.",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/air-conditioning-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 77.74759924805836,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control module and transmission control module battery supply.",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 80.08473269264606,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left-hand dipped beam high intensity discharge (HID) light."
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 82.42186613723375,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Left-hand oxygen sensor heaters."
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 82.42186613723375,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Left-hand oxygen sensor heaters."
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 84.75899958182129,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Intercooler pump [supercharged model]."
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 87.09613302640898,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Air flow meter, purge valve, inlet manifold tuning valves [V6 only], EGR valve [V8 only], air filter solenoid [V8 S/C only], MAF sensors, VGT, canister close valve.",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER",
+          "SENSOR_CAUDAL_DE_AIRE"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 87.09613302640898,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air flow meter, purge valve, inlet manifold tuning valves [V6 only], EGR valve [V8 only], air filter solenoid [V8 S/C only], MAF sensors, VGT, canister close valve.",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER",
+          "SENSOR_CAUDAL_DE_AIRE"
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 89.43326647099667,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control module, ignition supply, cooling fan module, air conditioner clutch relay.",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR",
+          "VENTILADOR_RADIADOR",
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/cooling-fan-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/air-conditioning-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 91.77039991558435,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        },
+        "description": "Ignition relay diode.",
+        "relatedEntities": [
+          "RELAY(protects=ARRANQUE)"
+        ],
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "40",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 22.16076002673271,
+          "left": 94.10753336017204,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        }
+      },
+      {
+        "id": "41",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 14.505299512360244,
+          "left": 62.15314206916313,
+          "width": 3.571428571428571,
+          "height": 2.025373134328358
+        }
+      },
+      {
+        "id": "42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 17.863508467584122,
+          "left": 62.15314206916313,
+          "width": 3.571428571428571,
+          "height": 2.025373134328358
+        }
+      },
+      {
+        "id": "43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.22171742280801,
+          "left": 62.15314206916313,
+          "width": 3.571428571428571,
+          "height": 1.8388059701492532
+        }
+      },
+      {
+        "id": "44",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.465801749579526,
+          "left": 54.11897240280092,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        }
+      },
+      {
+        "id": "45",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.465801749579526,
+          "left": 56.38087716470568,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        }
+      },
+      {
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.465801749579526,
+          "left": 58.642781926610446,
+          "width": 1.1991848875484004,
+          "height": 5.2701305098898334
+        }
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 36.343045580037455,
+          "left": 8.618573040348142,
+          "width": 8.214285714285714,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 36.343045580037455,
+          "left": 19.644200290119805,
+          "width": 8.095238095238095,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 35.96991125167924,
+          "left": 30.49125611132004,
+          "width": 8.333333333333332,
+          "height": 13.805970149253731
+        }
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 36.343045580037455,
+          "left": 41.57640717061551,
+          "width": 8.095238095238095,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 36.343045580037455,
+          "left": 52.482986801339564,
+          "width": 8.214285714285714,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 52.220030252705286,
+          "left": 8.940928383387952,
+          "width": 6.547619047619048,
+          "height": 7.08955223880597
+        }
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 52.220030252705286,
+          "left": 18.202833145292715,
+          "width": 6.428571428571428,
+          "height": 7.08955223880597
+        }
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 52.220030252705286,
+          "left": 27.405214097673667,
+          "width": 6.428571428571428,
+          "height": 7.08955223880597
+        }
+      },
+      {
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 52.220030252705286,
+          "left": 36.488547431007,
+          "width": 6.666666666666667,
+          "height": 7.462686567164178
+        }
+      },
+      {
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 52.220030252705286,
+          "left": 45.69092838338795,
+          "width": 6.666666666666667,
+          "height": 7.462686567164178
+        }
+      },
+      {
+        "id": "R11",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 52.220030252705286,
+          "left": 55.01235695481652,
+          "width": 6.428571428571428,
+          "height": 7.08955223880597
+        }
+      },
+      {
+        "id": "R12",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 64.11338946655805,
+          "left": 10.552705098587008,
+          "width": 8.214285714285714,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R13",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 64.11338946655805,
+          "left": 20.42128933182901,
+          "width": 8.214285714285714,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R14",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 64.11338946655805,
+          "left": 30.34939737459482,
+          "width": 8.095238095238095,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R15",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 64.45836021875036,
+          "left": 39.39392718350973,
+          "width": 4.0476190476190474,
+          "height": 11.194029850746269
+        }
+      },
+      {
+        "id": "R16",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 64.45836021875036,
+          "left": 45.28678432636688,
+          "width": 4.0476190476190474,
+          "height": 11.194029850746269
+        }
+      },
+      {
+        "id": "R17",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 64.45836021875036,
+          "left": 51.0605938501764,
+          "width": 4.285714285714286,
+          "height": 11.380597014925373
+        }
+      },
+      {
+        "id": "R18",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 64.45836021875036,
+          "left": 57.01297480255735,
+          "width": 4.166666666666666,
+          "height": 11.194029850746269
+        }
+      },
+      {
+        "id": "R19",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 79.48699979902048,
+          "left": 10.552705098587008,
+          "width": 8.214285714285714,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R20",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 79.48699979902048,
+          "left": 20.42128933182901,
+          "width": 8.214285714285714,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "R21",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 79.66417910447761,
+          "left": 30.34939737459482,
+          "width": 8.095238095238095,
+          "height": 13.432835820895523
+        }
+      },
+      {
+        "id": "FP",
+        "kind": {
+          "type": "fusepuller",
+          "format": ""
+        },
+        "layout": {
+          "top": 15.742931914072162,
+          "left": 67.96281303016148,
+          "width": 3.9122491585602504,
+          "height": 5.465037225255296
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0150 0.5818 A 0.5672 0.5672 0 0 1 0.5820 0.0000 L 99.4180 0.0001 A 0.5820 0.5820 0 0 1 100.0000 0.5821 L 99.9999 15.8020 A 0.5820 0.5820 0 0 1 99.4179 16.3840 L 66.5949 16.3839 A 0.5978 0.5978 0 0 0 65.9973 16.9657 L 65.2203 46.0276 A 0.5978 0.5978 0 0 1 64.6227 46.6093 L 40.9198 46.6093 A 0.5820 0.5820 0 0 0 40.3378 47.1913 L 40.3377 58.0797 A 0.5820 0.5820 0 0 1 39.7557 58.6617 L 6.3786 58.6618 A 0.5988 0.5988 0 0 1 5.7800 58.0800 L 5.4668 47.0969 A 8.0995 8.0995 0 0 0 5.3506 45.9418 L 3.5873 35.7894 A 63.0173 63.0173 0 0 1 3.3987 34.6408 L 0.4808 15.7821 A 9.0998 9.0998 0 0 1 0.3769 14.6252 Z"
+        ],
+        "svgViewBoxH": 58.661757360322994,
+        "layout": {
+          "top": 5.984053776324521,
+          "left": 3.262069203887604,
+          "width": 94.04163348780966,
+          "height": 90.96391466887736
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.6064516129032258,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/c62b07da_jaguar-s-type-2003.jpg"
+    },
+    "boxName": "Engine fuse box",
+    "imageClusters": [
+      "6449693b85070df59bfbea49"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9a9a3d01_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/66051c76_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8f89b16b_image.jpg"
+      }
+    ],
+    "templateId": "65861df16d877fda819f70ba",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-jaguar-s-type-2004-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 54.59389962540628,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Passenger compartment fusebox - battery supply.",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=BATERIA)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 58.839729438223664,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Cigar lighter and power point relay.",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "RELAY(protects=TOMA_12V)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 58.839729438223664,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Cigar lighter and power point relay.",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "RELAY(protects=TOMA_12V)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 64.92570297185938,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Ignition switch.",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 69.27521414881645,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Left-hand rear window raise/lower."
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 73.62472532577326,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Driver's window raise/lower."
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 77.97423650273029,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Front passenger's window raise/lower."
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 82.32374767968739,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Right-hand rear window raise/lower."
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 86.67325885664428,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        }
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 89.18182432642726,
+          "left": 91.02277003360129,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        }
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 80.75646369587535,
+          "left": 64.92570297185938,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Blower motor.",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 80.75646369587535,
+          "left": 69.27521414881637,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Passenger seat.",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 80.75646369587535,
+          "left": 73.62472532577335,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switch system power 1 relay."
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 80.75646369587535,
+          "left": 77.97423650273035,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switch system power 2 relay."
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 80.75646369587535,
+          "left": 82.32374767968733,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switch system power 3 relay."
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 80.75646369587535,
+          "left": 86.67325885664431,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Driver's seat.",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 80.75646369587535,
+          "left": 91.02277003360129,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        }
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 72.33110306532348,
+          "left": 64.92570297185938,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        }
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 72.33110306532348,
+          "left": 69.27521414881637,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Driver's seat.",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 72.33110306532348,
+          "left": 73.62472532577335,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Passenger's seat.",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 72.33110306532348,
+          "left": 77.97423650273035,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switch system power 4 relay."
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 72.33110306532348,
+          "left": 82.32374767968733,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Heated rear window, heated mirrors.",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 72.33110306532348,
+          "left": 86.67325885664431,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        }
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 72.33110306532348,
+          "left": 91.02277003360129,
+          "width": 3.6447775496496186,
+          "height": 5.19036190195751
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Fuel pumps.",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/fuel-pump-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 53.41605396354365,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Tire pressure module."
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 55.85801055483063,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "CD player."
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 58.29996714611764,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Adaptive damping."
+      },
+      {
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 60.74192373740465,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        }
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 63.18388032869167,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Remote audio power amplifier."
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 65.62583691997865,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Telephone, Navigation.",
+        "relatedEntities": [
+          "NAVEGADOR"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 68.06779351126563,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Alternator sense [V8 S/C only]."
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 72.99615912287152,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof control module.",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/sunroof-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 75.42330620129444,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver's seat.",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 77.85045327971746,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Transit relay."
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 80.27760035814035,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left/right-hand heater seat module."
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 80.27760035814035,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Left/right-hand heater seat module."
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 82.70474743656327,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Electric parkbrake."
+      },
+      {
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 85.13189451498619,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        }
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 87.5590415934091,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Passenger seat.",
+        "relatedEntities": [
+          "ASIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 89.98618867183204,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        }
+      },
+      {
+        "id": "39",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 92.41333575025503,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        }
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 48.5321407809696,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fuel pump relay diode.",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ]
+      },
+      {
+        "id": "41",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.72447875812614,
+          "left": 50.97409737225659,
+          "width": 1.4396790299839117,
+          "height": 4.83998236361976
+        }
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 14.954794184392743,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Driver/passenger heated door mirrors."
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 14.954794184392743,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver/passenger heated door mirrors."
+      },
+      {
+        "id": "43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 17.258608001878898,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        }
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 19.562421819365053,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left-hand rear reverse light, direction indicator, side marker, trailer tow relay and module.",
+        "relatedEntities": [
+          "RELAY(protects=REMOLQUE)",
+          "ECU",
+          "MODULO"
+        ]
+      },
+      {
+        "id": "45",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 21.866235636851204,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        }
+      },
+      {
+        "id": "46",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 24.17004945433736,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Luggage compartment lid and interior lights, fuel filler flap solenoid.",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 26.473863271823515,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear electronic module, fuel pump driver."
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 28.77767708930967,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right-hand rear reverse light, direction indicator, side marker, number plate light."
+      },
+      {
+        "id": "49",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 31.08149090679582,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Secondary fuel pump module [S/C only]."
+      },
+      {
+        "id": "50",
+        "layout": {
+          "top": 11.726660409401472,
+          "left": 33.38530472428198,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Transit relay."
+      },
+      {
+        "id": "51",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 4.9480064339887955,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ACC.",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 7.062785084346597,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Electric parkbrake."
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 9.177563734704398,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right-hand rear stop, tail and fog lights, high mounted stop light.",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/fog-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "54",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 11.292342385062199,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        }
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 13.407121035419998,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Footwell lights, roof courtesy lights, map lights, visor light, puddle light, glove compartment light, garage door opener."
+      },
+      {
+        "id": "56",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 15.5218996857778,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Cigar lighter.",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "57",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 17.6366783361356,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left-hand rear stop, tail and fog lights.",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/fog-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 19.7514569864934,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Power point.",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 5.363018723940668,
+          "left": 21.866235636851204,
+          "width": 1.325606116401221,
+          "height": 3.944927541511911
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear electronic module, rear and passenger door locks, boot solenoid.",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_DERECHO)",
+          "CERRADURA(of=PUERTA(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "60",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 75.34692455567846,
+          "left": 54.91421884204442,
+          "width": 3.3268604369953936,
+          "height": 1.881795305967431
+        }
+      },
+      {
+        "id": "61",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 77.95248728701796,
+          "left": 54.91421884204442,
+          "width": 3.3268604369953936,
+          "height": 1.881795305967431
+        }
+      },
+      {
+        "id": "62",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 80.55805001835748,
+          "left": 54.91421884204442,
+          "width": 3.3268604369953936,
+          "height": 1.881795305967431
+        }
+      },
+      {
+        "id": "63",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 75.34692455567846,
+          "left": 59.07279438828865,
+          "width": 3.2080439928169873,
+          "height": 1.881795305967431
+        }
+      },
+      {
+        "id": "64",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 77.95248728701796,
+          "left": 59.07279438828865,
+          "width": 3.2080439928169873,
+          "height": 1.881795305967431
+        }
+      },
+      {
+        "id": "65",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 80.55805001835748,
+          "left": 59.07279438828865,
+          "width": 3.2080439928169873,
+          "height": 1.881795305967431
+        }
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 54.03585683307688,
+          "left": 46.10912638668632,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 54.03585683307688,
+          "left": 56.49579916647426,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 53.903280964629786,
+          "left": 66.787232767591,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 54.03585683307688,
+          "left": 77.26914472605011,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 42.1812714238265,
+          "left": 42.300136046309696,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 42.1812714238265,
+          "left": 52.58596734279872,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 42.1812714238265,
+          "left": 63.07348160588557,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 45.08665029271778,
+          "left": 72.22707056110448,
+          "width": 6.605117156078742,
+          "height": 5.082074957138836
+        }
+      },
+      {
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 33.336974193185256,
+          "left": 33.562516532787164,
+          "width": 5.243757131543429,
+          "height": 7.954552106826005
+        }
+      },
+      {
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 30.326686014576126,
+          "left": 42.300136046309696,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R11",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 30.326686014576126,
+          "left": 52.58596734279872,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R12",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 33.254198130450796,
+          "left": 62.142922231213326,
+          "width": 6.605117156078742,
+          "height": 5.082074957138836
+        }
+      },
+      {
+        "id": "R13",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 27.155708181884176,
+          "left": 31.427050616768597,
+          "width": 6.605117156078742,
+          "height": 5.082074957138836
+        }
+      },
+      {
+        "id": "R14",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 19.631859937421325,
+          "left": 23.11207693629372,
+          "width": 6.605117156078742,
+          "height": 5.082074957138836
+        }
+      },
+      {
+        "id": "R15",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 19.631859937421325,
+          "left": 31.179395600206657,
+          "width": 6.605117156078742,
+          "height": 5.082074957138836
+        }
+      },
+      {
+        "id": "R16",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 18.47210060532575,
+          "left": 40.925429946718324,
+          "width": 7.694205175706996,
+          "height": 8.882583185955708
+        }
+      },
+      {
+        "id": "R17",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 20.354694583090627,
+          "left": 48.734370885653654,
+          "width": 6.605117156078742,
+          "height": 5.082074957138836
+        }
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 0.0000 L 0.0000 0.0000 L 22.3974 0.0000 A 0.2580 0.2580 0 0 1 22.6554 0.2580 L 22.6554 1.0137 A 0.3605 0.3605 0 0 0 22.8995 1.3549 L 36.2244 5.8985 A 113.9035 113.9035 0 0 1 96.7686 54.4982 L 99.8658 59.5884 A 0.9202 0.9202 0 0 1 99.9999 60.0667 L 100.0000 82.7529 A 0.2795 0.2795 0 0 1 99.7205 83.0323 L 50.5795 83.0323 L 50.5795 83.0323 L 50.5795 62.6719 L 50.5795 62.6719 L 45.7323 62.6719 L 45.7323 62.6719 L 45.7323 62.6719 A 70.9765 70.9765 0 0 0 22.0276 26.6676 L 0.0000 8.8546 L 0.0000 8.3245 Z"
+        ],
+        "svgViewBoxH": 83.03233646564064,
+        "layout": {
+          "top": 3.3676431289586697,
+          "left": 4.064638464720308,
+          "width": 93.26698603851094,
+          "height": 93.29458487377764
+        }
+      }
+    ],
+    "boxAspectRatio": 0.8300653594771242,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/9341f24b_jaguar-s-type-2003.jpg"
+    },
+    "boxName": "Luggage fuse box",
+    "imageClusters": [
+      "6449693b85070df59bfbea49"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ddec166b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7ce88ac5_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/37719277_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/915f99fd_image.jpg"
+      }
+    ],
+    "templateId": "658621806d877fda819f70c7",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-jaguar-s-type-2004-genid-g2-1.webp"
+  }
+]

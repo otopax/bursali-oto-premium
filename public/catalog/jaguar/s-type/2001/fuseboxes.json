@@ -1,0 +1,2490 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 50.81003937007874,
+          "left": 39.441718013669245,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Starter relay coil via Park/Neutral switch"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 50.81003937007874,
+          "left": 43.607333997583154,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Radio and audio system",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 50.81003937007874,
+          "left": 47.772949981497064,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ABS/Dynamic stability control module"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 50.81003937007874,
+          "left": 51.93856596541097,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Inertia switch (fuel pump relay, ignition control relay, rear electronics module), instrument cluster. Powertrain Control Module (PCM) relay coil, transit relay",
+        "relatedEntities": [
+          "TABLERO",
+          "PCM",
+          "RELAY",
+          "BOBINA"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 50.81003937007874,
+          "left": 56.10418194932488,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Autolamp sensor, traction control switch, overdrive cancel switch, heated seat modules, brake shift interlock",
+        "relatedEntities": [
+          "INTERRUPTOR(of=CONTROL_DE_TRACCION)",
+          "INTERRUPTOR_OVERDRIVE_OFF",
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "MODULO(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "MODULO(of=CALEFACCION_DE_ASIENTO)"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 50.81003937007874,
+          "left": 60.26979793323879,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "OBD-II connector"
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 50.81003937007874,
+          "left": 64.43541391715272,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Driver's Door Module (DDM), Driver's Seat Module (DSM), Powertrain Control Module (PCM), Passive Anti-Theft System (PATS) LED, security hom, power mirror",
+        "relatedEntities": [
+          "PCM",
+          "INMOVILIZADOR",
+          "LUZ",
+          "LUZ_TESTIGO",
+          "LUCES_DELANTERAS",
+          "ESPEJO_ELECTRICO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 10.282406126271871,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Front right turn indicator, sidemarker, park, repeater lamps"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 14.448022110185782,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right-hand dipped beam, left-hand HID relay coil",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)",
+          "BOBINA(of=RELAY(protects=LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)))",
+          "RELAY(protects=RELAY(protects=LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)))",
+          "RELAY(protects=LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 18.61363809409969,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Front left turn indicator, sidemarker, park, repeater lamps"
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 22.7792540780136,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left-hand main beam",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 26.94487006192751,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Headlamp levelling"
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 31.11048604584142,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ],
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 35.276102029755336,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Restraints Control Module (Airbag), Dual Automatic Temperature Control Module",
+        "relatedEntities": [
+          "MODULO",
+          "AIRBAG",
+          "MODULO_AIRBAG"
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 39.441718013669245,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Adaptive damping module (CATS)"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 43.607333997583154,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Heated seat switch module, electrochromic mirror, rain sensor",
+        "relatedEntities": [
+          "INTERRUPTOR(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "INTERRUPTOR(of=CALEFACCION_DE_ASIENTO)",
+          "SENSOR_DE_LLUVIA"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 47.772949981497064,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Restraints Control Module (Airbag), alternator warning lamp",
+        "relatedEntities": [
+          "MODULO",
+          "AIRBAG",
+          "MODULO_AIRBAG"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 51.93856596541097,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Radio, cellular phone, navigation",
+        "relatedEntities": [
+          "ESTEREO",
+          "NAVEGADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 56.10418194932488,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Steering column tilt and reach motors"
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 60.2697979332388,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Generic Electronic Module (GEM), air conditioning, instrument cluster, rear electronic control module",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "AIRE_ACONDICIONADO",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 64.92027559055117,
+          "left": 64.43541391715272,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Power folding mirror, sunblind",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 10.282406126271871,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver's door module battery supply (driver's door mirror, locks)",
+        "relatedEntities": [
+          "CERRADURA"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 14.448022110185782,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right-hand main beam",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 18.61363809409969,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Passive anti-theft system",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 22.7792540780136,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left-hand dipped beam, right-hand HID relay coil",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)",
+          "BOBINA(of=RELAY(protects=LUCES_DELANTERAS(ubicacion=LADO_DERECHO)))",
+          "RELAY(protects=RELAY(protects=LUCES_DELANTERAS(ubicacion=LADO_DERECHO)))",
+          "RELAY(protects=LUCES_DELANTERAS(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 26.94487006192751,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "-",
+        "extendedDescription": "-"
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 31.11048604584142,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Navigation display, radio, phone, navigation module, traffic master",
+        "relatedEntities": [
+          "ESTEREO",
+          "NAVEGADOR",
+          "MODULO_GPS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 35.276102029755336,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Security horn"
+      },
+      {
+        "id": "F29",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 39.441718013669245,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Voice control, reverse park aid, trailer tow ignition sense, Vehicle Emergency Messaging System (VEMS), Generic Electronic Module (GEM)",
+        "relatedEntities": [
+          "ASISTENCIA_DE_ESTACIONAMIENTO",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 43.607333997583154,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Generic Electronic Module (GEM), passenger power mirror",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "ESPEJO_ELECTRICO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 47.772949981497064,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 51.93856596541097,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Accessory relay (cigar lighter, power point)",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/cigarette-lighter-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 56.10418194932488,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Generic Electronic Module (GEM)",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 60.2697979332388,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "F35",
+        "layout": {
+          "top": 78.0226377952756,
+          "left": 64.43541391715272,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Stop lamp switch"
+      },
+      {
+        "id": "S1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 41.61318897637795,
+          "left": 26.289898995274385,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "S2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 41.61318897637795,
+          "left": 30.547210928519732,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "S3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 41.61318897637795,
+          "left": 34.80452286176508,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "S4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.56594488188977,
+          "left": 26.289898995274385,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "S5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.56594488188977,
+          "left": 30.547210928519732,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "S6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.56594488188977,
+          "left": 34.80452286176508,
+          "width": 2.128655966622677,
+          "height": 7.8110236220472515
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 41.36122047244095,
+          "left": 8.579481352973731,
+          "width": 14.645153050364,
+          "height": 20.913385826771652
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "amp": 40,
+          "variation": "yellow"
+        },
+        "description": "Accessory relay (cigar lighter, power point)",
+        "relatedEntities": [
+          "TOMA_12V"
+        ]
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 16.038385826771652,
+          "left": 11.21901475158585,
+          "width": 7.322576525182001,
+          "height": 19.1496062992126
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 15.534448818897637,
+          "left": 26.545337711269102,
+          "width": 9.706671207799399,
+          "height": 11.212598425196852
+        }
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 15.534448818897637,
+          "left": 48.00218985482566,
+          "width": 9.706671207799399,
+          "height": 11.212598425196852
+        }
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 39.471456692913385,
+          "left": 47.18043499084678,
+          "width": 5.449359274554048,
+          "height": 7.433070866141733,
+          "rotation": 90
+        }
+      }
+    ],
+    "boxName": "Passenger Compartment",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/81231579_jaguar-s-type-1999.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3ac229a3_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/aa4c6b8c_image.jpg"
+      },
+      {
+        "url": "https://car-box.info/sites/default/files/images2/2022_10_21_08_03_558_tech_imag.jpg"
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/7836037e_jaguar-s-type-1999.jpg"
+    },
+    "templateId": "680a37a3f291fa64c05ec3e3",
+    "boxAspectRatio": 0.6758409785932722,
+    "imageClusters": [
+      "6449694085070df59bfbea69"
+    ],
+    "backgroundColor": "#f7e6ba",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-jaguar-s-type-2001-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 84.06988188976376,
+          "left": 9.225666307838573,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air conditioning clutch (auxiliary water pump - V8 engine only)",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 80.374343832021,
+          "left": 9.225666307838573,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Windshield washer pump",
+        "relatedEntities": [
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 76.67880577427822,
+          "left": 9.225666307838573,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fog lamps, LH/RH",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 72.98326771653544,
+          "left": 9.225666307838573,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horns",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/horn-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 84.06988188976376,
+          "left": 21.66258350008015,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel injection",
+        "relatedEntities": [
+          "INYECCION"
+        ],
+        "extendedDescription": "Multiport fuel injection system"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 80.374343832021,
+          "left": 21.66258350008015,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Transmission solenoid"
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 76.67880577427822,
+          "left": 21.66258350008015,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        }
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 72.98326771653544,
+          "left": 21.66258350008015,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        }
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 84.06988188976376,
+          "left": 30.644801472254617,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        }
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 80.374343832021,
+          "left": 30.644801472254617,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 76.67880577427822,
+          "left": 30.644801472254617,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated oxygen sensors, air conditioning clutch coil relay",
+        "relatedEntities": [
+          "RELAY(protects=RELAY(protects=CLUTCH_AIRE_ACONDICIONADO))"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 72.98326771653544,
+          "left": 30.644801472254617,
+          "width": 7.047586408936894,
+          "height": 2.8976377952755996
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Coil on plugs"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 62.90452755905513,
+          "left": 13.371305371919098,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "LH heated windshield"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 56.47933070866143,
+          "left": 13.371305371919098,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS module",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 50.054133858267726,
+          "left": 13.371305371919098,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "RH heated windshield or Heated wiper park"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 43.62893700787402,
+          "left": 13.371305371919098,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Blower motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 37.20374015748032,
+          "left": 13.371305371919098,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        }
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 30.778543307086615,
+          "left": 13.371305371919098,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Powertrain Control Module (PCM)",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 62.90452755905513,
+          "left": 24.564530844936517,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        }
+      },
+      {
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 56.47933070866143,
+          "left": 24.564530844936517,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        }
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 50.054133858267726,
+          "left": 24.564530844936517,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Starter solenoid",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 43.62893700787402,
+          "left": 24.564530844936517,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS motor",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 37.20374015748032,
+          "left": 24.564530844936517,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ],
+        "extendedDescription": "Wipers"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 30.778543307086615,
+          "left": 24.564530844936517,
+          "width": 8.29127812816105,
+          "height": 6.0472440944881924
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Headlamp washer pump"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 12.763726727247116,
+          "left": 60.146154608845116,
+          "width": 10.307789379425474,
+          "height": 6.75511811023622
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "amp": 80
+        },
+        "description": "Cooling fan motor",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "D1",
+        "layout": {
+          "top": 38.04154843007073,
+          "left": 46.68366600935257,
+          "width": 8.429466096963736,
+          "height": 2.645669291338585
+        },
+        "description": "Powertrain control diode",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 43.28152455109782,
+          "left": 37.41601194358614,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Wiper high/low relay",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "RELAY",
+          "RELAY(protects=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 24.353346456692915,
+          "left": 37.41601194358614,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Wiper park relay"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 10.72547222432821,
+          "left": 37.41601194358614,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Powertrain control relay 2"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 56.98326771653544,
+          "left": 47.503733666182086,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Throttle control relay"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 43.28152455109782,
+          "left": 47.503733666182086,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Auxiliary coolant pump relay (v8)"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 24.353346456692915,
+          "left": 47.503733666182086,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/horn-relay",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 10.72547222432821,
+          "left": 47.503733666182086,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Front fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))"
+        ],
+        "extendedDescription": "Front fog lights"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 23.04129932090675,
+          "left": 58.784342577647784,
+          "width": 12.436917192241573,
+          "height": 7.559055118110241
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "A/C compressor clutch relay",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/air-conditioning-relay",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 56.98326771653544,
+          "left": 37.41601194358614,
+          "width": 8.291278128161053,
+          "height": 11.842519685039372
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 71.01160117622852,
+          "left": 40.87071116365325,
+          "width": 13.818796880268415,
+          "height": 12.850393700787407
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Blower motor relay",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 66.05858916620652,
+          "left": 61.73709445285855,
+          "width": 13.818796880268415,
+          "height": 12.850393700787407
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Wiper park heater relay / RH windshield heater relay"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 49.74183761331757,
+          "left": 61.73709445285855,
+          "width": 13.818796880268415,
+          "height": 12.850393700787407
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "LH windshield heater relay"
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 33.74996073822959,
+          "left": 58.3370944528585,
+          "width": 13.818796880268415,
+          "height": 12.850393700787407
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Powerwash relay"
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 66.05858916620652,
+          "left": 77.90508680277259,
+          "width": 13.818796880268415,
+          "height": 12.850393700787407
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Powertrain control relay 1"
+      },
+      {
+        "id": "R15",
+        "layout": {
+          "top": 49.74183761331757,
+          "left": 77.90508680277259,
+          "width": 13.818796880268415,
+          "height": 12.850393700787407
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Starter relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/starter-relay",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      }
+    ],
+    "boxName": "Engine Compartment",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/ca364477_jaguar-s-type-1999.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4e4f1e65_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1d73b343_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/25e6a9d2_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "66f693c0153d5a6e5d48d890"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/f68b80b8_jaguar-s-type-1999.jpg"
+    },
+    "templateId": "680a3bd8f291fa64c05ec3f8",
+    "boxAspectRatio": 1.0968421052631578,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-jaguar-s-type-2001-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 4.633401046348425,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Luggage compartment lid release"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 7.964841963539449,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right rear - reverse lamp, direction indicator, side markers, fog lamps, licence plate",
+        "relatedEntities": [
+          "LUZ_RETROCESO",
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 11.296282880730471,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left stop lamp, tail lamp, trailer tow relay",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_FRENO(ubicacion=LADO_IZQUIERDO))",
+          "LUZ_FRENO(ubicacion=LADO_IZQUIERDO)",
+          "LUCES_TRASERAS",
+          "RELAY(protects=REMOLQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/brake-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          },
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/tail-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 14.627723797921494,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuel flap release, trunk lamp",
+        "relatedEntities": [
+          "LUZ_BAUL",
+          "TESTIGO_BAUL"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 17.959164715112518,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Courtesy and map lamps"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 21.290605632303542,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left rear - reverse lamp, direction indicator, side markers, fog lamps",
+        "relatedEntities": [
+          "LUZ_RETROCESO",
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 24.622046549494563,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right stop lamp, tail lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_FRENO(ubicacion=LADO_DERECHO))",
+          "LUZ_FRENO(ubicacion=LADO_DERECHO)",
+          "LUCES_TRASERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/brake-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          },
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/tail-light-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 27.953487466685587,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "High mounted stop light"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 15.331691380177267,
+          "left": 31.28492838387661,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Heated mirror",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ],
+        "extendedDescription": "Mirror heater"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 4.633401046348425,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Traffic master"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 7.964841963539449,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Seat heaters",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 11.296282880730471,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Transit relay"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 14.627723797921494,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Adaptive damping module"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 17.959164715112518,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Cellular phone, CD changer, Vehicle Emergency Messaging System (VEMS)"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 21.290605632303542,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Alternator Sensor"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 24.622046549494563,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/sunroof-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 27.953487466685587,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/fuel-pump-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 37.67901479524266,
+          "left": 31.28492838387661,
+          "width": 1.7289681600984048,
+          "height": 11.530935925622853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Subwoofer amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=SUBWOOFER)"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 14.51009860756457,
+          "left": 35.779416721862134,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Rear Electronic Module (REM) - left rear window",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))",
+          "LUNETA_TRASERA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 14.51009860756457,
+          "left": 41.8509185117724,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Driver's door module (DDM)-driver's - window",
+        "relatedEntities": [
+          "VENTANILLA"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 14.51009860756457,
+          "left": 47.92242030168266,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Driver's lumbar"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 14.51009860756457,
+          "left": 53.993922091592935,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Ignition",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/starter-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 14.51009860756457,
+          "left": 60.0654238815032,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switched system power 4"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 14.51009860756457,
+          "left": 66.13692567141347,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switched system power 3"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 14.51009860756457,
+          "left": 72.20842746132374,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Primary Junction Box (PJB)"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 38.7448615080818,
+          "left": 35.779416721862134,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Generic Electronic Module (GEM) - passenger window",
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA",
+          "VENTANILLA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 38.7448615080818,
+          "left": 41.8509185117724,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switched system power 1"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 38.7448615080818,
+          "left": 47.92242030168266,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Passenger's lumbar"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 38.7448615080818,
+          "left": 53.993922091592935,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Rear screen defrost"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 38.7448615080818,
+          "left": 60.0654238815032,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Rear Electronic Module (REM) - right rear window",
+        "relatedEntities": [
+          "VENTANILLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))",
+          "LUNETA_TRASERA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 38.7448615080818,
+          "left": 66.13692567141347,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Ignition",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/starter-fuse",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 38.7448615080818,
+          "left": 72.20842746132374,
+          "width": 4.961845736544134,
+          "height": 12.188210143713007
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Switched system power 2"
+      },
+      {
+        "id": "D1",
+        "layout": {
+          "top": 69.55681437261532,
+          "left": 84.90338574931793,
+          "width": 7.254261878853839,
+          "height": 5.09387519019873
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "D2",
+        "layout": {
+          "top": 80.40183897110295,
+          "left": 84.90338574931793,
+          "width": 7.254261878853839,
+          "height": 5.09387519019873
+        },
+        "description": "Fuel pump diode",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 61.17656809196581,
+          "left": 5.2642064271183235,
+          "width": 11.512198199050639,
+          "height": 24.976420287426016
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Switched system power relay 1"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 61.17656809196581,
+          "left": 19.457327494441028,
+          "width": 11.512198199050639,
+          "height": 24.976420287426016
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Switched system power relay 2"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 61.17656809196581,
+          "left": 33.65044856176373,
+          "width": 11.512198199050639,
+          "height": 24.976420287426016
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Heated backlight relay"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 61.17656809196581,
+          "left": 47.84356962908643,
+          "width": 11.512198199050639,
+          "height": 24.976420287426016
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Switched system power relay 3"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 61.17656809196581,
+          "left": 62.03669069640914,
+          "width": 11.512198199050639,
+          "height": 24.976420287426016
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Switched system power relay 4"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 63.86168912106219,
+          "left": 75.39900638296196,
+          "width": 7.806216587027492,
+          "height": 24.319146069335858
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Gearshift interlock relay"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 45.73062396684709,
+          "left": 81.82820951806468,
+          "width": 10.881392818280744,
+          "height": 14.624351352506018
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false,
+          "variation": "yellow"
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/jaguar/s-type/info/fusebox/2001/fuel-pump-relay",
+            "urlWithAnchor": "/jaguar/s-type/info/fusebox/2001/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "Terminal",
+        "kind": {
+          "type": "battery-terminal",
+          "format": ""
+        },
+        "layout": {
+          "top": 20.80647392047217,
+          "left": 81.27625480989103,
+          "width": 15.533582501458739,
+          "height": 14.952988461551097
+        }
+      }
+    ],
+    "boxName": "Luggage Compartment ",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/79c8762c_jaguar-s-type-1999.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ba2f37de_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/5ae7f6a2_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/deeaf611_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "644b06dd3d0b4fcab17d168f"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/45908656_jaguar-s-type-1999.jpg"
+    },
+    "templateId": "680a3da5f291fa64c05ec415",
+    "boxAspectRatio": 0.47987616099071206,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-jaguar-s-type-2001-genid-g2-2.webp"
+  }
+]

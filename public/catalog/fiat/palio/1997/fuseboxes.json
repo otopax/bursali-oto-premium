@@ -1,0 +1,939 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 2.0671834625323,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Windshield wiper, windshield washer, rear window washer.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO",
+          "LAVA_LUNETA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 11.627906976744185,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Front power windows.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 21.31782945736434,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 30.87855297157623,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left high beam.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 40.56847545219638,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Right high beam.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 50.129198966408275,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "-"
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 59.81912144702842,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Front left and rear right position light, right license plate light, power rearview mirror controls illumination, instrument panel lights rheostat.",
+        "relatedEntities": [
+          "LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "LUZ_PATENTE(ubicacion=LADO_DERECHO)",
+          "BACKLIGHT(of=COMANDO(of=ESPEJO_RETROVISOR_ELECTRICO))",
+          "BACKLIGHT(of=COMANDO(of=ESPEJO_ELECTRICO))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 69.37984496124031,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Front right and rear left position light, left license plate light, cigarette lighter illumination, clock illumination, glove compartment light.",
+        "relatedEntities": [
+          "LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))",
+          "LUZ_PATENTE(ubicacion=LADO_IZQUIERDO)",
+          "LUZ_DE_GUANTERA",
+          "BACKLIGHT(of=TOMA_12V)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 79.06976744186046,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Auxiliary headlights.",
+        "relatedEntities": [
+          "LUCES_AUXILIARES"
+        ]
+      },
+      {
+        "layout": {
+          "top": 2.413793103448276,
+          "left": 88.63049095607235,
+          "width": 6.330749354005167,
+          "height": 23.96551724137931
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Power door locks.",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 21.31782945736434,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Rear window defogger.",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 30.87855297157623,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Hazard lights.",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 40.56847545219638,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Horn.",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/horn-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 50.129198966408275,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Brake lights, power rearview mirror adjustment.",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TESTIGO_FRENO_DE_MANO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/brake-light-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 59.81912144702842,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Direction lights, clock, instrument cluster power supply, reverse lights, airbag.",
+        "relatedEntities": [
+          "TESTIGO_DIRECCION_ASISTIDA",
+          "RELOJ",
+          "TABLERO",
+          "LUZ_RETROCESO",
+          "AIRBAG",
+          "ALIMENTACION_ELECTRICA(of=TABLERO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 69.37984496124031,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Air conditioning.",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/air-conditioning-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 79.06976744186046,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left low beam.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.517241379310345,
+          "left": 88.63049095607235,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Right low beam.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/headlight-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.793103448275865,
+          "left": 21.31782945736434,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Internal blower fan, cigarette lighter.",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/cigarette-lighter-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.793103448275865,
+          "left": 30.87855297157623,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Interior light assembly, electronic alarm, clock, radio.",
+        "relatedEntities": [
+          "RELOJ",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/radio-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.793103448275865,
+          "left": 50.129198966408275,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.793103448275865,
+          "left": 59.81912144702842,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Fiat CODE"
+      },
+      {
+        "layout": {
+          "top": 58.793103448275865,
+          "left": 69.37984496124031,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "layout": {
+          "top": 58.793103448275865,
+          "left": 79.06976744186046,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "layout": {
+          "top": 87.24137931034483,
+          "left": 11.886304909560723,
+          "width": 18.087855297157624,
+          "height": 8.448275862068966
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Spare fuse.",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 87.24137931034483,
+          "left": 33.4625322997416,
+          "width": 18.087855297157624,
+          "height": 8.448275862068966
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Spare fuse.",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 87.24137931034483,
+          "left": 55.03875968992248,
+          "width": 18.087855297157624,
+          "height": 8.448275862068966
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Spare fuse.",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 87.24137931034483,
+          "left": 76.61498708010336,
+          "width": 18.087855297157624,
+          "height": 8.448275862068966
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Spare fuse.",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 58.793103448275865,
+          "left": 40.56847545219638,
+          "width": 6.330749354005167,
+          "height": 24.137931034482758
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "-"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.7493540051679587,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/da45f411_fiat-palio-1996.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8c5ce9b2_image.png"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/8402f8c5_image.png"
+      }
+    ],
+    "boxName": "Passenger compartment",
+    "boxDescription": "The fuse box is located under the instrument panel, to the left of the steering wheel.",
+    "imageClusters": [
+      "61e5d69998d9a30004619f1e",
+      "632d9af12fe18950f375ddb5",
+      "61731a190403e300046b2673"
+    ],
+    "templateId": "6198124fc294220004394c8e",
+    "isTranslated": true,
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-palio-1997-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 24.94395642140663,
+          "left": 26.102779264441047,
+          "width": 10.609242554487984,
+          "height": 5.496632715001983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Injection, Fiat CODE.",
+        "relatedEntities": [
+          "INYECCION"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 33.30839750945312,
+          "left": 26.102779264441047,
+          "width": 10.609242554487984,
+          "height": 5.496632715001983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Ignition switch.",
+        "relatedEntities": [
+          "BOTON_DE_ENCENDIDO",
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 24.94395642140663,
+          "left": 39.84038821320113,
+          "width": 10.609242554487984,
+          "height": 5.496632715001983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "General service power supply."
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 33.30839750945312,
+          "left": 39.84038821320113,
+          "width": 10.609242554487984,
+          "height": 5.496632715001983
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "General service power supply."
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 60.07460899120191,
+          "left": 80.91719912929562,
+          "width": 3.4003982546435907,
+          "height": 17.20685023826708
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "ABS.",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 60.07460899120191,
+          "left": 72.62022738796527,
+          "width": 3.4003982546435907,
+          "height": 17.20685023826708
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Radiator electric fan."
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 60.07460899120191,
+          "left": 72.62022738796527,
+          "width": 3.4003982546435907,
+          "height": 17.20685023826708
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Radiator electric fan [with air conditioning]."
+      }
+    ],
+    "boxAspectRatio": 0.5691382765531062,
+    "processed": false,
+    "boxName": "Engine compartment [16V version]",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/5056ec6d_fiat-palio-1996.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/394d74d7_image.png"
+      }
+    ],
+    "templateId": "6203424a296dca0004e6458d",
+    "isTranslated": true,
+    "boxDescription": null,
+    "imageClusters": [
+      "619e96fc2372ff0004fd0314"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-palio-1997-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 40.086755637382424,
+          "left": 64.60406484903544,
+          "width": 12.486826398149951,
+          "height": 6.38637050282842
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Fiat CODE injection."
+      },
+      {
+        "layout": {
+          "top": 32.472236960933145,
+          "left": 64.60406484903544,
+          "width": 12.486826398149951,
+          "height": 6.38637050282842
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Ignition device."
+      },
+      {
+        "layout": {
+          "top": 32.472236960933145,
+          "left": 48.9539090966875,
+          "width": 12.486826398149951,
+          "height": 6.38637050282842
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "General power supply for services."
+      },
+      {
+        "layout": {
+          "top": 40.086755637382424,
+          "left": 48.9539090966875,
+          "width": 12.486826398149951,
+          "height": 6.38637050282842
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "General power supply for services."
+      },
+      {
+        "layout": {
+          "top": 34.14251847705751,
+          "left": 22.908013277921132,
+          "width": 5.16122157790198,
+          "height": 16.21155589179522
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Radiator electric fan [with air conditioning]."
+      },
+      {
+        "layout": {
+          "top": 34.14251847705751,
+          "left": 22.908013277921132,
+          "width": 5.16122157790198,
+          "height": 16.21155589179522
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Radiator electric fan."
+      }
+    ],
+    "boxAspectRatio": 0.6777996070726916,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/e8343d72_fiat-palio-1996.png"
+    },
+    "boxName": "Engine compartment [ED, EDX and EL version]",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0791052c_image.png"
+      }
+    ],
+    "imageClusters": [
+      "619e96fc2372ff0004fd0314"
+    ],
+    "templateId": "61e7520ffab64b0004ba0b7e",
+    "isTranslated": true,
+    "boxDescription": null,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-palio-1997-genid-g1-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "6",
+        "layout": {
+          "top": 56.78957079862599,
+          "left": 83.6048284466428,
+          "width": 7.62946140872323,
+          "height": 5.158222329207575
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Fiat CODE."
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 63.912830205626925,
+          "left": 83.6048284466428,
+          "width": 7.62946140872323,
+          "height": 5.158222329207575
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated Lambda sensor and fuel pump.",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/palio/info/fusebox/1997/fuel-pump-fuse",
+            "urlWithAnchor": "/fiat/palio/info/fusebox/1997/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.6608527131782945,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/e8343d72_fiat-palio-1996.png"
+    },
+    "templateId": "61e7528dfab64b0004ba0b7f",
+    "boxName": "Engine compartment, additional fuses - [Version ED, EDX and EL]",
+    "isTranslated": true,
+    "boxDescription": null,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-palio-1997-genid-g1-3.webp"
+  }
+]

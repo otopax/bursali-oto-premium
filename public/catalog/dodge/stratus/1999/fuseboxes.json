@@ -1,0 +1,1237 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 1.7826807256394357,
+          "left": 15.777841464993225,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Anti-lock braking system (ABS)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 1.7826807256394357,
+          "left": 32.89196193084835,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Ignition Switch (Instrument Panel Fuses: \"1\", \"4\", \"16\", \"19\")"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 1.7826807256394357,
+          "left": 51.103141400924976,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Air Conditioner Compressor Clutch Relay, Radiator Fan (High Speed) Relay, Radiator Fan (Low Speed) Relay",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)",
+          "VENTILADOR_RADIADOR",
+          "VELOCIDAD_VENTILADOR",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/cooling-fan-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/air-conditioning-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 21.7401118003119,
+          "left": 15.777841464993225,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Rear Window Defogger Relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 21.7401118003119,
+          "left": 32.89196193084835,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Headlamp Switch, Headlamp Delay Relay (Body Control Module, Headlamp Switch, Instrument Panel Fuses: \"12\", \"13\"), Instrument Panel Fuses: \"9\", \"10\"\"18\"",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "TABLERO",
+          "FUSIBLE_TABLERO"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 21.7401118003119,
+          "left": 51.103141400924976,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Intermittent Wiper Relay (Wiper (High/Low) Relay)"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 41.697542874984364,
+          "left": 15.777841464993225,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Seat Belt Control Module (Convertible)"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 41.697542874984364,
+          "left": 32.89196193084835,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Instrument Panel Fuses: 7,8\"",
+        "relatedEntities": [
+          "FUSIBLE_TABLERO",
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 41.697542874984364,
+          "left": 51.103141400924976,
+          "width": 15.358826059100762,
+          "height": 15.400748640972104
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Power Top Up/Down Relays (Convertible)"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.96611312120819,
+          "left": 13.803135257394555,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuel Pump Relay, Powertrain Control Module, ABS",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "PCM",
+          "SISTEMA_ABS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/fuel-pump-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 60.96611312120819,
+          "left": 31.57549112578258,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Conditioner Compressor Clutch Relay, Radiator Fan (High Speed) Relay, Radiator Fan (Low Speed) Relay, Fuel Pump Module, Instrument Cluster, Sentry Key Immobilizer Module, Brake Shift Interlock Solenoid",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)",
+          "VENTILADOR_RADIADOR",
+          "VELOCIDAD_VENTILADOR",
+          "RELAY",
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE",
+          "TABLERO",
+          "SOLENOIDE_PARKING"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/cooling-fan-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/air-conditioning-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/fuel-pump-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 60.96611312120819,
+          "left": 49.7866705958592,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Starter Relay, Fuel Pump Relay, Ignition Switch (Body Control Module, Clutch Interlock Switch (M/T), Transmission Control Module (EATX), Instrument Panel Fuses: \"14\", \"15\", \"17\", Engine Compartment Fuses: \"9\", \"10\")",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "VANO_MOTOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/fuel-pump-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          },
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/starter-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 70.3400202878849,
+          "left": 14.022547058238851,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Switch (Instrument Panel Fuses: \"11\")"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 70.3400202878849,
+          "left": 31.57549112578258,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Combination Flasher, Sentry Key Immobilizer Module"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 70.3400202878849,
+          "left": 49.7866705958592,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Automatic Shut Down Relay (Fuel Injectors, Ignition Coil Pack [2.0L and 2.4L], Noise Suppressor [2.0L and 2.4L], Generator, Oxygen Sensor Upstream, Distributor [2.5L] EGR Solenoid, Fuse: \"1\"), Powertrain Control Module",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "FUSIBLE",
+          "FUSIBLE_DE_ENCENDIDO_1",
+          "PCM"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/alternator-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 79.7139274545616,
+          "left": 31.57549112578258,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Stop Lamp Switch, Instrument Panel Fuses: \"5\"",
+        "relatedEntities": [
+          "TABLERO",
+          "FUSIBLE_TABLERO",
+          "FUSIBLE(numero=CINCO,protects=TABLERO)"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 79.7139274545616,
+          "left": 49.7866705958592,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Transmission Control Module, Transmission Control Relay",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 89.0878346212383,
+          "left": 30.697843922405394,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Anti-lock braking system (ABS)"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 89.0878346212383,
+          "left": 49.7866705958592,
+          "width": 14.92000245741217,
+          "height": 3.644451968474314
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Oxygen Sensor Downstream"
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 1.9002436923644126,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 13.583057186582254,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air Conditioner Compressor Clutch",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/air-conditioning-relay",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 25.265870680800095,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        },
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Power Tow (Convertible)"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 36.94868417501794,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Intermittent Wiper"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 48.63149766923578,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Wiper (High/Low)",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "MARCHA_HIGH",
+          "MARCHA_LOW"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 60.31431116345362,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/fuel-pump-relay",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 71.99712465767146,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Transmission Control"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 83.6799381518893,
+          "left": 71.85608546846852,
+          "width": 21.94118008442966,
+          "height": 9.052348437823298
+        },
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      }
+    ],
+    "boxAspectRatio": 1.8663366336633664,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/143518d0_dodge-stratus-1998.jpg"
+    },
+    "processed": false,
+    "boxName": "Engine Compartment Fuse Box",
+    "imageClusters": [
+      "61eb18d905876e000417948c"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4e57c8ec_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/61a0f73c_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2a77645e_image.jpg"
+      }
+    ],
+    "templateId": "620736c52ffe8400040bdd5d",
+    "templateRenameMap": {
+      "1": "19",
+      "2": "18",
+      "3": "17",
+      "4": "16",
+      "5": "15",
+      "6": "14",
+      "7": "13",
+      "8": "12",
+      "9": "11",
+      "10": "10",
+      "11": "7",
+      "12": "4",
+      "13": "1",
+      "14": "8",
+      "15": "5",
+      "16": "2",
+      "17": "9",
+      "18": "6",
+      "19": "3",
+      "R9": "R5",
+      "R10": "R6",
+      "R11": "R7",
+      "R12": "R8",
+      "R6": "R2",
+      "R7": "R3",
+      "R8": "R4"
+    },
+    "boxScaleMultiplier": "1",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-dodge-stratus-1999-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 47.332421340629274,
+          "left": 25.25337837837838,
+          "width": 8.783783783783784,
+          "height": 2.188782489740082
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Blower Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 42.79288645690835,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7887824897400817
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Right Headlamp (High Beam), Daytime Running Lamp Module",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_ALTA",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 42.79288645690835,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7887824897400817
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "[Convertible]: Right Headlamp (High Beam), Daytime Running Lamp Module",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_ALTA",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 38.68891928864569,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7887824897400817
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Left Headlamp (High Beam)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 38.68891928864569,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7887824897400817
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "[Convertible]: Left Headlamp (High Beam)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 34.58495212038304,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Back-Up Lamp (Back-Up Lamp Switch (M/T), Transmission Range Sensor (A/T)), Power Top Relay (Convertible), Daytime Running Lamp Module, Power Door Lock Switch, Power Mirror Switch, Automatic Day/Night Mirror, Steering Proportional Steering Module",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)",
+          "INTERRUPTOR(of=CIERRE_CENTRALIZADO)",
+          "INTERRUPTOR(of=ESPEJO_ELECTRICO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 26.44541723666211,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Dome Lamp, Data Link Connector, Power Antenna, Overhead Map Lamp, Trunk Lamp, Traveler, Body Control Module, Radio, Glove Box Lamp, Visor/Vanity Lamp, Universal Garage Door Opener, Automatic Day/Night Mirror, Illuminated Entry Relay, Courtesy Lamp, Power Door Lock Switch, Door Arm/Disarm Switch, Key-In Halo Lanp, Sunroof Control Module",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LAMPARA(of=LUZ_DE_HABITACULO)",
+          "CONECTOR_OBD",
+          "ANTENA_ELECTRICA",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL",
+          "MODULO_CARROCERIA",
+          "CARROCERIA",
+          "ESTEREO",
+          "LUZ_DE_GUANTERA",
+          "LUZ_CORTESIA",
+          "INTERRUPTOR(of=CIERRE_CENTRALIZADO)",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/sunroof-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/radio-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 18.30588235294118,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Heated Mirror, A/C Heater Control",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 14.2703146374829,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Instrument Cluster, Headlamp Switch",
+        "relatedEntities": [
+          "TABLERO",
+          "COMANDO_DE_LUCES"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 10.097948016415868,
+          "left": 26.6533783783784,
+          "width": 6.083783783783794,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Cigar Lighter/Power Outlet, Horn Relay",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V",
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/horn-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/cigarette-lighter-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 42.99808481532148,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Body Control Module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ],
+        "extendedDescription": "Body control module"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 38.89411764705883,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Rear Fog Lamp Switch, Daytime Running Lamp Module",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 34.79015047879617,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Body Control Module, Instrument Cluster, Autostick Switch, Transmission Control Module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA",
+          "TABLERO",
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 30.754582763337897,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Left Headlamp (Low Beam), Daytime Running Lamp Module",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_BAJA",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 26.44541723666211,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Right Headlamp (Low Beam), Front Fog Lamp Switch",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "LUZ_BAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/headlight-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 22.341450068399453,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Radio and audio system",
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/radio-fuse",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 18.30588235294118,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Combination Flasher, Seat Belt Control Module (Convertible), Intermittent Wiper Relay, Wiper (High/Low) Relay, Rear Window Defogger Relay",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "MARCHA_HIGH",
+          "MARCHA_LOW",
+          "RELAY",
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 14.2703146374829,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Airbag Control Module",
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 10.097948016415868,
+          "left": 37.464189189189206,
+          "width": 5.999324324324334,
+          "height": 1.7203830369357043
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Airbag Control Module",
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 24.213953488372145,
+          "left": 50.49054054054059,
+          "width": 13.183783783783769,
+          "height": 3.2203830369357056
+        },
+        "kind": {
+          "format": "ato",
+          "type": "circuitbreaker",
+          "amp": 20
+        },
+        "description": "Power Seat Switch, Decklid Release Relay",
+        "relatedEntities": [
+          "RELAY(protects=CERRADURA(of=PORTON_TRASERO))"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 18.134287498337894,
+          "left": 50.60322766687403,
+          "width": 13.284773835743898,
+          "height": 3.4984205769337566
+        },
+        "kind": {
+          "format": "ato",
+          "type": "circuitbreaker",
+          "amp": 20
+        },
+        "description": "Power Window, Master Power Window Switch, Window Timer Module, Sunroof Control module",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "TECHO_SOLAR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 50.273597811217506,
+          "left": 42.98986486486486,
+          "width": 11.499324324324315,
+          "height": 5.461559507523939
+        },
+        "id": "R1",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Headlamp Delay"
+      },
+      {
+        "layout": {
+          "top": 50.273597811217506,
+          "left": 59.58310810810817,
+          "width": 11.583783783783774,
+          "height": 5.461559507523939
+        },
+        "id": "R2",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/dodge/stratus/info/fusebox/1999/horn-relay",
+            "urlWithAnchor": "/dodge/stratus/info/fusebox/1999/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.515731874145004,
+          "left": 50.49054054054059,
+          "width": 12.58445945945946,
+          "height": 10.12311901504788
+        },
+        "id": "R3",
+        "kind": {
+          "amp": "",
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Rear Window Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      }
+    ],
+    "boxName": "Passenger Compartment Fuse Box",
+    "processed": false,
+    "imageClusters": [
+      "61eb190705876e0004179491"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/d3225fc3_dodge-stratus.jpg"
+    },
+    "boxAspectRatio": 1.2347972972972974,
+    "templateId": "618c0571b6758400043295f0",
+    "boxRotation": 90,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1b4965ee_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/dfc20d68_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4ccdeefe_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6ce52731_image.jpg"
+      }
+    ],
+    "templateRenameMap": {},
+    "boxScaleMultiplier": "",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-dodge-stratus-1999-genid-g1-1.webp"
+  }
+]

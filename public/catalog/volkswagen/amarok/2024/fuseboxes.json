@@ -1,0 +1,2580 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 67.98418972332016,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 68.36981574446989,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 37.90417933204495,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Fuel pump control unit / Fuse 120 in fuse box B"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 19.960474308300398,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 21.925954880500335,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Boost pressure limitation solenoid valve 2 [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Turbocharger changeover valve [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Valve 2 bypass cooling channel of the exhaust gas recirculation system [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Valve 1 of the intake valve timing control [for cars with a gasoline engine] / Valve 1 of the exhaust valve timing adjuster [for cars with a gasoline engine] / Lambda probe 1 before neutralizer [for cars with a gasoline engine] / Lambda probe 1 after neutralizer [for cars with a gasoline engine] / Solenoid valve 1 adsorber [for cars with a gasoline engine]"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 18.181818181818183,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Actuator motor 2 radiator shutters / Radiator Fan Relay / Radiator Fan Relay 2 / Oil pressure regulating valve / Heating resistor for engine crankcase ventilation system [for vehicles with a 3.0 l diesel engine] / Air conditioning compressor / Turbocharger bypass valve [for cars with a gasoline engine]",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)",
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2024/cooling-fan-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2024/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2024/air-conditioning-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2024/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 20.066754231773995,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "NOx sensor control unit [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Control unit 2 NOx sensors [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Control unit 3 NOx sensors [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Control unit 1 soot particle sensor [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Glow plug relay [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Glow plug control unit [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / On-board power supply control unit 2 / Connector, 60-pin -T60b- , pin 23 / Ignition coil 1 with output stage [for cars with a gasoline engine] / Ignition coil 2 with output stage [for cars with a gasoline engine] / Ignition coil 3 with output stage [for cars with a gasoline engine] / Ignition coil 4 with output stage [for cars with a gasoline engine]",
+        "relatedEntities": [
+          "RELAY(protects=PRECALENTADOR)",
+          "CONECTOR"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 30.8300395256917,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Supply air fan control unit"
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 34.88142292490119,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 32.70750988142292,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2024/starter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2024/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 41.8351812935311,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Headlight front left / Headlight front right"
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 36.26482213438735,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 38.16396121238019,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 40.063100290373015,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Glow plug control unit / Power steering control unit / Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 64.96920249390605,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "All-wheel drive control unit / Rear view camera",
+        "relatedEntities": [
+          "CAMARA_REVERSA"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 43.60726229668918,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Automatic transmission control unit / Additional hydraulic pump 1 for transmission oil"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 35.305844606733935,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 40.50251405735597,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 63.14229249011858,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Front left seat adjustment control panel [for vehicles with left-hand steering] / Front right seat adjustment control panel [for vehicles with right-hand steering]"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 21.419541366478125,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Front right seat adjustment control panel [for vehicles with left-hand steering] / Front left seat adjustment control panel [for vehicles with right-hand steering]"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 66.62730799301946,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Socket 12V",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2024/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2024/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 70.11232349592034,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Socket 2 12V"
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 73.59733899882121,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 8.992094861660078,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Inverter with socket, 12V/230V"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 73.81422924901186,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Heating and air conditioning control unit",
+        "relatedEntities": [
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 16.09514617731021,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 10.770750988142293,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Brake light switch"
+      },
+      {
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 10.770750988142293,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "50",
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 70.98357737164555,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Rear window heating element"
+      },
+      {
+        "id": "54",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 61.26482213438735,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "55",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 63.14229249011858,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "58",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 10.770750988142293,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "60",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 73.59733899882121,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "61",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 21.419541366478125,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "62",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 68.623022501481,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "63",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 32.70750988142292,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "64",
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 32.70750988142292,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 40
+        },
+        "description": "All-wheel drive control unit"
+      },
+      {
+        "id": "65",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 16.304347826086957,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "66",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 70.44993250526848,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "69",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 43.47826086956522,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Windscreen wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ],
+        "extendedDescription": "Wipers"
+      },
+      {
+        "id": "71",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 63.14229249011858,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "91",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 13.432948582726251,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "100",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 63.14229249011858,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Headlight front left"
+      },
+      {
+        "id": "101",
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 64.96920249390605,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Headlight front right"
+      },
+      {
+        "id": "107",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 10.770750988142293,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Trailer recognition control unit"
+      },
+      {
+        "id": "120",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 34.88142292490119,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "On-board power supply control unit 2 / Connector, 60-pin -T60c Pin 20-",
+        "relatedEntities": [
+          "CONECTOR"
+        ]
+      },
+      {
+        "id": "122",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 81.55045654862411,
+          "left": 56.49538519055557,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "124",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 64.96920249390605,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 5
+        },
+        "description": "Rain sensor",
+        "relatedEntities": [
+          "SENSOR_DE_LLUVIA"
+        ]
+      },
+      {
+        "id": "125",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 68.623022501481,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "139",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 70.44993250526848,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "140",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 72.27684250905595,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 5
+        },
+        "description": "USB 2 connector"
+      },
+      {
+        "id": "141",
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 74.10375251284343,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 5
+        },
+        "description": "USB charging socket in the roof panel"
+      },
+      {
+        "id": "146",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 14.489152285594974,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "158",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 68.623022501481,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "160",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 72.27684250905595,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "182",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 70.98357737164555,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Front passenger door control unit [for vehicles with left-hand steering] / Driver's door control unit [for vehicles with right-hand steering]"
+      },
+      {
+        "id": "183",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 18.757343771894167,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "Driver's door control unit [for vehicles with left-hand steering] / Front passenger door control unit [for vehicles with right-hand steering]"
+      },
+      {
+        "id": "202",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 65.75605411729424,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 60
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "210",
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 73.59733899882121,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit"
+      },
+      {
+        "id": "211",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 12.629951636868633,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "212",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 16.348352934321316,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "213",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 18.207553583047655,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "214",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 20.066754231773995,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "215",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 21.925954880500335,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "216",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 32.70750988142292,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "217",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 37.90417933204495,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "218",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 29.20353982300885,
+          "left": 43.10084878266697,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "219",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 34.48616600790514,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "220",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 36.26482213438735,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "221",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 40.063100290373015,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "222",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 63.14229249011858,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "223",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 66.79611249769353,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "224",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 35.54572271386431,
+          "left": 74.10375251284343,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "225",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 70.88731293276747,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "226",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 12.629951636868633,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "227",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 14.47778177027189,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "228",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 16.325611903675146,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "229",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 18.173442037078402,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "230",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 58.55457227138643,
+          "left": 21.419541366478125,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "231",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 12.629951636868633,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "232",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 14.489152285594974,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "233",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 16.348352934321316,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "234",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 18.1734420370784,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "235",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.16106194690265,
+          "left": 21.925954880500335,
+          "width": 1.1175324675324674,
+          "height": 3.845596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "236",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 13.432948582726251,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "237",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 16.09514617731021,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "238",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 18.757343771894167,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "239",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 32.70750988142292,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "240",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 35.305844606733935,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "241",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 40.50251405735597,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "242",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 43.10084878266697,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "243",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 45.89186955550592,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "244",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 63.14229249011858,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "245",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.0117994100295,
+          "left": 66.79611249769353,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "246",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 69.62005899705014,
+          "left": 65.75605411729424,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "247",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 34.48616600790514,
+          "width": 1.1175324675324674,
+          "height": 3.745596291613991
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "248",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 40.707964601769916,
+          "left": 43.10084878266697,
+          "width": 1.6239459815546775,
+          "height": 4.605801376597839
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Crankcase ventilation heating resistor [for vehicles with a 2.0 l diesel engine]"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Fuel pressure regulator [for vehicles with a 3.0 l diesel engine] / Fuel metering valve [for vehicles with a 3.0 l diesel engine] / Automatic transmission control unit"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 15
+        },
+        "description": "Differential lock valve 1"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Electronic steering column lock control unit"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Windscreen heating element / Heating circuit on the right"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Windscreen heating element / Heating circuit on the left"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Additional heater"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Additional heater"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Additional heater"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 15
+        },
+        "description": "Control unit for reducing agent dosing system"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Digital audio package control unit"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Towing hitch socket"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 5
+        },
+        "description": "Radio signal receiver for independent heater"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 20
+        },
+        "description": "Additional heater control unit"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Platform blind control unit"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "Fuel filter heating module [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine]",
+        "relatedEntities": [
+          "CALENTADOR_FILTRO_COMBUSTIBLE"
+        ]
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "On-board power supply control unit 2 / Transfer case actuator motor"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Driver assistance systems control unit"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 15
+        },
+        "description": "Control unit for reducing agent dosing system"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 10
+        },
+        "description": "Control unit for reducing agent dosing system"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 210
+        },
+        "description": "[for vehicles with a 2.0 l diesel engine] Generator with voltage regulator [for vehicles with a 2.0 l diesel engine]"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 250
+        },
+        "description": "[for vehicles with a 3.0 l diesel engine][for cars with a gasoline engine] Generator with voltage regulator [for vehicles with a 3.0 l diesel engine] [for cars with a gasoline engine]"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 50
+        },
+        "description": "Power steering control unit"
+      },
+      {
+        "id": "249",
+        "layout": {
+          "top": 50.58997050147492,
+          "left": 21.544394028375173,
+          "width": 3.3399209486166006,
+          "height": 2.8023598820058995
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 70
+        },
+        "description": "Glow plug control unit [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine] / Glow plug relay [for vehicles with a 2.0 l diesel engine] [for vehicles with a 3.0 l diesel engine]",
+        "relatedEntities": [
+          "RELAY(protects=PRECALENTADOR)"
+        ]
+      },
+      {
+        "id": "213.",
+        "kind": {
+          "amp": 50
+        },
+        "description": "Power steering control unit",
+        "relatedEntities": []
+      },
+      {
+        "id": "214.",
+        "kind": {
+          "amp": 80
+        },
+        "description": "Radiator Fan Relay 2",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "extendedDescription": "Radiator fan"
+      },
+      {
+        "id": "215.",
+        "kind": {
+          "amp": 80
+        },
+        "description": "Radiator Fan Relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "extendedDescription": "Radiator fan"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f86b4500_volkswagen-amarok-2023.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 0.6699604743083004,
+    "boxName": "Engine fuse panel (SB)",
+    "templateId": "65898d4230b4035be1f15edf",
+    "imageClusters": [
+      "6512eaa0b596125518d051b5"
+    ],
+    "templateRenameMap": {
+      "1": "1",
+      "2": "249",
+      "3": "3",
+      "4": "4",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "249",
+      "13": "13",
+      "18": "18",
+      "21": "21",
+      "23": "23",
+      "24": "24",
+      "25": "25",
+      "26": "26",
+      "28": "28",
+      "29": "29",
+      "30": "30",
+      "31": "31",
+      "32": "32",
+      "33": "33",
+      "36": "36",
+      "38": "38",
+      "42": "42",
+      "44": "44",
+      "50": "50",
+      "53": "249",
+      "64": "64",
+      "68": "249",
+      "69": "69",
+      "78": "249",
+      "79": "249",
+      "83": "249",
+      "84": "249",
+      "85": "249",
+      "86": "249",
+      "91": "91",
+      "100": "100",
+      "101": "101",
+      "107": "107",
+      "109": "249",
+      "110": "249",
+      "112": "249",
+      "113": "249",
+      "115": "249",
+      "120": "120",
+      "121": "249",
+      "122": "249",
+      "124": "124",
+      "137": "249",
+      "140": "140",
+      "141": "141",
+      "179": "249",
+      "180": "249",
+      "182": "182",
+      "183": "183",
+      "201": "249",
+      "202": "202",
+      "204": "249",
+      "205": "249",
+      "210": "210",
+      "213": "",
+      "214": "",
+      "215": ""
+    },
+    "boxRotation": 180,
+    "boxDescription": "Fuse box B -SB-, from September 2022",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-amarok-2024-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "1",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 11.826844175440671,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 16.952753902712917,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Door locking button from inside the vehicle on the driver's side / Door locking button from inside the passenger compartment on the front passenger side / Inverter with socket, 12V/230V / Driver's door window lift control panel"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 22.34844835247321,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Charger 1 for mobile devices"
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "4",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 32.465375445773574,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "5",
+        "layout": {
+          "top": 25.028370176605087,
+          "left": 39.199038725692596,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 44.872883877134,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Alarm siren"
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "7",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 44.872883877134,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 49.988455577137195,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Control unit for emergency call module and communication unit"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 49.999163472562806,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Security alarm sensor"
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "10",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 55.10402727714039,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "11",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 55.12544306799161,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 60.21959897714358,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Data bus diagnostic interface / Selector / Heating and air conditioning control unit",
+        "relatedEntities": [
+          "COMANDO",
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 60.251722663420416,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Steering column electronics control unit / Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "14",
+        "layout": {
+          "top": 32.20755338627538,
+          "left": 65.33517067714678,
+          "width": 3.2997225633276677,
+          "height": 8.262527115199234
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 65.37800225884922,
+          "width": 3.256890981625218,
+          "height": 8.373834531493214
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Electronic information system control unit 1 / Diagnostic connector",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "16",
+        "layout": {
+          "top": 31.104549249801376,
+          "left": 70.31284508781636,
+          "width": 2.839997589381687,
+          "height": 9.966061153262952
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 75.2531047626969,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Control unit for adaptive light and headlight range control / Control unit for reducing agent dosing system /"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 75.2531047626969,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 7.5
+        },
+        "description": "Relay and fuse box A for special vehicles -SRSA- /",
+        "relatedEntities": [
+          "RELAY"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 80.51867646270009,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Lighting control panel",
+        "relatedEntities": [
+          "BACKLIGHT(of=COMANDO)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 80.33847551275144,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "kind": {
+          "format": "micro3",
+          "type": "fuse",
+          "amp": 5
+        },
+        "description": "Ignition and starter switch [Optional] / Ignition and starter switch [Optional]",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2024/starter-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2024/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "21",
+        "layout": {
+          "top": 32.50542401891363,
+          "left": 85.58424816270329,
+          "width": 3.3261411922401978,
+          "height": 7.964656482560979
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro3",
+          "type": "fuse"
+        },
+        "id": "22",
+        "layout": {
+          "top": 24.931407963534216,
+          "left": 85.6238462628061,
+          "width": 3.2865430921373857,
+          "height": 9.131233618893539
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "23",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 11.857428261118963,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "24",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 16.983337988391213,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "25",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 22.37903243815139,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "26",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 27.39043919463175,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "27",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 32.49595953145187,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "28",
+        "layout": {
+          "top": 38.577575667998275,
+          "left": 39.228603341848114,
+          "width": 2.89062639731421,
+          "height": 11.822045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 44.972883877134,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Display for front control, display and information unit /",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "30",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 50.116243762195914,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 55.25960364725782,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 10
+        },
+        "description": "Front Panel Switch Module, Center / Switch module 1 center console /"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 60.40296353231973,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Head unit",
+        "relatedEntities": [
+          "MODULO(of=LUCES_DELANTERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/amarok/info/fusebox/2024/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/amarok/info/fusebox/2024/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "33",
+        "layout": {
+          "top": 47.68434786135421,
+          "left": 65.54632341738164,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 70.68968330244354,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 30
+        },
+        "description": "Fuse 17 in fuse box C / Fuse 18 in fuse box C / Fuse 36 in fuse box C / Fuse 37 in fuse box C"
+      },
+      {
+        "kind": {
+          "format": "micro",
+          "type": "fuse"
+        },
+        "id": "35",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 75.83304318750545,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 80.97640307256736,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 15
+        },
+        "description": "Parking assistance system control unit"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 47.4371849829079,
+          "left": 86.11976295762928,
+          "width": 2.89062639731421,
+          "height": 11.922045495109176
+        },
+        "kind": {
+          "format": "micro",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Steering column electronics control unit / Steering wheel heating element / Automatically dimming interior rearview mirror"
+      },
+      {
+        "kind": {
+          "format": "maxi-ford",
+          "type": "circuitbreaker",
+          "amp": ""
+        },
+        "id": "38",
+        "layout": {
+          "top": 20.22444287128107,
+          "left": 3.1095644581706687,
+          "width": 6.317217637081323,
+          "height": 34.750154175746445
+        },
+        "relatedEntities": []
+      },
+      {
+        "description": "",
+        "id": "SVG1",
+        "kind": {
+          "type": "svg",
+          "format": ""
+        },
+        "svgPaths": [
+          "M 0.0000 0.6441 A 0.6441 0.6441 0 0 1 0.6441 0.0000 L 99.3559 0.0000 A 0.6441 0.6441 0 0 1 100.0000 0.6441 L 100.0000 44.3639 A 0.6441 0.6441 0 0 1 99.3559 45.0081 L 0.6441 45.0081 A 0.6441 0.6441 0 0 1 0.0000 44.3639 Z"
+        ],
+        "svgViewBoxH": 45.008051529790656,
+        "layout": {
+          "top": 10.010230067692575,
+          "left": 1.731360286700922,
+          "width": 94.32650203514935,
+          "height": 77.87040463182639
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxAspectRatio": 0.5451919108543128,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/62ad5b0c_volkswagen-amarok-2023.jpg"
+    },
+    "processed": false,
+    "templateId": "61391465c09d3500045b2236",
+    "boxName": "Interior fue panel (SC)",
+    "boxDescription": "Fuse box C -SC-, from September 2022",
+    "backgroundColor": "#2e2e2e",
+    "imageClusters": [
+      "6324b7410e6bddc6fbc33b8c",
+      "6352bad79b7c022fad4ac93a",
+      "6226448363a3a7cea51f1a0f",
+      "63599e06ac5de77993129e4e",
+      "619c025ade0c030004a82257"
+    ],
+    "boxScaleMultiplier": "",
+    "boxRotation": 90,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-amarok-2024-genid-g2-1.webp"
+  }
+]

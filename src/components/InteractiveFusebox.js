@@ -141,18 +141,10 @@ export default function InteractiveFusebox({ boxData }) {
       </div>
       
       {/* ANA YAPI: SOLDA DEVASA RESİM, SAĞDA TABLO */}
-      <div style={{ 
-        display: 'flex', 
-        flexDirection: 'row', 
-        gap: '2rem', 
-        alignItems: 'flex-start',
-        flexWrap: 'wrap' // Mobilde alta inmesi için
-      }}>
+      <div className="flex flex-col xl:flex-row gap-6 items-start w-full">
         
         {/* SOL: RESİM VE TOOLTIP */}
-        <div className="glass-panel" style={{ 
-          flex: '1 1 55%',
-          minWidth: '400px',
+        <div className="glass-panel w-full xl:w-[55%] flex-shrink-0" style={{ 
           position: 'relative', 
           padding: '1rem', 
           display: 'flex', 
@@ -329,13 +321,12 @@ export default function InteractiveFusebox({ boxData }) {
 
         {/* SAĞ: LİSTE (KAYDIRILABİLİR) */}
         <div 
-          className="glass-panel" 
+          className="glass-panel w-full xl:w-[45%] flex-shrink-0" 
           ref={tableContainerRef}
           style={{ 
-          flex: '1 1 40%', 
-          minWidth: '350px',
           maxHeight: '85vh', // Sabit yükseklik, resimle yan yana kalması için
-          overflowY: 'auto', // Bağımsız kaydırma!
+          overflowY: 'auto', // Bağımsız dikey kaydırma
+          overflowX: 'auto', // Mobilde yatay kaydırma
           padding: '0' // Kenarlara yapışsın
         }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'left', color: 'var(--text-light)', fontSize: '0.95rem' }}>

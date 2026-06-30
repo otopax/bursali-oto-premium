@@ -1,0 +1,2639 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 23.63691437802908,
+          "left": 42.850620891161434,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "40-40-40",
+          "amp": 40
+        },
+        "description": "(LH J/B-B) Left-hand junction block"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 23.63691437802908,
+          "left": 46.006208911614316,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "40-40-40",
+          "amp": 40
+        },
+        "description": "(VGRS) VGRS"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 23.63691437802908,
+          "left": 48.694302410518624,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "40-40-40",
+          "amp": 40
+        },
+        "description": "(RH J/B-B) Right-hand junction block"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 29.720480803445287,
+          "left": 63.66571066910501,
+          "width": 7.104053939144087,
+          "height": 7.119616618362096
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 80
+        },
+        "description": "(P/I-B NO.2) F/PMP, EFI MAIN, A/F HTR, EDU, IG2 MAIN",
+        "relatedEntities": [
+          "EFI",
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 29.720480803445287,
+          "left": 68.29410944763828,
+          "width": 7.104053939144087,
+          "height": 7.119616618362096
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 150
+        },
+        "description": "(ALT) RH J/B ALT, P/I ALT, LH J/B ALT, LUG J/B ALT"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 29.720480803445287,
+          "left": 72.92250822617154,
+          "width": 7.104053939144087,
+          "height": 7.119616618362096
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 100
+        },
+        "description": "(P/I ALT) RR DEF, TAIL, FR FOG, DEICER, PANEL, RR S/SHADE",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)",
+          "DESEMPANADOR_TRASERO",
+          "TABLERO",
+          "PANEL_DE_PUERTA"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 29.720480803445287,
+          "left": 77.55090700470481,
+          "width": 7.104053939144087,
+          "height": 7.119616618362096
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 80
+        },
+        "description": "(RH J/B ALT) Right-hand junction block"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 46.900242326332794,
+          "left": 30.812636961285612,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(MPX-B) Smart access system with push-button start, electric tilt and telescopic steering column, power seats, head-up display, front righthand door ECU, gauges and meters, steering sensor, yaw rate and G sensor, overhead module, front left-hand door ECU, power trunk opener and closer, RR CTRL SW, clock, body ECU, CAN gateway ECU",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "DISPLAY_HUD",
+          "SENSOR",
+          "RELOJ"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 46.900242326332794,
+          "left": 33.266983199415634,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(DOME) Personal lights, ornament lights, trunk light, footwell lights, door courtesy lights, vanity lights, rear door inside handle illuminations, power trunk opener and closer",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL",
+          "LUZ_CORTESIA(of=PUERTA)",
+          "LUZ_CORTESIA"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 39.468901453958,
+          "left": 39.64441197954712,
+          "width": 5.493060628195764,
+          "height": 18.739903069466884
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 80
+        },
+        "description": "(EPS) EPS",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 39.468901453958,
+          "left": 45.621840759678605,
+          "width": 5.493060628195764,
+          "height": 18.739903069466884
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 80
+        },
+        "description": "(ARS) Dynamic rear steering"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 45.28816968478793,
+          "left": 52.11614317019723,
+          "width": 3.856829802775742,
+          "height": 11.954765751211632
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "(HTR) Air conditioning system",
+        "relatedEntities": [
+          "CALEFACCION",
+          "AIRE_ACONDICIONADO",
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/air-conditioning-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 45.28816968478793,
+          "left": 55.97297297297298,
+          "width": 3.856829802775742,
+          "height": 11.954765751211632
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "(ABS NO.1) VDIM"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 44.96163166397415,
+          "left": 60.497297297297315,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-50-50",
+          "amp": 50
+        },
+        "description": "(LUG J/B ALT) Luggage compartment junction block"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 44.96163166397415,
+          "left": 63.45412710007308,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-50-50",
+          "amp": 50
+        },
+        "description": "(PTC NO.1) PTC heater"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 44.96163166397415,
+          "left": 66.41095690284885,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-50-50",
+          "amp": 50
+        },
+        "description": "(PTC NO.2) PTC heater"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 61.762924071082395,
+          "left": 8.702921840759672,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-30",
+          "amp": 50
+        },
+        "description": "(ABS NO.2) VDIM"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 61.762924071082395,
+          "left": 11.624762600438268,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-30",
+          "amp": 30
+        },
+        "description": "(ST) Starting system",
+        "relatedEntities": [
+          "ARRANQUE"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 61.762924071082395,
+          "left": 15.130971512052586,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-30",
+          "amp": 30
+        },
+        "description": "(H-LP LO) Headlights, H-LPRLY",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 64.67084006462036,
+          "left": 19.82651570489408,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(D/C CUT) DOME, MPX-B"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 64.67084006462036,
+          "left": 22.514609203798393,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(DCM) DCM"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 64.67084006462036,
+          "left": 25.2027027027027,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-B) Smart access system with push-button start"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 64.67084006462036,
+          "left": 27.89079620160701,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ALT-S) Charging system"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 64.67084006462036,
+          "left": 30.578889700511322,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ETCS) Multiport fuel injection system/sequential multiport fuel injection system"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 64.67084006462036,
+          "left": 33.266983199415634,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/horn-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 64.67084006462036,
+          "left": 35.95507669831994,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(R/B-B) EPS-B, ODS, TV",
+        "relatedEntities": [
+          "OVERDRIVE",
+          "TESTIGO_OVERDRIVE"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 61.762924071082395,
+          "left": 39.149379108838524,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": 50
+        },
+        "description": "(P/I-B NO.1) Headlights, daytime running lights",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 61.762924071082395,
+          "left": 42.188093498904266,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": 30
+        },
+        "description": "(EPB) Parking brake",
+        "relatedEntities": [
+          "FRENO_DE_MANO_ELECTRONICO",
+          "FRENO_DE_MANO"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 61.762924071082395,
+          "left": 45.69430241051858,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": 40
+        },
+        "description": "(LUG J/B-B) Luggage compartment junction block"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 59.637720253973015,
+          "left": 56.89233016800584,
+          "width": 5.493060628195764,
+          "height": 18.739903069466884
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 80
+        },
+        "description": "(FAN NO.1) Electric cooling fans"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 59.637720253973015,
+          "left": 63.25288531775019,
+          "width": 5.493060628195764,
+          "height": 18.739903069466884
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flm",
+          "amp": 60
+        },
+        "description": "(LH J/B ALT) Left-hand junction block"
+      },
+      {
+        "id": "32",
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40"
+        },
+        "layout": {
+          "top": 59.551296164105665,
+          "left": 69.1109569028487,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        }
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 59.551296164105665,
+          "left": 72.1177867056245,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": 30
+        },
+        "description": "(H-LP CLN) Headlight cleaner"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 59.551296164105665,
+          "left": 75.1246165084003,
+          "width": 4.44119795471147,
+          "height": 12.924071082390949
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": 40
+        },
+        "description": "(FAN NO.2) Electric cooling fans"
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 61.90630518089944,
+          "left": 80.25018261504748,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(A/C COMP) Air conditioning system"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 61.90630518089944,
+          "left": 82.82140248356464,
+          "width": 1.5193571950328675,
+          "height": 11.954765751211625
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(FILTER) Condenser"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 25.248987019573946,
+          "left": 11.98728999269538,
+          "width": 7.884879474068676,
+          "height": 28.748465266558952
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray"
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 25.248987019573946,
+          "left": 20.390284879474102,
+          "width": 7.884879474068676,
+          "height": 28.748465266558952
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray"
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 24.416190310703666,
+          "left": 28.927027027027016,
+          "width": 9.466764061358658,
+          "height": 15.831987075928922
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "purple"
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/e085927c_lexus-gs 350-2013.jpg"
+    },
+    "processed": false,
+    "imageClusters": [
+      "67803a8f5d0fd52e97b7f718"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/46c2b763_lexus-gs 350-2013.jpg"
+    },
+    "boxName": "Engine compartment (type A fuse box)",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f65953ba_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3bc9c081_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/41466f58_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2d8034cf_image.jpg"
+      }
+    ],
+    "templateId": "67f9cdeaeef77535d17b87b4",
+    "boxAspectRatio": 0.3617245005257624,
+    "templateRenameMap": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "11": "11",
+      "12": "12",
+      "13": "13",
+      "14": "14",
+      "15": "15",
+      "16": "16",
+      "17": "17",
+      "18": "18",
+      "19": "19",
+      "20": "20",
+      "21": "21",
+      "22": "22",
+      "23": "23",
+      "24": "24",
+      "25": "25",
+      "26": "26",
+      "27": "27",
+      "28": "28",
+      "29": "29",
+      "30": "30",
+      "31": "31",
+      "32": "33",
+      "33": "34",
+      "34": "35",
+      "35": "36"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-gs-350-2015-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 24.980433810375672,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(IGN) Starting system",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/starter-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 28.60936302070023,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(INJ) Multiport fuel injection system/sequential multiport fuel injection system"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 32.238292231024786,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(EFINO.2) Fuel system, exhaust system",
+        "relatedEntities": [
+          "EFI",
+          "COMBUSTIBLE"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 35.86722144134934,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(IG2MAIN) IGN, GAUGE, INJ, AIR BAG, IG2 NO.1, LH-IG2",
+        "relatedEntities": [
+          "SENSOR",
+          "AIRBAG",
+          "GENERIC_FUSE_NAME",
+          "GENERIC_FUSE_NAME(numero=UNO)"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 39.4961506516739,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(EFI MAIN) Multiport fuel injection system/sequential multiport fuel injection system, EFINO.2",
+        "relatedEntities": [
+          "EFI",
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 43.12507986199846,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(A/F) Air intake system"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 46.75400907232302,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(EDU) Multiport fuel injection system/sequential multiport fuel injection system"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 15.739409760946849,
+          "left": 50.38293828264758,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(F/PMP) Multiport fuel injection system/sequential multiport fuel injection system"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 76.97015868631091,
+          "left": 28.71603309481216,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(SPARE) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 76.97015868631091,
+          "left": 31.60440518783541,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(SPARE) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 76.97015868631091,
+          "left": 34.49277728085866,
+          "width": 1.6100178890876577,
+          "height": 7.159753374033777
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(SPARE) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 55.118053318132624,
+          "left": 77.21656976744185,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H-LP LH-LO) Left-hand headlight",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/headlight-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 59.79943052423163,
+          "left": 77.21656976744185,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(H-LP RH-LO) Right-hand headlight",
+        "relatedEntities": [
+          "LUZ_BAJA",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/headlight-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.48080773033064,
+          "left": 77.21656976744185,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 69.16218493642965,
+          "left": 77.21656976744185,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(WASH-S) Driver support system"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 73.84356214252867,
+          "left": 77.21656976744185,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(WIP-S) Windshield wipers, power management system"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 78.52493934862767,
+          "left": 77.21656976744185,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(COMB SW) Windshield wipers"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 55.118053318132624,
+          "left": 84.55109570661897,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(TV) Remote Touch screen"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 59.79943052423163,
+          "left": 84.55109570661897,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(EPS-B) Electric power steering"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 64.48080773033064,
+          "left": 84.55109570661897,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(ODS) Occupant classification system",
+        "relatedEntities": [
+          "TESTIGO_OVERDRIVE",
+          "SENSOR_ASIENTO_OCUPADO",
+          "OVERDRIVE"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 69.16218493642965,
+          "left": 84.55109570661897,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(IG2 NO.1) Power management system, DCM, CAN gateway ECU"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 73.84356214252867,
+          "left": 84.55109570661897,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(GAUGE) Gauges and meters",
+        "relatedEntities": [
+          "SENSOR"
+        ]
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 78.52493934862767,
+          "left": 84.55109570661897,
+          "width": 5.008944543828264,
+          "height": 3.0291264274758305
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 14.531921515984031,
+          "left": 61.72193649373884,
+          "width": 12.522361359570652,
+          "height": 16.797882916002326
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray"
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 14.531921515984031,
+          "left": 77.57989713774593,
+          "width": 12.522361359570652,
+          "height": 16.797882916002326
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray"
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 36.11716936396606,
+          "left": 77.57989713774593,
+          "width": 12.522361359570652,
+          "height": 16.797882916002326
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray"
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 57.32105435629686,
+          "left": 61.505299642218226,
+          "width": 6.26118067978534,
+          "height": 14.870257007608608
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "brown"
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 57.32105435629686,
+          "left": 69.19760733452601,
+          "width": 6.26118067978534,
+          "height": 14.870257007608608
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "brown"
+        }
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 75.2204377913813,
+          "left": 53.245192307692314,
+          "width": 9.83899821109123,
+          "height": 9.638129541968553
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan"
+        }
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 36.667919623507125,
+          "left": 21.40261627906977,
+          "width": 51.87835420393561,
+          "height": 14.044131618297023
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 76.87268857000448,
+          "left": 64.3364266547406,
+          "width": 10.912343470483009,
+          "height": 6.333627984722185
+        }
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 59.24868026469057,
+          "left": 28.200469588550988,
+          "width": 27.012522361359565,
+          "height": 10.188879801509607
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 72.46668649367601,
+          "left": 17.362544722719157,
+          "width": 7.692307692307692,
+          "height": 10.464254931280138,
+          "rotation": -90
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/14c4513c_lexus-gs 350-2013.jpg"
+    },
+    "processed": false,
+    "imageClusters": [
+      "67dd4e6a064876eb220000b6",
+      "67e54237e935d9eb6983dc15"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/7400ecfc_lexus-gs 350-2013.jpg"
+    },
+    "boxName": "Engine compartment (type B fuse box)",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d7402d25_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4c002e46_image.jpg"
+      }
+    ],
+    "templateId": "67f9d1824fb7ae2b0682fa3a",
+    "boxAspectRatio": 0.6496350364963503,
+    "templateRenameMap": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "11": "11",
+      "12": "12",
+      "13": "13",
+      "14": "15",
+      "15": "16",
+      "16": "17",
+      "17": "18",
+      "18": "19",
+      "19": "20",
+      "20": "21",
+      "21": "22"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-gs-350-2015-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 19.817318351249114,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 25.898160242547377,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(STOP) Stop lights, high mounted stoplight",
+        "relatedEntities": [
+          "LUZ_FRENO",
+          "TESTIGO_STOP",
+          "TERCERA_LUZ_DE_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/brake-light-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 31.97900213384564,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(P/W-B) Power window master switch"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 38.0598440251439,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(P/SEAT1F/L) Power seats"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 44.140685916442166,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(D/L NO.1) Power door lock system"
+      },
+      {
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 50.22152780774043,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 56.30236969903869,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(NV-IR) Lexus night view"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 62.383211590336956,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(FLS/HTR) Seat heaters/ventilators"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 68.4640534816352,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(WIPER) Windshield wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 74.54489537293347,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(WIPER-IG) Windshield wipers"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 80.62573726423173,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(LH-IG) Seat belts, body ECU, AFS, overhead module, raindrop sensor, inside rear view mirror, lane camera sensor (LKA), head-up display, shift lock system, intuitive parking assist, front left-hand door ECU, driver monitor system, Remote Touch screen, electric tilt and telescopic steering column, power seats, moon roof, intuitive parking assist switch",
+        "relatedEntities": [
+          "ESPEJO(ubicacion=INTERIOR)",
+          "DISPLAY_HUD",
+          "DESBLOQUEO_CAJA_AUT",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/sunroof-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 86.70657915553,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(LH ECU-IG) VDIM, D-SW MODULE (Blind Spot Monitor, heated steering wheel), driver support system, AFS, EPB",
+        "relatedEntities": [
+          "FRENO_DE_MANO_ELECTRONICO"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 19.817318351249114,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(DOOR FL) Outside rear view mirror defoggers, power window (front left-hand)"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 25.898160242547377,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(CAPACITOR (HV)) No circuit"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 31.97900213384564,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(STRG LOCK) Steering lock"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 38.0598440251439,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(D/LNO.2) Power door lock system"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 44.140685916442166,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(DOOR RL) Power window (rear left-hand)"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 50.22152780774043,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(HAZ) Turn signal lights, emergency flashers",
+        "relatedEntities": [
+          "LUZ_BALIZA",
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 56.30236969903869,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(LH-IG2) Multiport fuel injection system/sequential multiport fuel injection system, stop lights, smart access system with push-button start, steering lock system",
+        "relatedEntities": [
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/brake-light-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 62.383211590336956,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(LH J/B-B) Body ECU"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 68.4640534816352,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(S/ROOF) Moon roof"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 74.54489537293347,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(P/SEAT2 F/L) Power seats"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 80.62573726423173,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(Tl & TE) Electric tilt and telescopic steering column"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 86.70657915553,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(A/C) Air conditioning system",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/air-conditioning-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/63c570a3_lexus-gs 350-2013.jpg"
+    },
+    "processed": false,
+    "boxName": "Driver’s side instrument panel",
+    "imageClusters": [
+      "667c158384d8cdc2adfb1916"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a0b2e5f7_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/e68bed92_image.jpg"
+      }
+    ],
+    "templateId": "67f9d3054fb7ae2b0682fac4",
+    "boxAspectRatio": 0.503957783641161,
+    "templateRenameMap": {
+      "1": "2",
+      "2": "3",
+      "3": "4",
+      "4": "5",
+      "5": "7",
+      "6": "8",
+      "7": "9",
+      "8": "10",
+      "9": "11",
+      "10": "12",
+      "11": "13",
+      "12": "14",
+      "13": "15",
+      "14": "16",
+      "15": "17",
+      "16": "18",
+      "17": "19",
+      "18": "20",
+      "19": "21",
+      "20": "22",
+      "21": "23",
+      "22": "24"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-gs-350-2015-genid-g2-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 19.817318351249114,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 25.898160242547377,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(P/SEAT1F/R) Power seats"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 31.97900213384564,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(FR P/OUTLET) Power outlet (front)"
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 38.0598440251439,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 44.140685916442166,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(RR P/OUTLET) Power outlet (rear)"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 50.22152780774043,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(P/SEAT2F/R) Power seats"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 56.30236969903869,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(AVS) AVS"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 62.383211590336956,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(STRG HTR) Heated steering wheel"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 68.4640534816352,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(RH ECU-IG NO.2)"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 74.54489537293347,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(WASH) Windshield washer"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 80.62573726423173,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(RHECU-IG) Navigation system, VGRS, pre-collision seat belts, air conditioning system, Lexus night view",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/air-conditioning-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 86.70657915553,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(RH-IG) Tension reducer, seat heater/ventilator switches, AWD system, front right-hand door ECU, CAN gateway ECU, tire pressure warning system, power seats, driver monitor system",
+        "relatedEntities": [
+          "DOBLE_TRACCION",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 19.817318351249114,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(DOOR FR) Front right-hand door control system (outside rear view mirror defoggers, power window)",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 25.898160242547377,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(DOOR RR) Power window (rear right-hand)"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 31.97900213384564,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(RAD NO.2) Audio system",
+        "relatedEntities": [
+          "RADIADOR",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 38.0598440251439,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(AM2) Smart access system with push-button start"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 44.140685916442166,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(MULTIMEDIA) Navigation system, Remote Touch"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 50.22152780774043,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(RAD NO.1) Audio system",
+        "relatedEntities": [
+          "RADIADOR",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/radio-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 56.30236969903869,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(AIR BAG) SRS airbag system, occupant classification system",
+        "relatedEntities": [
+          "AIRBAG",
+          "TESTIGO_SRS",
+          "SENSOR_ASIENTO_OCUPADO"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 62.383211590336956,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(OBD) On-board diagnosis system"
+      },
+      {
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 68.4640534816352,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 74.54489537293347,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ACC) Body ECU, head-up display, RR CTRL, navigation system, transmission, Remote Touch, DCM, Remote Touch screen",
+        "relatedEntities": [
+          "DISPLAY_HUD",
+          "NAVEGADOR",
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 80.62573726423173,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 86.70657915553,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      }
+    ],
+    "boxAspectRatio": 0.503957783641161,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f22ed0f1_lexus-gs 350-2013.jpg"
+    },
+    "processed": false,
+    "boxName": "Passenger’s side instrument panel",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/c4301519_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/20903244_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "667c158384d8cdc2adfb1916"
+    ],
+    "templateId": "67f9d3054fb7ae2b0682fac4",
+    "templateRenameMap": {
+      "1": "2",
+      "2": "3",
+      "3": "5",
+      "4": "6",
+      "5": "7",
+      "6": "8",
+      "7": "10",
+      "8": "11",
+      "9": "12",
+      "10": "13",
+      "11": "14",
+      "12": "15",
+      "13": "16",
+      "14": "17",
+      "15": "18",
+      "16": "19",
+      "17": "20",
+      "18": "22",
+      "U1": "9"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-gs-350-2015-genid-g2-3.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 19.817318351249114,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 25.898160242547377,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(PSB) Pre-collision seat belts"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 31.97900213384564,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "(PTL) Power trunk opener and closer"
+      },
+      {
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 38.0598440251439,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 44.140685916442166,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(RR J/B-B) Smart access system with push-button start"
+      },
+      {
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 50.22152780774043,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 56.30236969903869,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(RR S/HTR) Seat heaters (rear)"
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 62.383211590336956,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 68.4640534816352,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(FR S/HTR) Seat heaters/ventilators (front)"
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 74.54489537293347,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 80.62573726423173,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(RR FOG) No circuit",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/gs-350/info/fusebox/2015/fog-light-fuse",
+            "urlWithAnchor": "/lexus/gs-350/info/fusebox/2015/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 25.377539302915398,
+          "left": 86.70657915553,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 19.817318351249114,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(DC/DC-S (HV)) No circuit"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 25.898160242547377,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(BATT FAN (HV)) No circuit"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 31.97900213384564,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(SECURITY) SECURITY",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 38.0598440251439,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(ECU-B NO.3) Parking brake"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 44.140685916442166,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(TRK OPN) Power trunk opener and closer"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 50.22152780774043,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(DCM (HV)) No circuit"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 56.30236969903869,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(AC INV (HV)) No circuit"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 62.383211590336956,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(RR-IG1) Radar sensor, Blind Spot Monitor",
+        "relatedEntities": [
+          "DETECCION_PUNTO_CIEGO"
+        ]
+      },
+      {
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 68.4640534816352,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        }
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 74.54489537293347,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(RR ECU-IG) Power trunk opener and closer, parking brake, tension reducer (rear left-hand), RR CTRL SW, tire pressure warning system, DRS",
+        "relatedEntities": [
+          "FRENO_DE_MANO"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 80.62573726423173,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "(EPS-IG) Electric power steering system"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 40.52317144029453,
+          "left": 86.70657915553,
+          "width": 1.820390400142104,
+          "height": 11.94113058013278
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "(BACK UP) Back-up lights"
+      }
+    ],
+    "boxAspectRatio": 0.503957783641161,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/de5687cc_lexus-gs 350-2013.jpg"
+    },
+    "processed": false,
+    "boxName": "Trunk fuse box",
+    "imageClusters": [
+      "667c158384d8cdc2adfb1916"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b8dfa5a8_image.jpg"
+      }
+    ],
+    "templateId": "67f9d3054fb7ae2b0682fac4",
+    "templateRenameMap": {
+      "1": "2",
+      "2": "3",
+      "3": "5",
+      "4": "7",
+      "5": "9",
+      "6": "11",
+      "7": "13",
+      "8": "14",
+      "9": "15",
+      "10": "16",
+      "11": "17",
+      "12": "18",
+      "13": "19",
+      "14": "20",
+      "15": "22",
+      "16": "23",
+      "17": "24"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-gs-350-2015-genid-g2-4.webp"
+  }
+]

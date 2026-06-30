@@ -1,94 +1,70 @@
 import { NextResponse } from 'next/server';
-import { prisma } from '@/lib/prisma';
-import { GoogleGenAI } from '@google/genai';
-import Redis from 'ioredis';
-import { rateLimit } from '@/lib/rate-limit';
+import { SearchEngine } from '@/domains/Search/SearchEngine';
+import logger from '@/lib/logger';
 
-const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
-  maxRetriesPerRequest: 1,
-  connectTimeout: 2000,
-});
-
+/**
+ * Global Search API
+ * GET /api/search?q=radyo&type=fuse
+ */
 export async function GET(request) {
-  // Rate Limit Check (60 requests per minute per IP)
-  const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
-  const limitStatus = await rateLimit(ip, 60, 60);
-  
-  if (!limitStatus.success) {
-    return NextResponse.json(
-      { error: 'Çok fazla istek gönderildi. Lütfen biraz bekleyip tekrar deneyin.' },
-      { 
-        status: 429,
-        headers: {
-          'X-RateLimit-Limit': limitStatus.limit.toString(),
-          'X-RateLimit-Remaining': limitStatus.remaining.toString(),
-          'Retry-After': limitStatus.resetIn.toString()
-        }
-      }
-    );
-  }
-
-  const { searchParams } = new URL(request.url);
-  const q = searchParams.get('q');
-
-  if (!q || q.length < 3) {
-    return NextResponse.json({ results: [] });
-  }
-
-  const cacheKey = `search:cache:${q.toLowerCase().trim()}`;
-
+  const globalStartTimer = Date.now();
   try {
-    // 1. Check Redis Cache
-    const cachedData = await redis.get(cacheKey);
-    if (cachedData) {
-      return NextResponse.json({ results: JSON.parse(cachedData), cached: true });
+    const { searchParams } = new URL(request.url);
+    const query = searchParams.get('q');
+    const type = searchParams.get('type') || 'all'; // fuse, fault, all
+    
+    if (!query) {
+      return NextResponse.json({ error: 'Arama sorgusu (q) zorunludur.' }, { status: 400 });
     }
 
-    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
+    let results = {};
+
+    if (type === 'fuse' || type === 'all') {
+      const startTimer = Date.now();
+      const fuseResults = await SearchEngine.searchFuses(query, 20);
+      const ms = Date.now() - startTimer;
+      
+      results.fuses = {
+        data: fuseResults,
+        timeMs: ms,
+        count: fuseResults.length
+      };
+    }
+
+    if (type === 'fault' || type === 'all') {
+      const startTimer = Date.now();
+      const faultResults = await SearchEngine.searchFaultCodes(query, 20);
+      const ms = Date.now() - startTimer;
+      results.faults = {
+        data: faultResults,
+        timeMs: ms,
+        count: faultResults.length
+      };
+    }
+
+    const totalMs = Date.now() - globalStartTimer;
     
-    // Vektör araması (RAG)
-    const embedRes = await ai.models.embedContent({ model: 'gemini-embedding-001', contents: q });
-    const vectorStr = `[${embedRes.embeddings[0].values.join(',')}]`;
+    // V4.0 Observability: Log Search Engine Performance
+    logger.info('Search Query Executed', { 
+      query, 
+      type, 
+      totalTimeMs: totalMs,
+      fuseCount: results.fuses?.count || 0,
+      faultCount: results.faults?.count || 0 
+    });
 
-    // pgvector sorgusu: En yakın 5 arıza kodunu getir (Cosine Similarity)
-    const results = await prisma.$queryRawUnsafe(`
-      SELECT 
-        fc.code,
-        fc."aiAnalysis",
-        m.name as model_name,
-        m.slug as model_slug,
-        b.name as brand_name,
-        b.slug as brand_slug,
-        1 - (fc.embedding <=> $1::vector) as similarity
-      FROM "FaultCode" fc
-      JOIN "Model" m ON fc."modelId" = m.id
-      JOIN "Brand" b ON m."brandId" = b.id
-      ORDER BY fc.embedding <=> $1::vector
-      LIMIT 5;
-    `, vectorStr);
+    return NextResponse.json({
+      success: true,
+      query,
+      timeMs: totalMs,
+      results
+    });
 
-    // Sonuçları JSON'a dönüştür (aiAnalysis verisini deserialize et)
-    const formattedResults = results.map(r => ({
-      code: r.code,
-      brand: r.brand_name,
-      brandSlug: r.brand_slug,
-      model: r.model_name,
-      modelSlug: r.model_slug,
-      similarity: r.similarity,
-      description: r.aiAnalysis ? r.aiAnalysis.description : 'Açıklama bulunamadı.',
-      url: `/tr/ariza-cozumleri/${r.brand_slug}/${r.model_slug}/${r.code}`
-    }));
-
-    // Eğer benzerlik %65'in altındaysa sonuçları gösterme (alakasız arama olabilir)
-    const filteredResults = formattedResults.filter(r => r.similarity > 0.65);
-
-    // 2. Save to Redis Cache (24 hours TTL)
-    await redis.set(cacheKey, JSON.stringify(filteredResults), 'EX', 86400);
-
-    return NextResponse.json({ results: filteredResults, cached: false });
   } catch (error) {
-    console.error('Search API Error:', error);
-    return NextResponse.json({ error: 'Arama sırasında hata oluştu' }, { status: 500 });
+    logger.error('Search API Error', { error: error.message, stack: error.stack });
+    return NextResponse.json(
+      { error: 'Arama motorunda geçici bir hata oluştu.' },
+      { status: 500 }
+    );
   }
 }
-

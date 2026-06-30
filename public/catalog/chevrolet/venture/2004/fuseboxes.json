@@ -1,0 +1,1768 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 12.718583653610857,
+          "left": -12.652229477762008,
+          "width": 23.08930060404852,
+          "height": 10.67486967756507
+        },
+        "id": "1",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Daytime Running Lamps (DRL) Control Module, Headlamp and Instrument Panel Dimmer Switch",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "COMANDO",
+          "MODULO",
+          "ECU",
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 28.278480533063146,
+          "left": -12.652229477762008,
+          "width": 23.08930060404852,
+          "height": 10.67486967756507
+        },
+        "id": "2",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Power Sliding Door",
+        "relatedEntities": [
+          "PUERTA_CORREDIZA",
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.83837741251543,
+          "left": -12.652229477762008,
+          "width": 23.08930060404852,
+          "height": 10.67486967756507
+        },
+        "id": "3",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Front Power Windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 59.39827429196771,
+          "left": -12.652229477762008,
+          "width": 23.08930060404852,
+          "height": 10.67486967756507
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": "30",
+          "notUsed": false
+        },
+        "description": "6-Way Power Seat and Rear Side Door Actuator Motor"
+      },
+      {
+        "layout": {
+          "top": 74.95817117141999,
+          "left": -12.652229477762008,
+          "width": 23.08930060404852,
+          "height": 10.67486967756507
+        },
+        "id": "5",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Blower Motor Hi Speed Relay Module",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR(velocidadVentilador=MAGNITUD_ALTA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.950072463768104,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "2"
+        },
+        "description": "Steering Wheel Radio Control Switches (Illumination)"
+      },
+      {
+        "layout": {
+          "top": 21.464565217391325,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Instrument Cluster to PRNDL Indicators"
+      },
+      {
+        "layout": {
+          "top": 29.979057971014512,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Power Remote Control Mirror Switch"
+      },
+      {
+        "layout": {
+          "top": 38.493550724637636,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Cruise Control Module, Switch and Release Switch",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.008043478260824,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 55.52253623188402,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Power Control Module (PCM), Ignition Crank"
+      },
+      {
+        "layout": {
+          "top": 64.21818840579706,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "PASS-Key R III System"
+      },
+      {
+        "layout": {
+          "top": 72.55152173913051,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Body Control Module (BCM)",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 81.06601449275371,
+          "left": 17.379679144385026,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Heated Mirrors",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.950072463768104,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 21.46456521739132,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 29.979057971014512,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Cigarette Lighter, DIC, Front Auxiliary Power Outlets",
+        "relatedEntities": [
+          "TOMA_12V",
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 38.49355072463764,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Turn Signal Switch"
+      },
+      {
+        "layout": {
+          "top": 47.00804347826083,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Interior Lamp and Multifunction Switch (Power Vent Switch)",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.52253623188402,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "25"
+        },
+        "description": "Windshield Wiper/Washer Motor and Switch",
+        "relatedEntities": [
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.03702898550722,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Turn Signal Switch"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 72.55152173913052,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Rear Electric Accessory Plug Housing"
+      },
+      {
+        "layout": {
+          "top": 81.06601449275371,
+          "left": 33.288770053475936,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "DRL Control Module",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.950072463768104,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.464565217391325,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Rear Window Defogger Relay, Heated Mirrors",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)",
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 29.979057971014512,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "OnStar",
+        "relatedEntities": [
+          "SISTEMA_ENTRETENIMIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 38.493550724637636,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Inflatable Restraint Control Module"
+      },
+      {
+        "layout": {
+          "top": 47.008043478260824,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "25"
+        },
+        "description": "Heater-A/C Control"
+      },
+      {
+        "layout": {
+          "top": 55.52253623188402,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Instrument Cluster, BCM, Electronic Level Control (ELC) Sensor and Relay",
+        "relatedEntities": [
+          "TABLERO",
+          "MODULO_CARROCERIA",
+          "RELAY"
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.21818840579706,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Stoplamp Switch"
+      },
+      {
+        "layout": {
+          "top": 72.55152173913051,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Module/Electronic Brake Control Module/Electronic Brake Traction Control Module (EBCM/EBTCM)"
+      },
+      {
+        "layout": {
+          "top": 81.06601449275371,
+          "left": 49.19786096256685,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Evaporative Emissions (EVAP) Canister Vent Solenoid Valve"
+      },
+      {
+        "layout": {
+          "top": 12.950072463768104,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 21.464565217391325,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "25"
+        },
+        "description": "ELC Air Compressor and ELC Relay, Trailer Harness"
+      },
+      {
+        "layout": {
+          "top": 29.979057971014512,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Courtesy Lamp",
+        "relatedEntities": [
+          "LUZ_CORTESIA"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 38.493550724637636,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "BCM, Electronic Brake Control Indicator Lamp Driver Module, Instrument Panel Cluster, Rear Side Door Actuator Control Module, Rear Windows",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "TABLERO",
+          "LUNETA_TRASERA",
+          "VENTANILLA(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.008043478260824,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "25"
+        },
+        "description": "Rear HVAC-A/C Control"
+      },
+      {
+        "layout": {
+          "top": 55.52253623188402,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Rear Window Wiper Motor, Rear Window Wiper/Washer and Multifunction Switch (Rear Window Wiper/Washer Switch)",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))",
+          "LIMPIA_PARABRISAS",
+          "SAPITO",
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 64.21818840579706,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "39",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        }
+      },
+      {
+        "layout": {
+          "top": 72.55152173913051,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        }
+      },
+      {
+        "layout": {
+          "top": 81.06601449275371,
+          "left": 65.10695187165777,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "41",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 12.950072463768104,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 21.464565217391325,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 29.979057971014512,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "44",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Retained Accessory Power (RAP) Relay"
+      },
+      {
+        "layout": {
+          "top": 38.493550724637636,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "45",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 47.008043478260824,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Air Inlet Actuator, DIC Display, DRL Control Module, Heater-A/C Control, Temperature Door Actuator (Front) and Rear Window Defogger Relay",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)",
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.52253623188402,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "47",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "BCM Programming"
+      },
+      {
+        "layout": {
+          "top": 64.21818840579706,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "48",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        }
+      },
+      {
+        "layout": {
+          "top": 72.55152173913051,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "49",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        }
+      },
+      {
+        "layout": {
+          "top": 81.06601449275371,
+          "left": 81.01604278074868,
+          "width": 10.947653000594183,
+          "height": 5.132689210950092
+        },
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "IGN MAIN Relay and PCM, Electronic Break Control Module",
+        "relatedEntities": [
+          "PCM"
+        ]
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.6959152798789713,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/be17cddc_chevrolet-venture-2000.jpg"
+    },
+    "boxName": "Instrument Panel Fuse Block",
+    "imageClusters": [
+      "61d366bb38df740004de1458"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/692a372b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ab23c858_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f5e558c6_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/51ee952f_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/01658f7d_image.jpg"
+      }
+    ],
+    "templateRenameMap": null,
+    "templateId": "6185696181ca7d0004840795",
+    "boxScaleMultiplier": "0.8",
+    "boxRotation": 90,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-venture-2004-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 84.06593406593407,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.509157509157509
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "(COOL FAN 2) Coolant Fans"
+      },
+      {
+        "layout": {
+          "top": 73.62637362637363,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.326007326007327
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 62.82051282051282,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.509157509157509
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "(HEADLAMPS) Circuit Breakers: FRT HVAC HI BLWR, and HEADLAMP Fuses (Instrument Panel): HAZARD and STOPLAMP",
+        "relatedEntities": [
+          "FUSIBLE",
+          "TABLERO",
+          "LUZ_BALIZA",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/brake-light-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 52.38095238095239,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.509157509157509
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "(BATT MAIN 2) Circuit Breaker: PWR SEAT/PSD. Fuses (Instrument Panel): ELC and RR DEFOG"
+      },
+      {
+        "layout": {
+          "top": 41.57509157509158,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.326007326007327
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false,
+          "amp": "40"
+        },
+        "description": "(IGN MAIN 1) Ignition Switch to Fuses (Instrument Panel): ABS/TCS IGN, CRUISE, DRL, ELEC PRNDL, IGN 1, PSD, SIR, T/SIG and PCM [IGN MAIN Relay (Underhood Electrical Center Fuses: A/C CLU, ELEK IGN, IGN 1-U/H, INJ, TCC)]",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "ARRANQUE",
+          "PCM"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/starter-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 31.135531135531135,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.326007326007327
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "(COOL FAN I) Coolant Fans"
+      },
+      {
+        "layout": {
+          "top": 20.51282051282051,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.326007326007327
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "(BATT MAIN 1) Fuses (Instrument Panel): ABS MOD BATT, CIGAR/DLC, CTSY LAMP, FRT PWR SCKT, PWR LOCK, PWR MIRROR and RR PWR SCKT",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 9.706959706959708,
+          "left": 75.90027700831024,
+          "width": 12.18836565096953,
+          "height": 7.509157509157509
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "(IGN MAIN 2) Ignition Switch to Fuses (I/P): BCM PRGRM, FRT HVAC LOW/MED BLWR, FRT WPR/WSHR, HVAC/DRL, MALL/RADIO/DIC, PWR QRT VENT, RR HVAC, RR WPR/WSHR, SWC ACCY and PWR WDO Circuit Breaker",
+        "relatedEntities": [
+          "CLIMATIZADOR",
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 71.30549450549448,
+          "left": 61.95752539242844,
+          "width": 10.526315789473683,
+          "height": 21.978021978021978
+        },
+        "id": "9",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false,
+          "amp": ""
+        },
+        "description": "(COOL FAN) RH FAN 1, LH FAN 2"
+      },
+      {
+        "layout": {
+          "top": 71.30549450549448,
+          "left": 48.01477377654663,
+          "width": 10.526315789473683,
+          "height": 21.978021978021978
+        },
+        "id": "10",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(COOL FAN 2) LH FAN 2"
+      },
+      {
+        "layout": {
+          "top": 60.98901098901099,
+          "left": 29.286241920590935,
+          "width": 10.526315789473683,
+          "height": 22.16117216117216
+        },
+        "id": "11",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(IGN MAIN) FUSES: A/C CLU, IGN 1-U/H, INS, ELEK IGN, TCC",
+        "relatedEntities": [
+          "CONVERTIDOR_DE_PAR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 12.637362637362637,
+          "left": 44.59833795013851,
+          "width": 10.526315789473683,
+          "height": 21.978021978021978
+        },
+        "id": "12",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(COOL FAN 1) RH FAN 1, LH FAN 2"
+      },
+      {
+        "layout": {
+          "top": 51.28205128205128,
+          "left": 48.661126500461684,
+          "width": 9.141274238227147,
+          "height": 12.82051282051282
+        },
+        "id": "13",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(A/C CLU) A/C Clutch"
+      },
+      {
+        "layout": {
+          "top": 30.952380952380953,
+          "left": 62.41920590951062,
+          "width": 9.141274238227147,
+          "height": 12.454212454212454
+        },
+        "id": "14",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(FUEL PUMP) Fuel Pump",
+        "relatedEntities": [
+          "BOMBA",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/fuel-pump-relay",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.032967032967033,
+          "left": 62.41920590951062,
+          "width": 9.141274238227147,
+          "height": 12.637362637362637
+        },
+        "id": "15",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(F/PMP SPD CONT) Not Used"
+      },
+      {
+        "layout": {
+          "top": 44.13919413919414,
+          "left": 24.284395198522624,
+          "width": 9.141274238227147,
+          "height": 12.454212454212454
+        },
+        "id": "16",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/horn-relay",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.21978021978022,
+          "left": 24.284395198522624,
+          "width": 9.141274238227147,
+          "height": 12.637362637362637
+        },
+        "id": "17",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(FOG LAMP) LH Fog Lamp, RH Fog Lamp, Fog Lamp Indicator",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA",
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=LADO_DERECHO))",
+          "LUZ_ANTINIEBLA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 85.8974358974359,
+          "left": 34.44136657433056,
+          "width": 5.8171745152354575,
+          "height": 4.395604395604396
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "(INJ) Fuel Injectors 1-6"
+      },
+      {
+        "layout": {
+          "top": 85.8974358974359,
+          "left": 34.44136657433056,
+          "width": 5.8171745152354575,
+          "height": 4.395604395604396
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(INJ) Fuel Injectors 1-6"
+      },
+      {
+        "layout": {
+          "top": 86.08058608058609,
+          "left": 16.98984302862419,
+          "width": 5.724838411819022,
+          "height": 4.5787545787545785
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "(SPARE) Not Used",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 86.08058608058609,
+          "left": 9.97229916897507,
+          "width": 5.8171745152354575,
+          "height": 4.5787545787545785
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 79.12087912087912,
+          "left": 41.55124653739612,
+          "width": 5.8171745152354575,
+          "height": 4.395604395604396
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "(IGN1-UH) Evaporative Emissions (EVAP) Canister Purge Valve, Heated Oxygen Sensors 1 and 2, Mass Air Flow (MAF) Sensor",
+        "relatedEntities": [
+          "SENSOR_CAUDAL_DE_AIRE",
+          "SENSOR",
+          "LUZ_TESTIGO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.3040293040293,
+          "left": 16.98984302862419,
+          "width": 5.724838411819022,
+          "height": 4.212454212454213
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "(SPARE) Not Used",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.3040293040293,
+          "left": 9.97229916897507,
+          "width": 5.8171745152354575,
+          "height": 4.212454212454213
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "(SPARE) Not Used",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.52747252747253,
+          "left": 16.98984302862419,
+          "width": 5.724838411819022,
+          "height": 4.395604395604396
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "(SPARE) Not Used",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.75091575091575,
+          "left": 41.55124653739612,
+          "width": 5.909510618651892,
+          "height": 4.212454212454213
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "(ELEK IGN) Ignition Control Module (ICM)"
+      },
+      {
+        "layout": {
+          "top": 65.38461538461539,
+          "left": 16.98984302862419,
+          "width": 5.724838411819022,
+          "height": 4.212454212454213
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "(SPARE) Not Used",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.60805860805861,
+          "left": 66.02031394275161,
+          "width": 5.724838411819022,
+          "height": 4.395604395604396
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(B/ULAMP) Transaxle Range Switch to Back-up Lamps"
+      },
+      {
+        "layout": {
+          "top": 58.60805860805861,
+          "left": 58.91043397968606,
+          "width": 5.8171745152354575,
+          "height": 4.395604395604396
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(A/C C) A/C CLU Relay to A/C Compressor Clutch Oil"
+      },
+      {
+        "layout": {
+          "top": 58.97435897435898,
+          "left": 9.97229916897507,
+          "width": 5.8171745152354575,
+          "height": 4.029304029304029
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(RADIO) Driver Information Display, Heater A/C Control, Radio, Rear Side Door Actuator Control Motor, Remote Control Door Lock Receiver (RCDLR), Security Indicator Lamp and Theft-Deterrent Shock Sensor",
+        "relatedEntities": [
+          "ESTEREO",
+          "TESTIGO_INMOVILIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/radio-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.97435897435898,
+          "left": 3.0470914127423825,
+          "width": 5.724838411819022,
+          "height": 4.029304029304029
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(ALT SENSE) Generator"
+      },
+      {
+        "layout": {
+          "top": 51.83150183150184,
+          "left": 66.02031394275161,
+          "width": 5.724838411819022,
+          "height": 4.395604395604396
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(TCC) Automatic Transaxle (Torque Converter Clutch Solenoids) Stoplamp Switch to PCM"
+      },
+      {
+        "layout": {
+          "top": 44.871794871794876,
+          "left": 65.92797783933518,
+          "width": 5.8171745152354575,
+          "height": 4.395604395604396
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(FUEL PUMP) Fuel Pump Relay",
+        "relatedEntities": [
+          "BOMBA",
+          "RELAY",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/fuel-pump-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.871794871794876,
+          "left": 65.92797783933518,
+          "width": 5.8171745152354575,
+          "height": 4.395604395604396
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "(FUEL PUMP) Fuel Pump Relay",
+        "relatedEntities": [
+          "BOMBA",
+          "RELAY",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/fuel-pump-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.216117216117215,
+          "left": 31.024930747922436,
+          "width": 5.8171745152354575,
+          "height": 4.5787545787545785
+        },
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(ECM SENSE) Powertrain Control Module (PCM)"
+      },
+      {
+        "layout": {
+          "top": 17.216117216117215,
+          "left": 24.37673130193906,
+          "width": 5.8171745152354575,
+          "height": 4.5787545787545785
+        },
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 17.216117216117215,
+          "left": 16.98984302862419,
+          "width": 5.724838411819022,
+          "height": 4.5787545787545785
+        },
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(FOG LP) Fog Lamp Relay"
+      },
+      {
+        "layout": {
+          "top": 17.216117216117215,
+          "left": 9.97229916897507,
+          "width": 5.8171745152354575,
+          "height": 4.5787545787545785
+        },
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "(HORN) Horn Relay",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/horn-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.256410256410255,
+          "left": 34.71837488457987,
+          "width": 5.724838411819022,
+          "height": 4.395604395604396
+        },
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "(PARK LP) Daytime Running Lamps (DRL) Control Module, Headlamps and Instrument Panel Dimmer Switch Theft-Deterrent Relay to Headlamps",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/venture/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/venture/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.256410256410255,
+          "left": 24.37673130193906,
+          "width": 5.8171745152354575,
+          "height": 4.395604395604396
+        },
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 10.256410256410255,
+          "left": 16.98984302862419,
+          "width": 5.724838411819022,
+          "height": 4.395604395604396
+        },
+        "id": "39",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "(Spare) Not Used",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 30.76923076923077,
+          "left": 34.533702677746994,
+          "width": 5.909510618651892,
+          "height": 11.72161172161172
+        },
+        "id": "40",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up",
+          "notUsed": false
+        },
+        "description": "Mini Fuse Puller"
+      },
+      {
+        "id": "D1",
+        "layout": {
+          "top": 58.54891243693111,
+          "left": 41.55124653739612,
+          "width": 5.909510618651892,
+          "height": 4.212454212454213
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "A/C CLU DIODE"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5041551246537396,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/bd2f1131_chevrolet-venture-1997.jpg"
+    },
+    "boxName": "Underhood Fuse and Relay Center",
+    "boxDescription": "This fuse and relay center is located in the engine compartment, in front of the windshield washer fluid reservoir.",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/f72d0cdf_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d3cbd2b5_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/44fb1618_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "631e093c2a5bf92e49a7700f"
+    ],
+    "templateRenameMap": null,
+    "templateId": "61856a3b81ca7d0004840796",
+    "boxScaleMultiplier": "0.9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-venture-2004-genid-g1-1.webp"
+  }
+]

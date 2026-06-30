@@ -1,0 +1,2712 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "R9",
+        "layout": {
+          "top": 75.99118942731278,
+          "left": 6.802721088435375,
+          "width": 9.35374149659864,
+          "height": 8.81057268722467
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Low Speed Fan Motor",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_BAJA)"
+        ]
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 88.96584451856602,
+          "left": 6.757542862900987,
+          "width": 9.35374149659864,
+          "height": 8.590308370044053
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "High Speed Fan Motor",
+        "relatedEntities": [
+          "VELOCIDAD_VENTILADOR(of=VENTILADOR_RADIADOR,val=MAGNITUD_ALTA)"
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 75.99118942731278,
+          "left": 19.217687074829932,
+          "width": 9.523809523809524,
+          "height": 8.81057268722467
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Accessory Power Outlets",
+        "relatedEntities": [
+          "TOMA_12V"
+        ]
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 88.96584451856602,
+          "left": 19.17250884929552,
+          "width": 9.523809523809524,
+          "height": 8.590308370044053
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Series/Parallel Fan"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 80.39647577092511,
+          "left": 30.782312925170068,
+          "width": 7.993197278911565,
+          "height": 6.607929515418502
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "R15",
+        "layout": {
+          "top": 89.3979441997063,
+          "left": 30.782312925170068,
+          "width": 7.993197278911565,
+          "height": 6.387665198237885
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/horn-relay",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 80.39647577092511,
+          "left": 43.197278911564624,
+          "width": 7.993197278911565,
+          "height": 6.607929515418502
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "High-Beam Headlamps",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ]
+      },
+      {
+        "id": "R16",
+        "layout": {
+          "top": 88.97209985315712,
+          "left": 43.197278911564624,
+          "width": 7.993197278911565,
+          "height": 6.387665198237885
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ]
+      },
+      {
+        "id": "R17",
+        "layout": {
+          "top": 83.84728340675483,
+          "left": 55.27210884353742,
+          "width": 9.183673469387756,
+          "height": 9.030837004405285
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Low-Beam HID Headlamps"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 20.704845814977972,
+          "left": 29.761904761904763,
+          "width": 9.523809523809524,
+          "height": 9.030837004405285
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Headlamp Washer Motor"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 34.140969162995596,
+          "left": 29.761904761904763,
+          "width": 9.523809523809524,
+          "height": 9.030837004405285
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 46.25550660792951,
+          "left": 29.761904761904763,
+          "width": 9.523809523809524,
+          "height": 9.030837004405285
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Front Blower",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 41.629955947136565,
+          "left": 42.857142857142854,
+          "width": 7.653061224489796,
+          "height": 7.048458149779736
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog Lamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 50,
+          "left": 42.857142857142854,
+          "width": 7.653061224489796,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Powertrain/ECM"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 22.687224669603523,
+          "left": 53.91156462585034,
+          "width": 9.523809523809524,
+          "height": 9.030837004405285
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter Solenoid",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 41.409691629955944,
+          "left": 55.27210884353742,
+          "width": 7.482993197278912,
+          "height": 7.048458149779736
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Compressor Clutch"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 50,
+          "left": 55.27210884353742,
+          "width": 7.482993197278912,
+          "height": 7.048458149779736
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Ignition Switch (ON)"
+      },
+      {
+        "id": "BODY W/H1",
+        "layout": {
+          "top": 31.277533039647576,
+          "left": 13.945578231292515,
+          "width": 5.782312925170068,
+          "height": 10.79295154185022
+        },
+        "kind": {
+          "type": "connector",
+          "notUsed": false
+        },
+        "description": "Wiring Harness Connection"
+      },
+      {
+        "id": "BODY W/H2",
+        "layout": {
+          "top": 46.47577092511013,
+          "left": 13.945578231292515,
+          "width": 5.782312925170068,
+          "height": 10.79295154185022
+        },
+        "kind": {
+          "type": "connector",
+          "notUsed": false
+        },
+        "description": "Wiring Harness Connection"
+      },
+      {
+        "id": "ENG W/H",
+        "layout": {
+          "top": 17.841409691629956,
+          "left": 78.74149659863946,
+          "width": 14.965986394557824,
+          "height": 11.45374449339207
+        },
+        "kind": {
+          "type": "connector",
+          "notUsed": false
+        },
+        "description": "Engine Wiring Harness Connection"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 25.11013215859031,
+          "left": 6.802721088435375,
+          "width": 3.9115646258503403,
+          "height": 4.405286343612335
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "RRPDB (Passenger's Side Rear Power Distribution Box)"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 34.36123348017621,
+          "left": 6.802721088435375,
+          "width": 3.9115646258503403,
+          "height": 4.405286343612335
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "RRPDB (Passenger's Side Rear Power Distribution Box)"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 43.392070484581495,
+          "left": 6.802721088435375,
+          "width": 3.9115646258503403,
+          "height": 4.185022026431718
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "LRPDB (Driver's Side Rear Power Distribution Box)"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 52.42290748898678,
+          "left": 6.802721088435375,
+          "width": 3.9115646258503403,
+          "height": 4.185022026431718
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "60"
+        },
+        "description": "LRPDB (Driver's Side Rear Power Distribution Box)"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 66.51982378854625,
+          "left": 6.802721088435375,
+          "width": 3.9115646258503403,
+          "height": 4.185022026431718
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "High Cooling Fan Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_ALTA))",
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_ALTA)"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 66.51982378854625,
+          "left": 14.795918367346939,
+          "width": 4.081632653061225,
+          "height": 4.185022026431718
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Low Cooling Fan Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA))",
+          "VENTILADOR_RADIADOR(velocidadVentilador=MAGNITUD_BAJA)"
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 15.638766519823788,
+          "left": 44.89795918367347,
+          "width": 3.4013605442176873,
+          "height": 5.066079295154185
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "40"
+        },
+        "description": "PWM Fan Motor Assembly"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 38.54625550660793,
+          "left": 81.4625850340136,
+          "width": 3.9115646258503403,
+          "height": 4.405286343612335
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Starter Solenoid",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 38.54625550660793,
+          "left": 89.79591836734694,
+          "width": 3.9115646258503403,
+          "height": 4.405286343612335
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false,
+          "amp": "50"
+        },
+        "description": "Anti-Lock Brake System",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 70.63876651982378,
+          "left": 31.292517006802722,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Passenger's Side Taillamp Assembly, Front Sidemarker and Front Parking Lamp Assembly"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 70.63876651982378,
+          "left": 35.714285714285715,
+          "width": 1.7006802721088436,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Dual Horn Assembly"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 71.1453744493392,
+          "left": 53.74149659863946,
+          "width": 1.7006802721088436,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Driver's Side High-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 70.92511013215858,
+          "left": 58.16326530612245,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Driver's Side Low-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 71.1453744493392,
+          "left": 62.755102040816325,
+          "width": 1.7006802721088436,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Passenger's Side Low-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 71.1453744493392,
+          "left": 67.17687074829932,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Passenger's Side High-Beam Headlamp",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 71.1453744493392,
+          "left": 71.7687074829932,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Manual Transmission Output Speed Sensor"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 22.108843537414966,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 26.53061224489796,
+          "width": 2.0408163265306123,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "7.5"
+        },
+        "description": "ECM (Electronic Control Module), TCM (Transmission Control Module), PASS-Key III+ Module",
+        "relatedEntities": [
+          "ECU",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 31.292517006802722,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Driver's Side Taillamp Assembly, Front Sidemarker and Front Parking Lamp Assembly"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 35.714285714285715,
+          "width": 1.7006802721088436,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Rear License Plate Assembly, Dash Integrated Module (DIM)"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 40.476190476190474,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "DIM, ALDL (Assembly Line Data Link)"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 44.89795918367347,
+          "width": 2.0408163265306123,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Turn Signal/Hazard Flasher Module",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 49.31972789115646,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Electronic Control Module",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 53.74149659863946,
+          "width": 1.7006802721088436,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Steering Wheel Control Pad, Headlamp Switch",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 59.91189427312775,
+          "left": 58.16326530612245,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Heater Valve, Clutch Switch (Normal Closed), Clutch Switch (Normal Open), Jumper to Start Relay Coil for Automatic Transmission"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 62.755102040816325,
+          "width": 1.7006802721088436,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Driver's and Passenger's Side Heated Washer Nozzles"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 67.17687074829932,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Driver's & Passenger's Side Oxygen Sensors, CAM Phaser, Canister Purge",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 71.7687074829932,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "TCM, ECM and IPC (Instrument Panel Cluster)",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION",
+          "ECU"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 76.36054421768708,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 60.13215859030837,
+          "left": 80.95238095238095,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Front Bank Ignition Modules"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 50.22026431718062,
+          "left": 22.108843537414966,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Electronic PRNDL"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 50.22026431718062,
+          "left": 67.17687074829932,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 50.22026431718062,
+          "left": 71.7687074829932,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 50.22026431718062,
+          "left": 76.36054421768708,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Ignition Switch (Power to IGN-3 and CRANK)",
+        "relatedEntities": [
+          "CIGUENAL"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 50.22026431718062,
+          "left": 80.95238095238095,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "DIM (Dash Integration Module)"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 50.22026431718062,
+          "left": 85.37414965986395,
+          "width": 2.0408163265306123,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "TCM (Transmission Control Module), ECM (Electronic Control Module), IPC (Instrument Panel Cluster), PASS-Key III+ Module",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION",
+          "ECU"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 38.76651982378855,
+          "left": 22.108843537414966,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Windshield Wiper Module Assembly"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 41.409691629955944,
+          "left": 67.17687074829932,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Odd Ignition Coils, Fuel Injectors, Odd Injection Coils"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 37.88546255506608,
+          "left": 74.48979591836735,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Compressor Clutch"
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 27.312775330396477,
+          "left": 22.108843537414966,
+          "width": 1.870748299319728,
+          "height": 7.488986784140969
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Windshield Wiper/Washer Switch",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 32.59911894273127,
+          "left": 44.72789115646258,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Fog Lamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "46",
+        "layout": {
+          "top": 32.59911894273127,
+          "left": 49.14965986394558,
+          "width": 1.7006802721088436,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Center Console Accessory Power Outlet"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 30.396475770925107,
+          "left": 67.17687074829932,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Driver's and Passenger's Side Oxygen Sensors, LRPDB (Pusher Cooling Fan Relay)"
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 23.127753303964756,
+          "left": 44.72789115646258,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Instrument Panel Accessory Power Outlet"
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 23.127753303964756,
+          "left": 49.14965986394558,
+          "width": 1.7006802721088436,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Climate Control",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 21.58590308370044,
+          "left": 67.17687074829932,
+          "width": 1.870748299319728,
+          "height": 7.268722466960352
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Even Injection Coils"
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 9.251101321585903,
+          "left": 46.7687074829932,
+          "width": 5.782312925170068,
+          "height": 2.4229074889867843
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 9.251101321585903,
+          "left": 72.78911564625851,
+          "width": 5.782312925170068,
+          "height": 2.4229074889867843
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "49",
+        "layout": {
+          "top": 9.251101321585903,
+          "left": 80.78231292517006,
+          "width": 5.782312925170068,
+          "height": 2.4229074889867843
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "51",
+        "layout": {
+          "top": 13.656387665198238,
+          "left": 22.108843537414966,
+          "width": 5.272108843537415,
+          "height": 11.013215859030836
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "notUsed": false,
+          "amp": "30"
+        },
+        "description": "Headlamp Washer Motor"
+      },
+      {
+        "id": "FUSE PULLER",
+        "layout": {
+          "top": 9.251101321585903,
+          "left": 35.374149659863946,
+          "width": 7.8231292517006805,
+          "height": 7.048458149779736
+        },
+        "kind": {
+          "type": "fusepuller",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "50",
+        "layout": {
+          "top": 9.251101321585903,
+          "left": 88.94557823129252,
+          "width": 5.782312925170068,
+          "height": 2.4229074889867843
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "FORWARD LAMP",
+        "kind": {
+          "notUsed": false
+        },
+        "description": "Forward Lamp Wiring Harness Connection",
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Underhood Fuse Block",
+    "boxDescription": "The underhood fuse block is located in the engine compartment on the passenger’s side of the vehicle.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-7790fd6395.jpg",
+      "source": "611d3b94f71a840004fc69d4"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-c09acfe087.jpg",
+        "source": "611d3b98f71a840004fc69d5"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-4cf6a77b76.jpg",
+        "source": "611d3b9ff71a840004fc69d6"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-408a778af7.jpg",
+        "source": "611d3ba3f71a840004fc69d7"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-aad7da5604.jpg",
+        "source": "611d3ba8f71a840004fc69d8"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-91bb5e06fa.jpg",
+        "source": "611d3badf71a840004fc69d9"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-b9f99128dc.jpg",
+        "source": "611d3bb2f71a840004fc69da"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-0c49179af2.jpg",
+        "source": "611d3bb9f71a840004fc69db"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-df0fa96738.jpg",
+        "source": "611d3bbef71a840004fc69dc"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.7721088435374149,
+    "templateId": "61606d5d974f6c000496f28c",
+    "templateRenameMap": {
+      "LO SPEED FAN RELAY MINI": "R9",
+      "HI SPEED FAN RELAY MINI": "R13",
+      "ACCESSORY RELAY MINI": "R10",
+      "S/P FAN RELAY MINI": "R14",
+      "PARK LAMP RELAY MICRO": "R11",
+      "HORN RELAY MICRO": "R15",
+      "HI BEAM RELAY MICRO": "R12",
+      "DRL RELAY MICRO-OPT": "R16",
+      "LO BEAM RELAY/HID MINI-OPT": "R17",
+      "HDLP WASH RELAY MINI-OPT": "R1",
+      "SPARE1": "R2",
+      "BLOWER RELAY MINI": "R3",
+      "FOG LAMP RELAY MICRO": "R5",
+      "MAIN RELAY MICRO": "R7",
+      "STARTER RELAY MINI": "R4",
+      "CMP CLU RELAY MICRO": "R6",
+      "IGN-1 RELAY MICRO": "R8",
+      "R REAR1": "38",
+      "R REAR2": "39",
+      "L REAR1": "40",
+      "L REAR2": "41",
+      "HI FAN": "22",
+      "LO FAN": "23",
+      "BLOWER": "42",
+      "STARTER": "30",
+      "ABS": "31",
+      "RT PARK": "1",
+      "HORN": "2",
+      "LT HI BEAM": "3",
+      "LT LOW BEAM": "4",
+      "RT LOW BEAM": "5",
+      "RT HI BEAM": "6",
+      "TOS": "7",
+      "SPARE2": "8",
+      "THEFT": "9",
+      "LT PARK": "10",
+      "DIMMING": "11",
+      "DIM/ALDL": "12",
+      "FLASHER": "13",
+      "ECM": "14",
+      "STRG CTLS": "15",
+      "HTR VLV/ CLTCH": "16",
+      "WASH NOZ": "17",
+      "PRE O2/CAM": "18",
+      "TCM/IPC": "19",
+      "SPARE3": "20",
+      "IGN MOD/MAF": "21",
+      "ELEC PRNDL": "37",
+      "SPARE4": "24",
+      "SPARE5": "25",
+      "IGN SW": "26",
+      "VOLT CHECK": "27",
+      "ECM/TCM": "28",
+      "WPR MOD": "36",
+      "ODD INJ/COILS": "34",
+      "COMP CLUTCH": "29",
+      "WPR SW": "35",
+      "FOG LAMP": "45",
+      "OUTLET": "46",
+      "POST 02": "33",
+      "I/P OUTLET": "43",
+      "CCP": "44",
+      "EVEN INJ/COILS": "32",
+      "SPARE6": "47",
+      "SPARE7": "48",
+      "SPARE8": "49",
+      "HDLP WASH C/B-OPT": "51",
+      "SPARE9": "50"
+    },
+    "imageClusters": [
+      "61d5f8429cf6d3000432e213"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-cadillac-cts-2005-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "SPARE1",
+        "layout": {
+          "top": 24.817518248175183,
+          "left": 34.02061855670103,
+          "width": 4.252577319587629,
+          "height": 7.2992700729927
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "SPARE2",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 38.78865979381443,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "AUDIO",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 42.78350515463917,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Radio, OnStar Module",
+        "relatedEntities": [
+          "ESTEREO",
+          "SISTEMA_ENTRETENIMIENTO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "SPARE3",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 46.52061855670103,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "REAR DR MOD",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 50.644329896907216,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Door Modules",
+        "relatedEntities": [
+          "PUERTA(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "SPARE4",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 58.50515463917526,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "DRIVER DR MOD",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 54.51030927835051,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Door Module",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "BAS",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 62.5,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Taillamps, Center High-Mounted Stoplamp, Flasher Module, ABS Module, Trailer Lamps",
+        "relatedEntities": [
+          "TERCERA_LUZ_DE_FRENO",
+          "RELAY_INTERMINTENTES",
+          "SISTEMA_ABS",
+          "LUCES_DELANTERAS(of=REMOLQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/brake-light-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "HDLP LEVELING",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 66.62371134020619,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Headlamp Leveling System Chassis Sensors [Export Only]"
+      },
+      {
+        "id": "SPARE5",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 70.61855670103093,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "CCP",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 74.61340206185567,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "CCP (Climate Control Panel)"
+      },
+      {
+        "id": "IGN 3",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 78.6082474226804,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heated Seat Modules, Air Inlet Motor, Shifter Assembly",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "MODULO(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "MODULO(of=CALEFACCION_DE_ASIENTO)"
+        ]
+      },
+      {
+        "id": "SPARE6",
+        "layout": {
+          "top": 57.66423357664233,
+          "left": 3.221649484536082,
+          "width": 4.252577319587629,
+          "height": 8.02919708029197
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "SPARE7",
+        "layout": {
+          "top": 57.66423357664233,
+          "left": 8.376288659793813,
+          "width": 4.252577319587629,
+          "height": 8.02919708029197
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "FUSE PULLER",
+        "layout": {
+          "top": 54.74452554744526,
+          "left": 13.27319587628866,
+          "width": 4.123711340206185,
+          "height": 15.328467153284672
+        },
+        "kind": {
+          "type": "fusepuller",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fuse Puller"
+      },
+      {
+        "id": "L FRT HTD SEAT MOD",
+        "layout": {
+          "top": 53.284671532846716,
+          "left": 38.78865979381443,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Heated Seat Module"
+      },
+      {
+        "id": "MEM/ADAPT SEAT",
+        "layout": {
+          "top": 53.284671532846716,
+          "left": 42.78350515463917,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Power Seat Switch, Memory Seat Module",
+        "relatedEntities": [
+          "MEMORIA_ASIENTO",
+          "MODULO(of=MEMORIA_ASIENTO)"
+        ]
+      },
+      {
+        "id": "TRUNK DR RELEASE",
+        "layout": {
+          "top": 53.284671532846716,
+          "left": 46.649484536082475,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Trunk Release Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=CERRADURA(of=PUERTA_BAUL))"
+        ]
+      },
+      {
+        "id": "REVERSE LAMP",
+        "layout": {
+          "top": 53.284671532846716,
+          "left": 50.644329896907216,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "ISRVM (Inside Rearview Mirror), License Plate Lamp Assembly"
+      },
+      {
+        "id": "SPARE8",
+        "layout": {
+          "top": 53.284671532846716,
+          "left": 54.51030927835051,
+          "width": 1.2886597938144329,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "POSITION LAMP",
+        "layout": {
+          "top": 53.284671532846716,
+          "left": 58.50515463917526,
+          "width": 1.4175257731958764,
+          "height": 24.087591240875913
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Taillamp Assemblies, Front Position Lamp Assemblies"
+      },
+      {
+        "id": "AMP",
+        "layout": {
+          "top": 24.817518248175183,
+          "left": 30.79896907216495,
+          "width": 2.448453608247423,
+          "height": 14.5985401459854
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Audio Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=ESTEREO)",
+          "AMPLIFICADOR"
+        ]
+      },
+      {
+        "id": "PUSHER FAN",
+        "layout": {
+          "top": 51.82481751824818,
+          "left": 30.79896907216495,
+          "width": 2.448453608247423,
+          "height": 14.5985401459854
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Pusher Fan [Export Only]"
+      },
+      {
+        "id": "BAS RELAY MINI",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 3.221649484536082,
+          "width": 6.572164948453609,
+          "height": 30.656934306569344
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Brake Apply Sensor"
+      },
+      {
+        "id": "PUSHER FAN RLY",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 10.56701030927835,
+          "width": 6.572164948453609,
+          "height": 30.656934306569344
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Pusher Fan [Export Only]"
+      },
+      {
+        "id": "L POSITION RELAY MICRO",
+        "layout": {
+          "top": 24.087591240875913,
+          "left": 17.912371134020617,
+          "width": 5.798969072164948,
+          "height": 20.437956204379564
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Driver's Side Position Lamp"
+      },
+      {
+        "id": "TRK DR REL SOL RELAY MICRO",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 81.95876288659794,
+          "width": 5.670103092783505,
+          "height": 21.16788321167883
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Trunk Release Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=CERRADURA(of=PUERTA_BAUL))"
+        ]
+      },
+      {
+        "id": "REV LAMP RELAY MICRO",
+        "layout": {
+          "top": 19.708029197080293,
+          "left": 88.27319587628865,
+          "width": 5.670103092783505,
+          "height": 21.16788321167883
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "ISRVM (Inside Rearview Mirror), License Plate Lamp Assembly"
+      },
+      {
+        "id": "R POSITION RELAY MICRO",
+        "layout": {
+          "top": 49.63503649635037,
+          "left": 17.912371134020617,
+          "width": 5.798969072164948,
+          "height": 20.437956204379564
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Position Lamp"
+      },
+      {
+        "id": "IGN 3 RELAY MICRO",
+        "layout": {
+          "top": 49.63503649635037,
+          "left": 24.22680412371134,
+          "width": 5.798969072164948,
+          "height": 20.437956204379564
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Heated Seat Modules, Air Inlet Motor, Shifter Assembly",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "MODULO(of=CALEFACCION_DE_ASIENTO(of=ASIENTO))",
+          "MODULO(of=CALEFACCION_DE_ASIENTO)"
+        ]
+      },
+      {
+        "id": "STANDING LAMP RLY MICRO",
+        "layout": {
+          "top": 53.284671532846716,
+          "left": 63.01546391752577,
+          "width": 5.670103092783505,
+          "height": 21.16788321167883
+        },
+        "kind": {
+          "amp": 0,
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Control for Position Lamp Relays"
+      },
+      {
+        "id": "SEAT C/B",
+        "layout": {
+          "top": 24.087591240875913,
+          "left": 24.22680412371134,
+          "width": 5.798969072164948,
+          "height": 15.328467153284672
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "notUsed": false
+        },
+        "description": "Power Seat Switches, Memory Seat Module",
+        "relatedEntities": [
+          "MEMORIA_ASIENTO",
+          "MODULO(of=MEMORIA_ASIENTO)"
+        ]
+      },
+      {
+        "id": "JOINT CONNECTOR",
+        "layout": {
+          "top": 54.74452554744526,
+          "left": 70.74742268041237,
+          "width": 13.917525773195877,
+          "height": 19.708029197080293
+        },
+        "kind": {
+          "type": "connector",
+          "notUsed": false
+        },
+        "description": "Joint Connector"
+      }
+    ],
+    "boxName": "Rear Underseat Fuse Block (Driver’s Side)",
+    "boxDescription": "The driver’s side rear fuse block is located under the rear seat on the driver’s side of the vehicle. The rear seat cushion must be removed to access the rear fuse block. ",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-5aa03a1355.jpg",
+      "source": "611d3be4f71a840004fc69dd"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-cc02db55ea.jpg",
+        "source": "611d3be9f71a840004fc69de"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-2cb9f388d0.jpg",
+        "source": "611d3beef71a840004fc69df"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-2f1d6063ac.jpg",
+        "source": "611d3bf3f71a840004fc69e0"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-125a0e436c.jpg",
+        "source": "611d3bf8f71a840004fc69e1"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-08bcc41c15.jpg",
+        "source": "611d3bfcf71a840004fc69e2"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-628a70278a.jpg",
+        "source": "611d3c02f71a840004fc69e3"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-f8b5598bbd.jpg",
+        "source": "611d3c06f71a840004fc69e4"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.17654639175257733,
+    "templateId": "61606e3d974f6c000496f28d",
+    "boxScaleMultiplier": "0.78",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-cadillac-cts-2005-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "TRUNK DIODE",
+        "layout": {
+          "top": 25.517241379310345,
+          "left": 33.589743589743584,
+          "width": 4.358974358974359,
+          "height": 6.896551724137931
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Trunk Lamp",
+        "relatedEntities": [
+          "LUZ_BAUL",
+          "TESTIGO_BAUL"
+        ]
+      },
+      {
+        "id": "POWER SOUNDER",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 38.46153846153847,
+          "width": 1.282051282051282,
+          "height": 22.06896551724138
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Sounder, Inclination Sensor"
+      },
+      {
+        "id": "SPARE1",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 42.30769230769231,
+          "width": 1.282051282051282,
+          "height": 22.06896551724138
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "CANISTER VENT",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 46.15384615384615,
+          "width": 1.282051282051282,
+          "height": 22.06896551724138
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Canister Vent Solenoid",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "id": "FUEL PUMP MTR",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 50.128205128205124,
+          "width": 1.282051282051282,
+          "height": 22.06896551724138
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fuel Pump Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=BOMBA_DE_COMBUSTIBLE)",
+          "MOTOR_IMPULSOR(of=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "SPARE2",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 53.97435897435897,
+          "width": 1.4102564102564104,
+          "height": 22.06896551724138
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R FRT HTD SEAT MOD",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 58.07692307692308,
+          "width": 1.282051282051282,
+          "height": 22.06896551724138
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Heated Seat Module"
+      },
+      {
+        "id": "SPARE3",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 62.05128205128205,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "AIR BAG",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 66.02564102564102,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "SDM (Sensing Diagnostic Module)"
+      },
+      {
+        "id": "RIM",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 70,
+          "width": 1.4102564102564104,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "ISRVM (Inside Rearview Mirror), Power Sounder, RIM"
+      },
+      {
+        "id": "ABS",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 74.1025641025641,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Anti-Lock Brake System",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "SPARE4",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 78.07692307692308,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "SPARE5",
+        "layout": {
+          "top": 60,
+          "left": 2.9487179487179485,
+          "width": 4.230769230769231,
+          "height": 6.896551724137931
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "SPARE6",
+        "layout": {
+          "top": 60,
+          "left": 8.076923076923077,
+          "width": 4.230769230769231,
+          "height": 6.896551724137931
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "FUSE PULLER",
+        "layout": {
+          "top": 56.55172413793104,
+          "left": 12.94871794871795,
+          "width": 4.102564102564102,
+          "height": 14.482758620689657
+        },
+        "kind": {
+          "type": "fusepuller",
+          "notUsed": false
+        },
+        "description": "Fuse Puller"
+      },
+      {
+        "id": "INTERIOR LAMP",
+        "layout": {
+          "top": 55.172413793103445,
+          "left": 38.46153846153847,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Hush Panel Lamps, Puddle Lamps, Overhead Courtesy Lamp Assembly"
+      },
+      {
+        "id": "PSGR DR MOD",
+        "layout": {
+          "top": 55.172413793103445,
+          "left": 42.30769230769231,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right Front Passenger Door Module",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_DERECHO(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "RIM/IGN SW",
+        "layout": {
+          "top": 55.172413793103445,
+          "left": 46.15384615384615,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "RIM (Rear Integration Module), Ignition Switch, Key Lock Cylinder",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "REAR FOG LAMP",
+        "layout": {
+          "top": 55.172413793103445,
+          "left": 50.128205128205124,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Fog Lamps [Export Only]",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "SPARE7",
+        "layout": {
+          "top": 55.172413793103445,
+          "left": 53.97435897435897,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "TV/VICS",
+        "layout": {
+          "top": 55.172413793103445,
+          "left": 58.07692307692308,
+          "width": 1.282051282051282,
+          "height": 22.758620689655174
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "TV Tuner Assembly [Export Only] VICS (Vehicle Information Communication System) Module"
+      },
+      {
+        "id": "REAR DEFOG",
+        "layout": {
+          "top": 53.79310344827586,
+          "left": 30.384615384615383,
+          "width": 2.435897435897436,
+          "height": 14.482758620689657
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Rear Window Defogger Element"
+      },
+      {
+        "id": "SUNROOF MOD",
+        "layout": {
+          "top": 26.20689655172414,
+          "left": 30.384615384615383,
+          "width": 2.435897435897436,
+          "height": 13.793103448275861
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Power Sunroof Module",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/sunroof-fuse",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "SPARE8",
+        "layout": {
+          "top": 23.448275862068964,
+          "left": 2.9487179487179485,
+          "width": 6.666666666666667,
+          "height": 28.965517241379313
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "REAR DEFOG RELAY MINI",
+        "layout": {
+          "top": 23.448275862068964,
+          "left": 10.128205128205128,
+          "width": 6.666666666666667,
+          "height": 28.965517241379313
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Window Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "SPARE9",
+        "layout": {
+          "top": 25.517241379310345,
+          "left": 17.692307692307693,
+          "width": 5.769230769230769,
+          "height": 19.310344827586206
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "REAR FOG LAMP RLY MICRO",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 81.28205128205128,
+          "width": 5.641025641025641,
+          "height": 20
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear Fog Lamps [Export Only]",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "FUEL PUMP MOTOR RLY MICRO",
+        "layout": {
+          "top": 24.137931034482758,
+          "left": 87.56410256410257,
+          "width": 5.641025641025641,
+          "height": 20
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Pump Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=BOMBA_DE_COMBUSTIBLE)",
+          "MOTOR_IMPULSOR(of=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/cadillac/cts/info/fusebox/2005/fuel-pump-relay",
+            "urlWithAnchor": "/cadillac/cts/info/fusebox/2005/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "INT LAMP RELAY MICRO",
+        "layout": {
+          "top": 52.41379310344828,
+          "left": 17.692307692307693,
+          "width": 5.769230769230769,
+          "height": 19.310344827586206
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Hush Panel Lamps, Puddle Lamps, Overhead Courtesy Lamp Assembly\n"
+      },
+      {
+        "id": "IGN 1 RELAY MICRO",
+        "layout": {
+          "top": 52.41379310344828,
+          "left": 23.974358974358974,
+          "width": 5.769230769230769,
+          "height": 19.310344827586206
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Ignition Swicht"
+      },
+      {
+        "id": "DR MOD PWR C/B",
+        "layout": {
+          "top": 25.517241379310345,
+          "left": 23.974358974358974,
+          "width": 5.769230769230769,
+          "height": 14.482758620689657
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "notUsed": false
+        },
+        "description": "Door Modules",
+        "relatedEntities": [
+          "PUERTA"
+        ]
+      },
+      {
+        "id": "JOINT CONNECTOR",
+        "layout": {
+          "top": 56.55172413793104,
+          "left": 70.25641025641025,
+          "width": 13.717948717948719,
+          "height": 19.310344827586206
+        },
+        "kind": {
+          "type": "connector",
+          "notUsed": false
+        },
+        "description": "Joint Connector"
+      },
+      {
+        "id": "SPARE10",
+        "layout": {
+          "top": 55.86206896551724,
+          "left": 62.43589743589744,
+          "width": 5.512820512820513,
+          "height": 19.310344827586206
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      }
+    ],
+    "boxName": "Rear Underseat Fuse Block (Passenger’s Side)",
+    "boxDescription": "The passenger’s side rear fuse block is located under the rear seat on the passenger’s side of the vehicle. The rear seat cushion must be removed to access the rear fuse block. ",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-02796c13c0.jpg",
+      "source": "611d3c17f71a840004fc69e5"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-62a4c6f329.jpg",
+        "source": "611d3c1cf71a840004fc69e6"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-9956abefa7.jpg",
+        "source": "611d3c21f71a840004fc69e7"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-b221751bd4.jpg",
+        "source": "611d3c27f71a840004fc69e8"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-eed9066879.jpg",
+        "source": "611d3c2cf71a840004fc69e9"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-b83090f90d.jpg",
+        "source": "611d3c31f71a840004fc69ea"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-e9eb5ed438.jpg",
+        "source": "611d3c36f71a840004fc69eb"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb176d1828290004052489/fragment-60fb176d1828290004052489-a45536ccf2.jpg",
+        "source": "611d3c3bf71a840004fc69ec"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.1858974358974359,
+    "templateId": "61607048974f6c000496f290",
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-cadillac-cts-2005-genid-g1-2.webp"
+  }
+]

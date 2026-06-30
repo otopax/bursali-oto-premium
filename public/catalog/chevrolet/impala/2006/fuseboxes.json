@@ -1,0 +1,1601 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 10.76388888888889,
+          "left": 12.860195360195355,
+          "width": 25.82417582417583,
+          "height": 17.708333333333336
+        },
+        "id": "PWR/SEAT",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "(Power Seats) Power seats",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.76388888888889,
+          "left": 50.9775641025641,
+          "width": 25.82417582417583,
+          "height": 17.708333333333336
+        },
+        "id": "PWR/WNDW",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "(Power Window) Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 11.11111111111111,
+          "left": 81.13553113553114,
+          "width": 7.142857142857142,
+          "height": 27.083333333333332
+        },
+        "id": "RAP",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Retained Accessory Power"
+      },
+      {
+        "layout": {
+          "top": 41.29583333333325,
+          "left": 23.066666666666755,
+          "width": 10.816117216117217,
+          "height": 9.041666666666682
+        },
+        "id": "HTD/SEAT",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "(Heated Seats) Seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.29583333333325,
+          "left": 43.11098901098907,
+          "width": 10.999267399267397,
+          "height": 9.041666666666682
+        },
+        "id": "AUX",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "(Auxiliary Outlets) Auxiliary power outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.29583333333325,
+          "left": 62.13956043956046,
+          "width": 10.999267399267397,
+          "height": 9.041666666666682
+        },
+        "id": "AMP",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "25"
+        },
+        "description": "(Amplifier) Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.03402777777771,
+          "left": 23.066666666666755,
+          "width": 10.816117216117217,
+          "height": 9.388888888888905
+        },
+        "id": "S/ROOF",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "(Sunroof) Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/sunroof-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.03402777777771,
+          "left": 43.11098901098907,
+          "width": 10.999267399267397,
+          "height": 9.388888888888905
+        },
+        "id": "ONSTAR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "OnStar",
+        "relatedEntities": [
+          "SISTEMA_ENTRETENIMIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.03402777777771,
+          "left": 62.13956043956046,
+          "width": 10.999267399267397,
+          "height": 9.388888888888905
+        },
+        "id": "CNSTR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Canister",
+        "relatedEntities": [
+          "CANISTER"
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.333333333333336,
+          "left": 6.043956043956044,
+          "width": 6.95970695970696,
+          "height": 27.083333333333332
+        },
+        "id": "DR/LCK",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "25"
+        },
+        "description": "(Door Locks) Power door lock system",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 77.1194444444444,
+          "left": 23.066666666666755,
+          "width": 10.816117216117217,
+          "height": 9.041666666666682
+        },
+        "id": "PWR/MIR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "2"
+        },
+        "description": "(Power Mirrors) Power control mirror"
+      },
+      {
+        "layout": {
+          "top": 77.1194444444444,
+          "left": 43.11098901098907,
+          "width": 10.999267399267397,
+          "height": 9.041666666666682
+        },
+        "id": "AIRBAG",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(Airbags) Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "layout": {
+          "top": 77.1194444444444,
+          "left": 62.13956043956046,
+          "width": 10.999267399267397,
+          "height": 9.041666666666682
+        },
+        "id": "DECKLID",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "(Trunk) Power trunk lid opener"
+      },
+      {
+        "layout": {
+          "top": 58.333333333333336,
+          "left": 81.13553113553114,
+          "width": 7.142857142857142,
+          "height": 27.083333333333332
+        },
+        "id": "DECKLID RLY",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(Trunk Relay) Power trunk lid opener"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5274725274725275,
+    "boxName": "Instrument Panel Fuse Block",
+    "boxDescription": "The fuse block is located on the passenger’s side of the vehicle under the instrument panel.\n",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/6b46cead_chevrolet-impala-2006.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/3fbdba6a_chevrolet-impala-2006.jpg"
+      }
+    ],
+    "templateId": "6183de7d83a18b00041b4da6",
+    "imageClusters": [
+      "62101f45bd05eddc5dc812fd"
+    ],
+    "useAcronyms": true,
+    "boxScaleMultiplier": "",
+    "boxRotation": 270,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-impala-2006-genid-g9-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 5.8232931726907635,
+          "left": 60.57401812688822,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "LT PARK",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side Parking Lamp",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 5.8232931726907635,
+          "left": 64.35045317220543,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "RT PARK",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Parking Lamp",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.36144578313253,
+          "left": 91.6918429003021,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "SPARE 1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 28.313253012048197,
+          "left": 91.6918429003021,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "SPARE 2",
+        "description": "Spare",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": " "
+        },
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 16.666666666666664,
+          "left": 8.610271903323262,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "AIRBAG/DISPLAY",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Airbag Display"
+      },
+      {
+        "layout": {
+          "top": 17.06827309236948,
+          "left": 32.477341389728096,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "TRANS",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Transaxle",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.06827309236948,
+          "left": 36.102719033232624,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "ECM IGN",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module, Ignition",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/starter-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.06827309236948,
+          "left": 59.06344410876133,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "RT T/SIG",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Turn Signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.06827309236948,
+          "left": 62.839879154078545,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "LT T/SIG",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side Turn Signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.269076305220885,
+          "left": 80.06042296072508,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "DRL 1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps 1",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.269076305220885,
+          "left": 86.85800604229608,
+          "width": 1.812688821752266,
+          "height": 7.429718875502007
+        },
+        "id": "HORN",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/horn-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 16.46586345381526,
+          "left": 91.6918429003021,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "SPARE 3",
+        "description": "Spare",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": " "
+        },
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 21.485943775100402,
+          "left": 4.984894259818732,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "PWR DROP/CRANK",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Drop, Crank",
+        "relatedEntities": [
+          "CIGUENAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.907630522088354,
+          "left": 12.386706948640484,
+          "width": 1.812688821752266,
+          "height": 7.429718875502007
+        },
+        "id": "STRG WHL",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Steering Wheel",
+        "relatedEntities": [
+          "VOLANTE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.10843373493976,
+          "left": 32.477341389728096,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "ECM/TCM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module, Transmission Control Module",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR",
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.10843373493976,
+          "left": 60.12084592145015,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "RVC SEN",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Regulated Voltage Control Sensor"
+      },
+      {
+        "layout": {
+          "top": 27.10843373493976,
+          "left": 63.89728096676737,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "RADIO",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Audio System",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.309236947791167,
+          "left": 84.29003021148036,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "FOG LAMPS",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fog Lamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/fog-light-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 5.421686746987952,
+          "left": 91.6918429003021,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "SPARE 4",
+        "description": "Spare",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": " "
+        },
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.33333333333333,
+          "left": 80.51359516616314,
+          "width": 1.812688821752266,
+          "height": 7.429718875502007
+        },
+        "id": "WSW",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Windshield Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.377510040160644,
+          "left": 52.567975830815705,
+          "width": 1.812688821752266,
+          "height": 7.429718875502007
+        },
+        "id": "HTD MIR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heated Mirror",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 5.421686746987952,
+          "left": 88.06646525679758,
+          "width": 1.812688821752266,
+          "height": 7.429718875502007
+        },
+        "id": "SPARE 5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.63855421686747,
+          "left": 7.250755287009064,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "INT LIGHTS",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lamps",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.63855421686747,
+          "left": 11.027190332326283,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "INT LTS/PNL DIM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lamps Instrument Panel Dimmer"
+      },
+      {
+        "layout": {
+          "top": 59.63855421686747,
+          "left": 28.851963746223564,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "A/C CMPRSR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Air Conditioning Compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/air-conditioning-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.040160642570285,
+          "left": 58.006042296072515,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "AUX PWR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Auxiliary Power",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 8.308157099697885,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "BCM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Body Control Module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 12.084592145015106,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "CHMSL/BACKUP",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Center High-Mounted Stoplamp Back-up Lamps"
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 15.55891238670695,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "DISPLAY",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Display",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 28.700906344410875,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "ETC/ECM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electronic Throttle Control, Engine Control Module",
+        "relatedEntities": [
+          "ELECTRONIC_THROTLE_CONTROL",
+          "ECU",
+          "MOTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 32.3262839879154,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "INJ 1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Injector 1",
+        "relatedEntities": [
+          "INYECTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 35.80060422960725,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "EMISSIONS 1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Emissions 1"
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 39.42598187311178,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "INJ 2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Injector 2",
+        "relatedEntities": [
+          "INYECTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 42.90030211480362,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "EMISSIONS 2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Emissions 2"
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 59.06344410876133,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "RT SPOT",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right Spot"
+      },
+      {
+        "layout": {
+          "top": 69.87951807228916,
+          "left": 62.688821752265866,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "LT SPOT",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Left Spot"
+      },
+      {
+        "layout": {
+          "top": 70.08032128514057,
+          "left": 79.90936555891238,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "HDLP MDL",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Headlamp Module",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "MODULO(of=LUCES_DELANTERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 70.08032128514057,
+          "left": 83.38368580060424,
+          "width": 1.6616314199395772,
+          "height": 7.429718875502007
+        },
+        "id": "DRL 2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps 2",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.91967871485943,
+          "left": 8.308157099697885,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "FUEL/PUMP",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/fuel-pump-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 83.93574297188755,
+          "left": 49.09365558912387,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "WPR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.33734939759037,
+          "left": 78.70090634441088,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "LT LO BEAM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side Low Beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.33734939759037,
+          "left": 82.4773413897281,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "RT LO BEAM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Low Beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.33734939759037,
+          "left": 86.10271903323263,
+          "width": 1.6616314199395772,
+          "height": 7.228915662650602
+        },
+        "id": "LT HI BEAM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.33734939759037,
+          "left": 89.42598187311178,
+          "width": 1.812688821752266,
+          "height": 7.228915662650602
+        },
+        "id": "RT HI BEAM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.060240963855422,
+          "left": 16.012084592145015,
+          "width": 14.501510574018129,
+          "height": 20.281124497991968
+        },
+        "id": "STRTR",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/starter-relay",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 11.646586345381527,
+          "left": 41.99395770392749,
+          "width": 14.350453172205437,
+          "height": 20.281124497991968
+        },
+        "id": "REAR DEFOG",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 13.052208835341366,
+          "left": 68.7311178247734,
+          "width": 7.250755287009064,
+          "height": 8.23293172690763
+        },
+        "id": "FAN 1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 1",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/cooling-fan-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 22.89156626506024,
+          "left": 68.7311178247734,
+          "width": 7.401812688821751,
+          "height": 15.863453815261044
+        },
+        "id": "FAN 1 (1)",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 1",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.33333333333333,
+          "left": 4.229607250755287,
+          "width": 7.250755287009064,
+          "height": 8.23293172690763
+        },
+        "id": "BATT 4",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 4",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 37.75100401606426,
+          "left": 25.6797583081571,
+          "width": 7.714159760896555,
+          "height": 8.23293172690763
+        },
+        "id": "STRTR 1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/starter-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 37.75100401606426,
+          "left": 40.78549848942598,
+          "width": 7.250755287009064,
+          "height": 8.23293172690763
+        },
+        "id": "ABS MTR1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Anti-lock Brake System Motor 1"
+      },
+      {
+        "layout": {
+          "top": 33.53413654618474,
+          "left": 51.51057401812689,
+          "width": 7.250755287009064,
+          "height": 8.433734939759036
+        },
+        "id": "BATT 3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 3",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.963855421686745,
+          "left": 70.54380664652568,
+          "width": 7.552870090634441,
+          "height": 15.863453815261044
+        },
+        "id": "FAN 2",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 2",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 52.208835341365464,
+          "left": 15.105740181268882,
+          "width": 7.250755287009064,
+          "height": 8.23293172690763
+        },
+        "id": "BATT 1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 1",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.99196787148594,
+          "left": 25.6797583081571,
+          "width": 7.250755287009064,
+          "height": 8.634538152610443
+        },
+        "id": "ABS MTR2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Anti-lock Brake System Motor 2"
+      },
+      {
+        "layout": {
+          "top": 52.40963855421686,
+          "left": 61.48036253776436,
+          "width": 7.099697885196375,
+          "height": 8.433734939759036
+        },
+        "id": "BATT 2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 2",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 62.24899598393574,
+          "left": 20.241691842900302,
+          "width": 7.552870090634441,
+          "height": 15.863453815261044
+        },
+        "id": "R A/C CMPRSR",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air Conditioning Compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/air-conditioning-relay",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.43373493975904,
+          "left": 70.54380664652568,
+          "width": 7.552870090634441,
+          "height": 15.863453815261044
+        },
+        "id": "FAN 3",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 3",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 81.52610441767068,
+          "left": 12.386706948640484,
+          "width": 11.48036253776435,
+          "height": 10.642570281124499
+        },
+        "id": "R FUEL/PUMP",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/fuel-pump-relay",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 81.52610441767068,
+          "left": 30.060422960725074,
+          "width": 11.782477341389729,
+          "height": 10.642570281124499
+        },
+        "id": "PWR/TRN",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Powertrain"
+      },
+      {
+        "layout": {
+          "top": 76.30522088353415,
+          "left": 68.7311178247734,
+          "width": 7.250755287009064,
+          "height": 8.23293172690763
+        },
+        "id": "R FAN2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 2",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/impala/info/fusebox/2006/cooling-fan-fuse",
+            "urlWithAnchor": "/chevrolet/impala/info/fusebox/2006/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.7522658610271903,
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/e6d56b91_chevrolet-impala-2006.png"
+    },
+    "boxName": "Underhood Fuse Block",
+    "boxDescription": "The underhood fuse block is located in the engine compartment.",
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/04e63c72_chevrolet-impala-2006.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/17f67dbd_chevrolet-impala-2006.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/3f7ac06f_chevrolet-impala-2006.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/6133a5db_chevrolet-impala-2006.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/56c58145_chevrolet-impala-2006.jpg"
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/41f81659_chevrolet-impala-2006 motor.jpg"
+    },
+    "templateId": "6183e02083a18b00041b4da8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-impala-2006-genid-g9-1.webp"
+  }
+]

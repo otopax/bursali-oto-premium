@@ -1,0 +1,1274 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 5.71877418083424,
+          "left": 25.94084723011769,
+          "width": 8.200315927277396,
+          "height": 15.856241232108786
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Heater Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 36.9596730334794,
+          "left": 33.00842287067277,
+          "width": 9.005095723266793,
+          "height": 12.840228291240393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Power Seat",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 37.27826276860241,
+          "left": 44.72737614614138,
+          "width": 9.005095723266793,
+          "height": 12.840228291240393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "VSA Fail Safe Relay"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 37.27826276860241,
+          "left": 56.446329421609995,
+          "width": 9.005095723266793,
+          "height": 12.840228291240393
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Back UP, ACC",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 56.00349178349862,
+          "left": 33.00842287067276,
+          "width": 8.200315927277396,
+          "height": 15.856241232108786
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "FI ECU"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 56.00349178349862,
+          "left": 42.87948884236444,
+          "width": 8.200315927277396,
+          "height": 15.856241232108786
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "VSA Pump Motor Relay",
+        "relatedEntities": [
+          "RELAY(protects=MOTOR_IMPULSOR(of=BOMBA(of=CONTROL_DE_ESTABILIDAD)))"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 56.00349178349862,
+          "left": 52.750554814056116,
+          "width": 8.200315927277396,
+          "height": 15.856241232108786
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Rear Defroster",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 76.2660238374747,
+          "left": 56.06099670657397,
+          "width": 2.4740443982141267,
+          "height": 12.070153970813163
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Hazard Warning"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 79.39365267665747,
+          "left": 62.85941294362721,
+          "width": 2.4740443982141267,
+          "height": 12.070153970813163
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Horn, Stop",
+        "relatedEntities": [
+          "BOCINA",
+          "TESTIGO_STOP",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/acura/tl/info/fusebox/2005/brake-light-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 40.50679533278901,
+          "left": 71.31941211194253,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "MG Clutch Relay"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 52.173235061207976,
+          "left": 71.31941211194253,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Radiator Fan Motor",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 63.83967478962694,
+          "left": 71.31941211194253,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Fog Light 1 [U.S. models]",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 63.83967478962694,
+          "left": 71.31941211194253,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Daytime Running Light 2 [Canadian models]",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 8.921336855417609,
+          "left": 80.456904256829,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": ""
+        }
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 17.085549349968367,
+          "left": 80.456904256829,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": ""
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 29.22285082067191,
+          "left": 82.86528444927116,
+          "width": 2.4740443982141267,
+          "height": 12.070153970813163
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Condenser Fan",
+        "relatedEntities": [
+          "VENTILADOR_DEL_CONDENSADOR"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 51.69141243066633,
+          "left": 82.86528444927116,
+          "width": 2.4740443982141267,
+          "height": 12.070153970813163
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IGP"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 8.921336855417609,
+          "left": 89.23721479085444,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": ""
+        }
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 21.337790847897658,
+          "left": 90.80033064894543,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Back Up"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 30.006953539444766,
+          "left": 90.80033064894543,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right Headlight Low Beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 38.676116230991894,
+          "left": 90.80033064894543,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Right Headlight High Beam"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 47.34527892253898,
+          "left": 90.80033064894543,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Small Light",
+        "relatedEntities": [
+          "LUZ_POSICION"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 56.01444161408602,
+          "left": 90.80033064894543,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Left Headlight High Beam"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 64.68360430563307,
+          "left": 90.80033064894543,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Rear Defroster Coil",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 73.35276699718025,
+          "left": 90.80033064894543,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left Headlight Low Beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 82.18476190390467,
+          "left": 88.83721479085446,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": ""
+        }
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 90.1947363432099,
+          "left": 88.83721479085446,
+          "width": 6.980937708972787,
+          "height": 4.450068679966286
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": ""
+        }
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 3.611480133705781,
+          "left": 1.0102432963463839,
+          "width": 5.132583547069011,
+          "height": 28.44865623352169,
+          "rotation": 180
+        },
+        "kind": {
+          "amp": 50,
+          "type": "fuse-block",
+          "format": "honda-single",
+          "notUsed": false
+        },
+        "description": "IGI Main"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 44.024446223117735,
+          "left": 21.937503282009327,
+          "width": 5.907890970611939,
+          "height": 48.35087778973489
+        },
+        "kind": {
+          "amp": 100,
+          "type": "fuse-block",
+          "format": "honda-double",
+          "notUsed": false
+        },
+        "description": "Battery",
+        "relatedEntities": [
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "Fuse Puller",
+        "layout": {
+          "top": 23.32139114239362,
+          "left": 26.320935064919908,
+          "width": 6.110055538551722,
+          "height": 9.351015616080515,
+          "rotation": 90
+        },
+        "kind": {
+          "amp": "",
+          "type": "fusepuller",
+          "format": "up"
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 5.71877418083424,
+          "left": 36.919950239840404,
+          "width": 11.122361453143105,
+          "height": 26.528038469433614
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 5.71877418083424,
+          "left": 51.12270537778002,
+          "width": 11.122361453143105,
+          "height": 26.528038469433614
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 5.71877418083424,
+          "left": 67.45747066429803,
+          "width": 11.122361453143105,
+          "height": 26.528038469433614
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 74.06056214162726,
+          "left": 37.43035212071136,
+          "width": 14.110739987129602,
+          "height": 17.976129520680594
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 74.06056214162726,
+          "left": 71.12350952943473,
+          "width": 14.110739987129602,
+          "height": 17.976129520680594
+        },
+        "kind": {
+          "amp": "",
+          "type": "relay",
+          "format": "half"
+        }
+      }
+    ],
+    "boxName": "Under-hood fuse box",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fefaadb9b295000475a7dc/fragment-60fefaadb9b295000475a7dc-7ff9cd27b5.jpg",
+      "source": "611ebf8fe589910004cd33d5"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fefaadb9b295000475a7dc/fragment-60fefaadb9b295000475a7dc-b4f6e4aec2.jpg",
+        "source": "611ebf96e589910004cd33d6"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fefaadb9b295000475a7dc/fragment-60fefaadb9b295000475a7dc-0e6cb2be0f.jpg",
+        "source": "611ebf9ce589910004cd33d7"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5828025477707006,
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/569a891b_acura-tl-2004.jpg"
+    },
+    "templateId": "61525452103c6700043b06b1",
+    "templateRenameMap": {
+      "1": "24",
+      "2": "23",
+      "3": "22",
+      "4": "21",
+      "5": "20",
+      "6": "19",
+      "7": "18",
+      "8": "16",
+      "9": "15",
+      "10": "12",
+      "12": "10",
+      "13": "9",
+      "14": "7",
+      "15": "4",
+      "16": "8",
+      "17": "6",
+      "18": "3",
+      "19": "5",
+      "20": "2",
+      "21": "1",
+      "22": "28",
+      "23": "27",
+      "FUSEPULLER": "Fuse Puller",
+      "U1": "13",
+      "U2": "17",
+      "U3": "14",
+      "U4": "25",
+      "U5": "26"
+    },
+    "imageClusters": [
+      "644834bb018de7b24e85a442"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-acura-tl-2005-genid-g3-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 17.053206002728512,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DBW"
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 23.05593451568895,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IGI Coil"
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 29.195088676671215,
+          "width": 3.956343792633015,
+          "height": 17.543859649122805
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 35.19781718963165,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "LAF",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 41.336971350613915,
+          "width": 3.956343792633015,
+          "height": 17.543859649122805
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 47.33969986357435,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Interior Lights",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 53.34242837653479,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Back Up"
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 59.481582537517056,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 65.4843110504775,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front Accessory Socket",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 71.62346521145976,
+          "width": 3.956343792633015,
+          "height": 17.543859649122805
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "IGI OPDS"
+      },
+      {
+        "layout": {
+          "top": 63.65914786967418,
+          "left": 77.62619372442019,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "IGI Wiper"
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 17.053206002728512,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 23.05593451568895,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Passenger's Power Seat (Recline)"
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 29.195088676671215,
+          "width": 3.956343792633015,
+          "height": 17.543859649122805
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Driver's Power Seat (Slide)"
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 35.19781718963165,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Seat Heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 41.336971350613915,
+          "width": 3.956343792633015,
+          "height": 17.543859649122805
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Driver's Power Seat (Recline)"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 47.33969986357435,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Passenger's Power Seat (Slide)"
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 53.34242837653479,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IGI ACG"
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 59.481582537517056,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IGI Fuel Pump"
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 65.4843110504775,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Washer",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 71.62346521145976,
+          "width": 3.956343792633015,
+          "height": 17.543859649122805
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Meter"
+      },
+      {
+        "layout": {
+          "top": 40.35087719298245,
+          "left": 77.62619372442019,
+          "width": 4.092769440654844,
+          "height": 17.543859649122805
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SRS",
+        "relatedEntities": [
+          "AIRBAG",
+          "TESTIGO_SRS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 17.053206002728512,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "IGP"
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 23.05593451568895,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Left Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 29.195088676671215,
+          "width": 3.956343792633015,
+          "height": 17.293233082706767
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Rear Right Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 35.19781718963165,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Right Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 41.336971350613915,
+          "width": 3.956343792633015,
+          "height": 17.293233082706767
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front Left Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 47.33969986357435,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Moonroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/acura/tl/info/fusebox/2005/sunroof-fuse",
+            "urlWithAnchor": "/acura/tl/info/fusebox/2005/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 53.34242837653479,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "OP1"
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 59.481582537517056,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "HAC"
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 65.4843110504775,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "OP2"
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 71.62346521145976,
+          "width": 3.956343792633015,
+          "height": 17.293233082706767
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "ACC",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.042606516290725,
+          "left": 77.62619372442019,
+          "width": 4.092769440654844,
+          "height": 17.293233082706767
+        },
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "HAC OP"
+      }
+    ],
+    "boxName": "Interior fuse box",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fefaadb9b295000475a7dc/fragment-60fefaadb9b295000475a7dc-3db6d3f4dd.jpg",
+      "source": "611ebfaae589910004cd33d8"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fefaadb9b295000475a7dc/fragment-60fefaadb9b295000475a7dc-7d3201148e.jpg",
+        "source": "611ebfb1e589910004cd33d9"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fefaadb9b295000475a7dc/fragment-60fefaadb9b295000475a7dc-058b9abb1c.jpg",
+        "source": "611ebfbfe589910004cd33da"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.671264367816092,
+    "templateId": "614a3372a723c700048f205a",
+    "imageClusters": [
+      "61d600a1bae6ba00044418f9"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-acura-tl-2005-genid-g3-1.webp"
+  }
+]

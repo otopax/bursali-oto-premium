@@ -1,0 +1,1966 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 13.626170106111877,
+          "left": 2.1756599777464523,
+          "width": 17.674486897808265,
+          "height": 5.486446083316717
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 50
+        },
+        "description": "Main fuse CEM KL30A"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 24.588896835232866,
+          "left": 2.1756599777464523,
+          "width": 17.674486897808265,
+          "height": 5.486446083316717
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 50
+        },
+        "description": "Main fuse CEM KL30B"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 35.551623564353854,
+          "left": 2.1756599777464523,
+          "width": 17.674486897808265,
+          "height": 5.486446083316717
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 60
+        },
+        "description": "Main fuse RJBA KL30"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 46.51435029347484,
+          "left": 2.1756599777464523,
+          "width": 17.674486897808265,
+          "height": 5.486446083316717
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 60
+        },
+        "description": "Main fuse RJBB KL30"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 57.47707702259582,
+          "left": 2.1756599777464523,
+          "width": 17.674486897808265,
+          "height": 5.486446083316717
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 50
+        },
+        "description": "Main fuse RJBD KL30"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 68.43980375171681,
+          "left": 2.1756599777464523,
+          "width": 17.674486897808265,
+          "height": 5.486446083316717
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 79.4025304808378,
+          "left": 2.1756599777464523,
+          "width": 17.674486897808265,
+          "height": 5.486446083316717
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 100
+        },
+        "description": "PTC air heater [optional]"
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 23.770050860719873,
+          "left": 42.14153243925056,
+          "width": 12.817763304735116,
+          "height": 11.655435252049866
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 23.770050860719873,
+          "left": 73.3318404389313,
+          "width": 12.817763304735116,
+          "height": 11.655435252049866
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 45.22417882878582,
+          "left": 51.87659918437578,
+          "width": 9.612962972664747,
+          "height": 11.521413812344196
+        }
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 45.9922730829421,
+          "left": 73.3318404389313,
+          "width": 12.817763304735116,
+          "height": 11.655435252049866
+        }
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 65.44996918922928,
+          "left": 77.62713631877855,
+          "width": 9.988746583784367,
+          "height": 3.189156866653377
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 71.82828292253603,
+          "left": 77.62713631877855,
+          "width": 9.988746583784367,
+          "height": 3.189156866653377
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Automatic gearbox control unit [optional]"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 65.44996918922928,
+          "left": 64.12303686001428,
+          "width": 9.988746583784367,
+          "height": 3.189156866653377
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "A/C compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/air-conditioning-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 71.82828292253603,
+          "left": 64.12303686001428,
+          "width": 9.988746583784367,
+          "height": 3.189156866653377
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Coil relay",
+        "relatedEntities": [
+          "RELAY(protects=BOBINA_DE_IGNICION)",
+          "BOBINA(of=RELAY)",
+          "RELAY(protects=RELAY)"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 60.121224380035606,
+          "left": 49.011270791761106,
+          "width": 12.817763304735116,
+          "height": 9.655435252049866
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Starter motor relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/starter-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 71.82828292253603,
+          "left": 50.61893740125002,
+          "width": 9.988746583784367,
+          "height": 3.189156866653377
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition coils",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 71.82828292253603,
+          "left": 50.61893740125002,
+          "width": 9.988746583784367,
+          "height": 3.189156866653377
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "EGR, VTC, glow system [5-cyl. diesel], engine cooling system bypass [4-cyl. diesel]",
+        "relatedEntities": [
+          "VALVULA_EGR",
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 44.12248264348481,
+          "left": 42.04490599886,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control unit, Throttle [gasoline]",
+        "relatedEntities": [
+          "MARIPOSA",
+          "ECU"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 44.12248264348481,
+          "left": 42.04490599886,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine control unit, Throttle [diesel]",
+        "relatedEntities": [
+          "MARIPOSA",
+          "ECU"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 55.88249858926915,
+          "left": 42.04490599886,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Injection system, Air mass sensor",
+        "relatedEntities": [
+          "INYECCION",
+          "SISTEMA_DE_INYECCION",
+          "SENSOR_CAUDAL_DE_AIRE"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 55.88249858926915,
+          "left": 42.04490599886,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air mass sensor [4-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 67.64251453505348,
+          "left": 42.04490599886,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine valves",
+        "relatedEntities": [
+          "VALVULA_DE_MOTOR"
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 44.12248264348481,
+          "left": 33.39912067117125,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "EVAP, Lambda sensor, Injection [gasoline]",
+        "relatedEntities": [
+          "SENSOR_OXIGENO",
+          "INYECCION"
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 44.12248264348481,
+          "left": 33.39912067117125,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Lambda sensor [4-cyl. gasoline, 5-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "NAFTA"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 55.88249858926915,
+          "left": 33.39912067117125,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Crankcase ventilation heater [5-cyl. gasoline]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 55.88249858926915,
+          "left": 33.39912067117125,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Diesel filter heater, crankcase ventilation heater [4-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "CALENTADOR_FILTRO_COMBUSTIBLE"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 55.88249858926915,
+          "left": 33.39912067117125,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Diesel filter heater, crankcase ventilation heater [5-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "CALENTADOR_FILTRO_COMBUSTIBLE"
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 67.64251453505348,
+          "left": 33.39912067117125,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 86.60638869505866,
+          "left": 79.98499495443579,
+          "width": 4.715717271314517,
+          "height": 7.77356986246761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 60
+        },
+        "description": "Glow plug [4-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "PRECALENTADOR"
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 86.60638869505866,
+          "left": 79.98499495443579,
+          "width": 4.715717271314517,
+          "height": 7.77356986246761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 70
+        },
+        "description": "Glow plug [5-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "PRECALENTADOR"
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 86.60638869505866,
+          "left": 65.51631696290266,
+          "width": 4.715717271314517,
+          "height": 7.77356986246761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 86.60638869505866,
+          "left": 51.04763897136952,
+          "width": 4.715717271314517,
+          "height": 7.77356986246761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 60
+        },
+        "description": "Cooling fan [4-5 cyl. gasoline, 4-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "NAFTA",
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/cooling-fan-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 86.60638869505866,
+          "left": 51.04763897136952,
+          "width": 4.715717271314517,
+          "height": 7.77356986246761
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "midi-ami",
+          "amp": 80
+        },
+        "description": "Cooling fan [6-cyl. gasoline, 5-cyl. diesel]",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "NAFTA",
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/cooling-fan-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 11.64487783728194,
+          "left": 25.26022835744615,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        }
+      },
+      {
+        "id": "U6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 20.810896925660813,
+          "left": 25.26022835744615,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        }
+      },
+      {
+        "id": "U7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 29.976916014039688,
+          "left": 25.26022835744615,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        }
+      },
+      {
+        "id": "U8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 39.142935102418555,
+          "left": 25.26022835744615,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        }
+      },
+      {
+        "id": "U9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 48.30895419079743,
+          "left": 25.26022835744615,
+          "width": 2.836704840208259,
+          "height": 8.908632939199148
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-0fb72de783.jpg",
+      "source": "61b9d96f9704500004910f23"
+    },
+    "boxName": "Engine compartment",
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-4258ea2463.jpg",
+        "source": "61b9d9a09704500004910f24"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-092a2fd0db.jpg",
+        "source": "61b9d9a39704500004910f25"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-32cf2f2301.jpg",
+        "source": "61b9d9a79704500004910f26"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-273bc076d0.jpg",
+        "source": "61b9d9b09704500004910f27"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-74544be2a0.jpg",
+        "source": "61b9d9b39704500004910f28"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-5da8f38aa7.jpg",
+        "source": "61b9d9b59704500004910f29"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.975736568457539,
+    "templateId": "61eef973b231e80004f1021d",
+    "isTranslated": true,
+    "imageClusters": [
+      "6446e8bea240dfba08fcdbfe"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volvo-v70-2010-genid-g3-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 10.349276963382938,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Rain sensor [optional]",
+        "relatedEntities": [
+          "SENSOR_DE_LLUVIA"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 15.855126928971375,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SRS system",
+        "relatedEntities": [
+          "TESTIGO_SRS",
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 20.844803460285895,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ABS brakes, electric parking brake",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "FRENO_DE_MANO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 26.35065342587433,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Accelerator pedal, air heater (PTC) [optional], heated seats [optional]",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 32.02856120288741,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 38.050584602749765,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ICM display, CD and Radio, RSE system [optional]",
+        "relatedEntities": [
+          "LECTORA_CD",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/radio-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 43.38437675691356,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Steering wheel module",
+        "relatedEntities": [
+          "VOLANTE"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 48.718168911077356,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 54.05196106524116,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "High beam",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/headlight-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 59.90192665367887,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof [optional]",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/sunroof-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 65.57983443069195,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Reverse lights",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 71.08568439628039,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 76.0753609275949,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front fog lights [optional]",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/fog-light-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 28.57534291854959,
+          "left": 81.58121089318334,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Windshield washer",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 45.7170610768115,
+          "left": 10.349276963382938,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Adaptive Cruise Control, ACC [optional]",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 45.84329853611652,
+          "left": 15.855126928971375,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 45.84329853611652,
+          "left": 20.844803460285895,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Interior lighting, driver's door control panel/Power passenger seat [optional]",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 45.84329853611652,
+          "left": 26.35065342587433,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Information display",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 32.02856120288741,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Power driver's seat [optional]"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 45.7170610768115,
+          "left": 38.050584602749765,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear window wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 43.38437675691356,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Remote control key receiver, alarm sensors [optional]"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 48.718168911077356,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volvo/v70/info/fusebox/2010/fuel-pump-fuse",
+            "urlWithAnchor": "/volvo/v70/info/fusebox/2010/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 54.05196106524116,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Electric steering wheel lock"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 45.86464078727739,
+          "left": 59.90192665367887,
+          "width": 4.1293874741913275,
+          "height": 9.43074288160993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "-"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 65.57983443069195,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuel filler flap/tailgate lock",
+        "relatedEntities": [
+          "PORTON_TRASERO"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 71.08568439628039,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Alarm siren [optional], ECC"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 76.0753609275949,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Start/stop switch",
+        "relatedEntities": [
+          "BOTON_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 45.91638338097733,
+          "left": 81.58121089318334,
+          "width": 4.1293874741913275,
+          "height": 9.766792904125968
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Brake light switch"
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.401785714285715,
+          "left": 10.349276963382938,
+          "width": 8.863198458574182,
+          "height": 3.125
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.401785714285715,
+          "left": 21.70509251740909,
+          "width": 8.863198458574182,
+          "height": 3.125
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.401785714285715,
+          "left": 32.544734637161326,
+          "width": 8.863198458574182,
+          "height": 3.125
+        }
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.401785714285715,
+          "left": 44.1233140655106,
+          "width": 8.863198458574182,
+          "height": 3.125
+        }
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.401785714285715,
+          "left": 55.68400770712909,
+          "width": 8.477842003853564,
+          "height": 3.125
+        }
+      },
+      {
+        "id": "U6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.401785714285715,
+          "left": 66.61218129923978,
+          "width": 8.477842003853564,
+          "height": 3.125
+        }
+      },
+      {
+        "id": "U7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.401785714285715,
+          "left": 77.27976560756737,
+          "width": 8.477842003853564,
+          "height": 3.125
+        }
+      }
+    ],
+    "boxName": "Under the glovebox",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-57d31bd17e.jpg",
+      "source": "61b9d9c79704500004910f2a"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-6a9dd7c3ad.jpg",
+        "source": "61b9d9cb9704500004910f2b"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-3598f425f3.jpg",
+        "source": "61b9d9ce9704500004910f2c"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-80e1169e05.jpg",
+        "source": "61b9d9d19704500004910f2d"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-5101720d17.jpg",
+        "source": "61b9d9d99704500004910f2e"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-8b493bab75.jpg",
+        "source": "61b9d9de9704500004910f2f"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8631984585741811,
+    "templateId": "61f060f0a89f770004498e10",
+    "isTranslated": true,
+    "boxScaleMultiplier": ".8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volvo-v70-2010-genid-g3-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[A (black)] Driver's door control panel"
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[B (white)]"
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "[D (blue)] RTI display [optional], Parking camera [optional]"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[A (black)] Passenger door control panel"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[B (white)] Four-C control unit [optional]"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[D (blue)] -"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 59.005214687867245,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[A (black)] Rear left door control panel"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 59.005214687867245,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[B (white)] Driver's side front seat heating [optional]"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 59.005214687867245,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[D (blue)] Subwoofers [optional]",
+        "relatedEntities": [
+          "SUBWOOFER"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 74.61879518085775,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[A (black)] Rear right door control panel"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 74.61879518085775,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[B (white)] Passenger side front seat heating [optional]"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 74.61879518085775,
+          "left": 19.257128679101278,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[D (blue)] -"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 43.74560942664438,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[A (black)] -"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 43.74560942664438,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[B (white)] Rear right seat heating [optional]"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 43.74560942664438,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[D (blue)] Audio amplifier [optional]",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=ESTEREO)",
+          "AMPLIFICADOR"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[A (black)] 12 V socket trunk, refrigerator [optional]"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "[B (white)] AWD control unit"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[D (blue)] Audio system A"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 59.005214687867245,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "[A (black)] Heated rear window",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 59.005214687867245,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[B (white)] Rear left seat heating [optional]"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 59.005214687867245,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "[D (blue)] Phone, Bluetooth [optional]",
+        "relatedEntities": [
+          "BLUETOOTH"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 74.61879518085775,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[A (black)] -"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 74.61879518085775,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[B (white)] -"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 74.61879518085775,
+          "left": 43.5845010006737,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[D (blue)] -"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 68.23409017418747,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "[A (black)] Trailer socket 2 [optional]"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 68.23409017418747,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[B (white)] Power passenger seat [optional]"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 27.778053701886247,
+          "left": 68.23409017418747,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[D (blue)] -"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 68.07298174821679,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "[A (black)] Power driver's seat [optional]"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 68.07298174821679,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "[B (white)] Keyless drive [optional]"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 43.325193426821464,
+          "left": 68.07298174821679,
+          "width": 15.116481391976802,
+          "height": 5.17899142914092
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "[D (blue)] -"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 59.78639371792474,
+          "left": 76.96165582587105,
+          "width": 11.994361205091025,
+          "height": 16.35256129160851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "[A (black)] Trailer socket 1 [optional]"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 59.78639371792474,
+          "left": 76.96165582587105,
+          "width": 11.994361205091025,
+          "height": 16.35256129160851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "[B (white)] Left electric parking brake"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 59.78639371792474,
+          "left": 76.96165582587105,
+          "width": 11.994361205091025,
+          "height": 16.35256129160851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "[D (blue)] -"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 59.78639371792474,
+          "left": 63.81746378462729,
+          "width": 11.994361205091025,
+          "height": 16.35256129160851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "[A (black)] POT (Power Operated Tailgate) [optional]"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 59.78639371792474,
+          "left": 63.81746378462729,
+          "width": 11.994361205091025,
+          "height": 16.35256129160851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "[B (white)] Right electric parking brake"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 59.78639371792474,
+          "left": 63.81746378462729,
+          "width": 11.994361205091025,
+          "height": 16.35256129160851
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": true
+        },
+        "description": "[D (blue)] -"
+      }
+    ],
+    "boxName": "Cargo compartment",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-9eeea6c6d1.jpg",
+      "source": "61b9d9f79704500004910f30"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-2bf39c5a43.jpg",
+        "source": "61b9da0d9704500004910f31"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-1487dcf509.jpg",
+        "source": "61b9da139704500004910f32"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-d6f5a379b6.jpg",
+        "source": "61b9da179704500004910f33"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-f96cf9388e.jpg",
+        "source": "61b9da1f9704500004910f34"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5ed559b7fdc147000488b88d/fragment-5ed559b7fdc147000488b88d-d52ab4e209.jpg",
+        "source": "61b9da239704500004910f35"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8082706766917294,
+    "templateId": "61eefaf7b231e80004f1022f",
+    "isTranslated": true,
+    "imageClusters": [
+      "667df4a9becf8dc02936f727"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volvo-v70-2010-genid-g3-2.webp"
+  }
+]

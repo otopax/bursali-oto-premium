@@ -1,0 +1,1341 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 75.31033524275428,
+          "left": 7.373774747182563,
+          "width": 2.9558439145507753,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Main relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 59.523306668185526,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Signal"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 68.6450016428076,
+          "left": 63.53480912364729,
+          "width": 6.756214661830342,
+          "height": 4.126158895205094
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Front and rear windshield washers",
+        "relatedEntities": [
+          "SAPITO(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 54.66727737999497,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Headlight washer pump"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 53.40995341435806,
+          "left": 74.51365794912161,
+          "width": 6.756214661830342,
+          "height": 4.12615889520508
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine control unit, Diesel fuel heater, Fuel additive pump, Fuel module (fuel pump fuse)",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 80.84760919458755,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Mass flow meter, Cooling fan, High speed relay, Brake pedal switch, Power steering pump gear switch, Shift lock solenoid",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "RELAY(protects=VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA))",
+          "SENSOR_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/cooling-fan-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 53.40995341435806,
+          "left": 82.95892627640953,
+          "width": 6.756214661830342,
+          "height": 4.12615889520508
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS/ESP control unit"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 68.07640381933851,
+          "left": 85.31458481732045,
+          "width": 3.378107330915171,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Starter solenoid",
+        "relatedEntities": [
+          "BENDIX"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 64.80159937274048,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Brake pedal switch",
+        "relatedEntities": [
+          "SENSOR_FRENO"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 38.8096988620939,
+          "left": 6.951511330818167,
+          "width": 3.1669756227329726,
+          "height": 15.869841904634946
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Engine control unit, Water in fuel sensor, Turbo variable solenoid",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 67.0580174523441,
+          "left": 18.774886989021265,
+          "width": 10.134321992745516,
+          "height": 4.76095257139049
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "Heating and air conditioning",
+        "relatedEntities": [
+          "CALEFACCION",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/air-conditioning-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 60.71008069049013,
+          "left": 73.6691311163928,
+          "width": 10.556585409109914,
+          "height": 5.395746247575886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Front wiper control"
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 75.94512891893967,
+          "left": 48.12219442634682,
+          "width": 9.923190284563319,
+          "height": 5.078349409483181
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 40
+        },
+        "description": "in BSI (Intelligent Power Distribution Module)"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 68.0102079666222,
+          "left": 72.41012365862512,
+          "width": 10.556585409109914,
+          "height": 5.395746247575886
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        }
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 37.354477309054715,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right high beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 32.28731631268195,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "left high beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 27.220155316309196,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left low beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 21.94186261175424,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right low beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/headlight-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 17.29696503174588,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine control unit, Electronic EGR valve, Oil vapor heater, Mass flow meter, Diesel fuel heater",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 12.229804035373123,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control unit, Turbo control solenoid, Water in fuel sensor, Injection pump, diesel",
+        "relatedEntities": [
+          "ECU",
+          "FUSE_DESCRIPTION_CONDITION",
+          "GASOIL"
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 38.1749051859085,
+          "left": 85.9147701909603,
+          "width": 2.7447122063685754,
+          "height": 10.791492495151772
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Cooling fan relay, left side; Right Cooling Fan, Cooling Fan, High Speed Relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)",
+          "VENTILADOR_RADIADOR",
+          "RELAY(protects=VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/cooling-fan-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "U1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 8.985223322749116,
+          "left": 12.825784195161118,
+          "width": 17.34693669004587,
+          "height": 25.28311226643555
+        }
+      },
+      {
+        "id": "U2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 8.985223322749116,
+          "left": 39.77884333234498,
+          "width": 17.34693669004587,
+          "height": 25.28311226643555
+        }
+      },
+      {
+        "id": "U3",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 8.985223322749116,
+          "left": 66.73190246952885,
+          "width": 17.34693669004587,
+          "height": 25.28311226643555
+        }
+      },
+      {
+        "id": "U4",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 56.58976773164385,
+          "left": 31.820711437228532,
+          "width": 19.635248860944444,
+          "height": 17.852572342674243
+        }
+      },
+      {
+        "id": "U5",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 78.05814400769437,
+          "left": 59.73443837636773,
+          "width": 20.902039110037613,
+          "height": 16.03942925700573
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8006379585326954,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/4fe5cfd4_toyota-proace-2013.jpg"
+    },
+    "imageClusters": [
+      "64516c153156835bc64c3ca2"
+    ],
+    "boxName": "Engine compartment fuse box (upper side)",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bdea2406_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/032c9419_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0e8beba6_image.jpg"
+      }
+    ],
+    "templateId": "61eabb6105876e0004179199",
+    "templateRenameMap": null,
+    "boxScaleMultiplier": "0.7",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-proace-2014-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "MF1",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 12.226086935896841,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        }
+      },
+      {
+        "id": "MF2",
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 20.78338711532828,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "ABS/ESP control unit"
+      },
+      {
+        "id": "MF3",
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 29.34068729475972,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "ABS/ESP control unit"
+      },
+      {
+        "id": "MF4",
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 40.0140710776204,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "in BSI (Intelligent Power Distribution Module)"
+      },
+      {
+        "id": "MF5",
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 53.05931792333901,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "in BSI (Intelligent Power Distribution Module)"
+      },
+      {
+        "id": "MF6",
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 63.614108553056795,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Additional heater"
+      },
+      {
+        "id": "MF7",
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 72.15281557934534,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Automatic transmission control unit"
+      },
+      {
+        "id": "MF8",
+        "layout": {
+          "top": 36.91906447474065,
+          "left": 80.69152260563388,
+          "width": 5.811064504001926,
+          "height": 36.810699643363016
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/cooling-fan-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.4446085672082718,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/cffea4b1_toyota-proace-2013.jpg"
+    },
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0e8beba6_image.jpg"
+      }
+    ],
+    "templateId": "6635162b0a3ce5606ca83f3d",
+    "boxName": "Engine compartment fuse box (upper side)",
+    "imageClusters": [],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-proace-2014-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 55.62177252641408,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear wiper"
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 79.00065374805654,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "description": "",
+        "relatedEntities": []
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 41.717939779796396,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Airbag control unit"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 46.35255069533562,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Steering wheel angle sensor ESP sensor Rear wiper relay Diagnostic socket Clutch switch Air Conditioner Control Panel Headlight adjustment Dosing pump for diesel particulate filter"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 60.256383441953304,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Electric mirrors Passenger side window lift"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 64.89099435749253,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Front power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 50.98716161087485,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Interior lighting",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 32.44871794871795,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Multifunctional display Alarm siren Audio system CD changer telephone"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 69.52560527303176,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Jumpy Front Cigarette Lighter Diagnostic connector"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.08332886425717,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Height sensor Steering wheel control Instrument panel"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 73.73076923076923,
+          "left": 80.00784313725488,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Diagnostic connector Ignition switch"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 21.679487179487182,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Hands-free kit Airbags Parking assistance system"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 26.2948717948718,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Fuse box in the engine compartment Trailer control module"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 17.06410256410257,
+          "left": 84.12549019607842,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rain sensor Air conditioner Instrument panel"
+      },
+      {
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 73.73076923076923,
+          "left": 88.04705882352938,
+          "width": 5.979738562091507,
+          "height": 2.729059829059828
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "description": "",
+        "layout": {
+          "top": 38.077851575355034,
+          "left": 79.80392156862746,
+          "width": 2.941176470588235,
+          "height": 10.76923076923077
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 18.71794871794872,
+          "left": 79.80392156862746,
+          "width": 2.941176470588235,
+          "height": 10.76923076923077
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Rear window heating"
+      },
+      {
+        "id": "Connector1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 54.06872611316943,
+          "left": 63.988271782583915,
+          "width": 8.968251321785196,
+          "height": 22.688959055992466
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector3",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 17.490832938403223,
+          "left": 52.29609658242242,
+          "width": 10.244817538647862,
+          "height": 7.248356248286845
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector4",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 27.47290422044239,
+          "left": 64.928651351881,
+          "width": 12.469343077026593,
+          "height": 11.50541600538725
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-md"
+        },
+        "layout": {
+          "top": 27.546387842989894,
+          "left": 52.29609658242242,
+          "width": 10.244817538647862,
+          "height": 10.248356248286845
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxAspectRatio": 0.7647058823529411,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/1eac2fcf_toyota-proace-2013.jpg"
+    },
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/06815733_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/058b3217_image.jpg"
+      }
+    ],
+    "boxName": "In the salon (Type 1)",
+    "templateId": "61e84274fab64b0004ba0c60",
+    "templateRenameMap": {
+      "1": "1",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10",
+      "11": "11",
+      "12": "12",
+      "13": "13",
+      "14": "14",
+      "17": "17"
+    },
+    "imageClusters": [
+      "649b18233d72c58318e86645"
+    ],
+    "boxScaleMultiplier": "0.7",
+    "boxRotation": 90,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-proace-2014-genid-g1-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 10.638297872340425,
+          "width": 4.25531914893617,
+          "height": 32.05128205128205
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 22.437137330754354,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Airbag control module",
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 16.634429400386846,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cruise control switch. Diagnostic connector, Air conditioning, Adaptive headlights. Steering whael angle sensor, Coolant pump, Rear wiper relay, ESP accelerometer gyroscope, Fuel additive pump",
+        "relatedEntities": [
+          "INTERRUPTOR(of=CRUISE_CONTROL)",
+          "CONECTOR_OBD",
+          "AIRE_ACONDICIONADO",
+          "BOMBA_REFRIGERANTE",
+          "RELAY(protects=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/toyota/proace/info/fusebox/2014/air-conditioning-fuse",
+            "urlWithAnchor": "/toyota/proace/info/fusebox/2014/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 68.66537717601547,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Driver's side mindow in, Electric mirror control, Front passenger window switch",
+        "relatedEntities": [
+          "COMANDO(of=ESPEJO_ELECTRICO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 80.27079303675049,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 51.25725338491296,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Glove compartment light switch Front left light Rear interior light Front right light Audio system"
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 57.05996131528046,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Alarm control unit Audio system Radio telephone Alarm siren Trailer fuse box"
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 39.65183752417795,
+          "width": 4.25531914893617,
+          "height": 32.05128205128205
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Citroen Jumpy cigarette lighter fuse Rear 12V socket"
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 62.86266924564797,
+          "width": 4.25531914893617,
+          "height": 32.05128205128205
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Controls under the steering wheel Suspensión control unit Instrument panel"
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 86.073500967118,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Diagnostic connector / Ignition switch",
+        "relatedEntities": [
+          "CONECTOR_OBD",
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 33.849129593810446,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Parking assistance Airbag control unit Seat belt control unit Hands-free kit"
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 28.04642166344294,
+          "width": 4.25531914893617,
+          "height": 32.05128205128205
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Fuse box under the hood Trailer fuse box"
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 45.45454545454545,
+          "width": 4.25531914893617,
+          "height": 32.05128205128205
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Air conditioning control unit Instrument panel Rain and light sensor",
+        "relatedEntities": [
+          "LUZ_TESTIGO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.871794871794872,
+          "left": 74.46808510638297,
+          "width": 4.061895551257253,
+          "height": 32.05128205128205
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Tailgate/Trunk Release Relay",
+        "relatedEntities": [
+          "PORTON_TRASERO",
+          "RELAY"
+        ]
+      },
+      {
+        "layout": {
+          "top": 67.42503949167727,
+          "left": 73.02736808905954,
+          "width": 16.955362340835975,
+          "height": 16.89693654610899
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Rear windshield heating Electric mirrors Rear window heating, left side Rear window heating, right side"
+      },
+      {
+        "layout": {
+          "top": 67.81799150437749,
+          "left": 50.854971181812466,
+          "width": 16.718224405999116,
+          "height": 16.89693654610899
+        },
+        "id": "SH",
+        "kind": {
+          "type": "fuse-shunt",
+          "format": "ato"
+        },
+        "description": "Shunt"
+      }
+    ],
+    "boxAspectRatio": 0.30174081237911027,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/65fb74f6_toyota-proace-2013.jpg"
+    },
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b7b0ec3f_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/9a887dc4_image.jpg"
+      }
+    ],
+    "boxName": "In the salon (Type 2)",
+    "templateId": "619d1079faaf4100041b0682",
+    "templateRenameMap": {
+      "1": "F1",
+      "3": "F3",
+      "4": "F4",
+      "5": "F5",
+      "7": "F7",
+      "8": "F8",
+      "9": "F9",
+      "10": "F10",
+      "11": "F11",
+      "12": "F12",
+      "13": "F13",
+      "14": "F14",
+      "15": "F15",
+      "16": "SH",
+      "17": "F17"
+    },
+    "imageClusters": [
+      "61eee9b5b231e80004f101e6"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-toyota-proace-2014-genid-g1-3.webp"
+  }
+]

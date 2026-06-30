@@ -1,0 +1,1675 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "51",
+        "layout": {
+          "top": 31.9651493598862,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Heated rear window, Heated driver's side exterior mirror, Heated passenger's side exterior mirror"
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 36.67226532470005,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Left turn signal warning light, Right turn signal warning light, Driver's side exterior mirror turn signal repeater bulb, Front passenger side exterior mirror turn signal repeater bulb, Front left turn signal bulb, Rear left turn signal bulb, Front right turn signal bulb, Rear right turn signal bulb, Left turn signal repeater bulb, Right turn signal repeater bulb, 13-pin connector, Trailer socket",
+        "relatedEntities": [
+          "TESTIGO_LUZ_DIRECCIONAL(warns=LUZ_DIRECCIONAL(ubicacion=LADO_IZQUIERDO))",
+          "TESTIGO_LUZ_DIRECCIONAL(warns=LUZ_DIRECCIONAL(ubicacion=LADO_DERECHO))",
+          "LAMPARA(of=LUZ_DIRECCIONAL(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA)))",
+          "LAMPARA(of=LUZ_DIRECCIONAL(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA)))",
+          "LAMPARA(of=LUZ_DIRECCIONAL(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA)))"
+        ]
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 41.3793812895139,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Front interior light, Glove box light, Rear left reading light, Rear right reading light, Illuminated front passenger vanity mirror, Left trunk light, Illuminated driver's side vanity mirror, Driver's side door warning light, Front left entry light, Front right entry light, Rear left entry light, Rear right entry light, Right trunk light, Front passenger side door warning light, Rear left door warning light, Rear right door warning light, Rear interior light, Rear center reading light, Left center reading light, Right center reading light",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO(ubicacion=PARTE_DELANTERA)",
+          "LUZ_DE_GUANTERA",
+          "LUZ_LECTURA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))",
+          "LUZ_LECTURA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))",
+          "LUZ_BAUL(ubicacion=LADO_IZQUIERDO)",
+          "TESTIGO_APERTURA_DE_PUERTAS(warns=PUERTA(ubicacion=LADO_IZQUIERDO))",
+          "TESTIGO_APERTURA_DE_PUERTAS(shapeOf=PUERTA(ubicacion=LADO_IZQUIERDO))",
+          "LUZ_BAUL(ubicacion=LADO_DERECHO)",
+          "TESTIGO_APERTURA_DE_PUERTAS(warns=PUERTA(ubicacion=LADO_DERECHO))",
+          "TESTIGO_APERTURA_DE_PUERTAS(shapeOf=PUERTA(ubicacion=LADO_DERECHO))",
+          "TESTIGO_APERTURA_DE_PUERTAS(warns=PORTON_TRASERO(ubicacion=LADO_IZQUIERDO))",
+          "TESTIGO_APERTURA_DE_PUERTAS(shapeOf=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA)))",
+          "TESTIGO_APERTURA_DE_PUERTAS(shapeOf=PORTON_TRASERO(ubicacion=LADO_IZQUIERDO))",
+          "TESTIGO_APERTURA_DE_PUERTAS(warns=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA)))",
+          "TESTIGO_APERTURA_DE_PUERTAS(warns=PORTON_TRASERO(ubicacion=LADO_DERECHO))",
+          "TESTIGO_APERTURA_DE_PUERTAS(shapeOf=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA)))",
+          "TESTIGO_APERTURA_DE_PUERTAS(shapeOf=PORTON_TRASERO(ubicacion=LADO_DERECHO))",
+          "TESTIGO_APERTURA_DE_PUERTAS(warns=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA)))",
+          "LUZ_DE_HABITACULO(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 46.08649725432775,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Alarm horn"
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 50.793613219141605,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Control unit for multifunction unit"
+      },
+      {
+        "id": "56",
+        "layout": {
+          "top": 55.50072918395546,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Control unit in the instrument cluster, Right tail light lamp, Right position light lamp, 13-pin connector, Trailer socket",
+        "relatedEntities": [
+          "LAMPARA(of=LUCES_TRASERAS(ubicacion=LADO_DERECHO))",
+          "LAMPARA(of=LUZ_POSICION(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "57",
+        "layout": {
+          "top": 60.20784514876931,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Control unit in the instrument cluster, Left tail light lamp, Left position light lamp, 13-pin connector, Trailer socket",
+        "relatedEntities": [
+          "LAMPARA(of=LUCES_TRASERAS(ubicacion=LADO_IZQUIERDO))",
+          "LAMPARA(of=LUZ_POSICION(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 64.91496111358316,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Switch and instrument lighting dimmer"
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 69.62207707839701,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Left headlight low beam lamp, Left headlight range adjustment motor",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "60",
+        "layout": {
+          "top": 74.32919304321086,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Right headlight low beam lamp, Right headlight range adjustment motor",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "61",
+        "layout": {
+          "top": 79.03630900802472,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left headlight high beam lamp, High beam warning light",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ALTA(ubicacion=LADO_IZQUIERDO))",
+          "TESTIGO_CONTROL_DE_ESTABILIDAD",
+          "TESTIGO_LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "62",
+        "layout": {
+          "top": 83.74342497283857,
+          "left": 16.485945072697902,
+          "width": 6.346526655896603,
+          "height": 1.9048364153627309
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right headlight high beam lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ALTA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "Connector 1",
+        "layout": {
+          "top": 29.518700787401574,
+          "left": 25.861399458582415,
+          "width": 3.290857425748243,
+          "height": 11.968503937007878
+        },
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        }
+      },
+      {
+        "id": "Connector 2",
+        "layout": {
+          "top": 50.05413385826771,
+          "left": 26.792207034994686,
+          "width": 20.319032888542953,
+          "height": 3.4496062992126
+        },
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        }
+      },
+      {
+        "id": "Connector 3",
+        "layout": {
+          "top": 44.76279527559055,
+          "left": 26.292207034994693,
+          "width": 21.319032888542953,
+          "height": 3.3496062992126
+        },
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        }
+      },
+      {
+        "id": "Connector 4",
+        "layout": {
+          "top": 74.14149623100099,
+          "left": 28.152256884330658,
+          "width": 16.025044855817523,
+          "height": 5.869291338582681
+        },
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        }
+      },
+      {
+        "id": "Connector 5",
+        "layout": {
+          "top": 69.55594499389568,
+          "left": 78.98900660460778,
+          "width": 6.009391820931569,
+          "height": 18.897637795275585
+        },
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        }
+      },
+      {
+        "id": "Connector 6",
+        "layout": {
+          "top": 34.18149578297734,
+          "left": 81.62137948450864,
+          "width": 5.293988032725451,
+          "height": 19.63779527559055
+        },
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        }
+      },
+      {
+        "id": "Connector 7",
+        "layout": {
+          "top": 68.6998031496063,
+          "left": 69.54567660028675,
+          "width": 5.450907275084193,
+          "height": 19.90551181102363
+        },
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/06c13a75_volkswagen-sharan-2000.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 1.135702746365105,
+    "imageClusters": [
+      "629765ad7d56eeb7bf447cbb",
+      "62fce7fe6b2b9160a20c85c9"
+    ],
+    "boxName": "Driver's side interior fuse panel",
+    "templateId": "664f70a3f6c77b380049d13d",
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-sharan-2002-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 0.5854082998661305,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Gasoline models: Oil level and temperature sensor, Odometer sensor, Crankcase breather heating element, Variable intake manifold changeover valve, Camshaft control valve 1, Exhaust camshaft control valve 1; Diesel models: Taximeter, Taxi alarm remote control, control unit, Crankcase breather heating element",
+        "relatedEntities": [
+          "TEMPERATURA_MOTOR",
+          "MODULO",
+          "ECU"
+        ]
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 0.5854082998661305,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Gasoline models: Oil level and temperature sensor, Odometer sensor, Crankcase breather heating element, Variable intake manifold changeover valve, Camshaft control valve 1, Exhaust camshaft control valve 1; Diesel models: Taximeter, Taxi alarm remote control, control unit, Crankcase breather heating element",
+        "relatedEntities": [
+          "TEMPERATURA_MOTOR",
+          "MODULO",
+          "ECU"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 4.402748183177286,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Mirror adjustment switch, Cruise control system switch, Right window switch, Left window switch, Steering wheel control unit, Airbag coil connector and return ring with slip ring, ABS control unit, Radiator fan control unit, Front left window control unit, Front right window control unit, Rear left window control unit, Rear right window control unit, Air conditioning system control, Folding exterior mirror control unit, Parking aid control unit, Multifunction steering wheel control unit, Gearbox hydraulic pump relay, Brake light suppression relay, Low beam control unit, on/off (Coming home system)",
+        "relatedEntities": [
+          "MODULO_ABS",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/starter-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 8.22008806648844,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Sunroof switch, Heated driver seat regulator, Heated passenger seat regulator, Multifunction display memory switch, TCS and ESP button, Clutch pedal switch (Manual gearbox models only), Brake pedal switch, Airbag coil connector and return ring with slip ring, Steering angle sensor, Horn plate, Dual tone horn relay, ABS control unit, Digital clock, Heating control unit, Motronic control unit, Climatronic control unit, Air conditioning system control unit, Multifunction steering wheel control unit, Multifunction unit control unit, Radio and navigation display control unit",
+        "relatedEntities": [
+          "MODULO_ABS",
+          "RELOJ",
+          "NAVEGADOR"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 12.037427949799596,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Control unit for diesel direct injection system, Crankcase breather heating element, Motronic control unit"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 15.854767833110749,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Reverse light switch, Multifunction switch, Hydraulic temperature sensor, Automatic gearbox control unit, Starter inhibitor and reverse light relay, Parking aid control unit, Left reverse light lamp, Right reverse light bulb, Selector lever lock solenoid",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION",
+          "LUZ_RETROCESO",
+          "LAMPARA(of=LUZ_RETROCESO(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 19.672107716421902,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Horn or dual-tone horn, Alarm system control unit",
+        "relatedEntities": [
+          "MODULO_ALARMA"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 23.489447599733055,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Hood contact switch, Instrument cluster control unit, Light switch illumination lamp, Cigarette lighter",
+        "relatedEntities": [
+          "LAMPARA(of=BACKLIGHT(of=INTERRUPTOR))",
+          "LAMPARA(of=BACKLIGHT(of=COMANDO_DE_LUCES))",
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/cigarette-lighter-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 27.306787483044207,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "12 V socket (Models without taxi equipment), 12 V socket (Models with taxi equipment), Alarm system control unit"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 27.306787483044207,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "12 V socket (Models without taxi equipment), 12 V socket (Models with taxi equipment), Alarm system control unit"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 31.124127366355363,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Vehicles without seat heating: Auxiliary heating coolant circuit valve relay; Vehicles with seat heating: Auxiliary heating cooling circuit valve relay, Heated driver seat control unit, Heated passenger seat control unit"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 31.124127366355363,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Vehicles without seat heating: Auxiliary heating coolant circuit valve relay; Vehicles with seat heating: Auxiliary heating cooling circuit valve relay, Heated driver seat control unit, Heated passenger seat control unit"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 34.941467249666516,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Multimedia system control unit; Models without taxi equipment: 12 V socket; Models with taxi equipment: Alarm system fuse, Taxi alarm system 2 fuse, Taximeter fuse, Taximeter and alarm system fuse"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 34.941467249666516,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Multimedia system control unit; Models without taxi equipment: 12 V socket; Models with taxi equipment: Alarm system fuse, Taxi alarm system 2 fuse, Taximeter fuse, Taximeter and alarm system fuse"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 34.941467249666516,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Multimedia system control unit; Models without taxi equipment: 12 V socket; Models with taxi equipment: Alarm system fuse, Taxi alarm system 2 fuse, Taximeter fuse, Taximeter and alarm system fuse"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 38.75880713297767,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Vehicles without headlight washer system: Headlight washer pump relay, Headlight washer system pump; Vehicles with headlight washer system: Headlight washer pump relay, Headlight washer system pump, 13-pin connector, trailer socket"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 38.75880713297767,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Vehicles without headlight washer system: Headlight washer pump relay, Headlight washer system pump; Vehicles with headlight washer system: Headlight washer pump relay, Headlight washer system pump, 13-pin connector, trailer socket"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 42.57614701628882,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Heating control unit (Models with auxiliary coolant heater), Low beam control unit, on/off (coming home system)",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/starter-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 42.57614701628882,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Heating control unit (Models with auxiliary coolant heater), Low beam control unit, on/off (coming home system)",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/starter-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 46.39348689959998,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Gasoline engine models: Motronic control unit, Fuel pump relay, Fuel system pressurization pump",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/fuel-pump-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 50.210826782911134,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Gasoline engine models: Fuel system pressurization pump, Fuel pump relay, Transmitter(s) and control elements for engine management; Diesel engine models: Terminal 30 voltage supply relay, Diesel direct injection system control unit, Fuse in fuse holder",
+        "relatedEntities": [
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 50.210826782911134,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Gasoline engine models: Fuel system pressurization pump, Fuel pump relay, Transmitter(s) and control elements for engine management; Diesel engine models: Terminal 30 voltage supply relay, Diesel direct injection system control unit, Fuse in fuse holder",
+        "relatedEntities": [
+          "FUSIBLE"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 54.02816666622228,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Brake light switch, ABS control unit, Motronic control unit, Diesel direct injection system control unit, All-wheel drive control unit, Multifunction unit control unit, Brake light suppression relay, Left brake light lamp, Right brake light lamp, Additional brake light lamp",
+        "relatedEntities": [
+          "MODULO_ABS",
+          "LAMPARA(of=LUZ_FRENO(ubicacion=LADO_IZQUIERDO))",
+          "LAMPARA(of=LUZ_FRENO(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/brake-light-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 57.84550654953344,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Radiator fan control unit"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 61.662846432844596,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Automatic gearbox control unit",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 65.48018631615577,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Radiator fan thermal switch, Radiator fan relay, Radiator fan 2nd speed relay, Continuous coolant circulation relay, Radiator fan control unit, Continuous coolant circulation pump,",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/cooling-fan-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 69.29752619946693,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Ambient temperature switch, Battery isolation relay, Rear heated window switch, Heated window switch, Daytime running light relay, Diesel direct injection system control unit, Climatronic control unit, Air conditioning system control unit, Fan relay, Left headlight range control unit, Right headlight range control unit, Auxiliary heating coolant circuit valve relay, Auxiliary heating temperature switch relay, Radiator fan (ASZ engine code models only), Right headlight range adjustment motor, Left headlight range adjustment motor, Left windshield washer nozzle heating resistor, Right windshield washer nozzle heating resistor"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 73.11486608277808,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Air conditioning system pressure switch, Radiator fan second speed relay, Climatronic control unit, Rear wiper motor"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 76.93220596608924,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Control unit for Climatronic, Control unit for air conditioning system, Rear fresh air blower,"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 80.74954584940039,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Control unit for air conditioning system, Control unit for Climatronic, Fresh air fan series resistor with overheating fuse, Fresh air fan"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 84.56688573271154,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Vehicles without heated steering wheel: Heated exterior mirror relay, Driver's side heated exterior mirror, Passenger's side heated exterior mirror; Vehicles with heated steering wheel: Heated exterior mirror relay, Driver's side heated exterior mirror, Passenger's side heated exterior mirror, Heated steering wheel control unit, Heated steering wheel"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 84.56688573271154,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Vehicles without heated steering wheel: Heated exterior mirror relay, Driver's side heated exterior mirror, Passenger's side heated exterior mirror; Vehicles with heated steering wheel: Heated exterior mirror relay, Driver's side heated exterior mirror, Passenger's side heated exterior mirror, Heated steering wheel control unit, Heated steering wheel"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 88.3842256160227,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Windshield wiper motor control unit, Windshield wiper motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 92.20156549933385,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Manual gearbox models: Starter motor, Starter inhibitor and reverse light relay; Automatic gearbox models: Starter motor, Starter inhibitor and reverse light relay",
+        "relatedEntities": [
+          "RELAY(protects=INMOVILIZADOR)",
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 60.70718381285874,
+          "left": 96.018905382645,
+          "width": 2.3500257440016488,
+          "height": 15.906610895735477
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fog light switch, Rear fog light switch, Rear fog light deactivation contact switch, Rear fog light warning light, Left fog light lamp, Right fog light lamp, Left rear fog light lamp, Right rear fog light lamp, 13-pin connector, Trailer socket",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA(warns=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=LADO_IZQUIERDO))",
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=LADO_DERECHO))",
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA)))"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 1.0934404283801884,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Sunroof regulation control unit, Multifunction unit control unit, Digital clock",
+        "relatedEntities": [
+          "RELOJ"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 13.466532797858093,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Instrument lighting switch and regulator, Taxi alarm system 2 control unit, Taxi number light lamp, License plate light",
+        "relatedEntities": [
+          "INTERRUPTOR",
+          "BOTON",
+          "LUZ_PATENTE"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 25.839625167335996,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Radiator fan control unit (ASZ engine code models only), Motronic control unit, Motronic power supply relay, Exhaust gas recirculation valve, Ignition coil 1 with final stage, Ignition coil 2 with final stage, Ignition transformer, Ignition coil 3 with final stage, Ignition coil 4 with final stage, Ignition coil 5 with final stage, Ignition coil 6 with final stage",
+        "relatedEntities": [
+          "VALVULA_EGR"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 25.839625167335996,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Radiator fan control unit (ASZ engine code models only), Motronic control unit, Motronic power supply relay, Exhaust gas recirculation valve, Ignition coil 1 with final stage, Ignition coil 2 with final stage, Ignition transformer, Ignition coil 3 with final stage, Ignition coil 4 with final stage, Ignition coil 5 with final stage, Ignition coil 6 with final stage",
+        "relatedEntities": [
+          "VALVULA_EGR"
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 38.212717536813905,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Radio and navigation display control unit, Radio, Traffic information control unit",
+        "relatedEntities": [
+          "NAVEGADOR",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/radio-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 50.58580990629181,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Instrument cluster control unit, Mobile phone operating electronics control unit, Multifunction unit control unit, Radio and navigation display control unit, Radio",
+        "relatedEntities": [
+          "NAVEGADOR",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/radio-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 62.95890227576971,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Driver's side central locking switch, Driver's side central locking switch, Front left central locking actuator, Tailgate central locking motor, Steering angle sensor, Headlight washer relay, Instrument cluster control unit, Climatronic control unit, Air conditioning system control unit, Left heated windshield relay, Mobile phone operating electronics control unit, Multifunction steering wheel control unit, Multifunction control unit, Radio and navigation display control unit, Windshield washer pump relay, Immobilizer warning light, 16-pin connector, self-diagnosis connection",
+        "relatedEntities": [
+          "RELAY(protects=LAVA_FAROS)",
+          "NAVEGADOR",
+          "RELAY(protects=BOMBA_LIMPIAPARABRISAS)",
+          "TESTIGO_INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 75.3319946452476,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Intermittent wiper switch, Windshield wiper motor control unit, Windshield and rear window washer pump",
+        "relatedEntities": [
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 75.3319946452476,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Intermittent wiper switch, Windshield wiper motor control unit, Windshield and rear window washer pump",
+        "relatedEntities": [
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 87.7050870147255,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Gasoline engine models: Fuel pump relay; Diesel engine models: Sensor(s) and control elements for engine management"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 83.68541114058354,
+          "left": 87.7050870147255,
+          "width": 9.455689424364131,
+          "height": 4.499204244031832
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Gasoline engine models: Fuel pump relay; Diesel engine models: Sensor(s) and control elements for engine management"
+      }
+    ],
+    "boxAspectRatio": 0.5046854082998661,
+    "imageClusters": [
+      "629765ad7d56eeb7bf447cbb",
+      "62fce7fe6b2b9160a20c85c9",
+      "61df34f0a4866d000459d43e"
+    ],
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/0b9bedd8_volkswagen-sharan-2000.jpg"
+    },
+    "boxName": "Driver's side interior fuse panel (Annex below)",
+    "templateId": "664f79b5f6c77b380049d681",
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-sharan-2002-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 47.59878706199456,
+          "left": 60.25249036935843,
+          "width": 3.8515130172563694,
+          "height": 12.110028930428854
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": 60,
+          "notUsed": false
+        },
+        "description": "Glow plug heater"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 47.59878706199456,
+          "left": 53.817188141253425,
+          "width": 3.8515130172563694,
+          "height": 12.110028930428854
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "Radiator fan"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 47.59878706199456,
+          "left": 47.38188591314841,
+          "width": 3.8515130172563694,
+          "height": 12.110028930428854
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": 40
+        },
+        "description": "Radiator fan [not for engine code ASZ]"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 47.59878706199456,
+          "left": 47.38188591314841,
+          "width": 3.8515130172563694,
+          "height": 12.110028930428854
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": 60
+        },
+        "description": "Radiator fan [only for engine code ASZ]"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 47.59878706199456,
+          "left": 40.9465836850434,
+          "width": 3.8515130172563694,
+          "height": 12.110028930428854
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": 110,
+          "notUsed": false
+        },
+        "description": "Interior",
+        "relatedEntities": [
+          "HABITACULO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 47.59878706199456,
+          "left": 34.51128145693839,
+          "width": 3.8515130172563694,
+          "height": 12.110028930428854
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": 150,
+          "notUsed": false
+        },
+        "description": "Alternator",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 40.8355795148248,
+          "left": 74.16032189837397,
+          "width": 2.086677367576244,
+          "height": 6.738544474393531
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "Multi-function unit control unit"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 40.8355795148248,
+          "left": 70.14597154308746,
+          "width": 2.086677367576244,
+          "height": 6.738544474393531
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Sistema de frenos antibloqueo"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 40.8355795148248,
+          "left": 66.13162118780096,
+          "width": 2.086677367576244,
+          "height": 6.738544474393531
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "ABS (pump)",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "BOMBA",
+          "BOMBIN_DE_EMBRAGUE"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 30.976617311877742,
+          "left": 65.94786466542466,
+          "width": 13.59913460052543,
+          "height": 6.487608667445179
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxAspectRatio": 1.1910112359550562,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/3c5e5e53_volkswagen-sharan-2003.jpg"
+    },
+    "processed": false,
+    "boxName": "Fuses in the battery fuse holder (up to model year 2006)",
+    "boxDescription": "Fuses in battery fuse holder, to model year 2006",
+    "imageClusters": [
+      "6442db683560ae1c38b749a2"
+    ],
+    "templateId": "6733e5f9d3fde9ae1f20260d",
+    "boxRotation": 90,
+    "templateRenameMap": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "5",
+      "5": "4",
+      "6": "8",
+      "7": "7",
+      "8": "6"
+    },
+    "isTranslated": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-sharan-2002-genid-g1-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "50",
+        "layout": {
+          "top": 14.532753358756874,
+          "left": 5.956165775477006,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "A/C decoupling relay"
+      },
+      {
+        "id": "51",
+        "layout": {
+          "top": 14.532753358756874,
+          "left": 24.140221553588926,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Air conditioning deactivation relay"
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 14.532753358756874,
+          "left": 42.32427733170084,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "RESERVA_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Reserva"
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 14.532753358756874,
+          "left": 60.50833310981276,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "RESERVA_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Reserva"
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 14.532753358756874,
+          "left": 78.6923888879247,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "High power heater relay"
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 57.12399976987311,
+          "left": 5.956165775477006,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter lights and reverse lights relay",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "56",
+        "layout": {
+          "top": 57.12399976987311,
+          "left": 24.140221553588926,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Air pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_AIRE_SECUNDARIO)"
+        ]
+      },
+      {
+        "id": "57",
+        "layout": {
+          "top": 70.0001476647599,
+          "left": 42.24538771878062,
+          "width": 15.146805680683244,
+          "height": 12.876147894886813
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Secondary air pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_AIRE_SECUNDARIO)"
+        ]
+      },
+      {
+        "id": "58A",
+        "layout": {
+          "top": 52.1616134635194,
+          "left": 59.84777791627286,
+          "width": 7.100065162820279,
+          "height": 33.354483091152105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Radiator fan fuse, glow plugs for additional coolant heating elements",
+        "relatedEntities": [
+          "FUSIBLE(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/cooling-fan-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "58B",
+        "layout": {
+          "top": 52.1616134635194,
+          "left": 67.93673920829542,
+          "width": 7.100065162820279,
+          "height": 33.354483091152105
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Radiator fan fuse, glow plugs for additional coolant heating elements",
+        "relatedEntities": [
+          "FUSIBLE(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/volkswagen/sharan/info/fusebox/2002/cooling-fan-fuse",
+            "urlWithAnchor": "/volkswagen/sharan/info/fusebox/2002/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 57.12399976987311,
+          "left": 78.69238888792468,
+          "width": 14.989026454842795,
+          "height": 25.752295789773594
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Low heat output relay"
+      }
+    ],
+    "boxName": "Additional box",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/e293395a_volkswagen-sharan-2002.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/dc3b1958_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "645399b567355f96f9baba43"
+    ],
+    "templateId": "6866e753addb1aa5bba14f83",
+    "boxAspectRatio": 0.5759312320916905,
+    "isTranslated": true,
+    "boxDescription": null,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-volkswagen-sharan-2002-genid-g1-3.webp"
+  }
+]

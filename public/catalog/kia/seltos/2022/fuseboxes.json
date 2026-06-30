@@ -1,0 +1,2233 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 4.665359683205075,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Passenger Seat Manual Switch"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 4.665359683205076,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Driver Seat Manual Switch"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 4.665359683205076,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Low DC-DC Converter (AMP (Amplifier))"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 4.665359683205076,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Power Window RH Relay",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 4.665359683205076,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Power Window LH Relay, Driver Safety Power Window Module",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 14.222882617444737,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Rear Wiper Motor, ICM (Integrated Circuit Module) Relay Box (Rear Wiper Relay)",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 14.222882617444737,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 14.222882617444737,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Front Air Ventilation Seat Module, Front Seat Warmer Module"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 14.222882617444737,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Sunroof Unit"
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 14.222882617444737,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Tail Gate Relay"
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 23.7804055516844,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 23.7804055516844,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Rear Seat Warmer Module"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 23.7804055516844,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Hazard Switch, Data Link Connector, Passenger Power Window Switch, Power Window Main Switch, Crash Pad Switch, Key Interlock",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA",
+          "CONECTOR_OBD",
+          "INTERRUPTOR(of=LEVANTAVIDRIOS(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 23.7804055516844,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Stop Lamp Switch, IBU (Integrated Body Control Unit)"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 23.7804055516844,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Door Lock Relay, Door Unlock Relay, ICM (Integrated Circuit Module) Relay Box (Two Turn Unlock Relay)",
+        "relatedEntities": [
+          "RELAY(protects=CERRADURA(of=PUERTA))",
+          "RELAY(protects=PROP_OR(0=CIERRE_CENTRALIZADO,1=CIERRE_CENTRALIZADO))"
+        ]
+      },
+      {
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 33.33792848592406,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 33.33792848592406,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "IBU (Integrated Body Control Unit)"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 33.33792848592406,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "[With B/Alarm & Without Smart Key] ICM (Integrated Circuit Module) Relay Box (Burglar Alarm Relay) [DCT] Transaxle Range Switch, [IVT] Position Switch"
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 33.33792848592406,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 33.33792848592406,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 42.895451420163724,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "IBU (Integrated Body Control Unit)"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 42.895451420163724,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "SRS (Supplemental Restraint System) Control Module"
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 42.895451420163724,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 42.895451420163724,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "A/C Control Module, Head-Up Display",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR",
+          "DISPLAY_HUD"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 42.895451420163724,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Low DC-DC Converter"
+      },
+      {
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 52.45297435440339,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 52.45297435440339,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "PCB Block (Fuse Name - ABS 3, ECU 5, SENSOR 4, TCU 2)",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "ECU",
+          "SENSOR",
+          "LUZ_TESTIGO"
+        ]
+      },
+      {
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 52.45297435440339,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 52.45297435440339,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Forward Collision-Avoidance Assist Unit, IBU (Integrated Body Control Unit), Crash Pad Switch, 4WD ECM (Engine Control Module), Electric Parking Brake Switch, Lane Keeping Assist Unit"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 52.45297435440339,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "ECM (Engine Control Module), A/C Control Module, Driver/Passenger Power Outside Mirror",
+        "relatedEntities": [
+          "ECU",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 62.01049728864304,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Sound Mood Lamp, Driver/Passenger Door Mood Lamp, Low DC-DC Converter, Blind-Spot Collision Warning Unit LH/RH, A/V & Navigation Head Unit, Audio, A/C Control Module, Head-Up Display, Instrument Cluster",
+        "relatedEntities": [
+          "ESTEREO",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR",
+          "DISPLAY_HUD",
+          "TABLERO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/kia/seltos/info/fusebox/2022/radio-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 62.01049728864304,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "IBU (Integrated Body Control Unit)"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 62.01049728864304,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Electro Chromic Mirror, Wireless Charger, ATM Shift Lever Indicator, Console Switch LH, Audio, A/V & Navigation Head Unit, A/C Control Module, AMP (Amplifier), Front Air Ventilation Seat Control Module, Rear Seat Warmer Module, Front Seat Warmer Module, Low DC-DC Converter",
+        "relatedEntities": [
+          "ESTEREO",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR",
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/kia/seltos/info/fusebox/2022/radio-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 62.01049728864304,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Stop Lamp Switch, ATM Shift Lever"
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 62.01049728864304,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "SRS (Supplemental Restraint System) Control Module, Passenger Occupant Detection Sensor"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 81.5816305740752,
+          "left": 62.01049728864304,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "PCB Block (Front Wiper (Low) Relay), Front Wiper Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 71.56802022288272,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "MDPS (Motor Driven Power Steering) Unit"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 29.137788015376657,
+          "left": 71.56802022288272,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Overhead Console Lamp, Instrument Cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 71.56802022288272,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Instrument Cluster, Head-Up Display",
+        "relatedEntities": [
+          "TABLERO",
+          "DISPLAY_HUD"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 71.56802022288272,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Engine Room Junction Block (Blower Relay, PTC Heater #1/#2 Relay), A/C Control Module",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 68.7680267625944,
+          "left": 71.56802022288272,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Front Power Outlet #2 (USB), Joint Connector (JM04)",
+        "relatedEntities": [
+          "TOMA_12V",
+          "CONECTOR_USB"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/cigarette-lighter-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 81.5816305740752,
+          "left": 71.56802022288272,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Rear USB Charger, IBU (Integrated Body Control Unit), Low DC-DC Converter, Front Power Outlet #2, Power Outside Mirror Switch, ICM (Integrated Circuit Module) Relay Box (Power Outlet Relay), Front USB Charger",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_DELANTERA)",
+          "INTERRUPTOR(of=ESPEJO_ELECTRICO)"
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 15.92770843297074,
+          "left": 81.12554315712238,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "IBU (Integrated Body Control Unit)"
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 29.137788015376653,
+          "left": 81.12554315712238,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "[Auto A/C] Blower Motor, Engine Room Junction Block (Blower Relay) [Manual A/C] Blower Resistor, A/C Control Module",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 42.34786759778257,
+          "left": 81.12554315712238,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Front Air Ventilation Seat Module, Front Seat Warmer Module, Rear Seat Warmer Module, Front Deicer Box (Front Deicer LH/RH Relay)"
+      },
+      {
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 55.557947180188485,
+          "left": 81.12554315712238,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 68.76802676259439,
+          "left": 81.12554315712238,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Multifunction Switch",
+        "relatedEntities": [
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "48",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 81.5816305740752,
+          "left": 81.12554315712238,
+          "width": 7.288602243747732,
+          "height": 5.251052731899037
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5044444444444445,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/d9d37b8e_kia-seltos-2022.jpg"
+    },
+    "boxName": "Driver's side fuse panel",
+    "imageClusters": [
+      "645302a667355f96f9baa751"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/165bbc1b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/1ab843c5_image.jpg"
+      }
+    ],
+    "templateId": "66819f07536bf165daef3aa7",
+    "templateRenameMap": {
+      "P/SEAT (PASS)": "1",
+      "P/SEAT (DRV)": "2",
+      "AMP": "3",
+      "P/WDW RH": "4",
+      "P/WDW LH": "5",
+      "WIPER RR": "6",
+      "S/HEATER FRT": "8",
+      "SUNROOF": "9",
+      "TAIL GATE OPEN": "10",
+      "S/HEATER RR": "12",
+      "MODULE 1": "13",
+      "BRAKE SWITCH": "14",
+      "DOOR LOCK": "15",
+      "IBU 1": "17",
+      "START": "18",
+      "WIPER FRT 1": "21",
+      "AIR BAG 2": "22",
+      "MEMORY 2": "24",
+      "MULTI MEDIA": "25",
+      "IG1": "27",
+      "MODULE 4": "29",
+      "HAETED MIRROR": "30",
+      "ISG": "31",
+      "IBU2": "32",
+      "MODULE 5": "33",
+      "MODULE 3": "34",
+      "AIR BAG": "35",
+      "FRT WIPER2": "36",
+      "MDPS": "37",
+      "A/BAG IND": "38",
+      "CLUSTER": "39",
+      "A/C 1": "40",
+      "POWER OUTLET": "41",
+      "MODULE 2": "42",
+      "MODULE 6": "43",
+      "A/C 2": "44",
+      "MODULE 7": "45",
+      "WASHER": "47"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-seltos-2022-genid-g1a-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 8.51352590267619,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60,
+          "notUsed": false
+        },
+        "description": "(B+3) ICU Junction Block (IPS1, IPS2, IPS3, IPS7, IPS10, IPS13, IPS18, IPS20)"
+      },
+      {
+        "id": "2",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 15.105841760906255,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        }
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 21.69815761913632,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60,
+          "notUsed": false
+        },
+        "description": "(B+4) ICU Junction Block (Fuse Name - P/WINDOW LH, P/WINDOW RH, TAILGATE OPEN, SUNROOF, S/HEATER, AMP, P/SEAT (PASS), P/ SEAT (DRV))",
+        "relatedEntities": [
+          "MARCHA_PARKING",
+          "VENTANILLA",
+          "TESTIGO_DIRECCION_ASISTIDA",
+          "LEVANTAVIDRIOS(ubicacion=LADO_IZQUIERDO)",
+          "LEVANTAVIDRIOS(ubicacion=LADO_DERECHO)",
+          "TECHO_SOLAR",
+          "AMPLIFICADOR"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 28.290473477366387,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(B+2) ICU Junction Block (IPS4, IPS5, IPS6, IPS8, IPS9, IPS11, IPS12, IPS17)"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 34.882789335596456,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60,
+          "notUsed": false
+        },
+        "description": "(COOLING FAN 1) Engine Room Junction Block (Cooling Fan 1 Relay)"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 41.47510519382652,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(B+5) PCB Block (Main Relay, Fuse Name - ECU 4, ECU 3, B/ALARM HORN, HORN, A/C)",
+        "relatedEntities": [
+          "ECU",
+          "BOCINA",
+          "AIRE_ACONDICIONADO"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 48.06742105205659,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "(IG1) [With Smart Key] Engine Room Junction Block (ACC Relay, IG1 Relay) [Without Smart Key] Ignition Switch"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 54.659736910286654,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "(BLOWER) Engine Room Junction Block (Blower Relay)"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 58.01390000983549,
+          "left": 61.25205276851672,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40,
+          "notUsed": false
+        },
+        "description": "(IG2) [With Smart Key] Engine Room Junction Block (IG2 Relay, Start Relay) [Without Smart Key] Engine Room Junction Block (Start Relay), Ignition Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 65.48200278640097,
+          "left": 24.782558278050615,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 65.48200278640097,
+          "left": 30.411202203725296,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(PTC HEATER 1) Engine Room Junction Block (PTC Heater 1 Relay)"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 65.48200278640097,
+          "left": 36.039846129399976,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 50,
+          "notUsed": false
+        },
+        "description": "(PTC HEATER 2) Engine Room Junction Block (PTC Heater 2 Relay)"
+      },
+      {
+        "id": "13",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 65.48200278640097,
+          "left": 41.66849005507465,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        }
+      },
+      {
+        "id": "14",
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic"
+        },
+        "layout": {
+          "top": 65.48200278640097,
+          "left": 47.29713398074933,
+          "width": 7.924192808228925,
+          "height": 2.417417072293137
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 70.21223835553074,
+          "left": 22.515365539291984,
+          "width": 3.9448736289938098,
+          "height": 12.80917532163668
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-double",
+          "amp": 150,
+          "notUsed": false
+        },
+        "description": "(ALT) Alternator, Engine Room Junction Block (Fuse Name - SGA, EPB 1,",
+        "relatedEntities": [
+          "GENERIC_FUSE_NAME",
+          "ALTERNADOR",
+          "FRENO_DE_MANO_ELECTRONICO"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 70.21223835553074,
+          "left": 22.515365539291984,
+          "width": 3.9448736289938098,
+          "height": 12.80917532163668
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-double",
+          "amp": 200,
+          "notUsed": false
+        },
+        "description": "(ALT) EPB 2, ABS 2, 4WD)",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "FRENO_DE_MANO_ELECTRONICO",
+          "GENERIC_FUSE_NAME"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 78.52762507066403,
+          "left": 22.663930436675308,
+          "width": 3.883166428230811,
+          "height": 12.666828602646241
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-double",
+          "amp": 80,
+          "notUsed": false
+        },
+        "description": "(MDPS) MDPS (Motor Driven Power Steering) Unit"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 71.44124018798524,
+          "left": 32.709170018261204,
+          "width": 7.022623065697527,
+          "height": 6.046530480696288
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "(B+1) ICU Junction Block (Long Term Loak Auto Cut Relay, Fuse - BRAKE SWITCH, MODULE 1, IBU 1, S/HEATER RR, AIR BAG 2, DOOR LOCK)",
+        "relatedEntities": [
+          "FUSIBLE",
+          "SENSOR_FRENO",
+          "MODULO",
+          "ECU",
+          "AIRBAG",
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 79.29947947850107,
+          "left": 32.709170018261204,
+          "width": 7.022623065697527,
+          "height": 6.046530480696288
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "(EPB 1) ESC (Electronic Stability Control) Module (With EPB (Electronic parking brake))"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 71.65603464980903,
+          "left": 41.74457487407045,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "(REAR HEATED) Engine Room Junction Block (Rear Heated Relay)"
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 71.65603464980903,
+          "left": 48.49039782429622,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "(DCT 2) [DCT] TCM (Transmission Control Module)"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 71.65603464980903,
+          "left": 55.23622077452198,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "(DCT 1/EOP) [DCT] TCM (Transmission Control Module) [Nu 2.0 MPI] Electronic Oil Pump Module"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 71.65603464980903,
+          "left": 61.98204372474775,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "(COOLING FAN 2) [Nu 2.0 MPI] Engine Room Junction Block (Cooling Fan 1/2 Relay)"
+      },
+      {
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 79.76775851174787,
+          "left": 41.74457487407045,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 79.76775851174787,
+          "left": 48.49039782429622,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "(SGA) Smart Gear Actuator"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 79.76775851174787,
+          "left": 55.236220774521975,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 40
+        },
+        "description": "(ABS 1/EPB 2) ESC (Electronic Stability Control) Module"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 79.76775851174787,
+          "left": 61.98204372474775,
+          "width": 4.4267539278644294,
+          "height": 4.7689989884521635
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "(ABS2) ESC (Electronic Stability Control) Module (Without EPB (Electronic parking brake)"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 31.77816201311244,
+          "left": 48.91040276808852,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 7.5
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 7.510974684915677,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "(ECU1) PCM (Power Train Control Module)"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 11.618767407957652,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "(ECU2) PCM (Power Train Control Module)"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 15.726560130999628,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(SENSOR1) Oxygen Sensor (Up/Down)"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 19.834352854041605,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "(SENSOR2) Canister Close Valve, Oil Control Valve #1, Oil Control Valve #2, Oil Control Valve #3, Engine Room Junction Block (Cooling Fan 1/2 Relay), PCB Block (A/C Relay), Purge Control Solenoid Valve, Electronic Thermostat, Variable Intake Solenoid Valve",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER",
+          "VALVULA_MULTIPLE_ADMISION"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 23.94214557708358,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "(SENSOR3) Engine Room Junction Block (Fuel Pump Relay)"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 28.049938300125554,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "(IGN COIL) Ignition Coil #1-#4"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 32.15773102316753,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "(A/C) A/C Relay",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 38.95645418964245,
+          "left": 36.26552374620951,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "(B/ALARM HORN) B/Alarm Horn Relay"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 7.510974684915677,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(INJECTOR) Injector #1~#4"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 11.618767407957657,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "(ECU5) PCM (Power train Control Module)"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 15.726560130999625,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "(ABS3) ESC (Electronic Stability Control) Module, Data Link Connector",
+        "relatedEntities": [
+          "CONECTOR_OBD"
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 19.834352854041615,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(TCU2) Position Switch"
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 23.942145577083597,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(SENSOR 4) Electronic Oil Pump Module"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 28.049938300125575,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(ECU3) PCM (Power train Control Module)"
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 32.15773102316754,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(ECU4) PCM (Power train Control Module)"
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 44.331242220720874,
+          "left": 36.2655237462095,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(HORN) Horn Relay",
+        "relatedEntities": [
+          "BOCINA",
+          "RELAY"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/kia/seltos/info/fusebox/2022/horn-fuse",
+            "urlWithAnchor": "/kia/seltos/info/fusebox/2022/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 49.96667561692685,
+          "left": 41.694366185990106,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 10
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 49.96667561692685,
+          "left": 45.74226214503379,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "46",
+        "layout": {
+          "top": 49.96667561692685,
+          "left": 49.79015810407747,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 49.96667561692685,
+          "left": 53.83805406312115,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 49.96667561692685,
+          "left": 57.885950022164835,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 30
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "49",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 46.701990490866834,
+          "left": 70.52117649051452,
+          "width": 5.070844455485186,
+          "height": 1.37448077234844
+        }
+      },
+      {
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 49.49062884049777,
+          "left": 70.52117649051452,
+          "width": 5.070844455485186,
+          "height": 1.37448077234844
+        }
+      },
+      {
+        "id": "51",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 52.27926719012877,
+          "left": 70.52117649051452,
+          "width": 5.070844455485186,
+          "height": 1.37448077234844
+        }
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 64.80061115313433,
+          "left": 58.202367142950735,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 25
+        },
+        "description": "(POWER OUTLET) ICM (Integrated Circuit Module) Relay Box (Power Outlet Relay)"
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 64.80061115313433,
+          "left": 61.9742801648697,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "(VACUUM PUMP) Vacuum Pump",
+        "relatedEntities": [
+          "BOMBA_DE_VACIO"
+        ]
+      },
+      {
+        "id": "54",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.80061115313433,
+          "left": 65.74619318678866,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        }
+      },
+      {
+        "id": "55",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 64.80061115313433,
+          "left": 69.51810620870762,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        }
+      },
+      {
+        "id": "56",
+        "layout": {
+          "top": 72.2725768742239,
+          "left": 68.17942262176359,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "(FUEL PUMP) Engine Room Junction Block (Fuel Pump Relay)"
+      },
+      {
+        "id": "57",
+        "layout": {
+          "top": 72.2725768742239,
+          "left": 72.52002311501822,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 15
+        },
+        "description": "(TCU 1) TCM (Transmission Control Module)"
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 80.34903080199078,
+          "left": 68.75232430714146,
+          "width": 2.160617435610333,
+          "height": 3.7921256728296275
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "micro",
+          "amp": 20
+        },
+        "description": "(4WD) 4WD ECM (Engine Control Module)"
+      },
+      {
+        "id": "59",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 95.4828108417633,
+          "left": 9.256718924972004,
+          "width": 5.070844455485186,
+          "height": 1.37448077234844
+        }
+      },
+      {
+        "id": "60",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 95.4828108417633,
+          "left": 17.226731407010384,
+          "width": 5.070844455485186,
+          "height": 1.37448077234844
+        }
+      },
+      {
+        "id": "61",
+        "kind": {
+          "type": "fuse",
+          "format": "micro"
+        },
+        "layout": {
+          "top": 95.4828108417633,
+          "left": 24.896743889048757,
+          "width": 5.070844455485186,
+          "height": 1.37448077234844
+        }
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 7.130184366823286,
+          "left": 24.60465935886859,
+          "width": 35.89214419698834,
+          "height": 14.117516543604568
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 29.60474170892488,
+          "left": 6.495582479209123,
+          "width": 21.419407998621914,
+          "height": 7.127078280580932
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 3.421776127145245,
+          "left": 69.16019733379271,
+          "width": 9.380254382582295,
+          "height": 11.60848275746476
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E61) IG1"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 17.044956686807666,
+          "left": 69.16019733379271,
+          "width": 9.380254382582295,
+          "height": 11.60848275746476
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 30.66813724647008,
+          "left": 69.16019733379271,
+          "width": 9.380254382582295,
+          "height": 11.60848275746476
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E63) Fuel Pump"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 3.421776127145245,
+          "left": 80.59140038088677,
+          "width": 14.999999999999998,
+          "height": 7.085327996804111
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E64) Cooling Fan 2"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 12.691171927853798,
+          "left": 80.59140038088677,
+          "width": 14.999999999999998,
+          "height": 7.013304721030041
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E65) Start"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 22.00323992472396,
+          "left": 80.59140038088677,
+          "width": 14.999999999999998,
+          "height": 6.855937052932758
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E66) IG2"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 31.23662408754548,
+          "left": 80.59140038088677,
+          "width": 14.999999999999998,
+          "height": 6.855937052932758
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E67) ACC"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 40.470008250366995,
+          "left": 80.59140038088677,
+          "width": 14.999999999999998,
+          "height": 6.855937052932758
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E68) Rear Defogger"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 51.85658280241739,
+          "left": 78.77420114266027,
+          "width": 15.499999999999998,
+          "height": 11.38440629470672
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(E69) Cooling Fan 1"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 65.6170143999568,
+          "left": 78.77420114266027,
+          "width": 15.499999999999998,
+          "height": 11.38440629470672
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(E70) Blower"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 87.36697432895424,
+          "left": 32.61097468491565,
+          "width": 9.380254382582295,
+          "height": 11.60848275746476
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E71) PTC Heater 1"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 87.36697432895424,
+          "left": 43.05115119004788,
+          "width": 9.380254382582295,
+          "height": 11.60848275746476
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(E72) PTC Heater 2"
+      },
+      {
+        "id": "R13",
+        "layout": {
+          "top": 87.36697432895424,
+          "left": 53.49132769518012,
+          "width": 9.380254382582295,
+          "height": 11.60848275746476
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "R14",
+        "layout": {
+          "top": 87.36697432895424,
+          "left": 63.93150420031235,
+          "width": 9.380254382582295,
+          "height": 11.60848275746476
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxAspectRatio": 1.3166023166023166,
+    "boxName": "Engine compartment",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/4c543af3_kia-seltos-2022.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3c4bcb48_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/3c805e44_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a091406e_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b3ed20f4_image.jpg"
+      }
+    ],
+    "templateId": "66d23229bfa9a1bda0e6bc9d",
+    "templateRenameMap": {
+      "1": "28",
+      "2": "29",
+      "3": "30",
+      "4": "31",
+      "5": "32",
+      "6": "33",
+      "7": "34",
+      "8": "35",
+      "9": "36",
+      "10": "37",
+      "11": "38",
+      "12": "39",
+      "13": "40",
+      "14": "41",
+      "15": "42",
+      "16": "43",
+      "17": "1",
+      "19": "3",
+      "20": "4",
+      "21": "5",
+      "22": "6",
+      "23": "7",
+      "24": "8",
+      "25": "9",
+      "27": "11",
+      "28": "12",
+      "31": "52",
+      "32": "53",
+      "35": "15",
+      "36": "16",
+      "37": "17",
+      "38": "19",
+      "39": "20",
+      "40": "21",
+      "41": "22",
+      "42": "56",
+      "43": "57",
+      "44": "18",
+      "46": "24",
+      "47": "25",
+      "48": "26",
+      "49": "58",
+      "SPARE 1": "27",
+      "SPARE 2": "44",
+      "SPARE 3": "45",
+      "SPARE 4": "46",
+      "SPARE 5": "47",
+      "SPARE 6": "48"
+    },
+    "imageClusters": [
+      "69317f67e1d87ebafe3b288c"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-kia-seltos-2022-genid-g1a-1.webp"
+  }
+]

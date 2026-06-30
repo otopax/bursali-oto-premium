@@ -1,0 +1,1533 @@
+[
+  {
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/fb309613_ford-escape-2001.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/a31ad1fa_ford-escape-2001.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/3ee3060a_ford-escape-2001.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/b19cde06_ford-escape-2001.png"
+    },
+    "boxDescription": "The fuse panel is located on the left hand side kick panel. Remove the panel cover to access the fuses.\nTo remove a fuse use the fuse puller tool provided on the fuse panel cover.",
+    "boxName": "Passenger compartment fuse panel",
+    "boxAspectRatio": 1.186046511627907,
+    "processed": false,
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 26.27450980392157,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Canister Vent Control Solenoid",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        }
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 26.27450980392157,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Blower Relay (coil), Rear Defrost Relay (coil), Pressure Switch to PCM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 30.980392156862745,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Rear Wiper Motor, Rear Washer Motor, Rear Wiper Relay (coil)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))",
+          "RELAY",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 30.980392156862745,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Four Wheel Drive Control Module, Cluster (Restraints Control Warning)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 35.68627450980392,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "ABS Unit (EVAC & FILL), ASC Unit, Restraints Control Module, ASC Main SW to ASC Unit",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "relatedEntities": [
+          "MODULO(of=CONTROL_DE_ESTABILIDAD)",
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 35.68627450980392,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Flasher Unit, Left reversing Lamp, Right Reversing Lamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_RETROCESO(ubicacion=LADO_IZQUIERDO)",
+          "LUZ_RETROCESO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 40.19607843137255,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Passive Anti-theft Transceiver (PATS), Restraints Control Module",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 40.19607843137255,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Cluster, Shift Lock Relay (coil), O/D signal to PCM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "TABLERO",
+          "RELAY",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 44.90196078431373,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "PCM Relay (coil), Fan Relay 1, 2, 3 (coil), A/C Relay (coil)",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 3
+        },
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 44.90196078431373,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Front Wiper Motor, Front Washer Motor, INT Relay",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 49.6078431372549,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "IGN Relay (coil), ACC Relay (coil), Starter Relay (coil), Key Interlock Solenoid, GEM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "RELAY",
+          "BOBINA_DE_IGNICION",
+          "GENERIC_FUSE_NAME",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 49.6078431372549,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Radio, Clock",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "relatedEntities": [
+          "ESTEREO",
+          "RELOJ"
+        ],
+        "extendedDescription": "Radio and audio system; Instrument cluster",
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/radio-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 54.31372549019608,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.156862745098039
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 54.31372549019608,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.156862745098039
+        },
+        "description": "Cigar Lighter",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 58.82352941176471,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Left Front Position Lamp, Right Front Position Lamp, Left License Lamp, Right License Lamp, Left Tail Lamp, Right Tail Lamp, Park Lamp Relay (coil), Trailer Fuse, Illumination Fuse",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "LUCES_TRASERAS(ubicacion=LADO_IZQUIERDO)",
+          "LUCES_TRASERAS(ubicacion=LADO_DERECHO)",
+          "RELAY",
+          "BOBINA_DE_IGNICION",
+          "REMOLQUE",
+          "BACKLIGHT",
+          "FUSIBLE(protects=BACKLIGHT)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.82352941176471,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Cluster, Power Mirror, GEM",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "TABLERO",
+          "ESPEJO_ELECTRICO",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 63.52941176470588,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Sun Roof Motor",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=TECHO_SOLAR)",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/sunroof-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 63.52941176470588,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Illumination for: Cluster, Heater Unit, Radio, Hazard Switch, Rear Defrost Switch, 4WD Switch, Front Fog Switch",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "relatedEntities": [
+          "MODULO(of=CALEFACCION_DE_ASIENTO)",
+          "ESTEREO",
+          "BOTON_DE_BALIZA",
+          "INTERRUPTOR(of=DESEMPANADOR_TRASERO)",
+          "INTERRUPTOR(of=DOBLE_TRACCION)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/radio-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 68.23529411764706,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Subwoofer Amp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "AMPLIFICADOR(of=SUBWOOFER)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 68.23529411764706,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Left/Right Turn Indicators, Left/Right Front Side Turn Lamps, Left/Right Front turn Lamps, Left/Right Rear Turn Lamps, Left/Right Trailer Turn, Flasher Unit",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        }
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 72.94117647058823,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.156862745098039
+        },
+        "description": "Left /Right Trailer Position Lamps",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        }
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 72.94117647058823,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.156862745098039
+        },
+        "description": "Not Used",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 77.45098039215686,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Horn relay",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/horn-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 77.45098039215686,
+          "left": 29.767441860465116,
+          "width": 6.976744186046512,
+          "height": 2.3529411764705883
+        },
+        "description": "Left/Right Horn",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 77.45098039215686,
+          "left": 40.69767441860465,
+          "width": 6.744186046511628,
+          "height": 2.3529411764705883
+        },
+        "description": "Left/Right Stoplamps, High Mounted Stoplamp, Left/Right Trailer Stoplamp, ABS Unit, ASC Unit (Brake Pedal Position Switch), PCM, Shift Solenoid",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "TERCERA_LUZ_DE_FRENO",
+          "MODULO",
+          "SENSOR_FRENO",
+          "PCM",
+          "SOLENOIDE_DE_TRANSMISION"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/brake-light-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 82.35294117647058,
+          "left": 29.30232558139535,
+          "width": 8.13953488372093,
+          "height": 8.03921568627451
+        },
+        "description": "Power Window Motor - Right Front, Left Front, Right Rear, Left Rear",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        }
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 82.35294117647058,
+          "left": 40,
+          "width": 8.13953488372093,
+          "height": 8.03921568627451
+        },
+        "description": "Power Door Lock Motor - Right Front, Left Front, Right Rear, Left Rear, GEM (Door Lock Relay Coil), Power Seat",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "MODULO_ELECTRONICO_GENERICO",
+          "BOBINA",
+          "MODULO_CARROCERIA",
+          "RELAY",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 82.74509803921568,
+          "left": 51.162790697674424,
+          "width": 2.558139534883721,
+          "height": 5.88235294117647
+        },
+        "description": "Audio Cluster, Interior Lamp, Map Lamp Cargo Lamp",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "ACC",
+        "layout": {
+          "top": 49.6078431372549,
+          "left": 51.3953488372093,
+          "width": 18.6046511627907,
+          "height": 12.745098039215685
+        },
+        "description": "Accessory Relay",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=ACCESORIO)"
+        ],
+        "extendedDescription": "Protects several accesory circuits"
+      }
+    ],
+    "templateId": "613926a0c09d3500045b223a",
+    "imageClusters": [
+      "63c726d0e78809b31143afe2",
+      "61e873d6fab64b0004ba0d53"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mazda-tribute-2004-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 73.52297592997812,
+          "left": 7.266146833289263,
+          "width": 1.2728719172633254,
+          "height": 9.846827133479213
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/horn-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.08096280087527,
+          "left": 7.239459029435164,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlamp (High/Low Left, High Beams)",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.63894967177243,
+          "left": 7.239459029435164,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Headlamp (High/Low Right, High Beams)",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 29.978118161925604,
+          "left": 7.159904534606206,
+          "width": 1.2728719172633254,
+          "height": 10.065645514223196
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "EEC (KPWR)"
+      },
+      {
+        "layout": {
+          "top": 72.86652078774617,
+          "left": 11.296738265712012,
+          "width": 1.2728719172633254,
+          "height": 9.846827133479213
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "HEGO 1,2, CMS 1,2, VMV",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 58.20568927789934,
+          "left": 11.296738265712012,
+          "width": 1.2728719172633254,
+          "height": 10.065645514223196
+        },
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump, EEC (FPM)",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/fuel-pump-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 71.99124726477024,
+          "left": 20.60325633781241,
+          "width": 4.53867967391361,
+          "height": 10.22242099337967
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "",
+          "notUsed": true
+        }
+      },
+      {
+        "layout": {
+          "top": 58.20568927789934,
+          "left": 20.52505966587112,
+          "width": 4.455051710421639,
+          "height": 10.065645514223196
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "EEC (VPWR), EVR, MAF, IAC, Bulkhead",
+        "relatedEntities": [
+          "ECU",
+          "TOMA_12V",
+          "SENSOR_CAUDAL_DE_AIRE",
+          "VALVULA_IAC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.49234135667396,
+          "left": 26.650755767700872,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Alternator/ Regulator",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/alternator-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.050328227571114,
+          "left": 26.650755767700872,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DRL Unit (feed), DRL Relay",
+        "relatedEntities": [
+          "MODULO",
+          "ALIMENTACION_ELECTRICA",
+          "RELAY(protects=LUCES_CIRCULACION_DIURNA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.054704595186,
+          "left": 30.990740876221373,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Daytime Running Lamps [DRL] 15 amp / Module [HLEV] 10 amp",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA",
+          "ECU",
+          "MODULO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/headlight-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.050328227571114,
+          "left": 30.867143993635644,
+          "width": 1.2728719172633254,
+          "height": 9.846827133479213
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Auxiliary Power Point",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.054704595186,
+          "left": 33.810660302307085,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Foglamps RH/LH, Foglamp Indicator",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/fog-light-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.61269146608315,
+          "left": 33.810660302307085,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "AC Clutch",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/air-conditioning-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.054704595186,
+          "left": 38.106603023070804,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "Anti-Lock Brake System SOL"
+      },
+      {
+        "layout": {
+          "top": 60.61269146608315,
+          "left": 38.106603023070804,
+          "width": 1.1933174224343674,
+          "height": 9.846827133479213
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Auxiliary Power Point",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.544857768052516,
+          "left": 32.29912490055688,
+          "width": 3.659506762132061,
+          "height": 12.25382932166302
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/starter-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 28.227571115973742,
+          "left": 32.29912490055688,
+          "width": 3.659506762132061,
+          "height": 12.035010940919037
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Blower Motor, Blower Motor Relay",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)",
+          "RELAY(protects=MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR))",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 43.544857768052516,
+          "left": 37.07239459029435,
+          "width": 3.659506762132061,
+          "height": 12.25382932166302
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "JB - Acc. Relay, Radio, Clock, Cigar Lighter, Cluster, Power Mirror, GEM",
+        "relatedEntities": [
+          "FUSIBLERA",
+          "RELAY(protects=GENERIC_FUSE_NAME)",
+          "GENERIC_FUSE_NAME(protects=RELAY)",
+          "ESTEREO",
+          "RELOJ",
+          "ENCENDEDOR",
+          "TABLERO",
+          "ESPEJO_ELECTRICO",
+          "MODULO_ELECTRONICO_GENERICO",
+          "MODULO_CARROCERIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/radio-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 28.227571115973742,
+          "left": 37.07239459029435,
+          "width": 3.659506762132061,
+          "height": 12.035010940919037
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 60
+        },
+        "description": "Anti-Lock Brake System Motor"
+      },
+      {
+        "layout": {
+          "top": 43.544857768052516,
+          "left": 41.84566428003182,
+          "width": 3.659506762132061,
+          "height": 12.25382932166302
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "JB - Radio, CD Changer, Cluster, Dome Lamps, Map Lamps, Cargo Lamps",
+        "relatedEntities": [
+          "FUSIBLERA",
+          "ESTEREO",
+          "TABLERO",
+          "LUZ_DE_HABITACULO",
+          "LAMPARA(of=LUZ_DE_HABITACULO)",
+          "LUZ_DE_CAJA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/radio-fuse",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 28.227571115973742,
+          "left": 41.84566428003182,
+          "width": 3.659506762132061,
+          "height": 12.035010940919037
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Main Fan [2.0 L]"
+      },
+      {
+        "layout": {
+          "top": 28.227571115973742,
+          "left": 41.84566428003182,
+          "width": 3.659506762132061,
+          "height": 12.035010940919037
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Main Fan [3.0 L]"
+      },
+      {
+        "layout": {
+          "top": 43.544857768052516,
+          "left": 46.618933969769294,
+          "width": 3.659506762132061,
+          "height": 12.25382932166302
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Rear Defroster",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 28.227571115973742,
+          "left": 46.618933969769294,
+          "width": 3.659506762132061,
+          "height": 12.035010940919037
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Add Fan [2.0 L]"
+      },
+      {
+        "layout": {
+          "top": 28.227571115973742,
+          "left": 46.618933969769294,
+          "width": 3.659506762132061,
+          "height": 12.035010940919037
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Add Fan [3.0 L]"
+      },
+      {
+        "layout": {
+          "top": 35.22975929978118,
+          "left": 18.933969769291963,
+          "width": 6.921241050119331,
+          "height": 12.910284463894966
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j-pal-283",
+          "amp": 120
+        },
+        "description": "Main"
+      },
+      {
+        "layout": {
+          "top": 43.7636761487965,
+          "left": 11.296738265712012,
+          "width": 1.2728719172633254,
+          "height": 9.846827133479213
+        },
+        "id": "D1",
+        "description": "Unidentified",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 29.321663019693656,
+          "left": 11.296738265712012,
+          "width": 1.2728719172633254,
+          "height": 9.846827133479213
+        },
+        "id": "D2",
+        "description": "Unidentified",
+        "kind": {
+          "type": "diode",
+          "format": "mini"
+        }
+      },
+      {
+        "layout": {
+          "top": 57.98687089715536,
+          "left": 14.240254574383451,
+          "width": 4.77326968973747,
+          "height": 20.350109409190374
+        },
+        "id": "R1",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "description": "Headlamp (High/Low, Right/Left Relay)"
+      },
+      {
+        "layout": {
+          "top": 59.95623632385121,
+          "left": 41.527446300715994,
+          "width": 8.273667462211614,
+          "height": 23.413566739606125
+        },
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "EEC Relay",
+        "relatedEntities": [
+          "RELAY(protects=ECU)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.17505470459519,
+          "left": 52.2673031026253,
+          "width": 8.194112967382656,
+          "height": 23.413566739606125
+        },
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Fuel Pump Relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/fuel-pump-relay",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 29.321663019693656,
+          "left": 52.2673031026253,
+          "width": 8.194112967382656,
+          "height": 23.413566739606125
+        },
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter Relay",
+        "relatedEntities": [
+          "RELAY(protects=BURRO_DE_ARRANQUE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/starter-relay",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 60.83150984682714,
+          "left": 63.56404136833731,
+          "width": 8.273667462211614,
+          "height": 23.413566739606125
+        },
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "High Speed Fan Control Relay 1 [2.0L Engine], Low Speed Fan Control Relay [3.0L Engine]"
+      },
+      {
+        "layout": {
+          "top": 29.75929978118162,
+          "left": 63.56404136833731,
+          "width": 8.273667462211614,
+          "height": 23.413566739606125
+        },
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Defroster Relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.050328227571114,
+          "left": 75.17899761336515,
+          "width": 8.273667462211614,
+          "height": 23.413566739606125
+        },
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Low Speed Fan Control Relay [2.0L Engine], High Speed Fan Control Relay 1 [3.0L Engine]"
+      },
+      {
+        "layout": {
+          "top": 30.196936542669583,
+          "left": 75.17899761336515,
+          "width": 8.273667462211614,
+          "height": 23.413566739606125
+        },
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "High Speed Fan Control Relay 2 [3.0L Engine], Medium Speed Fan Control Relay [2.0L Engine]"
+      },
+      {
+        "layout": {
+          "top": 63.45733041575492,
+          "left": 86.31662688941925,
+          "width": 4.77326968973747,
+          "height": 20.350109409190374
+        },
+        "id": "R9",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Foglamp Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ANTINIEBLA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 39.606126914660834,
+          "left": 86.31662688941925,
+          "width": 4.77326968973747,
+          "height": 20.568927789934357
+        },
+        "id": "R10",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "A/C Clutch Relay",
+        "relatedEntities": [
+          "RELAY(protects=CLUTCH_AIRE_ACONDICIONADO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/mazda/tribute/info/fusebox/2004/air-conditioning-relay",
+            "urlWithAnchor": "/mazda/tribute/info/fusebox/2004/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.3635640413683373,
+    "processed": false,
+    "boxName": "Power distribution box",
+    "boxDescription": "The power distribution box is located in the engine compartment. The power distribution box contains high-current fuses that protect your vehicle’s main electrical systems from overloads.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/d3169857_2001-ford-escape.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/d5461e72_2001-ford-escape.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/3b974802_2001-ford-escape.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/e4f07c92_2001-ford-escape.jpg"
+      }
+    ],
+    "templateId": "618a8cec575c0100043e6831",
+    "templateRenameMap": {
+      "Horn": "1",
+      "H/L LH": "2",
+      "H/L RH": "3",
+      "EEC": "4",
+      "HEGO": "5",
+      "FUEL": "6",
+      "DIODE": "D1",
+      "DIODE 1": "D2",
+      "H/L RELAY MICRO": "R1",
+      "IN.J": "8",
+      "MAIN": "25",
+      "ALT": "9",
+      "DRL": "10",
+      "DRLZ / HELV": "11",
+      "PWR 1": "12",
+      "FOG": "13",
+      "A/C": "14",
+      "ABS 25": "15",
+      "PWR 2": "16",
+      "IG MAIN": "17",
+      "HTR": "18",
+      "BTN 1": "19",
+      "ABS 60": "20",
+      "BTN 2": "21",
+      "MAIN FAN": "22",
+      "R DEF": "23",
+      "ADD FAN": "24",
+      "EEC MAIN ISO": "R2",
+      "FUEL PUMP ISO": "R3",
+      "MAIN FAN ISO": "R7",
+      "ADD FAN ISO": "R5",
+      "DEF RELAY ISO": "R6",
+      "ST RELAY ISO": "R4",
+      "ADD FAN 2 ISO": "R8",
+      "FOG RELAY MICRO": "R9",
+      "A/C RELAY MICRO": "R10",
+      "U1": "7"
+    },
+    "imageClusters": [
+      "6226254963a3a7cea51f10cd"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-mazda-tribute-2004-genid-g1-1.webp"
+  }
+]

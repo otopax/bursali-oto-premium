@@ -1,0 +1,972 @@
+[
+  {
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/67005377_ford-ka-2006.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/477858c1_ford-ka-2006.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/2ba3e826_ford-ka-2006.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/52e4928c_ford-ka-2006.png"
+    },
+    "boxName": "Fuse and Relay Box (under the dashboard)",
+    "boxAspectRatio": 1.3973684210526316,
+    "processed": false,
+    "fuses": [
+      {
+        "id": "I",
+        "layout": {
+          "top": 58.94538606403014,
+          "left": 8.421052631578947,
+          "width": 16.842105263157894,
+          "height": 12.994350282485875
+        },
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": true
+        }
+      },
+      {
+        "id": "II",
+        "layout": {
+          "top": 10.922787193973635,
+          "left": 8.68421052631579,
+          "width": 17.105263157894736,
+          "height": 12.617702448210924
+        },
+        "description": "Windshield wiper relay.",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=LIMPIA_PARABRISAS)"
+        ]
+      },
+      {
+        "id": "III",
+        "layout": {
+          "top": 44.25612052730697,
+          "left": 36.05263157894737,
+          "width": 16.842105263157894,
+          "height": 12.8060263653484
+        },
+        "description": "Power window timer.",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "IV",
+        "layout": {
+          "top": 16.434400502197114,
+          "left": 68.15789473684211,
+          "width": 17.187654871642383,
+          "height": 12.429378531073446
+        },
+        "description": "Rear wiper relay",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "RELAY(protects=LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA))"
+        ],
+        "extendedDescription": "Rear wiper"
+      },
+      {
+        "id": "V",
+        "layout": {
+          "top": 44.78342749529191,
+          "left": 68.15789473684211,
+          "width": 17.187654871642383,
+          "height": 12.429378531073446
+        },
+        "description": "Ignition.",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/starter-relay",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "VI",
+        "layout": {
+          "top": 30.608913998744512,
+          "left": 68.15789473684211,
+          "width": 17.187654871642383,
+          "height": 12.429378531073446
+        },
+        "description": "Rear window defogger.",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "VII",
+        "layout": {
+          "top": 2.259887005649718,
+          "left": 68.15789473684211,
+          "width": 17.187654871642383,
+          "height": 12.429378531073446
+        },
+        "description": "Electronic immobilizer.",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "VIII",
+        "layout": {
+          "top": 27.30696798493409,
+          "left": 27.89473684210526,
+          "width": 16.842105263157894,
+          "height": 12.8060263653484
+        },
+        "description": "Courtesy light timer.",
+        "kind": {
+          "format": "full",
+          "type": "relay",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "A",
+        "layout": {
+          "top": 34.131826741996235,
+          "left": 8.421052631578947,
+          "width": 15.526315789473685,
+          "height": 6.4030131826742
+        },
+        "description": "Low beams.",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_BAJA"
+        ]
+      },
+      {
+        "id": "B",
+        "layout": {
+          "top": 27.126177024482118,
+          "left": 8.421052631578947,
+          "width": 15.526315789473685,
+          "height": 6.591337099811676
+        },
+        "description": "High beams.",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ]
+      },
+      {
+        "id": "C",
+        "layout": {
+          "top": 45.672316384180796,
+          "left": 10.5847986255658,
+          "width": 8.157894736842106,
+          "height": 10.922787193973635
+        },
+        "description": "Fuel injection (engine control).",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "D",
+        "layout": {
+          "top": 45.672316384180796,
+          "left": 20.82631578947369,
+          "width": 8.421052631578947,
+          "height": 10.922787193973635
+        },
+        "description": "Fuel pump.",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/fuel-pump-relay",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "E",
+        "layout": {
+          "top": 34.27495291902072,
+          "left": 47.63157894736842,
+          "width": 15.263157894736842,
+          "height": 6.4030131826742
+        },
+        "description": "Air conditioning switch.",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "F",
+        "layout": {
+          "top": 11.487758945386064,
+          "left": 40,
+          "width": 9.210526315789473,
+          "height": 11.11111111111111
+        },
+        "description": "Horn.",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/horn-relay",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "G",
+        "layout": {
+          "top": 11.487758945386064,
+          "left": 29.210526315789476,
+          "width": 9.210526315789473,
+          "height": 11.11111111111111
+        },
+        "description": "Trunk release.",
+        "kind": {
+          "format": "half",
+          "type": "relay",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "CERRADURA(of=PUERTA_BAUL)"
+        ]
+      },
+      {
+        "id": "1",
+        "layout": {
+          "top": 74.07407407407408,
+          "left": 84.64994878911024,
+          "width": 7.274093897644299,
+          "height": 11.127234350902482
+        },
+        "description": "Fuel pump.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/fuel-pump-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "id": "2",
+        "layout": {
+          "top": 65.34839924670433,
+          "left": 70.78947368421052,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 69.6798493408663,
+          "left": 70.78947368421052,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Left side low beams.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 74.01129943502825,
+          "left": 70.78947368421052,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Right side low beams.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 78.3427495291902,
+          "left": 70.78947368421052,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Left side position lights, dashboard illumination.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 82.67419962335217,
+          "left": 70.78947368421052,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Right side position lights,",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 65.34839924670433,
+          "left": 56.57894736842105,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Cigarette lighter.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 69.6798493408663,
+          "left": 56.57894736842105,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "PCM module.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 3
+        },
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "id": "9",
+        "layout": {
+          "top": 74.01129943502825,
+          "left": 56.57894736842105,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 78.3427495291902,
+          "left": 56.57894736842105,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Interior lights, clock, and audio system.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "RELOJ",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/radio-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 82.67419962335217,
+          "left": 56.57894736842105,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Rear window defogger, electric lock.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO",
+          "CIERRE_CENTRALIZADO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 87.00564971751412,
+          "left": 56.57894736842105,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Oxygen sensor (Lambda probe).",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 91.33709981167608,
+          "left": 56.57894736842105,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Tailgate release.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "CERRADURA(of=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 65.34839924670433,
+          "left": 42.10526315789473,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Airbag module.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "AIRBAG",
+          "MODULO_AIRBAG",
+          "MODULO(of=AIRBAG)"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 69.6798493408663,
+          "left": 42.10526315789473,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Air conditioning, ignition.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/air-conditioning-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/ford/ka/info/fusebox/2007/starter-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 74.01129943502825,
+          "left": 42.10526315789473,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Windshield wiper motor and washer pump.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS)",
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 78.3427495291902,
+          "left": 42.10526315789473,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Audio system.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/radio-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 82.67419962335217,
+          "left": 42.10526315789473,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Power windows.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 87.00564971751412,
+          "left": 42.10526315789473,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Reverse light switch, brake light, and instruments.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 91.33709981167608,
+          "left": 42.10526315789473,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Heater fan motor.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "id": "21",
+        "layout": {
+          "top": 65.34839924670433,
+          "left": 28.0578947368421,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 69.6798493408663,
+          "left": 28.0578947368421,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Headlight switch.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "COMANDO_DE_LUCES"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 74.01129943502825,
+          "left": 28.0578947368421,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Power window timer.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 30
+        },
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 78.3427495291902,
+          "left": 28.0578947368421,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Horn relay.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        },
+        "relatedEntities": [
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/horn-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 82.67419962335217,
+          "left": 28.0578947368421,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Ignition.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 40
+        },
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/starter-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 87.00564971751412,
+          "left": 28.0578947368421,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Hazard lights and horn.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 20
+        },
+        "relatedEntities": [
+          "LUZ_BALIZA",
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/horn-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 91.33709981167608,
+          "left": 28.0578947368421,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Turn signals",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 74.01129943502825,
+          "left": 13.84736842105263,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Left side high beams.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 78.3427495291902,
+          "left": 13.84736842105263,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Right side high beams.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 10
+        },
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ford/ka/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/ford/ka/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 82.67419962335217,
+          "left": 13.84736842105263,
+          "width": 11.578947368421046,
+          "height": 3.435288005714656
+        },
+        "description": "Electronic engine management.",
+        "kind": {
+          "format": "ato",
+          "type": "fuse",
+          "amp": 15
+        }
+      },
+      {
+        "layout": {
+          "top": 26.55367231638418,
+          "left": 47.63157894736842,
+          "width": 15.263157894736842,
+          "height": 6.591337099811676
+        },
+        "id": "H",
+        "kind": {
+          "amp": "",
+          "format": "half",
+          "type": "relay",
+          "notUsed": true
+        }
+      },
+      {
+        "layout": {
+          "top": 78.71939736346516,
+          "left": 6.315789473684211,
+          "width": 5.7894736842105265,
+          "height": 8.097928436911488
+        },
+        "kind": {
+          "format": "ato",
+          "type": "fuse"
+        },
+        "id": "U2",
+        "relatedEntities": []
+      }
+    ],
+    "templateId": "619a4d985776580004d76e91",
+    "isTranslated": true,
+    "imageClusters": [
+      "61e725c4dd76840004c92847"
+    ],
+    "boxScaleMultiplier": "1.1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ford-ka-2007-genid-g1-0.webp"
+  }
+]

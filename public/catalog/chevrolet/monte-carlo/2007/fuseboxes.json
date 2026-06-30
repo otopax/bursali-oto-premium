@@ -1,0 +1,1811 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 8.671785465119633,
+          "left": 37.219462294025305,
+          "width": 24.41111111111109,
+          "height": 17.98213058419245
+        },
+        "id": "F1",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Power Seats",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ],
+        "extendedDescription": "Power seats"
+      },
+      {
+        "layout": {
+          "top": 8.671785465119633,
+          "left": 65.67690862689975,
+          "width": 24.41111111111109,
+          "height": 17.98213058419245
+        },
+        "id": "F2",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "maxi",
+          "notUsed": false
+        },
+        "description": "Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "layout": {
+          "top": 5.787108323603152,
+          "left": 90.72977244257387,
+          "width": 4.322222222222232,
+          "height": 23.06048109965631
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Retained Accessory Power"
+      },
+      {
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 29.658530898142626,
+          "left": 34.7435785855977,
+          "width": 4.322222222222232,
+          "height": 23.06048109965631
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 58.18862783245655,
+          "left": 34.7435785855977,
+          "width": 4.322222222222232,
+          "height": 23.06048109965631
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Door Locks",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ],
+        "extendedDescription": "Power door lock system"
+      },
+      {
+        "layout": {
+          "top": 32.62179562675185,
+          "left": 42.86086657803616,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heated Seats",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "layout": {
+          "top": 32.62179562675185,
+          "left": 56.64527466000634,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Auxiliary Outlets",
+        "extendedDescription": "Auxiliary power outlet"
+      },
+      {
+        "layout": {
+          "top": 32.62179562675185,
+          "left": 69.86474798451866,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "layout": {
+          "top": 49.39694772855478,
+          "left": 42.86086657803616,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "extendedDescription": "Sunroof",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/sunroof-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 49.39694772855478,
+          "left": 56.64527466000634,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "XMᵀM Radio"
+      },
+      {
+        "layout": {
+          "top": 49.39694772855478,
+          "left": 69.86474798451866,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Canister",
+        "relatedEntities": [
+          "CANISTER"
+        ]
+      },
+      {
+        "layout": {
+          "top": 66.78210536133253,
+          "left": 42.86086657803616,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Mirrors",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO"
+        ],
+        "extendedDescription": "Power control mirror"
+      },
+      {
+        "layout": {
+          "top": 66.78210536133253,
+          "left": 56.64527466000634,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Airbags",
+        "relatedEntities": [
+          "AIRBAG"
+        ],
+        "extendedDescription": "Airbag"
+      },
+      {
+        "layout": {
+          "top": 66.78210536133253,
+          "left": 69.86474798451866,
+          "width": 9.577163727456103,
+          "height": 9.17835015488828
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Trunk",
+        "relatedEntities": [
+          "BAUL"
+        ],
+        "extendedDescription": "Power trunk lid opener"
+      },
+      {
+        "layout": {
+          "top": 31.972716538947036,
+          "left": 81.93787864495698,
+          "width": 15.82222222222219,
+          "height": 49.96048109965669
+        },
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Trunk Relay",
+        "relatedEntities": [
+          "RELAY(protects=BAUL)"
+        ],
+        "extendedDescription": "Power trunk lid opener"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 12.578482404201022,
+          "left": 8.994753044438086,
+          "width": 24.233555187622436,
+          "height": 32.150679518007735
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxName": "Instrument Panel Fuse Block",
+    "boxDescription": "The fuse block is located on the passenger side of the vehicle in the carpet molding. Remove the fuse block door to access the fuses.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-28f13fe686.jpg",
+      "source": "698e9f124f2bf4ab55953213"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-8662a7ce47.jpg",
+        "source": "698e9f184f2bf4ab55953217"
+      }
+    ],
+    "boxAspectRatio": 0.46686746987951805,
+    "processed": false,
+    "templateId": "6183e13283a18b00041b4da9",
+    "templateRenameMap": {
+      "PWR/SEAT": "F1",
+      "PWR/WNDW": "F2",
+      "RAP": "F3",
+      "HTD/SEAT": "F6",
+      "AMP": "F8",
+      "S/ROOF": "F9",
+      "CNSTR": "F11",
+      "DR/LCK": "F5",
+      "PWR/MIR": "F12",
+      "AIRBAG": "F13",
+      "AUX": "F7",
+      "ONSTAR": "F10",
+      "DECKLID": "F14",
+      "DECKLID RLY": "R1",
+      "XM": "F10",
+      "TRUNK": "F14",
+      "TRUNK RELAY": "R1"
+    },
+    "imageClusters": [
+      "62101f45bd05eddc5dc812fd"
+    ],
+    "boxScaleMultiplier": "0.7",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-monte-carlo-2007-genid-g6-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 32.242990654205606,
+          "left": 3.2590051457975986,
+          "width": 7.204116638078903,
+          "height": 8.411214953271028
+        },
+        "id": "1",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 4",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "layout": {
+          "top": 51.4018691588785,
+          "left": 14.065180102915953,
+          "width": 7.204116638078903,
+          "height": 8.644859813084112
+        },
+        "id": "2",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 1",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "layout": {
+          "top": 36.68224299065421,
+          "left": 24.69982847341338,
+          "width": 7.204116638078903,
+          "height": 8.644859813084112
+        },
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/starter-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 47.429906542056074,
+          "left": 24.69982847341338,
+          "width": 7.204116638078903,
+          "height": 8.644859813084112
+        },
+        "id": "4",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Anti-lock Brake System Motor 2"
+      },
+      {
+        "layout": {
+          "top": 36.68224299065421,
+          "left": 39.62264150943396,
+          "width": 7.375643224699828,
+          "height": 8.644859813084112
+        },
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Anti-lock Brake System Motor 1"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 47.66355140186916,
+          "left": 39.62264150943396,
+          "width": 7.375643224699828,
+          "height": 8.644859813084112
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Air Pump",
+        "relatedEntities": [
+          "BOMBA_AIRE_SECUNDARIO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.476635514018696,
+          "left": 50.42881646655232,
+          "width": 7.204116638078903,
+          "height": 8.644859813084112
+        },
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 3",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "layout": {
+          "top": 51.63551401869159,
+          "left": 60.2058319039451,
+          "width": 7.204116638078903,
+          "height": 8.644859813084112
+        },
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Battery 2",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "layout": {
+          "top": 76.16822429906543,
+          "left": 67.40994854202401,
+          "width": 7.375643224699828,
+          "height": 8.411214953271028
+        },
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 2",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 11.448598130841122,
+          "left": 67.58147512864494,
+          "width": 7.204116638078903,
+          "height": 8.411214953271028
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 1",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.186915887850466,
+          "left": 7.547169811320755,
+          "width": 1.8867924528301887,
+          "height": 7.710280373831775
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Airbag, Display",
+        "relatedEntities": [
+          "AIRBAG",
+          "PANTALLA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 25.70093457943925,
+          "left": 11.49228130360206,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Steering Wheel",
+        "relatedEntities": [
+          "VOLANTE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.112149532710276,
+          "left": 6.34648370497427,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lamps",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ],
+        "extendedDescription": "Interior lights"
+      },
+      {
+        "layout": {
+          "top": 59.112149532710276,
+          "left": 9.948542024013722,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lamps, Instrument Panel Dimmer",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 7.375643224699828,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Body Control Module",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ],
+        "extendedDescription": "Body control module"
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 10.977701543739279,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Center High-Mounted Stoplamp, Back-up Lamps",
+        "relatedEntities": [
+          "TERCERA_LUZ_DE_FRENO",
+          "LUZ_RETROCESO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/brake-light-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 14.57975986277873,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Display",
+        "relatedEntities": [
+          "PANTALLA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.90654205607477,
+          "left": 7.375643224699828,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/fuel-pump-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 37.38317757009346,
+          "left": 20.926243567753,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "OnStar®"
+      },
+      {
+        "layout": {
+          "top": 59.112149532710276,
+          "left": 27.787307032590054,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Air Conditioning Compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/air-conditioning-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 59.112149532710276,
+          "left": 31.3893653516295,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "AIR (Air Injection Reactor) Solenoid"
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 27.787307032590054,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electronic Throttle Control, Engine Control Module",
+        "relatedEntities": [
+          "ELECTRONIC_THROTLE_CONTROL",
+          "ECU",
+          "MOTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 31.217838765008576,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Injector 1",
+        "relatedEntities": [
+          "INYECTOR"
+        ],
+        "extendedDescription": "Fuel injectors"
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 34.6483704974271,
+          "width": 1.8867924528301887,
+          "height": 7.476635514018691
+        },
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Emissions 1"
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 38.25042881646655,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Injector 2",
+        "relatedEntities": [
+          "INYECTOR"
+        ],
+        "extendedDescription": "Fuel injectors"
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 41.852487135506,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Emissions 2"
+      },
+      {
+        "layout": {
+          "top": 15.654205607476634,
+          "left": 31.217838765008576,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Transaxle",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 25.934579439252335,
+          "left": 31.217838765008576,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module, Transaxle Control Module",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR",
+          "CAJA_DE_TRANSMISION",
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.654205607476634,
+          "left": 34.99142367066895,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module, Ignition",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/starter-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.34579439252336,
+          "left": 48.38596394881887,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ],
+        "extendedDescription": "Wipers"
+      },
+      {
+        "layout": {
+          "top": 43.72274143302178,
+          "left": 51.47222681127322,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heated Mirror",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ],
+        "extendedDescription": "Mirror heater"
+      },
+      {
+        "layout": {
+          "top": 59.57943925233645,
+          "left": 56.77530017152659,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Auxiliary Power",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 57.80445969125214,
+          "width": 1.8867924528301887,
+          "height": 7.476635514018691
+        },
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right Spot"
+      },
+      {
+        "layout": {
+          "top": 69.62616822429906,
+          "left": 61.57804459691252,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Left Spot"
+      },
+      {
+        "layout": {
+          "top": 4.205607476635514,
+          "left": 59.51972555746141,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side Parking Lamp",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.654205607476634,
+          "left": 57.97598627787307,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Turn Signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 25.934579439252335,
+          "left": 59.00514579759862,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Regulated Voltage Control Sensor"
+      },
+      {
+        "layout": {
+          "top": 4.205607476635514,
+          "left": 63.12178387650086,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Parking Lamp",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.654205607476634,
+          "left": 61.57804459691252,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "39",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side Turn Signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 25.934579439252335,
+          "left": 62.60720411663808,
+          "width": 1.8867924528301887,
+          "height": 7.476635514018691
+        },
+        "id": "40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Audio System",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/radio-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.34579439252336,
+          "left": 77.53001715265866,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "41",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side Low-Beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.34579439252336,
+          "left": 81.13207547169812,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side Low-Beam",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.34579439252336,
+          "left": 84.73413379073756,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver's Side High-Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.34579439252336,
+          "left": 88.16466552315609,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "44",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger's Side High-Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.85981308411215,
+          "left": 78.55917667238423,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "45",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Headlamp Module",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "MODULO(of=LUCES_DELANTERAS)"
+        ],
+        "extendedDescription": "Headlights",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 69.85981308411215,
+          "left": 82.16123499142367,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps 2",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "extendedDescription": "Daytime running lights",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.242990654205606,
+          "left": 79.41680960548885,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "47",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Windshield Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.887850467289718,
+          "left": 78.73070325900514,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "48",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps 1",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "extendedDescription": "Daytime running lights",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.168224299065418,
+          "left": 83.01886792452831,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "49",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fog Lamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/fog-light-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 15.887850467289718,
+          "left": 85.784208046795,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/horn-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 3.7383177570093453,
+          "left": 86.79245283018868,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "51",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 3.7383177570093453,
+          "left": 90.39451114922812,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 14.953271028037381,
+          "left": 90.39451114922812,
+          "width": 1.7152658662092626,
+          "height": 7.710280373831775
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 27.102803738317753,
+          "left": 90.39451114922812,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "layout": {
+          "top": 39.48598130841122,
+          "left": 90.39451114922812,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "55",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "layout": {
+          "top": 20.093457943925234,
+          "left": 3.9451114922813035,
+          "width": 1.7152658662092626,
+          "height": 7.476635514018691
+        },
+        "id": "56",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Drop, Crank",
+        "relatedEntities": [
+          "CIGUENAL"
+        ]
+      },
+      {
+        "layout": {
+          "top": 13.785046728971961,
+          "left": 15.09433962264151,
+          "width": 14.236706689536879,
+          "height": 20.5607476635514
+        },
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/starter-relay",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.2803738317757,
+          "left": 40.82332761578045,
+          "width": 14.408233276157805,
+          "height": 20.5607476635514
+        },
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Rear Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "layout": {
+          "top": 21.72897196261682,
+          "left": 67.58147512864494,
+          "width": 7.375643224699828,
+          "height": 16.121495327102803
+        },
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 1",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 39.953271028037385,
+          "left": 69.2967409948542,
+          "width": 7.547169811320755,
+          "height": 16.121495327102803
+        },
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 2",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.71028037383178,
+          "left": 69.2967409948542,
+          "width": 7.547169811320755,
+          "height": 16.355140186915886
+        },
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 3",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-relay",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.915887850467286,
+          "left": 19.210977701543737,
+          "width": 7.547169811320755,
+          "height": 16.121495327102803
+        },
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air Conditioning Compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/air-conditioning-relay",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 81.54205607476635,
+          "left": 11.320754716981133,
+          "width": 11.49228130360206,
+          "height": 10.981308411214954
+        },
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/2007/fuel-pump-relay",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/2007/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 81.54205607476635,
+          "left": 28.81646655231561,
+          "width": 11.83533447684391,
+          "height": 10.981308411214954
+        },
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Powertrain"
+      }
+    ],
+    "boxName": "Engine compartment",
+    "boxDescription": "Underhood Fuse Block The underhood fuse block is located in the engine compartment. See Engine Compartment Overview on page 308 for more information on location.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-40ded93440.jpg",
+      "source": "698e9f3e4f2bf4ab55953221"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-7dfef9d3df.jpg",
+        "source": "698e9f454f2bf4ab55953225"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-d906570a47.jpg",
+        "source": "698e9f494f2bf4ab55953229"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-a5a7172b7a.jpg",
+        "source": "698e9f4f4f2bf4ab5595322d"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-530008497d.jpg",
+        "source": "698e9f554f2bf4ab55953231"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-873b7d8129.jpg",
+        "source": "698e9f5c4f2bf4ab55953235"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2a2c1828290004052509/fragment-60fb2a2c1828290004052509-a3006c6776.jpg",
+        "source": "698e9f614f2bf4ab55953239"
+      }
+    ],
+    "boxAspectRatio": 0.7341337907375644,
+    "processed": false,
+    "templateId": "6183e20083a18b00041b4dab",
+    "templateRenameMap": {
+      "LT PARK": "35",
+      "RT PARK": "38",
+      "FAN 1 1": "10",
+      "SPARE 1": "51",
+      "SPARE 2": "52",
+      "AIRBAG/ DISPLAY": "11",
+      "TRANS": "27",
+      "ECM IGN": "29",
+      "RT T/SIG": "36",
+      "LT T/SIG": "39",
+      "DRL 1": "48",
+      "HORN": "50",
+      "SPARE 3": "53",
+      "PWR DROP/ CRNK": "56",
+      "STRG WHL": "12",
+      "ECM/TCM": "28",
+      "RVC SEN": "37",
+      "RADIO": "40",
+      "FOG LAMPS": "49",
+      "SPARE": "54",
+      "BATT 4": "1",
+      "ONSTAR": "19",
+      "STRTR 1": "3",
+      "ABS MTR1": "5",
+      "BATT 3": "7",
+      "WSW": "47",
+      "HTD MIR": "31",
+      "SPARE 4": "55",
+      "BATT 1": "2",
+      "ABS MTR2": "4",
+      "AIR PUMP": "6",
+      "BATT 2": "8",
+      "INT LIGHTS": "13",
+      "INT LTS/ PNL DIM": "14",
+      "A/C CMPRSR 1": "20",
+      "AIR SOL": "21",
+      "AUX PWR": "32",
+      "BCM": "15",
+      "CHMSL/ BCK-UP": "16",
+      "DISPLAY": "17",
+      "ETC/ECM": "22",
+      "INJ 1": "23",
+      "EMISSIONS 1": "24",
+      "INJ 2": "25",
+      "EMISSIONS 2": "26",
+      "RT SPOT": "33",
+      "LT SPOT": "34",
+      "HDLP MDL": "45",
+      "DRL 2": "46",
+      "FAN 2 1": "9",
+      "FUEL/PUMP 1": "18",
+      "WPR": "30",
+      "LT LO BEAM": "41",
+      "RT LO BEAM": "42",
+      "LT HI BEAM": "43",
+      "RT HI BEAM": "44",
+      "STRTR 2": "R1",
+      "REAR DEFOG": "R2",
+      "FAN 1 2": "R3",
+      "FAN 2 2": "R4",
+      "A/C CMPRSR 2": "R6",
+      "FAN 3": "R5",
+      "FUEL/PUMP 2": "R7",
+      "PWR/TRN": "R8"
+    },
+    "imageClusters": [
+      "68b58fb5e27c0f7842ca1010"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-monte-carlo-2007-genid-g6-1.webp"
+  }
+]

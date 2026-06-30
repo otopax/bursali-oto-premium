@@ -1,0 +1,943 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 11.11111111111111,
+          "left": 4.671532846715328,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Air Sol"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 11.11111111111111,
+          "left": 12.749391727493915,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SBM, LCM"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 11.11111111111111,
+          "left": 20.8272506082725,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Turn Signal) Turn signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 11.11111111111111,
+          "left": 28.905109489051092,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Pre-Oxygen Sensor, Post-Oxygen Sensor) Oxygen sensor",
+        "relatedEntities": [
+          "SENSOR_OXIGENO"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 18.97018970189702,
+          "left": 4.671532846715328,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Air Bag (SIR)) Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 18.97018970189702,
+          "left": 12.749391727493915,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(PCM) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 18.97018970189702,
+          "left": 20.8272506082725,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(AC Clutch) A/C magnetic clutch"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 18.97018970189702,
+          "left": 28.905109489051092,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Ignition Feed"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 11.38211382113821,
+          "left": 48.175182481751825,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(Horn Relay) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/horn-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 64.36314363143632,
+          "left": 12.754744525547444,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(Spare) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 72.35772357723577,
+          "left": 12.754744525547444,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "25"
+        },
+        "description": "(Spare) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 19.241192411924118,
+          "left": 48.32116788321168,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Injectors # 1-6) Fuel injectors"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 27.100271002710024,
+          "left": 48.175182481751825,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "C-31"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 44.44444444444444,
+          "left": 57.956204379562045,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Right High Beam) Right-hand headlight high beam"
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 48.509485094850945,
+          "left": 4.671532846715328,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Spare) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 52.30352303523035,
+          "left": 57.956204379562045,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Left High Beam) Left-hand headlight high beam"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 56.5040650406504,
+          "left": 4.671532846715328,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(Spare) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 60.16260162601627,
+          "left": 54.16058394160584,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Right Low Beam) Right-hand headlight low beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_DERECHO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/headlight-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 60.16260162601627,
+          "left": 62.04379562043796,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Left Low Beam) Left-hand headlight low beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/headlight-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 64.49864498644986,
+          "left": 4.671532846715328,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "(Stop) Stop lights",
+        "relatedEntities": [
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/brake-light-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 56.36856368563685,
+          "left": 12.754744525547444,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "Fuel Pump Relay (Wire in BEC)"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 80.67344173441735,
+          "left": 4.671532846715328,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Run/CRK"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 80.48780487804879,
+          "left": 16.05839416058394,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(PCM) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 87.8048780487805,
+          "left": 4.671532846715328,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "25"
+        },
+        "description": "(Parking Lamp) Parking lights",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 87.8048780487805,
+          "left": 12.854744525547444,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(Hazard Flashers) Hazard light",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 26.829268292682926,
+          "left": 12.754744525547444,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(Spare) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 34.68834688346883,
+          "left": 12.754744525547444,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "(Spare) Spare fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 87.99051490514906,
+          "left": 41.31386861313869,
+          "width": 6.757038581856101,
+          "height": 3.832752613240415
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(ABS #2) Anti-lock braking system"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 7.588075880758807,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "(Bat #1) Battery and charging system",
+        "relatedEntities": [
+          "BATERIA",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/alternator-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 18.815331010452965,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "(Blower Motor) AC blower motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 30.042586140147115,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "(Cool Fan 2) Electric cooling fan"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 41.26984126984127,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "(Headlamp) Headlights",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/headlight-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 52.49709639953543,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "(BAT #2) Battery and charging system",
+        "relatedEntities": [
+          "BATERIA",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/alternator-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 63.72435152922959,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "(Ignition) Ignition",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/starter-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 74.95160665892374,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "(Starter) Starter system",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/starter-fuse",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 86.1788617886179,
+          "left": 83.45985401459855,
+          "width": 11.094890510948904,
+          "height": 5.860433604336043
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "(ABS) Anti-lock braking system"
+      },
+      {
+        "id": "Fuse Puller",
+        "layout": {
+          "top": 35.24525745257451,
+          "left": 3.3715328467153327,
+          "width": 5.51532846715329,
+          "height": 9.127100271002714
+        },
+        "kind": {
+          "type": "fusepuller",
+          "format": "down",
+          "notUsed": false
+        },
+        "description": "(Fuse Puller) Fuse puller"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 6.053890733711116,
+          "left": 36.64641329446503,
+          "width": 10.805452525304723,
+          "height": 18.31497838178445
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(Ignition) Ignition",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/starter-relay",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 6.053890733711116,
+          "left": 56.02575749745719,
+          "width": 10.805452525304723,
+          "height": 18.31497838178445
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(Horn) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/horn-relay",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 9.94006959549973,
+          "left": 68.8257574974572,
+          "width": 10.805452525304723,
+          "height": 18.31497838178445
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(Cool Fan #2) Electric cooling fan"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 38.26933788818269,
+          "left": 29.625757497457215,
+          "width": 9.00545252530473,
+          "height": 9.714978381784439
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(A/C CLU) Air conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/air-conditioning-relay",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 52.20429723777616,
+          "left": 21.02575749745722,
+          "width": 10.805452525304723,
+          "height": 9.714978381784439
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "(Fuel Pump) Fuel pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/fuel-pump-relay",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 74.30727826758641,
+          "left": 23.725757497457217,
+          "width": 10.805452525304723,
+          "height": 18.31497838178445
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(Starter) Starter system",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/buick/park-avenue/info/fusebox/2003/starter-relay",
+            "urlWithAnchor": "/buick/park-avenue/info/fusebox/2003/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 62.06744086921243,
+          "left": 38.72575749745722,
+          "width": 10.805452525304723,
+          "height": 18.31497838178445
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Air Pump",
+        "relatedEntities": [
+          "BOMBA_AIRE_SECUNDARIO"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 73.21784737327746,
+          "left": 54.22575749745721,
+          "width": 10.805452525304723,
+          "height": 18.31497838178445
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cool Fan SP"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 74.52950048980864,
+          "left": 68.72575749745721,
+          "width": 10.805452525304723,
+          "height": 18.31497838178445
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(Cool Fan 1) Electric cooling fan"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.5386861313868613,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/b92957a3_buick-park avenue-2000.jpg"
+    },
+    "boxName": "Underhood Fuse Block",
+    "imageClusters": [
+      "6446d444a240dfba08fcc868"
+    ],
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ca42a9dd_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/0ebc1c2f_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/aae41466_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/d355ac89_image.jpg"
+      }
+    ],
+    "templateId": "6579c242d7af0c2e0decc0dd",
+    "useAcronyms": true,
+    "templateRenameMap": {
+      "46": "Fuse Puller",
+      "R29": "R1",
+      "R30": "R2",
+      "R31": "R3",
+      "R32": "R6",
+      "R33": "R7",
+      "R34": "R8",
+      "R35": "R9",
+      "R36": "R4",
+      "R37": "R5"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-buick-park-avenue-2003-genid-g2-0.webp"
+  }
+]

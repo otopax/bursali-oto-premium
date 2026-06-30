@@ -1,0 +1,406 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 27.676388089905394,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Instrument and control lights.",
+        "relatedEntities": [
+          "COMANDO_DE_LUCES",
+          "BACKLIGHT(of=COMANDO)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Choke heater."
+      },
+      {
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 27.441955580680485,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Power windows.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 15.071250267033234,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 3
+        },
+        "description": "TBI V-6 engine crank."
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 45.81275764027327,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Heater and A/C.",
+        "relatedEntities": [
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/1986/air-conditioning-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/1986/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "ECM power supply.",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=ECU)"
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 15.071250267033232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "ECM power supply (ignition switch controlled)."
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 37.179410097022654,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Windshield wipers/washers.",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Stop and 4-way hazard lights.",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LUZ_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/1986/brake-light-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/1986/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 3.0236276471092705,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Gauges, warning lights, rear window defroster, rear deck lid release.",
+        "relatedEntities": [
+          "SENSOR",
+          "LUZ_TESTIGO",
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 24.79607847053945,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "License plate, parking, tail, side-marker, and cornering lights.",
+        "relatedEntities": [
+          "CHAPA_PATENTE",
+          "MARCHA_PARKING"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 48.292294419851615,
+          "left": 45.27182682164435,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Radio and cruise control.",
+        "relatedEntities": [
+          "ESTEREO",
+          "CRUISE_CONTROL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/1986/radio-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/1986/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 48.18950701691257,
+          "left": 68.42234514672232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Circuit breaker for power accessories."
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 12.72692517478404,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Turn signals and back-up lights.",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL",
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 34.663839505471486,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Horn, key warning alarm, cigar lighter, clock, courtesy lights, under-hood lights if equipped, and rear compartment light.",
+        "relatedEntities": [
+          "BOCINA",
+          "ENCENDEDOR",
+          "RELOJ",
+          "LUZ_CORTESIA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/1986/horn-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/1986/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/chevrolet/monte-carlo/info/fusebox/1986/cigarette-lighter-fuse",
+            "urlWithAnchor": "/chevrolet/monte-carlo/info/fusebox/1986/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 55.76502833339506,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 70.69445298538898,
+          "left": 12.492492665559123,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.009895431737,
+          "left": 22.402385248583432,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": -1.8518714954204212,
+          "left": -3.29937158756767,
+          "width": 26.571430054676622,
+          "height": 20.54878598002677
+        },
+        "description": "4-Way flasher",
+        "kind": {
+          "type": "flasher"
+        }
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 68.51213289121294,
+          "left": 62.34044672269161,
+          "width": 36.41759544212321,
+          "height": 28.960214551455355
+        },
+        "description": "Turn signal flasher",
+        "kind": {
+          "type": "flasher"
+        }
+      }
+    ],
+    "boxName": "Interior fuse box",
+    "processed": false,
+    "imageClusters": [
+      "66e433dd68b395a32f079b13"
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/54ecbd48_chevrolet-monte carlo-@chevrolet-monte carlo@g4-1986.jpg"
+    },
+    "boxAspectRatio": 1.2820512820512822,
+    "templateId": "658eef5298879b55ca27bea0",
+    "templateRenameMap": {},
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-chevrolet-monte-carlo-1986-genid-g4-0.webp"
+  }
+]

@@ -1,0 +1,1695 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 8.028565262361168,
+          "left": 30.87961632121643,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F01",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left/Right power outsider mirror & mirror folding motor, Rear defogger switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.028565262361168,
+          "left": 41.4865282634144,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F02",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Theft alarm relay, Transaxle range switch, Ignition lock switch",
+        "relatedEntities": [
+          "SENSOR_POSICION_CAMBIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.028565262361168,
+          "left": 52.093440205612474,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F03",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PTC heater relay, Fuel filter heater relay, DRL CONTROL MODULE, head LAMP RELAY",
+        "relatedEntities": [
+          "RELAY(protects=CALENTADOR_AIRE_ADMISION)",
+          "RELAY(protects=CALENTADOR_FILTRO_COMBUSTIBLE)",
+          "LUCES_CIRCULACION_DIURNA",
+          "MODULO(of=LUCES_CIRCULACION_DIURNA)",
+          "RELAY(protects=LUCES_DELANTERAS)",
+          "RELAY(protects=LAMPARA(of=LUCES_DELANTERAS))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.028565262361168,
+          "left": 62.700352147810406,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F04",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front wiper, Multifunction switch",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA)",
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.028565262361168,
+          "left": 73.30726409000842,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F05",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "G-Sensor, ESC, ABS",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 16.26263747637035,
+          "left": 30.87961632121643,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F06",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear fog lights",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 16.26263747637035,
+          "left": 41.4865282634144,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F07",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C control module (Manual A/C)"
+      },
+      {
+        "layout": {
+          "top": 16.26263747637035,
+          "left": 52.093440205612474,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F08",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Sunroof controller, A/C control module, Blower relay, ETACM/TACM",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR",
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 16.26263747637035,
+          "left": 62.70035214781044,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F09",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cruise control, Stop lamp, TCS, ESC, 4WD ECM, ECM, PCM, TCM, Vehicle speed sensor",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO",
+          "CONTROL_DE_TRACCION",
+          "CONTROL_DE_ESTABILIDAD",
+          "ECU",
+          "PCM",
+          "MODULO_DE_TRANSMISION",
+          "SENSOR_DE_VELOCIDAD"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/brake-light-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 16.26263747637035,
+          "left": 73.30726409000842,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "TCM [2.7 L]",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ],
+        "extendedDescription": "Transmission control unit"
+      },
+      {
+        "layout": {
+          "top": 24.496709690379532,
+          "left": 30.87961632121643,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "(SPARE)",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "layout": {
+          "top": 24.496709690379532,
+          "left": 41.4865282634144,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Seat warmer",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "layout": {
+          "top": 24.496709690379532,
+          "left": 52.093440205612474,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Safety relay"
+      },
+      {
+        "layout": {
+          "top": 24.496709690379532,
+          "left": 62.70035214781044,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Not used)",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "layout": {
+          "top": 24.496709690379532,
+          "left": 73.30726409000842,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Windshield defogger"
+      },
+      {
+        "layout": {
+          "top": 32.73078190438872,
+          "left": 30.87961632121643,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.73078190438872,
+          "left": 41.4865282634144,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "(Not used)",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ],
+        "extendedDescription": "Not used"
+      },
+      {
+        "layout": {
+          "top": 32.73078190438872,
+          "left": 52.093440205612474,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ],
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "layout": {
+          "top": 32.73078190438872,
+          "left": 62.70035214781044,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Stop lamp switch, Power outside mirror folding module"
+      },
+      {
+        "layout": {
+          "top": 32.73078190438872,
+          "left": 73.30726409000842,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "4WD/ECM",
+        "relatedEntities": [
+          "DOBLE_TRACCION",
+          "ECU"
+        ],
+        "extendedDescription": "All wheel drive system; Engine control unit"
+      },
+      {
+        "layout": {
+          "top": 40.9648541183979,
+          "left": 20.27270437901837,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Rear defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "layout": {
+          "top": 40.9648541183979,
+          "left": 30.87961632121643,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Digital clock, Audio, Power outside mirror folding module, Power outside mirror & mirror folding switch",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.9648541183979,
+          "left": 41.4865282634144,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear power outlet",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.9648541183979,
+          "left": 52.093440205612474,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard switch, Auto light & Photo sensor, Transaxle range switch",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA",
+          "SENSOR_POSICION_CAMBIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.9648541183979,
+          "left": 62.70035214781044,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunroof, Door lock/unlock relay",
+        "relatedEntities": [
+          "TECHO_SOLAR",
+          "RELAY(protects=PROP_OR(0=CIERRE_CENTRALIZADO,1=CIERRE_CENTRALIZADO))"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/sunroof-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 40.9648541183979,
+          "left": 73.30726409000842,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 49.19892633240708,
+          "left": 20.27270437901837,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right rear combination lamp, Glove box Illumination"
+      },
+      {
+        "layout": {
+          "top": 49.19892633240708,
+          "left": 30.879616321216382,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left head lamp, Left rear combination lamp, License lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO))",
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 49.19892633240708,
+          "left": 41.486528263414385,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Immobilizer control module [2.7 L]",
+        "relatedEntities": [
+          "INMOVILIZADOR",
+          "MODULO(of=INMOVILIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 49.19892633240708,
+          "left": 52.093440205612396,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 49.19892633240708,
+          "left": 62.700352147810406,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard switch, Hazard relay, Immobilizer control module [2.7 L]",
+        "relatedEntities": [
+          "BOTON_DE_BALIZA",
+          "RELAY(protects=LUZ_BALIZA)",
+          "INMOVILIZADOR",
+          "MODULO(of=INMOVILIZADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 49.19892633240708,
+          "left": 62.700352147810406,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Hazard",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ],
+        "extendedDescription": "Hazard light"
+      },
+      {
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 49.19892633240708,
+          "left": 73.30726409000842,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 57.538563574800925,
+          "left": 20.27270437901837,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Right power window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.43299854641627,
+          "left": 30.87961632121643,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster, ETACM/TACM",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.43299854641627,
+          "left": 41.4865282634144,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition coil [2.7 L]",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION"
+        ],
+        "extendedDescription": "Ignition coil"
+      },
+      {
+        "layout": {
+          "top": 57.43299854641627,
+          "left": 52.093440205612474,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Room lamp, A/C control module, Digital clock, ETACM/TACM Key remind switch",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "AIRE_ACONDICIONADO",
+          "COMANDO_CLIMATIZADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.66707076042545,
+          "left": 20.27270437901837,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Left power window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.66707076042545,
+          "left": 30.87961632121643,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "SRS control"
+      },
+      {
+        "layout": {
+          "top": 65.66707076042545,
+          "left": 41.4865282634144,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F39",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 65.66707076042545,
+          "left": 52.093440205612474,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "id": "F40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ],
+        "extendedDescription": "Ignition switch"
+      },
+      {
+        "id": "F41",
+        "layout": {
+          "top": 79.2725716811733,
+          "left": 43.143389708646545,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "30"
+        },
+        "description": "P/CONN"
+      },
+      {
+        "id": "F42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 22.620093972801893,
+          "left": 86.07701858425595,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 30.674650433773362,
+          "left": 86.07701858425595,
+          "width": 7.482110172435683,
+          "height": 4.334179980322033
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 5.386630283877627,
+          "left": 85.93571670322412,
+          "width": 7.83936039393709,
+          "height": 11.695669059313007
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Shunt",
+        "kind": {
+          "type": "fuse-shunt",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 79.2725716811733,
+          "left": 23.793861955257075,
+          "width": 7.482110172435689,
+          "height": 4.334179980322031
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxAspectRatio": 0.7227564102564102,
+    "processed": false,
+    "boxName": "Inner Panel",
+    "boxDescription": "The fuse box for the lights and other electrical accessories will be found on the left side of crash pad.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/e90cbcf5_hyundai-tucson-2006.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/4064d9cf_hyundai-tucson-2006.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/23b0b100_hyundai-tucson-2006.jpg"
+      }
+    ],
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/76ed370f_hyundai-tucson-2006.jpg"
+    },
+    "templateId": "612e8debe5f72e0004d725ea",
+    "templateRenameMap": {
+      "P/WDW-LH": "F37",
+      "P/WDW-RH": "F33",
+      "TAIL RH": "F27",
+      "RR HTR": "F21",
+      "A/BAG": "F38",
+      "CLUSTER": "F34",
+      "TAIL LH": "F28",
+      "AUDIO": "F22",
+      "C/LIGHTER & P/OUTLET": "F16",
+      "SPARE": "F11",
+      "RR FOG": "F06",
+      "HTD MIRR": "F01",
+      "AUDIO2": "F39",
+      "IG COIL": "F35",
+      "IMMO": "F29",
+      "P/OUTLET": "F23",
+      "-": "F17",
+      "S/HTR": "F12",
+      "A/CON SW": "F07",
+      "START": "F02",
+      "IG-SW": "F40",
+      "ROOM LP": "F36",
+      "AMP": "F30",
+      "T/SIG": "F24",
+      "A/BAG IND": "F18",
+      "RR WIPER": "F13",
+      "A/CON": "F08",
+      "IGN": "F03",
+      "HAZARD": "F31",
+      "S/ROOF": "F25",
+      "STOP": "F19",
+      "H/FREE": "F14",
+      "ECU": "F09",
+      "FF WIPER": "F04",
+      "4WD": "F20",
+      "DEICER": "F15",
+      "TCU": "F10",
+      "ABS": "F05",
+      "P/CONN": "F41"
+    },
+    "imageClusters": [
+      "61dc9238d53fbf00041bb737"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-tucson-2005-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 42.57322505417969,
+          "left": 4.216897949246339,
+          "width": 13.654512580985385,
+          "height": 18.715548752436156
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "generic"
+        },
+        "layout": {
+          "top": 3.6783416133626408,
+          "left": 11.122628449974577,
+          "width": 13.654512580985385,
+          "height": 18.715548752436156
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F01",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.3978192159477,
+          "left": 7.3487362983253455,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F02",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 64.3978192159477,
+          "left": 13.658648540234093,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 44.187355012720985,
+          "left": 24.579601945808076,
+          "width": 11.634906233430915,
+          "height": 6.093399888349033
+        },
+        "id": "F03",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Start relay, Ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 51.146821890276996,
+          "left": 24.579601945808076,
+          "width": 11.634906233430915,
+          "height": 6.093399888349033
+        },
+        "id": "F04",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Engine control, Fuel pump , A/C, Generator, ATM",
+        "relatedEntities": [
+          "ECU",
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE",
+          "AIRE_ACONDICIONADO",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/alternator-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          },
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F05",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 58.10628876783299,
+          "left": 24.579601945808076,
+          "width": 11.634906233430915,
+          "height": 6.093399888349033
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 65.065755645389,
+          "left": 24.579601945808076,
+          "width": 11.634906233430915,
+          "height": 6.093399888349033
+        },
+        "id": "F06",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Ignition switch, Power connector",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.025222522945,
+          "left": 24.579601945808076,
+          "width": 11.634906233430915,
+          "height": 6.093399888349033
+        },
+        "id": "F07",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Cooling fan",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 39.38856352950408,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F08",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Injector",
+        "relatedEntities": [
+          "INYECTOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 45.82099833921689,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F09",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cooling fan, Stop lamp switch, Oxygen sensor, ECM/PCM",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "SENSOR_OXIGENO",
+          "ECU",
+          "PCM"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/cooling-fan-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 52.253433148929695,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DRL",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 58.685867958642504,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 65.1183027683553,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front fog lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 71.55073757806811,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn, Siren",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 77.98317238778091,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "A/C",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 84.41560719749371,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Head lamp (HIGH)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "MARCHA_HIGH",
+          "LAMPARA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.70857678790325,
+          "left": 90.84804200720652,
+          "width": 3.9642661359008784,
+          "height": 6.096479317559187
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Head lamp (LOW)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "MARCHA_LOW",
+          "LAMPARA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/tucson/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/hyundai/tucson/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 87.81812383925802,
+          "left": 50.8939549655088,
+          "width": 9.73321388694606,
+          "height": 7.158843199589269
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS, ESC",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "layout": {
+          "top": 87.81812383925802,
+          "left": 62.10189822926487,
+          "width": 9.73321388694606,
+          "height": 7.158843199589269
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "ABS, ESC",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "CONTROL_DE_ESTABILIDAD"
+        ]
+      },
+      {
+        "layout": {
+          "top": 87.81812383925802,
+          "left": 73.30984149302094,
+          "width": 9.73321388694606,
+          "height": 7.158843199589269
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Blower",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 87.81812383925802,
+          "left": 84.517784756777,
+          "width": 9.73321388694606,
+          "height": 7.158843199589269
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Ignition switch, Power connector",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 89.20526272784744,
+          "left": 40.94282833948289,
+          "width": 8.475214705439207,
+          "height": 6.273368296905957
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R01",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 19.20442469035067,
+          "left": 30.58423258839053,
+          "width": 16.6733754882434,
+          "height": 8.709256761902369
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R02",
+        "layout": {
+          "top": 19.20442469035067,
+          "left": 53.783525783693186,
+          "width": 16.6733754882434,
+          "height": 8.709256761902369
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R03",
+        "layout": {
+          "top": 28.494070597244175,
+          "left": 18.44660521472323,
+          "width": 20.682765961726357,
+          "height": 13.34664019733063
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R04",
+        "layout": {
+          "top": 30.47592156097609,
+          "left": 41.07529518686914,
+          "width": 11.957285556947447,
+          "height": 10.819424443259235
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R05",
+        "layout": {
+          "top": 30.47592156097609,
+          "left": 58.31990652207285,
+          "width": 11.957285556947447,
+          "height": 10.819424443259235
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R06",
+        "layout": {
+          "top": 21.281305733768964,
+          "left": 75.75404072102802,
+          "width": 20.682765961726357,
+          "height": 13.34664019733063
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R07",
+        "layout": {
+          "top": 45.39599475707083,
+          "left": 41.07529518686914,
+          "width": 11.957285556947447,
+          "height": 10.819424443259235
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R08",
+        "layout": {
+          "top": 45.26275612070719,
+          "left": 58.31990652207285,
+          "width": 11.957285556947447,
+          "height": 10.819424443259235
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R09",
+        "layout": {
+          "top": 39.21260294669924,
+          "left": 75.75404072102802,
+          "width": 20.682765961726357,
+          "height": 13.34664019733063
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 60.159233745742924,
+          "left": 41.07529518686914,
+          "width": 11.800337136476351,
+          "height": 11.133092858104531
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 59.89275647301564,
+          "left": 58.476854942543945,
+          "width": 11.800337136476351,
+          "height": 11.133092858104531
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 57.143900159629524,
+          "left": 75.75404072102802,
+          "width": 20.682765961726357,
+          "height": 13.34664019733063
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.5010660980810235,
+    "boxName": "Engine Compartment",
+    "boxDescription": "The fusible links are located in a relay box in the engine compartement.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/f25464a0_hyundai-tucson-2006.png"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/95828d18_hyundai-tucson-2006.jpg"
+      }
+    ],
+    "templateId": "612e8e2be5f72e0004d725eb",
+    "templateRenameMap": {
+      "IGN": "F03",
+      "ECU": "F04",
+      "BATT #1": "F06",
+      "C/FAN": "F07",
+      "ABS #1": "F17",
+      "ABS #2": "F18",
+      "BLOWER": "F19",
+      "BATT #2": "F20",
+      "INJ": "F08",
+      "SNSR": "F09",
+      "DRL": "F10",
+      "F/FOG": "F12",
+      "HORN": "F13",
+      "A/CON": "F14",
+      "H/LP (HI)": "F15",
+      "H/LP (LOW)": "F16",
+      "Horn_R": "R02",
+      "Main _ R": "R09",
+      "C/FAN_R": "R12",
+      "F/FOG_R": "R11",
+      "WIPER_R": "R08",
+      "HORN_R": "R05",
+      "C/FAN 1_R": "R03",
+      "F/PUMP_R": "R04",
+      "A/CON_R": "R07",
+      "HLP(HI)_R": "R10",
+      "START_R": "R06"
+    },
+    "imageClusters": [
+      "61dc920bd53fbf00041bb735",
+      "6512d49880873e6bfdeb0e25",
+      "64483440018de7b24e85a241"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-tucson-2005-genid-g1-1.webp"
+  }
+]

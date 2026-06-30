@@ -1,0 +1,2440 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 44.901279368900916,
+          "left": 11.61664903202341,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Driver's Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 50.755059388029224,
+          "left": 11.61664903202341,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Front Passenger's Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 56.60883940715753,
+          "left": 11.61664903202341,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Rear Passenger's Side Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 11.61664903202341,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Rear Driver's Side Power Window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 68.31639944541415,
+          "left": 11.61664903202341,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Option"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 11.61664903202341,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SRS",
+        "relatedEntities": [
+          "AIRBAG",
+          "TESTIGO_SRS"
+        ],
+        "extendedDescription": "Airbag"
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 80.02395948367075,
+          "left": 11.61664903202341,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 44.901279368900916,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 50.755059388029224,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 56.60883940715753,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Door Lock Main",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ],
+        "extendedDescription": "Power door lock system"
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Meter",
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 68.31639944541415,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ],
+        "extendedDescription": "Transmission control unit"
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Battery Fan [Engine =3,5 L]"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 80.02395948367075,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Starter Motor",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/starter-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 85.87773950279907,
+          "left": 22.03222244265526,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Driver's Door Unlock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 44.901279368900916,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Panoramic Roof"
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 50.755059388029224,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.60883940715753,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 68.31639944541415,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Ambient Lighting",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Accessory Power Socket (in the Console Compartment)"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 80.02395948367075,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Keyless Access System"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 85.87773950279907,
+          "left": 32.44779585328712,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Driver's Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_IZQUIERDO)",
+          "CERRADURA(of=PUERTA(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 44.901279368900916,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 50.755059388029224,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Shifter"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 56.60883940715753,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "SRS",
+        "relatedEntities": [
+          "AIRBAG",
+          "TESTIGO_SRS"
+        ],
+        "extendedDescription": "Airbag"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "ACG [Engine =3,5 L]",
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ACG [Engine =3,0 L]",
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 68.31639944541415,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "VSA/ABS",
+        "relatedEntities": [
+          "CONTROL_DE_ESTABILIDAD",
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Anti-lock braking system/vehicle stability assist"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel Pump [Engine =3,5 L]",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/fuel-pump-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuel Pump [Engine =3,0 L]",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/fuel-pump-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 80.02395948367075,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver's Side Door Unlock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 85.87773950279907,
+          "left": 42.86336926391897,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Passenger's Side Door Unlock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 44.901279368900916,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Steering Column Adjust"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 50.755059388029224,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IMG"
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.60883940715753,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Steering Column Adjust"
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 68.31639944541415,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Sunshade"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "Audio Amp [Engine =3,0L]",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=ESTEREO)",
+          "AMPLIFICADOR"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 80.02395948367075,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Option"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 85.87773950279907,
+          "left": 53.27894267455082,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Passenger's Side Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_DERECHO)",
+          "CERRADURA(of=PUERTA(ubicacion=LADO_DERECHO))"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 44.901279368900916,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Driver's Power Seat",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 50.755059388029224,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10",
+          "notUsed": false
+        },
+        "description": "Driver's Massage Seat [Engine =3,0 L]"
+      },
+      {
+        "id": "42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.60883940715753,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "AIRCON",
+        "extendedDescription": "Air conditioning"
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 68.31639944541415,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Daytime Running Lights",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "extendedDescription": "Daytime running lights",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/headlight-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ACCESSORY",
+        "relatedEntities": [
+          "ACCESORIO"
+        ],
+        "extendedDescription": "Protects several accesory circuits"
+      },
+      {
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 80.02395948367075,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 85.87773950279907,
+          "left": 63.69451608518267,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Driver's Side Door Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LADO_IZQUIERDO)",
+          "CERRADURA(of=PUERTA(ubicacion=LADO_IZQUIERDO))"
+        ]
+      },
+      {
+        "id": "48",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 44.901279368900916,
+          "left": 74.11008949581452,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "49",
+        "layout": {
+          "top": 50.755059388029224,
+          "left": 74.11008949581452,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Front Passenger's Power Seat",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.60883940715753,
+          "left": 74.11008949581452,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "51",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 62.46261942628584,
+          "left": 74.11008949581452,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "52",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 68.31639944541415,
+          "left": 74.11008949581452,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        }
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 74.17017946454246,
+          "left": 74.11008949581452,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "Front Passenger's Massage Seat [Engine =3,0 L]"
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 80.02395948367075,
+          "left": 74.11008949581452,
+          "width": 8.799053791172762,
+          "height": 4.09309226725334
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Option"
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 27.38927189900753,
+          "left": 55.90939972409128,
+          "width": 9.258187709755815,
+          "height": 6.779184067638347
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": "30"
+        },
+        "description": "Audio Amp [Engine =3,5 L]",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=ESTEREO)",
+          "AMPLIFICADOR"
+        ],
+        "extendedDescription": "Audio system"
+      },
+      {
+        "id": "56",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m"
+        },
+        "layout": {
+          "top": 27.40081569829251,
+          "left": 71.71061871880642,
+          "width": 9.258187709755815,
+          "height": 6.779184067638347
+        }
+      }
+    ],
+    "boxAspectRatio": 0.8616803278688525,
+    "boxName": "Driver’s Side Interior Fuse Box Type A",
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/e3078f05_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/991bda39_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/7bb30fb5_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/b166bac5_image.jpg"
+      }
+    ],
+    "templateId": "67f9c523eef77535d17b8660",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/4365ac94_acura-mdx-2023.jpg"
+    },
+    "backgroundColor": "#7c7974",
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-acura-mdx-2024-genid-g4-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 54.85587494541826,
+          "left": 2.499974299930096,
+          "width": 4.029770960977014,
+          "height": 28.26554800074856
+        },
+        "kind": {
+          "type": "fuse-strip-hsb",
+          "amp": "225"
+        },
+        "description": "Battery [Engine=3,5L]",
+        "relatedEntities": [
+          "BATERIA"
+        ],
+        "extendedDescription": "Battery and charging system"
+      },
+      {
+        "id": "2a",
+        "layout": {
+          "top": 80.3035508952155,
+          "left": 10.818022336492824,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Idle Stop [Engine=3,5L]",
+        "extendedDescription": "Stop & Start system"
+      },
+      {
+        "id": "2b",
+        "layout": {
+          "top": 80.3035508952155,
+          "left": 14.96995442802407,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Idle Stop 2",
+        "extendedDescription": "Stop & Start system"
+      },
+      {
+        "id": "2c",
+        "layout": {
+          "top": 80.3035508952155,
+          "left": 19.069615836596007,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 80
+        },
+        "description": "EPS [Engine=3,5L]",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA"
+        ],
+        "extendedDescription": "Electric power steering"
+      },
+      {
+        "id": "2d",
+        "layout": {
+          "top": 80.3035508952155,
+          "left": 23.169277245167976,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 70
+        },
+        "description": "Power Module [Engine=3,5L]",
+        "relatedEntities": [
+          "MODO_POWER"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "2e",
+        "layout": {
+          "top": 80.3035508952155,
+          "left": 27.268938653739898,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Fuse Box Main 1"
+      },
+      {
+        "id": "2f",
+        "layout": {
+          "top": 80.3035508952155,
+          "left": 31.368600062311863,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Fuse Box Option 1"
+      },
+      {
+        "id": "2g",
+        "layout": {
+          "top": 80.3035508952155,
+          "left": 35.573900960393985,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Rear Blower",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR(ubicacion=PARTE_TRASERA)"
+        ],
+        "extendedDescription": "Rear air conditioning system"
+      },
+      {
+        "id": "3a",
+        "layout": {
+          "top": 69.41749151339775,
+          "left": 10.818022336492824,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Active Control Mount [Engine=3,5L]"
+      },
+      {
+        "id": "3b",
+        "layout": {
+          "top": 69.41749151339775,
+          "left": 15.075593917534235,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Starter Motor",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system"
+      },
+      {
+        "id": "3c",
+        "layout": {
+          "top": 69.41749151339775,
+          "left": 19.175255326106175,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Radiator Fan [Engine=3,5L]",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Radiator fan"
+      },
+      {
+        "id": "3d",
+        "layout": {
+          "top": 69.41749151339775,
+          "left": 23.27491673467813,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "Heater Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "3e",
+        "layout": {
+          "top": 69.41749151339775,
+          "left": 27.37457814325009,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "Power Module ACC"
+      },
+      {
+        "id": "3f",
+        "layout": {
+          "top": 69.41749151339775,
+          "left": 31.474239551822016,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "Rear Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "id": "3g",
+        "layout": {
+          "top": 69.41749151339775,
+          "left": 35.573900960393985,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Fuse Box Option 2"
+      },
+      {
+        "id": "4a",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 10.818022336492824,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "AC Power Outlet"
+      },
+      {
+        "id": "4b",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 14.917683745064773,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "Brake Booster[Engine=3,5L]",
+        "relatedEntities": [
+          "SERVOFRENO"
+        ]
+      },
+      {
+        "id": "4c",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 19.01734515363672,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Rear Fuse Box Main 2 [Engine=3,5L]"
+      },
+      {
+        "id": "4c",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 19.01734515363672,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 70
+        },
+        "description": "Power Module 1 [Engine=3,0L]",
+        "relatedEntities": [
+          "MODO_POWER"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "4d",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 23.11700656220867,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "VSA F/S RLY [Engine=3,5L]"
+      },
+      {
+        "id": "4d",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 23.11700656220867,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "- [Engine=3,0L]"
+      },
+      {
+        "id": "4e",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 27.216667970780616,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Rear Fuse Box Main 1 [Engine=3,5L]"
+      },
+      {
+        "id": "4e",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 27.216667970780616,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Idle Stop 1 [Engine=3,0L]",
+        "extendedDescription": "Stop & Start system"
+      },
+      {
+        "id": "4f",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 31.316329379352553,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "[Engine=3,5L]"
+      },
+      {
+        "id": "4f",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 31.316329379352553,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "[Engine=3,0L]"
+      },
+      {
+        "id": "4g",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 35.573900960393985,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 60
+        },
+        "description": "Fuse Box Main [Engine=3,5L]"
+      },
+      {
+        "id": "4g",
+        "layout": {
+          "top": 60.75864448323684,
+          "left": 35.573900960393985,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "- [Engine=3,0L]"
+      },
+      {
+        "id": "5a",
+        "layout": {
+          "top": 52.14463113150734,
+          "left": 10.818022336492824,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Power Module 2",
+        "relatedEntities": [
+          "MODO_POWER"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "5b",
+        "layout": {
+          "top": 52.14463113150734,
+          "left": 15.023323234574937,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 40
+        },
+        "description": "VSA Pump Motor",
+        "relatedEntities": [
+          "MOTOR_IMPULSOR(of=BOMBA(of=CONTROL_DE_ESTABILIDAD))"
+        ]
+      },
+      {
+        "id": "5c",
+        "layout": {
+          "top": 52.14463113150734,
+          "left": 19.122984643146875,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "IG Main 2",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO"
+        ],
+        "extendedDescription": "Protects several circuits"
+      },
+      {
+        "id": "5d",
+        "layout": {
+          "top": 52.14463113150734,
+          "left": 23.222646051718844,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Relay Module 2",
+        "relatedEntities": [
+          "RELAY"
+        ]
+      },
+      {
+        "id": "5e",
+        "layout": {
+          "top": 52.14463113150734,
+          "left": 27.322307460290766,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "Relay Module 1",
+        "relatedEntities": [
+          "RELAY"
+        ]
+      },
+      {
+        "id": "5f",
+        "layout": {
+          "top": 52.14463113150734,
+          "left": 31.42196886886273,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30,
+          "notUsed": true
+        },
+        "description": "-",
+        "extendedDescription": "-"
+      },
+      {
+        "id": "5g",
+        "layout": {
+          "top": 52.14463113150734,
+          "left": 35.573900960393985,
+          "width": 4.831743802959796,
+          "height": 4.779765912140388
+        },
+        "kind": {
+          "type": "fuse-block",
+          "format": "honda-generic",
+          "amp": 30
+        },
+        "description": "IG Main 1",
+        "relatedEntities": [
+          "ACCESORIO_ELECTRICO"
+        ],
+        "extendedDescription": "Protects several circuits"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 38.286415772565654,
+          "left": 1.595331839302603,
+          "width": 4.7699329742176895,
+          "height": 6.822718482939294
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Conditioner Fan [Engine=3,5L]"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 38.286415772565654,
+          "left": 1.595331839302603,
+          "width": 4.7699329742176895,
+          "height": 6.822718482939294
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Fuel Pump [Engine=3,5L]",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/fuel-pump-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 90.86570796161858,
+          "left": 1.595331839302603,
+          "width": 4.7699329742176895,
+          "height": 6.822718482939294
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-m",
+          "amp": 30
+        },
+        "description": "Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ],
+        "extendedDescription": "Wipers"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 7.746694971010319,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "AVC [Engine=3,0L]"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 10.312538550104854,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "FI Main [Engine=3,5L]"
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 12.87838212919939,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 15.444225708293924,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Injector [Engine=3,5L]",
+        "relatedEntities": [
+          "INYECTOR"
+        ],
+        "extendedDescription": "Fuel injectors"
+      },
+      {
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 18.010069287388458,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 20.57591286648299,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Trailer E-Brake*"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 23.141756445577524,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/horn-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 25.707600024672058,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cooling Fan [Engine=3,0L]",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "extendedDescription": "Electric cooling fan",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/cooling-fan-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 28.27344360376659,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "FI-ECU"
+      },
+      {
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 30.83928718286113,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 33.40513076195569,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DBW [Engine=3,5L]",
+        "extendedDescription": "Drive-by-Wire Throttle System"
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 35.97097434105024,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/acura/mdx/info/fusebox/2024/radio-fuse",
+            "urlWithAnchor": "/acura/mdx/info/fusebox/2024/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 88.25326956101972,
+          "left": 38.53681792014477,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Back Up",
+        "extendedDescription": "Backup lights"
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 7.763348616308236,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Transmission 1",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ],
+        "extendedDescription": "Transmission control unit"
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 10.32919219540277,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 12.895035774497305,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ],
+        "extendedDescription": "Hazard light"
+      },
+      {
+        "id": "24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 15.460879353591839,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 18.026722932686372,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Brake Lights",
+        "relatedEntities": [
+          "TESTIGO_FRENO_DE_MANO"
+        ],
+        "extendedDescription": "Stop lights"
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 20.592566511780905,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "IG Coil",
+        "relatedEntities": [
+          "RELAY(protects=ACCESORIO_ELECTRICO)"
+        ],
+        "extendedDescription": "Ignition coil"
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 23.158410090875442,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission 3",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ],
+        "extendedDescription": "Transmission control unit"
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 25.724253669969976,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission 2",
+        "relatedEntities": [
+          "CAJA_DE_TRANSMISION"
+        ],
+        "extendedDescription": "Transmission control unit"
+      },
+      {
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 28.29009724906451,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 30.855940828159042,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 33.421784407253575,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Washer",
+        "relatedEntities": [
+          "SAPITO"
+        ],
+        "extendedDescription": "Windshield washer"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 35.987627986348116,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Battery Sensor [Engine=3,5L]",
+        "relatedEntities": [
+          "TESTIGO_BATERIA"
+        ],
+        "extendedDescription": "Intelligent Battery Sensor"
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 35.987627986348116,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Injector [Engine=3,0L]",
+        "relatedEntities": [
+          "INYECTOR"
+        ],
+        "extendedDescription": "Fuel injectors"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 38.55347156544265,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Shutter Grille [Engine=3,5L]"
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 36.68587361341255,
+          "left": 38.55347156544265,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "FI Main [Engine=3,0L]"
+      },
+      {
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 73.72000801842181,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 76.22538789972174,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 78.73076778102168,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cruise SW [Engine=3,5L]"
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 81.23614766232163,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IGPS (VSS) [Engine=3,0L]"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 86.12162815082857,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Sub Fan Diode [Engine=3,5L]"
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 86.12162815082857,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "IGPS (PCS) [Engine=3,0L]"
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 88.6270080321285,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "IGPS (ABV)[Engine=3,0L]"
+      },
+      {
+        "id": "40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 91.13238791342845,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "41",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 39.63748120124875,
+          "left": 93.63776779472839,
+          "width": 1.8915251449483943,
+          "height": 9.746740689913302
+        }
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 55.80433911704439,
+          "left": 73.06208622887453,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 55.80433911704439,
+          "left": 79.531650492756,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "R3",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 55.80433911704439,
+          "left": 86.00121475663747,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "R4",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 55.80433911704439,
+          "left": 92.47077902051893,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "R5",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 78.80630327436553,
+          "left": 73.06208622887453,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "R6",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 78.80630327436553,
+          "left": 79.531650492756,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "R7",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 78.80630327436553,
+          "left": 86.00121475663747,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "R8",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "layout": {
+          "top": 78.80630327436553,
+          "left": 92.47077902051893,
+          "width": 5.345614540071551,
+          "height": 19.8833510074231
+        }
+      },
+      {
+        "id": "other",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 2.8082796612812677,
+          "left": 2.006532957769645,
+          "width": 25.658949792343435,
+          "height": 29.82502651113468
+        }
+      },
+      {
+        "id": "other2",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 3.1981492888778,
+          "left": 30.626130803075785,
+          "width": 38.8996258069822,
+          "height": 28.65541762834508
+        }
+      },
+      {
+        "id": "other3",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 35.69217127001726,
+          "left": 42.86738370543792,
+          "width": 27.548219574165625,
+          "height": 63.435075295683056
+        }
+      },
+      {
+        "id": "other4",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 3.697643437536201,
+          "left": 71.14322089712365,
+          "width": 27.344945432288682,
+          "height": 29.788008671620297
+        }
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Box Type A",
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/236924ac_acura-mdx-2023.jpg"
+    },
+    "boxAspectRatio": 0.4218873909595559,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/c1552b23_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/ab9824e5_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/eeca98c9_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/4d03aa65_image.jpg"
+      }
+    ],
+    "imageClusters": [
+      "64ee1a0be5ac3fa659b2d42c"
+    ],
+    "templateId": "66031a6c658bc6707c6a03ca",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-acura-mdx-2024-genid-g4-1.webp"
+  }
+]

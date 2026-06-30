@@ -1,0 +1,805 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 3.2178217821782176,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "+BA NO.1"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 8.018907701412711,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "+BA NO.2"
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 12.819993620647207,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR R/R) Rear right door",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 17.6210795398817,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR R/L) Rear left door",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 22.422165459116194,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-B NO.3) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 27.22325137835069,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        }
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 32.024337297585184,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(OBD) On-board diagnostics"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 36.82542321681968,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR F/R) Front right door",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 41.626509136054175,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR F/L) Front left door lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))",
+          "CERRADURA(of=PUERTA(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA)))"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 46.42759505528867,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "30"
+        },
+        "description": "2ND BATT"
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.228680974523165,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        }
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 56.02976689375766,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-DCC NO.1) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 60.83085281299215,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-DCC NO.3) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 65.63193873222664,
+          "left": 5.414285714285713,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(HAZ) Hazard light",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 70.43302465146114,
+          "left": 5.414285714285712,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(FUEL OPN) Fuel lid opener"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 3.2178217821782176,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(TAIL) Tail lights",
+        "relatedEntities": [
+          "LUCES_TRASERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/rx-350/info/fusebox/2023/tail-light-fuse",
+            "urlWithAnchor": "/lexus/rx-350/info/fusebox/2023/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 8.018907701412711,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(PANEL) Instrument panel lights",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 12.819993620647207,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(ECU-IGR NO.2) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 17.6210795398817,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(WIPER RR) Rear wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 22.422165459116194,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(EPS-IGR) Electric power steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 27.22325137835069,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-IGR NO.1) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 32.024337297585184,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(A/BAG-IGR) Airbag",
+        "relatedEntities": [
+          "AIRBAG"
+        ]
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 36.82542321681968,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-IGR NO.3) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 41.626509136054175,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-B NO.1) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 46.42759505528867,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(ECU-B NO.2) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 51.228680974523165,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(STOP) Stop lights",
+        "relatedEntities": [
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/rx-350/info/fusebox/2023/brake-light-fuse",
+            "urlWithAnchor": "/lexus/rx-350/info/fusebox/2023/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 56.02976689375766,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(ECU-ACC) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 60.83085281299215,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "(STRG LOCK) Steering lock"
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 65.63193873222664,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(AM2) Starter system",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/rx-350/info/fusebox/2023/starter-fuse",
+            "urlWithAnchor": "/lexus/rx-350/info/fusebox/2023/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 70.43302465146114,
+          "left": 33.284624985355606,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(DCM) Data communication module (telematics system)"
+      },
+      {
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 3.2178217821782176,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        }
+      },
+      {
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 8.018907701412711,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        }
+      },
+      {
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 12.819993620647207,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        }
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 17.6210795398817,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(TI&TE) Power tilt and power telescopic"
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 22.422165459116194,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(S/ROOF) Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/rx-350/info/fusebox/2023/sunroof-fuse",
+            "urlWithAnchor": "/lexus/rx-350/info/fusebox/2023/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 27.22325137835069,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(ECU-IGR NO.4) Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 32.024337297585184,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "5"
+        },
+        "description": "(METER-IGR) Instrument cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 36.82542321681968,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(P/OUTLET NO.1) Cigar lighter / power outlet",
+        "relatedEntities": [
+          "ENCENDEDOR",
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/lexus/rx-350/info/fusebox/2023/cigarette-lighter-fuse",
+            "urlWithAnchor": "/lexus/rx-350/info/fusebox/2023/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 41.626509136054175,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOME) Dome light and interior light",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 46.42759505528867,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "(DOOR DBL/L) Door double locking"
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 51.228680974523165,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(USB NO.1) USB charger",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 56.02976689375766,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "7.5"
+        },
+        "description": "(USB NO.2) USB charger",
+        "relatedEntities": [
+          "CONECTOR_USB"
+        ]
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 60.83085281299215,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(S/HTR F/L) Front seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 65.63193873222664,
+          "left": 61.1549642564255,
+          "width": 21.638095238095264,
+          "height": 2.6762376237623764
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(S/HTR F/R) Seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/3aea084d_lexus-rx 350-2023.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 2.3085714285714287,
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/89427702_lexus-rx 350-2023.jpg"
+    },
+    "templateId": "65f46a401d942e4f8555edeb",
+    "imageClusters": [
+      "6485fe6152e804d9e5111881"
+    ],
+    "useAcronyms": true,
+    "boxName": "Interior fuse box",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-lexus-rx-350-2023-genid-g4-0.webp"
+  }
+]

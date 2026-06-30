@@ -1,0 +1,1462 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 11.980363862537423,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Battery circuit (special)"
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 21.195975176506245,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "Battery Power Circuit (Basic)"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 30.41158649047507,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "description": "Radiator fan (1st speed)"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 60.038070270197096,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Radiator fan (2nd speed)"
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 60.038070270197096,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "Radiator fan (2nd speed)"
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 69.32504891995265,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "power steering",
+        "relatedEntities": [
+          "DIRECCION_ASISTIDA"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 78.6120275697082,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 50
+        },
+        "description": "ABS system",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 15.931295006376052,
+          "left": 87.89900621946374,
+          "width": 4.399433901131555,
+          "height": 17.490846632679723
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Ignition lock"
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 39.98473295626395,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "The engine control unit"
+      },
+      {
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 46.94280727535768,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        }
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 53.957781734911286,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fuel pump, fuel cut-off valve (diesel engine vehicles)",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/fuel-pump-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 60.91585605400502,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Power supply of the engine control unit",
+        "relatedEntities": [
+          "ALIMENTACION_ELECTRICA(of=ECU)"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 67.81703023263887,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Ignition Coils, Fuel Injectors, Fuel Pump Fuse (Vehicles with 1.2L 8-Valve Engine)",
+        "relatedEntities": [
+          "BOBINA_DE_IGNICION",
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/fuel-pump-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 74.83200469219248,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Lambda probe, tachometer, fuel pump, preheating control unit (diesel engine vehicles)",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/fuel-pump-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 81.79007901128621,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Automatic transmission control unit"
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 88.69125318992006,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Camshaft position controller (cars with 1.8L engine), diesel engine fuel filter heater"
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 88.69125318992006,
+          "left": 9.467174486993406,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Camshaft position controller (cars with 1.8L engine), diesel engine fuel filter heater"
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 39.98473295626395,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right high beam headlight"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 46.90216431788634,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "heater fan",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 53.933395960428484,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left high beam headlight"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 60.90772746251075,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Horn (beep)",
+        "relatedEntities": [
+          "BOCINA",
+          "AVISO_SONORO",
+          "PITIDO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/horn-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 67.88205896459303,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Air conditioning compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/air-conditioning-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 74.8563904666753,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Engine control unit, radiator fan relay",
+        "relatedEntities": [
+          "ECU",
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/cooling-fan-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 81.83072196875756,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fog lights",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "extendedDescription": "Fog lights",
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/fog-light-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 88.80505347083982,
+          "left": 84.59359624374554,
+          "width": 7.822206001740861,
+          "height": 2.749571015380148
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "headlight washer"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 40.16974599270239,
+          "left": 22.300240102529422,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Radiator fan (1st speed)"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 51.5791588444217,
+          "left": 22.300240102529422,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel module (fuel pump relay Fiat Punto 2)"
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 62.98857169614101,
+          "left": 22.300240102529422,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Engine control module",
+        "relatedEntities": [
+          "ECU",
+          "MOTOR"
+        ],
+        "extendedDescription": "Engine control system"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 74.39798454786029,
+          "left": 22.300240102529422,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Automatic transmission control unit"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 85.8073973995796,
+          "left": 22.300240102529422,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fuel Filter Heater (Diesel Vehicles)"
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 85.80739739957961,
+          "left": 43.280976687513004,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air conditioning compressor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/air-conditioning-relay",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 85.80739739957961,
+          "left": 64.86171327249656,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "headlight washer"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 74.39798454786029,
+          "left": 64.86171327249656,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog lights",
+        "relatedEntities": [
+          "TESTIGO_LUZ_ANTINIEBLA",
+          "LUZ_ANTINIEBLA"
+        ],
+        "extendedDescription": "Fog lights"
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 62.98857169614101,
+          "left": 65.46171327249652,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn (beep) relay",
+        "relatedEntities": [
+          "BOCINA",
+          "AVISO_SONORO",
+          "RELAY",
+          "PITIDO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/horn-relay",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 51.5791588444217,
+          "left": 65.46171327249652,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "heater fan",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 40.16974599270239,
+          "left": 65.46171327249652,
+          "width": 14.21238736112371,
+          "height": 8.711492785527918
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "high beam",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 42.23429632217262,
+          "left": 41.26548013892015,
+          "width": 19.890265298961253,
+          "height": 16.461757259174874
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Radiator fan (2nd speed)"
+      }
+    ],
+    "boxName": "Engine Compartment",
+    "boxDescription": "",
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/cb018e55_fiat-punto-2001.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/5f5f2e0c_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bd25655d_image.jpg"
+      }
+    ],
+    "processed": false,
+    "templateId": "688331d43e2dd0b21164c9d0",
+    "templateRenameMap": {
+      "F30": "F22",
+      "R14": "R8",
+      "R17": "R7",
+      "R19": "R5",
+      "R20": "R4",
+      "F7": "F4",
+      "F8": "F17",
+      "F9": "F23",
+      "F10": "F19",
+      "F11": "F13",
+      "F14": "F16",
+      "F15": "F18",
+      "F16": "F21",
+      "F17": "F11",
+      "F18": "F8",
+      "F19": "F20",
+      "F20": "F15",
+      "F21": "F10",
+      "F22": "F12",
+      "F23": "F14",
+      "R2": "R11",
+      "R3": "R9",
+      "R5": "R6",
+      "R6": "R1",
+      "R7": "R12",
+      "R8": "R10",
+      "R9": "R3",
+      "R10": "R2",
+      "F1": "F2",
+      "F2": "F1",
+      "F3": "F7",
+      "F4": "F6",
+      "F5": "",
+      "F6": "F3",
+      "F4 ": "F6",
+      "F5 ": "F5"
+    },
+    "boxAspectRatio": 0.9787234042553191,
+    "imageClusters": [
+      "61d60f86bae6ba000444195c"
+    ],
+    "boxScaleMultiplier": "1",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-punto-2002-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 8.621038217639674,
+          "left": 56.2447392003089,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Left dipped beam headlamp and headlamp tilt adjuster",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.745927187661923,
+          "left": 56.2447392003089,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Right dipped beam headlight"
+      },
+      {
+        "layout": {
+          "top": 41.07492867629205,
+          "left": 56.2447392003089,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "License plate lighting, instrument panel lighting",
+        "relatedEntities": [
+          "LUZ_PATENTE",
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.19981764631429,
+          "left": 56.2447392003089,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Cigarette lighter fuse Fiat Punto 2"
+      },
+      {
+        "layout": {
+          "top": 73.32470661633654,
+          "left": 56.2447392003089,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Reverse lights, idle speed regulator stepper motor, air conditioner, heater relay",
+        "relatedEntities": [
+          "LUZ_RETROCESO",
+          "AIRE_ACONDICIONADO",
+          "RELAY(protects=PROP_OR(0=CALEFACCION,1=CALEFACCION))",
+          "RELAY(protects=CALEFACCION_DE_ASIENTO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/air-conditioning-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.621038217639674,
+          "left": 50.564432445088414,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Power Steering Motor"
+      },
+      {
+        "layout": {
+          "top": 24.745927187661923,
+          "left": 50.564432445088414,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "ABS control unit"
+      },
+      {
+        "layout": {
+          "top": 41.07492867629205,
+          "left": 50.564432445088414,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Safety Airbags"
+      },
+      {
+        "layout": {
+          "top": 57.19981764631429,
+          "left": 50.564432445088414,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Rear window heater"
+      },
+      {
+        "layout": {
+          "top": 73.32470661633654,
+          "left": 50.564432445088414,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Turn indicators, hazard warning lights, instrument panel lighting",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.621038217639674,
+          "left": 44.884125689867936,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Radio, telephone, lights, rear view mirror switch tow hitch socket",
+        "relatedEntities": [
+          "ESTEREO",
+          "LUZ_TESTIGO",
+          "LUZ",
+          "LUCES_DELANTERAS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          },
+          {
+            "url": "/fiat/punto/info/fusebox/2002/radio-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.745927187661923,
+          "left": 44.884125689867936,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Stop lamps, instrument panel lighting/ signal lamps",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO",
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/brake-light-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.07492867629205,
+          "left": 44.884125689867936,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Lighting",
+        "relatedEntities": [
+          "LUZ_TESTIGO",
+          "LUZ",
+          "LUCES_DELANTERAS"
+        ],
+        "extendedDescription": "Illumination",
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/headlight-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.19981764631429,
+          "left": 44.884125689867936,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Windscreen wiper, washer pump",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "BOMBA_LIMPIAPARABRISAS"
+        ],
+        "extendedDescription": "Wipers; Windshield washer"
+      },
+      {
+        "layout": {
+          "top": 73.32470661633654,
+          "left": 44.884125689867936,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "central locking system"
+      },
+      {
+        "layout": {
+          "top": 8.621038217639674,
+          "left": 39.20381893464745,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front right door power window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.745927187661923,
+          "left": 39.20381893464745,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 41.07492867629205,
+          "left": 39.20381893464745,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front left door power window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 57.19981764631429,
+          "left": 39.20381893464745,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Exterior mirror heater"
+      },
+      {
+        "layout": {
+          "top": 73.32470661633654,
+          "left": 39.20381893464745,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Interior lighting, trunk light, radio, telephone, security alarm horn (siren), interior sensors, diagnostic connector",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL",
+          "ESTEREO",
+          "CONECTOR_OBD"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/radio-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 8.621038217639674,
+          "left": 33.52351217942697,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 24.745927187661923,
+          "left": 33.52351217942697,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Electric sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/fiat/punto/info/fusebox/2002/sunroof-fuse",
+            "urlWithAnchor": "/fiat/punto/info/fusebox/2002/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 41.07492867629205,
+          "left": 33.52351217942697,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Seat heater",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "layout": {
+          "top": 57.19981764631429,
+          "left": 33.52351217942697,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear window cleaner"
+      },
+      {
+        "layout": {
+          "top": 73.32470661633654,
+          "left": 33.52351217942697,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "id": "F25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Speaker (subwoofer)"
+      },
+      {
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 8.621038217639676,
+          "left": 27.356603173572665,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.76588441598693,
+          "left": 27.356603173572665,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F28",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 34.91073061433417,
+          "left": 27.356603173572665,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 48.05557681268144,
+          "left": 27.356603173572665,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F30",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 61.20042301102867,
+          "left": 27.356603173572665,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 74.3452692093759,
+          "left": 27.356603173572665,
+          "width": 2.5239631064021255,
+          "height": 8.908523796014736
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 10.21692804187003,
+          "left": 67.42442068927143,
+          "width": 21.383864480224446,
+          "height": 26.72082525706385
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Battery power circuit (special)"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 43.13985798844001,
+          "left": 67.7613827716883,
+          "width": 9.189974420881601,
+          "height": 17.357377075882283
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "darkred",
+          "notUsed": false
+        },
+        "description": "Heated rear window relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR_TRASERO)"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 43.13985798844001,
+          "left": 79.29787188817517,
+          "width": 9.189974420881601,
+          "height": 17.357377075882283
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "darkred",
+          "notUsed": false
+        },
+        "description": "Battery power circuit (main)"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 67.62506625058698,
+          "left": 69.89528988377683,
+          "width": 16.200387702202256,
+          "height": 11.426757446650083
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "darkred",
+          "notUsed": false
+        },
+        "description": "High Beam Relay",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_ALTA)"
+        ]
+      }
+    ],
+    "boxAspectRatio": 0.7343336275375111,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/126a1051_fiat-punto-2001.jpg"
+    },
+    "processed": false,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/06e3cc79_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/bb86f1d9_image.jpg"
+      }
+    ],
+    "boxName": "Passenger compartment",
+    "templateId": "61980749c294220004394c8b",
+    "boxRotation": 270,
+    "templateRenameMap": {
+      "F32": "F13",
+      "F35": "F6",
+      "F36": "F25",
+      "F37": "F12",
+      "F38": "F15",
+      "F39": "F20",
+      "F40": "F9",
+      "F41": "F19",
+      "F42": "F7",
+      "F43": "F14",
+      "F44": "F4",
+      "F45": "F23",
+      "F46": "F22",
+      "F47": "F18",
+      "F48": "F16",
+      "F49": "F11",
+      "F50": "F8",
+      "F51": "F3",
+      "F52": "F24",
+      "F53": "F10",
+      "R11": "R2",
+      "R12": "R3",
+      "R13": "R1",
+      "F12": "F2",
+      "F13": "F1",
+      "F31": "F5",
+      "R1": "R4"
+    },
+    "imageClusters": [
+      "61d6102dbae6ba0004441968"
+    ],
+    "backgroundColor": "#2e2e2e",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-fiat-punto-2002-genid-g2-1.webp"
+  }
+]

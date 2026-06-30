@@ -1,0 +1,1810 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "51",
+        "layout": {
+          "top": 91.71041505466916,
+          "left": 90.37320169252473,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "52",
+        "layout": {
+          "top": 85.75214579313541,
+          "left": 90.37320169252473,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Engine control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "53",
+        "layout": {
+          "top": 79.79387653160167,
+          "left": 90.37320169252473,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Throttle valve, engine control unit, canister valve (EVAP), MAF sensor, ignition coils, main relay, exhaust valve, inlet valve, high pressure fuel pump, injectors, engine compartment fuse box, airfuel ratio sensor, heater fuel, water-in-fuel sensor, coolant bypass valve",
+        "relatedEntities": [
+          "ECU",
+          "SENSOR_CAUDAL_DE_AIRE",
+          "BOBINA_DE_IGNICION",
+          "RELAY_ASD",
+          "PRESION_DE_NAFTA(val=CUANT_ALTA)",
+          "INYECTOR",
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 91.71041505466916,
+          "left": 80.81805359661494,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Engine control unit, intake manifold valve, timing valve exhaust, timing valve inlet, timing valve",
+        "relatedEntities": [
+          "ECU",
+          "VALVULA_MULTIPLE_ADMISION"
+        ]
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 85.75214579313541,
+          "left": 80.81805359661494,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Air fuel ratio sensor, heated oxygen sensor, turbocharger valve, engine control unit, glow plug control unit",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "56",
+        "layout": {
+          "top": 79.79387653160167,
+          "left": 80.81805359661494,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Injectors, ignition coils, fuse box",
+        "relatedEntities": [
+          "INYECTOR",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "id": "57",
+        "layout": {
+          "top": 68.5302990234968,
+          "left": 80.39492242595205,
+          "width": 2.820874471086043,
+          "height": 7.345811418329262
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "A / C compressor relay"
+      },
+      {
+        "id": "58",
+        "layout": {
+          "top": 68.5302990234968,
+          "left": 75.31734837799718,
+          "width": 2.820874471086043,
+          "height": 7.345811418329262
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "59",
+        "layout": {
+          "top": 68.5302990234968,
+          "left": 70.23977433004231,
+          "width": 2.820874471086043,
+          "height": 7.345811418329262
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Coolant pump",
+        "relatedEntities": [
+          "BOMBA_REFRIGERANTE"
+        ]
+      },
+      {
+        "id": "60",
+        "layout": {
+          "top": 68.5302990234968,
+          "left": 65.16220028208744,
+          "width": 2.820874471086043,
+          "height": 7.345811418329262
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Front wiper relay, front wiper motor",
+        "relatedEntities": [
+          "RELAY(protects=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))",
+          "MOTOR_IMPULSOR(of=LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "id": "61",
+        "layout": {
+          "top": 30.168839394443953,
+          "left": 77.1509167842031,
+          "width": 2.820874471086043,
+          "height": 7.345811418329262
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Fuel pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/fuel-pump-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "62",
+        "layout": {
+          "top": 30.168839394443953,
+          "left": 72.21438645980254,
+          "width": 2.820874471086043,
+          "height": 7.345811418329262
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "extendedDescription": "Starter system",
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/starter-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "63",
+        "layout": {
+          "top": 30.168839394443953,
+          "left": 67.27785613540198,
+          "width": 2.820874471086043,
+          "height": 7.345811418329262
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ECM, gearbox control unit, transmission range sensor, underhood fuse box, neutral position sensor, primary speed sensor, secondary speed sensor, rev sensor, reverse / neutral sensor",
+        "relatedEntities": [
+          "ECU",
+          "SENSOR_POSICION_CAMBIOS"
+        ]
+      },
+      {
+        "id": "64",
+        "layout": {
+          "top": 6.8254831095309445,
+          "left": 62.905500705218614,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "EPS",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA",
+          "TESTIGO_DIRECCION_ELECTROASISTIDA"
+        ],
+        "extendedDescription": "Electric power steering"
+      },
+      {
+        "id": "65",
+        "layout": {
+          "top": 11.885930975491107,
+          "left": 62.905500705218614,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Steering wheel lock block"
+      },
+      {
+        "id": "66",
+        "layout": {
+          "top": 16.94637884145127,
+          "left": 62.905500705218614,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Relay restart (start-stop) / ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "67",
+        "layout": {
+          "top": 22.00682670741143,
+          "left": 62.905500705218614,
+          "width": 7.052186177715086,
+          "height": 3.2648050748130117
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Front right combination lamp, front left combination lamp, compressor, transmission range sensor, under-hood fuse box, neutral position sensor, reverse speed switch, reverse / neutral sensor",
+        "relatedEntities": [
+          "COMPRESOR_DE_AC",
+          "SENSOR_POSICION_CAMBIOS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/air-conditioning-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 80.93655830778623,
+          "left": 57.26375176304654,
+          "width": 22.284908321579692,
+          "height": 14.528382582917885
+        }
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 76.36583120304802,
+          "left": 36.530324400564176,
+          "width": 10.296191819464035,
+          "height": 17.629947403990244
+        }
+      },
+      {
+        "id": "Connector 3",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 74.08046765067891,
+          "left": 3.80818053596615,
+          "width": 20.02820874471086,
+          "height": 8.325252940773172
+        }
+      },
+      {
+        "id": "Connector 4",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 37.024930051551266,
+          "left": 36.67136812411847,
+          "width": 10.155148095909738,
+          "height": 29.872966434539023
+        }
+      },
+      {
+        "id": "Connector 5",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 45.16894844956357,
+          "left": 54.32261124812204,
+          "width": 9.575414139748187,
+          "height": 18.953863722935647
+        }
+      },
+      {
+        "id": "Connector 6",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-md"
+        },
+        "layout": {
+          "top": 40.45297538010493,
+          "left": 66.57263751763047,
+          "width": 26.65726375176304,
+          "height": 10.610616493142274
+        }
+      },
+      {
+        "id": "Connector 7",
+        "kind": {
+          "type": "connector",
+          "format": "pins-18-lg"
+        },
+        "layout": {
+          "top": 0.4591132136455792,
+          "left": 83.46205923836393,
+          "width": 13.963328631875882,
+          "height": 25.302239329800813
+        }
+      },
+      {
+        "id": "Connector 8",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 7.968164885715498,
+          "left": 40.33850493653032,
+          "width": 10.014104372355433,
+          "height": 16.65050588154634
+        }
+      },
+      {
+        "id": "Connector 9",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 26.414313558408992,
+          "left": 3.80818053596615,
+          "width": 20.02820874471086,
+          "height": 8.325252940773172
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8640350877192983,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/5fee2da0_renault-koleos-2016.jpg"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/e60b6d18_image.jpg"
+      }
+    ],
+    "boxName": "First mounting box in the engine compartment",
+    "imageClusters": [
+      "649afd013b0a8ff1b1d2f8d0"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/2f0a6431_renault-koleos-2016.jpg"
+    },
+    "templateId": "661be2c0e72cdef890e8685b",
+    "boxRotation": 270,
+    "templateRenameMap": {
+      "81": "51",
+      "82": "52",
+      "83": "53",
+      "84": "54",
+      "85": "55",
+      "86": "56",
+      "87": "57",
+      "88": "58",
+      "89": "59",
+      "90": "60",
+      "91": "61",
+      "92": "62",
+      "93": "63",
+      "94": "64",
+      "95": "65",
+      "96": "66",
+      "97": "67"
+    },
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-renault-koleos-2016-genid-g2-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 13.734231292200057,
+          "left": 22.220800117851837,
+          "width": 6.436440060638295,
+          "height": 22.504051116309363
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": "50"
+        },
+        "description": "(POWER) Power windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 13.734231292200057,
+          "left": 28.565416501999252,
+          "width": 6.436440060638295,
+          "height": 22.504051116309363
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": "30"
+        },
+        "description": "(IGN SW) Ignition switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 13.734231292200057,
+          "left": 34.910032886146666,
+          "width": 6.436440060638295,
+          "height": 22.504051116309363
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-40",
+          "amp": "40"
+        },
+        "description": "(VDC MOTOR) Vehicle dynamics control solenoid"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 8.050638591629603,
+          "left": 43.93086055925122,
+          "width": 7.998149351288568,
+          "height": 30.583820332454398
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "30"
+        },
+        "description": "(PBD) Power back door"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 13.570973576665784,
+          "left": 54.75912429638036,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "30"
+        },
+        "description": "EPKB"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 13.570973576665784,
+          "left": 59.863132861927504,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "ANTI THEFT HORN"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 13.570973576665784,
+          "left": 64.96714142747464,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "30"
+        },
+        "description": "DEALER OPT"
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 13.570973576665784,
+          "left": 70.07114999302179,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "30"
+        },
+        "description": "EPKB"
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.16625369838367,
+          "left": 25.10444747083353,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        }
+      },
+      {
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.16625369838367,
+          "left": 30.27248243628152,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        }
+      },
+      {
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.16625369838367,
+          "left": 35.440517401729515,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        }
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 55.16625369838367,
+          "left": 40.11635856094437,
+          "width": 2.2932677378534208,
+          "height": 22.97079204097922
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/horn-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 53.09977935159621,
+          "left": 45.13086055925124,
+          "width": 7.998149351288568,
+          "height": 30.583820332454398
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": "30"
+        },
+        "description": "(HEAD LAMP WASH) Headlight washer"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 59.22282628706945,
+          "left": 54.7899789417055,
+          "width": 6.436440060638295,
+          "height": 22.504051116309363
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-50",
+          "amp": "50"
+        },
+        "description": "(EPS) Electric power steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 59.22282628706945,
+          "left": 61.12715926182829,
+          "width": 6.436440060638295,
+          "height": 22.504051116309363
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-50",
+          "amp": "30"
+        },
+        "description": "(VDC SOL) Vehicle dynamics control solenoid"
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 59.22282628706945,
+          "left": 67.4643395819511,
+          "width": 6.436440060638295,
+          "height": 22.504051116309363
+        },
+        "kind": {
+          "type": "fuse-mpf2",
+          "format": "50-30-50",
+          "amp": "50"
+        },
+        "description": "(EPS) Electric power steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 17.233540547665484,
+          "left": 77.17244971817189,
+          "width": 13.348688032596652,
+          "height": 57.62259644945259
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "(HORN) Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/horn-relay",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      }
+    ],
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f55b0dd5_renault-koleos-2016.jpg"
+    },
+    "boxName": "Second mounting box in the engine compartment",
+    "imageClusters": [
+      "644323ad5aeef425e98ec28e"
+    ],
+    "boxTablesImages": [],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/1618efe1_renault-koleos-2016.jpg"
+    },
+    "templateId": "69bf0ab0dec51c2c625cdac9",
+    "boxAspectRatio": 0.29773622047244097,
+    "useAcronyms": true,
+    "boxScaleMultiplier": "1.3",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-renault-koleos-2016-genid-g2-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 6.83119543630349,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Double-acting windshield and rear washer pump (677) via steering column switch box (1519)"
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 11.80766406699609,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Fuse in the versión with heated steering wheel: f3 power supply circuits on the board"
+      },
+      {
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 16.784132697688687,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 21.760601328381284,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Accessory socket",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/cigarette-lighter-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 26.737069959073885,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 31.71353858976648,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated seats",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 42.24655501669255,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "format": "mini",
+          "type": "fuse",
+          "amp": 20
+        },
+        "description": "Heater, A/C Amplifier, Engine Restart Baypass Control Relay",
+        "relatedEntities": [
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO"
+        ]
+      },
+      {
+        "id": "8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 46.932984064614715,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 51.61941311253689,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 56.305842160459065,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated rear window",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 60.99227120838124,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Heated rear window",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 65.67870025630342,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Heated mirrors",
+        "relatedEntities": [
+          "DESEMPANADOR_ESPEJOS",
+          "CALENTADOR_ESPEJO_LATERAL"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 70.36512930422558,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS or brake lights"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 75.05155835214775,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        }
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 79.73798740006993,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Cigarette lighter",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet",
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/cigarette-lighter-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 84.42441644799212,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Interior lighting",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 89.11084549591428,
+          "left": 33.205117428988274,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Heater motor, resistor, A/C booster",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "RESISTENCIA_ELECTRICA"
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 6.83119543630349,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Audio system",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/radio-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 11.80766406699609,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Audio system, navigation control unit, all-round camera",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/radio-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 16.784132697688687,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Body electronics module (BCM), siren, multifunction switch",
+        "relatedEntities": [
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 21.760601328381284,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "22",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 26.737069959073885,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 31.71353858976648,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "extendedDescription": "Audio system",
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/radio-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 46.932984064614715,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Stop lamp switch, body electronics module (BCM)"
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 51.61941311253688,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "AWD, anti-theft antenna booster",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 56.30584216045906,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 60.99227120838123,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Body Electronics Module (BCM), multifunction switch",
+        "relatedEntities": [
+          "COMANDO_LUCES_VOLANTE"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 65.6787002563034,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Body Electronics Module (BCM), Electrical Parking Brake, Diagnostic Connector, 4WD, Instrument/Switch Illumination, Power Window Relay, Fold Mirror Relay, Mirror Open Relay",
+        "relatedEntities": [
+          "CONECTOR_OBD",
+          "DOBLE_TRACCION",
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 70.36512930422558,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Central locking, body electronics module (BCM)"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 75.05155835214775,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Glass washer"
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 79.73798740006993,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Central locking, body electronics module (BCM)"
+      },
+      {
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 84.4244164479921,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 89.11084549591428,
+          "left": 7.786463232778438,
+          "width": 16.658236589362353,
+          "height": 2.253048239688712
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Hazard signaling and direction indicators"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 44.65021290431891,
+          "left": 76.84242582140783,
+          "width": 6.0575405779499505,
+          "height": 8.853839895097263
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Interior lighting",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 44.65021290431891,
+          "left": 88.35175291951273,
+          "width": 6.0575405779499505,
+          "height": 8.853839895097263
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Heating",
+        "relatedEntities": [
+          "CALEFACCION"
+        ]
+      },
+      {
+        "id": "Spare 1",
+        "layout": {
+          "top": 3.320189960661474,
+          "left": 56.44391082748052,
+          "width": 6.0575405779499505,
+          "height": 8.853839895097263
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "20"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "Spare 2",
+        "layout": {
+          "top": 13.700553975603091,
+          "left": 56.44391082748052,
+          "width": 6.0575405779499505,
+          "height": 8.853839895097263
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "15"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "Spare 3",
+        "layout": {
+          "top": 35.07189165342407,
+          "left": 56.44391082748052,
+          "width": 6.0575405779499505,
+          "height": 8.853839895097263
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "10"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      },
+      {
+        "id": "Spare 4",
+        "layout": {
+          "top": 45.910212904318996,
+          "left": 56.44391082748052,
+          "width": 6.0575405779499505,
+          "height": 8.853839895097263
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false,
+          "amp": "5"
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ],
+        "extendedDescription": "Spare fuse"
+      }
+    ],
+    "processed": false,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/0e18f1eb_renault-koleos-2016.jpg"
+    },
+    "boxName": "Left side interior fuse panel",
+    "imageClusters": [
+      "647dec0689bec05891188963"
+    ],
+    "boxReferenceImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-pictures/67c5d494_renault-koleos-2016.jpg"
+    },
+    "templateId": "69bf0fafdec51c2c625d8588",
+    "templateRenameMap": null,
+    "boxAspectRatio": 1.9841269841269842,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/6e22066b_image.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/a0f208b3_image.jpg"
+      }
+    ],
+    "boxScaleMultiplier": "1",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-renault-koleos-2016-genid-g2-2.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "71",
+        "layout": {
+          "top": 56.89822718731109,
+          "left": 64.96673608506994,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Steering wheel angle sensor"
+      },
+      {
+        "id": "72",
+        "layout": {
+          "top": 50.90695276252793,
+          "left": 64.96673608506994,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument Cluster",
+        "relatedEntities": [
+          "TABLERO"
+        ],
+        "extendedDescription": "Instrument cluster"
+      },
+      {
+        "id": "73",
+        "layout": {
+          "top": 44.91567833774477,
+          "left": 64.96673608506994,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Audio System, Navigation Control Unit, Surround Camera",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/radio-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "74",
+        "layout": {
+          "top": 38.92440391296161,
+          "left": 64.96673608506994,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission Control Module (TCM)",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "75",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 55.81521883076511,
+          "left": 41.866736085069945,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        }
+      },
+      {
+        "id": "76",
+        "layout": {
+          "top": 49.82394440598195,
+          "left": 41.866736085069945,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C control unit, A/C amplifier"
+      },
+      {
+        "id": "77",
+        "layout": {
+          "top": 43.83266998119879,
+          "left": 41.866736085069945,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ],
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "id": "78",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 37.84139555641563,
+          "left": 41.866736085069945,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        }
+      },
+      {
+        "id": "79",
+        "layout": {
+          "top": 46.72797337241236,
+          "left": 18.566736085069945,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Oil pump relay",
+        "relatedEntities": [
+          "RELAY(protects=BOMBA_ACEITE)"
+        ]
+      },
+      {
+        "id": "80",
+        "layout": {
+          "top": 40.404461623188375,
+          "left": 18.566736085069945,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Audio System, Navigation Control Unit, Surround Camera",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/radio-fuse",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "81",
+        "layout": {
+          "top": 34.080949873964386,
+          "left": 18.566736085069948,
+          "width": 16.530997991903863,
+          "height": 3.3338179864244495
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Transmission Control Module (TCM)",
+        "relatedEntities": [
+          "MODULO_DE_TRANSMISION"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 13.148574321848473,
+          "left": 16.77771367726706,
+          "width": 26.288655850572148,
+          "height": 6.506854943856627
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Auxiliary relay"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 13.148574321848473,
+          "left": 53.0506872532719,
+          "width": 26.288655850572148,
+          "height": 6.506854943856627
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Ignition relay",
+        "relatedEntities": [
+          "RELAY(protects=ARRANQUE)"
+        ],
+        "extendedDescription": "Ignition",
+        "individualFusePages": [
+          {
+            "url": "/renault/koleos/info/fusebox/2016/starter-relay",
+            "urlWithAnchor": "/renault/koleos/info/fusebox/2016/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 72.92073848990972,
+          "left": 18.37928190472379,
+          "width": 30.280814713288493,
+          "height": 14.025965816153175
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": true
+        }
+      }
+    ],
+    "boxAspectRatio": 2.0168539325842696,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/d52bbad7_renault-koleos-2016.jpg"
+    },
+    "processed": false,
+    "boxName": "Right side interior fuse panel",
+    "templateId": "677462d13274e0cb640a785c",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/15fa2569_image.jpg"
+      }
+    ],
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-renault-koleos-2016-genid-g2-3.webp"
+  }
+]

@@ -3,6 +3,8 @@ import { prisma } from '@/lib/prisma';
 import { createToken, comparePassword } from '@/lib/auth';
 import { logAudit } from '@/lib/audit';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(request) {
   try {
     const { email, password } = await request.json();

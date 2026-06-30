@@ -1,0 +1,1210 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 77.59162561848328,
+          "left": 58.312793140466766,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F1",
+        "kind": {
+          "type": "fuse-shunt",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used."
+      },
+      {
+        "layout": {
+          "top": 71.83738293010109,
+          "left": 58.312793140466766,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F2",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Diagnostic socket - ABS calculator - Reverse lights - Heated mirrors.",
+        "relatedEntities": [
+          "CONECTOR_OBD",
+          "MODULO_ABS",
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 66.72250054042803,
+          "left": 58.312793140466766,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used."
+      },
+      {
+        "layout": {
+          "top": 61.714178200539834,
+          "left": 58.312793140466766,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Cluster - Overspeed warning - Speed sensor - Water detector in diesel filter.",
+        "relatedEntities": [
+          "SENSOR_DE_VELOCIDAD"
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.27961566151222,
+          "left": 58.312793140466766,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Cruise control - Brake switch - Clutch switch - Automatic gearbox - Stop lights.",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "RELAY(protects=FRENO)",
+          "RELAY(protects=EMBRAGUE)",
+          "CAJA_DE_TRANSMISION",
+          "CAJA_AUTOMATICA",
+          "LUZ_FRENO",
+          "TESTIGO_STOP"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/brake-light-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 45.73017073281155,
+          "left": 58.578108819694805,
+          "width": 16.58222995175234,
+          "height": 3.836161792254787
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Ceiling light - Cluster - Car radio.",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.50872829335364,
+          "left": 58.578108819694805,
+          "width": 16.58222995175234,
+          "height": 3.836161792254787
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Heated rear window.",
+        "relatedEntities": [
+          "LUNETA_TRASERA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 34.86104565475631,
+          "left": 58.578108819694805,
+          "width": 16.58222995175234,
+          "height": 3.836161792254787
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Cabin protection unit."
+      },
+      {
+        "layout": {
+          "top": 29.746163265083258,
+          "left": 58.578108819694805,
+          "width": 16.58222995175234,
+          "height": 3.836161792254787
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Cabin protection unit."
+      },
+      {
+        "layout": {
+          "top": 24.631280875410205,
+          "left": 58.578108819694805,
+          "width": 16.58222995175234,
+          "height": 3.836161792254787
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used."
+      },
+      {
+        "layout": {
+          "top": 19.196718336382588,
+          "left": 58.578108819694805,
+          "width": 16.58222995175234,
+          "height": 3.836161792254787
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Fan motor relay - Compressor relay.",
+        "relatedEntities": [
+          "RELAY(protects=COMPRESOR_DE_AC)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 13.868715847139827,
+          "left": 58.578108819694805,
+          "width": 16.58222995175234,
+          "height": 3.836161792254787
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Electric windows - Air button relay - Heated seats relay - Heated rear window switch - Air conditioning - Pressure switch.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "RELAY(protects=ASIENTO_TERMICO)",
+          "AIRE_ACONDICIONADO",
+          "PRESOSTATO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 77.2719454691287,
+          "left": 39.59183673469388,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Emergency lights.",
+        "relatedEntities": [
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 71.9672131147541,
+          "left": 39.59183673469388,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Electric windows.",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 66.72250054042803,
+          "left": 39.59183673469388,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used."
+      },
+      {
+        "layout": {
+          "top": 61.714178200539834,
+          "left": 39.59183673469388,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Heated seats.",
+        "relatedEntities": [
+          "ASIENTO_TERMICO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 56.27961566151222,
+          "left": 39.59183673469388,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Horn.",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/horn-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.2636231292405,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Rear fog light.",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 67.04218068978261,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Cruise control - Lights left on warning - Heated seats switch - Cluster light - Car radio - Heated rear window switch - Automatic gearbox lever - Emergency signal switch - Air conditioning front.",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "ESTEREO",
+          "PALANCA_DE_CAMBIOS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 61.50105810097013,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Headlight adjustment switch - Front left and right position lights.",
+        "relatedEntities": [
+          "LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_DELANTERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 55.95993551215766,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F21",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Rear left and right position lights - Headlight washer timer - License plate lights.",
+        "relatedEntities": [
+          "LUZ_POSICION(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))",
+          "LUZ_PATENTE"
+        ]
+      },
+      {
+        "layout": {
+          "top": 50.84505312248459,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F22",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used."
+      },
+      {
+        "layout": {
+          "top": 45.41049058345698,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F23",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Cigarette lighter.",
+        "relatedEntities": [
+          "ENCENDEDOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/cigarette-lighter-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 45.41049058345698,
+          "left": 25.432660280175035,
+          "width": 16.316404594624682,
+          "height": 4.2622950819672125
+        },
+        "id": "F23B",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        }
+      },
+      {
+        "layout": {
+          "top": 40.189048143999074,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F24",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Car radio.",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/radio-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.189048143999074,
+          "left": 25.432660280175035,
+          "width": 16.41640459462471,
+          "height": 4.2622950819672125
+        },
+        "id": "F24B",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        }
+      },
+      {
+        "layout": {
+          "top": 34.86104565475631,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F25",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Lights left on warning - Automatic gearbox warning - Electric mirrors - Turn indicators (Blinkers).",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO",
+          "ESPEJO_RETROVISOR_ELECTRICO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 29.85272331486811,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F26",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Wiper timer - Windshield wipers - Windshield washer pump.",
+        "relatedEntities": [
+          "TEMPORIZADOR(of=LIMPIA_PARABRISAS)",
+          "LIMPIA_PARABRISAS",
+          "BOMBA_LIMPIAPARABRISAS"
+        ]
+      },
+      {
+        "layout": {
+          "top": 24.52472082562535,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F27",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used."
+      },
+      {
+        "layout": {
+          "top": 18.983598236812878,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        },
+        "id": "F28",
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Cluster - Electric windows relay.",
+        "relatedEntities": [
+          "RELAY(protects=LEVANTAVIDRIOS)"
+        ]
+      },
+      {
+        "id": "F29",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 34.967605704541164,
+          "left": 39.34272207566208,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        }
+      },
+      {
+        "id": "F30",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 29.58306270888408,
+          "left": 39.34272207566208,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        }
+      },
+      {
+        "id": "F31",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 88.35419064675365,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        }
+      },
+      {
+        "id": "F32",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.59994795837147,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        }
+      },
+      {
+        "id": "F33",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 77.2719454691287,
+          "left": 16.923547180892914,
+          "width": 16.53061224489796,
+          "height": 4.2622950819672125
+        }
+      },
+      {
+        "id": "SH",
+        "kind": {
+          "type": "fuse-shunt",
+          "format": "ato",
+          "amp": ""
+        },
+        "layout": {
+          "top": 50.84505312248459,
+          "left": 50.0880070843976,
+          "width": 17.245519149822442,
+          "height": 4.155841941609367
+        }
+      }
+    ],
+    "boxName": "Fuse box in the instrument panel",
+    "boxDescription": "Driver's side, open the cover to access the fuses.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f123075e663e70004cd51bc/fragment-5f123075e663e70004cd51bc-baf8888be7.jpg",
+      "source": "61ba0af89704500004911084"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f123075e663e70004cd51bc/fragment-5f123075e663e70004cd51bc-fd190d4eab.jpg",
+        "source": "61ba0b039704500004911085"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f123075e663e70004cd51bc/fragment-5f123075e663e70004cd51bc-14dc97cea2.jpg",
+        "source": "61ba0b0f9704500004911086"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.2448979591836735,
+    "templateId": "619d005efaaf4100041b055b",
+    "templateRenameMap": {
+      "1": "F1",
+      "2": "F2",
+      "3": "F3",
+      "4": "F4",
+      "5": "F5",
+      "6": "F6",
+      "7": "F7",
+      "8": "F8",
+      "9": "F9",
+      "10": "F10",
+      "11": "F11",
+      "12": "F12",
+      "13": "F13",
+      "14": "F14",
+      "15": "F15",
+      "16": "F16",
+      "17": "F17",
+      "18": "F18",
+      "19": "F19",
+      "20": "F20",
+      "21": "F21",
+      "22": "F22",
+      "23": "F23",
+      "24": "F24",
+      "25": "F25",
+      "26": "F26",
+      "27": "F27",
+      "28": "F28"
+    },
+    "isTranslated": true,
+    "imageClusters": [
+      "61cccea043bb03000428c90e",
+      "61df0517a4866d000459d2f8",
+      "61d5fea19cf6d3000432e23c"
+    ],
+    "boxScaleMultiplier": "0.9",
+    "boxRotation": 90,
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-peugeot-expert-2005-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F01",
+        "layout": {
+          "top": 17.870853067124195,
+          "left": 8.923454496478838,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left high beam light.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F02",
+        "layout": {
+          "top": 17.179078041586166,
+          "left": 13.468319519530173,
+          "width": 9.754832244597985,
+          "height": 8.531891981635681
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Fuel pump.",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/fuel-pump-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F03",
+        "layout": {
+          "top": 16.02611966568945,
+          "left": 23.777403596207588,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Catalyst sensor."
+      },
+      {
+        "id": "F04",
+        "layout": {
+          "top": 16.02611966568945,
+          "left": 28.876520451338354,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Right low beam light.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F05",
+        "layout": {
+          "top": 16.02611966568945,
+          "left": 38.409651963104565,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Left low beam light.",
+        "relatedEntities": [
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F06",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 18.793219767841563,
+          "left": 43.39791845181944,
+          "width": 3.4363613588924693,
+          "height": 26.28745097044507
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 16.02611966568945,
+          "left": 48.27533457411844,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 15
+        },
+        "description": "Fog lights.",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/fog-light-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F08",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 17.870853067124195,
+          "left": 52.93104996358565,
+          "width": 5.2099672215466555,
+          "height": 27.20981767116244
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F09",
+        "layout": {
+          "top": 16.02611966568945,
+          "left": 58.473568284379965,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Immobilizer.",
+        "relatedEntities": [
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 49.92309591705283,
+          "left": 8.923454496478838,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Right high beam light.",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/headlight-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 49.92309591705283,
+          "left": 18.899987473908595,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "notUsed": true
+        },
+        "description": "Not used."
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 49.92309591705283,
+          "left": 28.100567886427154,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Headlight washers.",
+        "relatedEntities": [
+          "LAVA_FAROS"
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 49.92309591705283,
+          "left": 38.631352695936336,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Fan motor group 1-120 W."
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 49.92309591705283,
+          "left": 38.631352695936336,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Fan motor group 1-180 W."
+      },
+      {
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 50.61487094259085,
+          "left": 43.39791845181944,
+          "width": 3.4363613588924693,
+          "height": 26.28745097044507
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 49.92309591705283,
+          "left": 48.38618494053432,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse-shunt",
+          "format": "ato"
+        },
+        "description": "Shunt."
+      },
+      {
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 50.384279267411515,
+          "left": 52.93104996358565,
+          "width": 5.2099672215466555,
+          "height": 27.20981767116244
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 49.92309591705283,
+          "left": 58.473568284379965,
+          "width": 4.212313923803677,
+          "height": 22.597984167575582
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Trailer hitch."
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 29.86162017645001,
+          "left": 79.53513790339835,
+          "width": 11.971839572915698,
+          "height": 8.070708631276993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "Engine running relay."
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 40.46883723469978,
+          "left": 79.53513790339835,
+          "width": 11.971839572915698,
+          "height": 8.070708631276993
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 70
+        },
+        "description": "ABS computer - Anti-theft.",
+        "relatedEntities": [
+          "MODULO_ABS",
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "F21",
+        "description": "Air button - Air conditioning.",
+        "layout": {
+          "top": 51.76782931848757,
+          "left": 79.53513790339835,
+          "width": 11.971839572915698,
+          "height": 8.070708631276993
+        },
+        "extendedDescription": "No identificado",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        },
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/peugeot/expert/info/fusebox/2005/air-conditioning-fuse",
+            "urlWithAnchor": "/peugeot/expert/info/fusebox/2005/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "description": "Fan motor group.",
+        "layout": {
+          "top": 62.60563805191668,
+          "left": 79.53513790339835,
+          "width": 11.971839572915698,
+          "height": 8.070708631276993
+        },
+        "extendedDescription": "No identificado",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 30
+        }
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "down"
+        },
+        "layout": {
+          "top": 30.322803526808702,
+          "left": 33.19968474155792,
+          "width": 4.5448650230513294,
+          "height": 32.51342620028731
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Fuse box in the engine compartment",
+    "boxDescription": "To access the box located in the engine compartment (next to the battery), release the cover. After the intervention, carefully close the cover.",
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f123075e663e70004cd51bc/fragment-5f123075e663e70004cd51bc-2b0ab30391.jpg",
+      "source": "61ba0b279704500004911087"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/manual-screenshots/5f123075e663e70004cd51bc/fragment-5f123075e663e70004cd51bc-b2a64dca91.jpg",
+        "source": "61ba0b319704500004911088"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.48073394495412847,
+    "templateId": "61ef4908ecadf10004181345",
+    "templateRenameMap": {
+      "1": "F02",
+      "2": "F04",
+      "3": "F05",
+      "4": "F12",
+      "5": "F16",
+      "6": "F09",
+      "7": "F03",
+      "8": "F18",
+      "9": "F14",
+      "10": "F07",
+      "11": "F11",
+      "12": "F01",
+      "13": "F10",
+      "MF1": "F19",
+      "MF2": "F20",
+      "MF3": "F21",
+      "MF4": "F22"
+    },
+    "isTranslated": true,
+    "boxScaleMultiplier": "0.6",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-peugeot-expert-2005-genid-g1-1.webp"
+  }
+]

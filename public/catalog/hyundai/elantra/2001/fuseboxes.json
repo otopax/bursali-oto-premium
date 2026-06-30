@@ -1,0 +1,1538 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "Connector 1",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 1.5771414620535713,
+          "left": 8.975753744567154,
+          "width": 17.486327037358862,
+          "height": 21.577142857142857
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Connector 2",
+        "kind": {
+          "type": "connector",
+          "format": "pins-10-lg"
+        },
+        "layout": {
+          "top": 43.085712890625,
+          "left": 5.747508753054748,
+          "width": 13.720041213927722,
+          "height": 19.200000000000003
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "F1",
+        "layout": {
+          "top": 66.06964417995968,
+          "left": 9.53911933180752,
+          "width": 3.4777549739917513,
+          "height": 5.518988491308865
+        },
+        "description": "Spare ",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "extendedDescription": "Spare fuse",
+        "unmappedId": "SPARE",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 66.06964417995968,
+          "left": 15.729928471537766,
+          "width": 3.4777549739917513,
+          "height": 5.518988491308865
+        },
+        "description": "Spare",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "extendedDescription": "Spare fuse",
+        "unmappedId": "SPARE2",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 46.02079809235512,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F3",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 40
+        },
+        "description": "Ignition switch, Start relay",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ],
+        "extendedDescription": "Ignition switch; Starter system"
+      },
+      {
+        "layout": {
+          "top": 52.87756978364723,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F4",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Generator, Engine control relay, Fuel pump relay, PCM",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "RELAY(protects=ECU)",
+          "RELAY(protects=BOMBA_DE_COMBUSTIBLE)",
+          "RELAY(protects=BOMBA(fluid=COMBUSTIBLE))",
+          "PCM"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/alternator-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/fuel-pump-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 59.73434147493934,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F5",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Radiator fan relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_RADIADOR)"
+        ],
+        "extendedDescription": "Radiator fan",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/cooling-fan-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 66.59111316623145,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F6",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 20
+        },
+        "description": "Condenser fan relay. 1",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DEL_CONDENSADOR)"
+        ],
+        "extendedDescription": "AC condenser fan"
+      },
+      {
+        "layout": {
+          "top": 73.44788485752356,
+          "left": 24.782703866898785,
+          "width": 11.654666589411192,
+          "height": 6.154370688769509
+        },
+        "id": "F7",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 50
+        },
+        "description": "Fusible link (P/WDW), Tail lamp relay, Power connector",
+        "relatedEntities": [
+          "RELAY(protects=LUCES_TRASERAS)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/tail-light-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/tail-light-fuse#problems-article",
+            "title": "Tail light fuse",
+            "problemsTitle": "View problems with the tail light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 40.12731286640346,
+          "width": 3.2461465525299165,
+          "height": 5.5700216274126975
+        },
+        "id": "F8",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Injectors",
+        "relatedEntities": [
+          "INYECTOR"
+        ],
+        "extendedDescription": "Fuel injectors"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 46.13119015726039,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F9",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "PCM, Heated oxygen sensor, SMATRA, Heater relay, Glow plug relay",
+        "relatedEntities": [
+          "PCM",
+          "RELAY(protects=PROP_OR(0=CALEFACCION,1=CALEFACCION))",
+          "RELAY(protects=CALEFACCION_DE_ASIENTO)",
+          "RELAY(protects=PRECALENTADOR)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 52.34115688780608,
+          "width": 3.2461465525299165,
+          "height": 5.5700216274126975
+        },
+        "id": "F10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "DRL control",
+        "extendedDescription": "Daytime running lights"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 58.345034178663006,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Head lamp washer",
+        "extendedDescription": "Headlight washer"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 64.45195618936432,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Front fog lamp relay",
+        "relatedEntities": [
+          "RELAY(protects=LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)))",
+          "RELAY(protects=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))"
+        ],
+        "extendedDescription": "Front fog lights",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 70.55887820006562,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Siren, PCM",
+        "relatedEntities": [
+          "PCM"
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 76.66580021076693,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "A/C relay, Horn relay",
+        "relatedEntities": [
+          "RELAY(protects=AIRE_ACONDICIONADO)",
+          "RELAY(protects=BOCINA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/horn-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          },
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/air-conditioning-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 82.77272222146823,
+          "width": 3.4522359922186645,
+          "height": 5.5700216274126975
+        },
+        "id": "F15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Head lamp (Hight)",
+        "extendedDescription": "Headlights high beam"
+      },
+      {
+        "layout": {
+          "top": 76.88628223372459,
+          "left": 88.98268895201392,
+          "width": 3.2461465525299165,
+          "height": 5.5700216274126975
+        },
+        "id": "F16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Head lamp (Low)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "MARCHA_LOW",
+          "LAMPARA"
+        ],
+        "extendedDescription": "Headlights low beam",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 51.62877646326825,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "id": "F17",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS control (Motor)",
+        "extendedDescription": "Anti-lock braking system"
+      },
+      {
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 61.89196007600363,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "id": "F18",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "ABS control (Solenoid)",
+        "extendedDescription": "Anti-lock braking system solenoid"
+      },
+      {
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 72.15514368873902,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "id": "F19",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Blower relay",
+        "relatedEntities": [
+          "RELAY(protects=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "F20",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 86.89516639931276,
+          "left": 82.41832730147439,
+          "width": 9.170980066149216,
+          "height": 7.033840988907932
+        },
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 83.30214689237071,
+          "left": 7.623845825656597,
+          "width": 17.815565409840328,
+          "height": 9.053300110237636,
+          "rotation": 45
+        },
+        "id": "F21",
+        "kind": {
+          "amp": 120,
+          "type": "fuse",
+          "format": "cartridge-flf"
+        },
+        "description": "Generator",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "extendedDescription": "Battery and charging system",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/alternator-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 90.09697718345495,
+          "left": 40.32963807690213,
+          "width": 9.631692820030427,
+          "height": 6.533165469292721
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 1",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 35.07073409262576,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 2",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 42.379122059521904,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 3",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 49.68751002641805,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 4",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 56.995897993314195,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 5",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 64.30428596021034,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 6",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 71.61267392710648,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 7",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 78.92106189400263,
+          "width": 6.725510398984184,
+          "height": 16.822857142857142
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "Other 8",
+        "kind": {
+          "type": "other",
+          "format": ""
+        },
+        "layout": {
+          "top": 1.028570033482144,
+          "left": 88.60579686853984,
+          "width": 7.801592062821654,
+          "height": 19.93142857142857
+        },
+        "relatedEntities": []
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 20.80853111281294,
+          "left": 32.51868295531486,
+          "width": 16.988200467530824,
+          "height": 8.9565694695754
+        },
+        "description": "H/LP (LO)",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "amp": "0",
+          "notUsed": false
+        },
+        "extendedDescription": "Headlights low beam",
+        "unmappedId": "H/LP(LO)"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 20.80853111281294,
+          "left": 53.41276307080928,
+          "width": 16.988200467530824,
+          "height": 8.9565694695754
+        },
+        "description": "RAD",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "Audio system",
+        "unmappedId": "RAD_R",
+        "relatedEntities": [
+          "RADIADOR"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 31.429526141025743,
+          "left": 24.926196801768015,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "description": "COND 1",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "AC condenser fan",
+        "unmappedId": "COND 1"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 31.42952614102574,
+          "left": 41.29972900122946,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "description": "F/PUMP",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "Fuel pump",
+        "unmappedId": "F/PUMP"
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 31.42952614102574,
+          "left": 57.673261200690895,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "description": "HORN",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "amp": "",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "unmappedId": "HORN_R",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/horn-relay",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 45.77452324141796,
+          "left": 41.29972900122946,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "description": "A/CON",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "Air conditioning",
+        "unmappedId": "A/CON"
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 45.77452324141796,
+          "left": 57.673261200690895,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "description": "WIPER",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cream",
+          "amp": "",
+          "notUsed": false
+        },
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ],
+        "extendedDescription": "Wipers",
+        "unmappedId": "WIPER"
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 60.11952034181018,
+          "left": 41.29972900122946,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "description": "H/LP (HI)",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "yellow",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "Headlights high beam",
+        "unmappedId": "H/LP(HI)",
+        "relatedEntities": [
+          "LUCES_DELANTERAS",
+          "MARCHA_HIGH"
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 60.11952034181018,
+          "left": 57.673261200690895,
+          "width": 12.654784037125221,
+          "height": 12.293383868343607
+        },
+        "description": "F/FOG",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "cyan",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "Front fog lights",
+        "unmappedId": "F/FOG_R"
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 22.454245398527224,
+          "left": 74.76409855825852,
+          "width": 20.11288955192281,
+          "height": 13.311510798901805
+        },
+        "description": "START",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "Starter system",
+        "unmappedId": "START"
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 40.34210511917533,
+          "left": 74.76409855825852,
+          "width": 20.11288955192281,
+          "height": 13.311510798901805
+        },
+        "description": "MAIN",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "Main fuse",
+        "unmappedId": "MAIN"
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 58.229964839823424,
+          "left": 74.76409855825852,
+          "width": 20.11288955192281,
+          "height": 13.311510798901805
+        },
+        "description": "COND 2",
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "cyan",
+          "amp": "",
+          "notUsed": false
+        },
+        "extendedDescription": "AC condenser fan",
+        "unmappedId": "COND2"
+      }
+    ],
+    "boxName": "Engine Compartment",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/6100528babf9ed0004c50dca/fragment-6100528babf9ed0004c50dca-f448a65ec0.jpg",
+      "source": "61114e1752034d00041b3a3e"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/6100528babf9ed0004c50dca/fragment-6100528babf9ed0004c50dca-1ca2b090dc.jpg",
+        "source": "61114e1c52034d00041b3a3f"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.4712041884816753,
+    "templateId": "614cd4823f549d0004e394b0",
+    "templateRenameMap": {
+      "BATT": "F21",
+      "BATT2": "F7",
+      "COND": "F6",
+      "RAD": "F5",
+      "ECU": "F4",
+      "IGN": "F3",
+      "ABS.1": "F17",
+      "ABS.2": "F18",
+      "BLOWER": "F19",
+      "INJ.": "F8",
+      "SNSR": "F9",
+      "DRL": "F10",
+      "H/LP WASHER": "F11",
+      "F/FOG": "F12",
+      "ECU2": "F13",
+      "HORN & A/C": "F14",
+      "H/LP (HI)": "F15",
+      "H/LP (LO)": "F16"
+    },
+    "imageClusters": [
+      "61dc9198d53fbf00041bb730"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-elantra-2001-genid-g3-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 7.741116751269035,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "T/SIG",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Turn signal lamps, Back-up lamp",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_DIRECCIONAL)",
+          "LUZ_DIRECCIONAL",
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.00507614213198,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "CLUSTER",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Pre-excitation resistor, Instrument cluster (IND)"
+      },
+      {
+        "layout": {
+          "top": 26.269035532994923,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "A/BAG",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "SRS control"
+      },
+      {
+        "layout": {
+          "top": 35.53299492385787,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "HAZARD",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Hazard relay, Hazard lamps",
+        "relatedEntities": [
+          "RELAY(protects=LUZ_BALIZA)",
+          "LAMPARA(of=LUZ_BALIZA)",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 44.79695431472081,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.883248730964468
+        },
+        "id": "A/C SW",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "A/C Control",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.18781725888325,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "TAIL-RH",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Short connector, Illumination lamps, Tail lamp (RH), Head lamp washer",
+        "relatedEntities": [
+          "LAMPARA(of=BACKLIGHT)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.45177664974619,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "TAIL-LH",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Tail lamp (LH), Exterior lamps",
+        "relatedEntities": [
+          "LUZ_EXTERIOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.71573604060913,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.883248730964468
+        },
+        "id": "START",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "B/Alarm relay",
+        "extendedDescription": "Anti-theft system"
+      },
+      {
+        "layout": {
+          "top": 81.97969543147208,
+          "left": 65.58704453441295,
+          "width": 19.230769230769234,
+          "height": 8.883248730964468
+        },
+        "id": "AUDIO",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Digital clock, Power outside mirror & mirror folding, Audio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 7.741116751269035,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "ECU",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Cruise control, PCM, Vehicle speed sensor, Ignition coil",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "PCM",
+          "SENSOR_DE_VELOCIDAD",
+          "BOBINA_DE_IGNICION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.00507614213198,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "ABS",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "ABS control"
+      },
+      {
+        "layout": {
+          "top": 35.53299492385787,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "RRHTR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Defogger relay",
+        "relatedEntities": [
+          "RELAY(protects=DESEMPANADOR)"
+        ],
+        "extendedDescription": "Rear window defogger"
+      },
+      {
+        "layout": {
+          "top": 44.79695431472081,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.883248730964468
+        },
+        "id": "AMP",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Power antenna",
+        "relatedEntities": [
+          "ANTENA_ELECTRICA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 54.18781725888325,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "S/ROOF",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Power door lock control, Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/sunroof-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 63.45177664974619,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "id": "STOP",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Stop lamps, Power window, Power outside mirror folding",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO",
+          "LEVANTAVIDRIOS"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/brake-light-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 72.71573604060913,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.883248730964468
+        },
+        "id": "HTDMIR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear window & outside mirror defogger, A/C control",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR"
+        ]
+      },
+      {
+        "layout": {
+          "top": 81.97969543147208,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.883248730964468
+        },
+        "id": "C/LIGHT",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Cigarette lighter, Power outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "extendedDescription": "Cigar lighter / power outlet; Auxiliary power outlet",
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/cigarette-lighter-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 7.741116751269035,
+          "left": 25.506072874493928,
+          "width": 19.02834008097166,
+          "height": 8.756345177664974
+        },
+        "id": "RRFOG",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Rear fog lamps",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/fog-light-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 17.00507614213198,
+          "left": 25.506072874493928,
+          "width": 19.02834008097166,
+          "height": 8.756345177664974
+        },
+        "id": "IGN",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Head lamp, Head lamp washer, Fuel filter heating",
+        "relatedEntities": [
+          "LAMPARA(of=LUCES_DELANTERAS)",
+          "LUCES_DELANTERAS",
+          "CALENTADOR_FILTRO_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/headlight-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 26.269035532994923,
+          "left": 25.506072874493928,
+          "width": 19.02834008097166,
+          "height": 8.756345177664974
+        },
+        "id": "R/WIPER",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Rear wiper & washer",
+        "extendedDescription": "Rear wiper; Windshield washer"
+      },
+      {
+        "layout": {
+          "top": 35.53299492385787,
+          "left": 25.506072874493928,
+          "width": 19.02834008097166,
+          "height": 8.756345177664974
+        },
+        "id": "F/WIPER",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Front wiper & washer",
+        "extendedDescription": "Front wipers; Windshield washer"
+      },
+      {
+        "layout": {
+          "top": 44.79695431472081,
+          "left": 25.506072874493928,
+          "width": 19.02834008097166,
+          "height": 8.883248730964468
+        },
+        "id": "S/HTR",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "Seat warmer",
+        "relatedEntities": [
+          "CALEFACCION_DE_ASIENTO"
+        ],
+        "extendedDescription": "Seat heater"
+      },
+      {
+        "layout": {
+          "top": 54.18781725888325,
+          "left": 25.506072874493928,
+          "width": 19.02834008097166,
+          "height": 8.756345177664974
+        },
+        "id": "A/CON",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Blower & A/C control, ETACM, Sunroof controller, Electronic chrome mirror"
+      },
+      {
+        "layout": {
+          "top": 63.45177664974619,
+          "left": 25.506072874493928,
+          "width": 19.02834008097166,
+          "height": 8.756345177664974
+        },
+        "id": "ROOMLP",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Door lamps, Instrument cluster, Data link connector, Multipurpose check connector, Room lamps, ETACM, Audio, Power connector",
+        "relatedEntities": [
+          "TESTIGO_APERTURA_DE_PUERTAS",
+          "TABLERO",
+          "CONECTOR_OBD",
+          "LUZ_DE_HABITACULO",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/hyundai/elantra/info/fusebox/2001/radio-fuse",
+            "urlWithAnchor": "/hyundai/elantra/info/fusebox/2001/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 33.54906937394246,
+          "left": 0.5572453194681355,
+          "width": 9.31174089068826,
+          "height": 13.578680203045684
+        },
+        "id": "P/WINDOW",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "amp": 30
+        },
+        "description": "Power window",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ],
+        "extendedDescription": "Power windows"
+      },
+      {
+        "id": "A/BAG IND",
+        "layout": {
+          "top": 26.269035532994923,
+          "left": 45.546558704453446,
+          "width": 19.230769230769234,
+          "height": 8.756345177664974
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Instrument cluster (Air bag IND)"
+      },
+      {
+        "id": "SPARE1",
+        "layout": {
+          "top": 26.297725700225946,
+          "left": 17.670176028825704,
+          "width": 4.792963928952297,
+          "height": 11.893345485411249
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "SPARE FUSE 1",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE(numero=UNO,protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE_DE_REPUESTO(numero=UNO)"
+        ]
+      },
+      {
+        "id": "SPARE2",
+        "layout": {
+          "top": 39.79771610208747,
+          "left": 17.670176028825704,
+          "width": 4.792963928952297,
+          "height": 11.893345485411249
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "20"
+        },
+        "description": "SPARE FUSE 2",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE(numero=DOS,protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE_DE_REPUESTO(numero=DOS)"
+        ]
+      },
+      {
+        "id": "SPARE3",
+        "layout": {
+          "top": 91.58593275961515,
+          "left": 46.013701885631896,
+          "width": 18.972148885436177,
+          "height": 3.1298277593187436
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "30"
+        },
+        "description": "SPARE FUSE 3",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE(numero=TRES,protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE_DE_REPUESTO(numero=TRES)"
+        ]
+      },
+      {
+        "id": "SPARE4",
+        "layout": {
+          "top": 91.58593275961515,
+          "left": 65.78467809256013,
+          "width": 18.972148885436177,
+          "height": 3.1298277593187436
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "10"
+        },
+        "description": "SPARE FUSE 4",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE(numero=CUATRO,protects=FUSIBLE_DE_REPUESTO)",
+          "FUSIBLE_DE_REPUESTO(numero=CUATRO)"
+        ]
+      }
+    ],
+    "boxName": "Inner Panel",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/6100528babf9ed0004c50dca/fragment-6100528babf9ed0004c50dca-2786c7fb71.jpg",
+      "source": "61114e3052034d00041b3a40"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/6100528babf9ed0004c50dca/fragment-6100528babf9ed0004c50dca-8da6a63e12.jpg",
+        "source": "61114e3752034d00041b3a41"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 1.5951417004048583,
+    "templateId": "614e27f69c683900049ed0ae",
+    "imageClusters": [
+      "61dc91dbd53fbf00041bb733"
+    ],
+    "boxScaleMultiplier": "0.8",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-hyundai-elantra-2001-genid-g3-1.webp"
+  }
+]
