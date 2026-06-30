@@ -79,5 +79,30 @@ export default async function sitemap() {
     console.warn("Sitemap: Failed to load fault codes", e);
   }
 
-  return [...routes, ...manufacturerRoutes, ...vehicleRoutes, ...faultRoutes];
+  // 5. Multi-Lingual Programmatic SEO Pages (Brands & Services)
+  const seoLocales = ['tr', 'en', 'ru', 'uk'];
+  const seoBrands = ['bmw', 'mercedes', 'audi', 'porsche', 'volkswagen', 'land-rover', 'volvo', 'range-rover'];
+  let programmaticRoutes = [];
+
+  seoLocales.forEach((locale) => {
+    // Brand Service Pages
+    seoBrands.forEach((brand) => {
+      programmaticRoutes.push({
+        url: `${baseUrl}/${locale}/markalar/${brand}-servisi-fethiye`,
+        lastModified: new Date().toISOString(),
+        changeFrequency: 'weekly',
+        priority: 0.9,
+      });
+    });
+
+    // Transmission/Gearbox Service Pages
+    programmaticRoutes.push({
+      url: `${baseUrl}/${locale}/hizmetler/otomatik-sanziman-tamiri-fethiye`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'weekly',
+      priority: 0.9,
+    });
+  });
+
+  return [...routes, ...manufacturerRoutes, ...vehicleRoutes, ...faultRoutes, ...programmaticRoutes];
 }
