@@ -1,0 +1,2797 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 14.037981407702523,
+          "left": 23.216283924843445,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Mirrors",
+        "relatedEntities": [
+          "ESPEJO_ELECTRICO"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 14.037981407702523,
+          "left": 36.47306889352821,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electric Power Steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 14.037981407702523,
+          "left": 49.62546972860127,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cruise Control Switch, Passenger Airbag Status Indicator, DSC Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=CRUISE_CONTROL)"
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 13.811420982735722,
+          "left": 62.00417536534447,
+          "width": 17.432150313152402,
+          "height": 21.248339973439574
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Heating Ventilation Air Conditioning Blower - High Speed Relay",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "RELAY(protects=VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA))"
+        ]
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 14.037981407702523,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Instrument Panel Cluster, Theft Deterrent System",
+        "relatedEntities": [
+          "TABLERO",
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 20.810889774236376,
+          "left": 23.216283924843445,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "OnStar R"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 20.986036311272667,
+          "left": 49.79511837753537,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Airbag (Ignition)",
+        "relatedEntities": [
+          "AIRBAG",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/starter-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 20.810889774236376,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heating Ventilation Air Conditioning Control Diagnostic Link Connector (Battery)"
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 27.716600265604235,
+          "left": 23.216283924843445,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Adjustable Pedals",
+        "relatedEntities": [
+          "REGULACION_ELECTRICA_PEDALES"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 27.716600265604235,
+          "left": 36.47306889352821,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Windshield Wiper/Washer Switch",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 27.716600265604235,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Ignition Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 34.4895086321381,
+          "left": 18.101461377870585,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Steering Wheel Controls Backlighting",
+        "relatedEntities": [
+          "BACKLIGHT(of=COMANDOS_VOLANTE)"
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 34.6223107569721,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Audio System",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/radio-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 41.39521912350596,
+          "left": 18.101461377870585,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lamps",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 42.49667994687915,
+          "left": 42.79749478079332,
+          "width": 7.933194154488518,
+          "height": 9.163346613545817
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Power Windows (Sedan)",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "TIPO_DE_VEHICULO"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 41.39521912350596,
+          "left": 53.59206680584553,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heating Ventilation Air Conditioning Control (Ignition)",
+        "relatedEntities": [
+          "COMANDO_CLIMATIZADOR",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/starter-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 41.39521912350596,
+          "left": 66.64008350730681,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heating Ventilation Air Conditioning Blower Switch"
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 48.433731739707824,
+          "left": 18.101461377870585,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Door Locks",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PUERTA)"
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 48.433731739707824,
+          "left": 31.149478079331963,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Sunroof, Heated Seat, Power Windows (Coupe, Retractable Hardtop), Automatic Dimming Rearview Mirror, Compass",
+        "relatedEntities": [
+          "TECHO_SOLAR",
+          "CALEFACCION_DE_ASIENTO",
+          "CALEFACCION_DE_ASIENTO(of=ASIENTO)",
+          "BRUJULA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/sunroof-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 20.986036311272667,
+          "left": 36.47306889352821,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 34.6223107569721,
+          "left": 31.149478079331963,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 48.433731739707824,
+          "left": 53.59206680584553,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 48.30092961487383,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 68.88525896414346,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 75.65816733067733,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 82.5638778220452,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.3776892430278926
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 89.46958831341306,
+          "left": 82.92400835073062,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO"
+        ]
+      },
+      {
+        "id": "FUSE PULLER",
+        "layout": {
+          "top": 76.36122177954847,
+          "left": 67.74530271398747,
+          "width": 10.125260960334028,
+          "height": 12.217795484727755
+        },
+        "kind": {
+          "type": "fusepuller",
+          "notUsed": false
+        },
+        "description": "Fuse Puller"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 48.433731739707824,
+          "left": 66.64008350730681,
+          "width": 7.991022964509407,
+          "height": 3.244887118193895
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "REAR WIPER",
+        "kind": {
+          "notUsed": true
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Instrument Panel Fuse Block",
+    "boxDescription": "The instrument panel fuse block is located on the passenger side of the vehicle, on the lower portion of the instrument panel console near the floor.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-1360fce59c.jpg",
+      "source": "611b97dccebfdb000494090b"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-827f2650e2.jpg",
+        "source": "611b97e0cebfdb000494090c"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-03ceed7fec.jpg",
+        "source": "611b97e2cebfdb000494090d"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-e519a46e03.jpg",
+        "source": "611b97ebcebfdb000494090e"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.8349514563106796,
+    "templateId": "6160303d974f6c000496f278",
+    "templateRenameMap": {
+      "POWER MIRRORS": "1",
+      "EPS": "2",
+      "RUN/CRANK": "3",
+      "HVAC BLOWER HIGH": "R1",
+      "CLUSTER/ THEFT": "4",
+      "ONSTAR": "5",
+      "AIRBAG (IGN)": "7",
+      "HVAC CTRL (BATT)": "8",
+      "PEDAL": "9",
+      "WIPER SW": "10",
+      "IGN SENSOR": "11",
+      "STR/WHL ILLUM": "12",
+      "RADIO": "14",
+      "INTERIOR LIGHTS": "15",
+      "POWER WINDOWS": "20",
+      "HVAC CTRL (IGN)": "16",
+      "HVAC BLOWER": "17",
+      "DOOR LOCK": "18",
+      "ROOF/HEAT SEAT": "19",
+      "NOT INSTALLED1": "6",
+      "NOT INSTALLED2": "13",
+      "NOT INSTALLED3": "21",
+      "AIRBAG (BATT)": "23",
+      "SPARE FUSE HOLDER1": "24",
+      "SPARE FUSE HOLDER2": "25",
+      "SPARE FUSE HOLDER3": "26",
+      "SPARE FUSE HOLDER4": "27",
+      "NOT INSTALLED4": "22"
+    },
+    "boxScaleMultiplier": "0.9",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-pontiac-g6-2008-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 35.08997429305913,
+          "left": 18.88822474596533,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Air Conditioner Clutch",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/air-conditioning-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 35.08997429305913,
+          "left": 23.610280932456664,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electronic Throttle Control",
+        "relatedEntities": [
+          "ELECTRONIC_THROTLE_CONTROL"
+        ]
+      },
+      {
+        "id": "3",
+        "layout": {
+          "top": 60.66838046272493,
+          "left": 23.67005379557681,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module (IGN 1) (LZ4,LZ9)"
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 60.66838046272493,
+          "left": 26.001195457262405,
+          "width": 1.1954572624028692,
+          "height": 7.011311053984588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Transmission Control Module Ignition 1"
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 67.22365038560412,
+          "left": 28.332337118947997,
+          "width": 1.1356843992827257,
+          "height": 7.1398457583547685
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Mass Airflow Sensor (LY7)"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 80.20565552699229,
+          "left": 28.332337118947997,
+          "width": 1.1356843992827257,
+          "height": 7.4398457583547675
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Emission"
+      },
+      {
+        "id": "7",
+        "layout": {
+          "top": 27.892030848329046,
+          "left": 35.146443514644346,
+          "width": 1.1954572624028692,
+          "height": 7.1398457583547685
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Left Headlamp Low Beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_IZQUIERDO))",
+          "LUZ_BAJA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 60.66838046272493,
+          "left": 40.04781829049611,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/horn-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 21.079691516709513,
+          "left": 46.68260609683203,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right Headlamp Low Beam",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_BAJA(ubicacion=LADO_DERECHO))",
+          "LUZ_BAJA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 40.87403598971722,
+          "left": 44.59055588762701,
+          "width": 1.1954572624028692,
+          "height": 7.411311053984587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Front Fog Lamps",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/fog-light-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 80.20565552699229,
+          "left": 44.65032875074716,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Left Headlamp High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 80.20565552699229,
+          "left": 46.981470412432756,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right Headlamp High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA(ubicacion=LADO_DERECHO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 80.20565552699229,
+          "left": 51.64375373580394,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module (Battery) (LE5, LY7)"
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 14.010282776349614,
+          "left": 53.73580394500897,
+          "width": 1.1356843992827257,
+          "height": 7.411311053984587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Windshield Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 53.98457583547558,
+          "left": 60.848774656306034,
+          "width": 1.1356843992827257,
+          "height": 7.411311053984587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Antilock Brake System (IGN 1)",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/starter-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 53.98457583547558,
+          "left": 63.12014345487149,
+          "width": 1.1356843992827257,
+          "height": 7.411311053984587
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module (IGN 1) (LE5, LY7)"
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 13.505912596401037,
+          "left": 68.32038254632397,
+          "width": 3.9081888822474604,
+          "height": 7.668637532133683
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 1",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/cooling-fan-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "layout": {
+          "top": 24.2435732647815,
+          "left": 68.32038254632397,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 2",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/cooling-fan-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "19",
+        "layout": {
+          "top": 35.04550128534706,
+          "left": 68.32038254632397,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Run Relay, Heating, Ventilation, Air Conditioning Blower",
+        "relatedEntities": [
+          "CALEFACCION",
+          "VENTILACION",
+          "VENTILADOR_DE_CLIMATIZADOR"
+        ]
+      },
+      {
+        "id": "20",
+        "layout": {
+          "top": 62.60616966580974,
+          "left": 68.32038254632397,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Body Control Module 1",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "21",
+        "layout": {
+          "top": 73.05340616966579,
+          "left": 68.32038254632397,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Body Control Module Run/Crank"
+      },
+      {
+        "id": "22",
+        "layout": {
+          "top": 24.2435732647815,
+          "left": 72.26539151225344,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Rear Electrical Center 1"
+      },
+      {
+        "id": "23",
+        "layout": {
+          "top": 35.04550128534706,
+          "left": 72.26539151225344,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Rear Electrical Center 2"
+      },
+      {
+        "id": "24",
+        "layout": {
+          "top": 62.60616966580974,
+          "left": 72.26539151225344,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Antilock Brake System",
+        "relatedEntities": [
+          "SISTEMA_ABS"
+        ]
+      },
+      {
+        "id": "25",
+        "layout": {
+          "top": 73.05340616966579,
+          "left": 72.26539151225344,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Body Control Module 2",
+        "relatedEntities": [
+          "MODULO_CARROCERIA",
+          "CARROCERIA"
+        ]
+      },
+      {
+        "id": "26",
+        "layout": {
+          "top": 79.5629820051414,
+          "left": 14.263897190675436,
+          "width": 3.7081888822474602,
+          "height": 8.297172236503862
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/starter-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "41",
+        "layout": {
+          "top": 26.735218508997427,
+          "left": 81.41063956963539,
+          "width": 4.482964734010759,
+          "height": 22.10796915167095
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "high-current-mega",
+          "notUsed": false
+        },
+        "description": "Electric Power Steering",
+        "relatedEntities": [
+          "DIRECCION_ELECTROASISTIDA"
+        ]
+      },
+      {
+        "id": "42",
+        "layout": {
+          "top": 35.08997429305913,
+          "left": 21.338912133891213,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Transmission Control Module Battery"
+      },
+      {
+        "id": "43",
+        "layout": {
+          "top": 60.66838046272493,
+          "left": 30.723251643753734,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Ignition Module (LE5, LZ4, LZ9), Odd Cylinder Injectors/Ignition Coils (LY7)"
+      },
+      {
+        "id": "44",
+        "layout": {
+          "top": 60.66838046272493,
+          "left": 33.054393305439326,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Injectors (LE5, LZ4, LZ9), Even Cylinder Injectors/Ignition Coils (LY7)"
+      },
+      {
+        "id": "45",
+        "layout": {
+          "top": 53.98457583547558,
+          "left": 37.71667662881052,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Oxygen Sensors"
+      },
+      {
+        "id": "46",
+        "layout": {
+          "top": 40.87403598971722,
+          "left": 37.71667662881052,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/headlight-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "47",
+        "layout": {
+          "top": 80.20565552699229,
+          "left": 54.034668260609685,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Center High-Mounted Stoplamp",
+        "relatedEntities": [
+          "TERCERA_LUZ_DE_FRENO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/brake-light-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "50",
+        "layout": {
+          "top": 13.505912596401037,
+          "left": 72.26539151225344,
+          "width": 3.9081888822474604,
+          "height": 7.668637532133683
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Front Power Windows Coupe/Retractable Hardtop"
+      },
+      {
+        "id": "51",
+        "layout": {
+          "top": 35.08997429305913,
+          "left": 25.94142259414226,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control Module (Battery) (LZ4, LZ9)"
+      },
+      {
+        "id": "54",
+        "layout": {
+          "top": 67.48071979434447,
+          "left": 53.85534967124925,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Regulated Voltage Control"
+      },
+      {
+        "id": "55",
+        "layout": {
+          "top": 83.50064267352184,
+          "left": 72.26539151225344,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Antilock Brake System (Battery)",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "BATERIA"
+        ]
+      },
+      {
+        "id": "28",
+        "layout": {
+          "top": 13.881748071979436,
+          "left": 17.214584578601315,
+          "width": 8.009563658099223,
+          "height": 19.28020565552699
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 1",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/cooling-fan-relay",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "29",
+        "layout": {
+          "top": 13.881748071979436,
+          "left": 26.47937836222355,
+          "width": 8.009563658099223,
+          "height": 19.28020565552699
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling Fan Series/Parallel"
+      },
+      {
+        "id": "30",
+        "layout": {
+          "top": 20.308483290488432,
+          "left": 37.05917513448894,
+          "width": 8.009563658099223,
+          "height": 19.408740359897173
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Cooling Fan 2",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/cooling-fan-relay",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "31",
+        "layout": {
+          "top": 72.3650385604113,
+          "left": 19.426180514046624,
+          "width": 8.009563658099223,
+          "height": 19.408740359897173
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Starter",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/starter-relay",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "32",
+        "layout": {
+          "top": 59.768637532133674,
+          "left": 45.00896592946802,
+          "width": 8.069336521219366,
+          "height": 19.28020565552699
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Run/Crank, Ignition",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/starter-relay",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/starter-relay#problems-article",
+            "title": "Starter relay",
+            "problemsTitle": "View problems with the starter relay"
+          }
+        ]
+      },
+      {
+        "id": "33",
+        "layout": {
+          "top": 39.97429305912596,
+          "left": 28.03347280334728,
+          "width": 8.069336521219366,
+          "height": 19.408740359897173
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Powertrain"
+      },
+      {
+        "id": "34",
+        "layout": {
+          "top": 47.30077120822622,
+          "left": 18.649133293484756,
+          "width": 4.243873281530186,
+          "height": 17.994858611825194
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Air Conditioning Clutch",
+        "relatedEntities": [
+          "CLUTCH_AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/air-conditioning-relay",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/air-conditioning-relay#problems-article",
+            "title": "Air conditioning relay",
+            "problemsTitle": "View problems with the air conditioning relay"
+          }
+        ]
+      },
+      {
+        "id": "35",
+        "layout": {
+          "top": 73.90745501285348,
+          "left": 39.68918111177525,
+          "width": 4.243873281530186,
+          "height": 17.866323907455012
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ]
+      },
+      {
+        "id": "36",
+        "layout": {
+          "top": 34.06169665809769,
+          "left": 46.38374178123132,
+          "width": 4.243873281530186,
+          "height": 17.994858611825194
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Front Fog Lamps",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "id": "37",
+        "layout": {
+          "top": 34.06169665809769,
+          "left": 50.74716078900179,
+          "width": 4.243873281530186,
+          "height": 17.994858611825194
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/horn-relay",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "38",
+        "layout": {
+          "top": 14.010282776349614,
+          "left": 48.53556485355649,
+          "width": 4.303646144650329,
+          "height": 17.866323907455012
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Low Beam",
+        "relatedEntities": [
+          "LUZ_BAJA"
+        ]
+      },
+      {
+        "id": "39",
+        "layout": {
+          "top": 21.079691516709513,
+          "left": 55.7083084279737,
+          "width": 4.243873281530186,
+          "height": 17.994858611825194
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Windshield Wiper 1",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "40",
+        "layout": {
+          "top": 33.933161953727506,
+          "left": 60.37059175134489,
+          "width": 4.243873281530186,
+          "height": 17.994858611825194
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Windshield Wiper 2",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "48",
+        "layout": {
+          "top": 14.010282776349614,
+          "left": 60.37059175134489,
+          "width": 4.243873281530186,
+          "height": 17.866323907455012
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ]
+      },
+      {
+        "id": "49",
+        "layout": {
+          "top": 67.60925449871465,
+          "left": 56.903765690376574,
+          "width": 5.499103407053198,
+          "height": 17.994858611825194
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Center High-Mounted - Stoplamp",
+        "relatedEntities": [
+          "LUZ_FRENO"
+        ]
+      },
+      {
+        "id": "27",
+        "layout": {
+          "top": 53.98457583547558,
+          "left": 53.85534967124925,
+          "width": 1.1356843992827257,
+          "height": 7.411311053984587
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "U1",
+        "layout": {
+          "top": 15.038560411311053,
+          "left": 14.285714285714285,
+          "width": 1.1954572624028692,
+          "height": 7.4398457583547675
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U2",
+        "layout": {
+          "top": 28.14910025706941,
+          "left": 14.285714285714285,
+          "width": 1.1954572624028692,
+          "height": 7.311311053984587
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U3",
+        "layout": {
+          "top": 41.51670951156812,
+          "left": 14.285714285714285,
+          "width": 1.1954572624028692,
+          "height": 7.4398457583547675
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U4",
+        "layout": {
+          "top": 54.62724935732648,
+          "left": 14.285714285714285,
+          "width": 1.1954572624028692,
+          "height": 7.311311053984587
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U5",
+        "layout": {
+          "top": 41.51670951156812,
+          "left": 16.736401673640167,
+          "width": 1.1356843992827257,
+          "height": 7.4398457583547675
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U6",
+        "layout": {
+          "top": 54.62724935732648,
+          "left": 16.736401673640167,
+          "width": 1.1356843992827257,
+          "height": 7.311311053984587
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U7",
+        "layout": {
+          "top": 60.66838046272493,
+          "left": 35.32576210400478,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U8",
+        "layout": {
+          "top": 60.66838046272493,
+          "left": 42.25941422594142,
+          "width": 1.1356843992827257,
+          "height": 7.011311053984588
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U9",
+        "layout": {
+          "top": 80.20565552699229,
+          "left": 49.391519030554655,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "U10",
+        "layout": {
+          "top": 67.60925449871465,
+          "left": 14.166168559473999,
+          "width": 4.064554692169755,
+          "height": 9.897172236503856
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        }
+      },
+      {
+        "id": "52",
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "layout": {
+          "top": 83.50064267352184,
+          "left": 68.32038254632397,
+          "width": 3.9081888822474604,
+          "height": 7.797172236503863
+        }
+      },
+      {
+        "id": "53",
+        "kind": {
+          "type": "relay",
+          "format": "full"
+        },
+        "layout": {
+          "top": 72.3650385604113,
+          "left": 30.364614465032876,
+          "width": 8.069336521219366,
+          "height": 19.408740359897173
+        }
+      },
+      {
+        "id": "56",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 70.89493679848441,
+          "left": 63.17991631799163,
+          "width": 1.1356843992827257,
+          "height": 7.539845758354767
+        }
+      },
+      {
+        "id": "U11",
+        "kind": {},
+        "description": "Unidentified",
+        "relatedEntities": []
+      },
+      {
+        "id": "U12",
+        "kind": {},
+        "description": "Unidentified",
+        "relatedEntities": []
+      },
+      {
+        "id": "U13",
+        "kind": {},
+        "description": "Unidentified",
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Block",
+    "boxDescription": "The engine compartment fuse block is located on the driver side of the engine compartment, near the battery.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-ddfacdc89a.jpg",
+      "source": "611b9806cebfdb000494090f"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-cb6efdf51c.jpg",
+        "source": "611b980bcebfdb0004940910"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-acf6cb36b3.jpg",
+        "source": "611b980ecebfdb0004940911"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-f2b2c46008.jpg",
+        "source": "611b9817cebfdb0004940912"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-1c43232187.jpg",
+        "source": "611b9819cebfdb0004940913"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-7cb52e5440.jpg",
+        "source": "611b981fcebfdb0004940914"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-1e4e3142e5.jpg",
+        "source": "611b9823cebfdb0004940915"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-eec8db3e66.jpg",
+        "source": "611b9825cebfdb0004940916"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-66887f9876.jpg",
+        "source": "611b9827cebfdb0004940917"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.4650328750747161,
+    "templateId": "616031d0974f6c000496f279",
+    "imageClusters": [
+      "640b8489e5d13b1f9d4cce6d"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-pontiac-g6-2008-genid-g1-1.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 27.279462102689486,
+          "left": 8.204196816208393,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Park Lamps, Instrument Panel Dimming",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 27.279462102689486,
+          "left": 12.835166425470332,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 27.279462102689486,
+          "left": 17.466136034732273,
+          "width": 1.5154848046309688,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 58.208557457212706,
+          "left": 16.88726483357453,
+          "width": 1.5154848046309688,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 72.14498777506114,
+          "left": 16.88726483357453,
+          "width": 1.5154848046309688,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Back-up Lamps",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 72.14498777506114,
+          "left": 26.076845151953695,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 39.25990220048899,
+          "left": 30.70781476121563,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 8.697555012224939,
+          "left": 30.852532561505065,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 8.697555012224939,
+          "left": 35.41114327062229,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 52.09608801955989,
+          "left": 30.70781476121563,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "diode",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cargo Lamp",
+        "relatedEntities": [
+          "LUZ_DE_CAJA"
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 72.14498777506114,
+          "left": 39.173806078147614,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 72.14498777506114,
+          "left": 43.73241678726483,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cigarette Lighter, Auxiliary Power Outlet",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/cigarette-lighter-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 33.391931540342284,
+          "left": 39.68031837916064,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 33.391931540342284,
+          "left": 43.94949348769899,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 27.279462102689486,
+          "left": 48.50810419681621,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 8.697555012224939,
+          "left": 48.72518089725037,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 8.190709046454767,
+          "left": 53.111432706222864,
+          "width": 2.3878437047756873,
+          "height": 10.268948655256724
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 72.14498777506114,
+          "left": 57.33589001447178,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 59.18655256723716,
+          "left": 57.33589001447178,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Remote Keyless Entry System, XM Satellite Radio",
+        "relatedEntities": [
+          "ACCESO_REMOTO"
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 46.59486552567236,
+          "left": 57.33589001447178,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Retractable Hardtop Controller"
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 33.6364303178484,
+          "left": 57.33589001447178,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Sunroof Controls"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 21.04474327628362,
+          "left": 57.33589001447178,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 46.59486552567236,
+          "left": 61.894500723589,
+          "width": 1.5154848046309688,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Audio Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR(of=ESTEREO)",
+          "AMPLIFICADOR"
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 46.59486552567236,
+          "left": 66.23603473227206,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heated Seat Controls"
+      },
+      {
+        "id": "F25",
+        "layout": {
+          "top": 73.12298288508558,
+          "left": 70.57756874095513,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Trunk Release",
+        "relatedEntities": [
+          "CERRADURA(of=PUERTA_BAUL)"
+        ]
+      },
+      {
+        "id": "F26",
+        "layout": {
+          "top": 73.12298288508558,
+          "left": 74.9191027496382,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Defog"
+      },
+      {
+        "id": "F27",
+        "layout": {
+          "top": 73.12298288508558,
+          "left": 79.4053545586107,
+          "width": 1.6602026049204044,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "F28",
+        "layout": {
+          "top": 73.12298288508558,
+          "left": 83.89160636758321,
+          "width": 1.5878437047756866,
+          "height": 8.968948655256728
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/fuel-pump-fuse",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F29",
+        "layout": {
+          "top": 8.312958435207824,
+          "left": 72.06946454413892,
+          "width": 6.58465991316932,
+          "height": 10.268948655256724
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j"
+        },
+        "description": "Unidentified"
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 21.778239608801957,
+          "left": 79.91186685962373,
+          "width": 1.5154848046309688,
+          "height": 9.091198044009785
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Emission 2, Canister Vent Solenoid",
+        "relatedEntities": [
+          "VALVULA_PURGA_CANISTER"
+        ]
+      },
+      {
+        "id": "F31",
+        "layout": {
+          "top": 28.933251833740833,
+          "left": 87.04775687409551,
+          "width": 6.657018813314036,
+          "height": 10.23561532192339
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Rear Quarter Windows (Retractable Hardtop Only)"
+      },
+      {
+        "id": "F32",
+        "layout": {
+          "top": 40.46454767726162,
+          "left": 87.04775687409551,
+          "width": 6.657018813314036,
+          "height": 10.23561532192339
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Driver Seat Controls"
+      },
+      {
+        "id": "F33",
+        "layout": {
+          "top": 51.995843520782415,
+          "left": 87.04775687409551,
+          "width": 6.657018813314036,
+          "height": 10.23561532192339
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Retractable Hardtop"
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 8.557457212713937,
+          "left": 9.044862518089724,
+          "width": 6.58465991316932,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "description": "Park Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 8.557457212713937,
+          "left": 22.069464544138928,
+          "width": 6.657018813314037,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 66.13691931540342,
+          "left": 8.683068017366136,
+          "width": 6.58465991316932,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "description": "Back-up Lamps",
+        "relatedEntities": [
+          "LUZ_RETROCESO"
+        ]
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 33.12958435207824,
+          "left": 22.069464544138928,
+          "width": 6.657018813314037,
+          "height": 16.748166259168702
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 66.13691931540342,
+          "left": 30.463096960926194,
+          "width": 6.657018813314037,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 39.48655256723717,
+          "left": 48.191027496382056,
+          "width": 6.657018813314037,
+          "height": 16.748166259168702
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 66.13691931540342,
+          "left": 48.191027496382056,
+          "width": 6.657018813314037,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 8.557457212713937,
+          "left": 62.44573082489146,
+          "width": 6.58465991316932,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      },
+      {
+        "id": "R9",
+        "layout": {
+          "top": 66.13691931540342,
+          "left": 61.93921852387844,
+          "width": 6.58465991316932,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "description": "Trunk Release",
+        "relatedEntities": [
+          "CERRADURA(of=PUERTA_BAUL)"
+        ]
+      },
+      {
+        "id": "R10",
+        "layout": {
+          "top": 52.32273838630807,
+          "left": 71.36965313726253,
+          "width": 10.419681620839363,
+          "height": 17.6039119804401
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "description": "Rear Window Defogger",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "R11",
+        "layout": {
+          "top": 66.87041564792176,
+          "left": 87.04775687409551,
+          "width": 6.657018813314037,
+          "height": 16.503667481662593
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": false
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/g6/info/fusebox/2008/fuel-pump-relay",
+            "urlWithAnchor": "/pontiac/g6/info/fusebox/2008/fuel-pump-relay#problems-article",
+            "title": "Fuel pump relay",
+            "problemsTitle": "View problems with the fuel pump relay"
+          }
+        ]
+      },
+      {
+        "id": "R12",
+        "layout": {
+          "top": 8.557457212713937,
+          "left": 83.71924746743849,
+          "width": 6.58465991316932,
+          "height": 16.625916870415647
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "variation": "gray",
+          "notUsed": true
+        },
+        "description": "Not Used",
+        "relatedEntities": [
+          "NOT_USED_FUSE"
+        ]
+      }
+    ],
+    "boxName": "Rear Compartment Fuse Block",
+    "boxDescription": "The rear compartment fuse block is located in the trunk of the vehicle. Access the fuse block through the trunk panel on the driver side of the rear cargo area.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-db3761d17a.jpg",
+      "source": "611b983ccebfdb0004940918"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-7a4720ac6e.jpg",
+        "source": "611b9840cebfdb0004940919"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-c261a1d1cd.jpg",
+        "source": "611b9842cebfdb000494091a"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-baafb1f88a.jpg",
+        "source": "611b9849cebfdb000494091b"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb2ae71828290004052556/fragment-60fb2ae71828290004052556-cad7022a14.jpg",
+        "source": "611b984bcebfdb000494091c"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.742914979757085,
+    "templateId": "61601f27974f6c000496f273",
+    "templateRenameMap": {
+      "1": "F31",
+      "2": "F32",
+      "3": "F33",
+      "4": "F22",
+      "5": "F30",
+      "6": "F1",
+      "7": "F2",
+      "8": "F3",
+      "9": "F15",
+      "10": "F21",
+      "11": "F7",
+      "12": "F20",
+      "13": "F23",
+      "14": "F24",
+      "15": "F4",
+      "16": "F19",
+      "17": "F5",
+      "18": "F6",
+      "19": "F11",
+      "20": "F12",
+      "21": "F18",
+      "22": "F25",
+      "23": "F26",
+      "24": "F27",
+      "25": "F28",
+      "26": "R10",
+      "27": "R1",
+      "28": "R2",
+      "29": "R8",
+      "30": "R12",
+      "31": "R4",
+      "32": "R6",
+      "33": "R3",
+      "34": "R5",
+      "35": "R7",
+      "36": "R9",
+      "37": "R11",
+      "38": "F10",
+      "U1": "F8",
+      "U2": "F9",
+      "U3": "F16",
+      "U4": "F17",
+      "U5": "F13",
+      "U6": "F14",
+      "U7": "F29"
+    },
+    "imageClusters": [
+      "63611db1cdae8667507d4f5c",
+      "6419bee5dda5f67abb4d6e39"
+    ],
+    "boxScaleMultiplier": "1",
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-pontiac-g6-2008-genid-g1-2.webp"
+  }
+]

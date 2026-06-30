@@ -1,0 +1,1392 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 17.355371900826448,
+          "left": 11.11111111111111,
+          "width": 8.26558265582656,
+          "height": 4.75206611570248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Front Parking Lamps, Taillamps, License Plate Lamps, Instrument Panel Lights, Engine Control System",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=PARTE_DELANTERA)",
+          "LUZ_PATENTE",
+          "LUZ_TESTIGO",
+          "BACKLIGHT(of=TABLERO)",
+          "ECU"
+        ]
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 17.355371900826448,
+          "left": 21.40921409214092,
+          "width": 8.130081300813007,
+          "height": 4.75206611570248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "On-Board Diagnostic System"
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 17.355371900826448,
+          "left": 31.66523407317916,
+          "width": 8.130081300813007,
+          "height": 4.75206611570248
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 17.355371900826448,
+          "left": 42.00542005420054,
+          "width": 8.130081300813007,
+          "height": 4.75206611570248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Windows",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 17.355371900826448,
+          "left": 52.30352303523035,
+          "width": 8.130081300813007,
+          "height": 4.75206611570248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Windshield Wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS"
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 17.355371900826448,
+          "left": 62.601626016260155,
+          "width": 8.26558265582656,
+          "height": 4.75206611570248
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Charging System, Air Bag System, Starter System, Engine Control",
+        "relatedEntities": [
+          "ALTERNADOR",
+          "AIRBAG",
+          "BURRO_DE_ARRANQUE",
+          "ECU"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/alternator-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/starter-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 29.338842975206614,
+          "left": 11.11111111111111,
+          "width": 8.26558265582656,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Stop Lamps, CHMSL, Engine Control System, Anti-lock Brakes, Cruise Control",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LAMPARA(of=LUZ_FRENO)",
+          "LUZ_FRENO",
+          "ECU",
+          "SISTEMA_ABS",
+          "CRUISE_CONTROL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/brake-light-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 29.338842975206614,
+          "left": 21.40921409214092,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Door Locks, Liftglass Lock",
+        "relatedEntities": [
+          "CIERRE_CENTRALIZADO",
+          "CERRADURA(of=PORTON_TRASERO)"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 29.338842975206614,
+          "left": 31.842818428184284,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cigarette Lighter, Gauge, ECU-IG, Wiper, Rear Wiper, Washer Fuses",
+        "relatedEntities": [
+          "TOMA_12V",
+          "SENSOR",
+          "LIMPIA_PARABRISAS",
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)",
+          "SAPITO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 29.338842975206614,
+          "left": 42.02493928878291,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 29.338842975206614,
+          "left": 52.30352303523035,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cruise Control, Anti-lock Brakes, Theft Deterrent System, Automatic Transaxle Control System, Electric Cooling Fan",
+        "relatedEntities": [
+          "CRUISE_CONTROL",
+          "SISTEMA_ABS",
+          "INMOVILIZADOR"
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 29.338842975206614,
+          "left": 62.601626016260155,
+          "width": 8.26558265582656,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Window Wiper, Rear Window Defogger",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)",
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 29.338842975206614,
+          "left": 72.89972899728997,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Air Conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/air-conditioning-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 41.735537190082646,
+          "left": 11.11111111111111,
+          "width": 8.26558265582656,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Outlets",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 41.735537190082646,
+          "left": 21.40921409214092,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Power Outlets",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 41.735537190082646,
+          "left": 31.842818428184284,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Daytime Running Lamps",
+        "relatedEntities": [
+          "LUCES_CIRCULACION_DIURNA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 41.735537190082646,
+          "left": 42.00542005420054,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Cigarette Lighter, Power Rearview Mirrors, Power Outlets, Audio System, Automatic Transaxle Control System",
+        "relatedEntities": [
+          "TOMA_12V",
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 41.735537190082646,
+          "left": 52.30352303523035,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Gauges and Meters, Back-Up Lamps, Charging System, Power Door Locks, Power Windows, Sunroof, Air Conditioning, Cruise Control",
+        "relatedEntities": [
+          "SENSOR",
+          "LUZ_RETROCESO",
+          "ALTERNADOR",
+          "CIERRE_CENTRALIZADO",
+          "LEVANTAVIDRIOS",
+          "TECHO_SOLAR",
+          "AIRE_ACONDICIONADO",
+          "CRUISE_CONTROL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/sunroof-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/alternator-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/air-conditioning-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 41.735537190082646,
+          "left": 62.601626016260155,
+          "width": 8.26558265582656,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Windshield Washers",
+        "relatedEntities": [
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 41.735537190082646,
+          "left": 72.89972899728997,
+          "width": 8.130081300813007,
+          "height": 4.958677685950414
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Engine Control System",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 47.31404958677686,
+          "left": 85.77235772357723,
+          "width": 8.130081300813007,
+          "height": 7.851239669421488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Air Conditioning System",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/air-conditioning-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 60.468319559228654,
+          "left": 85.77235772357723,
+          "width": 8.130081300813007,
+          "height": 7.851239669421488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Rear Window Defogger, M-HTR/DEF 1-UP Fuse",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 73.36088154269974,
+          "left": 85.77235772357723,
+          "width": 8.130081300813007,
+          "height": 7.851239669421488
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Power Windows, Electric Moon Roof",
+        "relatedEntities": [
+          "LEVANTAVIDRIOS",
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/sunroof-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      }
+    ],
+    "boxName": "Instrument Panel Fuse Block",
+    "boxDescription": "The fuse block is located underneath the instrument panel on the driver’s side of the vehicle.",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-1c7a5b8ef4.jpg",
+      "source": "611c0807d927a80004fc2d43"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-6283bf094c.jpg",
+        "source": "611c080bd927a80004fc2d44"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-3031159444.jpg",
+        "source": "611c0812d927a80004fc2d45"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-e9869c4504.jpg",
+        "source": "611c0814d927a80004fc2d46"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.6558265582655827,
+    "templateId": "615e45a07eaa4400046f7a2a",
+    "templateRenameMap": {
+      "TAIL": "F1",
+      "OBD": "F2",
+      "U1": "F3",
+      "P/W": "F4",
+      "WIPER": "F5",
+      "AM2": "F6",
+      "STOP": "F7",
+      "DOOR": "F8",
+      "AM1": "F9",
+      "U2": "F10",
+      "ECU-IG": "F11",
+      "RR WIPER": "F12",
+      "A/C": "F13",
+      "INV": "F14",
+      "P/POINT": "F15",
+      "ECU-B": "F16",
+      "CIG": "F17",
+      "GAUGE": "F18",
+      "WASHER": "F19",
+      "M-HTR/DEF 1-UP": "F20",
+      "HTR": "F21",
+      "DEF": "F22",
+      "POWER": "F23"
+    },
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-pontiac-vibe-2006-genid-g1-0.webp"
+  },
+  {
+    "fuses": [
+      {
+        "id": "F1",
+        "layout": {
+          "top": 37.72956785091684,
+          "left": 14.554579673776663,
+          "width": 3.7641154328732744,
+          "height": 3.77906976744186
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "F2",
+        "layout": {
+          "top": 46.80232558139535,
+          "left": 14.554579673776663,
+          "width": 3.7641154328732744,
+          "height": 3.77906976744186
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electronic Throttle Control System",
+        "relatedEntities": [
+          "ELECTRONIC_THROTLE_CONTROL"
+        ]
+      },
+      {
+        "id": "F3",
+        "layout": {
+          "top": 56.104651162790695,
+          "left": 14.554579673776663,
+          "width": 3.7641154328732744,
+          "height": 3.77906976744186
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Multiport Fuel Injection System/Sequential Multiport Fuel Injection System, Emission Control System",
+        "relatedEntities": [
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "F4",
+        "layout": {
+          "top": 54.94186046511628,
+          "left": 20.629987452948548,
+          "width": 4.013174404015056,
+          "height": 10.993023255813949
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Multiport Fuel Injection System/Sequential Multiport Fuel Injection System, Emission Control System",
+        "relatedEntities": [
+          "SISTEMA_DE_INYECCION"
+        ]
+      },
+      {
+        "id": "F5",
+        "layout": {
+          "top": 54.94186046511628,
+          "left": 25.72145545796738,
+          "width": 4.138644918444165,
+          "height": 10.993023255813949
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Right Headlamp, Left Headlamp Fuses",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)",
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)",
+          "FUSIBLE_LUZ_ALTA_IZQUIERDA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F6",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 32.747804265997495,
+          "width": 1.631116687578419,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Charging System",
+        "relatedEntities": [
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/alternator-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          }
+        ]
+      },
+      {
+        "id": "F7",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 36.80468423253869,
+          "width": 1.7565872020075282,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Electronic Fuel Injection System",
+        "relatedEntities": [
+          "EFI"
+        ]
+      },
+      {
+        "id": "F8",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 40.98703471350899,
+          "width": 1.631116687578419,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Turn Signal Lamps, Emergency Flasher",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_DIRECCIONAL)",
+          "LUZ_DIRECCIONAL",
+          "LUZ_BALIZA"
+        ]
+      },
+      {
+        "id": "F9",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 45.04391468005019,
+          "width": 1.7565872020075282,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/horn-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 51.06649937264742,
+          "width": 1.631116687578419,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Interior Lights, Gauges and Meters, Audio System, Remote Keyless Entry System, Navigation System (If Equipped)",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "SENSOR",
+          "ESTEREO",
+          "ACCESO_REMOTO",
+          "NAVEGADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 55.18611459640317,
+          "width": 1.631116687578419,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Starter System, AM2 Fuse",
+        "relatedEntities": [
+          "BURRO_DE_ARRANQUE",
+          "GENERIC_FUSE_NAME",
+          "FUSIBLE(protects=GENERIC_FUSE_NAME)",
+          "GENERIC_FUSE_NAME(protects=FUSIBLE)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/starter-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "id": "F12",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 59.30572982015893,
+          "width": 1.631116687578419,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Audio System",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/radio-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "F13",
+        "layout": {
+          "top": 54.65116279069767,
+          "left": 63.488080301129244,
+          "width": 1.5056461731493098,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "OnStar R System"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 48.54651162790697,
+          "left": 68.50690087829359,
+          "width": 5.334879830371646,
+          "height": 13.662790697674417
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-flf",
+          "notUsed": false
+        },
+        "description": "ABS NO.1, ABS NO.2, RDI FAN, FOG, Heater, AM1, POWER, DOOR, ECU-B, TAIL, STOP, P/POINT, INV, OBD Fuses, Charging System",
+        "relatedEntities": [
+          "SISTEMA_ABS",
+          "VENTILADOR_RADIADOR",
+          "LUZ_ANTINIEBLA",
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "ACCESORIO_ELECTRICO",
+          "MODO_POWER",
+          "PUERTA",
+          "TESTIGO_STOP",
+          "LUZ_FRENO",
+          "TOMA_12V",
+          "SISTEMA_OBD",
+          "ALTERNADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cooling-fan-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/fog-light-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/alternator-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/alternator-fuse#problems-article",
+            "title": "Alternator fuse",
+            "problemsTitle": "View problems with the alternator fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          },
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/brake-light-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 29.651162790697676,
+          "left": 68.88331242158094,
+          "width": 1.7565872020075282,
+          "height": 10.755813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare Fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 29.651162790697676,
+          "left": 71.76913425345045,
+          "width": 1.631116687578419,
+          "height": 10.755813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare Fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 29.651162790697676,
+          "left": 74.65495608531995,
+          "width": 1.5056461731493098,
+          "height": 10.755813953488373
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Spare Fuse",
+        "relatedEntities": [
+          "FUSIBLE_DE_REPUESTO",
+          "FUSIBLE(protects=FUSIBLE_DE_REPUESTO)"
+        ]
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 42.44186046511628,
+          "left": 81.2426599749057,
+          "width": 4.138644918444165,
+          "height": 10.702325581395344
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Anti-lock Brake System (Without Stability Control System)"
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 42.44186046511628,
+          "left": 87.0969716864597,
+          "width": 4.138644918444165,
+          "height": 10.702325581395344
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Electric Cooling Fan"
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 42.44186046511628,
+          "left": 92.92371392722673,
+          "width": 4.138644918444165,
+          "height": 10.702325581395344
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "cartridge-j",
+          "notUsed": false
+        },
+        "description": "Anti-lock Brake System (With Stability Control System)"
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 41.727600236079255,
+          "left": 99.15324132162253,
+          "width": 3.889585947302384,
+          "height": 3.77906976744186
+        },
+        "description": "Unidentified",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        }
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 49.54098837209304,
+          "left": 99.15324132162253,
+          "width": 3.889585947302384,
+          "height": 3.77906976744186
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Front Fog Lamps",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_DELANTERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/fog-light-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 59.883720930232556,
+          "left": 75.9058971141781,
+          "width": 1.631116687578419,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right-hand Headlamp, Headlamp High Beam Indicator Lamp",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_DERECHO)",
+          "TESTIGO_LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 59.883720930232556,
+          "left": 78.8361807358991,
+          "width": 1.631116687578419,
+          "height": 9.593023255813954
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Left-hand Headlamp",
+        "relatedEntities": [
+          "LUCES_DELANTERAS(ubicacion=LADO_IZQUIERDO)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/headlight-fuse",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "R1",
+        "layout": {
+          "top": 31.867441860465135,
+          "left": 2.348055207026355,
+          "width": 10.48423253868672,
+          "height": 13.275193798449598
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "M/G"
+      },
+      {
+        "id": "R2",
+        "layout": {
+          "top": 48.835465116279074,
+          "left": 1.7461731493099157,
+          "width": 10.722584692597223,
+          "height": 22.990697674418694
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Headlamps",
+        "relatedEntities": [
+          "LUCES_DELANTERAS"
+        ]
+      },
+      {
+        "id": "R3",
+        "layout": {
+          "top": 25.443604651162858,
+          "left": 56.32772898368877,
+          "width": 10.597114178168114,
+          "height": 23.281395348837304
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        },
+        "description": "Headlamp Dimmer"
+      },
+      {
+        "id": "R4",
+        "layout": {
+          "top": 20.045128773637554,
+          "left": 81.2426599749057,
+          "width": 6.089585947302377,
+          "height": 18.37123792857425
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/horn-relay",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/horn-relay#problems-article",
+            "title": "Horn relay",
+            "problemsTitle": "View problems with the horn relay"
+          }
+        ]
+      },
+      {
+        "id": "R5",
+        "layout": {
+          "top": 20.045128773637554,
+          "left": 89.31752404851505,
+          "width": 5.838644918444159,
+          "height": 18.856601907153262
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan System",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cooling-fan-relay",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R6",
+        "layout": {
+          "top": 20.045128773637554,
+          "left": 97.32965286490986,
+          "width": 5.71317440401505,
+          "height": 18.856601907153262
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Cooling Fan System",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/vibe/info/fusebox/2006/cooling-fan-relay",
+            "urlWithAnchor": "/pontiac/vibe/info/fusebox/2006/cooling-fan-relay#problems-article",
+            "title": "Cooling fan relay",
+            "problemsTitle": "View problems with the cooling fan relay"
+          }
+        ]
+      },
+      {
+        "id": "R7",
+        "layout": {
+          "top": 59.883720930232556,
+          "left": 81.2426599749057,
+          "width": 10.48423253868672,
+          "height": 13.275193798449598
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Electronic Fuel Injection System",
+        "relatedEntities": [
+          "EFI"
+        ]
+      },
+      {
+        "id": "R8",
+        "layout": {
+          "top": 59.883720930232556,
+          "left": 92.55859473023818,
+          "width": 10.48423253868672,
+          "height": 13.275193798449598
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Fog Lamps",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ]
+      },
+      {
+        "id": "Fuse Puller",
+        "kind": {
+          "type": "fusepuller",
+          "format": "up"
+        },
+        "layout": {
+          "top": 28.96018930957684,
+          "left": 77.55342465753428,
+          "width": 3.0761836097092043,
+          "height": 8.463251670378618
+        },
+        "relatedEntities": []
+      }
+    ],
+    "boxName": "Engine Compartment Fuse Block",
+    "boxDescription": "This engine compartment fuse block is located in the engine compartment on the driver’s side of the vehicle near the air cleaner. ",
+    "boxDiagramImg": {
+      "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-12c80c0733.jpg",
+      "source": "611c0830d927a80004fc2d47"
+    },
+    "boxTablesImages": [
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-1614dcfca8.jpg",
+        "source": "611c0835d927a80004fc2d48"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-4a9d000847.jpg",
+        "source": "611c0838d927a80004fc2d49"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-9b51322570.jpg",
+        "source": "611c083fd927a80004fc2d4a"
+      },
+      {
+        "url": "https://startmycar-images.s3.amazonaws.com/manual-screenshots/60fb29fc18282900040524ee/fragment-60fb29fc18282900040524ee-640a94987f.jpg",
+        "source": "611c0843d927a80004fc2d4b"
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.4316185696361355,
+    "templateId": "615e46a37eaa4400046f7a2b",
+    "templateRenameMap": {
+      "SPARE1": "F15",
+      "SPARE2": "F16",
+      "SPARE3": "F17",
+      "ETCS": "F2",
+      "ABS NO. 2": "F18",
+      "RDI FAN": "F19",
+      "ABS NO. 1": "F20",
+      "FOG": "F22",
+      "EFI2": "F3",
+      "EFI3": "F4",
+      "HEAD MAIN": "F5",
+      "ALT-S": "F6",
+      "EFI": "F7",
+      "HAZARD": "F8",
+      "HORN": "F9",
+      "DOME": "F10",
+      "MAIN": "F11",
+      "AMP": "F12",
+      "MAYDAY": "F13",
+      "ALT": "F14",
+      "HEAD RH": "F23",
+      "HEAD LH": "F24",
+      "M/G": "R1",
+      "HEAD": "R2",
+      "DIMMER": "R3",
+      "HORN_R": "R4",
+      "FAN NO. 2": "R5",
+      "FAN NO. 1": "R6",
+      "EFI_R": "R7",
+      "FOG_R": "R8",
+      "U1": "F1",
+      "U2": "F21"
+    },
+    "imageClusters": [
+      "628bd0e67803482146789e71"
+    ],
+    "fromManual": true,
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-pontiac-vibe-2006-genid-g1-1.webp"
+  }
+]

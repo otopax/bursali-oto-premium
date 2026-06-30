@@ -1,0 +1,420 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "1",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 27.676388089905394,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 5
+        },
+        "description": "Instrument illumination, ash tray light, clock light, tachometer, shift indicator light, radio light, heater or A/C control light, cigar lighter light, windshield wiper, headlight switch light",
+        "relatedEntities": [
+          "TABLERO",
+          "BACKLIGHT(of=RADIO)",
+          "LIMPIA_PARABRISAS",
+          "BACKLIGHT(of=COMANDO_DE_LUCES)"
+        ]
+      },
+      {
+        "id": "2",
+        "layout": {
+          "top": 6.892005601879122,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Electric choke, oil pressure switch"
+      },
+      {
+        "id": "3",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 27.441955580680485,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "4",
+        "layout": {
+          "top": 17.894788856073827,
+          "left": 50.167274144557624,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Circuit breaker: Power windows, power sun roof, power tailgate window",
+        "relatedEntities": [
+          "CIRCUIT_BREAKER(protects=LEVANTAVIDRIOS)",
+          "TECHO_SOLAR"
+        ]
+      },
+      {
+        "id": "5",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 15.071250267033234,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Coolant switch, fast idle relay, fast warm-up controller"
+      },
+      {
+        "id": "6",
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 45.81275764027327,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Heater, air conditioning blower motor",
+        "relatedEntities": [
+          "CALEFACCION",
+          "CALEFACCION_DE_ASIENTO",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ]
+      },
+      {
+        "id": "7",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 26.921355233093788,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "8",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 15.071250267033232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Diesel wait lamp and water in fuel lamp, fuel and temperature gauge, voltmeter, transmission converter clutch, check engine and brake warning indicators, computer command control, tachometer and oil pressure gauge",
+        "relatedEntities": [
+          "FUSE_DESCRIPTION_CONDITION",
+          "COMBUSTIBLE",
+          "TESTIGO_CHECK_ENGINE"
+        ]
+      },
+      {
+        "id": "9",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 37.179410097022654,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 25
+        },
+        "description": "Windshield wiper/washer, pulse wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS",
+          "SAPITO"
+        ]
+      },
+      {
+        "id": "10",
+        "layout": {
+          "top": 37.34462259545435,
+          "left": 67.17696464451652,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Stop and hazard lights, key warning buzzer",
+        "relatedEntities": [
+          "TESTIGO_STOP",
+          "LUZ_FRENO",
+          "LUZ_BALIZA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/grand-prix/info/fusebox/1981/brake-light-fuse",
+            "urlWithAnchor": "/pontiac/grand-prix/info/fusebox/1981/brake-light-fuse#problems-article",
+            "title": "Brake light fuse",
+            "problemsTitle": "View problems with the brake light fuse"
+          }
+        ]
+      },
+      {
+        "id": "11",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 3.0236276471092705,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Seat belt buzzer and timer, rear window defogger timer"
+      },
+      {
+        "id": "12",
+        "layout": {
+          "top": 47.926580134137325,
+          "left": 24.79607847053945,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Tail, parking, side marker and license lights, digital clock radio feed, cornering light, cigar lighter light, digital clock light, shift indicator light, ash tray light",
+        "relatedEntities": [
+          "MARCHA_PARKING"
+        ]
+      },
+      {
+        "id": "13",
+        "layout": {
+          "top": 48.292294419851615,
+          "left": 45.27182682164435,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 10
+        },
+        "description": "Radio, CB radio, tape player, power antenna, cruise control.",
+        "relatedEntities": [
+          "ESTEREO",
+          "ANTENA_ELECTRICA",
+          "CRUISE_CONTROL"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/grand-prix/info/fusebox/1981/radio-fuse",
+            "urlWithAnchor": "/pontiac/grand-prix/info/fusebox/1981/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "id": "14",
+        "layout": {
+          "top": 48.18950701691257,
+          "left": 68.42234514672232,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "ato",
+          "amp": 30
+        },
+        "description": "Circuit breaker: Power door locks, power seats",
+        "relatedEntities": [
+          "CIRCUIT_BREAKER(protects=CIERRE_CENTRALIZADO)",
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "id": "15",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 12.72692517478404,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Back-up and turn signal lights",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL"
+        ]
+      },
+      {
+        "id": "16",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 34.663839505471486,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Glove box light, clock power, courtesy lights, power antenna, horns, digital clock radio, computer command control",
+        "relatedEntities": [
+          "LUZ_DE_GUANTERA",
+          "RELOJ",
+          "LUZ_CORTESIA",
+          "ANTENA_ELECTRICA",
+          "BOCINA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/grand-prix/info/fusebox/1981/horn-fuse",
+            "urlWithAnchor": "/pontiac/grand-prix/info/fusebox/1981/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "17",
+        "layout": {
+          "top": 58.79490687037339,
+          "left": 55.76502833339506,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "ato",
+          "amp": 20
+        },
+        "description": "Dome, vanity, trunk light, cigar lighter, trunk release, door courtesy and warning lights",
+        "relatedEntities": [
+          "LUZ_DE_HABITACULO",
+          "LUZ_BAUL",
+          "TESTIGO_BAUL",
+          "ENCENDEDOR",
+          "CERRADURA(of=PUERTA_BAUL)",
+          "LUZ_TESTIGO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/pontiac/grand-prix/info/fusebox/1981/cigarette-lighter-fuse",
+            "urlWithAnchor": "/pontiac/grand-prix/info/fusebox/1981/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "id": "18",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 70.69445298538898,
+          "left": 12.492492665559123,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "ato"
+        },
+        "layout": {
+          "top": 82.009895431737,
+          "left": 22.402385248583432,
+          "width": 16.893752278462962,
+          "height": 3.714481415352544
+        }
+      },
+      {
+        "id": "R1",
+        "kind": {
+          "type": "flasher",
+          "format": ""
+        },
+        "layout": {
+          "top": -1.8518714954204212,
+          "left": -3.29937158756767,
+          "width": 26.571430054676622,
+          "height": 20.54878598002677
+        }
+      },
+      {
+        "id": "R2",
+        "kind": {
+          "type": "flasher",
+          "format": ""
+        },
+        "layout": {
+          "top": 68.51213289121294,
+          "left": 62.34044672269161,
+          "width": 36.41759544212321,
+          "height": 28.960214551455355
+        }
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/f3bcf577_Captura de pantalla 2024-10-11 143305.jpg"
+    },
+    "processed": false,
+    "boxAspectRatio": 1.2820512820512822,
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/2b964193_Captura de pantalla 2024-10-11 143323.jpg"
+      },
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/43a102b8_Captura de pantalla 2024-10-11 143328.jpg"
+      }
+    ],
+    "boxName": "Fuse Panel",
+    "imageClusters": [
+      "653548efcaac639c2f94cb84"
+    ],
+    "templateId": "658eef5298879b55ca27bea0",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-pontiac-grand-prix-1981-genid-g5-0.webp"
+  }
+]

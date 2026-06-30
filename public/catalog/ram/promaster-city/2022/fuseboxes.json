@@ -1,0 +1,818 @@
+[
+  {
+    "fuses": [
+      {
+        "id": "F01",
+        "layout": {
+          "top": 47.93478260869565,
+          "left": 2.6802311722686136,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Body Controller"
+      },
+      {
+        "id": "F02",
+        "layout": {
+          "top": 56.013031425342476,
+          "left": 2.6802311722686136,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 60
+        },
+        "description": "Rear Power Window Including Front Heated Seats, Second 12 Volt IP Outlet"
+      },
+      {
+        "id": "F02",
+        "layout": {
+          "top": 56.013031425342476,
+          "left": 2.6802311722686136,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Front Heated Seats, Second 12 Volt IP Outlet"
+      },
+      {
+        "id": "F03",
+        "layout": {
+          "top": 72.16952905863612,
+          "left": 27.767123287671232,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Ignition Switch",
+        "relatedEntities": [
+          "INTERRUPTOR(of=ARRANQUE)",
+          "TAMBOR_DE_ENCENDIDO"
+        ],
+        "extendedDescription": "Ignition switch"
+      },
+      {
+        "id": "F04",
+        "layout": {
+          "top": 72.16952905863612,
+          "left": 2.6802311722686136,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "BSM System Module"
+      },
+      {
+        "id": "F05",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 56.013031425342476,
+          "left": 27.767123287671232,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        }
+      },
+      {
+        "id": "F06",
+        "layout": {
+          "top": 80.24777787528294,
+          "left": 27.767123287671232,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": "20"
+        },
+        "description": "Radiator Fan - Low Speed",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_BAJA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/cooling-fan-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 64.0912802419893,
+          "left": 27.767123287671232,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Radiator Fan - High Speed",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/cooling-fan-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F07",
+        "layout": {
+          "top": 64.0912802419893,
+          "left": 27.767123287671232,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": "50"
+        },
+        "description": "Radiator Fan - High Speed",
+        "relatedEntities": [
+          "VENTILADOR_RADIADOR",
+          "VELOCIDAD_VENTILADOR(val=MAGNITUD_ALTA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/cooling-fan-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/cooling-fan-fuse#problems-article",
+            "title": "Cooling fan fuse",
+            "problemsTitle": "View problems with the cooling fan fuse"
+          }
+        ]
+      },
+      {
+        "id": "F08",
+        "layout": {
+          "top": 38.02898550724638,
+          "left": 64.09863013698632,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 40
+        },
+        "description": "Blower Motor",
+        "relatedEntities": [
+          "VENTILADOR_DE_CLIMATIZADOR",
+          "MOTOR_IMPULSOR(of=VENTILADOR_DE_CLIMATIZADOR)"
+        ],
+        "extendedDescription": "AC blower motor"
+      },
+      {
+        "id": "F09",
+        "kind": {
+          "type": "fuse",
+          "format": "mini"
+        },
+        "layout": {
+          "top": 26.102898550724635,
+          "left": 51.342465753424676,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        }
+      },
+      {
+        "id": "F10",
+        "layout": {
+          "top": 35.05652173913044,
+          "left": 87.61643835616438,
+          "width": 3.9078767123287688,
+          "height": 8.371376811594203
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Horn",
+        "relatedEntities": [
+          "BOCINA"
+        ],
+        "extendedDescription": "Horn",
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/horn-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/horn-fuse#problems-article",
+            "title": "Horn fuse",
+            "problemsTitle": "View problems with the horn fuse"
+          }
+        ]
+      },
+      {
+        "id": "F11",
+        "layout": {
+          "top": 6.211501661464872,
+          "left": 8.536986301369861,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Secondary Loads ECM"
+      },
+      {
+        "id": "F14",
+        "layout": {
+          "top": 17.28550724637681,
+          "left": 51.342465753424676,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "High Beam",
+        "relatedEntities": [
+          "LUZ_ALTA"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/headlight-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/headlight-fuse#problems-article",
+            "title": "Headlight fuse",
+            "problemsTitle": "View problems with the headlight fuse"
+          }
+        ]
+      },
+      {
+        "id": "F15",
+        "layout": {
+          "top": 4.22463768115942,
+          "left": 35.8790187691302,
+          "width": 3.9078767123287688,
+          "height": 8.371376811594203
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        }
+      },
+      {
+        "id": "F16",
+        "layout": {
+          "top": 20.925623525481075,
+          "left": 85.39041095890404,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ECM and Transmission Shifter",
+        "relatedEntities": [
+          "ECU"
+        ]
+      },
+      {
+        "id": "F17",
+        "layout": {
+          "top": 0.7708294098862676,
+          "left": 8.536986301369861,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 25
+        },
+        "description": "ECM Power Loads"
+      },
+      {
+        "id": "F18",
+        "layout": {
+          "top": 54.74202898550724,
+          "left": 53.739726027397275,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "ECM Load, Main Relay",
+        "relatedEntities": [
+          "RELAY_ASD"
+        ]
+      },
+      {
+        "id": "F19",
+        "layout": {
+          "top": 31.59710144927535,
+          "left": 51.342465753424676,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "Air Conditioning",
+        "relatedEntities": [
+          "AIRE_ACONDICIONADO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/air-conditioning-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/air-conditioning-fuse#problems-article",
+            "title": "Air conditioning fuse",
+            "problemsTitle": "View problems with the air conditioning fuse"
+          }
+        ]
+      },
+      {
+        "id": "F20",
+        "layout": {
+          "top": 2.9565217391304337,
+          "left": 49.116438356164394,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 30
+        },
+        "description": "Rear Defroster",
+        "relatedEntities": [
+          "DESEMPANADOR_TRASERO"
+        ],
+        "extendedDescription": "Rear defroster"
+      },
+      {
+        "id": "F21",
+        "layout": {
+          "top": 4.22463768115942,
+          "left": 41.43835616438356,
+          "width": 3.9078767123287688,
+          "height": 8.371376811594203
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "Key Unlock"
+      },
+      {
+        "id": "F22",
+        "layout": {
+          "top": 11.652173913043477,
+          "left": 8.536986301369861,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 10
+        },
+        "description": "Primary ECM Loads"
+      },
+      {
+        "id": "F23",
+        "layout": {
+          "top": 4.22463768115942,
+          "left": 30.319681373876826,
+          "width": 3.9078767123287688,
+          "height": 8.371376811594203
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 20
+        },
+        "description": "BSM System",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "F24",
+        "layout": {
+          "top": 27.17733400748389,
+          "left": 85.39041095890404,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "BSM System, Positive Key and Steering Angle Sensor",
+        "relatedEntities": [
+          "MODULO_CARROCERIA"
+        ]
+      },
+      {
+        "id": "F30",
+        "layout": {
+          "top": 48.88405797101449,
+          "left": 53.739726027397275,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "Fog Lamp",
+        "relatedEntities": [
+          "LUZ_ANTINIEBLA",
+          "LAMPARA(of=LUZ_ANTINIEBLA)",
+          "TESTIGO_LUZ_ANTINIEBLA"
+        ],
+        "extendedDescription": "Fog lights",
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/fog-light-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "id": "F81",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 64.0912802419893,
+          "left": 2.6802311722686136,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        }
+      },
+      {
+        "id": "F82",
+        "kind": {
+          "type": "fuse",
+          "format": "maxi"
+        },
+        "layout": {
+          "top": 80.24777787528294,
+          "left": 2.6802311722686136,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        }
+      },
+      {
+        "id": "F83",
+        "layout": {
+          "top": 18.1304347826087,
+          "left": 27.31095890410958,
+          "width": 21.046077210460776,
+          "height": 6.114624505928853
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "maxi",
+          "amp": 20
+        },
+        "description": "Fuel Pump",
+        "relatedEntities": [
+          "BOMBA(fluid=COMBUSTIBLE)",
+          "BOMBA_DE_COMBUSTIBLE"
+        ],
+        "extendedDescription": "Fuel pump",
+        "individualFusePages": [
+          {
+            "url": "/ram/promaster-city/info/fusebox/2022/fuel-pump-fuse",
+            "urlWithAnchor": "/ram/promaster-city/info/fusebox/2022/fuel-pump-fuse#problems-article",
+            "title": "Fuel pump fuse",
+            "problemsTitle": "View problems with the fuel pump fuse"
+          }
+        ]
+      },
+      {
+        "id": "F84",
+        "layout": {
+          "top": 40.520289855072456,
+          "left": 51.342465753424676,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 15
+        },
+        "description": "AT Module",
+        "relatedEntities": [
+          "TESTIGO_PROBLEMA_AT"
+        ]
+      },
+      {
+        "id": "F85",
+        "layout": {
+          "top": 48.88405797101449,
+          "left": 65.02739726027393,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "Rear Power Outlet 12V",
+        "relatedEntities": [
+          "TOMA_12V(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "id": "F86",
+        "layout": {
+          "top": 54.74202898550724,
+          "left": 65.02739726027393,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": "15"
+        },
+        "description": "IP Power Outlet 12V"
+      },
+      {
+        "id": "F87",
+        "layout": {
+          "top": 14.673913043478262,
+          "left": 85.39041095890404,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 5
+        },
+        "description": "IBS",
+        "extendedDescription": "Intelligent Battery Sensor"
+      },
+      {
+        "id": "F88",
+        "layout": {
+          "top": 9.115942028985506,
+          "left": 49.116438356164394,
+          "width": 8.199058219178083,
+          "height": 4.182065217391311
+        },
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "amp": 7.5
+        },
+        "description": "External Mirror Defrost"
+      },
+      {
+        "id": "T02",
+        "layout": {
+          "top": 65.01932367149757,
+          "left": 77.99726027397257,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T03",
+        "layout": {
+          "top": 90.10144927536231,
+          "left": 4.880231172268614,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T05",
+        "layout": {
+          "top": 77.56038647342994,
+          "left": 77.99726027397257,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T06",
+        "layout": {
+          "top": 90.10144927536231,
+          "left": 27.067123287671222,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T07",
+        "layout": {
+          "top": 65.01474125838192,
+          "left": 53.27123287671233,
+          "width": 20.14840182648402,
+          "height": 19.954106280193237
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T08",
+        "layout": {
+          "top": 29.681159420289855,
+          "left": 27.86712328767122,
+          "width": 20.14840182648402,
+          "height": 19.954106280193237
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T09",
+        "layout": {
+          "top": 19.8080769104799,
+          "left": 4.680231172268615,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T10",
+        "layout": {
+          "top": -0.27391304347826106,
+          "left": 59.41780821917808,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T14",
+        "layout": {
+          "top": 90.10144927536231,
+          "left": 77.99726027397257,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "T17",
+        "layout": {
+          "top": -0.27391304347826106,
+          "left": 78.56849315068493,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T19",
+        "layout": {
+          "top": 31.92234141886796,
+          "left": 4.680231172268615,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        }
+      },
+      {
+        "id": "T20",
+        "layout": {
+          "top": 52.47826086956521,
+          "left": 77.99726027397257,
+          "width": 17.809863013698628,
+          "height": 10.700434782608692
+        },
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        }
+      },
+      {
+        "id": "T30",
+        "layout": {
+          "top": 14.855072463768115,
+          "left": 62.671232876712324,
+          "width": 20.14840182648402,
+          "height": 19.954106280193237
+        },
+        "kind": {
+          "type": "relay",
+          "format": "full",
+          "notUsed": false
+        }
+      }
+    ],
+    "processed": false,
+    "boxAspectRatio": 0.9452054794520548,
+    "boxDiagramImg": {
+      "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-diagrams/89345224_ram-promaster-2019.jpg"
+    },
+    "imageClusters": [
+      "635c19e329ce12fd2ba18556"
+    ],
+    "boxName": "Engine compartment fuse box",
+    "boxTablesImages": [
+      {
+        "url": "https://rewise-images.s3.amazonaws.com/originals/legos/fusebox-tables/38af5ed0_image.jpg"
+      }
+    ],
+    "templateId": "65df37f8e484b477f5b14b72",
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-ram-promaster-city-2022-genid-g1-0.webp"
+  }
+]

@@ -1,0 +1,1016 @@
+[
+  {
+    "fuses": [
+      {
+        "layout": {
+          "top": 3.4482758620689653,
+          "left": 26.233766233766232,
+          "width": 19.74025974025974,
+          "height": 5.862068965517241
+        },
+        "id": "01",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "",
+          "notUsed": false
+        },
+        "description": "Right Door Control Module",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 3.4482758620689653,
+          "left": 52.72727272727272,
+          "width": 19.480519480519483,
+          "height": 5.862068965517241
+        },
+        "id": "02",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "",
+          "notUsed": false
+        },
+        "description": "Left Door Control Module",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 6.206896551724138,
+          "left": 13.246753246753245,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "03",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Endgate Module 2",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 6.0344827586206895,
+          "left": 78.96103896103897,
+          "width": 9.87012987012987,
+          "height": 2.9310344827586206
+        },
+        "id": "04",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Truck Body Controller 3",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 10.485075569012944,
+          "left": 13.246753246753245,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "05",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Fog Lamps",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/oldsmobile/bravada/info/fusebox/2004/fog-light-fuse",
+            "urlWithAnchor": "/oldsmobile/bravada/info/fusebox/2004/fog-light-fuse#problems-article",
+            "title": "Fog light fuse",
+            "problemsTitle": "View problems with the fog light fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 10.349507532160128,
+          "left": 52.43686418696605,
+          "width": 10.007577165568215,
+          "height": 3.3892009213203806
+        },
+        "id": "06",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Blank",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 10.689655172413794,
+          "left": 78.96103896103897,
+          "width": 9.87012987012987,
+          "height": 2.9310344827586206
+        },
+        "id": "07",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Truck Body Controller 2",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 14.827586206896552,
+          "left": 13.246753246753245,
+          "width": 19.480519480519483,
+          "height": 5.862068965517241
+        },
+        "id": "08",
+        "kind": {
+          "type": "circuitbreaker",
+          "format": "",
+          "notUsed": false
+        },
+        "description": "Power Seats",
+        "relatedEntities": [
+          "ASIENTO_ELECTRICO",
+          "COMANDO_AJUSTE_ASIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 15,
+          "left": 39.48051948051948,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "09",
+        "kind": {
+          "type": "fuse-shunt",
+          "format": "mini"
+        },
+        "description": "Rear Wiper",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 14.827586206896552,
+          "left": 78.96103896103897,
+          "width": 9.87012987012987,
+          "height": 3.103448275862069
+        },
+        "id": "10",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Driver Door Module",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.137931034482758,
+          "left": 39.48051948051948,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "11",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Amplifier",
+        "relatedEntities": [
+          "AMPLIFICADOR",
+          "AMPLIFICADOR_EQUIPO_SONIDO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 19.137931034482758,
+          "left": 78.96103896103897,
+          "width": 9.87012987012987,
+          "height": 3.103448275862069
+        },
+        "id": "12",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Passenger Door Module",
+        "relatedEntities": [
+          "PUERTA(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 23.620689655172413,
+          "left": 13.246753246753245,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "13",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rear Climate Controls",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 23.620689655172413,
+          "left": 26.49350649350649,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "14",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Left Rear Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LUGAR_CUADRANTE(lat=LADO_IZQUIERDO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 23.635175143736014,
+          "left": 78.96103896103897,
+          "width": 9.87012987012987,
+          "height": 3.103448275862069
+        },
+        "id": "15",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Blank",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 28.244488396731725,
+          "left": 13.246753246753245,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "16",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Vehicle Center High-Mounted Stop Lamp",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 28.108920359878915,
+          "left": 26.49350649350649,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "17",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right Rear Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=LUGAR_CUADRANTE(lat=LADO_DERECHO,long=PARTE_TRASERA))"
+        ]
+      },
+      {
+        "layout": {
+          "top": 27.93103448275862,
+          "left": 39.740259740259745,
+          "width": 19.74025974025974,
+          "height": 7.586206896551724
+        },
+        "id": "18",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Locks",
+        "relatedEntities": [
+          "CERRADURA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.31152950231618,
+          "left": 13.246753246753245,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "19",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Liftgate Module/Driver Seat Module",
+        "relatedEntities": [
+          "PORTON_TRASERO",
+          "ASIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 32.241379310344826,
+          "left": 78.96103896103897,
+          "width": 9.87012987012987,
+          "height": 3.103448275862069
+        },
+        "id": "20",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Sunroof",
+        "relatedEntities": [
+          "TECHO_SOLAR"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/oldsmobile/bravada/info/fusebox/2004/sunroof-fuse",
+            "urlWithAnchor": "/oldsmobile/bravada/info/fusebox/2004/sunroof-fuse#problems-article",
+            "title": "Sunroof fuse",
+            "problemsTitle": "View problems with the sunroof fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 36.724137931034484,
+          "left": 32.72727272727273,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "21",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Lock",
+        "relatedEntities": [
+          "CERRADURA"
+        ]
+      },
+      {
+        "layout": {
+          "top": 40.71674778719072,
+          "left": 26.907330601332845,
+          "width": 9.80334089688315,
+          "height": 3.5247689581731976
+        },
+        "id": "23",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Blank",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 40.86206896551724,
+          "left": 39.740259740259745,
+          "width": 19.74025974025974,
+          "height": 7.586206896551724
+        },
+        "id": "24",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Unlock",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 45.597197113892065,
+          "left": 26.907330601332845,
+          "width": 9.80334089688315,
+          "height": 3.5247689581731976
+        },
+        "id": "25",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Blank",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 49.664238219476516,
+          "left": 13.246753246753245,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "26",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Blank",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 49.528670182623706,
+          "left": 32.625946124514684,
+          "width": 9.599104628198084,
+          "height": 3.253632884467571
+        },
+        "id": "27",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "OH Battery/OnStar® System",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 58.10344827586207,
+          "left": 52.72727272727272,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "29",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Rainsense™ Wipers",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 62.41379310344828,
+          "left": 19.22077922077922,
+          "width": 19.480519480519483,
+          "height": 7.586206896551724
+        },
+        "id": "30",
+        "kind": {
+          "type": "relay",
+          "format": "half"
+        },
+        "description": "Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 62.58620689655172,
+          "left": 52.72727272727272,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "31",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Truck Body Controller Accessory",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 62.58620689655172,
+          "left": 78.96103896103897,
+          "width": 9.87012987012987,
+          "height": 3.103448275862069
+        },
+        "id": "32",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Truck Body Controller 5",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 67.06896551724138,
+          "left": 52.72727272727272,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "33",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Front Wipers",
+        "relatedEntities": [
+          "LIMPIA_PARABRISAS(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 71.37931034482759,
+          "left": 38.961038961038966,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "34",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Vehicle Stop",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 71.49069215277976,
+          "left": 52.72727272727272,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "35",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Blank",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 75.6896551724138,
+          "left": 12.727272727272727,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "36",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heat Ventilation Air Conditioning B",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 75.6896551724138,
+          "left": 25.71428571428571,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "37",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Front Parking Lamps",
+        "relatedEntities": [
+          "LUZ_DE_ESTACIONAMIENTO(ubicacion=PARTE_DELANTERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.6896551724138,
+          "left": 38.961038961038966,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "38",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Left Turn Signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_IZQUIERDO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 75.3448275862069,
+          "left": 65.45454545454545,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "39",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heat Ventilation Air Conditioning 1",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 75.3448275862069,
+          "left": 78.96103896103897,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "40",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Truck Body Controller 4",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 79.82758620689656,
+          "left": 12.727272727272727,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "41",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Radio",
+        "relatedEntities": [
+          "ESTEREO"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/oldsmobile/bravada/info/fusebox/2004/radio-fuse",
+            "urlWithAnchor": "/oldsmobile/bravada/info/fusebox/2004/radio-fuse#problems-article",
+            "title": "Radio fuse",
+            "problemsTitle": "View problems with the radio fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.82758620689656,
+          "left": 25.71428571428571,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "42",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Trailer Park",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 79.82758620689656,
+          "left": 38.961038961038966,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "43",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Right Turn Signal",
+        "relatedEntities": [
+          "LUZ_DIRECCIONAL(ubicacion=LADO_DERECHO)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 79.82758620689656,
+          "left": 65.45454545454545,
+          "width": 9.61038961038961,
+          "height": 3.103448275862069
+        },
+        "id": "44",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Heat Ventilation Air Conditioning",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 84.13793103448276,
+          "left": 9.596656217345872,
+          "width": 19.74025974025974,
+          "height": 7.586206896551724
+        },
+        "id": "45",
+        "kind": {
+          "type": "relay",
+          "format": "half",
+          "notUsed": false
+        },
+        "description": "Rear Fog Lamps",
+        "relatedEntities": [
+          "LAMPARA(of=LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA))",
+          "LUZ_ANTINIEBLA(ubicacion=PARTE_TRASERA)"
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.09851958009156,
+          "left": 32.625946124514684,
+          "width": 9.80334089688315,
+          "height": 3.3892009213203806
+        },
+        "id": "46",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Auxiliary Power 1",
+        "relatedEntities": [
+          "TOMA_12V"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/oldsmobile/bravada/info/fusebox/2004/cigarette-lighter-fuse",
+            "urlWithAnchor": "/oldsmobile/bravada/info/fusebox/2004/cigarette-lighter-fuse#problems-article",
+            "title": "Cigarette lighter fuse",
+            "problemsTitle": "View problems with the cigarette lighter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.13793103448276,
+          "left": 52.2077922077922,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "47",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Ignition 0",
+        "relatedEntities": [
+          "ARRANQUE"
+        ],
+        "individualFusePages": [
+          {
+            "url": "/oldsmobile/bravada/info/fusebox/2004/starter-fuse",
+            "urlWithAnchor": "/oldsmobile/bravada/info/fusebox/2004/starter-fuse#problems-article",
+            "title": "Starter fuse",
+            "problemsTitle": "View problems with the starter fuse"
+          }
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.13793103448276,
+          "left": 65.45454545454545,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "48",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Four-Wheel Drive",
+        "relatedEntities": [
+          "DOBLE_TRACCION"
+        ]
+      },
+      {
+        "layout": {
+          "top": 84.2340876169444,
+          "left": 78.70129870129871,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "49",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Blank",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 88.62068965517241,
+          "left": 52.2077922077922,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "50",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Truck Body Controller Ignition",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 88.62068965517241,
+          "left": 65.45454545454545,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "51",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Brakes",
+        "relatedEntities": [
+          "FRENO",
+          "TESTIGO_FRENO_DE_MANO"
+        ]
+      },
+      {
+        "layout": {
+          "top": 88.62068965517241,
+          "left": 78.70129870129871,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "52",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": false
+        },
+        "description": "Truck Body Controller Run",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 93.18157804923018,
+          "left": 13.019264330748381,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "U1",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "undefined",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 93.18157804923018,
+          "left": 25.68191298922245,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "U2",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "undefined",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 93.18157804923018,
+          "left": 39.16150672243678,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "U3",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "undefined",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 93.18157804923018,
+          "left": 52.64110045565111,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "U4",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "undefined",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 93.18157804923018,
+          "left": 65.50798538281025,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "U5",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "undefined",
+        "relatedEntities": []
+      },
+      {
+        "layout": {
+          "top": 93.18157804923018,
+          "left": 78.70129870129871,
+          "width": 9.61038961038961,
+          "height": 2.9310344827586206
+        },
+        "id": "U6",
+        "kind": {
+          "type": "fuse",
+          "format": "mini",
+          "notUsed": true
+        },
+        "description": "undefined",
+        "relatedEntities": []
+      }
+    ],
+    "boxAspectRatio": 1.5064935064935066,
+    "processed": false,
+    "boxName": "Rear Underseat Fuse Block",
+    "boxDescription": "The rear underseat fuse block is located under the rear seat on the driver’s side of the vehicle.",
+    "boxTablesImages": [
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/f039013d_Captura de Pantalla 2021-07-23 a la(s) 17.16.59.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/9ad3fe56_Captura de Pantalla 2021-07-23 a la(s) 17.18.01.jpg"
+      },
+      {
+        "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-tables/e95fcc8b_Captura de Pantalla 2021-07-23 a la(s) 17.19.02.jpg"
+      }
+    ],
+    "boxDiagramImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-diagrams/0ec0bf1a_Captura de Pantalla 2021-07-23 a la(s) 17.19.54.png"
+    },
+    "boxReferenceImg": {
+      "url": "https://opinautos-images.s3.amazonaws.com/legos/fusebox-pictures/80b5d112_oldsmobile-bravada-2004.jpg"
+    },
+    "boxThumbnail": "https://images.startmycar.com/legos/fusebox-thumbnails/fusebox-oldsmobile-bravada-2004-genid-g3-0.webp"
+  }
+]

@@ -342,7 +342,9 @@ model WorkOrderItem {
   type            WorkOrderItemType
   name            String   // Örn: "Motul 5W30 Yağ" veya "Şanzıman Revizyon İşçiliği"
   quantity        Float    @default(1)
-  unitPrice       Float    @default(0) // Fiyat bilgisi
+  unitPrice       Float    @default(0) // Birim Fiyat (KDV Hariç)
+  discount        Float    @default(0) // İskonto Tutarı
+  taxRate         Float    @default(20) // KDV Oranı (%)
   
   createdAt       DateTime @default(now())
 
