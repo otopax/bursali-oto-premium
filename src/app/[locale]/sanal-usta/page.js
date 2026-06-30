@@ -1,19 +1,35 @@
 "use client";
 
 import { useChat } from '@ai-sdk/react';
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
 
 export default function SanalUstaPage() {
-  const { messages, input, handleInputChange, handleSubmit, isLoading } = useChat({
-    api: '/api/chat',
-    initialMessages: [
-      {
-        id: 'welcome-msg',
-        role: 'assistant',
-        content: 'Hoş geldin hemşerim. Ben Bursalı Oto\'nun 40 yıllık babadan oğula geçen mekanik hafızasıyla eğitilmiş Sanal Ustasıyım. Aracınızdaki arıza kodunu (Örn: P0171) veya şikayetinizi yazın, kaputu sanal olarak açıp sorunu anında bulalım.'
-      }
-    ]
+  const [vehicleContext, setVehicleContext] = useState({
+    isRegistered: false,
+    brand: '',
+    model: '',
+    year: '',
+    chassis: ''
   });
+
+  const { messages, input, handleInputChange, handleSubmit, isLoading, setMessages } = useChat({
+    api: '/api/chat',
+    body: { vehicleContext },
+    initialMessages: []
+  });
+
+  // Dinamik ilk mesaj (Araç kayıt edildikten sonra tetiklenecek)
+  useEffect(() => {
+    if (vehicleContext.isRegistered && messages.length === 0) {
+      setMessages([
+        {
+          id: 'welcome-msg',
+          role: 'assistant',
+          content: `Hoş geldin hemşerim. Ben Bursalı Oto'nun Sanal Ustasıyım. \n\nSisteme kaydettiğin **${vehicleContext.year} ${vehicleContext.brand} ${vehicleContext.model}** ${vehicleContext.chassis ? `(Şasi: ${vehicleContext.chassis})` : ''} aracının fabrika verilerini, kronik sorunlarını ve şanzıman şemalarını hafızama yükledim. \n\nAracındaki arıza kodunu (Örn: P0171) veya şikayetini yaz, kaputu sanal olarak açıp doğrudan senin aracına özel teşhisi yapalım.`
+        }
+      ]);
+    }
+  }, [vehicleContext.isRegistered, vehicleContext, setMessages, messages.length]);
 
   const messagesEndRef = useRef(null);
 
@@ -58,15 +74,66 @@ export default function SanalUstaPage() {
         </div>
       </div>
 
-      <main className="container mx-auto px-4 pt-24 md:pt-32 pb-4 md:pb-16 min-h-[100dvh] flex flex-col">
+      <main className="container mx-auto px-4 pt-24 md:pt-32 pb-4 md:pb-16 min-h-[100dvh] flex flex-col relative">
         
-        <div className="text-center mb-6 md:mb-8">
+        {/* Onboarding Modal Overlay */}
+        {!vehicleContext.isRegistered && (
+          <div style={{
+            position: 'absolute',
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(0,0,0,0.6)',
+            backdropFilter: 'blur(8px)',
+            zIndex: 50,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1rem'
+          }}>
+            <div className="glass-panel" style={{ maxWidth: '500px', width: '100%', padding: '2.5rem', borderRadius: '16px', border: '1px solid rgba(212, 175, 55, 0.4)', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.7)' }}>
+              <h2 style={{ fontSize: '1.8rem', color: 'var(--accent-gold)', marginBottom: '0.5rem', textAlign: 'center' }}>Aracınızı Tanıtın</h2>
+              <p style={{ color: 'var(--text-muted)', textAlign: 'center', marginBottom: '2rem', fontSize: '0.95rem' }}>
+                Sanal Usta'nın doğrudan sizin aracınıza (fabrika verilerine) özel nokta atışı teşhis yapabilmesi için lütfen bilgileri girin.
+              </p>
+              
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                const fd = new FormData(e.target);
+                setVehicleContext({
+                  isRegistered: true,
+                  brand: fd.get('brand'),
+                  model: fd.get('model'),
+                  year: fd.get('year'),
+                  chassis: fd.get('chassis')
+                });
+              }} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
+                
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  <input required name="brand" placeholder="Marka (Örn: BMW)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                  <input required name="model" placeholder="Model (Örn: 320i)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                </div>
+                
+                <input required type="number" min="1990" max="2025" name="year" placeholder="Üretim Yılı (Örn: 2018)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                
+                <div>
+                  <input name="chassis" placeholder="Şasi Numarası (İsteğe Bağlı)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                  <small style={{ color: '#94a3b8', display: 'block', marginTop: '0.4rem', fontSize: '0.8rem' }}>* Şasi numarası girmek, arıza tespiti doğruluğunu %100'e yaklaştırır.</small>
+                </div>
+
+                <button type="submit" className="btn btn-gold w-full mt-2 py-3 rounded-lg" style={{ fontSize: '1.1rem', letterSpacing: '1px' }}>
+                  Sanal Atölyeye Bağlan
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+
+        <div className="text-center mb-6 md:mb-8" style={{ filter: !vehicleContext.isRegistered ? 'blur(4px)' : 'none', transition: 'filter 0.5s ease' }}>
           <h1 className="text-3xl md:text-5xl font-bold mb-2">Sanal Usta</h1>
           <p className="text-lg md:text-xl text-[var(--text-muted)]">Bursalı Oto'nun 40 yıllık mekanik hafızasıyla donatılmış Yapay Zeka ustası.</p>
         </div>
 
         {/* Side by Side Layout */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-6xl mx-auto w-full items-stretch">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-6xl mx-auto w-full items-stretch" style={{ filter: !vehicleContext.isRegistered ? 'blur(8px)' : 'none', pointerEvents: !vehicleContext.isRegistered ? 'none' : 'auto', transition: 'filter 0.5s ease' }}>
           
           {/* Avatar Section (Left) */}
           <div className="glass-panel" style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '2rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>

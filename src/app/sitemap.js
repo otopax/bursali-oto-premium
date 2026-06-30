@@ -23,8 +23,7 @@ export default async function sitemap() {
     '/tr/fethiye-7-24-oto-cekici',
     '/tr/porsche-mercedes-ozel-servis',
     '/tr/otomatik-sanziman-tamiri',
-    '/tr/english-speaking-mechanic',
-    '/tr/vip-filo-gece-bakimi'
+    '/tr/english-speaking-mechanic'
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString(),

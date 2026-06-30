@@ -21,14 +21,11 @@ export async function POST(req) {
     return new Response('Too Many Requests', { status: 429 });
   }
 
-  const { messages } = await req.json();
+  const { messages, vehicleContext } = await req.json();
 
   // 1. Semantic Cache Kontrolü (Aynı sohbet geçmişi var mı?)
   const cachedResponse = await getAiCache(messages);
   if (cachedResponse) {
-    // Return mock stream response for cached text
-    // The vercel AI sdk expects a stream, but for cached text we can just return the raw text if handled properly by client
-    // Or we return a single chunk stream. We'll return 0:"text" format that AI SDK uses
     const encoder = new TextEncoder();
     const stream = new ReadableStream({
       start(controller) {
@@ -39,9 +36,15 @@ export async function POST(req) {
     return new Response(stream, { headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-AI-Cache': 'HIT' } });
   }
 
+  // Dinamik System Prompt: Eğer kullanıcı araç bilgisi girdiyse bunu AI'ya kesin bir dille bildir.
+  let dynamicSystemPrompt = getSystemPrompt('CHAT_BOT', 'v2');
+  if (vehicleContext && vehicleContext.isRegistered) {
+    dynamicSystemPrompt += `\n\nÖNEMLİ BİLGİ: Şu an konuştuğun müşterinin aracı kesin olarak şudur: ${vehicleContext.year} model ${vehicleContext.brand} ${vehicleContext.model}. ${vehicleContext.chassis ? `Şasi numarası (VIN): ${vehicleContext.chassis}.` : ''} Yapacağın tüm teşhisleri, vereceğin parça numaralarını ve arıza kodu analizlerini sadece ve sadece bu araca özel yap. Genel geçer cevaplar verme.`;
+  }
+
   const result = streamText({
     model: google('gemini-2.5-flash'),
-    system: getSystemPrompt('CHAT_BOT', 'v2'),
+    system: dynamicSystemPrompt,
     messages,
     tools: {
       getBrands: tool({

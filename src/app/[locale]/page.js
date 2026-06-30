@@ -267,11 +267,6 @@ export default async function Home({ params }) {
             <p style={{ marginBottom: 0 }}>Bursalı Oto Servis olarak &quot;deneme yanılma&quot; yöntemini tamamen reddediyoruz. Porsche araçlar için orijinal PIWIS cihazı, Volkswagen grubu (Audi, Seat, Skoda, VW) için ODIS cihazı ve diğer premium markalar için lisanslı yazılımlar kullanarak noktasal arıza tespiti (Diagnostic) yapıyoruz.</p>
           </div>
 
-          <div className="glass-panel" style={{ padding: '2rem' }}>
-            <h3 style={{ marginBottom: '1rem', color: 'var(--text-light)', fontSize: '1.3rem' }}>Turizm filoları için özel bir gece bakım hizmetiniz var mı?</h3>
-            <p style={{ marginBottom: 0 }}>Evet, VIP turizm transfer filoları (Mercedes Vito, VW Crafter vb.) için ticari kayıp yaşamamaları adına Night-Shift (Gece Vardiyası) bakım hizmetimiz bulunmaktadır. Araçlarınız gece gelir, sabaha kadar bakımları yapılır ve tura hazır halde teslim edilir.</p>
-          </div>
-
         </div>
       </section>
 
