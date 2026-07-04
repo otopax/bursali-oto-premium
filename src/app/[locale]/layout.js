@@ -4,6 +4,8 @@ import { Inter, Outfit } from 'next/font/google';
 import '../globals.css';
 import Chatbot from '@/components/Chatbot';
 import Providers from '@/components/Providers';
+import CookieConsent from '@/components/CookieConsent';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' });
@@ -217,24 +219,9 @@ export default async function RootLayout({ children, params }) {
             AutoRepair schema markup içinde standart Schema.org alanlarıyla (hasOfferCatalog,
             knowsLanguage, areaServed) veriliyor. Bu hem Google SEO hem AI crawler için doğru yol. */}
 
-        {/* Google Analytics (SEO Requirement) — sadece NEXT_PUBLIC_GA_ID env varsa yükle */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}></script>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
+        {/* Google Analytics — R3/KVKK: artık head'de koşulsuz YÜKLENMİYOR.
+            <GoogleAnalytics> bileşeni body'de, YALNIZCA kullanıcı çerez onayı
+            verdiğinde (localStorage 'kvkk-consent'='accepted') GA'yı enjekte eder. */}
       </head>
       <body>
         <nav className="navbar">
@@ -301,6 +288,8 @@ export default async function RootLayout({ children, params }) {
         `}} />
 
         <Chatbot />
+        <CookieConsent locale={locale} />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
     </html>
   );
