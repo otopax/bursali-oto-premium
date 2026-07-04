@@ -1,0 +1,51 @@
+{
+  "code": "P0420",
+  "description": "P0420 kodu, Bank 1'deki katalitik dönüştürücü sisteminin eşiğin altında bir verimliliğe sahip olduğunu gösterir. Bu, aracın emisyonlarını düzgün bir şekilde kontrol etmediği anlamına gelir.",
+  "severity": "Medium",
+  "symptoms": [
+    "Motor Arıza Lambasının (MIL) yanması",
+    "Egzozdan kükürt veya çürük yumurta kokusu (nadir)",
+    "Yakıt ekonomisinde düşüş (bazen)",
+    "Motor performansında hafif düşüş (nadir)"
+  ],
+  "commonCauses": [
+    "Arızalı veya yıpranmış katalitik dönüştürücü (en yaygın neden)",
+    "Arızalı Oksijen (O2) sensörleri (özellikle aşağı akış sensörü, ancak genellikle dönüştürücü arızasını bildiren sensördür, sebebi değildir)",
+    "Egzoz sistemi sızıntıları (O2 sensörleri öncesi veya sonrası)",
+    "Motor soğutma suyu sıcaklık sensörü arızası",
+    "Ateşleme sistemi sorunları (buji, bobin) veya yakıt enjektörleri sorunları (uzun süreli zengin/fakir karışım veya tekleme nedeniyle dönüştürücüye zarar verebilir)"
+  ],
+  "stepByStepSolution": [
+    "OBD-II tarayıcı ile P0420 kodunu ve diğer olası kodları doğrulayın.",
+    "Canlı veri okumalarıyla ön ve arka O2 sensörlerinin voltajlarını ve yakıt trimlerini izleyin. Sağlıklı bir dönüştürücüde, arka O2 sensörü voltajı nispeten sabit kalmalıdır, ön sensör ise dalgalanmalıdır. Eğer arka sensör de ön sensör gibi dalgalanıyorsa, katalizör verimsizdir.",
+    "Egzoz sisteminde (manifold, katalizör, borular) herhangi bir sızıntı olup olmadığını kontrol edin.",
+    "Motor teklemesi, yanlış yakıt karışımı (zengin/fakir) veya diğer motor performansı sorunlarının mevcut olup olmadığını kontrol edin, çünkü bunlar dönüştürücüye zarar verebilir.",
+    "Eğer O2 sensörleri arızalı olduğundan şüpheleniliyorsa, sensörleri test edin ve gerekiyorsa değiştirin.",
+    "Yukarıdaki tüm kontrollerden sonra katalitik dönüştürücünün verimsiz olduğu kesinleşirse, dönüştürücüyü değiştirin.",
+    "Tüm kodları silin ve onarımın doğrulanması için aracı test sürüşüne çıkarın."
+  ],
+  "estimatedCostInfo": "Teşhis için genellikle 1-2 saatlik işçilik (100-250$) gereklidir. O2 sensörü değişimi parça başına 50-200$ ve 50-150$ işçilik tutabilir. Egzoz sızıntılarının onarımı 50-300$ arasında değişebilir. En maliyetli çözüm olan katalitik dönüştürücü değişimi, parçanın kalitesine (yedek parça vs. OEM) ve araca bağlı olarak 300$'dan 3000$'a kadar parça maliyeti ve 150-500$ işçilik maliyetiyle toplamda 500-3500$+ tutabilir.",
+  "videos": [
+    {
+      "title": "How to fix a p0420 without replacing catalytic converter",
+      "url": "https://www.youtube.com/watch?v=QUqtKdPA4Mw",
+      "duration": 16,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/QUqtKdPA4Mw/hqdefault.jpg"
+    },
+    {
+      "title": "P0420 CODE CAUSES AND SOLUTIONS",
+      "url": "https://www.youtube.com/watch?v=-dRnkdrTKB8",
+      "duration": 134,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/-dRnkdrTKB8/hqdefault.jpg"
+    },
+    {
+      "title": "How to Fix P0420 Engine Code in 3 Minutes [3 Methods / Only $19.99]",
+      "url": "https://www.youtube.com/watch?v=1y190iiOtDM",
+      "duration": 160,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/1y190iiOtDM/hqdefault.jpg"
+    }
+  ]
+}
