@@ -1,5 +1,8 @@
+// Singleton PrismaClient (lib/prisma.js ile aynı instance'ı paylaşır)
 const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+const globalForPrisma = globalThis;
+const prisma = globalForPrisma.prisma ?? new PrismaClient();
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 /**
  * Enterprise Transactional Outbox Pattern

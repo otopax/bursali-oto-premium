@@ -10,20 +10,25 @@ const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
  * @param {string} ip - The IP address of the client
  * @param {number} limit - Max requests
  * @param {number} windowSec - Time window in seconds
- * @returns {Promise<{success: boolean, limit: number, remaining: number}>}
+ * @param {Object} opts
+ * @param {boolean} [opts.failClosed=false] - Redis düştüğünde istekleri REDDET (AI/pahalı endpoint için).
+ *   Varsayılan false (fail-open) — kullanıcı deneyimi kritik olan public endpoint'ler için.
+ *   AI endpoint'lerinde true kullan → bot saldırısında Gemini kotasının patlamasını engeller.
+ * @returns {Promise<{success: boolean, limit: number, remaining: number, degraded?: boolean}>}
  */
-export async function rateLimit(ip, limit = 60, windowSec = 60) {
+export async function rateLimit(ip, limit = 60, windowSec = 60, opts = {}) {
+  const { failClosed = false } = opts;
   const key = `rate-limit:${ip}`;
-  
+
   try {
     const current = await redis.incr(key);
-    
+
     if (current === 1) {
       await redis.expire(key, windowSec);
     }
-    
+
     const ttl = await redis.ttl(key);
-    
+
     return {
       success: current <= limit,
       limit,
@@ -31,8 +36,12 @@ export async function rateLimit(ip, limit = 60, windowSec = 60) {
       resetIn: ttl
     };
   } catch (error) {
-    // Fail open if Redis is down
-    console.error('Rate Limit Error:', error);
-    return { success: true, limit, remaining: limit, resetIn: windowSec };
+    console.error('[Rate Limit] Redis hatası:', error.message);
+    if (failClosed) {
+      // Pahalı endpoint (AI) — Redis yoksa REDDET
+      return { success: false, limit, remaining: 0, resetIn: windowSec, degraded: true };
+    }
+    // Public endpoint — Redis yoksa AÇ (kullanıcıyı engelleme)
+    return { success: true, limit, remaining: limit, resetIn: windowSec, degraded: true };
   }
 }

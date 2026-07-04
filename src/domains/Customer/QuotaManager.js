@@ -2,7 +2,11 @@ const IORedis = require('ioredis');
 const { PrismaClient } = require('@prisma/client');
 const { Outbox } = require('../../lib/events/Outbox');
 
-const prisma = new PrismaClient();
+// Singleton PrismaClient (lib/prisma.js ile aynı instance'ı paylaşır)
+const globalForPrisma = globalThis;
+const prisma = globalForPrisma.prisma ?? new PrismaClient();
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+
 const redisClient = new IORedis(process.env.REDIS_URL || 'redis://localhost:6379');
 redisClient.on('error', (err) => console.error('Redis Client Error', err));
 

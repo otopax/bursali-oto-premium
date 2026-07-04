@@ -84,8 +84,11 @@ class PostgresProvider {
       faultCode: data.code,
       brand: brandSlug,
       model: modelSlug,
-      aiAnalysis: data.aiAnalysis,
-      videos: data.videos
+      description: data.description,
+      symptoms: data.symptoms,
+      causes: data.commonCauses,
+      mechanic_advice: data.stepByStepSolution,
+      videos: data.repairVideos
     };
   }
 

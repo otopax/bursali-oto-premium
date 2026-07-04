@@ -1,0 +1,65 @@
+{
+  "code": "P0300",
+  "description": "P0300 kodu, Motor Kontrol Modülü'nün (ECM), belirli bir silindirle ilişkilendirilemeyen rastgele veya birden fazla silindirde ateşleme hatası (misfire) algıladığını gösterir. Bu, motorun yanma sürecinde anormallikler olduğu anlamına gelir ve genellikle zayıf performans, motor titremesi ve yakıt ekonomisinde düşüşle sonuçlanır.",
+  "severity": "High",
+  "symptoms": [
+    "Motor arıza ışığı (MIL) yanar ve yanıp sönüyor olabilir (ciddi misfire durumunda)",
+    "Motorun titremesi veya sarsıntılı çalışması",
+    "Güç kaybı",
+    "Hızlanmada tereddüt veya duraksama",
+    "Yakıt ekonomisinde düşüş",
+    "Egzozdan çiğ yakıt kokusu gelmesi",
+    "Araçta titreşim"
+  ],
+  "commonCauses": [
+    "Vakum kaçakları (emme manifoldu contaları, hortumlar)",
+    "Düşük yakıt basıncı (yakıt pompası, yakıt filtresi veya basınç regülatörü sorunları)",
+    "Tıkalı veya arızalı yakıt enjektörleri",
+    "Arızalı ateşleme bobinleri",
+    "Arızalı bujiler veya buji kabloları (varsa)",
+    "Kötü yakıt kalitesi",
+    "Arızalı Hava Akış Sensörü (MAF) veya Mutlak Manifold Basıncı (MAP) sensörü",
+    "Tıkalı katalitik konvertör",
+    "Arızalı Krank Mili Konum Sensörü (CKP) veya Eksantrik Mili Konum Sensörü (CMP)",
+    "Egzoz Gazı Devridaim (EGR) valfi sorunları",
+    "Motorun iç sorunları (örn. düşük sıkıştırma, valf sorunları)",
+    "Motor Kontrol Modülü (ECM) arızası (nadir)"
+  ],
+  "stepByStepSolution": [
+    "1. Tarama aletiyle diğer DTC'leri ve freeze frame verilerini kontrol edin. Özellikle P0301-P0308 gibi silindir bazlı misfire kodlarının olup olmadığını inceleyin.",
+    "2. Motoru çalıştırarak ve dinleyerek veya duman test cihazı kullanarak vakum kaçaklarını kontrol edin.",
+    "3. Bujileri, buji kablolarını (varsa) ve ateşleme bobinlerini aşınma, çatlak veya hasar açısından görsel olarak inceleyin. Gerekirse buji ve bobinleri test edin/değiştirin.",
+    "4. Yakıt basınç göstergesi kullanarak yakıt sisteminin basıncını ve debisini kontrol edin. Basınç düşükse, yakıt pompası veya filtresini inceleyin.",
+    "5. Yakıt enjektörlerinin direncini test edin ve arızalı enjektörleri tespit etmek için enjektör püskürtme desenini ve akışını kontrol edin. Gerekirse temizleyin veya değiştirin.",
+    "6. Hava Akış Sensörünü (MAF) ve Oksijen Sensörlerini kontrol edin. MAF sensörünü temizleyin veya arızalıysa değiştirin.",
+    "7. Motorun her bir silindirinde sıkıştırma testi yaparak motorun iç mekanik durumunu kontrol edin. Düşük sıkıştırma, daha ciddi motor sorunlarına işaret edebilir.",
+    "8. Krank Mili Konum Sensörü (CKP) ve Eksantrik Mili Konum Sensörü (CMP) sinyallerini tarama aletiyle izleyin ve arızalıysa değiştirin.",
+    "9. Egzoz geri basıncını kontrol ederek katalitik konvertörün tıkanıp tıkanmadığını belirleyin.",
+    "10. EGR valfinin doğru çalıştığından ve tıkalı olmadığından emin olun.",
+    "11. Tüm diğer kontroller başarısız olursa, son çare olarak ECM yazılımını güncellemeyi veya ECM'yi değiştirmeyi düşünün."
+  ],
+  "estimatedCostInfo": "P0300 kodunun onarım maliyeti, temel nedene bağlı olarak büyük ölçüde değişir. Teşhis için genellikle 1-2 saat işçilik (500 TL - 1500 TL) gerekebilir. Basit bir buji değişimi veya vakum kaçağı onarımı 1-3 saat işçilik ve parça maliyetleriyle birlikte 1000 TL - 3000 TL arasında tutabilir. Yakıt pompası, yakıt enjektörleri veya ateşleme bobinleri gibi daha karmaşık bileşenlerin değişimi 3-6 saat işçilik ve parça maliyetleriyle 3000 TL - 10000 TL+ aralığında olabilir. Katalitik konvertör değişimi ise parça ve işçilikle birlikte 10000 TL - 30000 TL veya daha yüksek maliyetlere ulaşabilir. Ortalama olarak, P0300 kodunun çözümü için 1000 TL ile 15000 TL arasında bir maliyet beklenebilir, ancak katalitik konvertör gibi pahalı bir bileşenin arızalanması durumunda bu tutar önemli ölçüde artabilir.",
+  "videos": [
+    {
+      "title": "How to Fix a Random Engine Misfire in Your Car (Code P0300)",
+      "url": "https://www.youtube.com/watch?v=OyvdWeyDHf4",
+      "duration": 176,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/OyvdWeyDHf4/hqdefault.jpg"
+    },
+    {
+      "title": "Mucar Diagnostic Scan tool in How to fix a misfire P0300 P0301 P0302 P0303 4-12",
+      "url": "https://www.youtube.com/watch?v=_RbUF6uXbd8",
+      "duration": 3142,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/_RbUF6uXbd8/hqdefault.jpg"
+    },
+    {
+      "title": "P0300 ULTIMATE GUIDE",
+      "url": "https://www.youtube.com/watch?v=7qAaqmqavXA",
+      "duration": 319,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/7qAaqmqavXA/hqdefault.jpg"
+    }
+  ]
+}

@@ -1,10 +1,8 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { PrismaClient } from "@prisma/client";
+import { prisma } from "@/lib/prisma";
 import { verifyPassword } from "@/lib/auth/password";
 import { rateLimit } from "@/lib/auth/rateLimit";
-
-const prisma = new PrismaClient();
 
 export const authOptions = {
   providers: [
@@ -74,8 +72,12 @@ export const authOptions = {
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60, // 30 Gün
   },
-  secret: process.env.NEXTAUTH_SECRET || "BursaliOtoEnterpriseSecretKey2026",
+  secret: process.env.NEXTAUTH_SECRET, // Zorunlu — env yoksa NextAuth startup'ta hata verir
 };
+
+if (!process.env.NEXTAUTH_SECRET) {
+  throw new Error('NEXTAUTH_SECRET env variable zorunludur.');
+}
 
 const handler = NextAuth(authOptions);
 

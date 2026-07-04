@@ -1,0 +1,34 @@
+{
+  "code": "P0174",
+  "description": "P0174 kodu, motor kontrol modülünün (PCM) Bank 2'deki (motorun 1 numaralı silindiri içermeyen tarafı) hava-yakıt karışımının çok fakir olduğunu tespit ettiği anlamına gelir. Bu durum, motora olması gerekenden daha fazla hava veya daha az yakıt gittiğini gösterir.",
+  "severity": "Medium",
+  "symptoms": [
+    "Motor Arıza Lambası (MIL) yanar",
+    "Yakıt tüketiminde artış",
+    "Düzensiz rölanti veya titreme",
+    "Hızlanma sırasında tereddüt veya güç kaybı",
+    "Motorun teklemesi",
+    "Zor çalışma veya stop etme"
+  ],
+  "commonCauses": [
+    "Vakum kaçakları (emme manifoldu contası, vakum hortumları, PCV valfi gibi)",
+    "Arızalı Kütle Hava Akış (MAF) sensörü",
+    "Tıkalı veya kirli yakıt enjektörleri (Bank 2'de)",
+    "Düşük yakıt basıncı (yakıt pompası veya yakıt filtresi sorunları)",
+    "Arızalı Oksijen (O2) sensörü (Bank 2, katalitik konvertör öncesi)",
+    "Egzoz kaçakları (O2 sensörü öncesi Bank 2'de)",
+    "Arızalı yakıt basınç regülatörü"
+  ],
+  "stepByStepSolution": [
+    "Arıza kodlarını onaylamak ve ilişkili başka kodlar olup olmadığını kontrol etmek için OBD-II tarayıcı kullanın.",
+    "Motorun çalışır durumdayken uzun ve kısa vadeli yakıt trim değerlerini (LTFT, STFT) izleyin. P0174 durumunda Bank 2 için bu değerler yüksek olacaktır.",
+    "Motor bölmesinde ve emme sisteminde görsel olarak vakum kaçaklarını kontrol edin (hortumlar, bağlantı noktaları, contalar). Gerekirse bir duman makinesi kullanarak kaçakları tespit edin.",
+    "MAF sensörünün değerlerini tarayıcı ile kontrol edin. Sensörü temizlemeyi deneyin veya arızalıysa değiştirin.",
+    "Yakıt basıncını test edin ve üretici spesifikasyonlarına uygun olup olmadığını kontrol edin.",
+    "Bank 2'deki yakıt enjektörlerini kontrol edin (tıkanıklık, sızıntı, püskürtme deseni). Gerekirse temizleyin veya değiştirin.",
+    "Bank 2'deki ön oksijen sensörünün çalışma voltajlarını tarayıcı ile izleyin. Sensörün yavaş tepki verdiğini veya donmuş olduğunu fark ederseniz değiştirin.",
+    "Egzoz sistemini Bank 2'deki ön oksijen sensörü öncesindeki kaçaklar için kontrol edin."
+  ],
+  "estimatedCostInfo": "Tahmini maliyet, arızanın kesin nedenine bağlı olarak büyük ölçüde değişebilir. Örneğin, basit bir vakum hortumu değişimi için işçilik dahil 50-200 TL gibi düşük bir maliyet olabilirken, MAF sensörü değişimi 1500-4000 TL, oksijen sensörü değişimi 1000-3000 TL ve yakıt enjektörleri veya yakıt pompası gibi daha karmaşık bir sorun 2000-8000 TL veya daha fazla tutabilir. Teşhis süresi genellikle 1-2 saat sürer ve maliyeti 500-1500 TL civarındadır.",
+  "videos": []
+}

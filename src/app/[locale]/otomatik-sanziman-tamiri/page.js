@@ -1,10 +1,13 @@
-export const metadata = {
-  title: 'Otomatik Şanzıman Tamiri ve Revizyonu Fethiye | Bursalı Oto',
-  description: 'Fethiye\'de Volvo, BMW, Mercedes ve VAG grubu araçlarınız için Aisin, DCT, DSG otomatik şanzıman tamiri ve garantili beyin revizyonu uzmanı.',
-  alternates: {
-    canonical: 'https://www.bursaliotoservis.com/otomatik-sanziman-tamiri',
-  }
-};
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    title: 'Otomatik Şanzıman Tamiri ve Revizyonu Fethiye | Bursalı Oto',
+    description: 'Fethiye\'de Volvo, BMW, Mercedes ve VAG grubu araçlarınız için Aisin, DCT, DSG otomatik şanzıman tamiri ve garantili beyin revizyonu uzmanı.',
+    alternates: buildCanonical(locale, '/otomatik-sanziman-tamiri'),
+  };
+}
 
 export default function TransmissionPage() {
   return (

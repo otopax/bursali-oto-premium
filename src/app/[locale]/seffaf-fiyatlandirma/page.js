@@ -1,9 +1,14 @@
 import Link from 'next/link';
+import { buildCanonical } from '@/lib/seo/canonical';
 
-export const metadata = {
-  title: 'Şeffaf Fiyatlandırma | Bursalı Oto Servis',
-  description: 'Fethiye premium oto servis fiyatları. Sürpriz maliyet olmadan, %100 orijinal yedek parça ve şeffaf işçilik ücretleri.',
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    title: 'Şeffaf Fiyatlandırma | Bursalı Oto Servis',
+    description: 'Fethiye premium oto servis fiyatları. Sürpriz maliyet olmadan, %100 orijinal yedek parça ve şeffaf işçilik ücretleri.',
+    alternates: buildCanonical(locale, '/seffaf-fiyatlandirma'),
+  };
+}
 
 export default async function TransparentPricingPage({ params }) {
   const { locale } = await params;

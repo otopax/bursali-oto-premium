@@ -1,0 +1,56 @@
+{
+  "code": "P0340",
+  "description": "P0340 arıza kodu, Motor Kontrol Modülü'nün (ECM/PCM) kam mili konum sensörü devresinden beklenen sinyali almadığını gösterir. Bu, kam mili konum sensörünün kendisinde, kablo tesisatında veya ECM/PCM'de bir sorun olduğunu gösterebilir.",
+  "severity": "Medium",
+  "symptoms": [
+    "Motor marş basar ama çalışmaz (özellikle soğukta)",
+    "Motorun zor çalışması veya uzun marş süresi",
+    "Motorun rölantide düzensiz çalışması",
+    "Motor gücünde azalma",
+    "Vites değiştirme sorunları",
+    "Motorun yolda stop etmesi",
+    "Check Engine (Motor Kontrol) lambasının yanması"
+  ],
+  "commonCauses": [
+    "Arızalı Kam Mili Konum Sensörü (CPS)",
+    "Kam Mili Konum Sensörü kablo tesisatında veya konektöründe kısa devre veya açık devre",
+    "Kam Mili Konum Sensörü sinyal kablosunda zayıf bağlantı",
+    "Motor zamanlamasının yanlış ayarlanması (daha az yaygın)",
+    "Arızalı krank mili konum sensörü (Kam mili ve krank mili sensörleri birlikte çalışır)",
+    "Arızalı Motor Kontrol Modülü (ECM/PCM) (en az yaygın)"
+  ],
+  "stepByStepSolution": [
+    "1. OBD-II tarayıcı ile diğer DTC'leri (özellikle krank mili konum sensörü ile ilgili olanlar) kontrol edin ve tüm mevcut kodları not alın.",
+    "2. Kam mili konum sensörünün ve ilgili kablo tesisatının görsel muayenesini yapın. Hasarlı, aşınmış kabloları, korozyonlu veya gevşek konektörleri arayın.",
+    "3. Sensör konektöründen başlayarak sensöre giden besleme gerilimini ve toprak bağlantısını bir multimetre ile kontrol edin. Üretici spesifikasyonlarına uygun olup olmadığını doğrulayın.",
+    "4. Motor çalışırken veya marş basarken bir osiloskop ile kam mili konum sensöründen gelen sinyali kontrol edin. Sinyalin varlığını ve doğru deseni doğrulayın.",
+    "5. Sensörün direncini üretici spesifikasyonlarına göre kontrol edin (uygulanabilirse).",
+    "6. Gerekirse kam mili konum sensörünü değiştirin ve kodları temizleyin. Ardından aracı test sürüşü yapın ve kodun geri dönüp dönmediğini kontrol edin.",
+    "7. Kam mili ve krank mili konum sensörü sinyallerini bir osiloskop ile karşılaştırarak motor zamanlamasını dolaylı olarak kontrol edin. Ciddi zamanlama sorunları varsa, daha derinlemesine bir inceleme gerekecektir.",
+    "8. Tüm diğer bileşenler kontrol edildiyse ve sorun devam ediyorsa, ECM/PCM'nin arızalı olabileceği ihtimalini düşünün (ancak bu nadirdir)."
+  ],
+  "estimatedCostInfo": "P0340 kodunun teşhisi genellikle 1-2 saatlik işçilik gerektirir (500 TL - 1500 TL). En yaygın çözüm olan kam mili konum sensörünün değiştirilmesi, sensörün kendisi için parça maliyeti 400 TL ile 2000 TL arasında değişebilir (marka ve modele göre), artı 0.5 ila 2 saatlik işçilik maliyeti (250 TL - 1500 TL). Kablo tesisatı onarımları genellikle daha uygun fiyatlıdır. Motor zamanlaması ile ilgili sorunlar veya ECM/PCM değişimi gibi daha ciddi durumlar çok daha yüksek maliyetlere (birkaç bin TL'den on binlerce TL'ye kadar) yol açabilir.",
+  "videos": [
+    {
+      "title": "CAM SENSOR code P0340 problem fix#automobile #reminder #recommended",
+      "url": "https://www.youtube.com/watch?v=ct1yZ0ERKCU",
+      "duration": 16,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/ct1yZ0ERKCU/hqdefault.jpg"
+    },
+    {
+      "title": "How to fix code P0340.  A new cam sensor will not repair this car.",
+      "url": "https://www.youtube.com/watch?v=LFKL990i0bE",
+      "duration": 764,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/LFKL990i0bE/hqdefault.jpg"
+    },
+    {
+      "title": "Can’t fix code P0340?? Try this !!",
+      "url": "https://www.youtube.com/watch?v=s-Q4S-k4z50",
+      "duration": 16,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/s-Q4S-k4z50/hqdefault.jpg"
+    }
+  ]
+}

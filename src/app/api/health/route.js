@@ -1,68 +1,91 @@
+// Health-check endpoint (Faz A / Görev 6)
+// UptimeRobot her 5 dk çağırır — <2sn yanıt garantisi kritik.
+// Yapı: { status, version, uptime, timestamp, env, db, redis, latency, os? }
+// - status: "ok" | "degraded"
+// - HTTP: 200 | 503 (503 → UptimeRobot alarm gönderir)
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
 import Redis from 'ioredis';
 import os from 'os';
+import { prisma } from '@/lib/prisma';
 
-// Initialize instances outside handler to avoid connection pooling issues
-const prisma = new PrismaClient();
-
-// Use global redis instance if possible to avoid connection limits
+// Redis singleton (health-check için, kısa timeout, lazyConnect)
 const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
   maxRetriesPerRequest: 1,
-  connectTimeout: 2000,
+  connectTimeout: 1000, // 1 sn — <2sn toplam süreye sığmak için
+  lazyConnect: true,
+  enableOfflineQueue: false,
 });
 
 export const dynamic = 'force-dynamic';
 
+const APP_VERSION = process.env.NEXT_PUBLIC_APP_VERSION || '0.1.0';
+const CHECK_TIMEOUT_MS = 1500; // Her check için üst sınır
+
+/**
+ * Verilen promise'ı max ms süresince bekle; aşarsa reject.
+ */
+function withTimeout(promise, ms, label) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) =>
+      setTimeout(() => reject(new Error(`${label} timeout ${ms}ms`)), ms)
+    ),
+  ]);
+}
+
+async function checkDb() {
+  const started = Date.now();
+  try {
+    await withTimeout(prisma.$queryRaw`SELECT 1`, CHECK_TIMEOUT_MS, 'db');
+    return { status: 'ok', latency: Date.now() - started };
+  } catch (error) {
+    return { status: 'down', latency: Date.now() - started, error: error.message };
+  }
+}
+
+async function checkRedis() {
+  const started = Date.now();
+  try {
+    // ioredis lazyConnect: ping tetiklerse connect denenir
+    await withTimeout(redis.ping(), CHECK_TIMEOUT_MS, 'redis');
+    return { status: 'ok', latency: Date.now() - started };
+  } catch (error) {
+    return { status: 'down', latency: Date.now() - started, error: error.message };
+  }
+}
+
 export async function GET() {
   const startTime = Date.now();
-  const status = {
-    uptime: process.uptime(),
+
+  // Paralel check — sequential 2×1.5sn beklemek yerine max(1.5sn) toplam
+  const [db, redisResult] = await Promise.all([checkDb(), checkRedis()]);
+
+  const isHealthy = db.status === 'ok' && redisResult.status === 'ok';
+
+  const body = {
+    status: isHealthy ? 'ok' : 'degraded',
+    version: APP_VERSION,
+    uptime: Math.round(process.uptime()),
     timestamp: new Date().toISOString(),
     env: process.env.NODE_ENV,
+    db,
+    redis: redisResult,
+    latency: {
+      db: `${db.latency}ms`,
+      redis: `${redisResult.latency}ms`,
+      total: `${Date.now() - startTime}ms`,
+    },
+    // Sistem metrikleri (opsiyonel — Linux prod'da anlamlı)
     os: {
       memory: {
         free: Math.round(os.freemem() / 1024 / 1024) + 'MB',
         total: Math.round(os.totalmem() / 1024 / 1024) + 'MB',
       },
-      cpu: os.loadavg(),
+      loadavg: os.loadavg(),
     },
-    services: {
-      postgres: 'unknown',
-      redis: 'unknown',
-    },
-    latency: {},
   };
 
-  try {
-    // 1. Check PostgreSQL
-    const pgStart = Date.now();
-    await prisma.$queryRaw`SELECT 1`;
-    status.services.postgres = 'ok';
-    status.latency.postgres = `${Date.now() - pgStart}ms`;
-  } catch (error) {
-    status.services.postgres = 'down';
-    status.errors = status.errors || {};
-    status.errors.postgres = error.message;
-  }
-
-  try {
-    // 2. Check Redis
-    const redisStart = Date.now();
-    await redis.ping();
-    status.services.redis = 'ok';
-    status.latency.redis = `${Date.now() - redisStart}ms`;
-  } catch (error) {
-    status.services.redis = 'down';
-    status.errors = status.errors || {};
-    status.errors.redis = error.message;
-  }
-
-  status.latency.total = `${Date.now() - startTime}ms`;
-
-  const isHealthy = status.services.postgres === 'ok' && status.services.redis === 'ok';
-
-  return NextResponse.json(status, {
+  return NextResponse.json(body, {
     status: isHealthy ? 200 : 503,
     headers: {
       'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',

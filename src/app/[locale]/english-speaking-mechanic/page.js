@@ -1,10 +1,13 @@
-export const metadata = {
-  title: 'English Speaking Auto Mechanic in Fethiye | Car Repair',
-  description: 'Looking for an English-speaking auto mechanic in Fethiye? We offer premium car repair, 24/7 towing, and transparent pricing for expats and tourists.',
-  alternates: {
-    canonical: 'https://www.bursaliotoservis.com/english-speaking-mechanic',
-  }
-};
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    title: 'English Speaking Auto Mechanic in Fethiye | Car Repair',
+    description: 'Looking for an English-speaking auto mechanic in Fethiye? We offer premium car repair, 24/7 towing, and transparent pricing for expats and tourists.',
+    alternates: buildCanonical(locale, '/english-speaking-mechanic'),
+  };
+}
 
 export default function EnglishSpeakingMechanicPage() {
   return (

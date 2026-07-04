@@ -1,6 +1,10 @@
 // 🚀 V5.0 FEATURE 5: Knowledge Graph üzerinde hiyerarşik sorgular.
 const { PrismaClient } = require('@prisma/client');
-const prisma = new PrismaClient();
+
+// Singleton PrismaClient (lib/prisma.js ile aynı instance'ı paylaşır)
+const globalForPrisma = globalThis;
+const prisma = globalForPrisma.prisma ?? new PrismaClient();
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 class KnowledgeGraph {
   // Bir arıza kodundan başlayarak ilişkili tüm verileri getir (OEM -> Araç -> Motor -> ECU -> Sensör -> Video -> Parça)

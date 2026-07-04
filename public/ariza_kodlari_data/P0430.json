@@ -1,0 +1,53 @@
+{
+  "code": "P0430",
+  "description": "Katalitik Sistem Verimliliği Eşiğin Altında (Bank 2). Bu kod, egzoz gazı temizleme sisteminin (katalitik konvertör) Bank 2'deki verimliliğinin belirtilen eşiğin altına düştüğünü ve emisyonların artmasına neden olduğunu gösterir. Bank 2, motorun 'Bank 1' olarak adlandırılan silindirlerin karşı tarafında bulunan silindir bankasıdır (çoğu V tipi motorda).",
+  "severity": "Medium",
+  "symptoms": [
+    "Motor Arıza Lambasının (MIL) yanması",
+    "Yakıt ekonomisinde düşüş (bazı durumlarda)",
+    "Motor performansında hafif düşüş (nadir)",
+    "Egzozdan gelen kükürtlü veya çürük yumurta kokusu (katalitik konvertör aşırı ısındığında veya arızalandığında)"
+  ],
+  "commonCauses": [
+    "Arızalı katalitik konvertör (en yaygın sebep)",
+    "Arızalı arka oksijen (O2) sensörü (Bank 2 Sensör 2)",
+    "Egzoz sistemi sızıntıları (katalitik konvertör öncesi veya sonrası)",
+    "Arızalı ön oksijen (O2) sensörü (Bank 2 Sensör 1)",
+    "Motorun zengin veya fakir çalışmasına neden olan diğer motor sorunları (örneğin, sürekli ateşleme kaçakları, yakıt enjektör arızaları) ve bu durumun katalitik konvertöre zarar vermesi",
+    "Yanlış yakıt tipi kullanımı"
+  ],
+  "stepByStepSolution": [
+    "Tüm mevcut arıza kodlarını tarayın ve P0430 ile ilişkili diğer motor arıza kodlarının (özellikle ateşleme, yakıt trimleri veya O2 sensörleriyle ilgili olanlar) olup olmadığını kontrol edin ve önceliklendirin.",
+    "Egzoz sistemini görsel olarak inceleyin: Sızıntıları, hasarlı veya gevşek egzoz borularını, flanşları ve contaları kontrol edin.",
+    "Canlı veri (live data) kullanarak O2 sensörlerinin çalışma verilerini izleyin. Bank 2 Sensör 1 (ön) ve Sensör 2 (arka) voltajlarını karşılaştırın. Normalde, ön sensör hızlı ve sürekli dalgalanmalı, arka sensör ise sabit ve yüksek olmalıdır. P0430 durumunda arka sensör de ön sensör gibi dalgalanmaya başlayabilir.",
+    "Gerekirse, oksijen sensörlerini test edin veya değiştirin. Arka O2 sensörü bozuk olabilir ve hatalı okuma yapıyor olabilir.",
+    "Katalitik konvertörün kendisini test edin: Kızılötesi termometre ile giriş ve çıkış sıcaklıklarını ölçerek konvertörün verimliliğini değerlendirin (çıkış sıcaklığı girişten daha yüksek olmalıdır). Gerekirse konvertör basınç düşüşünü ölçün.",
+    "Motorun temel çalışma koşullarını kontrol edin: Ateşleme kaçakları, yakıt basıncı, enjektörler ve hava filtresi gibi katalitik konvertörün ömrünü etkileyebilecek diğer sorunları giderin.",
+    "Katalitik konvertörün arızalı olduğu teyit edilirse, Bank 2 katalitik konvertörü değiştirin.",
+    "Tüm tamirler yapıldıktan sonra arıza kodlarını temizleyin ve aracı test sürüşüne çıkararak sistemin doğru çalıştığından emin olun."
+  ],
+  "estimatedCostInfo": "Tahmini maliyet, arızanın kaynağına bağlı olarak büyük ölçüde değişir. Bir arızalı O2 sensörünün değiştirilmesi, parça ve işçilik dahil 150-400 USD arasında değişebilir. Egzoz sistemi sızıntısının onarımı 50-300 USD aralığında olabilir. Ancak, asıl katalitik konvertörün değiştirilmesi en pahalı çözümdür ve parça maliyetleri ve işçilik dahil olmak üzere 800 USD'den başlayıp araç tipine ve konvertörün kalitesine bağlı olarak 2500 USD veya daha fazlasına mal olabilir. Teşhis ve onarım süresi 1 saatten (basit O2 sensör değişimi) 4-8 saate (katalitik konvertör değişimi) kadar sürebilir.",
+  "videos": [
+    {
+      "title": "P0420 & P0430 Code Explained! Catalytic Converter Fix in 60 Seconds",
+      "url": "https://www.youtube.com/watch?v=df9hSvGowf4",
+      "duration": 69,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/df9hSvGowf4/hqdefault.jpg"
+    },
+    {
+      "title": "How To Fix P0430 Engine Code: Catalyst System Efficiency Below Threshold (Bank 2)",
+      "url": "https://www.youtube.com/watch?v=gx6WdwgQ1vI",
+      "duration": 252,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/gx6WdwgQ1vI/hqdefault.jpg"
+    },
+    {
+      "title": "How to Fix P0430 Error Code in 3 Minutes [3 DIY Methods / Only $4.97]",
+      "url": "https://www.youtube.com/watch?v=t4MCUwaeqA4",
+      "duration": 160,
+      "source": "YouTube",
+      "thumbnail": "https://i.ytimg.com/vi/t4MCUwaeqA4/hqdefault.jpg"
+    }
+  ]
+}

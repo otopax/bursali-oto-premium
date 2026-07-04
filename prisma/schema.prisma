@@ -165,6 +165,13 @@ model FaultCode {
   repairVideos RepairVideo[]
   parts       Part[]   @relation("FaultCodeParts")
   
+  // AI Analiz Detayları (Mining Bot)
+  symptoms           Json?
+  commonCauses       Json?
+  stepByStepSolution Json?
+  estimatedCostInfo  String?
+  videoAnalysis      Json?
+
   // V5.0 Embedding Versioning Support
   embedding        Unsupported("vector(3072)")?
   embeddingModel   String?  // e.g. "gemini-embedding-001"
@@ -202,34 +209,7 @@ model Part {
   @@index([oemNumber])
 }
 
-// ----- YENİ: Sigorta ve Röle Tabloları (Faz 21) -----
-model FuseBox {
-  id              String   @id @default(uuid())
-  vehicleId       String
-  vehicle         Vehicle  @relation(fields: [vehicleId], references: [id])
-  name            String?
-  diagramImgUrl   String?
-  thumbnailUrl    String?
-  fuses           Fuse[]
-  createdAt       DateTime @default(now())
 
-  @@index([vehicleId])
-}
-
-model Fuse {
-  id              String   @id @default(uuid())
-  fuseBoxId       String
-  fuseBox         FuseBox  @relation(fields: [fuseBoxId], references: [id])
-  originalId      String?  // e.g. "1" or "R1"
-  type            String?  // "fuse", "relay", "connector"
-  format          String?  // "ato", "half", etc.
-  amperage        Float?
-  description     String?
-  isNotUsed       Boolean  @default(false)
-  createdAt       DateTime @default(now())
-
-  @@index([fuseBoxId])
-}
 
 // ----- YENİ: Outbox Event Tablosu (Transactional Outbox için) -----
 model OutboxEvent {
@@ -351,3 +331,32 @@ model WorkOrderItem {
   @@index([workOrderId])
 }
 
+
+// ----- YENİ: Sigorta ve Röle Tabloları (Faz 21) -----
+model FuseBox {
+  id              String   @id @default(uuid())
+  vehicleId       String
+  vehicle         Vehicle  @relation(fields: [vehicleId], references: [id])
+  name            String?
+  diagramImgUrl   String?
+  thumbnailUrl    String?
+  fuses           Fuse[]
+  createdAt       DateTime @default(now())
+
+  @@index([vehicleId])
+}
+
+model Fuse {
+  id              String   @id @default(uuid())
+  fuseBoxId       String
+  fuseBox         FuseBox  @relation(fields: [fuseBoxId], references: [id])
+  originalId      String?  // e.g. "1" or "R1"
+  type            String?  // "fuse", "relay", "connector"
+  format          String?  // "ato", "half", etc.
+  amperage        Float?
+  description     String?
+  isNotUsed       Boolean  @default(false)
+  createdAt       DateTime @default(now())
+
+  @@index([fuseBoxId])
+}
