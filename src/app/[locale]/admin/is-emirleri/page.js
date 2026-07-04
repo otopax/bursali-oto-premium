@@ -4,6 +4,31 @@ import { useState, useEffect } from 'react';
 import { useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
 
+// Telefonu wa.me formatına normalize eder (ülke kodlu, sadece rakam).
+// "0532 123 45 67" -> "905321234567", "+90 532..." -> "90532..."
+function normalizePhone(raw) {
+  if (!raw) return '';
+  let d = String(raw).replace(/\D/g, '');
+  if (d.startsWith('90')) return d;
+  if (d.startsWith('0')) d = d.slice(1);
+  if (d.length === 10) return '90' + d; // 5XXXXXXXXX -> 905XXXXXXXXX
+  return d;
+}
+
+// İş emri tamamlanınca müşteriye WhatsApp'tan Google yorum isteme linki üretir (Faz 1.4).
+function buildReviewWaLink(order) {
+  const customer = order?.vehicle?.customer || {};
+  const phone = normalizePhone(customer.phone);
+  const name = customer.firstName || 'Değerli müşterimiz';
+  const arac = [order?.vehicle?.brand, order?.vehicle?.model].filter(Boolean).join(' ') || 'aracınız';
+  const reviewUrl = process.env.NEXT_PUBLIC_GOOGLE_REVIEW_URL || '';
+  const mesaj =
+    `Merhaba ${name}, ${arac} Bursalı Oto Servis'te hazır. Bizi tercih ettiğiniz ` +
+    `için teşekkür ederiz! Deneyiminizi Google'da değerlendirmeniz bizim için çok değerli` +
+    (reviewUrl ? `: ${reviewUrl}` : '.');
+  return { phone, link: `https://wa.me/${phone}?text=${encodeURIComponent(mesaj)}`, reviewUrl };
+}
+
 export default function WorkOrdersAdminPage() {
   const { data: session, status } = useSession();
   
@@ -130,6 +155,27 @@ export default function WorkOrdersAdminPage() {
                 >
                   ✨ Google İşletme İçin AI Gönderi Üret
                 </button>
+              )}
+
+              {(order.status === 'COMPLETED' || order.status === 'DELIVERED') && (
+                <a
+                  href={buildReviewWaLink(order).link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={(e) => {
+                    const { phone, reviewUrl } = buildReviewWaLink(order);
+                    if (!phone) {
+                      e.preventDefault();
+                      alert('Bu müşteri için telefon numarası kayıtlı değil — yorum linki gönderilemez.');
+                    } else if (!reviewUrl) {
+                      // Link yine açılır ama mesajda Google yorum bağlantısı olmaz.
+                      alert('Uyarı: NEXT_PUBLIC_GOOGLE_REVIEW_URL tanımlı değil. Mesaja Google yorum linki eklenmedi; .env dosyanıza GBP "yorum iste" linkinizi ekleyin.');
+                    }
+                  }}
+                  className="w-full mt-1 py-2 text-xs font-bold bg-green-600/20 text-green-400 border border-green-500/30 rounded-lg hover:bg-green-600/40 transition-colors flex justify-center items-center gap-2"
+                >
+                  💬 WhatsApp'tan Yorum İste
+                </a>
               )}
             </div>
           </div>
