@@ -1,114 +1,199 @@
-import { PrismaClient } from '@prisma/client';
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
+import { articles } from '@/lib/articles';
 
 /**
- * Next.js Dynamic Sitemap Generator
- * Automatically fetches all Manufacturer, Vehicle, and FaultCodes from the database
- * to generate a massive, SEO-friendly XML sitemap for Google.
+ * Kurumsal Dinamik Sitemap Generator (Faz A / Görev 1)
+ * - 4 dil (tr, en, ru, uk) × tüm public sayfalar
+ * - Dinamik sayfalar: blog, katalog, ariza-cozumleri, sigorta-kutuphanesi, bilgi-bankasi
+ * - hreflang alternates.languages her URL için (Google multi-locale SEO)
+ * - Base URL www'lu (canlı deploy www.bursaliotoservis.com'da)
  */
-export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://bursaliotoservis.com';
 
-  // 1. Static Core Pages
-  const routes = [
-    '',
-    '/tr',
-    '/en',
-    '/tr/sanal-usta',
-    '/en/sanal-usta',
-    '/tr/teknik-kutuphane',
-    '/en/teknik-kutuphane',
-    '/tr/ariza-cozumleri',
-    '/tr/fethiye-7-24-oto-cekici',
-    '/tr/porsche-mercedes-ozel-servis',
-    '/tr/otomatik-sanziman-tamiri',
-    '/tr/english-speaking-mechanic',
-    '/tr/vip-garaj',
-    '/tr/bmw-servis-fethiye',
-    '/tr/mercedes-servis-fethiye',
-    '/tr/audi-servis-fethiye',
-    '/tr/porsche-servis-fethiye',
-    '/tr/volkswagen-servis-fethiye',
-    '/tr/land-rover-servis-fethiye'
-  ].map((route) => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'daily',
-    priority: 1.0,
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
+const LOCALES = ['tr', 'en', 'ru', 'uk'];
+const DEFAULT_LOCALE = 'tr';
+
+// Public sayfa path'leri (locale prefix'siz)
+const STATIC_PATHS = [
+  '', // ana sayfa
+  '/sanal-usta',
+  '/ariza-cozumleri',
+  '/ariza-kodlari',
+  '/bilgi-bankasi',
+  '/blog',
+  '/hizmetler',
+  '/katalog',
+  '/markalar',
+  '/sigorta-kutuphanesi',
+  '/teknik-kutuphane',
+  // SEO landing pages
+  '/fethiye-7-24-oto-cekici',
+  '/english-speaking-mechanic',
+  '/porsche-mercedes-ozel-servis',
+  '/otomatik-sanziman-tamiri',
+  '/seffaf-fiyatlandirma',
+  '/vip-filo-gece-bakimi',
+];
+
+// Programmatic SEO — marka bazlı service pages
+const SEO_BRAND_SLUGS = [
+  'bmw', 'mercedes', 'audi', 'porsche',
+  'volkswagen', 'land-rover', 'volvo', 'range-rover',
+];
+
+/**
+ * Verilen path için tüm dillerde alternates map'i döndürür.
+ * Google hreflang için sitemap standard formatı.
+ */
+function buildAlternates(path) {
+  const languages = {};
+  LOCALES.forEach((loc) => {
+    languages[loc] = `${BASE_URL}/${loc}${path}`;
+  });
+  languages['x-default'] = `${BASE_URL}/${DEFAULT_LOCALE}${path}`;
+  return { languages };
+}
+
+/**
+ * Tek path'i 4 dil için sitemap entry'sine çevirir.
+ */
+function expandLocales(path, opts = {}) {
+  const {
+    changeFrequency = 'weekly',
+    priority = 0.7,
+    lastModified = new Date(),
+  } = opts;
+
+  return LOCALES.map((locale) => ({
+    url: `${BASE_URL}/${locale}${path}`,
+    lastModified: lastModified instanceof Date ? lastModified : new Date(lastModified),
+    changeFrequency,
+    priority,
+    alternates: buildAlternates(path),
   }));
+}
 
-  // 2. Fetch Manufacturers (Brands)
-  let manufacturerRoutes = [];
-  try {
-    const manufacturers = await prisma.manufacturer.findMany({ select: { name: true } });
-    manufacturerRoutes = manufacturers.map((m) => ({
-      url: `${baseUrl}/tr/katalog/${m.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    }));
-  } catch (e) {
-    console.warn("Sitemap: Failed to load manufacturers", e);
-  }
+export default async function sitemap() {
+  const now = new Date();
+  const entries = [];
 
-  // 3. Fetch Vehicles
-  let vehicleRoutes = [];
-  try {
-    const vehicles = await prisma.vehicle.findMany({ 
-      select: { id: true, manufacturer: { select: { name: true } } } 
-    });
-    vehicleRoutes = vehicles.map((v) => ({
-      url: `${baseUrl}/tr/katalog/${v.manufacturer.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}/${v.id}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    }));
-  } catch (e) {
-    console.warn("Sitemap: Failed to load vehicles", e);
-  }
-
-  // 4. Fetch Fault Codes (The long tail traffic)
-  let faultRoutes = [];
-  try {
-    const faultCodes = await prisma.faultCode.findMany({
-      select: { code: true, createdAt: true }
-    });
-    faultRoutes = faultCodes.map((fault) => ({
-      // Using generic search URL for fault codes if specific vehicle is not joined
-      url: `${baseUrl}/tr/ariza-cozumleri?q=${fault.code}`,
-      lastModified: fault.createdAt.toISOString(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    }));
-  } catch (e) {
-    console.warn("Sitemap: Failed to load fault codes", e);
-  }
-
-  // 5. Multi-Lingual Programmatic SEO Pages (Brands & Services)
-  const seoLocales = ['tr', 'en', 'ru', 'uk'];
-  const seoBrands = ['bmw', 'mercedes', 'audi', 'porsche', 'volkswagen', 'land-rover', 'volvo', 'range-rover'];
-  let programmaticRoutes = [];
-
-  seoLocales.forEach((locale) => {
-    // Brand Service Pages
-    seoBrands.forEach((brand) => {
-      programmaticRoutes.push({
-        url: `${baseUrl}/${locale}/markalar/${brand}-servisi-fethiye`,
-        lastModified: new Date().toISOString(),
-        changeFrequency: 'weekly',
-        priority: 0.9,
-      });
-    });
-
-    // Transmission/Gearbox Service Pages
-    programmaticRoutes.push({
-      url: `${baseUrl}/${locale}/hizmetler/otomatik-sanziman-tamiri-fethiye`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    });
+  // 1) Statik public sayfalar × 4 dil
+  STATIC_PATHS.forEach((path) => {
+    const priority = path === '' ? 1.0 : 0.8;
+    entries.push(...expandLocales(path, { changeFrequency: 'daily', priority, lastModified: now }));
   });
 
-  return [...routes, ...manufacturerRoutes, ...vehicleRoutes, ...faultRoutes, ...programmaticRoutes];
+  // 2) Programmatic SEO brand pages × 4 dil
+  SEO_BRAND_SLUGS.forEach((brand) => {
+    entries.push(...expandLocales(`/markalar/${brand}-servisi-fethiye`, {
+      changeFrequency: 'weekly',
+      priority: 0.9,
+      lastModified: now,
+    }));
+    entries.push(...expandLocales(`/hizmetler/${brand}-otomatik-sanziman-tamiri-fethiye`, {
+      changeFrequency: 'weekly',
+      priority: 0.85,
+      lastModified: now,
+    }));
+  });
+
+  // 3) Blog yazıları (articles.js — statik data source) × 4 dil
+  try {
+    articles.forEach((article) => {
+      const lastMod = article.date ? new Date(article.date) : now;
+      entries.push(...expandLocales(`/blog/${article.slug}`, {
+        changeFrequency: 'monthly',
+        priority: 0.7,
+        lastModified: lastMod,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] Blog yüklenemedi:', e.message);
+  }
+
+  // 4) Manufacturers (DB) → /katalog/[marka]
+  try {
+    const manufacturers = await prisma.manufacturer.findMany({ select: { name: true } });
+    manufacturers.forEach((m) => {
+      const slug = m.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      entries.push(...expandLocales(`/katalog/${slug}`, {
+        changeFrequency: 'weekly',
+        priority: 0.75,
+        lastModified: now,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] Manufacturers yüklenemedi:', e.message);
+  }
+
+  // 5) Vehicles (DB) → /katalog/[marka]/[id]
+  try {
+    const vehicles = await prisma.vehicle.findMany({
+      select: { id: true, manufacturer: { select: { name: true } } },
+      take: 5000, // sitemap boyutunu koru
+    });
+    vehicles.forEach((v) => {
+      const brandSlug = v.manufacturer.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      entries.push(...expandLocales(`/katalog/${brandSlug}/${v.id}`, {
+        changeFrequency: 'weekly',
+        priority: 0.65,
+        lastModified: now,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] Vehicles yüklenemedi:', e.message);
+  }
+
+  // 6) Fault Codes (DB) → /ariza-cozumleri/[kod]
+  try {
+    const faultCodes = await prisma.faultCode.findMany({
+      select: { code: true, createdAt: true },
+      take: 10000,
+    });
+    faultCodes.forEach((f) => {
+      entries.push(...expandLocales(`/ariza-cozumleri/${f.code.toLowerCase()}`, {
+        changeFrequency: 'monthly',
+        priority: 0.6,
+        lastModified: f.createdAt,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] Fault codes yüklenemedi:', e.message);
+  }
+
+  // 7) Sigorta kütüphanesi (fusebox) — public'lerden liste (path locale'siz)
+  try {
+    const fuseBoxVehicles = await prisma.vehicle.findMany({
+      where: { fuseBoxes: { some: {} } },
+      select: { manufacturer: { select: { name: true } } },
+      distinct: ['manufacturerId'],
+    });
+    fuseBoxVehicles.forEach((v) => {
+      const brandSlug = v.manufacturer.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      entries.push(...expandLocales(`/sigorta-kutuphanesi/${brandSlug}`, {
+        changeFrequency: 'weekly',
+        priority: 0.7,
+        lastModified: now,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] Sigorta kütüphanesi yüklenemedi:', e.message);
+  }
+
+  // 8) Bilgi bankası — make bazında
+  try {
+    const bilgiMakes = await prisma.manufacturer.findMany({ select: { name: true }, take: 100 });
+    bilgiMakes.forEach((m) => {
+      const slug = m.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      entries.push(...expandLocales(`/bilgi-bankasi/${slug}`, {
+        changeFrequency: 'monthly',
+        priority: 0.6,
+        lastModified: now,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] Bilgi bankası yüklenemedi:', e.message);
+  }
+
+  return entries;
 }

@@ -3,6 +3,15 @@ import Gallery from '@/components/Gallery';
 import TrustBadges from '@/components/TrustBadges';
 import Reviews from '../../components/Reviews';
 import { getTranslations } from 'next-intl/server';
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    // Home page — root path (locale prefix'i buildCanonical ekliyor)
+    alternates: buildCanonical(locale, ''),
+  };
+}
 
 export default async function Home({ params }) {
   const { locale } = await params;

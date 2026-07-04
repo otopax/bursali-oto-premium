@@ -1,23 +1,38 @@
 import { getTranslations } from 'next-intl/server';
 import Head from 'next/head';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
+
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'SEO' });
-  
+
   // Example slug: 'bmw-servisi-fethiye' -> extract 'bmw'
   const brandMatch = slug.match(/^([a-z0-9\-]+)-servis/i);
   const rawBrand = brandMatch ? brandMatch[1] : slug;
-  
+
   // Format brand name beautifully (e.g. land-rover -> Land Rover)
   const formattedBrand = rawBrand.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+
+  const canonical = `${SITE_URL}/${locale}/markalar/${slug}`;
 
   return {
     title: t('brandServiceTitle', { brand: formattedBrand }),
     description: t('brandServiceDesc', { brand: formattedBrand }),
+    alternates: {
+      canonical,
+      languages: {
+        tr: `${SITE_URL}/tr/markalar/${slug}`,
+        en: `${SITE_URL}/en/markalar/${slug}`,
+        ru: `${SITE_URL}/ru/markalar/${slug}`,
+        uk: `${SITE_URL}/uk/markalar/${slug}`,
+        'x-default': `${SITE_URL}/tr/markalar/${slug}`,
+      },
+    },
     openGraph: {
       title: t('brandServiceTitle', { brand: formattedBrand }),
       description: t('brandServiceDesc', { brand: formattedBrand }),
+      url: canonical,
       type: 'website',
       locale: locale,
     }
@@ -37,8 +52,8 @@ export default async function BrandSeoPage({ params }) {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": `Bursalı Oto Servis - ${formattedBrand} Specialist`,
-    "image": "https://bursaliotoservis.com/bg.png",
-    "url": `https://bursaliotoservis.com/${locale}/markalar/${slug}`,
+    "image": `${SITE_URL}/bg.png`,
+    "url": `${SITE_URL}/${locale}/markalar/${slug}`,
     "telephone": "+905000000000",
     "priceRange": "$$",
     "address": {

@@ -6,8 +6,11 @@ export default function Chatbot() {
   const [isHovered, setIsHovered] = useState(false);
 
   const handleClick = () => {
+    // Faz A / Görev 7 — 4 locale desteği (tr, en, ru, uk)
     const currentPath = window.location.pathname;
-    const locale = currentPath.startsWith('/en') ? 'en' : 'tr';
+    const supported = ['tr', 'en', 'ru', 'uk'];
+    const first = currentPath.split('/')[1];
+    const locale = supported.includes(first) ? first : 'tr';
     window.location.href = `/${locale}/sanal-usta`;
   };
 

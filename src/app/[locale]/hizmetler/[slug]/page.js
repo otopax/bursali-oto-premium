@@ -1,15 +1,29 @@
 import { getTranslations } from 'next-intl/server';
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
+
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'SEO' });
-  
+  const canonical = `${SITE_URL}/${locale}/hizmetler/${slug}`;
+
   return {
     title: t('transmissionTitle'),
     description: t('transmissionDesc'),
+    alternates: {
+      canonical,
+      languages: {
+        tr: `${SITE_URL}/tr/hizmetler/${slug}`,
+        en: `${SITE_URL}/en/hizmetler/${slug}`,
+        ru: `${SITE_URL}/ru/hizmetler/${slug}`,
+        uk: `${SITE_URL}/uk/hizmetler/${slug}`,
+        'x-default': `${SITE_URL}/tr/hizmetler/${slug}`,
+      },
+    },
     openGraph: {
       title: t('transmissionTitle'),
       description: t('transmissionDesc'),
+      url: canonical,
       type: 'website',
       locale: locale,
     }
@@ -19,14 +33,14 @@ export async function generateMetadata({ params }) {
 export default async function ServiceSeoPage({ params }) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'SEO' });
-  
+
   // Generate LocalBusiness JSON-LD for transmission repair
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "name": `Bursalı Oto Servis - Automatic Transmission Specialist`,
-    "image": "https://bursaliotoservis.com/bg.png",
-    "url": `https://bursaliotoservis.com/${locale}/hizmetler/${slug}`,
+    "image": `${SITE_URL}/bg.png`,
+    "url": `${SITE_URL}/${locale}/hizmetler/${slug}`,
     "telephone": "+905000000000",
     "priceRange": "$$$",
     "address": {

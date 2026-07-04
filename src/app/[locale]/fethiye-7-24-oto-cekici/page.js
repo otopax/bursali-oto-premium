@@ -1,10 +1,13 @@
-export const metadata = {
-  title: '7/24 Fethiye Oto Çekici ve Yol Yardım | Bursalı Oto',
-  description: 'Fethiye ve çevresinde yolda mı kaldınız? 7/24 oto çekici, kurtarma ve yol yardım hizmetimizle anında yanınızdayız. Tek tıkla WhatsApp konum gönderin.',
-  alternates: {
-    canonical: 'https://www.bursaliotoservis.com/fethiye-7-24-oto-cekici',
-  }
-};
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    title: '7/24 Fethiye Oto Çekici ve Yol Yardım | Bursalı Oto',
+    description: 'Fethiye ve çevresinde yolda mı kaldınız? 7/24 oto çekici, kurtarma ve yol yardım hizmetimizle anında yanınızdayız. Tek tıkla WhatsApp konum gönderin.',
+    alternates: buildCanonical(locale, '/fethiye-7-24-oto-cekici'),
+  };
+}
 
 export default function TowingPage() {
   return (

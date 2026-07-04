@@ -1,10 +1,13 @@
-export const metadata = {
-  title: 'Porsche, Mercedes, BMW, Audi Özel Servis Fethiye | Bursalı Oto',
-  description: 'Fethiye\'de Porsche, Mercedes, BMW ve Audi premium araçlarınız için orijinal PIWIS, ODIS arıza tespiti ve garantili bakım onarım servisi. Deneme yanılma yok, kesin çözüm.',
-  alternates: {
-    canonical: 'https://www.bursaliotoservis.com/porsche-mercedes-ozel-servis',
-  }
-};
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    title: 'Porsche, Mercedes, BMW, Audi Özel Servis Fethiye | Bursalı Oto',
+    description: 'Fethiye\'de Porsche, Mercedes, BMW ve Audi premium araçlarınız için orijinal PIWIS, ODIS arıza tespiti ve garantili bakım onarım servisi. Deneme yanılma yok, kesin çözüm.',
+    alternates: buildCanonical(locale, '/porsche-mercedes-ozel-servis'),
+  };
+}
 
 export default function PorscheMercedesPage() {
   return (
