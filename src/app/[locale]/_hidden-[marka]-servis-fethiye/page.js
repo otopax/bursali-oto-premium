@@ -11,7 +11,7 @@ const SUPPORTED_BRANDS = [
 export async function generateMetadata({ params }) {
   const { locale, marka } = await params;
   
-  if (!SUPPORTED_BRANDS.includes(marka.toLowerCase())) {
+  if (!marka || typeof marka !== 'string' || !SUPPORTED_BRANDS.includes(marka.toLowerCase())) {
     return { title: 'Servis | Bursalı Oto' };
   }
 
@@ -33,7 +33,7 @@ export async function generateMetadata({ params }) {
 export default async function BrandServicePage({ params }) {
   const { locale, marka } = await params;
   
-  if (!SUPPORTED_BRANDS.includes(marka.toLowerCase())) {
+  if (!marka || typeof marka !== 'string' || !SUPPORTED_BRANDS.includes(marka.toLowerCase())) {
     notFound();
   }
 
