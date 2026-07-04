@@ -2,6 +2,8 @@ import crypto from 'crypto';
 import Redis from 'ioredis';
 
 const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379');
+// R2 SPOF: handle edilmeyen 'error' event'i process'i çökertir — log'a çevir.
+redis.on('error', (err) => console.error('[Redis semanticCache] bağlantı hatası:', err.message));
 
 /**
  * Enterprise Semantic / Hash Cache

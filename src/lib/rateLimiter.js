@@ -1,5 +1,7 @@
 const IORedis = require('ioredis');
 const redisClient = new IORedis(process.env.REDIS_URL || 'redis://localhost:6379');
+// R2 SPOF: handle edilmeyen 'error' event'i process'i çökertir — log'a çevir.
+redisClient.on('error', (err) => console.error('[Redis rateLimiter] bağlantı hatası:', err.message));
 
 // 🚀 V4.0 SECURITY: Redis Lua Token Bucket Rate Limiter
 // Atomic operation to prevent IP abuse and DDoS attacks without race conditions.
