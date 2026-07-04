@@ -46,6 +46,9 @@ next-env.d.ts
 *.pdf
 .env*
 
+# Veritabani yedekleri (R1) — asla repoya girmemeli
+/backups
+
 # Debug / test artifacts (repo hygiene)
 debug*.html
 test_*.mp4
@@ -77,3 +80,7 @@ gemini_ajan_bot/raporlar/
 /routes.txt
 /sqlfiles.txt
 /web_routes.txt
+
+# .env.example bir sablondur (secret icermez) — takipte kalmali.
+# Yukaridaki .env* kurallarindan SONRA geldigi icin istisna kazanir.
+!.env.example
