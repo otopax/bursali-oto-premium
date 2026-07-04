@@ -1,12 +1,14 @@
 import { Queue, Worker, QueueEvents } from 'bullmq';
 import IORedis from 'ioredis';
 
-// Redis bağlantısı (Lokal Docker)
-const connection = new IORedis({
-  host: '127.0.0.1',
-  port: 6379,
-  maxRetriesPerRequest: null // BullMQ için zorunlu ayar
-});
+// Redis bağlantısı — REDIS_URL varsa onu kullan, yoksa host/port env'lerine düş
+const connection = process.env.REDIS_URL
+  ? new IORedis(process.env.REDIS_URL, { maxRetriesPerRequest: null })
+  : new IORedis({
+      host: process.env.REDIS_HOST || '127.0.0.1',
+      port: parseInt(process.env.REDIS_PORT || '6379', 10),
+      maxRetriesPerRequest: null // BullMQ için zorunlu ayar
+    });
 
 export const crawlerQueue = new Queue('crawler-queue', { connection });
 

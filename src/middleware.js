@@ -31,10 +31,13 @@ export async function middleware(request) {
   );
 
   if (isProtected) {
-    // NextAuth token kontrolü
-    const token = await getToken({ 
-      req: request, 
-      secret: process.env.NEXTAUTH_SECRET || "BursaliOtoEnterpriseSecretKey2026" 
+    // NextAuth token kontrolü — hardcoded fallback KALDIRILDI (güvenlik)
+    if (!process.env.NEXTAUTH_SECRET) {
+      throw new Error('NEXTAUTH_SECRET env variable zorunludur.');
+    }
+    const token = await getToken({
+      req: request,
+      secret: process.env.NEXTAUTH_SECRET
     });
 
     if (!token) {

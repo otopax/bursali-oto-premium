@@ -1,22 +1,24 @@
 export const dynamic = 'force-dynamic';
+export const maxDuration = 30; // 30 seconds
+
 import { google } from '@ai-sdk/google';
 import { streamText, tool } from 'ai';
 import { z } from 'zod';
+import { GoogleGenAI } from '@google/genai';
 import { DataAccessLayer } from '@/lib/dataAccessLayer';
 import { getSystemPrompt } from '@/lib/ai/promptRegistry';
 import { getAiCache, setAiCache } from '@/lib/ai/semanticCache';
 import { checkHallucination } from '@/lib/ai/hallucinationGuard';
 import { rateLimit } from '@/lib/rate-limit';
-
-export const maxDuration = 30; // 30 seconds
-
 import { getCache, setCache } from '@/lib/cache';
+import { prisma } from '@/lib/prisma';
 
 export async function POST(req) {
-  // IP tabanlı kurumsal Rate Limiting
+  // IP tabanlı kurumsal Rate Limiting — AI endpoint: Redis düştüğünde REDDET (fail-closed)
+  // Gemini kotası bot saldırısında patlamasın diye kritik.
   const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
-  const limitStatus = await rateLimit(ip, 30, 60);
-  
+  const limitStatus = await rateLimit(ip, 30, 60, { failClosed: true });
+
   if (!limitStatus.success) {
     return new Response('Too Many Requests', { status: 429 });
   }
@@ -74,11 +76,11 @@ export async function POST(req) {
             const response = {
               success: true,
               data: {
-                title: data.title,
-                description: data.ai_analysis?.description || "Açıklama yok",
-                symptoms: data.ai_analysis?.symptoms || [],
-                causes: data.ai_analysis?.causes || [],
-                mechanic_advice: data.ai_analysis?.mechanic_advice || "Öneri yok"
+                title: data.title || data.description,
+                description: data.description || "Açıklama yok",
+                symptoms: data.symptoms || [],
+                causes: data.causes || [],
+                mechanic_advice: data.mechanic_advice || "Öneri yok"
               }
             };
             await setCache(cacheKey, response, 3600); // 1 saat cache
@@ -126,34 +128,31 @@ export async function POST(req) {
           brandSlug: z.string().optional().describe('Eğer biliniyorsa araç markasının slug hali')
         }),
         execute: async ({ query, brandSlug }) => {
-          const { GoogleGenAI } = require('@google/genai');
           const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
           const embedRes = await ai.models.embedContent({ model: 'gemini-embedding-001', contents: query });
           const vectorStr = `[${embedRes.embeddings[0].values.join(',')}]`;
 
-          const { prisma } = require('@/lib/prisma');
-          
           let results;
           if (brandSlug) {
             results = await prisma.$queryRawUnsafe(`
-              SELECT f.code, f."aiAnalysis", m.name as model, b.name as brand,
+              SELECT f.code, f."symptoms", f."commonCauses", v.model as model, m.name as brand,
                      1 - (f.embedding <=> $1::vector) as similarity
               FROM "FaultCode" f
-              JOIN "Model" m ON f."modelId" = m.id
-              JOIN "Brand" b ON m."brandId" = b.id
-              WHERE b.slug = $2 AND f.embedding IS NOT NULL
-              ORDER BY f.embedding <=> $1::vector
+              LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
+              LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
+              WHERE (m.name ILIKE $2 OR $2 IS NULL) AND f.embedding IS NOT NULL
+              ORDER BY f.embedding <=> $1::vector DESC
               LIMIT 3;
-            `, vectorStr, brandSlug);
+            `, vectorStr, `%${brandSlug}%`);
           } else {
             results = await prisma.$queryRawUnsafe(`
-              SELECT f.code, f."aiAnalysis", m.name as model, b.name as brand,
+              SELECT f.code, f."symptoms", f."commonCauses", f."description", v.model as model, m.name as brand,
                      1 - (f.embedding <=> $1::vector) as similarity
               FROM "FaultCode" f
-              JOIN "Model" m ON f."modelId" = m.id
-              JOIN "Brand" b ON m."brandId" = b.id
+              LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
+              LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
               WHERE f.embedding IS NOT NULL
-              ORDER BY f.embedding <=> $1::vector
+              ORDER BY f.embedding <=> $1::vector DESC
               LIMIT 3;
             `, vectorStr);
           }
@@ -164,8 +163,8 @@ export async function POST(req) {
               faultCode: r.code,
               vehicle: `${r.brand} ${r.model}`,
               similarity: r.similarity,
-              description: r.aiAnalysis?.description || '',
-              causes: r.aiAnalysis?.commonCauses || r.aiAnalysis?.causes || []
+              description: r.description || '',
+              causes: r.commonCauses || []
             }))
           };
         }

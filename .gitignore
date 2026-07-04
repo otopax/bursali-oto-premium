@@ -45,3 +45,35 @@ next-env.d.ts
 /src/generated/prisma
 *.pdf
 .env*
+
+# Debug / test artifacts (repo hygiene)
+debug*.html
+test_*.mp4
+test_*.js
+audit_report.json
+KAYNAK_KOD_VE_PROJE_RAPORU.md
+
+# Otonom ajan raporları
+gemini_ajan_bot/raporlar/
+
+# Analiz/inceleme çıktıları (kök dizin)
+/TREE.txt
+/SourceFiles.txt
+/LargestFiles.txt
+/Files.csv
+/Extensions.txt
+/app.txt
+/api_routes.txt
+/branches.txt
+/composer.txt
+/config.txt
+/controllers.txt
+/database.txt
+/git_status.txt
+/migrations.txt
+/models.txt
+/package.txt
+/remote.txt
+/routes.txt
+/sqlfiles.txt
+/web_routes.txt

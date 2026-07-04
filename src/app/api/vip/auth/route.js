@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
-import { PrismaClient } from '@prisma/client';
 import { rateLimit } from '@/lib/rate-limit'; // V4 Güvenlik: Brute force engelleme
-
-const prisma = new PrismaClient();
+import { prisma } from '@/lib/prisma';
 
 // POST: VIP Garaj Müşteri Girişi (Plaka + Telefon) - Mobil Uyumlu
 export async function POST(req) {
