@@ -2,6 +2,8 @@ const IORedis = require('ioredis');
 const { Queue, Worker, QueueEvents } = require('bullmq');
 
 const connection = new IORedis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', { maxRetriesPerRequest: null });
+// R2 SPOF: handle edilmeyen 'error' event'i process'i çökertir — log'a çevir.
+connection.on('error', (err) => console.error('[Redis QueueManager] bağlantı hatası:', err.message));
 
 /**
  * Enterprise Queue Manager

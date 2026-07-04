@@ -1,9 +1,17 @@
 import IORedis from 'ioredis';
 
-// Redis bağlantısı
-const redis = new IORedis({
-  host: '127.0.0.1',
-  port: 6379,
+// Redis bağlantısı — REDIS_URL env'i kullanılır (prod'da doğru host; C5).
+// enableOfflineQueue:false → Redis düştüğünde komut hemen reddedilir, aşağıdaki
+// try/catch'e düşüp graceful null döner (istek asılı kalmaz). Cache best-effort
+// olduğu için bu güvenlidir — Redis-siz sistem çalışmaya devam eder (R2).
+const redis = new IORedis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
+  maxRetriesPerRequest: 2,
+  enableOfflineQueue: false,
+});
+
+// Handle edilmeyen 'error' event'i Node process'ini çökertir — log'a çevir (R2 SPOF).
+redis.on('error', (err) => {
+  console.error('[Redis cache] bağlantı hatası (degrade → no-cache):', err.message);
 });
 
 /**
