@@ -289,6 +289,11 @@ export default function SanalUstaPage() {
                 <input
                   value={input}
                   onChange={handleInputChange}
+                  onFocus={() => {
+                    setTimeout(() => {
+                      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+                    }, 300);
+                  }}
                   placeholder={isListening ? "Dinleniyor..." : "Arıza kodunu veya şikayetinizi yazın..."}
                   className="flex-1 bg-white/5 border border-white/10 p-3 md:p-4 rounded-xl text-white text-base md:text-lg outline-none transition-colors focus:border-[var(--accent-gold)]"
                   style={{ paddingRight: '50px' }}

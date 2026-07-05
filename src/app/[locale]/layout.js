@@ -7,10 +7,10 @@ import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
-const Chatbot = dynamic(() => import('@/components/Chatbot'), { ssr: false });
-const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), { ssr: false });
-const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false });
-const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'), { ssr: false });
+const Chatbot = dynamic(() => import('@/components/Chatbot'));
+const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'));
+const CookieConsent = dynamic(() => import('@/components/CookieConsent'));
+const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'));
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' });
@@ -24,6 +24,12 @@ const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoserv
 // içinde @/lib/seo/canonical helper'ı ile kendi canonical'ını verir.
 // Layout burada yalnızca fallback title/description/OG/twitter + hreflang languages sağlar.
 // Kendi canonical'ı OLMAYAN sayfalar için Google URL'i kendisi canonical seçer (doğru davranış).
+export const viewport = {
+  themeColor: '#09090b', // var(--bg-dark)
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
 
@@ -224,11 +230,11 @@ export default async function RootLayout({ children, params }) {
                 <a href="/uk" title="Українська"
                    style={{ fontSize: '1.2rem', textDecoration: 'none', opacity: locale === 'uk' ? 1 : 0.55 }}>🇺🇦</a>
               </div>
-              <a href={`/${locale}/#uzmanlik`}>{locale === 'tr' ? 'Uzmanlık Alanlarımız' : 'Expertise'}</a>
-              <a href={`/${locale}/vip-garaj`} style={{ color: 'var(--text-light)' }}>{locale === 'tr' ? 'VIP Garaj' : 'VIP Garage'}</a>
-              <a href={`/${locale}/sanal-usta`} style={{ color: 'var(--accent-gold)' }}>{locale === 'tr' ? 'Sanal Usta (AI)' : 'AI Mechanic'}</a>
-              <a href={`/${locale}/ariza-cozumleri`}>{locale === 'tr' ? 'Arıza Çözümleri' : 'Fault Codes'}</a>
-              <a href={`/${locale}/teknik-kutuphane`}>{locale === 'tr' ? 'Kütüphane' : 'Library'}</a>
+              <a href={`/${locale}/#uzmanlik`} aria-label="Uzmanlık Alanlarımız">{locale === 'tr' ? 'Uzmanlık Alanlarımız' : 'Expertise'}</a>
+              <a href={`/${locale}/vip-garaj`} style={{ color: 'var(--text-light)' }} aria-label="VIP Garaj">{locale === 'tr' ? 'VIP Garaj' : 'VIP Garage'}</a>
+              <a href={`/${locale}/sanal-usta`} style={{ color: 'var(--accent-gold)' }} aria-label="Sanal Usta (AI)">{locale === 'tr' ? 'Sanal Usta (AI)' : 'AI Mechanic'}</a>
+              <a href={`/${locale}/ariza-cozumleri`} aria-label="Arıza Çözümleri">{locale === 'tr' ? 'Arıza Çözümleri' : 'Fault Codes'}</a>
+              <a href={`/${locale}/teknik-kutuphane`} aria-label="Teknik Kütüphane">{locale === 'tr' ? 'Kütüphane' : 'Library'}</a>
             </div>
           </div>
         </nav>

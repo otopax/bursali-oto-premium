@@ -18,7 +18,7 @@ export default function TopBanner({ locale }) {
           target="_blank"
           rel="noopener noreferrer"
           onClick={() => trackEvent('whatsapp_tiklama', { type: 'top_banner_campaign' })}
-          className="bg-black text-white text-xs px-3 py-1 rounded-full hover:bg-gray-800 transition-colors whitespace-nowrap"
+          className="bg-black text-white text-sm px-4 py-2 rounded-full hover:bg-gray-800 transition-colors whitespace-nowrap min-h-[44px] flex items-center"
         >
           {locale === 'tr' ? 'Hemen Randevu Al' : 'Book Now'}
         </a>

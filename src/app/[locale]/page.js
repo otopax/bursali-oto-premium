@@ -8,7 +8,7 @@ import MapFacade from '@/components/MapFacade';
 import Reveal from '@/components/anim/Reveal';
 import dynamic from 'next/dynamic';
 
-const SanalUstaTeaser = dynamic(() => import('@/components/SanalUstaTeaser'), { ssr: false });
+const SanalUstaTeaser = dynamic(() => import('@/components/SanalUstaTeaser'));
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;

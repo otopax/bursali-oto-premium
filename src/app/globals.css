@@ -54,6 +54,15 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* iOS Zoom Fix */
+input, textarea, select {
+  font-size: 16px !important;
 }
 
 a {
@@ -312,6 +321,11 @@ p {
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   transition: var(--transition);
+  padding: 10px 12px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nav-links a:hover {
@@ -385,6 +399,8 @@ p {
   
   .nav-links a {
     font-size: 0.85rem;
+    padding: 10px 8px;
+    min-height: 44px;
   }
   
   main {
