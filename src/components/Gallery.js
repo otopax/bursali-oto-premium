@@ -33,6 +33,7 @@ export default function Gallery() {
               src={src} 
               alt={`Bursalı Oto Servis Fethiye ${index + 1}`} 
               fill
+              quality={75}
               style={{ objectFit: 'cover' }} 
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />

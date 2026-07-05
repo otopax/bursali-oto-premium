@@ -6,8 +6,8 @@ import { getToken } from 'next-auth/jwt';
 const intlMiddleware = createMiddleware(routing);
 
 // V5.0 Güvenlik: Korumalı Rotalar (Login zorunlu)
+// Sanal Usta artık Misafir moduna açık olduğu için buradan çıkarıldı.
 const protectedRoutes = [
-  '/sanal-usta', 
   '/teknik-kutuphane', 
   '/bilgi-bankasi', 
   '/katalog',

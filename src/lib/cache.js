@@ -4,7 +4,7 @@ import IORedis from 'ioredis';
 // enableOfflineQueue:false → Redis düştüğünde komut hemen reddedilir, aşağıdaki
 // try/catch'e düşüp graceful null döner (istek asılı kalmaz). Cache best-effort
 // olduğu için bu güvenlidir — Redis-siz sistem çalışmaya devam eder (R2).
-const redis = new IORedis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
+export const redis = new IORedis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
   maxRetriesPerRequest: 2,
   enableOfflineQueue: false,
 });

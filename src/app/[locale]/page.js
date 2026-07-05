@@ -4,6 +4,11 @@ import TrustBadges from '@/components/TrustBadges';
 import Reviews from '../../components/Reviews';
 import { getTranslations } from 'next-intl/server';
 import { buildCanonical } from '@/lib/seo/canonical';
+import MapFacade from '@/components/MapFacade';
+import Reveal from '@/components/anim/Reveal';
+import dynamic from 'next/dynamic';
+
+const SanalUstaTeaser = dynamic(() => import('@/components/SanalUstaTeaser'), { ssr: false });
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -27,6 +32,7 @@ export default async function Home({ params }) {
             alt="Bursalı Oto Servis Fethiye" 
             fill 
             priority
+            sizes="(max-width: 1600px) 100vw, 1600px"
             quality={85}
             style={{ objectFit: 'cover', zIndex: -2 }}
           />
@@ -59,8 +65,13 @@ export default async function Home({ params }) {
         </div>
       </section>
 
+      {/* Sanal Usta Teaser */}
+      <section style={{ marginTop: '-4rem', position: 'relative', zIndex: 10, padding: '0 1rem' }}>
+        <SanalUstaTeaser locale={locale} />
+      </section>
+
       {/* Tow Truck & Emergency Section */}
-      <section id="cekici" className="services-section" style={{ background: 'rgba(255,255,255,0.02)', padding: '4rem 0', borderBottom: '1px solid var(--glass-border)' }}>
+      <section id="cekici" className="services-section" style={{ background: 'rgba(255,255,255,0.02)', padding: '5rem 0 4rem 0', borderBottom: '1px solid var(--glass-border)' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
           <div className="live-badge" style={{ color: '#10b981', fontWeight: 'bold', marginBottom: '1rem', background: 'rgba(16, 185, 129, 0.1)', padding: '0.5rem 1rem', borderRadius: '100px' }}>
             🟢 Şu An Nöbetteyiz - 7/24 Aktif
@@ -199,17 +210,17 @@ export default async function Home({ params }) {
       </section>
 
       {/* Google Reviews Section */}
-      <section className="services-section container">
+      <Reveal className="services-section container">
         <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>Müşterilerimiz Ne Diyor? (Google Yorumları)</h2>
         <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
           Gerçek müşteri deneyimleri ve 5 yıldızlı hizmet kalitemiz.
         </p>
 
         <Reviews />
-      </section>
+      </Reveal>
 
       {/* Popular SEO Subpages */}
-      <section className="services-section container">
+      <Reveal delay={1} className="services-section container">
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>Özel Hizmetlerimiz</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginBottom: '3rem' }}>
           <a href={`/${locale}/porsche-mercedes-ozel-servis`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Porsche & Premium Araç Servisi">Porsche & Premium Araç Servisi</a>
@@ -218,7 +229,7 @@ export default async function Home({ params }) {
           <a href={`/${locale}/vip-filo-gece-bakimi`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="VIP Filo Gece Bakımı (Night-Shift)">VIP Filo Gece Bakımı (Night-Shift)</a>
           <a href={`/${locale}/otomatik-sanziman-tamiri`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Otomatik Şanzıman Tamiri Fethiye">Otomatik Şanzıman Tamiri</a>
         </div>
-      </section>
+      </Reveal>
 
       {/* Google Photos Gallery */}
       <section className="services-section" style={{ background: 'rgba(255,255,255,0.02)' }}>
@@ -242,22 +253,13 @@ export default async function Home({ params }) {
             </div>
           </div>
           <div style={{ borderRadius: '16px', overflow: 'hidden', minHeight: '300px' }}>
-            <iframe 
-              title="Bursalı Oto Servis Fethiye Harita Konumu"
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12762.651717887754!2d29.1246738!3d36.6253456!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c043e0988089bf%3A0x8f2d593f0b2f6385!2sBURSALI%20OTO%20SERV%C4%B0S!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
-              referrerPolicy="no-referrer-when-downgrade">
-            </iframe>
+            <MapFacade />
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="services-section container" style={{ paddingTop: '1rem', paddingBottom: '3rem' }}>
+      <Reveal className="services-section container" style={{ paddingTop: '1rem', paddingBottom: '3rem' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '3rem', fontSize: '2.5rem' }}>Sıkça Sorulan Sorular</h2>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
           
@@ -277,10 +279,10 @@ export default async function Home({ params }) {
           </div>
 
         </div>
-      </section>
+      </Reveal>
 
       {/* SEO Content Block */}
-      <section className="services-section container" style={{ paddingTop: '1rem', paddingBottom: '3rem', borderTop: '1px solid var(--glass-border)' }}>
+      <Reveal delay={1} className="services-section container" style={{ paddingTop: '1rem', paddingBottom: '3rem', borderTop: '1px solid var(--glass-border)' }}>
         <h2 style={{ textAlign: 'center', marginBottom: '2rem', fontSize: '1.8rem' }}>Fethiye Oto Tamir ve Premium Araç Özel Servisi</h2>
         <div style={{ color: 'var(--text-light)', lineHeight: '1.8', fontSize: '1rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
           <p>
@@ -293,7 +295,7 @@ export default async function Home({ params }) {
             Hizmetlerimiz sadece mekanik onarımla sınırlı değildir. Fethiye'de 7/24 acil oto çekici ve yol yardım hizmetimiz ile yolda kaldığınız an yanınızdayız. Premium aracınızı sıfır hasar riskiyle kurtarıyor ve 7/24 kameralı güvenli otoparkımıza çekiyoruz. Ayrıca periyodik bakım, ağır bakım, otomatik şanzıman revizyonu (Aisin, ZF vb.), motor revizyonu ve DPF (Dizel Partikül Filtresi) temizliği gibi kritik işlemleri garantili olarak, orijinal veya üst düzey OEM yedek parçalar kullanarak gerçekleştiriyoruz. Fethiye'deki yabancı misafirlerimiz için İngilizce, Rusça, Arapça ve Ukraynaca dillerinde iletişim kurabilen uluslararası bir ekiple çalışmaktan gurur duyuyoruz.
           </p>
         </div>
-      </section>
+      </Reveal>
 
       {/* Footer */}
       <footer style={{ padding: '3rem 0', textAlign: 'center', borderTop: '1px solid var(--glass-border)' }}>

@@ -2,12 +2,15 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { Inter, Outfit } from 'next/font/google';
 import '../globals.css';
-import Chatbot from '@/components/Chatbot';
-import WhatsAppButton from '@/components/WhatsAppButton';
+import dynamic from 'next/dynamic';
 import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
-import CookieConsent from '@/components/CookieConsent';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+
+const Chatbot = dynamic(() => import('@/components/Chatbot'), { ssr: false });
+const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'), { ssr: false });
+const CookieConsent = dynamic(() => import('@/components/CookieConsent'), { ssr: false });
+const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'), { ssr: false });
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' });
@@ -266,8 +269,9 @@ export default async function RootLayout({ children, params }) {
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
           }
         `}} />
-        <Chatbot />
         <WhatsAppButton />
+        <MobileStickyCTA />
+        <Chatbot />
         <CookieConsent locale={locale} />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>

@@ -12,11 +12,31 @@ export default function SanalUstaPage() {
     year: '',
     chassis: ''
   });
+  const [guestId, setGuestId] = useState('');
+  const [showLeadForm, setShowLeadForm] = useState(false);
+
+  useEffect(() => {
+    let id = localStorage.getItem('sanalUstaGuestId');
+    if (!id) {
+      id = 'guest_' + Math.random().toString(36).substring(2, 15);
+      localStorage.setItem('sanalUstaGuestId', id);
+    }
+    setGuestId(id);
+  }, []);
 
   const { messages, input, handleInputChange, handleSubmit, isLoading, setMessages } = useChat({
     api: '/api/chat',
-    body: { vehicleContext },
-    initialMessages: []
+    body: { vehicleContext, guestId },
+    initialMessages: [],
+    onError: (err) => {
+      try {
+        if (err.message.includes('guest_quota_exceeded')) {
+          setShowLeadForm(true);
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
   });
 
   // Dinamik ilk mesaj (Araç kayıt edildikten sonra tetiklenecek)
@@ -128,6 +148,46 @@ export default function SanalUstaPage() {
           </div>
         )}
 
+        {/* Lead Form Overlay (Guest Quota Exceeded) */}
+        {showLeadForm && (
+          <div style={{
+            position: 'absolute',
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(0,0,0,0.85)',
+            backdropFilter: 'blur(10px)',
+            zIndex: 60,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1rem'
+          }}>
+            <div className="glass-panel" style={{ maxWidth: '500px', width: '100%', padding: '2.5rem', borderRadius: '16px', border: '1px solid var(--accent-gold)', boxShadow: '0 0 50px rgba(212, 175, 55, 0.2)' }}>
+              <h2 style={{ fontSize: '1.8rem', color: 'var(--accent-gold)', marginBottom: '1rem', textAlign: 'center' }}>Ücretsiz Limit Doldu</h2>
+              <p style={{ color: 'var(--text-light)', textAlign: 'center', marginBottom: '1.5rem', lineHeight: '1.6' }}>
+                Misafir kullanıcı olarak yapay zeka ile soru sorma limitinize ulaştınız. <br/><br/>
+                Arızanızı <b>gerçek ustalarımıza</b> iletmek ve randevu almak için telefon numaranızı bırakın veya hemen bizi arayın.
+              </p>
+              
+              <form onSubmit={(e) => {
+                e.preventDefault();
+                alert("Talebiniz ustamıza iletildi. En kısa sürede aranacaksınız.");
+                setShowLeadForm(false);
+              }} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                
+                <input required type="tel" name="phone" placeholder="Telefon Numaranız (05XX XXX XX XX)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none" />
+                
+                <button type="submit" className="btn btn-gold w-full mt-2 py-3 rounded-lg flex items-center justify-center gap-2" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>
+                  <span>📞</span> Ustaya İlet
+                </button>
+
+                <a href="https://wa.me/905548812021" className="btn w-full py-3 rounded-lg flex items-center justify-center gap-2 mt-2" style={{ backgroundColor: '#25D366', color: '#fff', fontSize: '1.1rem', fontWeight: 'bold' }}>
+                  <span>💬</span> WhatsApp'tan Yaz
+                </a>
+              </form>
+            </div>
+          </div>
+        )}
+
         <div className="text-center mb-6 md:mb-8" style={{ filter: !vehicleContext.isRegistered ? 'blur(4px)' : 'none', transition: 'filter 0.5s ease' }}>
           <h1 className="text-3xl md:text-5xl font-bold mb-2">Sanal Usta</h1>
           <p className="text-lg md:text-xl text-[var(--text-muted)]">Bursalı Oto'nun 40 yıllık mekanik hafızasıyla donatılmış Yapay Zeka ustası.</p>
@@ -193,6 +253,12 @@ export default function SanalUstaPage() {
                          {m.content}
                        </p>
                     ) : null}
+                    
+                    {m.role === 'assistant' && m.id !== 'welcome-msg' && (
+                      <a href={`https://wa.me/905548812021?text=${encodeURIComponent('Sanal Usta Teşhisi:\n' + m.content.substring(0, 500) + '...')}`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', padding: '0.5rem 1rem', marginTop: '12px', background: 'transparent', border: '1px solid var(--accent-gold)', color: 'var(--accent-gold)', borderRadius: '100px', textDecoration: 'none' }}>
+                        <span>💬</span> Bu teşhisi ustaya gönder (WhatsApp)
+                      </a>
+                    )}
                   </div>
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.5rem', textAlign: m.role === 'user' ? 'right' : 'left' }}>
                     {m.role === 'user' ? 'Siz' : 'Sanal Usta'}
@@ -200,10 +266,9 @@ export default function SanalUstaPage() {
                 </div>
               ))}
               {isLoading && (
-                <div style={{ alignSelf: 'flex-start', display: 'flex', gap: '0.5rem', padding: '1rem' }}>
-                  <div className="typing-dot" style={{ width: '8px', height: '8px', background: 'var(--accent-gold)', borderRadius: '50%', animation: 'typing 1s infinite 0.1s' }}></div>
-                  <div className="typing-dot" style={{ width: '8px', height: '8px', background: 'var(--accent-gold)', borderRadius: '50%', animation: 'typing 1s infinite 0.2s' }}></div>
-                  <div className="typing-dot" style={{ width: '8px', height: '8px', background: 'var(--accent-gold)', borderRadius: '50%', animation: 'typing 1s infinite 0.3s' }}></div>
+                <div style={{ alignSelf: 'flex-start', display: 'flex', alignItems: 'center', gap: '0.8rem', padding: '1rem', color: 'var(--accent-gold)' }}>
+                  <span style={{ animation: 'spin 2s linear infinite', display: 'inline-block' }}>⚙️</span>
+                  <span style={{ fontSize: '0.9rem', fontStyle: 'italic', letterSpacing: '1px' }}>Usta düşünüyor...</span>
                 </div>
               )}
               <div ref={messagesEndRef} />
@@ -211,6 +276,15 @@ export default function SanalUstaPage() {
 
             {/* Input Area */}
             <div className="p-3 md:p-6 border-t border-white/5 bg-black/40">
+              {/* Quick Action Chips */}
+              <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '12px', scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}>
+                {["Motor arıza lambası yandı", "Klima soğutmuyor", "Şanzımandan vuruntu sesi geliyor", "Fren yapınca titreme var"].map(chip => (
+                  <button key={chip} type="button" onClick={() => handleInputChange({ target: { value: chip } })} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '100px', fontSize: '0.85rem', whiteSpace: 'nowrap', color: '#e2e8f0', transition: 'background 0.2s' }}>
+                    {chip}
+                  </button>
+                ))}
+              </div>
+
               <form onSubmit={handleSubmit} className="flex flex-col md:flex-row gap-3 md:gap-4 relative">
                 <input
                   value={input}

@@ -10,8 +10,9 @@ import { getSystemPrompt } from '@/lib/ai/promptRegistry';
 import { getAiCache, setAiCache } from '@/lib/ai/semanticCache';
 import { checkHallucination } from '@/lib/ai/hallucinationGuard';
 import { rateLimit } from '@/lib/rate-limit';
-import { getCache, setCache } from '@/lib/cache';
+import { getCache, setCache, redis } from '@/lib/cache';
 import { prisma } from '@/lib/prisma';
+import { getToken } from 'next-auth/jwt';
 
 export async function POST(req) {
   // IP tabanlı kurumsal Rate Limiting — AI endpoint: Redis düştüğünde REDDET (fail-closed)
@@ -23,7 +24,27 @@ export async function POST(req) {
     return new Response('Too Many Requests', { status: 429 });
   }
 
-  const { messages, vehicleContext } = await req.json();
+  const { messages, vehicleContext, guestId } = await req.json();
+
+  // Guest Quota Control (3 messages)
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  if (!token && guestId) {
+    const userMessageCount = messages.filter(m => m.role === 'user').length;
+    const redisKey = `guest_quota:${guestId}`;
+    
+    // Check if quota exceeded in Redis
+    const currentQuota = await redis.get(redisKey);
+    if (currentQuota && parseInt(currentQuota) >= 3 && userMessageCount > 3) {
+      return new Response(JSON.stringify({ error: 'guest_quota_exceeded' }), { 
+        status: 403,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
+    // Increment quota for this message (if it's a new message)
+    await redis.incr(redisKey);
+    await redis.expire(redisKey, 86400); // 24 hours
+  }
 
   // 1. Semantic Cache Kontrolü (Aynı sohbet geçmişi var mı?)
   const cachedResponse = await getAiCache(messages);
