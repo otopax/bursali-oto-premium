@@ -303,6 +303,12 @@ export default async function Home({ params }) {
           <h3 style={{ color: 'var(--text-light)' }}>BURSALI OTO SERVİS</h3>
           <p>Yeni Sanayi Sitesi, Fethiye / Muğla</p>
           
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0', flexWrap: 'wrap' }}>
+            <a href="/tr/hakkimizda" style={{ color: 'var(--text-light)', textDecoration: 'none' }}>Hakkımızda</a>
+            <a href="/tr/seffaf-fiyatlandirma" style={{ color: 'var(--text-light)', textDecoration: 'none' }}>Fiyat Politikamız</a>
+            <a href="/tr/ariza-cozumleri" style={{ color: 'var(--text-light)', textDecoration: 'none' }}>Arıza Çözümleri</a>
+          </div>
+
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0' }}>
             <a href="https://instagram.com/bursaliotoservis" target="_blank" rel="noopener noreferrer" title="Instagram Profilimiz" style={{ color: 'var(--accent-gold)' }}>Instagram</a>
             <a href="https://facebook.com/bursaliotoservis" target="_blank" rel="noopener noreferrer" title="Facebook Profilimiz" style={{ color: 'var(--accent-gold)' }}>Facebook</a>

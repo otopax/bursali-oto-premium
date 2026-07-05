@@ -11,6 +11,7 @@ const Chatbot = dynamic(() => import('@/components/Chatbot'));
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'));
 const CookieConsent = dynamic(() => import('@/components/CookieConsent'));
 const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'));
+import { businessData } from '@/lib/business';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' });
@@ -83,128 +84,46 @@ export default async function RootLayout({ children, params }) {
   const { locale } = await params;
   const messages = await getMessages();
   
-  const schemaMarkup = [
-    {
-      "@context": "https://schema.org",
-      "@type": "AutoRepair",
-      "name": "Bursalı Oto Servis Fethiye",
-      "image": `${SITE_URL}/bg.png`,
-      "url": SITE_URL,
-      "telephone": "+905548812021",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Taşyaka Mahallesi, Yeni Sanayi Sitesi, 264. Sokak, No: 1",
-        "addressLocality": "Fethiye",
-        "addressRegion": "Muğla",
-        "postalCode": "48300",
-        "addressCountry": "TR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 36.6253,
-        "longitude": 29.1247
-      },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "08:30",
-        "closes": "19:30"
-      },
-      "areaServed": ["Fethiye", "Göcek", "Ölüdeniz", "Çalış", "Kalkan", "Kaş", "Dalaman", "Seydikemer", "Ortaca"],
-      "availableLanguage": ["tr", "en", "ru", "ar", "uk"],
-      "sameAs": [
-        "https://www.instagram.com/bursaliotoservis"
-      ],
-      "brand": [
-        { "@type": "Brand", "name": "BMW" },
-        { "@type": "Brand", "name": "Mercedes-Benz" },
-        { "@type": "Brand", "name": "Porsche" },
-        { "@type": "Brand", "name": "Audi" },
-        { "@type": "Brand", "name": "Range Rover" },
-        { "@type": "Brand", "name": "Volkswagen" },
-        { "@type": "Brand", "name": "Volvo" }
-      ],
-      "priceRange": "$$",
-      "knowsLanguage": [
-        { "@type": "Language", "name": "Turkish", "alternateName": "tr" },
-        { "@type": "Language", "name": "English", "alternateName": "en" },
-        { "@type": "Language", "name": "Russian", "alternateName": "ru" },
-        { "@type": "Language", "name": "Ukrainian", "alternateName": "uk" }
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Bursalı Oto Servis Hizmetleri",
-        "itemListElement": [
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "24/7 Fethiye Oto Çekici ve Yol Yardım",
-              "description": "Fethiye ve çevresinde 7/24 acil oto çekici, kaza kurtarma ve yol yardım hizmeti."
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "English Speaking Mechanic",
-              "description": "Fethiye'de expat ve turistler için İngilizce konuşan usta ile şeffaf fiyatlı premium oto servis."
-            }
-          },
-          {
-            "@type": "Service",
-            "name": "Premium Diagnostik (PIWIS, ODIS)",
-            "description": "BMW, Mercedes, Audi, Porsche, Range Rover için orijinal marka diagnostik cihazlarıyla noktasal arıza tespiti."
-          },
-          {
-            "@type": "Service",
-            "name": "Otomatik Şanzıman Tamiri",
-            "description": "Aisin, ZF, DSG, DCT ve PDK şanzımanlarda mekatronik revizyon ve garantili tamir."
-          },
-          {
-            "@type": "Service",
-            "name": "VIP Filo ve Transfer Aracı Gece Bakımı",
-            "description": "Turizm sezonu boyunca gece mesaisi ile VIP transfer araçları ve filo bakım hizmeti."
-          }
-        ]
-      }
+  const schemaMarkup = {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": businessData.name,
+    "image": businessData.image,
+    "url": businessData.url,
+    "telephone": businessData.telephone,
+    "priceRange": businessData.priceRange,
+    "address": {
+      "@type": "PostalAddress",
+      ...businessData.address
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Fethiye'de 7/24 oto çekici hizmetiniz var mı?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet, Fethiye ve çevresinde kaza yapan veya arızalanan araçlar için 7/24 tam donanımlı oto kurtarıcı ve çekici hizmetimiz mevcuttur. Aracınızı güvenle servisimize getiriyoruz."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Fethiye'de BMW, Mercedes ve premium araçlar için orijinal cihazlı tamir yapıyor musunuz?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Evet. PIWIS, ODIS ve BMW/Mercedes orijinal cihazlarıyla bilgisayarlı arıza tespiti ve premium segment motor, şanzıman revizyonlarını %100 orijinal yedek parça güvencesiyle yapıyoruz."
-          }
+    "geo": {
+      "@type": "GeoCoordinates",
+      ...businessData.geo
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      ...businessData.openingHoursSpecification[0]
+    },
+    "areaServed": businessData.areaServed,
+    "knowsLanguage": businessData.knowsLanguage.map(lang => ({
+      "@type": "Language",
+      "name": lang === "tr" ? "Turkish" : lang === "en" ? "English" : lang === "ru" ? "Russian" : lang === "uk" ? "Ukrainian" : lang === "ar" ? "Arabic" : lang,
+      "alternateName": lang
+    })),
+    "sameAs": businessData.sameAs,
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Bursalı Oto Servis Hizmetleri",
+      "itemListElement": businessData.makesOffer.map(offer => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": offer.name,
+          "description": offer.description
         }
-      ]
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      "serviceType": "Oto Çekici ve Kaza Kurtarma",
-      "provider": {
-        "@type": "AutoRepair",
-        "name": "Bursalı Oto Servis"
-      },
-      "areaServed": {
-        "@type": "City",
-        "name": "Fethiye"
-      }
+      }))
     }
-  ];
+  };
 
   return (
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>

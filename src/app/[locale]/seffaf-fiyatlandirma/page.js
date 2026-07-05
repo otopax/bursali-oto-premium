@@ -21,10 +21,21 @@ export default async function TransparentPricingPage({ params }) {
         <span className="badge" style={{ marginBottom: '1rem', display: 'inline-block', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)' }}>
           {locale === 'tr' ? '%100 Şeffaflık Garantisi' : '100% Transparency Guarantee'}
         </span>
-        <h1 style={{ fontSize: '3rem', color: '#f8fafc', marginBottom: '1rem' }}>
+        <h1 style={{ fontSize: '3rem', color: '#f8fafc', marginBottom: '1.5rem' }}>
           {locale === 'tr' ? 'Şeffaf Fiyatlandırma' : 'Transparent Pricing'}
         </h1>
-        <p style={{ maxWidth: '700px', margin: '0 auto', color: '#94a3b8', fontSize: '1.2rem', lineHeight: '1.6' }}>
+        
+        <div className="answer-first-block container" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--accent-gold)', marginBottom: '2rem', textAlign: 'left', maxWidth: '800px', margin: '0 auto 2rem auto' }}>
+          <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0, color: '#f8fafc' }}>
+            {locale === 'tr' ? 
+              <strong>Evet, Bursalı Oto Servis'te "Turist Fiyatı" veya sonradan çıkan gizli masraflar yoktur. Aracınıza yapılacak her işlemi ve kullanılacak parçaları faturasıyla birlikte önceden size sunarız, siz onaylamadan hiçbir tamire başlamayız.</strong>
+              :
+              <strong>Yes, at Bursalı Oto Servis there is no "Tourist Pricing" and no hidden costs. We provide a clear estimate of all parts and labor upfront, and we never begin repairs without your explicit approval.</strong>
+            }
+          </p>
+        </div>
+
+        <p style={{ maxWidth: '800px', margin: '0 auto', color: '#94a3b8', fontSize: '1.2rem', lineHeight: '1.6' }}>
           {locale === 'tr' 
             ? 'Premium aracınızın bakımı sürpriz olmamalı. İşleme başlamadan önce kullanılacak orijinal parçaları ve işçilik maliyetini kuruşu kuruşuna onayınıza sunuyoruz.' 
             : 'Servicing your luxury vehicle shouldn’t come with surprises. We provide an exact breakdown of genuine parts and labor costs for your approval before any work begins.'}
@@ -32,7 +43,7 @@ export default async function TransparentPricingPage({ params }) {
       </section>
 
       {/* Pricing Principles */}
-      <section className="container" style={{ marginBottom: '5rem' }}>
+      <section className="container" style={{ marginBottom: '4rem' }}>
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
           
           <div className="glass-panel" style={{ padding: '2.5rem', borderTop: '4px solid var(--accent-gold)' }}>
@@ -71,6 +82,39 @@ export default async function TransparentPricingPage({ params }) {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="container" style={{ marginBottom: '5rem' }}>
+        <h2 style={{ marginBottom: '1.5rem', color: 'var(--accent-gold)', textAlign: 'center' }}>
+          {locale === 'tr' ? 'Sıkça Sorulan Sorular (SSS)' : 'Frequently Asked Questions'}
+        </h2>
+        <div className="faq-section" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', maxWidth: '800px', margin: '0 auto' }}>
+          <div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'white' }}>
+              {locale === 'tr' ? 'Turistler için ayrı bir fiyat listeniz var mı?' : 'Do you have a separate price list for tourists?'}
+            </h3>
+            <p style={{ color: '#cbd5e1' }}>
+              {locale === 'tr' ? 'Hayır. Bursalı Oto Servis olarak Fethiye yerlisine uyguladığımız standart şeffaf fiyatlandırma listesi turistler veya gurbetçiler için de aynen geçerlidir.' : 'No. The standard transparent pricing we offer to Fethiye locals applies equally to all tourists and expats.'}
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'white' }}>
+              {locale === 'tr' ? 'Ödeme seçenekleri nelerdir?' : 'What are the payment options?'}
+            </h3>
+            <p style={{ color: '#cbd5e1' }}>
+              {locale === 'tr' ? 'Kredi kartı, banka havalesi ve nakit ödeme seçeneklerimiz mevcuttur. Döviz ile ödeme yapmak isteyen müşterilerimize de yardımcı oluyoruz.' : 'We accept credit cards, bank transfers, and cash. We can also assist customers who wish to pay in foreign currency.'}
+            </p>
+          </div>
+          <div>
+            <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem', color: 'white' }}>
+              {locale === 'tr' ? 'İşlem sonrası garanti veriyor musunuz?' : 'Do you provide a warranty after the repair?'}
+            </h3>
+            <p style={{ color: '#cbd5e1' }}>
+              {locale === 'tr' ? 'Evet, Fethiye Sanayi Sitesindeki servisimizde yaptığımız tüm mekanik ve elektronik onarımlar orijinal parça garantisiyle birlikte 1 yıl boyunca bizim güvencemizdedir.' : 'Yes, all mechanical and electronic repairs performed at our service center in Fethiye come with a 1-year warranty on original parts and labor.'}
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section style={{ background: 'linear-gradient(180deg, rgba(15,23,42,0) 0%, rgba(212,175,55,0.05) 100%)', padding: '4rem 0' }}>
         <div className="container" style={{ textAlign: 'center' }}>
@@ -87,6 +131,42 @@ export default async function TransparentPricingPage({ params }) {
           </a>
         </div>
       </section>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": locale === 'tr' ? 'Turistler için ayrı bir fiyat listeniz var mı?' : 'Do you have a separate price list for tourists?',
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": locale === 'tr' ? 'Hayır. Bursalı Oto Servis olarak Fethiye yerlisine uyguladığımız standart şeffaf fiyatlandırma listesi turistler veya gurbetçiler için de aynen geçerlidir.' : 'No. The standard transparent pricing we offer to Fethiye locals applies equally to all tourists and expats.'
+                }
+              },
+              {
+                "@type": "Question",
+                "name": locale === 'tr' ? 'Ödeme seçenekleri nelerdir?' : 'What are the payment options?',
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": locale === 'tr' ? 'Kredi kartı, banka havalesi ve nakit ödeme seçeneklerimiz mevcuttur. Döviz ile ödeme yapmak isteyen müşterilerimize de yardımcı oluyoruz.' : 'We accept credit cards, bank transfers, and cash. We can also assist customers who wish to pay in foreign currency.'
+                }
+              },
+              {
+                "@type": "Question",
+                "name": locale === 'tr' ? 'İşlem sonrası garanti veriyor musunuz?' : 'Do you provide a warranty after the repair?',
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": locale === 'tr' ? 'Evet, Fethiye Sanayi Sitesindeki servisimizde yaptığımız tüm mekanik ve elektronik onarımlar orijinal parça garantisiyle birlikte 1 yıl boyunca bizim güvencemizdedir.' : 'Yes, all mechanical and electronic repairs performed at our service center in Fethiye come with a 1-year warranty on original parts and labor.'
+                }
+              }
+            ]
+          })
+        }}
+      />
 
     </main>
   );

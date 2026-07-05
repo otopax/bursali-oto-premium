@@ -15,6 +15,13 @@ export default function PorscheMercedesPage() {
       <div className="container">
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
           <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Fethiye Premium Araç Özel Servisi (Porsche & Alman Grubu)</h1>
+          
+          <div className="answer-first-block" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--gold)', marginBottom: '2rem' }}>
+            <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>
+              <strong>Evet, Fethiye'de Porsche, BMW, Mercedes ve Audi araçlara özel servis hizmeti veriyoruz.</strong> Baba mesleği olan 50 yıllık köklü tecrübemiz ve 2. kuşak olarak 20 yıllık güncel teknik uzmanlığımızla hizmetinizdeyiz. Yetkili servis standartlarında, orijinal PIWIS ve ODIS arıza tespit cihazlarıyla deneme yanılma yapmadan kesin çözüm üretiyoruz.
+            </p>
+          </div>
+
           <p style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '2rem' }}>
             Fethiye bölgesinde <strong>Porsche, Mercedes-Benz, BMW, Audi ve Land Rover</strong> marka premium araçlarınızın arıza tespiti ve ağır mekanik bakımları konusunda uzmanlaşmış bir kurumuz. Aracınızı sıradan sanayi yöntemlerine teslim etmek yerine, tamamen <strong>yetkili servis standartlarında</strong>, orijinal cihazlarla hizmet almanın ayrıcalığını yaşayın.
           </p>
@@ -32,6 +39,22 @@ export default function PorscheMercedesPage() {
             <li>Elektronik beyin programlama ve kodlama</li>
           </ul>
 
+          <h2 style={{ marginBottom: '1.5rem', color: 'var(--gold)', marginTop: '2rem' }}>Sıkça Sorulan Sorular (SSS)</h2>
+          <div className="faq-section" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', marginBottom: '3rem' }}>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Fethiye'de Porsche'a kim bakar?</h3>
+              <p style={{ color: 'var(--text-muted)' }}>Fethiye'de Porsche marka araçlara Bursalı Oto Servis olarak biz bakıyoruz. Orijinal PIWIS diagnostik cihazı kullanarak elektronik ve mekanik tüm arızaları yetkili servis standartlarında çözüyoruz.</p>
+            </div>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Ustanızın tecrübesi nedir?</h3>
+              <p style={{ color: 'var(--text-muted)' }}>Bursalı Oto, babadan oğula geçen bir servistir. Kurucumuzun 50 yıllık ustalık birikimi ve 2. kuşak olarak bizim 20 yıllık aktif tecrübemizle premium araçlarda üst düzey uzmanlığa sahibiz.</p>
+            </div>
+            <div>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '0.5rem' }}>Orijinal parça mı kullanıyorsunuz?</h3>
+              <p style={{ color: 'var(--text-muted)' }}>Premium segment araçların onarımında aksi talep edilmediği sürece %100 orijinal yedek parçalar kullanıyor ve onarımlarımıza 1 yıl garanti veriyoruz.</p>
+            </div>
+          </div>
+
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '2rem' }}>
             <a href="tel:+905548812021" className="btn btn-primary">Hemen Uzmana Danış: 0554 881 20 21</a>
             <a href="/" className="btn btn-gold">Ana Sayfaya Dön</a>
@@ -41,27 +64,59 @@ export default function PorscheMercedesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AutoRepair",
-            "name": "Bursalı Oto Servis - Premium Araç Departmanı",
-            "description": "Fethiye Porsche, BMW, Mercedes Özel Servisi. Orijinal PIWIS ve ODIS cihazlarıyla bilgisayarlı arıza tespiti.",
-            "priceRange": "$$$",
-            "address": {
-              "@type": "PostalAddress",
-              "addressLocality": "Fethiye",
-              "addressCountry": "TR"
-            },
-            "makesOffer": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Porsche Arıza Tespiti"
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "AutoRepair",
+              "name": "Bursalı Oto Servis - Premium Araç Departmanı",
+              "description": "Fethiye Porsche, BMW, Mercedes Özel Servisi. Orijinal PIWIS ve ODIS cihazlarıyla bilgisayarlı arıza tespiti.",
+              "priceRange": "$$$",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Fethiye",
+                "addressCountry": "TR"
+              },
+              "makesOffer": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Porsche Arıza Tespiti"
+                  }
                 }
-              }
-            ]
-          })
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Fethiye'de Porsche'a kim bakar?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Fethiye'de Porsche marka araçlara Bursalı Oto Servis olarak biz bakıyoruz. Orijinal PIWIS diagnostik cihazı kullanarak elektronik ve mekanik tüm arızaları yetkili servis standartlarında çözüyoruz."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Ustanızın tecrübesi nedir?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bursalı Oto, babadan oğula geçen bir servistir. Kurucumuzun 50 yıllık ustalık birikimi ve 2. kuşak olarak bizim 20 yıllık aktif tecrübemizle premium araçlarda üst düzey uzmanlığa sahibiz."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Orijinal parça mı kullanıyorsunuz?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Premium segment araçların onarımında aksi talep edilmediği sürece %100 orijinal yedek parçalar kullanıyor ve onarımlarımıza 1 yıl garanti veriyoruz."
+                  }
+                }
+              ]
+            }
+          ])
         }}
       />
     </main>

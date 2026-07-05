@@ -34,6 +34,7 @@ const STATIC_PATHS = [
   '/otomatik-sanziman-tamiri',
   '/seffaf-fiyatlandirma',
   '/vip-filo-gece-bakimi',
+  '/hakkimizda',
 ];
 
 // Programmatic SEO — marka bazlı service pages
