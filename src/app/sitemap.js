@@ -1,5 +1,6 @@
 import { prisma } from '@/lib/prisma';
 import { articles } from '@/lib/articles';
+import { SEO_PRIORITY } from '@/data/seo-oncelik';
 
 /**
  * Kurumsal Dinamik Sitemap Generator (Faz A / Görev 1)
@@ -38,7 +39,12 @@ const STATIC_PATHS = [
 // Programmatic SEO — marka bazlı service pages
 const SEO_BRAND_SLUGS = [
   'bmw', 'mercedes', 'audi', 'porsche',
-  'volkswagen', 'land-rover', 'volvo', 'range-rover',
+  'volkswagen', 'land-rover', 'volvo', 'range-rover', 'mini', 'skoda', 'seat'
+];
+
+// YENİ: Agresif Yerel SEO (Bölgeler)
+const SEO_DISTRICTS = [
+  'fethiye', 'gocek', 'oludeniz', 'dalaman', 'kas', 'kalkan', 'seydikemer', 'ortaca', 'koycegiz'
 ];
 
 /**
@@ -85,6 +91,7 @@ export default async function sitemap() {
 
   // 2) Programmatic SEO brand pages × 4 dil
   SEO_BRAND_SLUGS.forEach((brand) => {
+    // Mevcut Statik benzeri sayfalar
     entries.push(...expandLocales(`/markalar/${brand}-servisi-fethiye`, {
       changeFrequency: 'weekly',
       priority: 0.9,
@@ -95,6 +102,27 @@ export default async function sitemap() {
       priority: 0.85,
       lastModified: now,
     }));
+
+    // YENİ: Tam Programatik Local SEO (Her Marka x Her Bölge) -> /bolge/bmw-servisi-gocek
+    // GÖREV A3: Kademeli İndeksleme (Sadece TIER1 kombinasyonları haritaya eklenir)
+    SEO_DISTRICTS.forEach((district) => {
+      const s1 = `${brand}-servisi-${district}`;
+      if (SEO_PRIORITY.isTier1(s1)) {
+        entries.push(...expandLocales(`/bolge/${s1}`, {
+          changeFrequency: 'monthly',
+          priority: 0.8,
+          lastModified: now,
+        }));
+      }
+      const s2 = `${brand}-tamiri-${district}`;
+      if (SEO_PRIORITY.isTier1(s2)) {
+        entries.push(...expandLocales(`/bolge/${s2}`, {
+          changeFrequency: 'monthly',
+          priority: 0.7,
+          lastModified: now,
+        }));
+      }
+    });
   });
 
   // 3) Blog yazıları (articles.js — statik data source) × 4 dil

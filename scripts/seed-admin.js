@@ -11,6 +11,18 @@ async function main() {
   const password = 'Bursali2026!';
   const hash = bcrypt.hashSync(password, 10);
 
+  // Ana işletme (Tenant) oluştur
+  let tenant = await prisma.tenant.findFirst();
+  if (!tenant) {
+    tenant = await prisma.tenant.create({
+      data: {
+        name: 'Bursalı Oto Servis Merkezi',
+        subdomain: 'merkez'
+      }
+    });
+    console.log('✅ Ana işletme (Tenant) oluşturuldu:', tenant.name);
+  }
+
   // Eğer zaten varsa güncelle, yoksa oluştur
   const user = await prisma.user.upsert({
     where: { email },
@@ -20,6 +32,22 @@ async function main() {
       passwordHash: hash,
       globalRole: 'ADMIN',
     },
+  });
+
+  // Kullanıcıyı Tenant'a bağla
+  await prisma.tenantUser.upsert({
+    where: {
+      userId_tenantId: {
+        userId: user.id,
+        tenantId: tenant.id
+      }
+    },
+    update: { role: 'OWNER' },
+    create: {
+      userId: user.id,
+      tenantId: tenant.id,
+      role: 'OWNER'
+    }
   });
 
   console.log('✅ Admin kullanıcı oluşturuldu/güncellendi:');

@@ -14,9 +14,15 @@ export default function LoginPage() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    const err = searchParams.get('error');
-    if (err === 'login_required') {
-      setError('Bu sayfaya erişmek için giriş yapmanız gerekiyor.');
+    const err = searchParams?.get('error');
+    if (err) {
+      if (err === 'login_required' || err === 'SessionRequired') {
+        setError('Bu sayfaya erişmek için yetkili girişi yapmanız gerekiyor.');
+      } else if (err === 'CredentialsSignin') {
+        setError('Hatalı e-posta veya şifre.');
+      } else {
+        setError('Giriş yapılırken bir hata oluştu: ' + err);
+      }
     }
   }, [searchParams]);
 

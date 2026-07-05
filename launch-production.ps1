@@ -31,11 +31,17 @@ npm run build
 
 # 4. PM2 Arka Plan İşçileri (Crawler)
 Write-Host "[4/5] PM2 Arka plan veri toplayıcı botları başlatılıyor..." -ForegroundColor Yellow
-pm2 restart CrawlerWorker || pm2 start src/scripts/worker.js --name CrawlerWorker --env production
+pm2 restart CrawlerWorker
+if ($LASTEXITCODE -ne 0) {
+    pm2 start src/scripts/worker.js --name CrawlerWorker --env production
+}
 
 # 5. Next.js Canlı Sunucu (PM2 üzerinden)
 Write-Host "[5/5] PM2 Next.js Canlı Sunucusu başlatılıyor..." -ForegroundColor Yellow
-pm2 restart BursaliOtoWeb || pm2 start npm --name "BursaliOtoWeb" -- run start
+pm2 restart BursaliOtoWeb
+if ($LASTEXITCODE -ne 0) {
+    pm2 start "npm.cmd" --name "BursaliOtoWeb" -- start
+}
 
 Write-Host "==================================================" -ForegroundColor Cyan
 Write-Host "✅ V1.0 LAUNCH BAŞARILI! SİSTEM CANLIDA ÇALIŞIYOR. ✅" -ForegroundColor Green

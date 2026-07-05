@@ -55,16 +55,55 @@ export async function POST(req) {
     }
 
     const body = await req.json();
-    const { customerId, vehicleId, complaint, mileage, notes } = body;
+    const { plate, phone, firstName, brand, model, year, complaint, mileage, notes, vehicleId } = body;
 
-    if (!vehicleId) {
-      return NextResponse.json({ error: 'Vehicle ID is required.' }, { status: 400 });
+    let targetVehicleId = vehicleId;
+
+    if (!targetVehicleId) {
+      if (!plate || !phone || !firstName) {
+        return NextResponse.json({ error: 'Plaka, Telefon ve İsim alanları zorunludur.' }, { status: 400 });
+      }
+
+      // Find or create customer
+      let customer = await prisma.customer.findFirst({
+        where: { tenantId: session.user.tenantId, phone: phone }
+      });
+
+      if (!customer) {
+        customer = await prisma.customer.create({
+          data: {
+            tenantId: session.user.tenantId,
+            firstName,
+            phone
+          }
+        });
+      }
+
+      // Find or create vehicle
+      let vehicle = await prisma.customerVehicle.findFirst({
+        where: { tenantId: session.user.tenantId, plate: plate }
+      });
+
+      if (!vehicle) {
+        vehicle = await prisma.customerVehicle.create({
+          data: {
+            tenantId: session.user.tenantId,
+            customerId: customer.id,
+            plate: plate,
+            brand: brand || 'Bilinmiyor',
+            model: model || 'Bilinmiyor',
+            year: year ? parseInt(year) : null
+          }
+        });
+      }
+      
+      targetVehicleId = vehicle.id;
     }
 
     const workOrder = await prisma.workOrder.create({
       data: {
         tenantId: session.user.tenantId,
-        vehicleId: vehicleId,
+        vehicleId: targetVehicleId,
         complaint: complaint,
         mileage: mileage ? parseInt(mileage) : null,
         notes: notes,

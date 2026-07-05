@@ -3,6 +3,8 @@ import { getMessages } from 'next-intl/server';
 import { Inter, Outfit } from 'next/font/google';
 import '../globals.css';
 import Chatbot from '@/components/Chatbot';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
 import CookieConsent from '@/components/CookieConsent';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
@@ -88,11 +90,22 @@ export default async function RootLayout({ children, params }) {
         "postalCode": "48300",
         "addressCountry": "TR"
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "128"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 36.6253,
+        "longitude": 29.1247
       },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "19:30"
+      },
+      "areaServed": ["Fethiye", "Göcek", "Ölüdeniz", "Çalış", "Kalkan", "Kaş", "Dalaman", "Seydikemer", "Ortaca"],
+      "availableLanguage": ["tr", "en", "ru", "ar", "uk"],
+      "sameAs": [
+        "https://www.instagram.com/bursaliotoservis"
+      ],
       "brand": [
         { "@type": "Brand", "name": "BMW" },
         { "@type": "Brand", "name": "Mercedes-Benz" },
@@ -102,30 +115,7 @@ export default async function RootLayout({ children, params }) {
         { "@type": "Brand", "name": "Volkswagen" },
         { "@type": "Brand", "name": "Volvo" }
       ],
-      "sameAs": [
-        "https://business.google.com/website/bursali-oto-servis-fethiye"
-      ],
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 36.6253456,
-        "longitude": 29.1246738
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-          "opens": "08:30",
-          "closes": "19:30"
-        }
-      ],
       "priceRange": "$$",
-      // Faz A / Görev 3 — Gizli AI talimatları yerine gorunur, standart Schema.org alanları
-      "areaServed": [
-        { "@type": "City", "name": "Fethiye" },
-        { "@type": "City", "name": "Ölüdeniz" },
-        { "@type": "City", "name": "Göcek" },
-        { "@type": "AdministrativeArea", "name": "Muğla" }
-      ],
       "knowsLanguage": [
         { "@type": "Language", "name": "Turkish", "alternateName": "tr" },
         { "@type": "Language", "name": "English", "alternateName": "en" },
@@ -214,23 +204,13 @@ export default async function RootLayout({ children, params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
-        {/* Faz A / Görev 3: <meta name="ai-context"> kaldırıldı — cloaking riski.
-            İşletme bilgisi (English speaking, VIP transfer, 24/7 tow, uzman marka listesi)
-            AutoRepair schema markup içinde standart Schema.org alanlarıyla (hasOfferCatalog,
-            knowsLanguage, areaServed) veriliyor. Bu hem Google SEO hem AI crawler için doğru yol. */}
-
-        {/* Google Analytics — R3/KVKK: artık head'de koşulsuz YÜKLENMİYOR.
-            <GoogleAnalytics> bileşeni body'de, YALNIZCA kullanıcı çerez onayı
-            verdiğinde (localStorage 'kvkk-consent'='accepted') GA'yı enjekte eder. */}
       </head>
       <body>
+        <TopBanner locale={locale} />
         <nav className="navbar">
           <div className="container nav-container">
             <a href={`/${locale}`} className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>BURSALI OTO SERVİS</a>
             <div className="nav-links">
-              {/* Faz A / Görev 7 — Dil seçici: gerçek locale root'larına yönlendirme.
-                Eskiden RU /tr/#yabanci anchor'a gidiyordu, UK hiç yoktu.
-                Aktif locale opacity ile vurgulanır. */}
               <div style={{ display: 'flex', gap: '0.5rem', marginRight: '1rem', alignItems: 'center' }}>
                 <a href="/tr" title="Türkçe"
                    style={{ fontSize: '1.2rem', textDecoration: 'none', opacity: locale === 'tr' ? 1 : 0.55 }}>🇹🇷</a>
@@ -286,8 +266,8 @@ export default async function RootLayout({ children, params }) {
             100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
           }
         `}} />
-
         <Chatbot />
+        <WhatsAppButton />
         <CookieConsent locale={locale} />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
       </body>
