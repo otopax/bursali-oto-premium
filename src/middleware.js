@@ -11,7 +11,6 @@ const protectedRoutes = [
   '/teknik-kutuphane', 
   '/bilgi-bankasi', 
   '/katalog',
-  '/ariza-cozumleri',
   '/ariza-kodlari'
 ];
 

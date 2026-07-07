@@ -25,46 +25,48 @@ export default function MobileStickyCTA() {
   return (
     <div className="md:hidden" style={{
       position: 'fixed',
-      bottom: 0,
-      left: 0,
-      width: '100%',
-      backgroundColor: 'rgba(26, 26, 26, 0.95)',
-      backdropFilter: 'blur(10px)',
-      borderTop: '1px solid rgba(212, 175, 55, 0.3)',
+      bottom: '20px',
+      left: '50%',
+      transform: 'translateX(-50%)',
+      width: 'max-content',
+      maxWidth: 'calc(100% - 100px)', // Leave space for chat widget on the right
+      backgroundColor: 'rgba(20, 20, 20, 0.85)',
+      backdropFilter: 'blur(12px)',
+      border: '1px solid rgba(212, 175, 55, 0.3)',
+      borderRadius: '50px',
       zIndex: 9998,
-      padding: '12px 16px',
-      paddingBottom: 'calc(12px + env(safe-area-inset-bottom))',
+      padding: '8px',
       display: 'flex',
-      gap: '12px',
-      boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.5)',
+      gap: '8px',
+      boxShadow: '0 10px 25px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255,255,255,0.1)',
       animation: 'slideUp 0.3s ease-out forwards'
     }}>
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes slideUp {
-          from { transform: translateY(100%); }
-          to { transform: translateY(0); }
+          from { transform: translate(-50%, 150%); }
+          to { transform: translate(-50%, 0); }
         }
       `}} />
       <a 
         href="tel:+905548812021" 
         onClick={() => trackEvent('mobil_sticky_tel_tikla', { location: 'sticky_bar' })}
         style={{
-          flex: 1,
-          backgroundColor: '#e11d48',
+          backgroundColor: '#991b1b', // Dark red
           color: 'white',
-          textAlign: 'center',
-          padding: '14px 0',
-          borderRadius: '12px',
+          padding: '12px 20px',
+          borderRadius: '40px',
           fontWeight: 'bold',
-          fontSize: '1.1rem',
+          fontSize: '0.95rem',
           textDecoration: 'none',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
-          gap: '8px'
+          gap: '6px',
+          border: '1px solid rgba(255,255,255,0.1)',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.3)' // Subtle dark shadow instead of neon
         }}
       >
-        <span>📞</span> Hemen Ara
+        <span style={{ fontSize: '1.2rem' }}>📞</span> 
+        <span>Ara</span>
       </a>
       <a 
         href="https://wa.me/905548812021" 
@@ -72,22 +74,22 @@ export default function MobileStickyCTA() {
         target="_blank"
         rel="noopener noreferrer"
         style={{
-          flex: 1,
-          backgroundColor: '#25D366',
+          backgroundColor: '#166534', // Dark green
           color: 'white',
-          textAlign: 'center',
-          padding: '14px 0',
-          borderRadius: '12px',
+          padding: '12px 20px',
+          borderRadius: '40px',
           fontWeight: 'bold',
-          fontSize: '1.1rem',
+          fontSize: '0.95rem',
           textDecoration: 'none',
           display: 'flex',
           alignItems: 'center',
-          justifyContent: 'center',
-          gap: '8px'
+          gap: '6px',
+          border: '1px solid rgba(255,255,255,0.1)',
+          boxShadow: '0 4px 6px rgba(0, 0, 0, 0.3)' // Subtle dark shadow instead of neon
         }}
       >
-        <span>💬</span> WhatsApp
+        <span style={{ fontSize: '1.2rem' }}>💬</span> 
+        <span>WhatsApp</span>
       </a>
     </div>
   );

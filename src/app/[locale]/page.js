@@ -8,7 +8,7 @@ import MapFacade from '@/components/MapFacade';
 import Reveal from '@/components/anim/Reveal';
 import dynamic from 'next/dynamic';
 
-const SanalUstaTeaser = dynamic(() => import('@/components/SanalUstaTeaser'));
+
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -65,10 +65,6 @@ export default async function Home({ params }) {
         </div>
       </section>
 
-      {/* Sanal Usta Teaser */}
-      <section style={{ marginTop: '-4rem', position: 'relative', zIndex: 10, padding: '0 1rem' }}>
-        <SanalUstaTeaser locale={locale} />
-      </section>
 
       {/* Tow Truck & Emergency Section */}
       <section id="cekici" className="services-section" style={{ background: 'rgba(255,255,255,0.02)', padding: '5rem 0 4rem 0', borderBottom: '1px solid var(--glass-border)' }}>
@@ -126,9 +122,9 @@ export default async function Home({ params }) {
             </div>
             <h3>Orijinal Ekipmanlarla Diagnostik</h3>
             <p>
-              Porsche için <strong>PIWIS</strong>, VAG grubu için <strong>ODIS</strong> 
-              ve BMW/Mercedes özel orijinal servis yazılımlarıyla kusursuz arıza tespiti sağlıyoruz. 
-              Deneme yanılma yöntemlerini geride bırakın.
+              BMW/Mini için <strong>ICOM</strong>, Mercedes için <strong>Star Diagnosis</strong>, VAG grubu için <strong>ODIS</strong>, 
+              Renault için <strong>Clip</strong>, Ford için <strong>IDS/VCM</strong> ve Volvo için <strong>VIDA</strong> gibi tamamen markaya özel 
+              orijinal servis cihazlarıyla kusursuz arıza tespiti sağlıyoruz.
             </p>
           </div>
 

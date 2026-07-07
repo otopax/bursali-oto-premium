@@ -360,3 +360,14 @@ model Fuse {
 
   @@index([fuseBoxId])
 }
+model SocialLead {
+  id          Int      @id @default(autoincrement())
+  platform    String   @default("WEBSITE_BOT")
+  name        String?
+  phone       String
+  vehicle     String?
+  symptoms    String?  @db.Text
+  status      String   @default("NEW")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

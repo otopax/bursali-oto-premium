@@ -1,8 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const PUBLIC_DIR = path.join(process.cwd(), 'public');
-const FAULT_CODES_DIR = path.join(PUBLIC_DIR, 'ariza_kodlari');
+const FAULT_CODES_DIR = path.join(process.cwd(), 'public/ariza_kodlari');
 
 export function getAvailableFaultBrands() {
   if (!fs.existsSync(FAULT_CODES_DIR)) return [];

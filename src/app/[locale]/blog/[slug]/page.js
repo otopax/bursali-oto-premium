@@ -1,82 +1,115 @@
-import { getArticleBySlug, getAllArticles } from '@/lib/articles';
+import { getAllPostIds, getPostData } from '@/lib/blog';
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import DOMPurify from 'isomorphic-dompurify';
+import Head from 'next/head';
 
+// Dynamic params function for static generation if needed
 export async function generateStaticParams() {
-  const articles = getAllArticles();
-  return articles.map((article) => ({
-    slug: article.slug,
-  }));
+  const paths = getAllPostIds();
+  return paths.map(p => ({ slug: p.params.slug }));
 }
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params;
-  const article = getArticleBySlug(slug);
-  if (!article) return { title: 'Bulunamadı' };
+  const { slug, locale } = await params;
+  const postData = await getPostData(slug);
+  
+  if (!postData) return { title: 'Not Found' };
 
   return {
-    title: article.title,
-    description: article.excerpt,
+    title: `${postData.title} | Bursalı Oto Servis`,
+    description: postData.description,
+    openGraph: {
+      title: postData.title,
+      description: postData.description,
+      images: [postData.image || '/bg.png'],
+    }
   };
 }
 
-export default async function BlogPostPage({ params }) {
-  const { locale, slug } = await params;
-  const article = getArticleBySlug(slug);
+export default async function BlogPost({ params }) {
+  const { slug, locale } = await params;
+  const postData = await getPostData(slug);
 
-  if (!article) {
+  if (!postData) {
     notFound();
   }
 
+  // Article Schema for SEO
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": postData.title,
+    "image": [
+      `https://www.bursaliotoservis.com${postData.image || '/bg.png'}`
+    ],
+    "datePublished": postData.date,
+    "author": [{
+        "@type": "Organization",
+        "name": "Bursalı Oto Servis",
+        "url": "https://www.bursaliotoservis.com"
+      }]
+  };
+
   return (
-    <main style={{ minHeight: '100vh', paddingTop: '100px' }}>
-      <article className="container" style={{ paddingBottom: '5rem', maxWidth: '800px' }}>
-        
-        <Link href={`/${locale}/blog`} style={{ color: 'var(--accent-gold)', textDecoration: 'none', display: 'inline-flex', alignItems: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
-          ← Tüm Makaleler
-        </Link>
-
-        <div style={{ background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', padding: '0.5rem 1rem', borderRadius: '50px', display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.9rem', fontWeight: 'bold' }}>
-          {article.category}
-        </div>
-
-        <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem', lineHeight: '1.3' }}>
-          {article.title}
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <div className="container mx-auto px-4 py-16" style={{ minHeight: '80vh', marginTop: '100px', maxWidth: '800px' }}>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: 'var(--accent-gold)' }}>
+          {postData.title}
         </h1>
+        <div className="text-sm text-gray-400 mb-8">
+          {postData.date}
+        </div>
+        
+        {postData.image && (
+          <img 
+            src={postData.image} 
+            alt={postData.title} 
+            style={{ width: '100%', borderRadius: '12px', marginBottom: '2rem' }} 
+          />
+        )}
 
         <div 
-          className="article-content"
-          style={{ color: '#e2e8f0', lineHeight: '1.8', fontSize: '1.1rem' }}
-          dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(article.content) }}
+          className="blog-content"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
+          style={{ 
+            color: 'var(--text-light)', 
+            lineHeight: '1.8',
+            fontSize: '1.1rem'
+          }}
         />
 
         <style dangerouslySetInnerHTML={{__html: `
-          .article-content h2 {
+          .blog-content h2 {
             color: var(--accent-gold);
-            margin-top: 3rem;
-            margin-bottom: 1.5rem;
-            font-size: 1.8rem;
-          }
-          .article-content h3 {
-            color: white;
+            font-size: 2rem;
             margin-top: 2rem;
             margin-bottom: 1rem;
-            font-size: 1.4rem;
           }
-          .article-content p {
-            margin-bottom: 1.5rem;
+          .blog-content h3 {
+            color: var(--accent-blue);
+            font-size: 1.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
           }
-          .article-content ul {
-            margin-bottom: 1.5rem;
-            padding-left: 1.5rem;
+          .blog-content p {
+            margin-bottom: 1.25rem;
           }
-          .article-content li {
+          .blog-content strong {
+            color: white;
+          }
+          .blog-content ul, .blog-content ol {
+            margin-bottom: 1.25rem;
+            padding-left: 2rem;
+            list-style-type: disc;
+          }
+          .blog-content li {
             margin-bottom: 0.5rem;
           }
         `}} />
-
-      </article>
-    </main>
+      </div>
+    </>
   );
 }

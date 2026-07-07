@@ -98,7 +98,20 @@ export default async function BrandSeoPage({ params }) {
             Neden Bursalı Oto Servis?
           </h2>
           <ul style={{ color: '#e2e8f0', display: 'grid', gap: '1rem', paddingLeft: '1.2rem' }}>
-            <li>Yetkili Servis standartlarında bilgisayarlı arıza tespiti</li>
+            <li>{['bmw', 'mini'].includes(rawBrand) ? 'Orijinal ICOM cihazı ile yetkili servis düzeyinde arıza tespiti' :
+                 ['mercedes', 'mercedes-benz'].includes(rawBrand) ? 'Orijinal Star Diagnosis (SD Connect) cihazı ile arıza tespiti' :
+                 ['volkswagen', 'audi', 'seat', 'skoda', 'vag'].includes(rawBrand) ? 'Orijinal ODIS cihazı ile yetkili servis düzeyinde arıza tespiti' :
+                 ['ford'].includes(rawBrand) ? 'IDS ve VCM cihazları ile arıza tespiti' :
+                 ['opel', 'chevrolet'].includes(rawBrand) ? 'Orijinal MDI cihazı ile arıza tespiti' :
+                 ['renault', 'dacia'].includes(rawBrand) ? 'Orijinal Clip (Can Clip) cihazı ile arıza tespiti' :
+                 ['peugeot', 'citroen'].includes(rawBrand) ? 'Diagbox / Lexia cihazı ile arıza tespiti' :
+                 ['fiat', 'alfa-romeo'].includes(rawBrand) ? 'WiTECH cihazı ile arıza tespiti' :
+                 ['toyota', 'lexus'].includes(rawBrand) ? 'Techstream cihazı ile arıza tespiti' :
+                 ['honda'].includes(rawBrand) ? 'HIM (Honda Diagnostic System) cihazı ile arıza tespiti' :
+                 ['hyundai', 'kia'].includes(rawBrand) ? 'GDS cihazı ile arıza tespiti' :
+                 ['volvo'].includes(rawBrand) ? 'Orijinal VIDA cihazı ile arıza tespiti' :
+                 'Orijinal lisanslı cihazlar ile bilgisayarlı arıza tespiti'}
+            </li>
             <li>Orijinal ve Garantili Yedek Parça kullanımı</li>
             <li>Şanzıman ve Motor revizyonunda uzman ekip</li>
             <li>Turistler ve Yabancılar için İngilizce konuşan danışmanlar</li>

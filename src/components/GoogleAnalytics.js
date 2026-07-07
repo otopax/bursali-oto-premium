@@ -9,9 +9,12 @@ import { useEffect, useState } from 'react';
 
 export default function GoogleAnalytics({ gaId }) {
   const [allowed, setAllowed] = useState(false);
+  
+  // Eğer env boş gelirse (Vercel production vb.) hardcoded fallback kullan
+  const effectiveGaId = gaId || "G-3SNV6H5568";
 
   useEffect(() => {
-    if (!gaId) return;
+    if (!effectiveGaId) return;
     const check = () => {
       setAllowed(
         typeof window !== 'undefined' &&
@@ -28,17 +31,21 @@ export default function GoogleAnalytics({ gaId }) {
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${effectiveGaId}`}
         strategy="afterInteractive"
       />
-      <Script id="ga-init" strategy="afterInteractive">
-        {`
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${gaId}', { page_path: window.location.pathname });
-        `}
-      </Script>
+          gtag('config', '${effectiveGaId}', { page_path: window.location.pathname });
+          `,
+        }}
+      />
     </>
   );
 }

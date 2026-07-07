@@ -11,7 +11,9 @@ const Chatbot = dynamic(() => import('@/components/Chatbot'));
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'));
 const CookieConsent = dynamic(() => import('@/components/CookieConsent'));
 const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'));
+import SecurityShield from '@/components/SecurityShield';
 import { businessData } from '@/lib/business';
+import Navigation from '@/components/Navigation';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' });
@@ -134,29 +136,8 @@ export default async function RootLayout({ children, params }) {
         />
       </head>
       <body>
-        <TopBanner locale={locale} />
-        <nav className="navbar">
-          <div className="container nav-container">
-            <a href={`/${locale}`} className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>BURSALI OTO SERVİS</a>
-            <div className="nav-links">
-              <div style={{ display: 'flex', gap: '0.5rem', marginRight: '1rem', alignItems: 'center' }}>
-                <a href="/tr" title="Türkçe"
-                   style={{ fontSize: '1.2rem', textDecoration: 'none', opacity: locale === 'tr' ? 1 : 0.55 }}>🇹🇷</a>
-                <a href="/en" title="English"
-                   style={{ fontSize: '1.2rem', textDecoration: 'none', opacity: locale === 'en' ? 1 : 0.55 }}>🇬🇧</a>
-                <a href="/ru" title="Русский"
-                   style={{ fontSize: '1.2rem', textDecoration: 'none', opacity: locale === 'ru' ? 1 : 0.55 }}>🇷🇺</a>
-                <a href="/uk" title="Українська"
-                   style={{ fontSize: '1.2rem', textDecoration: 'none', opacity: locale === 'uk' ? 1 : 0.55 }}>🇺🇦</a>
-              </div>
-              <a href={`/${locale}/#uzmanlik`} aria-label="Uzmanlık Alanlarımız">{locale === 'tr' ? 'Uzmanlık Alanlarımız' : 'Expertise'}</a>
-              <a href={`/${locale}/vip-garaj`} style={{ color: 'var(--text-light)' }} aria-label="VIP Garaj">{locale === 'tr' ? 'VIP Garaj' : 'VIP Garage'}</a>
-              <a href={`/${locale}/sanal-usta`} style={{ color: 'var(--accent-gold)' }} aria-label="Sanal Usta (AI)">{locale === 'tr' ? 'Sanal Usta (AI)' : 'AI Mechanic'}</a>
-              <a href={`/${locale}/ariza-cozumleri`} aria-label="Arıza Çözümleri">{locale === 'tr' ? 'Arıza Çözümleri' : 'Fault Codes'}</a>
-              <a href={`/${locale}/teknik-kutuphane`} aria-label="Teknik Kütüphane">{locale === 'tr' ? 'Kütüphane' : 'Library'}</a>
-            </div>
-          </div>
-        </nav>
+        <SecurityShield />
+        <Navigation locale={locale} />
         <Providers>
           <NextIntlClientProvider messages={messages}>
             {children}

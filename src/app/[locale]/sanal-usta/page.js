@@ -168,10 +168,35 @@ export default function SanalUstaPage() {
                 Arızanızı <b>gerçek ustalarımıza</b> iletmek ve randevu almak için telefon numaranızı bırakın veya hemen bizi arayın.
               </p>
               
-              <form onSubmit={(e) => {
+              <form onSubmit={async (e) => {
                 e.preventDefault();
-                alert("Talebiniz ustamıza iletildi. En kısa sürede aranacaksınız.");
-                setShowLeadForm(false);
+                const formData = new FormData(e.target);
+                const phone = formData.get('phone');
+                
+                // Son mesajlardan müşterinin sorununu çıkart (symptoms)
+                const userMessages = messages.filter(m => m.role === 'user');
+                const lastIssue = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : '';
+                
+                try {
+                  const res = await fetch('/api/leads', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                      platform: 'SANAL_USTA',
+                      phone,
+                      vehicle: `${vehicleContext.year} ${vehicleContext.brand} ${vehicleContext.model}`,
+                      symptoms: lastIssue
+                    })
+                  });
+                  if(res.ok) {
+                    alert("✅ Talebiniz ustamıza başarıyla iletildi! Öncelikli olarak aranacaksınız.");
+                    setShowLeadForm(false);
+                  } else {
+                    alert("Bir hata oluştu, lütfen WhatsApp üzerinden ulaşın.");
+                  }
+                } catch(err) {
+                  alert("Bağlantı hatası, lütfen WhatsApp üzerinden ulaşın.");
+                }
               }} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
                 
                 <input required type="tel" name="phone" placeholder="Telefon Numaranız (05XX XXX XX XX)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none" />
@@ -249,9 +274,10 @@ export default function SanalUstaPage() {
                     borderBottomLeftRadius: m.role === 'assistant' ? '4px' : '16px',
                   }}>
                     {m.content ? (
-                       <p style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-light)', whiteSpace: 'pre-wrap', lineHeight: '1.6' }}>
-                         {m.content}
-                       </p>
+                       <div 
+                         style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-light)', whiteSpace: 'pre-wrap', lineHeight: '1.6' }}
+                         dangerouslySetInnerHTML={{ __html: m.content }}
+                       />
                     ) : null}
                     
                     {m.role === 'assistant' && m.id !== 'welcome-msg' && (

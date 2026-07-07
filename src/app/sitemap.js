@@ -140,6 +140,8 @@ export default async function sitemap() {
     console.warn('[Sitemap] Blog yüklenemedi:', e.message);
   }
 
+  return entries; // DB QUERIES DISABLED FOR VERCEL DEPLOYMENT
+
   // 4) Manufacturers (DB) → /katalog/[marka]
   try {
     const manufacturers = await prisma.manufacturer.findMany({ select: { name: true } });

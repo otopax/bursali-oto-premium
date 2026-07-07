@@ -27,3 +27,21 @@ export async function PATCH(request) {
   }
 }
 
+export async function POST(request) {
+  try {
+    const data = await request.json();
+    const newLead = await prisma.socialLead.create({
+      data: {
+        platform: data.platform || 'WEBSITE_BOT',
+        name: data.name || 'Bot Ziyaretçisi',
+        phone: data.phone,
+        vehicle: data.vehicle || '',
+        symptoms: data.symptoms || '',
+        status: 'NEW'
+      }
+    });
+    return NextResponse.json(newLead, { status: 201 });
+  } catch (error) {
+    return NextResponse.json({ error: error.message }, { status: 500 });
+  }
+}

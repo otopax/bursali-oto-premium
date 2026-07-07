@@ -59,20 +59,51 @@ export async function POST(req) {
     return new Response(stream, { headers: { 'Content-Type': 'text/plain; charset=utf-8', 'X-AI-Cache': 'HIT' } });
   }
 
+  const { getSortedPostsData } = require('@/lib/blog');
+
   // Dinamik System Prompt: Eğer kullanıcı araç bilgisi girdiyse bunu AI'ya kesin bir dille bildir.
   let dynamicSystemPrompt = getSystemPrompt('CHAT_BOT', 'v2');
   if (vehicleContext && vehicleContext.isRegistered) {
     dynamicSystemPrompt += `\n\nÖNEMLİ BİLGİ: Şu an konuştuğun müşterinin aracı kesin olarak şudur: ${vehicleContext.year} model ${vehicleContext.brand} ${vehicleContext.model}. ${vehicleContext.chassis ? `Şasi numarası (VIN): ${vehicleContext.chassis}.` : ''} Yapacağın tüm teşhisleri, vereceğin parça numaralarını ve arıza kodu analizlerini sadece ve sadece bu araca özel yap. Genel geçer cevaplar verme.`;
   }
   
-  // DOKTOR MODU (Decision Trees)
-  dynamicSystemPrompt += `\n\nDOKTOR MODU (TEŞHİS AĞACI) AKTİF: Asla eksik bilgiyle anında kesin bir teşhis koyma. Eğer arızanın kesin sebebini bulmak için kullanıcının verdiği şikayet yetersizse, bir Oto Diagnostik uzmanı gibi Teşhis Ağacı (Decision Tree) mantığıyla hastaya (kullanıcıya) 1 veya 2 kısa soru sor. Soruları 2-3 kısa cümleyle sor, müşteriyi uzun paragraflarla boğma. Önce problemi daralt (örn: "Bu ses sadece soğuk motorda mı geliyor?"). Emin olana kadar adım adım ve kısa sorularla ilerle.`;
+  // DOKTOR MODU (Decision Trees) & RANDEVU SATIŞI & MDX VERİTABANI
+  dynamicSystemPrompt += `\n\nDOKTOR MODU VE SATIŞ ODAKLI ASİSTAN: Asla eksik bilgiyle anında kesin bir teşhis koyma. Eğer arızanın kesin sebebini bulmak için kullanıcının verdiği şikayet yetersizse, bir Oto Diagnostik uzmanı gibi kısa sorular sor. 
+  ŞİMDİ ÇOK ÖNEMLİ: Müşteri bir arıza (örn: triger sesi, airmatic patlaması vb.) söylediğinde, MUTLAKA "searchChronicFaults" aracını kullanarak veritabanımızdaki makaleleri ara. Eğer eşleşen bir kronik arıza makalesi bulursan, kullanıcıya ŞU ŞEKİLDE HTML link ver: "Bu aracınızdaki kronik bir sorundur. Detaylı çözüm makalemizi buradan okuyabilirsiniz: <a href='/ariza-cozumleri/makale-slug' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>" (slug'ı id alanından al). Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
+  EN ÖNEMLİ KURAL: Her diyaloğun veya teşhisin sonunda KESİNLİKLE "Müsait olduğunuz bir zaman aracınızı Fethiye'deki özel servisimize getirin, ustalarımızla birlikte ücretsiz detaylı check-up yapalım ve kesin randevu oluşturalım. Randevu talebinizi hemen iletebilirim, ne dersiniz?" şeklinde RANDEVU (Lead) satışı yapmaya çalış. Arıza ciddiyse müşteriyi korkutmadan servise gelmesi gerektiğine ikna et!`;
+
 
   const result = streamText({
     model: google('gemini-2.5-flash'),
     system: dynamicSystemPrompt,
     messages,
     tools: {
+      searchChronicFaults: tool({
+        description: 'Verilen anahtar kelime veya araç modeline göre (örn: bmw n20, airmatic, dsg) kronik arızalar veritabanında (MDX makaleleri) arama yapar. Sonuçlar /ariza-cozumleri/ URL\'sine link vermek için kullanılır.',
+        parameters: z.object({
+          keyword: z.string().describe('Aranacak kelime (örn: triger, airmatic, mekatronik veya marka modeli)')
+        }),
+        execute: async ({ keyword }) => {
+          try {
+            const allFaults = getSortedPostsData('tr', 'faults');
+            if (!allFaults || allFaults.length === 0) return { success: false, message: 'Veritabanı boş.' };
+            
+            const lowerKeyword = keyword.toLowerCase();
+            const results = allFaults.filter(f => 
+              (f.title && f.title.toLowerCase().includes(lowerKeyword)) || 
+              (f.brand && f.brand.toLowerCase().includes(lowerKeyword)) ||
+              (f.model && f.model.toLowerCase().includes(lowerKeyword))
+            ).slice(0, 3); // En iyi 3 sonucu dön
+            
+            if (results.length > 0) {
+              return { success: true, articles: results.map(r => ({ id: r.id, title: r.title, url: `/ariza-cozumleri/${r.id}` })) };
+            }
+            return { success: false, message: 'Eşleşen kronik arıza makalesi bulunamadı.' };
+          } catch(e) {
+            return { success: false, error: e.message };
+          }
+        }
+      }),
       getBrands: tool({
         description: 'Sistemde verisi bulunan araç markalarını listeler.',
         parameters: z.object({}),

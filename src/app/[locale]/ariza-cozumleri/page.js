@@ -1,79 +1,46 @@
-import { prisma } from '@/lib/prisma';
+import { getSortedPostsData } from '@/lib/blog';
 import Link from 'next/link';
-import FaultCodeSearch from '@/components/FaultCodeSearch';
 
 export const metadata = {
-  title: 'Yapay Zeka Destekli Arıza Kodu Çözüm Merkezi | Bursalı Oto',
-  description: 'Aracınızın OBD2 arıza kodunu (Örn: P0171) arayın, Yapay Zeka destekli belirtiler, sebepler ve detaylı tamir eğitimlerine ulaşın.',
+  title: 'Arıza Çözümleri | Bursalı Oto',
+  description: 'Arıza çözümleri veritabanımız.',
 };
 
-export default async function FaultCodesHome({ params }) {
+export default async function ArizaCozumleriHub({ params }) {
   const { locale } = await params;
-
-  let showcase = [];
-  try {
-    showcase = await prisma.faultCode.findMany({
-      take: 8,
-      orderBy: { createdAt: 'desc' }
-    });
-  } catch (e) {
-    console.error("Failed to load fault codes from database", e);
-  }
+  const faults = getSortedPostsData(locale, 'faults'); // Using folder 'faults'
 
   return (
-    <main style={{ minHeight: '100vh', paddingTop: '120px', background: '#09090b' }}>
-      <section className="container" style={{ textAlign: 'center', marginBottom: '4rem' }}>
-        <span className="badge" style={{ background: 'rgba(234, 179, 8, 0.1)', color: '#eab308', borderColor: '#eab308', marginBottom: '1rem', display: 'inline-block' }}>
-          Yapay Zeka Destekli (Gemini AI)
-        </span>
-        <h1 style={{ fontSize: '3.5rem', marginBottom: '1rem', color: 'var(--text-light)', fontWeight: '800' }}>
-          Akıllı Arıza <span style={{ color: 'var(--accent-gold)' }}>Çözüm Merkezi</span>
-        </h1>
-        <p style={{ fontSize: '1.2rem', color: '#94a3b8', maxWidth: '800px', margin: '0 auto', marginBottom: '3rem' }}>
-          Tüm marka ve modeller için standart OBD-II arıza kodlarını (Örn: P0171, P0420) arayın. Kronik sorunları ve dünya çapından en iyi tamir videolarını keşfedin.
+    <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
+      <div className="container mx-auto px-4 max-w-6xl">
+        <h1 className="text-4xl font-bold mb-4 text-center text-white">Kronik Arıza Çözümleri Merkezi</h1>
+        <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+          Avrupa premium araç markalarının en sık karşılaşılan kronik arızalarını, kök nedenlerini ve servisimizde uyguladığımız kalıcı çözümleri inceleyin.
         </p>
 
-        {/* Client Component for Interactive Search */}
-        <div style={{ maxWidth: '600px', margin: '0 auto', position: 'relative' }}>
-          <FaultCodeSearch locale={locale} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {faults.map((fault) => (
+            <Link 
+              key={fault.id} 
+              href={`/${locale}/ariza-cozumleri/${fault.id}`}
+              className="group block p-6 bg-[#1a1a1a] rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-gold)] transition-all duration-300 relative overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-gold)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="relative z-10">
+                <span className="inline-block px-3 py-1 bg-white/5 text-xs font-semibold text-[var(--accent-gold)] rounded-full mb-4">
+                  {fault.brand}
+                </span>
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[var(--accent-gold)] transition-colors">
+                  {fault.title}
+                </h3>
+                <p className="text-sm text-gray-400 font-medium">
+                  Modeller: {fault.model}
+                </p>
+              </div>
+            </Link>
+          ))}
         </div>
-      </section>
-
-      <section className="container" style={{ paddingBottom: '5rem' }}>
-        <h2 style={{ fontSize: '2rem', marginBottom: '2rem', textAlign: 'center', color: 'var(--text-light)' }}>
-          Son Analiz Edilen Arızalar
-        </h2>
-        
-        {showcase.length > 0 ? (
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '1.5rem' }}>
-            {showcase.map((item, idx) => (
-              <Link href={`/${locale}/ariza-cozumleri/${item.code}`} key={idx}>
-                <div className="glass-panel hover-gold-border" style={{ 
-                  padding: '2rem', 
-                  border: '1px solid rgba(255,255,255,0.05)', 
-                  borderRadius: '16px',
-                  transition: 'all 0.3s ease',
-                  background: 'rgba(24, 24, 27, 0.5)'
-                }}>
-                  <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '1rem' }}>
-                    <div style={{ color: 'var(--accent-gold)', fontWeight: '800', fontSize: '1.8rem' }}>
-                      {item.code}
-                    </div>
-                    <div style={{ padding: '4px 8px', background: 'rgba(239, 68, 68, 0.1)', color: '#ef4444', borderRadius: '4px', fontSize: '0.8rem', fontWeight: 'bold' }}>
-                      OBD-II
-                    </div>
-                  </div>
-                  <div style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: '-webkit-box', WebkitLineClamp: 3, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
-                    {item.description || 'Detaylı yapay zeka analizi ve çözüm adımları için tıklayın.'}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        ) : (
-          <p style={{ color: 'var(--text-muted)', textAlign: 'center' }}>Sistem şu an veritabanını oluşturuyor...</p>
-        )}
-      </section>
+      </div>
     </main>
   );
 }

@@ -492,3 +492,91 @@ p {
     animation: none !important;
   }
 }
+
+/* ==========================================
+   FAZ 8: SECURITY SHIELD STYLES
+   ========================================== */
+
+/* Engelleme kalkanı - Print Screen basıldığında body'ye eklenir */
+body.hide-screen-for-print {
+  filter: blur(50px) grayscale(100%);
+  opacity: 0 !important;
+  transition: all 0.1s ease !important;
+}
+
+/* Sitedeki tüm yazıları ve resimleri seçilemez/sürüklenemez yap (Sadece form alanları hariç) */
+body {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Girdi alanlarında seçime izin ver */
+input, textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+/* Resimleri sürüklemeyi yasakla */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+  pointer-events: none; /* Resme sağ tıklamayı/dokunmayı da zorlaştırır */
+}
+
+/* Yazıcıdan çıktı (Print) alınmasını engelle */
+@media print {
+  html, body {
+    display: none !important;
+  }
+  body::before {
+    content: "Güvenlik politikamız gereği bu sayfanın yazdırılmasına izin verilmemektedir. - Bursalı Oto Servis";
+    display: block !important;
+    text-align: center;
+    padding: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+  }
+}
+/* ==========================================
+   BLOG & MDX CONTENT STYLES
+   ========================================== */
+.blog-content h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.blog-content h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.blog-content p {
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+.blog-content ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+}
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+.blog-content strong {
+  color: var(--text-light);
+  font-weight: 600;
+}
