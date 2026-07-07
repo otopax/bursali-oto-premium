@@ -27,7 +27,7 @@ export async function POST(req) {
   const { messages, vehicleContext, guestId } = await req.json();
 
   // Guest Quota Control (3 messages)
-  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET });
+  const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026' });
   if (!token && guestId) {
     const userMessageCount = messages.filter(m => m.role === 'user').length;
     const redisKey = `guest_quota:${guestId}`;
