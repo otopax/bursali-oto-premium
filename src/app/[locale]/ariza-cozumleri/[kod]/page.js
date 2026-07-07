@@ -58,7 +58,12 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   const paths = getAllPostIds('faults');
-  return paths;
+  const params = [];
+  // Harcoded 'tr' for now assuming single locale or modify if multiple locales are supported
+  for (const p of paths) {
+    params.push({ locale: 'tr', kod: p.params.slug });
+  }
+  return params;
 }
 
 export default async function ArizaCozumDetailPage({ params }) {
