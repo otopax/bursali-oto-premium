@@ -285,7 +285,7 @@ export default async function ArizaCozumDetailPage({ params }) {
         {/* Review Request */}
         <div className="mt-8 p-6 bg-gray-900 rounded-xl border border-gray-700 text-center flex flex-col items-center justify-center">
           <p className="text-gray-300 mb-3">⭐ Bu çözümü beğendiniz mi? Hizmetlerimizden faydalandıysanız bizi değerlendirin.</p>
-          <a href={process.env.NEXT_PUBLIC_REVIEW_LINK || "https://g.page/r/YOUR_GBP_ID/review"} target="_blank" rel="noopener noreferrer" className="text-[var(--accent-gold)] hover:underline font-bold">
+          <a href={process.env.NEXT_PUBLIC_REVIEW_LINK || "https://www.google.com/search?q=BURSALI+OTO+SERV%C4%B0S+Yorumlar&rldimm=1836972871363186886#lkt=LocalPoiReviews"} target="_blank" rel="noopener noreferrer" className="text-[var(--accent-gold)] hover:underline font-bold">
             Google’da Yorum Bırakın ({gbpData.reviewCount || 124} Yorum)
           </a>
         </div>

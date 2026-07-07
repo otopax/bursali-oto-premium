@@ -3,8 +3,8 @@ import React from 'react';
 import { FaWhatsapp, FaWrench, FaCheckCircle, FaMapMarkerAlt } from 'react-icons/fa';
 
 export default function ExpertCTA({ brand, reviewCount }) {
-  const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "905304445566";
-  const MAPS_LINK = process.env.NEXT_PUBLIC_MAPS_LINK || "https://maps.google.com/?q=Bursalı+Oto+Servis+Fethiye";
+  const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "905548812021";
+  const MAPS_LINK = process.env.NEXT_PUBLIC_MAPS_LINK || "https://maps.google.com/?cid=1836972871363186886";
   const WHATSAPP_TEXT = `Merhaba, ${brand ? brand + ' ' : ''}aracımın arızası için sitenizdeki makaleyi okudum, bilgi almak istiyorum.`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
 
