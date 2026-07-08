@@ -1,7 +1,6 @@
 import { getPostData, getAllPostIds, getSortedPostsData } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import ExpertCTA from '@/components/ExpertCTA';
-import { getGBPData } from '@/lib/gbp';
 
 function extractFirstSentence(text) {
   if (!text) return '';
@@ -156,7 +155,6 @@ export default async function ArizaCozumDetailPage({ params }) {
   };
 
   // 4. Local Business & Auto Repair Schema
-  const gbpData = await getGBPData();
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'AutoRepair',
@@ -167,18 +165,17 @@ export default async function ArizaCozumDetailPage({ params }) {
     telephone: '+905548812021',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Taşyaka, Sanayi Sitesi, 264. Sk. No 1/2',
+      streetAddress: 'Taşyaka Mahallesi, Yeni Sanayi Sitesi, 264. Sokak, No: 1',
       addressLocality: 'Fethiye',
       addressRegion: 'Muğla',
       postalCode: '48300',
       addressCountry: 'TR'
     },
-    priceRange: '$$',
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: gbpData.averageRating?.toString() || '4.5',
-      reviewCount: gbpData.reviewCount || 155
-    }
+    priceRange: '$$'
+    // NOT: aggregateRating kaldırıldı (08.07.2026). Google yönergesi: LocalBusiness
+    // şemasındaki puan yalnızca SİTENİN KENDİ topladığı yorumlardan gelebilir;
+    // Google yorumlarından alınan puanı burada göstermek "self-serving review"
+    // ihlalidir ve manuel ceza riski taşır. Gerçek puan zaten GBP'de görünüyor.
   };
 
   // 6. HowTo Schema

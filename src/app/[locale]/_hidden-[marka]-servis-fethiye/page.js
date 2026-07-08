@@ -53,12 +53,9 @@ export default async function BrandServicePage({ params }) {
     "areaServed": {
       "@type": "City",
       "name": "Fethiye"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "87"
     }
+    // NOT: AggregateRating kaldırıldı (08.07.2026) — sayfada görünür gerçek yorum
+    // olmadan yıldız şeması Google yapılandırılmış veri cezası riski taşır.
   };
 
   return (

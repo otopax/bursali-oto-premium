@@ -19,8 +19,8 @@ export const businessData = {
     addressCountry: "TR"
   },
   geo: {
-    latitude: 36.6212, // Fethiye Sanayi Sitesi tahmini koordinatı
-    longitude: 29.1303
+    latitude: 36.6260547, // GBP pin koordinatı (birebir — 08.07.2026)
+    longitude: 29.1369750
   },
   openingHoursSpecification: [
     {
@@ -40,8 +40,12 @@ export const businessData = {
   ],
   knowsLanguage: ["tr", "en", "ru", "uk", "ar"],
   sameAs: [
-    // Gelecekte açılacak sosyal medya ve Google Maps hesapları buraya eklenecek
+    "https://share.google/mmxy3aJXSwucLeiOb", // Google Maps işletme profili (GBP)
+    "https://g.page/r/CcbQoQMYPX4ZEBM" // Google İşletme Profili kısa linki
+    // Instagram/Facebook açılınca buraya eklenecek
   ],
+  // GBP "yorum iste" linki (WhatsApp yorum akışında kullanılır)
+  reviewUrl: "https://g.page/r/CcbQoQMYPX4ZEBM/review",
   makesOffer: [
     {
       name: "7/24 Oto Çekici ve Yol Yardım",
@@ -75,5 +79,32 @@ export const businessData = {
   experience: {
     years: 50,
     details: "Kurucumuzun 50 yıllık, 2. kuşak ustalarımızın 20 yıllık uzmanlığıyla Fethiye'de hizmet vermekteyiz."
-  }
+  },
+  // GBP Q&A ile birebir aynı tutulmalı (NAP/içerik tutarlılığı — AI bulunurluk sinyali)
+  faq: [
+    {
+      question: "Hangi araç markalarına bakıyorsunuz?",
+      answer: "Fethiye Yeni Sanayi'de özellikle Porsche, Mercedes-Benz, BMW, Audi, Volkswagen, Volvo ve Land Rover gibi premium Alman ve Avrupa araç markalarının özel servisiyiz."
+    },
+    {
+      question: "Arıza tespitini nasıl yapıyorsunuz? Orijinal cihazınız var mı?",
+      answer: "Evet. Markaya özel lisanslı orijinal arıza tespit cihazları (Porsche PIWIS, Audi/VW ODIS, Mercedes Xentry, BMW ISTA) kullanarak noktasal hata tespiti yapıyoruz."
+    },
+    {
+      question: "Otomatik şanzıman tamiri yapıyor musunuz?",
+      answer: "Kesinlikle. DSG, S-Tronic, PDK ve ZF şanzımanların mekatronik kart tamiri, kavrama (debriyaj) değişimi ve tam revizyon işlemlerini servisimizde garantili olarak gerçekleştiriyoruz."
+    },
+    {
+      question: "Do you have English speaking staff? Do you help tourists?",
+      answer: "Yes, we have fluent English and Russian speaking staff. We assist expats and tourists with transparent pricing and professional car repair in Fethiye."
+    },
+    {
+      question: "Yolda kaldım, oto çekici hizmetiniz var mı?",
+      answer: "Fethiye, Göcek, Ölüdeniz ve çevre bölgelerde 7/24 oto kurtarma ve çekici hizmetimiz mevcuttur. Bizi günün her saati arayabilirsiniz."
+    },
+    {
+      question: "Sadece periyodik bakım mı yapıyorsunuz yoksa motor rektifiye işlemi de yapıyor musunuz?",
+      answer: "Periyodik yağ ve filtre bakımından, en ağır motor revizyonlarına (rektifiye, silindir kapak değişimi, triger zincir seti değişimi) kadar A'dan Z'ye tüm mekanik işlemleri uzman kadromuzla kendi garajımızda yapıyoruz."
+    }
+  ]
 };

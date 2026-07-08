@@ -61,6 +61,17 @@ export default function AboutPage() {
             <a href="/tr/seffaf-fiyatlandirma" className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--glass-border)' }}>Fiyat Politikamız</a>
           </div>
         </div>
+
+        {/* SSS — GBP Q&A ile birebir aynı (FAQPage şeması aşağıdaki JSON-LD'de) */}
+        <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
+          <h2 style={{ color: 'var(--gold)', marginBottom: '2rem', fontSize: '2rem' }}>Sık Sorulan Sorular</h2>
+          {businessData.faq.map((item, i) => (
+            <div key={i} style={{ marginBottom: '1.5rem', paddingBottom: '1.5rem', borderBottom: i < businessData.faq.length - 1 ? '1px solid var(--glass-border)' : 'none' }}>
+              <h3 style={{ color: 'var(--text-light)', fontSize: '1.15rem', marginBottom: '0.75rem' }}>{item.question}</h3>
+              <p style={{ fontSize: '1.05rem', lineHeight: '1.7', margin: 0, color: 'var(--text-muted)' }}>{item.answer}</p>
+            </div>
+          ))}
+        </div>
       </div>
       
       <script
@@ -83,6 +94,18 @@ export default function AboutPage() {
                   ...businessData.address
                 }
               }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": businessData.faq.map((item) => ({
+                "@type": "Question",
+                "name": item.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": item.answer
+                }
+              }))
             },
             {
               "@context": "https://schema.org",
