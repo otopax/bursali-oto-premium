@@ -40,6 +40,37 @@ const nextConfig = {
         destination: 'https://www.bursaliotoservis.com/:path*',
         permanent: true,
       },
+      // 404 & Login Regressions 301 Redirects
+      {
+        source: '/:locale(tr|en|ru|uk)/hizmetler',
+        destination: '/:locale/ariza-cozumleri',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk)/markalar',
+        destination: '/:locale',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk)/katalog',
+        destination: '/:locale',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk)/ariza-kodlari',
+        destination: '/:locale/ariza-cozumleri',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk)/bilgi-bankasi',
+        destination: '/:locale/ariza-cozumleri',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk)/blog',
+        destination: '/:locale/ariza-cozumleri',
+        permanent: true,
+      }
     ];
   },
   async headers() {
