@@ -14,17 +14,10 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoserv
 const LOCALES = ['tr', 'en', 'ru', 'uk'];
 const DEFAULT_LOCALE = 'tr';
 
-// Public sayfa path'leri (locale prefix'siz)
 const STATIC_PATHS = [
   '', // ana sayfa
   '/sanal-usta',
   '/ariza-cozumleri',
-  '/ariza-kodlari',
-  '/bilgi-bankasi',
-  '/blog',
-  '/hizmetler',
-  '/katalog',
-  '/markalar',
   '/sigorta-kutuphanesi',
   '/teknik-kutuphane',
   // SEO landing pages
