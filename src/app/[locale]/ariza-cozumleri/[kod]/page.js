@@ -102,8 +102,10 @@ export default async function ArizaCozumDetailPage({ params }) {
       }
     },
     datePublished: postData.date || new Date().toISOString(),
-    dateModified: postData.date || new Date().toISOString(),
+    dateModified: postData.updated || postData.date || new Date().toISOString(),
   };
+
+  const brandSlug = (postData.brand || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') || 'marka';
 
   // 2. Breadcrumb Schema
   const breadcrumbSchema = {
@@ -112,7 +114,7 @@ export default async function ArizaCozumDetailPage({ params }) {
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://www.bursaliotoservis.com' },
       { '@type': 'ListItem', position: 2, name: 'Arıza Çözümleri', item: 'https://www.bursaliotoservis.com/ariza-cozumleri' },
-      { '@type': 'ListItem', position: 3, name: postData.brand || 'Marka', item: 'https://www.bursaliotoservis.com/ariza-cozumleri' },
+      { '@type': 'ListItem', position: 3, name: postData.brand || 'Marka', item: `https://www.bursaliotoservis.com/marka/${brandSlug}` },
       { '@type': 'ListItem', position: 4, name: postData.title, item: `https://www.bursaliotoservis.com/ariza-cozumleri/${kod}` }
     ]
   };
@@ -161,7 +163,7 @@ export default async function ArizaCozumDetailPage({ params }) {
     image: 'https://www.bursaliotoservis.com/logo.png',
     '@id': 'https://www.bursaliotoservis.com',
     url: 'https://www.bursaliotoservis.com',
-    telephone: '+905304445566',
+    telephone: '+905548812021',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Taşyaka, Sanayi Sitesi, 264. Sk. No 1/2',

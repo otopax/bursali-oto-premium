@@ -134,6 +134,20 @@ export default async function sitemap() {
     console.warn('[Sitemap] Blog yüklenemedi:', e.message);
   }
 
+  // 6) Fault Codes (MDX) → /ariza-cozumleri/[kod]
+  try {
+    const faultCodes = getAllPostIds('faults');
+    faultCodes.forEach((f) => {
+      entries.push(...expandLocales(`/ariza-cozumleri/${f.params.slug}`, {
+        changeFrequency: 'monthly',
+        priority: 0.8,
+        lastModified: now,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] Fault codes yüklenemedi:', e.message);
+  }
+
   return entries; // DB QUERIES DISABLED FOR VERCEL DEPLOYMENT
 
   // 4) Manufacturers (DB) → /katalog/[marka]
@@ -169,19 +183,6 @@ export default async function sitemap() {
     console.warn('[Sitemap] Vehicles yüklenemedi:', e.message);
   }
 
-  // 6) Fault Codes (MDX) → /ariza-cozumleri/[kod]
-  try {
-    const faultCodes = getAllPostIds('faults');
-    faultCodes.forEach((f) => {
-      entries.push(...expandLocales(`/ariza-cozumleri/${f.params.slug}`, {
-        changeFrequency: 'monthly',
-        priority: 0.8,
-        lastModified: now,
-      }));
-    });
-  } catch (e) {
-    console.warn('[Sitemap] Fault codes yüklenemedi:', e.message);
-  }
 
   // 7) Sigorta kütüphanesi (fusebox) — public'lerden liste (path locale'siz)
   try {
