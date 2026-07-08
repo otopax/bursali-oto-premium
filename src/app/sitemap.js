@@ -42,6 +42,11 @@ const SEO_DISTRICTS = [
   'fethiye', 'gocek', 'oludeniz', 'dalaman', 'kas', 'kalkan', 'seydikemer', 'ortaca', 'koycegiz'
 ];
 
+// YENİ: Popüler Motor Kodları
+const SEO_ENGINE_CODES = [
+  'ea888', 'ea211', 'b48', 'b58', 'n20', 'om651', 'om654', 'm271', 'm274'
+];
+
 /**
  * Verilen path için tüm dillerde alternates map'i döndürür.
  * Google hreflang için sitemap standard formatı.
@@ -98,6 +103,13 @@ export default async function sitemap() {
       lastModified: now,
     }));
 
+    // YENİ: Dinamik Marka Hub Sayfaları
+    entries.push(...expandLocales(`/marka/${brand}`, {
+      changeFrequency: 'weekly',
+      priority: 0.95,
+      lastModified: now,
+    }));
+
     // YENİ: Tam Programatik Local SEO (Her Marka x Her Bölge) -> /bolge/bmw-servisi-gocek
     // GÖREV A3: Kademeli İndeksleme (Sadece TIER1 kombinasyonları haritaya eklenir)
     SEO_DISTRICTS.forEach((district) => {
@@ -147,6 +159,15 @@ export default async function sitemap() {
   } catch (e) {
     console.warn('[Sitemap] Fault codes yüklenemedi:', e.message);
   }
+
+  // 6.5) Motor Kodları Hub Sayfaları
+  SEO_ENGINE_CODES.forEach((engine) => {
+    entries.push(...expandLocales(`/motor/${engine}`, {
+      changeFrequency: 'monthly',
+      priority: 0.85,
+      lastModified: now,
+    }));
+  });
 
   return entries; // DB QUERIES DISABLED FOR VERCEL DEPLOYMENT
 
