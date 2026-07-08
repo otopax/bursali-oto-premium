@@ -144,9 +144,10 @@ export default async function RootLayout({ children, params }) {
           </NextIntlClientProvider>
         </Providers>
         
-        {/* Yolda Kalanlar - Floating SOS Button */}
+        {/* Yolda Kalanlar - Floating SOS Button (Desktop only) */}
         <a 
           href={`/${locale}/fethiye-7-24-oto-cekici`}
+          className="hidden md:flex items-center gap-2"
           style={{
             position: 'fixed',
             bottom: '20px',
@@ -156,9 +157,6 @@ export default async function RootLayout({ children, params }) {
             padding: '12px 20px',
             borderRadius: '50px',
             fontWeight: 'bold',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px',
             boxShadow: '0 4px 15px rgba(225, 29, 72, 0.4)',
             textDecoration: 'none',
             zIndex: 9999,

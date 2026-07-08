@@ -5,7 +5,8 @@ import { getGBPData } from '@/lib/gbp';
 
 function extractFirstSentence(text) {
   if (!text) return '';
-  let cleanText = text.replace(/#+\s+.*/g, '').trim();
+  // Remove headings and markdown syntax (>, **, *)
+  let cleanText = text.replace(/#+\s+.*/g, '').replace(/>/g, '').replace(/\*\*/g, '').replace(/\*/g, '').trim();
   // Don't split if the dot is preceded by a digit (like 2. vites)
   const match = cleanText.match(/(?<!\d)\.\s/);
   const firstDot = match ? match.index + 1 : -1;
