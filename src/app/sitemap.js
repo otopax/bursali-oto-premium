@@ -1,4 +1,5 @@
 import { prisma } from '@/lib/prisma';
+import { getAllPostIds } from '@/lib/blog';
 import { articles } from '@/lib/articles';
 import { SEO_PRIORITY } from '@/data/seo-oncelik';
 
@@ -168,17 +169,14 @@ export default async function sitemap() {
     console.warn('[Sitemap] Vehicles yüklenemedi:', e.message);
   }
 
-  // 6) Fault Codes (DB) → /ariza-cozumleri/[kod]
+  // 6) Fault Codes (MDX) → /ariza-cozumleri/[kod]
   try {
-    const faultCodes = await prisma.faultCode.findMany({
-      select: { code: true, createdAt: true },
-      take: 10000,
-    });
+    const faultCodes = getAllPostIds('faults');
     faultCodes.forEach((f) => {
-      entries.push(...expandLocales(`/ariza-cozumleri/${f.code.toLowerCase()}`, {
+      entries.push(...expandLocales(`/ariza-cozumleri/${f.params.slug}`, {
         changeFrequency: 'monthly',
-        priority: 0.6,
-        lastModified: f.createdAt,
+        priority: 0.8,
+        lastModified: now,
       }));
     });
   } catch (e) {

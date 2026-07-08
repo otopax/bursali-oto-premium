@@ -25,12 +25,7 @@ export default function robots() {
           '/sentry-example-api',
         ],
       },
-      // AI crawler'lar için özel rules (opsiyonel — indekslerlerse fena olmaz)
-      {
-        userAgent: ['GPTBot', 'ChatGPT-User', 'ClaudeBot', 'anthropic-ai', 'PerplexityBot'],
-        allow: '/',
-        disallow: ['/api/', '/admin/', '/*/admin/', '/vip-garaj/', '/*/vip-garaj/'],
-      },
+
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,

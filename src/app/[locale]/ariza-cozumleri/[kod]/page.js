@@ -164,7 +164,7 @@ export default async function ArizaCozumDetailPage({ params }) {
     telephone: '+905304445566',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Sanayi Sitesi',
+      streetAddress: 'Taşyaka, Sanayi Sitesi, 264. Sk. No 1/2',
       addressLocality: 'Fethiye',
       addressRegion: 'Muğla',
       postalCode: '48300',
@@ -173,8 +173,8 @@ export default async function ArizaCozumDetailPage({ params }) {
     priceRange: '$$',
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: gbpData.averageRating?.toString() || '4.9',
-      reviewCount: gbpData.reviewCount || 124
+      ratingValue: gbpData.averageRating?.toString() || '4.5',
+      reviewCount: gbpData.reviewCount || 155
     }
   };
 
