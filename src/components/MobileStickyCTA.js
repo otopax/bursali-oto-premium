@@ -23,7 +23,7 @@ export default function MobileStickyCTA() {
   if (!isVisible) return null;
 
   return (
-    <div className="md:hidden" style={{
+    <div className="mobile-only" style={{
       position: 'fixed',
       bottom: '20px',
       left: '50%',

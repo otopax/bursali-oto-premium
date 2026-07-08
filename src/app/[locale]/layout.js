@@ -147,7 +147,7 @@ export default async function RootLayout({ children, params }) {
         {/* Yolda Kalanlar - Floating SOS Button (Desktop only) */}
         <a 
           href={`/${locale}/fethiye-7-24-oto-cekici`}
-          className="hidden md:flex items-center gap-2"
+          className="desktop-only items-center gap-2"
           style={{
             position: 'fixed',
             bottom: '20px',
