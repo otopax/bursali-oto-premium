@@ -1,6 +1,7 @@
 import { getPostData, getAllPostIds, getSortedPostsData } from '@/lib/blog';
 import { notFound } from 'next/navigation';
 import ExpertCTA from '@/components/ExpertCTA';
+import { getGBPData } from '@/lib/gbp';
 
 function extractFirstSentence(text) {
   if (!text) return '';
@@ -155,6 +156,8 @@ export default async function ArizaCozumDetailPage({ params }) {
   };
 
   // 4. Local Business & Auto Repair Schema
+  // NOT: aggregateRating kaldırıldı (08.07.2026). Google yönergesi gereği.
+  const gbpData = await getGBPData();
   const localBusinessSchema = {
     '@context': 'https://schema.org',
     '@type': 'AutoRepair',
