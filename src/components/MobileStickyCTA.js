@@ -26,10 +26,8 @@ export default function MobileStickyCTA() {
     <div className="mobile-only" style={{
       position: 'fixed',
       bottom: '20px',
-      left: '50%',
-      transform: 'translateX(-50%)',
-      width: 'max-content',
-      maxWidth: 'calc(100% - 100px)', // Leave space for chat widget on the right
+      left: '10px',
+      width: 'calc(100% - 100px)', // Leave space for chat widget on the right (right: 20px)
       backgroundColor: 'rgba(20, 20, 20, 0.85)',
       backdropFilter: 'blur(12px)',
       border: '1px solid rgba(212, 175, 55, 0.3)',
@@ -43,8 +41,8 @@ export default function MobileStickyCTA() {
     }}>
       <style dangerouslySetInnerHTML={{__html: `
         @keyframes slideUp {
-          from { transform: translate(-50%, 150%); }
-          to { transform: translate(-50%, 0); }
+          from { transform: translateY(150%); }
+          to { transform: translateY(0); }
         }
       `}} />
       <a 
@@ -59,6 +57,8 @@ export default function MobileStickyCTA() {
           fontSize: '0.95rem',
           textDecoration: 'none',
           display: 'flex',
+          flex: 1,
+          justifyContent: 'center',
           alignItems: 'center',
           gap: '6px',
           border: '1px solid rgba(255,255,255,0.1)',
@@ -82,6 +82,8 @@ export default function MobileStickyCTA() {
           fontSize: '0.95rem',
           textDecoration: 'none',
           display: 'flex',
+          flex: 1,
+          justifyContent: 'center',
           alignItems: 'center',
           gap: '6px',
           border: '1px solid rgba(255,255,255,0.1)',

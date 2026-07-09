@@ -584,8 +584,22 @@ img {
 /* Responsive Helpers */
 .desktop-only { display: flex !important; }
 .mobile-only { display: none !important; }
+
+/* Floating Buttons Positioning */
+.chatbot-widget {
+  right: 110px !important;
+}
+.chatbot-widget.hovered {
+  transform: scale(1.1);
+}
+
 @media (max-width: 768px) {
   .desktop-only { display: none !important; }
   .mobile-only { display: flex !important; }
+  
+  .chatbot-widget {
+    right: 20px !important;
+    transform: scale(0.9) !important;
+  }
 }
 

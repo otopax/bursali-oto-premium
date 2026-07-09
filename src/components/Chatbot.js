@@ -17,11 +17,11 @@ export default function Chatbot() {
   return (
     <>
       <button 
+        className={`chatbot-widget ${isHovered ? 'hovered' : ''}`}
         onClick={handleClick}
         style={{ 
           position: 'fixed', 
           bottom: '20px', 
-          right: '80px', 
           backgroundColor: 'var(--accent-gold)', 
           color: 'black', 
           width: '70px',
@@ -35,8 +35,7 @@ export default function Chatbot() {
           alignItems: 'center', 
           justifyContent: 'center',
           animation: 'bounce 2s infinite, pulseGold 3s infinite',
-          transition: 'transform 0.3s',
-          transform: isHovered ? 'scale(1.1)' : 'scale(1)'
+          transition: 'transform 0.3s'
         }}
         onMouseOver={() => setIsHovered(true)}
         onMouseOut={() => setIsHovered(false)}
