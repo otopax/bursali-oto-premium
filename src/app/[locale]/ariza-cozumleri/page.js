@@ -2,8 +2,11 @@ import { getSortedPostsData } from '@/lib/blog';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Arıza Çözümleri | Bursalı Oto',
-  description: 'Arıza çözümleri veritabanımız.',
+  title: 'Arıza Çözümleri | Bursalı Oto Servis Fethiye',
+  description: 'Fethiye premium oto servis olarak karşılaştığımız kronik arızalar ve çözümleri.',
+  alternates: {
+    canonical: 'https://www.bursaliotoservis.com/ariza-cozumleri'
+  }
 };
 
 export default async function ArizaCozumleriHub({ params }) {
@@ -12,28 +15,39 @@ export default async function ArizaCozumleriHub({ params }) {
 
   return (
     <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
-      <div className="container mx-auto px-4 max-w-6xl">
-        <h1 className="text-4xl font-bold mb-4 text-center text-white">Kronik Arıza Çözümleri Merkezi</h1>
-        <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
+      <div className="container" style={{ margin: '0 auto', padding: '0 2rem', maxWidth: '1200px' }}>
+        <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center', color: 'var(--text-light)' }}>
+          Kronik Arıza Çözümleri Merkezi
+        </h1>
+        <p style={{ color: 'var(--text-muted)', textAlign: 'center', marginBottom: '3rem', maxWidth: '800px', margin: '0 auto 3rem auto', fontSize: '1.1rem' }}>
           Avrupa premium araç markalarının en sık karşılaşılan kronik arızalarını, kök nedenlerini ve servisimizde uyguladığımız kalıcı çözümleri inceleyin.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid">
           {faults.map((fault) => (
             <Link 
               key={fault.id} 
               href={`/${locale}/ariza-cozumleri/${fault.id}`}
-              className="group block p-6 bg-[#1a1a1a] rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-gold)] transition-all duration-300 relative overflow-hidden"
+              className="glass-panel hover-gold-border"
+              style={{ display: 'block', padding: '2rem', textDecoration: 'none' }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-gold)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative z-10">
-                <span className="inline-block px-3 py-1 bg-white/5 text-xs font-semibold text-[var(--accent-gold)] rounded-full mb-4">
+              <div>
+                <span style={{ 
+                  display: 'inline-block', 
+                  padding: '4px 12px', 
+                  background: 'rgba(212, 175, 55, 0.1)', 
+                  fontSize: '0.8rem', 
+                  fontWeight: '600', 
+                  color: 'var(--accent-gold)', 
+                  borderRadius: '20px', 
+                  marginBottom: '1rem' 
+                }}>
                   {fault.brand}
                 </span>
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[var(--accent-gold)] transition-colors">
+                <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-light)', marginBottom: '0.5rem' }}>
                   {fault.title}
                 </h3>
-                <p className="text-sm text-gray-400 font-medium">
+                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '500' }}>
                   Modeller: {fault.model}
                 </p>
               </div>

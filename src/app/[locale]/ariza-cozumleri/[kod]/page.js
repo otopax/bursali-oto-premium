@@ -232,34 +232,34 @@ export default async function ArizaCozumDetailPage({ params }) {
       <article className="container" style={{ maxWidth: '800px', margin: '0 auto' }}>
         
         {/* UI Breadcrumb */}
-        <nav className="text-sm text-gray-400 mb-8 flex gap-2 items-center flex-wrap">
-          <a href="/" className="hover:text-[var(--accent-gold)] transition-colors">Ana Sayfa</a> 
+        <nav style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '2rem', display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
+          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>Ana Sayfa</a> 
           <span>/</span>
-          <a href="/ariza-cozumleri" className="hover:text-[var(--accent-gold)] transition-colors">Arıza Çözümleri</a> 
+          <a href="/ariza-cozumleri" style={{ textDecoration: 'none', color: 'inherit' }}>Arıza Çözümleri</a> 
           <span>/</span>
-          <a href={`/ariza-cozumleri?brand=${postData.brand}`} className="hover:text-[var(--accent-gold)] transition-colors">{postData.brand}</a> 
+          <a href={`/ariza-cozumleri?brand=${postData.brand}`} style={{ textDecoration: 'none', color: 'inherit' }}>{postData.brand}</a> 
           <span>/</span>
-          <span className="text-[var(--accent-gold)]">{postData.title}</span>
+          <span style={{ color: 'var(--accent-gold)' }}>{postData.title}</span>
         </nav>
 
         <header style={{ marginBottom: '3rem', textAlign: 'center' }}>
-          <div className="flex justify-center gap-3 mb-4">
-            <span className="px-4 py-1.5 bg-[var(--accent-gold)]/20 text-[var(--accent-gold)] rounded-full text-sm font-bold border border-[var(--accent-gold)]/30">
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '12px', marginBottom: '1rem' }}>
+            <span style={{ padding: '6px 16px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', borderRadius: '20px', fontSize: '0.85rem', fontWeight: 'bold', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
               {postData.brand}
             </span>
           </div>
           <h1 style={{ fontSize: '2.5rem', color: 'var(--text-light)', marginBottom: '1rem', fontWeight: '800', lineHeight: '1.2' }}>
             {postData.title}
           </h1>
-          <div className="text-gray-400 text-lg mb-6">
+          <div style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
             <strong>Etkilenen Modeller:</strong> {postData.model}
           </div>
           
           {/* Post Meta Data */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-400 mt-4 bg-[#1a1a1a] p-3 rounded-xl border border-gray-800">
-            <span className="flex items-center gap-2">📅 {postData.date && !isNaN(new Date(postData.date).getTime()) ? new Date(postData.date).toLocaleDateString('tr-TR') : new Date().toLocaleDateString('tr-TR')}</span>
-            <span className="flex items-center gap-2">✍️ Bursalı Oto Uzman Ekibi</span>
-            <span className="flex items-center gap-2">🕒 Okuma süresi: ~{readingTime} dk</span>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '1rem', background: '#1a1a1a', padding: '12px', borderRadius: '12px', border: '1px solid #333' }}>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>📅 {postData.date && !isNaN(new Date(postData.date).getTime()) ? new Date(postData.date).toLocaleDateString('tr-TR') : new Date().toLocaleDateString('tr-TR')}</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>✍️ Bursalı Oto Uzman Ekibi</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>🕒 Okuma süresi: ~{readingTime} dk</span>
           </div>
         </header>
 
@@ -278,22 +278,22 @@ export default async function ArizaCozumDetailPage({ params }) {
         />
         
         {/* FAQ Section UI */}
-        <section className="mt-12 p-8 bg-[#121212] rounded-2xl border border-gray-800">
-          <h2 className="text-2xl font-bold text-white mb-6">Sıkça Sorulan Sorular</h2>
-          <div className="mb-6">
-            <h3 className="text-lg font-bold text-[var(--accent-gold)] mb-2">{postData.title} belirtileri nelerdir?</h3>
-            <p className="text-gray-300">{description}</p>
+        <section style={{ marginTop: '3rem', padding: '2rem', background: '#121212', borderRadius: '16px', border: '1px solid #333' }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#fff', marginBottom: '1.5rem' }}>Sıkça Sorulan Sorular</h2>
+          <div style={{ marginBottom: '1.5rem' }}>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>{postData.title} belirtileri nelerdir?</h3>
+            <p style={{ color: '#ccc', lineHeight: '1.6' }}>{description}</p>
           </div>
           <div>
-            <h3 className="text-lg font-bold text-[var(--accent-gold)] mb-2">{postData.title} kalıcı çözümü nedir?</h3>
-            <p className="text-gray-300">{faqAnswer}</p>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>{postData.title} kalıcı çözümü nedir?</h3>
+            <p style={{ color: '#ccc', lineHeight: '1.6' }}>{faqAnswer}</p>
           </div>
         </section>
 
         {/* Review Request */}
-        <div className="mt-8 p-6 bg-gray-900 rounded-xl border border-gray-700 text-center flex flex-col items-center justify-center">
-          <p className="text-gray-300 mb-3">⭐ Bu çözümü beğendiniz mi? Hizmetlerimizden faydalandıysanız bizi değerlendirin.</p>
-          <a href={process.env.NEXT_PUBLIC_REVIEW_LINK || "https://www.google.com/search?q=BURSALI+OTO+SERV%C4%B0S+Yorumlar&rldimm=1836972871363186886#lkt=LocalPoiReviews"} target="_blank" rel="noopener noreferrer" className="text-[var(--accent-gold)] hover:underline font-bold">
+        <div style={{ marginTop: '2rem', padding: '1.5rem', background: '#111827', borderRadius: '12px', border: '1px solid #374151', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+          <p style={{ color: '#ccc', marginBottom: '0.75rem' }}>⭐ Bu çözümü beğendiniz mi? Hizmetlerimizden faydalandıysanız bizi değerlendirin.</p>
+          <a href={process.env.NEXT_PUBLIC_GBP_REVIEW_URL || "https://www.google.com/search?q=BURSALI+OTO+SERV%C4%B0S+Yorumlar&rldimm=1836972871363186886#lkt=LocalPoiReviews"} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', fontWeight: 'bold', textDecoration: 'none' }}>
             Google’da Yorum Bırakın ({gbpData.reviewCount || 124} Yorum)
           </a>
         </div>
@@ -305,11 +305,11 @@ export default async function ArizaCozumDetailPage({ params }) {
             <h3 style={{ fontSize: '1.8rem', color: 'var(--text-light)', marginBottom: '1.5rem', fontWeight: 'bold' }}>
               Diğer {postData.brand} Arıza Çözümleri
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid">
               {relatedFaults.map(fault => (
-                <a key={fault.id} href={`/ariza-cozumleri/${fault.id}`} className="block p-5 bg-[#1a1a1a] rounded-xl border border-gray-800 hover:border-[var(--accent-gold)] transition-all hover:-translate-y-1">
+                <a key={fault.id} href={`/ariza-cozumleri/${fault.id}`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.25rem', textDecoration: 'none' }}>
                   <h4 style={{ color: 'var(--accent-gold)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '1.1rem' }}>{fault.title}</h4>
-                  <p className="text-sm text-gray-400 line-clamp-3">{fault.description || extractFirstSentence(fault.rawContent)}</p>
+                  <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{fault.description || extractFirstSentence(fault.rawContent)}</p>
                 </a>
               ))}
             </div>
