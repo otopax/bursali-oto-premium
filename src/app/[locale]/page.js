@@ -53,13 +53,13 @@ export default async function Home({ params }) {
               <span style={{ background: 'linear-gradient(to right, #d4af37, #f3e5ab, #d4af37)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', display: 'inline-block', filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.3))', marginTop: '0.2rem' }}>{t('title')}</span>
             </h1>
             <p style={{ fontSize: '1.3rem', marginBottom: '3rem', color: '#e2e8f0', lineHeight: '1.7', maxWidth: '750px', fontWeight: '400', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
-              40 yıllık geleneksel Alman motor mekanik tecrübemizi, en son teknoloji Yapay Zeka arıza tespit cihazlarıyla birleştiriyoruz. {t('subtitle')}
+              {t('subtitle')}
             </p>
-            <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <a href="tel:+905548812021" className="btn" style={{ background: 'linear-gradient(135deg, #d4af37 0%, #aa8022 100%)', color: '#000', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', boxShadow: '0 10px 25px rgba(212,175,55,0.3), inset 0 2px 0 rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', border: 'none', transition: 'transform 0.2s' }} aria-label="Acil Yol Yardım Hattı" title="Acil Yol Yardım Hattı">
+            <div className="btn-group">
+              <a href="tel:+905548812021" className="btn btn-hero-gold" aria-label="Acil Yol Yardım Hattı" title="Acil Yol Yardım Hattı">
                 <span style={{ fontSize: '1.5rem' }} aria-hidden="true">📞</span> Acil Yol Yardım Hattı
               </a>
-              <a href="https://wa.me/905548812021" className="btn" style={{ background: 'rgba(212,175,55,0.1)', backdropFilter: 'blur(10px)', color: 'var(--accent-gold)', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', border: '1px solid rgba(212,175,55,0.5)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', transition: 'transform 0.2s' }} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile İletişime Geç" title="WhatsApp ile İletişime Geç">
+              <a href="https://wa.me/905548812021" className="btn btn-hero-glass" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile İletişime Geç" title="WhatsApp ile İletişime Geç">
                 <span style={{ fontSize: '1.5rem' }} aria-hidden="true">💬</span> WhatsApp ile İletişime Geç
               </a>
             </div>
@@ -69,9 +69,9 @@ export default async function Home({ params }) {
 
 
       {/* Tow Truck & Emergency Section */}
-      <section id="cekici" className="services-section" style={{ background: 'rgba(255,255,255,0.02)', padding: '5rem 0 4rem 0', borderBottom: '1px solid var(--glass-border)' }}>
+      <section id="cekici" className="services-section section-dark">
         <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          <div className="service-badge" style={{ color: '#d4af37', fontWeight: 'bold', marginBottom: '1rem', background: 'rgba(212, 175, 55, 0.1)', padding: '0.5rem 1rem', borderRadius: '100px', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
+          <div className="service-badge badge-gold">
             🛡️ 7/24 Kesintisiz Acil Hizmet
           </div>
           <h2 style={{ marginBottom: '1.5rem' }}>🛡️ 7/24 Premium Yol Yardım ve VIP Kurtarma Hizmeti</h2>
@@ -157,7 +157,7 @@ export default async function Home({ params }) {
       </section>
 
       {/* Expat / Tourist Section (4 Languages) */}
-      <section id="yabanci" className="services-section" style={{ background: 'rgba(255,255,255,0.02)' }}>
+      <section id="yabanci" className="services-section section-dark">
         <div className="container">
           <div className="glass-panel" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
             <span className="badge" style={{ background: 'rgba(59, 130, 246, 0.2)', color: 'var(--accent-blue)', borderColor: 'var(--accent-blue)' }}>
@@ -256,7 +256,7 @@ export default async function Home({ params }) {
       </Reveal>
 
       {/* Google Photos Gallery */}
-      <section className="services-section" style={{ background: 'rgba(255,255,255,0.02)' }}>
+      <section className="services-section section-dark">
         <Gallery />
       </section>
 

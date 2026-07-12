@@ -66,24 +66,45 @@ function main() {
 
   console.log(`🗄️  Yedekleme başlıyor → ${filePath}`);
 
-  // -Fc: sıkıştırılmış custom format (pg_restore ile seçici geri yükleme)
-  // --no-owner: farklı rol/kullanıcıda geri yüklemeyi kolaylaştırır
-  const dump = spawnSync(
-    'pg_dump',
-    ['-Fc', '--no-owner', '-f', filePath, pgConnString(rawUrl)],
-    { stdio: ['ignore', 'inherit', 'inherit'] }
-  );
+  let dump;
+  let useDocker = false;
 
-  if (dump.error) {
+  // Check if pg_dump exists locally
+  const pgCheck = spawnSync(process.platform === 'win32' ? 'where' : 'which', ['pg_dump']);
+  if (pgCheck.status !== 0) {
+    // Fallback to docker
+    console.log('ℹ️ Yerel pg_dump bulunamadı, Docker üzerinden deneniyor...');
+    useDocker = true;
+  }
+
+  let dockerUrl = rawUrl;
+  if (useDocker) {
+    // Replace port 5433 (host) with 5432 (container) for internal docker execution
+    dockerUrl = rawUrl.replace(':5433', ':5432');
+  }
+  const dumpArgs = ['-Fc', '--no-owner', '-f', filePath, pgConnString(rawUrl)];
+  
+  if (useDocker) {
+    // Remove the -f arg because in docker exec we can't easily write to the host path unless mapped
+    // Instead we redirect stdout to the filePath.
+    dump = spawnSync('docker', ['exec', 'bursali_postgres', 'pg_dump', '-Fc', '--no-owner', pgConnString(dockerUrl)], { stdio: ['ignore', 'pipe', 'inherit'] });
+    if (dump.status === 0) {
+      fs.writeFileSync(filePath, dump.stdout);
+    }
+  } else {
+    dump = spawnSync('pg_dump', dumpArgs, { stdio: ['ignore', 'inherit', 'inherit'] });
+  }
+
+  if (dump.error && !useDocker) {
     if (dump.error.code === 'ENOENT') {
-      console.error('❌ pg_dump bulunamadı. postgresql-client kurulu olmalı.');
+      console.error('❌ pg_dump bulunamadı. postgresql-client kurulu olmalı veya Docker açık olmalı.');
     } else {
       console.error('❌ pg_dump çalıştırılamadı:', dump.error.message);
     }
     process.exit(1);
   }
   if (dump.status !== 0) {
-    console.error(`❌ pg_dump hata koduyla çıktı: ${dump.status}`);
+    console.error(`❌ Yedekleme hata koduyla çıktı: ${dump.status}`);
     // Yarım kalan bozuk dosyayı temizle
     try { fs.unlinkSync(filePath); } catch {}
     process.exit(1);
