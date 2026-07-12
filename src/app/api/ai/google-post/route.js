@@ -1,8 +1,16 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+
 export async function POST(req) {
   try {
+    const session = await getServerSession(authOptions);
+    if (!session || session.user.role !== 'SUPERADMIN' && session.user.role !== 'MANAGER') {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    }
+
     const { workOrder, vehicle, customer, items } = await req.json();
 
     if (!workOrder || !vehicle) {
