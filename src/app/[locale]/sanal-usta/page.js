@@ -95,7 +95,7 @@ export default function SanalUstaPage() {
         </div>
       </div>
 
-      <main className="container mx-auto px-4 pt-24 md:pt-32 pb-4 md:pb-16 min-h-[100dvh] flex flex-col relative">
+      <main className="container mx-auto px-4 pt-44 md:pt-32 pb-4 md:pb-16 min-h-[100dvh] flex flex-col relative">
         
         {/* Onboarding Modal Overlay */}
         {!vehicleContext.isRegistered && (

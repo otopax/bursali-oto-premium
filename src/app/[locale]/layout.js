@@ -31,6 +31,8 @@ export const viewport = {
   themeColor: '#09090b', // var(--bg-dark)
   width: 'device-width',
   initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
 };
 
 export async function generateMetadata({ params }) {
@@ -43,7 +45,7 @@ export async function generateMetadata({ params }) {
   return {
     metadataBase: new URL(SITE_URL),
     title: 'Bursalı Oto Servis Fethiye | Premium Araç ve Motor Uzmanı',
-    description: 'Fethiye premium oto servis. PIWIS ve ODIS ile garantili BMW, Mercedes, Porsche tamiri. 7/24 VIP yol yardım ve orijinal yedek parça güvencesi.',
+    description: 'Fethiye premium oto servis. ISTA, XENTRY, PIWIS ve ODIS cihazları ile garantili BMW, Mercedes, Porsche ve Audi tamiri. 7/24 VIP yol yardım ve orijinal yedek parça güvencesi.',
     keywords: 'Fethiye oto servis, BMW servisi, Mercedes özel servis, Porsche mechanic, Fethiye oto çekici',
     authors: [{ name: 'Bursalı Oto Servis' }],
     publisher: 'Bursalı Oto Servis',
@@ -82,60 +84,18 @@ export async function generateMetadata({ params }) {
   };
 }
 
+import StructuredData from '@/components/StructuredData';
+
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
   const messages = await getMessages();
-  
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "AutoRepair",
-    "name": businessData.name,
-    "image": businessData.image,
-    "url": businessData.url,
-    "telephone": businessData.telephone,
-    "priceRange": businessData.priceRange,
-    "address": {
-      "@type": "PostalAddress",
-      ...businessData.address
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      ...businessData.geo
-    },
-    "openingHoursSpecification": {
-      "@type": "OpeningHoursSpecification",
-      ...businessData.openingHoursSpecification[0]
-    },
-    "areaServed": businessData.areaServed,
-    "knowsLanguage": businessData.knowsLanguage.map(lang => ({
-      "@type": "Language",
-      "name": lang === "tr" ? "Turkish" : lang === "en" ? "English" : lang === "ru" ? "Russian" : lang === "uk" ? "Ukrainian" : lang === "ar" ? "Arabic" : lang,
-      "alternateName": lang
-    })),
-    "sameAs": businessData.sameAs,
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Bursalı Oto Servis Hizmetleri",
-      "itemListElement": businessData.makesOffer.map(offer => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": offer.name,
-          "description": offer.description
-        }
-      }))
-    }
-  };
 
   return (
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
-        />
       </head>
       <body>
+        <StructuredData />
         <SecurityShield />
         <Navigation locale={locale} />
         <Providers>

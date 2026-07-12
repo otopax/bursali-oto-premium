@@ -2,9 +2,11 @@
 
 import { useEffect, useState } from 'react';
 import { trackEvent } from '@/lib/tracking';
+import { usePathname } from 'next/navigation';
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,7 +22,7 @@ export default function MobileStickyCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  if (!isVisible) return null;
+  if (!isVisible || (pathname && pathname.includes('sanal-usta'))) return null;
 
   return (
     <div className="mobile-only" style={{

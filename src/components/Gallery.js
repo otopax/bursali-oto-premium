@@ -31,7 +31,8 @@ export default function Gallery() {
           <div key={index} className="photo-item" style={{ borderRadius: '12px', overflow: 'hidden', height: '300px', position: 'relative' }}>
             <Image 
               src={src} 
-              alt={`Bursalı Oto Servis Fethiye ${index + 1}`} 
+              alt={`Bursalı Oto Servis Fethiye ${index + 1}`}
+              title={`Fethiye Premium Oto Servis Galerisi ${index + 1}`}
               fill
               quality={75}
               style={{ objectFit: 'cover' }} 

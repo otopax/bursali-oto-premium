@@ -47,7 +47,7 @@ export default async function Home({ params }) {
                </span>
             </div>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: '1.3', marginBottom: '1.5rem', fontWeight: '900', letterSpacing: '-1px', textShadow: '0 10px 30px rgba(0,0,0,0.8)' }}>
-              <span style={{ color: '#fff' }}>Fethiye Premium Oto Servis:</span><br />
+              <span style={{ color: '#fff' }}>Bursalı Oto Servis Fethiye:</span><br />
               <span style={{ background: 'linear-gradient(to right, #d4af37, #f3e5ab, #d4af37)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', display: 'inline-block', filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.3))', marginTop: '0.2rem' }}>{t('title')}</span>
             </h1>
             <p style={{ fontSize: '1.3rem', marginBottom: '3rem', color: '#e2e8f0', lineHeight: '1.7', maxWidth: '750px', fontWeight: '400', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
@@ -69,8 +69,8 @@ export default async function Home({ params }) {
       {/* Tow Truck & Emergency Section */}
       <section id="cekici" className="services-section" style={{ background: 'rgba(255,255,255,0.02)', padding: '5rem 0 4rem 0', borderBottom: '1px solid var(--glass-border)' }}>
         <div className="container" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-          <div className="live-badge" style={{ color: '#10b981', fontWeight: 'bold', marginBottom: '1rem', background: 'rgba(16, 185, 129, 0.1)', padding: '0.5rem 1rem', borderRadius: '100px' }}>
-            🟢 Şu An Nöbetteyiz - 7/24 Aktif
+          <div className="service-badge" style={{ color: '#d4af37', fontWeight: 'bold', marginBottom: '1rem', background: 'rgba(212, 175, 55, 0.1)', padding: '0.5rem 1rem', borderRadius: '100px', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
+            🛡️ 7/24 Kesintisiz Acil Hizmet
           </div>
           <h2 style={{ marginBottom: '1.5rem' }}>🛡️ 7/24 Premium Yol Yardım ve VIP Kurtarma Hizmeti</h2>
           
@@ -309,8 +309,6 @@ export default async function Home({ params }) {
             <a href="https://instagram.com/bursaliotoservis" target="_blank" rel="noopener noreferrer" title="Instagram Profilimiz" style={{ color: 'var(--accent-gold)' }}>Instagram</a>
             <a href="https://facebook.com/bursaliotoservis" target="_blank" rel="noopener noreferrer" title="Facebook Profilimiz" style={{ color: 'var(--accent-gold)' }}>Facebook</a>
             <a href="https://twitter.com/bursalioto" target="_blank" rel="noopener noreferrer" title="X (Twitter) Profilimiz" style={{ color: 'var(--accent-gold)' }}>X (Twitter)</a>
-            <a href="https://linkedin.com/company/bursaliotoservis" target="_blank" rel="noopener noreferrer" title="LinkedIn Profilimiz" style={{ color: 'var(--accent-gold)' }}>LinkedIn</a>
-            <a href="https://youtube.com/bursaliotoservis" target="_blank" rel="noopener noreferrer" title="YouTube Kanalımız" style={{ color: 'var(--accent-gold)' }}>YouTube</a>
           </div>
 
           <p style={{ fontSize: '0.9rem', color: 'var(--text-light)' }}>
