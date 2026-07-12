@@ -21,6 +21,8 @@
 const { spawnSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+require('dotenv').config({ path: path.join(process.cwd(), '.env') });
+require('dotenv').config({ path: path.join(process.cwd(), '.env.local') });
 
 const BACKUP_DIR = process.env.BACKUP_DIR || path.join(process.cwd(), 'backups');
 const RETENTION_DAYS = parseInt(process.env.BACKUP_RETENTION_DAYS || '7', 10);
