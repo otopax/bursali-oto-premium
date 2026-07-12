@@ -56,11 +56,11 @@ export default async function Home({ params }) {
               40 yıllık geleneksel Alman motor mekanik tecrübemizi, en son teknoloji Yapay Zeka arıza tespit cihazlarıyla birleştiriyoruz. {t('subtitle')}
             </p>
             <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
-              <a href="tel:+905548812021" className="btn" style={{ background: 'linear-gradient(135deg, #d4af37 0%, #aa8022 100%)', color: '#000', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', boxShadow: '0 10px 25px rgba(212,175,55,0.3), inset 0 2px 0 rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', border: 'none', transition: 'transform 0.2s' }} title="Acil Yol Yardım Hattı">
-                <span style={{ fontSize: '1.5rem' }}>📞</span> Acil Yol Yardım Hattı
+              <a href="tel:+905548812021" className="btn" style={{ background: 'linear-gradient(135deg, #d4af37 0%, #aa8022 100%)', color: '#000', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', boxShadow: '0 10px 25px rgba(212,175,55,0.3), inset 0 2px 0 rgba(255,255,255,0.4)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', border: 'none', transition: 'transform 0.2s' }} aria-label="Acil Yol Yardım Hattı" title="Acil Yol Yardım Hattı">
+                <span style={{ fontSize: '1.5rem' }} aria-hidden="true">📞</span> Acil Yol Yardım Hattı
               </a>
-              <a href="https://wa.me/905548812021" className="btn" style={{ background: 'rgba(212,175,55,0.1)', backdropFilter: 'blur(10px)', color: 'var(--accent-gold)', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', border: '1px solid rgba(212,175,55,0.5)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', transition: 'transform 0.2s' }} target="_blank" rel="noopener noreferrer" title="WhatsApp ile İletişime Geç">
-                <span style={{ fontSize: '1.5rem' }}>💬</span> WhatsApp ile İletişime Geç
+              <a href="https://wa.me/905548812021" className="btn" style={{ background: 'rgba(212,175,55,0.1)', backdropFilter: 'blur(10px)', color: 'var(--accent-gold)', padding: '1.2rem 3rem', fontSize: '1.2rem', borderRadius: '50px', border: '1px solid rgba(212,175,55,0.5)', display: 'flex', alignItems: 'center', gap: '12px', fontWeight: 'bold', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', transition: 'transform 0.2s' }} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ile İletişime Geç" title="WhatsApp ile İletişime Geç">
+                <span style={{ fontSize: '1.5rem' }} aria-hidden="true">💬</span> WhatsApp ile İletişime Geç
               </a>
             </div>
           </div>
@@ -83,12 +83,12 @@ export default async function Home({ params }) {
           </ul>
 
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="tel:+905548812021" className="btn btn-primary" style={{ background: '#e11d48', color: 'white', fontSize: '1.2rem', padding: '1rem 2rem', border: 'none' }} title="Acil Çekici Çağır">
+            <a href="tel:+905548812021" className="btn btn-primary" style={{ background: '#e11d48', color: 'white', fontSize: '1.2rem', padding: '1rem 2rem', border: 'none' }} aria-label="Acil Çekici Çağır" title="Acil Çekici Çağır">
               <span style={{ fontSize: '1rem' }}>Acil Çekici Çağır</span><br/>
               <span style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>📞 +90 554 881 20 21</span>
             </a>
-            <a href="https://wa.me/905548812021?text=Acil%20yard%C4%B1m%20l%C3%BCtfen,%20konumumu%20g%C3%B6nderiyorum." className="btn btn-gold" style={{ fontSize: '1.2rem', padding: '1rem 2rem', display: 'flex', alignItems: 'center' }} target="_blank" rel="noopener noreferrer" title="WhatsApp Konum Gönder">
-              📍 WhatsApp Konum Gönder
+            <a href="https://wa.me/905548812021?text=Acil%20yard%C4%B1m%20l%C3%BCtfen,%20konumumu%20g%C3%B6nderiyorum." className="btn btn-gold" style={{ fontSize: '1.2rem', padding: '1rem 2rem', display: 'flex', alignItems: 'center' }} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Konum Gönder" title="WhatsApp Konum Gönder">
+              <span aria-hidden="true">📍</span> WhatsApp Konum Gönder
             </a>
           </div>
         </div>

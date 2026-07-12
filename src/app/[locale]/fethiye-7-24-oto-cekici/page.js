@@ -15,7 +15,7 @@ export default function TowingPage() {
       <div className="container">
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem', borderLeft: '4px solid #e11d48' }}>
           <div style={{ display: 'inline-block', background: 'rgba(225, 29, 72, 0.1)', color: '#e11d48', padding: '0.5rem 1rem', borderRadius: '100px', fontWeight: 'bold', marginBottom: '1rem' }}>
-            🚨 ACİL ÇEKİCİ - 7/24 NÖBETTEYİZ
+            🛡️ 7/24 Kesintisiz Acil Hizmet
           </div>
           <h1 style={{ color: 'var(--text-light)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Fethiye 7/24 Oto Çekici ve Yol Yardım</h1>
           
@@ -107,6 +107,24 @@ export default function TowingPage() {
                     "@type": "Answer",
                     "text": "Kesinlikle. Porsche, BMW, Mercedes gibi altı yere yakın veya premium segment araçlar için sıfır hasar garantisiyle çalışan özel platformlu çekicilerimiz mevcuttur."
                   }
+                }
+              ]
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Ana Sayfa",
+                  "item": "https://www.bursaliotoservis.com"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "7/24 Acil Oto Çekici",
+                  "item": "https://www.bursaliotoservis.com/fethiye-7-24-oto-cekici"
                 }
               ]
             }

@@ -110,7 +110,7 @@ export default function TrustBadges({ locale }) {
             <div className="trust-icon">
               {badge.icon}
             </div>
-            <h4 className="trust-title">{badge.title}</h4>
+            <h3 className="trust-title">{badge.title}</h3>
             <p className="trust-desc">{badge.description}</p>
           </div>
         ))}

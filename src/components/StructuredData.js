@@ -1,64 +1,41 @@
+import { businessData } from '@/lib/business';
+
 const business = {
   "@context": "https://schema.org",
   "@type": "AutoRepair",
-  "@id": "https://www.bursaliotoservis.com/#business",
-  name: "Bursalı Oto Servis",
-  description:
-    "Fethiye premium oto servis. PIWIS ve ODIS ile garantili BMW, Mercedes, Porsche tamiri. 7/24 VIP yol yardım ve orijinal yedek parça güvencesi.",
-  url: "https://www.bursaliotoservis.com",
-  telephone: "+905548812021",
-  image: "https://www.bursaliotoservis.com/bg.png",
-  priceRange: "$$$",
-  foundingDate: "1986",
+  "@id": `${businessData.url}/#business`,
+  name: businessData.name,
+  description: businessData.description,
+  url: businessData.url,
+  telephone: businessData.telephone,
+  image: businessData.image,
+  priceRange: businessData.priceRange,
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Taşyaka Mahallesi, Yeni Sanayi Sitesi, 264. Sokak, No: 1",
-    addressLocality: "Fethiye",
-    addressRegion: "Muğla",
-    postalCode: "48300",
-    addressCountry: "TR",
+    ...businessData.address
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "36.618641",
-    longitude: "29.131750",
+    ...businessData.geo
   },
-  openingHoursSpecification: [
-    {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-      ],
-      opens: "08:30",
-      closes: "19:30",
-    },
-  ],
-  areaServed: { "@type": "City", name: "Fethiye" },
-  knowsLanguage: ["tr", "en", "ru", "uk", "ar"],
-  sameAs: [
-    "https://instagram.com/bursaliotoservis",
-    "https://facebook.com/bursaliotoservis",
-    "https://twitter.com/bursalioto",
-    "https://linkedin.com/company/bursaliotoservis",
-    "https://youtube.com/bursaliotoservis",
-  ],
+  openingHoursSpecification: businessData.openingHoursSpecification.map(oh => ({
+    "@type": "OpeningHoursSpecification",
+    ...oh
+  })),
+  areaServed: businessData.areaServed.map(area => ({
+    "@type": "City",
+    name: area
+  })),
+  knowsLanguage: businessData.knowsLanguage,
+  sameAs: businessData.sameAs,
   hasOfferCatalog: {
     "@type": "OfferCatalog",
     name: "Hizmetler",
-    itemListElement: [
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "BMW, Mercedes, Porsche özel servis (PIWIS/ODIS diagnostik)" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "7/24 acil oto çekici ve yol yardım" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Otomatik şanzıman revizyonu (Aisin, ZF)" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Motor revizyonu ve DPF temizliği" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "VIP filo gece vardiyası bakımı" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "İngilizce/Rusça/Arapça/Ukraynaca konuşan usta" } },
-    ],
-  },
+    itemListElement: businessData.makesOffer.map(offer => ({
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: offer.name, description: offer.description }
+    }))
+  }
 };
 
 const faq = {
