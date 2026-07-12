@@ -3,6 +3,7 @@ import Gallery from '@/components/Gallery';
 import TrustBadges from '@/components/TrustBadges';
 import Reviews from '../../components/Reviews';
 import { getTranslations } from 'next-intl/server';
+import { getSortedPostsData } from '@/lib/blog';
 import { buildCanonical } from '@/lib/seo/canonical';
 import MapFacade from '@/components/MapFacade';
 import Reveal from '@/components/anim/Reveal';
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }) {
 export default async function Home({ params }) {
   const { locale } = await params;
   const t = await getTranslations('HomePage');
+  const recentFaults = getSortedPostsData(locale, 'faults').slice(0, 4);
 
   return (
     <main>
@@ -214,6 +216,32 @@ export default async function Home({ params }) {
 
         <Reviews />
       </Reveal>
+
+      {/* SEO Internal Linking: Recent Faults */}
+      {recentFaults && recentFaults.length > 0 && (
+        <Reveal delay={0.5} className="services-section container">
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem', flexWrap: 'wrap', gap: '1rem' }}>
+            <div>
+              <h2 style={{ marginBottom: '0.5rem' }}>Uzmanlık Alanımız: Kronik Arızalar</h2>
+              <p style={{ color: 'var(--text-muted)', margin: 0 }}>En son çözdüğümüz premium araç arızaları ve garantili onarım yöntemlerimiz.</p>
+            </div>
+            <a href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
+              Tüm Arıza Çözümlerini Gör &rarr;
+            </a>
+          </div>
+          <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
+            {recentFaults.map(fault => (
+              <a key={fault.id} href={`/${locale}/ariza-cozumleri/${fault.id}`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.5rem', textDecoration: 'none' }}>
+                <span style={{ display: 'inline-block', padding: '4px 10px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+                  {fault.brand}
+                </span>
+                <h3 style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginBottom: '0.5rem', lineHeight: '1.4' }}>{fault.title}</h3>
+                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', margin: 0 }}>Modeller: {fault.model}</p>
+              </a>
+            ))}
+          </div>
+        </Reveal>
+      )}
 
       {/* Popular SEO Subpages */}
       <Reveal delay={1} className="services-section container">
