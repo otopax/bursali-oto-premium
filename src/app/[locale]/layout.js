@@ -44,7 +44,10 @@ export async function generateMetadata({ params }) {
 
   return {
     metadataBase: new URL(SITE_URL),
-    title: 'Bursalı Oto Servis Fethiye | Premium Araç ve Motor Uzmanı',
+    title: {
+      template: '%s | Bursalı Oto Servis Fethiye',
+      default: 'Bursalı Oto Servis Fethiye | Premium Araç ve Motor Uzmanı'
+    },
     description: 'Fethiye premium oto servis. ISTA, XENTRY, PIWIS ve ODIS cihazları ile garantili BMW, Mercedes, Porsche ve Audi tamiri. 7/24 VIP yol yardım ve orijinal yedek parça güvencesi.',
     authors: [{ name: 'Bursalı Oto Servis' }],
     publisher: 'Bursalı Oto Servis',
