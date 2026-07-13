@@ -303,11 +303,11 @@ export default async function ArizaCozumDetailPage({ params }) {
         <div style={{ marginTop: '2rem', padding: '1.5rem', background: '#111827', borderRadius: '12px', border: '1px solid #374151', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <p style={{ color: '#ccc', marginBottom: '0.75rem' }}>⭐ Bu çözümü beğendiniz mi? Hizmetlerimizden faydalandıysanız bizi değerlendirin.</p>
           <a href={process.env.NEXT_PUBLIC_GBP_REVIEW_URL || "https://www.google.com/search?q=BURSALI+OTO+SERV%C4%B0S+Yorumlar&rldimm=1836972871363186886#lkt=LocalPoiReviews"} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', fontWeight: 'bold', textDecoration: 'none' }}>
-            Google’da Yorum Bırakın ({gbpData.reviewCount || 124} Yorum)
+            Google’da Yorum Bırakın {gbpData.reviewCount ? `(${gbpData.reviewCount} Yorum)` : ''}
           </a>
         </div>
 
-        <ExpertCTA brand={postData.brand} reviewCount={gbpData.reviewCount || 124} />
+        <ExpertCTA brand={postData.brand} reviewCount={gbpData.reviewCount} />
 
         {relatedFaults.length > 0 && (
           <div style={{ marginTop: '4rem' }}>
