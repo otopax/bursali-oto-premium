@@ -23,7 +23,7 @@ export async function generateMetadata({ params }) {
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri ve onarım rehberleri.';
   const shortDescription = description.length > 150 ? description.substring(0, 155) + '...' : description;
-  const canonicalUrl = `https://www.bursaliotoservis.com/ariza-cozumleri/${kod}`;
+  const canonicalUrl = `https://www.bursaliotoservis.com/${locale}/ariza-cozumleri/${kod}`;
   const ogImage = postData.image || 'https://www.bursaliotoservis.com/default-fault.jpg';
 
   return {
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }) {
           alt: postData.title
         }
       ],
-      locale: 'tr_TR',
+      locale: locale === 'tr' ? 'tr_TR' : locale === 'en' ? 'en_GB' : locale === 'ru' ? 'ru_RU' : 'tr_TR',
       type: 'article',
     },
     twitter: {
@@ -53,7 +53,16 @@ export async function generateMetadata({ params }) {
       images: [ogImage],
     },
     robots: { index: true, follow: true },
-    alternates: { canonical: canonicalUrl }
+    alternates: { 
+      canonical: canonicalUrl,
+      languages: {
+        'tr': `https://www.bursaliotoservis.com/tr/ariza-cozumleri/${kod}`,
+        'en': `https://www.bursaliotoservis.com/en/ariza-cozumleri/${kod}`,
+        'de': `https://www.bursaliotoservis.com/de/ariza-cozumleri/${kod}`,
+        'ru': `https://www.bursaliotoservis.com/ru/ariza-cozumleri/${kod}`,
+        'x-default': `https://www.bursaliotoservis.com/tr/ariza-cozumleri/${kod}`
+      }
+    }
   };
 }
 
