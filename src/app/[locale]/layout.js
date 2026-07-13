@@ -139,7 +139,7 @@ export default async function RootLayout({ children, params }) {
         <MobileStickyCTA />
         <Chatbot />
         <CookieConsent locale={locale} />
-        <GoogleAnalytics gaId="G-3SNV6H5568" />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-3SNV6H5568"} />
       </body>
     </html>
   );

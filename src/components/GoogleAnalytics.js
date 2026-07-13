@@ -26,7 +26,7 @@ export default function GoogleAnalytics({ gaId }) {
     return () => window.removeEventListener('kvkk-consent-changed', check);
   }, [gaId]);
 
-  if (!gaId || !allowed) return null;
+  if (!effectiveGaId || !allowed) return null;
 
   return (
     <>
