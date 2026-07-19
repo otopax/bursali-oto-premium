@@ -65,6 +65,40 @@ export async function POST(req) {
   let dynamicSystemPrompt = getSystemPrompt('CHAT_BOT', 'v2');
   if (vehicleContext && vehicleContext.isRegistered) {
     dynamicSystemPrompt += `\n\nÖNEMLİ BİLGİ: Şu an konuştuğun müşterinin aracı kesin olarak şudur: ${vehicleContext.year} model ${vehicleContext.brand} ${vehicleContext.model}. ${vehicleContext.chassis ? `Şasi numarası (VIN): ${vehicleContext.chassis}.` : ''} Yapacağın tüm teşhisleri, vereceğin parça numaralarını ve arıza kodu analizlerini sadece ve sadece bu araca özel yap. Genel geçer cevaplar verme.`;
+
+    // VIP Garaj / ERP Entegrasyonu: Müşterinin Şasi (VIN) numarası sistemimizde kayıtlıysa geçmiş servis verilerini çek
+    if (vehicleContext.chassis) {
+      try {
+        const dbVehicle = await prisma.customerVehicle.findFirst({
+          where: { vin: vehicleContext.chassis },
+          include: { 
+            serviceHistories: { orderBy: { date: 'desc' }, take: 3 },
+            workOrders: { 
+              where: { status: 'COMPLETED' },
+              orderBy: { completedAt: 'desc' },
+              take: 3,
+              include: { items: true }
+            }
+          }
+        });
+        
+        if (dbVehicle) {
+          dynamicSystemPrompt += `\n\n[VIP GARAJ SİSTEM BİLGİSİ]: Bu araç servisimizin özel VIP kayıtlı müşterisidir (Plaka: ${dbVehicle.plate}). ERP Sistemimizde şu geçmiş servis kayıtları mevcuttur:`;
+          
+          if (dbVehicle.serviceHistories && dbVehicle.serviceHistories.length > 0) {
+            dynamicSystemPrompt += `\n- Geçmiş Bakım/Onarım Geçmişi: ` + dbVehicle.serviceHistories.map(sh => `${sh.date.toLocaleDateString('tr-TR')} tarihinde ${sh.mileage} km'de "${sh.type}" yapılmış. Detay: ${sh.description}`).join(' | ');
+          }
+          
+          if (dbVehicle.workOrders && dbVehicle.workOrders.length > 0) {
+            dynamicSystemPrompt += `\n- Tamamlanan İş Emirleri: ` + dbVehicle.workOrders.map(wo => `${wo.completedAt ? wo.completedAt.toLocaleDateString('tr-TR') : ''} tarihinde tamamlanmış. Müşteri Şikayeti: ${wo.complaint}. Değişen Parçalar/İşlemler: ${wo.items.map(i => i.name).join(', ')}`).join(' | ');
+          }
+          
+          dynamicSystemPrompt += `\n\nKRİTİK GÖREV: Müşterinin sorduğu arızayı teşhis ederken KESİNLİKLE bu geçmiş servis kayıtlarını ve değiştirilen parçaları göz önünde bulundur. Örneğin müşteri motordan ses geliyor diyorsa ve geçmişte zincir değişmişse, "Triger zincirinizi 3 ay önce değiştirmiştik, o kısımdan kaynaklandığını düşünmüyorum, turbo borularına bakalım" şeklinde "Seni ve aracını tanıyorum" hissi veren, son derece zeki ve profesyonel bir cevap ver!`;
+        }
+      } catch (e) {
+        console.error("VIP Garage AI Lookup Error:", e);
+      }
+    }
   }
   
   // DOKTOR MODU (Decision Trees) & RANDEVU SATIŞI & MDX VERİTABANI
