@@ -1,6 +1,6 @@
 import { businessData } from '@/lib/business';
 
-export default function StructuredData({ breadcrumbs = [] }) {
+export default function StructuredData({ breadcrumbs = [], video = null, reviews = null, product = null }) {
   const business = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
@@ -83,26 +83,55 @@ export default function StructuredData({ breadcrumbs = [] }) {
     }))
   } : null;
 
+  const videoData = video ? {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name: video.name,
+    description: video.description,
+    thumbnailUrl: video.thumbnailUrl,
+    uploadDate: video.uploadDate,
+    contentUrl: video.contentUrl,
+    embedUrl: video.embedUrl
+  } : null;
+
+  const reviewData = reviews ? {
+    "@context": "https://schema.org",
+    "@type": "AggregateRating",
+    itemReviewed: {
+      "@type": "AutoRepair",
+      name: businessData.name
+    },
+    ratingValue: reviews.ratingValue,
+    reviewCount: reviews.reviewCount
+  } : null;
+
+  const productData = product ? {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: product.name,
+    description: product.description,
+    brand: {
+      "@type": "Brand",
+      name: product.brand
+    },
+    offers: {
+      "@type": "Offer",
+      url: product.url,
+      priceCurrency: product.priceCurrency || "TRY",
+      price: product.price,
+      availability: product.inStock ? "https://schema.org/InStock" : "https://schema.org/OutOfStock"
+    }
+  } : null;
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(business) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyService) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }}
-      />
-      {breadcrumbData && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
-        />
-      )}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(business) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyService) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      {breadcrumbData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />}
+      {videoData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoData) }} />}
+      {reviewData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewData) }} />}
+      {productData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />}
     </>
   );
 }

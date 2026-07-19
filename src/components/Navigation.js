@@ -45,7 +45,7 @@ export default function Navigation({ locale }) {
   return (
     <nav className="navbar" style={{ position: 'fixed', width: '100%', top: 0, zIndex: 1000, background: 'var(--bg-dark)' }}>
       <div className="container nav-container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <a href={`/${locale}`} className="logo" style={{ textDecoration: 'none', color: 'inherit' }}>BURSALI OTO SERVİS</a>
+        <a href={`/${locale}`} className="logo" style={{ textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap', fontSize: 'clamp(1rem, 5vw, 1.25rem)' }}>BURSALI OTO SERVİS</a>
         
         {/* Hamburger Icon (Mobile Only) */}
         <button 

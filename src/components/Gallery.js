@@ -23,7 +23,7 @@ export default function Gallery() {
       <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Servisimizden Kareler</h2>
       <div className="photo-grid" style={{
         display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
         gap: '1rem',
         marginBottom: '2rem'
       }}>

@@ -11,7 +11,7 @@ const Chatbot = dynamic(() => import('@/components/Chatbot'));
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'));
 const CookieConsent = dynamic(() => import('@/components/CookieConsent'));
 const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'));
-import SecurityShield from '@/components/SecurityShield';
+
 import { businessData } from '@/lib/business';
 import Navigation from '@/components/Navigation';
 import { Analytics } from '@vercel/analytics/react';
@@ -99,7 +99,7 @@ export default async function RootLayout({ children, params }) {
           }
         `}} />
         <StructuredData />
-        <SecurityShield />
+
         <Navigation locale={locale} />
         <Providers>
           <NextIntlClientProvider messages={messages}>
