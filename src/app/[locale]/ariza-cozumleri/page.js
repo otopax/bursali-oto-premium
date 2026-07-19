@@ -1,5 +1,5 @@
 import { getSortedPostsData } from '@/lib/blog';
-import Link from 'next/link';
+import FaultsClientView from './FaultsClientView';
 
 export const metadata = {
   title: 'Arıza Çözümleri | Bursalı Oto Servis Fethiye',
@@ -23,37 +23,8 @@ export default async function ArizaCozumleriHub({ params }) {
           Avrupa premium araç markalarının en sık karşılaşılan kronik arızalarını, kök nedenlerini ve servisimizde uyguladığımız kalıcı çözümleri inceleyin.
         </p>
 
-        <div className="grid">
-          {faults.map((fault) => (
-            <Link 
-              key={fault.id} 
-              href={`/${locale}/ariza-cozumleri/${fault.id}`}
-              className="glass-panel hover-gold-border"
-              style={{ display: 'block', padding: '2rem', textDecoration: 'none' }}
-            >
-              <div>
-                <span style={{ 
-                  display: 'inline-block', 
-                  padding: '4px 12px', 
-                  background: 'rgba(212, 175, 55, 0.1)', 
-                  fontSize: '0.8rem', 
-                  fontWeight: '600', 
-                  color: 'var(--accent-gold)', 
-                  borderRadius: '20px', 
-                  marginBottom: '1rem' 
-                }}>
-                  {fault.brand}
-                </span>
-                <h3 style={{ fontSize: '1.3rem', fontWeight: 'bold', color: 'var(--text-light)', marginBottom: '0.5rem' }}>
-                  {fault.title}
-                </h3>
-                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', fontWeight: '500' }}>
-                  Modeller: {fault.model}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        {/* Client Component'e veriyi aktarıyoruz */}
+        <FaultsClientView locale={locale} initialFaults={faults} />
       </div>
     </main>
   );
