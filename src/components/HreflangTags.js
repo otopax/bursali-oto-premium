@@ -1,9 +1,10 @@
-'use client';
+import { headers } from 'next/headers';
 
-import { usePathname } from 'next/navigation';
-
-export default function HreflangTags() {
-  const pathname = usePathname() || '/';
+export default async function HreflangTags() {
+  const headersList = await headers();
+  // Get pathname from middleware
+  const pathname = headersList.get('x-current-path') || '/';
+  
   // Remove the current locale prefix to get the generic path
   const pathWithoutLocale = pathname.replace(/^\/(tr|en|ru|uk|ar)/, '') || '';
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';

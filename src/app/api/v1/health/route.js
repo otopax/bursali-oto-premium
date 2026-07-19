@@ -4,7 +4,7 @@ import { redis } from '@/lib/cache';
 
 export const dynamic = 'force-dynamic';
 
-const CHECK_TIMEOUT_MS = 1500;
+const CHECK_TIMEOUT_MS = 5000;
 
 function withTimeout(promise, ms, label) {
   return Promise.race([

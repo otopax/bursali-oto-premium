@@ -21,6 +21,7 @@ export async function middleware(request) {
   request.headers.set('x-correlation-id', correlationId);
 
   const pathname = request.nextUrl.pathname;
+  request.headers.set('x-current-path', pathname);
   
   // 2. Güvenlik Kontrolü (Authentication)
   // Route'un başındaki dili (/tr veya /en) kesip ana rotayı buluyoruz

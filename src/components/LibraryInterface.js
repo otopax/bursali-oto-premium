@@ -171,7 +171,7 @@ export default function LibraryInterface() {
                     <div style={{ background: '#1e3a8a', color: '#fff', padding: '1rem', fontWeight: 'bold' }}>
                       {brands.find(b=>b.id===selectedBrand)?.name} Motor İçi Sigorta Kutusu
                     </div>
-                    <div style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '3rem', textAlign: 'center', height: '300px', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                    <div style={{ background: 'rgba(59, 130, 246, 0.05)', padding: '3rem', textAlign: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
                       <FaMicrochip size={64} color="#3b82f6" style={{ opacity: 0.5, marginBottom: '1rem' }} />
                       <p style={{ color: '#93c5fd' }}>İnteraktif şema verisi yükleniyor...</p>
                     </div>
