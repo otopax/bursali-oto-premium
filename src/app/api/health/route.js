@@ -4,17 +4,10 @@
 // - status: "ok" | "degraded"
 // - HTTP: 200 | 503 (503 → UptimeRobot alarm gönderir)
 import { NextResponse } from 'next/server';
-import Redis from 'ioredis';
 import os from 'os';
 import { prisma } from '@/lib/prisma';
+import { redis } from '@/lib/cache';
 
-// Redis singleton (health-check için, kısa timeout, lazyConnect)
-const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
-  maxRetriesPerRequest: 1,
-  connectTimeout: 1000, // 1 sn — <2sn toplam süreye sığmak için
-  lazyConnect: true,
-  enableOfflineQueue: false,
-});
 
 export const dynamic = 'force-dynamic';
 

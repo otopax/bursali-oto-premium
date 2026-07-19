@@ -1,9 +1,6 @@
-import Redis from 'ioredis';
+import { redis } from '@/lib/cache';
 
 // Singleton Redis Instance for Rate Limiting
-const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379');
-// R2 SPOF: handle edilmeyen 'error' event'i process'i çökertir — log'a çevir.
-redis.on('error', (err) => console.error('[Redis authRateLimit] bağlantı hatası:', err.message));
 
 /**
  * Global IP Rate Limiter using Redis.

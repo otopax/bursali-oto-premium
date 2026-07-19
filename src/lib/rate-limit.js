@@ -1,9 +1,4 @@
-import Redis from 'ioredis';
-
-const redis = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
-  maxRetriesPerRequest: 1,
-  connectTimeout: 2000,
-});
+import { redis } from '@/lib/cache';
 
 /**
  * Basic Token Bucket Rate Limiter using Redis

@@ -14,6 +14,9 @@ const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'));
 import SecurityShield from '@/components/SecurityShield';
 import { businessData } from '@/lib/business';
 import Navigation from '@/components/Navigation';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' });
@@ -96,6 +99,8 @@ export default async function RootLayout({ children, params }) {
             {children}
           </NextIntlClientProvider>
         </Providers>
+        <Analytics />
+        <SpeedInsights />
         
         {/* Yolda Kalanlar - Floating SOS Button (Desktop only) */}
         <a 

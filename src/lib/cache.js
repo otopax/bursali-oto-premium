@@ -23,5 +23,6 @@ export const redis = cacheRepository.adapter.client || {
   get: async () => null,
   incr: async () => 1,
   expire: async () => true,
-  set: async () => "OK"
+  set: async () => "OK",
+  ping: async () => "PONG"
 };
