@@ -24,7 +24,15 @@ export default function FaultsClientView({ locale, initialFaults }) {
   const groupedBrands = useMemo(() => {
     const groups = {};
     initialFaults.forEach(fault => {
-      const brand = fault.brand || 'Diğer';
+      let brand = fault.brand || 'Diğer';
+      
+      // İsim normalizasyonu (Gereksiz tekrarları ve varyasyonları birleştir)
+      brand = brand.trim();
+      if (brand.toUpperCase() === 'MERCEDES') brand = 'Mercedes-Benz';
+      if (brand.toUpperCase() === 'VW') brand = 'Volkswagen';
+      if (brand.toUpperCase().includes('AUDI / VW') || brand.toUpperCase().includes('GENEL / PREMIUM')) brand = 'Genel / Premium';
+      if (brand.toUpperCase().includes('GENEL / PORSCHE')) brand = 'Porsche';
+      
       if (!groups[brand]) {
         groups[brand] = [];
       }
