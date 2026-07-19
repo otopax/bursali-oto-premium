@@ -90,7 +90,14 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
       <head>
       </head>
-      <body>
+      <body className="mobile-padded-body">
+        <style dangerouslySetInnerHTML={{__html: `
+          @media (max-width: 768px) {
+            .mobile-padded-body {
+              padding-bottom: calc(70px + env(safe-area-inset-bottom)) !important;
+            }
+          }
+        `}} />
         <StructuredData />
         <SecurityShield />
         <Navigation locale={locale} />

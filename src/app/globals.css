@@ -439,33 +439,23 @@ p {
   .hero-content { margin: 0 auto; padding: 0 1rem; }
   
   .navbar { 
-    height: auto; 
-    padding: 0.8rem 0; 
+    height: 64px; 
+    padding: 0 1rem; 
   }
   .nav-container { 
-    flex-direction: column; 
-    gap: 0.5rem;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
   
-  .logo { font-size: 1.3rem; }
+  .logo { font-size: 1.2rem; }
 
-  .nav-links { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 0.8rem; 
-    justify-content: center; 
-    margin-top: 0.5rem; 
-    padding-bottom: 0.5rem;
-  }
-  
-  .nav-links a {
-    font-size: 0.85rem;
-    padding: 10px 8px;
-    min-height: 44px;
-  }
+  /* Mobile menu logic handled in Navigation.js using React state */
   
   main {
-    padding-top: 140px !important;
+    padding-top: 70px !important;
   }
 
   .glass-panel { padding: 1.5rem 1rem; }

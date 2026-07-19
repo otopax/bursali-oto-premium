@@ -17,7 +17,7 @@ export default function Chatbot() {
   return (
     <>
       <button 
-        className={`chatbot-widget ${isHovered ? 'hovered' : ''}`}
+        className={`chatbot-widget desktop-only ${isHovered ? 'hovered' : ''}`}
         onClick={handleClick}
         style={{ 
           position: 'fixed', 

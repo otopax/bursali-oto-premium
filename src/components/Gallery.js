@@ -19,7 +19,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className="container">
+    <div className="container overflow-x-hidden max-w-full">
       <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Servisimizden Kareler</h2>
       <div className="photo-grid" style={{
         display: 'grid',
@@ -28,7 +28,8 @@ export default function Gallery() {
         marginBottom: '2rem'
       }}>
         {photos.slice(0, visibleCount).map((src, index) => (
-          <div key={index} className="photo-item" style={{ borderRadius: '12px', overflow: 'hidden', height: '300px', position: 'relative' }}>
+          <div key={index} className={`photo-item relative rounded-xl overflow-hidden bg-gray-800/50 ${index >= 8 ? 'hidden md:block' : ''}`} style={{ height: '300px' }}>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-800/0 via-gray-700/20 to-gray-800/0 animate-pulse"></div>
             <Image 
               src={src} 
               alt={`Bursalı Oto Servis Fethiye ${index + 1}`}
@@ -43,7 +44,7 @@ export default function Gallery() {
       </div>
       
       {visibleCount < totalPhotos && (
-        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <div className="hidden md:block" style={{ textAlign: 'center', marginTop: '2rem' }}>
           <button 
             onClick={handleLoadMore} 
             className="btn btn-gold" 
@@ -54,8 +55,15 @@ export default function Gallery() {
         </div>
       )}
       
+      {/* Mobile users just get a map link after the first 8 */}
+      <div className="md:hidden text-center mt-6">
+        <a href="https://www.google.com/maps/place/BURSALI+OTO+SERV%C4%B0S/@36.6217,29.1164,15z" className="btn btn-gold w-full text-base py-3 font-bold bg-[#d4af37] text-black" target="_blank" rel="noreferrer">
+          Tüm Fotoğrafları Haritalar'da Gör
+        </a>
+      </div>
+
       {visibleCount === totalPhotos && (
-        <p style={{ textAlign: 'center', marginTop: '2rem', color: 'var(--text-light)' }}>
+        <p className="hidden md:block text-center mt-8 text-[var(--text-light)]">
           Tüm fotoğrafları görüntülediniz. 
           <br /><br />
           <a href="https://www.google.com/maps/place/BURSALI+OTO+SERV%C4%B0S/@36.6217,29.1164,15z" className="btn btn-primary" target="_blank" rel="noreferrer" style={{ marginTop: '1rem', display: 'inline-block' }}>
