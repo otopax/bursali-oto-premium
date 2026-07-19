@@ -164,6 +164,81 @@ export async function POST(req) {
           return { success: false, message: 'Bu araca ait sigorta verisi bulunamadı.' };
         },
       }),
+      estimateCost: tool({
+        description: 'Verilen arıza veya parça değişimi için tahmini maliyet aralığı hesaplar.',
+        parameters: z.object({
+          partName: z.string().describe('Değişecek veya onarılacak parça (örn: Katalitik Konvertör)'),
+          brand: z.string().describe('Araç markası'),
+          basePartCost: z.number().describe('Parçanın tahmini taban fiyatı (TL cinsinden)')
+        }),
+        execute: async ({ partName, brand, basePartCost }) => {
+          const premiumBrands = ['bmw', 'mercedes', 'audi', 'porsche', 'land rover', 'volvo'];
+          const isPremium = premiumBrands.some(b => (brand || '').toLowerCase().includes(b));
+          
+          const multiplier = isPremium ? 1.5 : 1.0;
+          const laborCost = 2500 * multiplier; // Fethiye base labor
+          const totalMin = Math.round((basePartCost * multiplier) + laborCost);
+          const totalMax = Math.round(totalMin * 1.3);
+          
+          return { 
+            partName, 
+            estimatedRange: `${totalMin.toLocaleString('tr-TR')} TL - ${totalMax.toLocaleString('tr-TR')} TL`,
+            breakdown: { part: Math.round(basePartCost * multiplier), labor: laborCost, region: 'Fethiye' }
+          };
+        }
+      }),
+      estimateRepairTime: tool({
+        description: 'Arıza veya bakım işleminin tahmini ne kadar süreceğini hesaplar.',
+        parameters: z.object({
+          jobType: z.string().describe('İşlem tipi (örn: periyodik bakım, motor revizyonu, şanzıman tamiri)')
+        }),
+        execute: async ({ jobType }) => {
+          const type = jobType.toLowerCase();
+          if (type.includes('motor') && type.includes('revizyon')) return { time: '7 - 14 İş Günü', urgency: 'Yüksek' };
+          if (type.includes('şanzıman')) return { time: '3 - 5 İş Günü', urgency: 'Orta' };
+          if (type.includes('periyodik') || type.includes('bakım') || type.includes('yağ')) return { time: '2 - 3 Saat', urgency: 'Düşük' };
+          if (type.includes('teşhis') || type.includes('arıza tespiti')) return { time: '1 - 2 Saat', urgency: 'Hemen' };
+          return { time: '1 - 2 İş Günü', urgency: 'Normal' };
+        }
+      }),
+      estimateRisk: tool({
+        description: 'Müşterinin tarif ettiği arızanın aracı sürmeye devam etmesi durumunda yaratacağı riski (Motor/Şanzıman hasarı vb.) değerlendirir.',
+        parameters: z.object({
+          symptom: z.string().describe('Müşterinin şikayeti veya arıza kodu')
+        }),
+        execute: async ({ symptom }) => {
+          const s = symptom.toLowerCase();
+          if (s.includes('hararet') || s.includes('kırmızı') || s.includes('yağ basıncı') || s.includes('şanzıman vuruntusu')) {
+            return { riskLevel: 'KRİTİK', advice: 'Aracı KESİNLİKLE çalıştırmayın, hemen çekici çağırın.' };
+          }
+          if (s.includes('arıza lambası') || s.includes('titreme') || s.includes('çekişten düşme')) {
+            return { riskLevel: 'YÜKSEK', advice: 'Aracı zorlamadan en kısa sürede servise getirin.' };
+          }
+          return { riskLevel: 'ORTA', advice: 'Müsait olduğunuzda kontrol edilmesi tavsiye edilir.' };
+        }
+      }),
+      maintenanceLookup: tool({
+        description: 'Belirli bir marka, model ve kilometre için yapılması gereken periyodik bakım kalemlerini getirir.',
+        parameters: z.object({
+          brand: z.string().describe('Araç markası'),
+          model: z.string().describe('Araç modeli'),
+          mileage: z.number().describe('Aracın güncel kilometresi')
+        }),
+        execute: async ({ brand, model, mileage }) => {
+          const { MaintenanceRepository } = require('@/lib/repositories/MaintenanceRepository');
+          return await MaintenanceRepository.getSchedule(brand, model, mileage);
+        }
+      }),
+      vinLookup: tool({
+        description: 'Müşterinin girdiği şasi numarasını (VIN) çözer ve aracın marka, model, motor ve şanzıman bilgilerini getirir.',
+        parameters: z.object({
+          vin: z.string().describe('17 haneli şasi numarası')
+        }),
+        execute: async ({ vin }) => {
+          const { decodeVin } = require('@/lib/vinService');
+          return await decodeVin(vin);
+        }
+      }),
       findModelForBrand: tool({
         description: 'Bir markaya ait sistemde kayıtlı modellerin slug listesini döndürür.',
         parameters: z.object({

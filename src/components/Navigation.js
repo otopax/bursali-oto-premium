@@ -77,6 +77,22 @@ export default function Navigation({ locale }) {
             {locale === 'tr' ? 'VIP Garaj' : 'VIP Garage'}
           </a>
           
+          <a 
+            href={`/${locale}/hakkimizda`} 
+            aria-label="Hakkımızda"
+            style={getLinkStyle('/hakkimizda')}
+          >
+            {locale === 'tr' ? 'Hakkımızda' : 'About Us'}
+          </a>
+
+          <a 
+            href={`/${locale}/seffaf-fiyatlandirma`} 
+            aria-label="Şeffaf Fiyatlandırma"
+            style={getLinkStyle('/seffaf-fiyatlandirma')}
+          >
+            {locale === 'tr' ? 'Fiyatlandırma' : 'Pricing'}
+          </a>
+          
         </div>
       </div>
     </nav>

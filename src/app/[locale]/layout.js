@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, getTranslations } from 'next-intl/server';
 import { Inter, Outfit } from 'next/font/google';
 import '../globals.css';
 import dynamic from 'next/dynamic';
@@ -37,34 +37,25 @@ export const viewport = {
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   const localeMap = {
-    tr: 'tr_TR', en: 'en_GB', ru: 'ru_RU', uk: 'uk_UA',
+    tr: 'tr_TR', en: 'en_GB', ru: 'ru_RU', uk: 'uk_UA', ar: 'ar_AE'
   };
 
   return {
     metadataBase: new URL(SITE_URL),
     title: {
-      template: '%s | Bursalı Oto Servis Fethiye',
-      default: 'Bursalı Oto Servis Fethiye | Premium Araç ve Motor Uzmanı'
+      template: '%s | Bursalı Oto Servis',
+      default: t('title')
     },
-    description: 'Fethiye premium oto servis. ISTA, XENTRY, PIWIS ve ODIS cihazları ile garantili BMW, Mercedes, Porsche ve Audi tamiri. 7/24 VIP yol yardım ve orijinal yedek parça güvencesi.',
+    description: t('description'),
     authors: [{ name: 'Bursalı Oto Servis' }],
     publisher: 'Bursalı Oto Servis',
     robots: 'index, follow',
-    alternates: {
-      // canonical BURADA YOK — her sayfa kendi verir (canonical/self helper)
-      languages: {
-        'tr': `${SITE_URL}/tr`,
-        'en': `${SITE_URL}/en`,
-        'ru': `${SITE_URL}/ru`,
-        'uk': `${SITE_URL}/uk`,
-        'x-default': `${SITE_URL}/tr`,
-      },
-    },
     openGraph: {
-      title: 'Bursalı Oto Servis Fethiye',
-      description: 'Premium Aracınız İçin Klinik Hassasiyetinde Servis',
+      title: t('title'),
+      description: t('description'),
       siteName: 'Bursalı Oto Servis Fethiye',
       images: [
         {
@@ -79,8 +70,8 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: 'Bursalı Oto Servis Fethiye',
-      description: 'Premium Aracınız İçin Klinik Hassasiyetinde Servis',
+      title: t('title'),
+      description: t('description'),
       images: [`${SITE_URL}/bg.png`],
     },
   };

@@ -177,3 +177,110 @@ export const generateServiceInvoice = (workOrder, customer, vehicle, tenant) => 
   // Sonuç Olarak Kaydet (veya Blob dön)
   doc.save(`${vehicle.plate}_servis_raporu.pdf`);
 };
+
+import html2canvas from 'html2canvas';
+
+/**
+ * Creates a corporate Diagnostic Report PDF from AI Chat
+ * @param {Object} data 
+ * @param {string} data.vin - Vehicle Identification Number
+ * @param {string} data.vehicle - Brand and Model (e.g. BMW 320i)
+ * @param {string} data.diagnosis - The AI diagnostic text
+ * @param {string} data.risk - High, Medium, Low
+ * @param {string} data.cost - Estimated cost range
+ * @param {string} data.time - Estimated repair time
+ */
+export async function generateDiagnosticPDF(data) {
+  const container = document.createElement('div');
+  container.style.position = 'absolute';
+  container.style.left = '-9999px';
+  container.style.top = '-9999px';
+  container.style.width = '800px';
+  container.style.padding = '40px';
+  container.style.backgroundColor = '#ffffff';
+  container.style.color = '#000000';
+  container.style.fontFamily = 'sans-serif';
+
+  const diagnosisHtml = data.diagnosis ? data.diagnosis.replace(/\n/g, '<br/>') : 'Teşhis verisi bulunamadı.';
+
+  container.innerHTML = `
+    <div style="border-bottom: 2px solid #e11d48; padding-bottom: 20px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+      <div>
+        <h1 style="color: #e11d48; margin: 0; font-size: 28px;">Bursalı Oto Dijital</h1>
+        <p style="margin: 5px 0 0 0; color: #666;">Uzman Teşhis ve Bakım Raporu</p>
+      </div>
+      <div style="text-align: right; color: #666; font-size: 14px;">
+        <p style="margin: 0;">Tarih: ${new Date().toLocaleDateString('tr-TR')}</p>
+        <p style="margin: 5px 0 0 0;">WhatsApp: +90 535 013 41 83</p>
+      </div>
+    </div>
+    
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 10px;">Araç Bilgileri</h2>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Araç</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${data.vehicle || 'Bilinmiyor'}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Şasi No (VIN)</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${data.vin || 'Belirtilmedi'}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 10px;">Sanal Usta Teşhis Özeti</h2>
+      <div style="padding: 15px; background-color: #f9f9f9; border-left: 4px solid #e11d48; line-height: 1.6;">
+        ${diagnosisHtml}
+      </div>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+      <h2 style="font-size: 20px; margin-bottom: 10px;">Tahminler ve Risk Analizi</h2>
+      <table style="width: 100%; border-collapse: collapse;">
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold; width: 30%;">Sürüş Riski</td>
+          <td style="padding: 8px; border: 1px solid #ddd; color: ${data.risk === 'Yüksek' || data.risk === 'Kritik' ? 'red' : 'inherit'}">${data.risk || 'Hesaplanmadı'}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Tahmini Süre</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${data.time || 'Hesaplanmadı'}</td>
+        </tr>
+        <tr>
+          <td style="padding: 8px; border: 1px solid #ddd; font-weight: bold;">Tahmini Maliyet</td>
+          <td style="padding: 8px; border: 1px solid #ddd;">${data.cost || 'Hesaplanmadı'}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div style="margin-top: 50px; text-align: center; font-size: 14px; color: #666; border-top: 1px solid #ddd; padding-top: 20px;">
+      <p>Bu rapor yapay zeka tarafından sağlanan tahmini bir ön teşhistir. Kesin onarım için servisimizde fiziki kontrol yapılması gerekmektedir.</p>
+      <p>Randevu almak için bizi arayabilir veya <strong>bursali-oto.com</strong> sitemizi ziyaret edebilirsiniz.</p>
+    </div>
+  `;
+
+  document.body.appendChild(container);
+
+  try {
+    const canvas = await html2canvas(container, { scale: 2 });
+    const imgData = canvas.toDataURL('image/png');
+    
+    // A4 size in mm
+    const pdf = new jsPDF({
+      orientation: 'portrait',
+      unit: 'mm',
+      format: 'a4'
+    });
+
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
+
+    pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
+    pdf.save(`Bursali-Oto-Tezhis-Raporu-${data.vin || 'SanalUsta'}.pdf`);
+  } catch (error) {
+    console.error("PDF oluşturulurken hata:", error);
+  } finally {
+    document.body.removeChild(container);
+  }
+}

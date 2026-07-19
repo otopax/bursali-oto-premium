@@ -14,7 +14,8 @@ export async function generateMetadata({ params }) {
   // Format brand name beautifully (e.g. land-rover -> Land Rover)
   const formattedBrand = rawBrand.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
-  const canonical = `${SITE_URL}/${locale}/markalar/${slug}`;
+  // Fix cannibalization: point canonical to the district-specific local SEO page
+  const canonical = `${SITE_URL}/${locale}/bolge/${slug}`;
 
   return {
     title: t('brandServiceTitle', { brand: formattedBrand }),

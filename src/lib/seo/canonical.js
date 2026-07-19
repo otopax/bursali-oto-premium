@@ -15,7 +15,7 @@
  */
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
-const LOCALES = ['tr', 'en', 'ru', 'uk'];
+const LOCALES = ['tr', 'en', 'ru', 'uk', 'ar'];
 const DEFAULT_LOCALE = 'tr';
 
 /**

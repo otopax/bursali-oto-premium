@@ -1,4 +1,5 @@
 import { getTranslations } from 'next-intl/server';
+import { buildCanonical } from '@/lib/seo/canonical';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
 
@@ -10,16 +11,7 @@ export async function generateMetadata({ params }) {
   return {
     title: t('transmissionTitle'),
     description: t('transmissionDesc'),
-    alternates: {
-      canonical,
-      languages: {
-        tr: `${SITE_URL}/tr/hizmetler/${slug}`,
-        en: `${SITE_URL}/en/hizmetler/${slug}`,
-        ru: `${SITE_URL}/ru/hizmetler/${slug}`,
-        uk: `${SITE_URL}/uk/hizmetler/${slug}`,
-        'x-default': `${SITE_URL}/tr/hizmetler/${slug}`,
-      },
-    },
+    alternates: buildCanonical(locale, `hizmetler/${slug}`),
     openGraph: {
       title: t('transmissionTitle'),
       description: t('transmissionDesc'),

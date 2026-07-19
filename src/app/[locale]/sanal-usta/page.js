@@ -2,6 +2,8 @@
 
 import { useChat } from '@ai-sdk/react';
 import { useRef, useEffect, useState } from 'react';
+import { generateDiagnosticPDF } from '@/lib/pdfGenerator';
+import { trackEvent, AnalyticsEvent } from '@/lib/analytics';
 
 export default function SanalUstaPage() {
   const [isListening, setIsListening] = useState(false);
@@ -14,6 +16,41 @@ export default function SanalUstaPage() {
   });
   const [guestId, setGuestId] = useState('');
   const [showLeadForm, setShowLeadForm] = useState(false);
+
+  // Form states for VIN Autofill
+  const [formBrand, setFormBrand] = useState('');
+  const [formModel, setFormModel] = useState('');
+  const [formYear, setFormYear] = useState('');
+  const [formChassis, setFormChassis] = useState('');
+  const [vinLoading, setVinLoading] = useState(false);
+
+  const handleVinDecode = async () => {
+    if (!formChassis || formChassis.length !== 17) {
+      alert("Şasi numarası tam 17 hane olmalıdır.");
+      return;
+    }
+    setVinLoading(true);
+    try {
+      const res = await fetch('/api/vin-decode', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ vin: formChassis })
+      });
+      const result = await res.json();
+      if (result.success && result.data) {
+        setFormBrand(result.data.Make || '');
+        setFormModel(result.data.Model || '');
+        setFormYear(result.data.Year || '');
+        // We leave the chassis as is
+      } else {
+        alert(result.error || 'Şasi numarası çözümlenemedi.');
+      }
+    } catch (e) {
+      alert('Bağlantı hatası.');
+    } finally {
+      setVinLoading(false);
+    }
+  };
 
   useEffect(() => {
     let id = localStorage.getItem('sanalUstaGuestId');
@@ -118,28 +155,32 @@ export default function SanalUstaPage() {
               
               <form onSubmit={(e) => {
                 e.preventDefault();
-                const fd = new FormData(e.target);
                 setVehicleContext({
                   isRegistered: true,
-                  brand: fd.get('brand'),
-                  model: fd.get('model'),
-                  year: fd.get('year'),
-                  chassis: fd.get('chassis')
+                  brand: formBrand,
+                  model: formModel,
+                  year: formYear,
+                  chassis: formChassis
                 });
               }} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                 
-                <div style={{ display: 'flex', gap: '1rem' }}>
-                  <input required name="brand" placeholder="Marka (Örn: BMW)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
-                  <input required name="model" placeholder="Model (Örn: 320i)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
-                </div>
-                
-                <input required type="number" min="1990" max="2025" name="year" placeholder="Üretim Yılı (Örn: 2018)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
-                
                 <div>
-                  <input name="chassis" placeholder="Şasi Numarası (İsteğe Bağlı)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
-                  <small style={{ color: '#94a3b8', display: 'block', marginTop: '0.4rem', fontSize: '0.8rem' }}>* Şasi numarası girmek, arıza tespiti doğruluğunu %100'e yaklaştırır.</small>
+                  <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.4rem' }}>
+                    <input value={formChassis} onChange={e => setFormChassis(e.target.value)} name="chassis" placeholder="Şasi Numarası (VIN) - 17 Hane" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white flex-1 focus:border-[var(--accent-gold)] outline-none transition-colors uppercase" maxLength="17" />
+                    <button type="button" onClick={handleVinDecode} disabled={vinLoading} className="btn btn-outline" style={{ padding: '0 1rem', whiteSpace: 'nowrap' }}>
+                      {vinLoading ? '⏳' : '🔍 Otomatik Bul'}
+                    </button>
+                  </div>
+                  <small style={{ color: '#94a3b8', display: 'block', fontSize: '0.8rem' }}>* Şasi numarası (VIN) ile aracınızın marka/model bilgisini otomatik çekebilirsiniz.</small>
                 </div>
 
+                <div style={{ display: 'flex', gap: '1rem' }}>
+                  <input required value={formBrand} onChange={e => setFormBrand(e.target.value)} name="brand" placeholder="Marka (Örn: BMW)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                  <input required value={formModel} onChange={e => setFormModel(e.target.value)} name="model" placeholder="Model (Örn: 320i)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                </div>
+                
+                <input required value={formYear} onChange={e => setFormYear(e.target.value)} type="number" min="1990" max="2025" name="year" placeholder="Üretim Yılı (Örn: 2018)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                
                 <button type="submit" className="btn btn-gold w-full mt-2 py-3 rounded-lg" style={{ fontSize: '1.1rem', letterSpacing: '1px' }}>
                   Sanal Atölyeye Bağlan
                 </button>
@@ -281,9 +322,33 @@ export default function SanalUstaPage() {
                     ) : null}
                     
                     {m.role === 'assistant' && m.id !== 'welcome-msg' && (
-                      <a href={`https://wa.me/905548812021?text=${encodeURIComponent('Sanal Usta Teşhisi:\n' + m.content.substring(0, 500) + '...')}`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '0.85rem', padding: '0.5rem 1rem', marginTop: '12px', background: 'transparent', border: '1px solid var(--accent-gold)', color: 'var(--accent-gold)', borderRadius: '100px', textDecoration: 'none' }}>
-                        <span>💬</span> Bu teşhisi ustaya gönder (WhatsApp)
-                      </a>
+                      <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                        <p style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '0.8rem', fontWeight: 'bold' }}>HIZLI İŞLEM MENÜSÜ</p>
+                        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.6rem' }}>
+                          <a href={`https://wa.me/905548812021?text=${encodeURIComponent('Sanal Usta Teşhisi:\n' + (m.content || '').substring(0, 300) + '...')}`} target="_blank" rel="noopener noreferrer" onClick={() => trackEvent(AnalyticsEvent.WHATSAPP_CLICK, { vehicle: vehicleContext.brand })} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', padding: '0.6rem 1rem', background: '#25D366', color: '#000', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', flex: '1 1 calc(50% - 0.6rem)' }}>
+                            <span style={{ fontSize: '1.1rem' }}>💬</span> WhatsApp'a İlet
+                          </a>
+                          <button onClick={() => {
+                            trackEvent(AnalyticsEvent.PDF_DOWNLOAD, { vehicle: vehicleContext.brand });
+                            generateDiagnosticPDF({
+                              vin: vehicleContext.chassis,
+                              vehicle: `${vehicleContext.year} ${vehicleContext.brand} ${vehicleContext.model}`,
+                              diagnosis: m.content,
+                              risk: 'Belirlenmedi', // These would ideally be parsed or stored in state if available
+                              cost: 'Bilinmiyor',
+                              time: 'Bilinmiyor'
+                            });
+                          }} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', padding: '0.6rem 1rem', background: '#e11d48', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', flex: '1 1 calc(50% - 0.6rem)', border: 'none', cursor: 'pointer' }}>
+                            <span style={{ fontSize: '1.1rem' }}>📄</span> PDF Raporu İndir
+                          </button>
+                          <a href="tel:+905548812021" onClick={() => trackEvent(AnalyticsEvent.PHONE_CLICK)} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', padding: '0.6rem 1rem', background: 'rgba(255,255,255,0.1)', color: '#fff', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', flex: '1 1 calc(50% - 0.6rem)' }}>
+                            <span style={{ fontSize: '1.1rem' }}>📞</span> Hemen Ara
+                          </a>
+                          <button onClick={() => { trackEvent(AnalyticsEvent.BOOKING_COMPLETED); setShowLeadForm(true); }} style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontSize: '0.85rem', padding: '0.6rem 1rem', background: 'var(--accent-gold)', color: '#000', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold', flex: '1 1 calc(50% - 0.6rem)', border: 'none', cursor: 'pointer' }}>
+                            <span style={{ fontSize: '1.1rem' }}>📅</span> Randevu Al
+                          </button>
+                        </div>
+                      </div>
                     )}
                   </div>
                   <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.5rem', textAlign: m.role === 'user' ? 'right' : 'left' }}>

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { SEO_PRIORITY } from '@/data/seo-oncelik';
+import { buildCanonical } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }) {
     title,
     description,
     keywords: `${district} ${brand} servisi, ${brand} tamircisi ${district}, fethiye oto servis, ${brand} yedek parça`,
+    alternates: buildCanonical(locale, `bolge/${slug}`),
     ...(!isTier1 && { robots: { index: false, follow: true } })
   };
 }

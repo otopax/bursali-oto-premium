@@ -39,7 +39,7 @@ export const authOptions = {
     }),
     CredentialsProvider({
       id: "customer-login",
-      name: "Müşteri Portalı",
+      name: "Müşteri Portalı (Plaka ile)",
       credentials: {
         phone: { label: "Telefon Numarası", type: "text", placeholder: "05XXXXXXXXX" },
         plate: { label: "Plaka", type: "text", placeholder: "34 ABC 123" }
@@ -66,7 +66,55 @@ export const authOptions = {
 
         return {
           id: customer.id,
-          email: customer.email || `${customer.phone}@bursalioto.customer`, // Dummy email since NextAuth prefers one
+          email: customer.email || `${customer.phone}@bursalioto.customer`,
+          name: customer.firstName,
+          role: "CUSTOMER",
+          tenantId: customer.tenantId
+        };
+      }
+    }),
+    CredentialsProvider({
+      id: "otp-login",
+      name: "SMS ile Giriş (Phase 4)",
+      credentials: {
+        phone: { label: "Telefon Numarası", type: "text", placeholder: "05XXXXXXXXX" },
+        otp: { label: "SMS Kodu", type: "text", placeholder: "123456" }
+      },
+      async authorize(credentials, req) {
+        const ip = req.headers?.['x-forwarded-for'] || '127.0.0.1';
+        const { allowed } = await rateLimit(`otp_${ip}`, 5, 60); 
+        if (!allowed) throw new Error("Çok fazla deneme yaptınız.");
+
+        if (!credentials?.phone || !credentials?.otp) throw new Error("Lütfen bilgileri giriniz.");
+
+        // TODO: In production, verify OTP against Redis cache. 
+        // For Phase 4 scaffolding, we mock 123456 as a success code.
+        if (credentials.otp !== "123456") {
+          throw new Error("Hatalı SMS kodu.");
+        }
+
+        let customer = await prisma.customer.findFirst({
+          where: { phone: credentials.phone }
+        });
+
+        // Yeni müşteri ise oluştur (Sadece telefonla giriş yapanı guest olarak alabiliriz)
+        if (!customer) {
+          // Default tenant fallback or similar
+          const defaultTenant = await prisma.tenant.findFirst();
+          if (!defaultTenant) throw new Error("Sistem hatası: Tenant bulunamadı.");
+          
+          customer = await prisma.customer.create({
+            data: {
+              phone: credentials.phone,
+              firstName: "Misafir",
+              tenantId: defaultTenant.id
+            }
+          });
+        }
+
+        return {
+          id: customer.id,
+          email: customer.email || `${customer.phone}@bursalioto.customer`,
           name: customer.firstName,
           role: "CUSTOMER",
           tenantId: customer.tenantId

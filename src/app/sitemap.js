@@ -12,7 +12,7 @@ import { SEO_PRIORITY } from '@/data/seo-oncelik';
  */
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
-const LOCALES = ['tr', 'en', 'ru', 'uk'];
+const LOCALES = ['tr', 'en', 'ru', 'uk', 'ar'];
 const DEFAULT_LOCALE = 'tr';
 
 const STATIC_PATHS = [
@@ -91,12 +91,7 @@ export default async function sitemap() {
 
   // 2) Programmatic SEO brand pages × 4 dil
   SEO_BRAND_SLUGS.forEach((brand) => {
-    // Mevcut Statik benzeri sayfalar
-    entries.push(...expandLocales(`/markalar/${brand}-servisi-fethiye`, {
-      changeFrequency: 'weekly',
-      priority: 0.9,
-      lastModified: now,
-    }));
+    // Hizmet sayfaları
     entries.push(...expandLocales(`/hizmetler/${brand}-otomatik-sanziman-tamiri-fethiye`, {
       changeFrequency: 'weekly',
       priority: 0.85,

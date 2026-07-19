@@ -43,32 +43,32 @@ const nextConfig = {
       },
       // 404 & Login Regressions 301 Redirects
       {
-        source: '/:locale(tr|en|ru|uk)/hizmetler',
+        source: '/:locale(tr|en|ru|uk|ar)/hizmetler',
         destination: '/:locale/ariza-cozumleri',
         permanent: true,
       },
       {
-        source: '/:locale(tr|en|ru|uk)/markalar',
+        source: '/:locale(tr|en|ru|uk|ar)/markalar',
         destination: '/:locale',
         permanent: true,
       },
       {
-        source: '/:locale(tr|en|ru|uk)/katalog',
+        source: '/:locale(tr|en|ru|uk|ar)/katalog',
         destination: '/:locale',
         permanent: true,
       },
       {
-        source: '/:locale(tr|en|ru|uk)/ariza-kodlari',
+        source: '/:locale(tr|en|ru|uk|ar)/ariza-kodlari',
         destination: '/:locale/ariza-cozumleri',
         permanent: true,
       },
       {
-        source: '/:locale(tr|en|ru|uk)/bilgi-bankasi',
+        source: '/:locale(tr|en|ru|uk|ar)/bilgi-bankasi',
         destination: '/:locale/ariza-cozumleri',
         permanent: true,
       },
       {
-        source: '/:locale(tr|en|ru|uk)/blog',
+        source: '/:locale(tr|en|ru|uk|ar)/blog',
         destination: '/:locale/ariza-cozumleri',
         permanent: true,
       }

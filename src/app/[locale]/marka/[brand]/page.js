@@ -1,12 +1,15 @@
 import { getSortedPostsData } from '@/lib/blog';
 import Link from 'next/link';
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
-  const { brand } = await params;
+  const { brand, locale } = await params;
   const brandName = brand.toUpperCase();
   return {
     title: `${brandName} Arıza Çözümleri | Bursalı Oto`,
     description: `${brandName} marka premium araçlarda sık görülen arızalar ve uzman çözümleri.`,
+    alternates: buildCanonical(locale, `marka/${brand}`)
   };
 }
 

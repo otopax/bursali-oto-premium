@@ -269,19 +269,31 @@ model Customer {
 }
 
 model CustomerVehicle {
-  id          String   @id @default(uuid())
-  customerId  String
-  customer    Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
-  tenantId    String
-  tenant      Tenant   @relation(fields: [tenantId], references: [id])
+  id               String   @id @default(uuid())
+  customerId       String
+  customer         Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  tenantId         String
+  tenant           Tenant   @relation(fields: [tenantId], references: [id])
   
-  plate       String   // Plaka (VIP Garaj login için kritik)
-  vin         String?  // Şasi No
-  brand       String   // Örn: BMW
-  model       String   // Örn: 320i
-  year        Int?
+  plate            String   // Plaka (VIP Garaj login için kritik)
+  vin              String?  // Şasi No
+  brand            String   // Örn: BMW
+  model            String   // Örn: 320i
+  year             Int?
   
-  workOrders  WorkOrder[]
+  // Phase 4: Vehicle Intelligence Platform Alanları
+  fuelType         String?
+  engineCode       String?
+  transmissionCode String?
+  oilSpec          String?
+  lastServiceDate  DateTime?
+  lastServiceKm    Int?
+  lastObdCodes     Json?
+  healthScore      Int?     @default(100) // 0-100 arası araç sağlık skoru
+  
+  workOrders       WorkOrder[]
+  serviceHistories ServiceHistory[]
+  diagnosticLogs   DiagnosticLog[]
 
   createdAt   DateTime @default(now())
 
@@ -360,6 +372,41 @@ model Fuse {
 
   @@index([fuseBoxId])
 }
+// ----- YENİ: Phase 4 Araç Zeka Platformu Modelleri -----
+model ServiceHistory {
+  id              String   @id @default(uuid())
+  vehicleId       String
+  vehicle         CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  
+  date            DateTime
+  mileage         Int
+  type            String   // Örn: Periyodik Bakım, Ağır Bakım, Arıza Onarımı
+  description     String   @db.Text
+  replacedParts   Json?    // Değişen parçaların listesi
+  cost            Float?
+  
+  createdAt       DateTime @default(now())
+  
+  @@index([vehicleId])
+}
+
+model DiagnosticLog {
+  id              String   @id @default(uuid())
+  vehicleId       String
+  vehicle         CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  
+  symptoms        String   @db.Text
+  aiSuggestion    String   @db.Text
+  aiConfidence    Float?
+  
+  userFeedback    String?  // Kullanıcı "bu doğruydu" veya "farklı bir şey çıktı" diyebilir
+  actualOutcome   String?  @db.Text // Servis sonucu gerçek arızanın ne olduğu
+  
+  createdAt       DateTime @default(now())
+  
+  @@index([vehicleId])
+}
+
 model SocialLead {
   id          Int      @id @default(autoincrement())
   platform    String   @default("WEBSITE_BOT")

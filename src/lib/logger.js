@@ -1,21 +1,37 @@
-const winston = require('winston');
+import winston from 'winston';
 
 /**
- * 🚀 V4.0 OBSERVABILITY: Structured JSON Logger
- * Replaces console.log with an enterprise-grade JSON logger.
- * Captures Timestamps, Correlation IDs, and Service context automatically.
+ * 🚀 V4.0 OBSERVABILITY: Structured JSON Logger (Phase 4)
+ * Categorized logs for production monitoring
  */
-const logger = winston.createLogger({
-  level: process.env.LOG_LEVEL || 'info',
-  format: winston.format.combine(
-    winston.format.timestamp(),
-    winston.format.errors({ stack: true }),
-    winston.format.json() // Perfect for Grafana/ELK/Datadog ingestion
-  ),
-  defaultMeta: { service: 'bursali-oto-digital' },
-  transports: [
-    new winston.transports.Console()
-  ],
-});
+const createCategorizedLogger = (category) => {
+  return winston.createLogger({
+    level: process.env.LOG_LEVEL || 'info',
+    format: winston.format.combine(
+      winston.format.timestamp(),
+      winston.format.errors({ stack: true }),
+      winston.format.json()
+    ),
+    defaultMeta: { service: 'bursali-oto-digital', category },
+    transports: [
+      new winston.transports.Console()
+    ],
+  });
+};
 
-module.exports = logger;
+export const logger = {
+  // 1. Application Logs (Sistem hataları, genel metrikler)
+  app: createCategorizedLogger('APPLICATION'),
+  
+  // 2. Audit Logs (Kullanıcının yaptığı önemli eylemler)
+  audit: createCategorizedLogger('AUDIT'),
+  
+  // 3. Security Logs (Giriş denemeleri, şüpheli hareketler)
+  security: createCategorizedLogger('SECURITY'),
+  
+  // 4. AI Logs (Tool çağrıları, süreleri, API Timeout durumları)
+  ai: createCategorizedLogger('AI_DIAGNOSTICS'),
+  
+  // 5. Business Logs (Kritik iş metrikleri - Randevu, teklif)
+  business: createCategorizedLogger('BUSINESS'),
+};

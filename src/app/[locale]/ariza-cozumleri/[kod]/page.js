@@ -13,6 +13,8 @@ function extractFirstSentence(text) {
   return firstDot !== -1 ? cleanText.substring(0, firstDot + 1).replace(/\n/g, ' ').trim() : cleanText.substring(0, 150) + '...';
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { kod, locale } = await params;
   const postData = await getPostData(kod, 'faults');
@@ -23,17 +25,23 @@ export async function generateMetadata({ params }) {
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri ve onarım rehberleri.';
   const shortDescription = description.length > 150 ? description.substring(0, 155) + '...' : description;
-  const canonicalUrl = `https://www.bursaliotoservis.com/${locale}/ariza-cozumleri/${kod}`;
   const ogImage = postData.image || 'https://www.bursaliotoservis.com/default-fault.jpg';
+  const canonicalData = buildCanonical(locale, `ariza-cozumleri/${kod}`);
+
+  // Max 60 chars title
+  let titleStr = `${postData.title} Çözümü | Bursalı Oto`;
+  if (titleStr.length > 60) {
+     titleStr = `${postData.title} Çözümü`.substring(0, 60);
+  }
 
   return {
-    title: `${postData.title} | Bursalı Oto Servis Fethiye`,
+    title: titleStr,
     description: shortDescription,
     keywords: [`${postData.brand} ${postData.title.toLowerCase()}`, 'Fethiye oto servis', 'arıza çözümü', 'Bursalı Oto'],
     openGraph: {
-      title: `${postData.title} | Bursalı Oto`,
+      title: titleStr,
       description: shortDescription,
-      url: canonicalUrl,
+      url: canonicalData.canonical,
       siteName: 'Bursalı Oto Servis',
       images: [
         {
@@ -48,30 +56,23 @@ export async function generateMetadata({ params }) {
     },
     twitter: {
       card: 'summary_large_image',
-      title: postData.title,
+      title: titleStr,
       description: shortDescription,
       images: [ogImage],
     },
     robots: { index: true, follow: true },
-    alternates: { 
-      canonical: canonicalUrl,
-      languages: {
-        'tr': `https://www.bursaliotoservis.com/tr/ariza-cozumleri/${kod}`,
-        'en': `https://www.bursaliotoservis.com/en/ariza-cozumleri/${kod}`,
-        'de': `https://www.bursaliotoservis.com/de/ariza-cozumleri/${kod}`,
-        'ru': `https://www.bursaliotoservis.com/ru/ariza-cozumleri/${kod}`,
-        'x-default': `https://www.bursaliotoservis.com/tr/ariza-cozumleri/${kod}`
-      }
-    }
+    alternates: canonicalData
   };
 }
 
 export async function generateStaticParams() {
   const paths = getAllPostIds('faults');
   const params = [];
-  // Harcoded 'tr' for now assuming single locale or modify if multiple locales are supported
+  const LOCALES = ['tr', 'en', 'ru', 'uk', 'ar'];
   for (const p of paths) {
-    params.push({ locale: 'tr', kod: p.params.slug });
+    for (const loc of LOCALES) {
+      params.push({ locale: loc, kod: p.params.slug });
+    }
   }
   return params;
 }
@@ -272,6 +273,53 @@ export default async function ArizaCozumDetailPage({ params }) {
           </div>
         </header>
 
+        {/* Diagnostic Summary Box (Priority 2 Lead Magnet) */}
+        {postData.riskLevel && (
+          <div style={{
+            background: 'linear-gradient(145deg, #18181b 0%, #09090b 100%)',
+            border: '1px solid rgba(212, 175, 55, 0.4)',
+            borderRadius: '16px',
+            padding: '2rem',
+            marginBottom: '3rem',
+            boxShadow: '0 10px 30px -10px rgba(0,0,0,0.8)'
+          }}>
+            <h2 style={{ fontSize: '1.4rem', color: 'var(--accent-gold)', marginBottom: '1.5rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '0.5rem' }}>
+              Hızlı Arıza Teşhis Özeti
+            </h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
+              <div>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '0.2rem' }}>Risk Seviyesi</span>
+                <strong style={{ color: postData.riskLevel === 'Kritik' || postData.riskLevel === 'Yüksek' ? '#ef4444' : '#eab308', fontSize: '1.1rem' }}>
+                  {postData.riskLevel}
+                </strong>
+              </div>
+              <div>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '0.2rem' }}>Araç Kullanılabilir Mi?</span>
+                <strong style={{ color: '#fff', fontSize: '1.1rem' }}>{postData.canDrive || 'Servise Danışın'}</strong>
+              </div>
+              <div>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '0.2rem' }}>Tahmini Onarım Süresi</span>
+                <strong style={{ color: '#fff', fontSize: '1.1rem' }}>{postData.estimatedTime || 'Arıza Tespiti Gerekli'}</strong>
+              </div>
+              <div>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '0.2rem' }}>Tahmini Maliyet Aralığı</span>
+                <strong style={{ color: '#fff', fontSize: '1.1rem' }}>{postData.estimatedCost || 'Tespitten Sonra'}</strong>
+              </div>
+            </div>
+            {postData.potentialCauses && (
+              <div style={{ marginTop: '1.5rem', paddingTop: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+                <span style={{ color: 'var(--text-muted)', fontSize: '0.9rem', display: 'block', marginBottom: '0.5rem' }}>Muhtemel Nedenler</span>
+                <p style={{ color: '#ccc', margin: 0, lineHeight: '1.5' }}>{postData.potentialCauses}</p>
+              </div>
+            )}
+            <div style={{ marginTop: '2rem', textAlign: 'center' }}>
+              <a href="https://wa.me/905548812021" className="btn btn-gold" style={{ display: 'inline-block', padding: '1rem 2rem', textDecoration: 'none', fontWeight: 'bold' }}>
+                Uzmana Danış / Randevu Al
+              </a>
+            </div>
+          </div>
+        )}
+
         <div 
           className="blog-content glass-panel"
           style={{ 
@@ -286,6 +334,27 @@ export default async function ArizaCozumDetailPage({ params }) {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
         />
         
+        {/* Teknik Onarım ve İşçilik Bloğu (SEO Thin Content Çözümü) */}
+        <section style={{ marginTop: '3rem', padding: '2rem', background: '#0a0a0c', borderRadius: '16px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '1.5rem' }}>
+            {postData.brand} {postData.title} Teknik Onarım Süreci
+          </h2>
+          <div style={{ color: '#ccc', lineHeight: '1.8' }}>
+            <p>
+              Bursalı Oto Servis olarak Fethiye'de {postData.brand} araçlarında karşılaşılan <strong>{postData.title}</strong> sorunu için ezbere parça değişimi yerine, öncelikle OEM standartlarında bilgisayarlı arıza teşhisi uyguluyoruz. Bu arızanın kök nedeni genellikle {postData.potentialCauses || 'sensör okuma hataları, mekanik aşınmalar veya elektronik beyin (ECU) iletişim kopukluklarından'} kaynaklanır.
+            </p>
+            <h3 style={{ fontSize: '1.2rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>Kullanılan Ekipman ve İşçilik Süresi</h3>
+            <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
+              <li><strong>Teşhis Cihazı:</strong> {diagnosticTool}</li>
+              <li><strong>Tahmini İşçilik Süresi:</strong> {postData.estimatedTime || 'Aracın durumuna göre 2-4 saat arası'}</li>
+              <li><strong>Kullanılan Yedek Parça:</strong> %100 Orijinal (OEM) veya Garantili Logolu Yedek Parça</li>
+            </ul>
+            <p>
+              Müdahale edilmediği takdirde aracın yürüyen aksamına veya motor kompresyonuna zarar verebilecek olan bu sorun, uzman teknisyenlerimiz tarafından 6 ay / 10.000 KM işçilik garantisiyle çözülmektedir.
+            </p>
+          </div>
+        </section>
+
         {/* FAQ Section UI */}
         <section style={{ marginTop: '3rem', padding: '2rem', background: '#121212', borderRadius: '16px', border: '1px solid #333' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#fff', marginBottom: '1.5rem' }}>Sıkça Sorulan Sorular</h2>
@@ -311,13 +380,13 @@ export default async function ArizaCozumDetailPage({ params }) {
 
         {relatedFaults.length > 0 && (
           <div style={{ marginTop: '4rem' }}>
-            <h3 style={{ fontSize: '1.8rem', color: 'var(--text-light)', marginBottom: '1.5rem', fontWeight: 'bold' }}>
+            <h2 style={{ fontSize: '1.8rem', color: 'var(--text-light)', marginBottom: '1.5rem', fontWeight: 'bold' }}>
               Diğer {postData.brand} Arıza Çözümleri
-            </h3>
+            </h2>
             <div className="grid">
               {relatedFaults.map(fault => (
                 <a key={fault.id} href={`/ariza-cozumleri/${fault.id}`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.25rem', textDecoration: 'none' }}>
-                  <h4 style={{ color: 'var(--accent-gold)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '1.1rem' }}>{fault.title}</h4>
+                  <h3 style={{ color: 'var(--accent-gold)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '1.1rem' }}>{fault.title}</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{fault.description || extractFirstSentence(fault.rawContent)}</p>
                 </a>
               ))}

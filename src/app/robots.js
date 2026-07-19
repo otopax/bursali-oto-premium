@@ -9,6 +9,10 @@ export default function robots() {
   return {
     rules: [
       {
+        userAgent: ['GPTBot', 'ClaudeBot', 'Bytespider', 'CCBot', 'Google-Extended', 'ChatGPT-User', 'OAI-SearchBot'],
+        allow: '/',
+      },
+      {
         userAgent: '*',
         allow: '/',
         disallow: [
@@ -20,9 +24,7 @@ export default function robots() {
           '/login/',
           '/*/login/',
           '/_next/',
-          '/private/',
-          '/sentry-example-page',
-          '/sentry-example-api',
+          '/private/'
         ],
       },
 

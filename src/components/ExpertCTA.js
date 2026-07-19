@@ -1,12 +1,21 @@
 'use client';
 import React from 'react';
 import { FaWhatsapp, FaWrench, FaCheckCircle, FaMapMarkerAlt, FaRobot } from 'react-icons/fa';
+import { trackEvent } from '@/lib/tracking';
 
 export default function ExpertCTA({ brand, reviewCount }) {
   const WHATSAPP_NUMBER = process.env.NEXT_PUBLIC_WHATSAPP || "905548812021";
   const MAPS_LINK = process.env.NEXT_PUBLIC_MAPS_LINK || "https://maps.google.com/?cid=1836972871363186886";
   const WHATSAPP_TEXT = `Merhaba, ${brand ? brand + ' ' : ''}aracımın arızası için sitenizdeki makaleyi okudum, bilgi almak istiyorum.`;
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_TEXT)}`;
+
+  const handleMapsClick = () => {
+    trackEvent('conversion', { send_to: 'AW-CONVERSION_ID', event_category: 'navigation', event_label: 'maps_route' });
+  };
+
+  const handleWhatsAppClick = () => {
+    trackEvent('conversion', { send_to: 'AW-CONVERSION_ID', event_category: 'lead', event_label: 'whatsapp_msg' });
+  };
 
   return (
     <div className="expert-cta glass-panel" style={{
@@ -88,6 +97,7 @@ export default function ExpertCTA({ brand, reviewCount }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
+              onClick={handleMapsClick}
               style={{ 
                 background: 'var(--accent-gold)', 
                 color: '#000', 
@@ -106,6 +116,7 @@ export default function ExpertCTA({ brand, reviewCount }) {
               target="_blank"
               rel="noopener noreferrer"
               className="btn"
+              onClick={handleWhatsAppClick}
               style={{ 
                 background: '#25D366', 
                 color: '#fff', 
