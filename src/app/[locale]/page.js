@@ -31,6 +31,7 @@ export default async function Home({ params }) {
             alt="Bursalı Oto Servis Fethiye" 
             fill 
             priority
+            fetchPriority="high"
             sizes="(max-width: 1600px) 100vw, 1600px"
             quality={85}
             style={{ objectFit: 'cover', zIndex: -2 }}

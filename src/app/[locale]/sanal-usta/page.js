@@ -4,6 +4,7 @@ import { useChat } from '@ai-sdk/react';
 import { useRef, useEffect, useState } from 'react';
 import { generateDiagnosticPDF } from '@/lib/pdfGenerator';
 import { trackEvent, AnalyticsEvent } from '@/lib/analytics';
+import Image from 'next/image';
 
 export default function SanalUstaPage() {
   const [isListening, setIsListening] = useState(false);
@@ -274,11 +275,16 @@ export default function SanalUstaPage() {
                  animation: 'pulseGoldText 2.5s infinite'
                }}>BURSALI OTO SERVİS</h2>
             </div>
-            <img 
-              src="/avatar_hyper.png" 
-              alt="Sanal Usta Avatar" 
-              style={{ width: '100%', maxWidth: '260px', borderRadius: '16px', border: '2px solid var(--accent-gold)', boxShadow: '0 10px 30px rgba(0,0,0,0.8)' }} 
-            />
+            <div style={{ position: 'relative', width: '100%', maxWidth: '260px', aspectRatio: '1/1', borderRadius: '16px', border: '2px solid var(--accent-gold)', boxShadow: '0 10px 30px rgba(0,0,0,0.8)', overflow: 'hidden' }}>
+              <Image 
+                src="/avatar_hyper.png" 
+                alt="Sanal Usta Avatar" 
+                fill
+                priority={true}
+                sizes="(max-width: 768px) 100vw, 260px"
+                style={{ objectFit: 'cover' }} 
+              />
+            </div>
             <h3 style={{ color: 'var(--text-light)', marginTop: '1.5rem', fontSize: '1.5rem' }}>Sistem: Çevrimiçi</h3>
             <p style={{ color: '#10b981', display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '0.5rem' }}>
               <span style={{ width: '10px', height: '10px', background: '#10b981', borderRadius: '50%', display: 'inline-block', animation: 'pulseGreen 2s infinite' }}></span>
@@ -291,8 +297,8 @@ export default function SanalUstaPage() {
             
             {/* Chat Header */}
             <div style={{ background: 'rgba(212, 175, 55, 0.1)', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-              <div style={{ width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', border: '2px solid var(--accent-gold)' }}>
-                <img src="/avatar_hyper.png" alt="AI" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <div style={{ width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', border: '2px solid var(--accent-gold)', position: 'relative' }}>
+                <Image src="/avatar_hyper.png" alt="AI" fill sizes="40px" style={{ objectFit: 'cover' }} />
               </div>
               <div>
                 <h2 style={{ fontSize: '1.3rem', margin: 0, color: 'var(--text-light)' }}>Arıza Teşhis Ekranı</h2>
