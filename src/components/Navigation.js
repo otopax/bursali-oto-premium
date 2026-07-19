@@ -62,20 +62,20 @@ export default function Navigation({ locale }) {
             animation: blink-sanal-usta 1.5s infinite alternate;
           }
           
-          /* FORCED LAYOUT FIX TO BYPASS CACHE */
+          /* CLEANED UP FORCED LAYOUT FIX */
           .nav-links {
-            display: flex !important;
-            flex-direction: row !important;
-            align-items: center !important;
-            gap: 1.5rem !important;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1.5rem;
           }
           .hamburger-icon {
-            display: none !important;
+            display: none;
           }
           
           @media (max-width: 768px) {
             .hamburger-icon {
-              display: flex !important;
+              display: flex;
               background: transparent;
               border: none;
               color: white;
@@ -85,25 +85,25 @@ export default function Navigation({ locale }) {
             .hamburger-icon svg { width: 32px; height: 32px; }
             
             .nav-links {
-              display: none !important;
-              flex-direction: column !important;
-              position: absolute !important;
-              top: 64px !important;
-              left: 0 !important;
-              width: 100% !important;
-              background-color: var(--bg-dark) !important;
-              border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
-              padding: 1rem 0 1.5rem 0 !important;
-              gap: 0 !important;
+              display: none;
+              flex-direction: column;
+              position: absolute;
+              top: 64px;
+              left: 0;
+              width: 100%;
+              background-color: var(--bg-dark);
+              border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+              padding: 1rem 0 1.5rem 0;
+              gap: 0;
             }
             .nav-links.mobile-open {
               display: flex !important;
             }
             .nav-links a {
-              width: 100% !important;
-              padding: 1rem !important;
-              justify-content: flex-start !important;
-              border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+              width: 100%;
+              padding: 1rem;
+              justify-content: flex-start;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.03);
             }
           }
         `}} />

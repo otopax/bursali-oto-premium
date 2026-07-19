@@ -28,7 +28,7 @@ export default function Gallery() {
         marginBottom: '2rem'
       }}>
         {photos.slice(0, visibleCount).map((src, index) => (
-          <div key={index} className={`photo-item relative rounded-xl overflow-hidden bg-gray-800/50 ${index >= 8 ? 'hidden md:block' : ''}`} style={{ height: '300px' }}>
+          <div key={index} className={`photo-item relative rounded-xl overflow-hidden bg-gray-800/50 ${index >= 8 ? 'hidden md:block' : ''}`}>
             <div className="absolute inset-0 bg-gradient-to-r from-gray-800/0 via-gray-700/20 to-gray-800/0 animate-pulse"></div>
             <Image 
               src={src} 

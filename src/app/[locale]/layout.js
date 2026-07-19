@@ -7,6 +7,8 @@ import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
+import HreflangTags from '@/components/HreflangTags';
+
 const Chatbot = dynamic(() => import('@/components/Chatbot'));
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'));
 const CookieConsent = dynamic(() => import('@/components/CookieConsent'));
@@ -89,6 +91,7 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
       <head>
+        <HreflangTags />
       </head>
       <body className="mobile-padded-body">
         <style dangerouslySetInnerHTML={{__html: `

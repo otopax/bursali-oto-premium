@@ -11,7 +11,8 @@ const protectedRoutes = [
   '/teknik-kutuphane', 
   '/bilgi-bankasi', 
   '/katalog',
-  '/ariza-kodlari'
+  '/ariza-kodlari',
+  '/vip-garaj'
 ];
 
 export async function middleware(request) {
