@@ -69,7 +69,8 @@ export async function POST(req) {
   
   // DOKTOR MODU (Decision Trees) & RANDEVU SATIŞI & MDX VERİTABANI
   dynamicSystemPrompt += `\n\nDOKTOR MODU VE SATIŞ ODAKLI ASİSTAN: Asla eksik bilgiyle anında kesin bir teşhis koyma. Eğer arızanın kesin sebebini bulmak için kullanıcının verdiği şikayet yetersizse, bir Oto Diagnostik uzmanı gibi kısa sorular sor. 
-  ŞİMDİ ÇOK ÖNEMLİ: Müşteri bir arıza (örn: triger sesi, airmatic patlaması vb.) söylediğinde, MUTLAKA "searchChronicFaults" aracını kullanarak veritabanımızdaki makaleleri ara. Eğer eşleşen bir kronik arıza makalesi bulursan, kullanıcıya ŞU ŞEKİLDE HTML link ver: "Bu aracınızdaki kronik bir sorundur. Detaylı çözüm makalemizi buradan okuyabilirsiniz: <a href='/ariza-cozumleri/makale-slug' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>" (slug'ı id alanından al). Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
+  ŞİMDİ ÇOK ÖNEMLİ: Müşteri bir arıza (örn: triger sesi, airmatic patlaması vb.) söylediğinde, MUTLAKA "searchChronicFaults" aracını kullanarak veritabanımızdaki makaleleri ara. Eğer müşteri bir ARIZA KODU (Örn: P0420, P0171) sorarsa veya teorik bir bilgi isterse MUTLAKA "searchLibrary" aracını kullanarak Kütüphanemizdeki makaleleri ara.
+  Eğer eşleşen bir makale (Arıza Çözümü veya Kütüphane) bulursan, kullanıcıya ŞU ŞEKİLDE HTML link ver: "Bu konu hakkında detaylı makalemizi buradan okuyabilirsiniz: <a href='/kutuphane/makale-slug' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>". Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
   EN ÖNEMLİ KURAL: Her diyaloğun veya teşhisin sonunda KESİNLİKLE "Müsait olduğunuz bir zaman aracınızı Fethiye'deki özel servisimize getirin, ustalarımızla birlikte ücretsiz detaylı check-up yapalım ve kesin randevu oluşturalım. Randevu talebinizi hemen iletebilirim, ne dersiniz?" şeklinde RANDEVU (Lead) satışı yapmaya çalış. Arıza ciddiyse müşteriyi korkutmadan servise gelmesi gerektiğine ikna et!`;
 
 
@@ -99,6 +100,32 @@ export async function POST(req) {
               return { success: true, articles: results.map(r => ({ id: r.id, title: r.title, url: `/ariza-cozumleri/${r.id}` })) };
             }
             return { success: false, message: 'Eşleşen kronik arıza makalesi bulunamadı.' };
+          } catch(e) {
+            return { success: false, error: e.message };
+          }
+        }
+      }),
+      searchLibrary: tool({
+        description: 'Teknik Kütüphane (Library) içerisinde genel otomotiv bilgileri, arıza kodu makaleleri (örn: P0420 detaylı analizi) veya teknik terimler arar. Sonuçlar /kutuphane/ URL\'sine link vermek için kullanılır.',
+        parameters: z.object({
+          keyword: z.string().describe('Aranacak kelime veya arıza kodu (örn: P0171, triger sente sentezi, can-bus)')
+        }),
+        execute: async ({ keyword }) => {
+          try {
+            const allLibrary = getSortedPostsData('tr', 'library'); // Content/library klasörü
+            if (!allLibrary || allLibrary.length === 0) return { success: false, message: 'Kütüphane veritabanı henüz boş veya oluşturulmadı.' };
+            
+            const lowerKeyword = keyword.toLowerCase();
+            const results = allLibrary.filter(f => 
+              (f.title && f.title.toLowerCase().includes(lowerKeyword)) || 
+              (f.description && f.description.toLowerCase().includes(lowerKeyword)) ||
+              (f.tags && f.tags.some(tag => tag.toLowerCase().includes(lowerKeyword)))
+            ).slice(0, 3);
+            
+            if (results.length > 0) {
+              return { success: true, articles: results.map(r => ({ id: r.id, title: r.title, url: `/kutuphane/${r.id}` })) };
+            }
+            return { success: false, message: 'Kütüphanede eşleşen teknik makale bulunamadı.' };
           } catch(e) {
             return { success: false, error: e.message };
           }
