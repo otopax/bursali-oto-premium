@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 import { SearchEngine } from '@/domains/Search/SearchEngine';
-import logger from '@/lib/logger';
+import { logger } from '@/lib/logger';
 
 /**
  * Global Search API

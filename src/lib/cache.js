@@ -18,3 +18,10 @@ export async function getCache(key) {
 export async function setCache(key, value, ttlSeconds = 3600) {
   return await cacheRepository.set(key, value, ttlSeconds);
 }
+
+export const redis = cacheRepository.adapter.client || {
+  get: async () => null,
+  incr: async () => 1,
+  expire: async () => true,
+  set: async () => "OK"
+};
