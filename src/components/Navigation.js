@@ -30,16 +30,9 @@ export default function Navigation({ locale }) {
   }, [isOpen]);
 
   const getLinkStyle = (path) => ({
-    fontWeight: isActive(path) ? 'bold' : 'normal',
-    color: isActive(path) ? 'var(--primary)' : 'var(--text-light)',
-    borderBottom: isActive(path) ? '2px solid var(--primary)' : '2px solid transparent',
-    paddingBottom: '4px',
-    transition: 'all 0.3s ease',
-    minHeight: '48px',
-    display: 'flex',
-    alignItems: 'center',
-    width: '100%',
-    padding: '0.75rem 1rem'
+    fontWeight: isActive(path) ? '700' : '500',
+    color: isActive(path) ? 'var(--accent-gold)' : 'var(--text-light)',
+    borderBottom: isActive(path) ? '2px solid var(--accent-gold)' : '2px solid transparent',
   });
 
   return (
@@ -50,12 +43,11 @@ export default function Navigation({ locale }) {
         {/* Hamburger Icon (Mobile Only) */}
         <button 
           onClick={() => setIsOpen(!isOpen)} 
-          className="md:hidden flex items-center justify-center p-2 text-white bg-transparent border-none outline-none"
+          className="hamburger-icon"
           aria-expanded={isOpen}
           aria-label={isOpen ? "Menüyü Kapat" : "Menüyü Aç"}
-          style={{ width: '48px', height: '48px' }}
         >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
           </svg>
         </button>
@@ -69,10 +61,55 @@ export default function Navigation({ locale }) {
           .blink-sanal-usta {
             animation: blink-sanal-usta 1.5s infinite alternate;
           }
+          
+          /* FORCED LAYOUT FIX TO BYPASS CACHE */
+          .nav-links {
+            display: flex !important;
+            flex-direction: row !important;
+            align-items: center !important;
+            gap: 1.5rem !important;
+          }
+          .hamburger-icon {
+            display: none !important;
+          }
+          
+          @media (max-width: 768px) {
+            .hamburger-icon {
+              display: flex !important;
+              background: transparent;
+              border: none;
+              color: white;
+              padding: 8px;
+              cursor: pointer;
+            }
+            .hamburger-icon svg { width: 32px; height: 32px; }
+            
+            .nav-links {
+              display: none !important;
+              flex-direction: column !important;
+              position: absolute !important;
+              top: 64px !important;
+              left: 0 !important;
+              width: 100% !important;
+              background-color: var(--bg-dark) !important;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+              padding: 1rem 0 1.5rem 0 !important;
+              gap: 0 !important;
+            }
+            .nav-links.mobile-open {
+              display: flex !important;
+            }
+            .nav-links a {
+              width: 100% !important;
+              padding: 1rem !important;
+              justify-content: flex-start !important;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+            }
+          }
         `}} />
         
         {/* Desktop and Mobile Menu Links */}
-        <div className={`nav-links w-full md:w-auto md:flex items-center gap-6 ${isOpen ? 'flex flex-col absolute top-[64px] left-0 bg-[#09090b] border-b border-gray-800 pb-6 pt-4' : 'hidden md:flex'}`}>
+        <div className={`nav-links ${isOpen ? 'mobile-open' : ''}`}>
           
           <a href={`/${locale}/ariza-cozumleri`} aria-label="Arıza Çözümleri" style={getLinkStyle('/ariza-cozumleri')}>
             {locale === 'tr' ? 'Arıza Çözümleri' : 'Troubleshooting'}

@@ -371,8 +371,28 @@ p {
   color: var(--text-light);
 }
 
+.hamburger-icon {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  width: 48px;
+  height: 48px;
+  outline: none;
+}
+.hamburger-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
 .nav-links {
-  gap: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
 }
 
 .nav-links a {
@@ -450,6 +470,34 @@ p {
   }
   
   .logo { font-size: 1.2rem; }
+
+  .hamburger-icon {
+    display: flex;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-dark);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem 0 1.5rem 0;
+    gap: 0;
+  }
+  
+  .nav-links a {
+    width: 100%;
+    padding: 1rem;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+  }
+
+  .nav-links.mobile-open {
+    display: flex;
+  }
 
   /* Mobile menu logic handled in Navigation.js using React state */
   

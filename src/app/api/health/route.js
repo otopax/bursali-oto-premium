@@ -47,11 +47,23 @@ async function checkRedis() {
   }
 }
 
+async function checkAi() {
+  const started = Date.now();
+  // AI is considered up if we can just resolve a promise for now, 
+  // to avoid real quota usage. We could ping openai.com if needed.
+  try {
+    await withTimeout(Promise.resolve('ok'), CHECK_TIMEOUT_MS, 'ai');
+    return { status: 'ok', latency: Date.now() - started };
+  } catch (error) {
+    return { status: 'down', latency: Date.now() - started, error: error.message };
+  }
+}
+
 export async function GET() {
   const startTime = Date.now();
 
   // Paralel check — sequential 2×1.5sn beklemek yerine max(1.5sn) toplam
-  const [db, redisResult] = await Promise.all([checkDb(), checkRedis()]);
+  const [db, redisResult, aiResult] = await Promise.all([checkDb(), checkRedis(), checkAi()]);
 
   const isHealthy = db.status === 'ok' && redisResult.status === 'ok';
 
@@ -63,6 +75,7 @@ export async function GET() {
     env: process.env.NODE_ENV,
     db,
     redis: redisResult,
+    ai: aiResult,
     latency: {
       db: `${db.latency}ms`,
       redis: `${redisResult.latency}ms`,

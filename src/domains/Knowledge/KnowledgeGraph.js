@@ -7,6 +7,41 @@ const prisma = globalForPrisma.prisma ?? new PrismaClient();
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 class KnowledgeGraph {
+  constructor() {
+    // Statik anlamsal ağ (SEO ve AI İç Linkleme için ağırlıklı graf)
+    this.semanticGraph = {
+      'P0420': [
+        { target: 'Lambda Sensörü', weight: 0.9 },
+        { target: 'Katalitik Konvertör', weight: 0.95 },
+        { target: 'O2 Sensörü', weight: 0.8 },
+        { target: 'Egzoz Kaçağı', weight: 0.4 },
+        { target: 'P0430', weight: 0.85 },
+        { target: 'BMW Servisi', weight: 0.2 },
+        { target: 'Sanal Usta', weight: 0.5 }
+      ],
+      'P0171': [
+        { target: 'Vakum Kaçağı', weight: 0.9 },
+        { target: 'MAF Sensörü', weight: 0.85 },
+        { target: 'Yakıt Pompası', weight: 0.6 }
+      ],
+      'Lambda': [
+        { target: 'O2 Sensörü', weight: 1.0 },
+        { target: 'Katalitik Konvertör', weight: 0.8 },
+        { target: 'Yakıt Trimleri', weight: 0.7 }
+      ]
+    };
+  }
+
+  getSemanticLinks(nodeName) {
+    if (!nodeName) return [];
+    const key = Object.keys(this.semanticGraph).find(k => k.toLowerCase() === nodeName.toLowerCase());
+    if (key) {
+      // Ağırlığa göre azalan sırada döndür
+      return this.semanticGraph[key].sort((a, b) => b.weight - a.weight);
+    }
+    return [];
+  }
+
   // Bir arıza kodundan başlayarak ilişkili tüm verileri getir (OEM -> Araç -> Motor -> ECU -> Sensör -> Video -> Parça)
   async getFaultDiagnosis(faultCode) {
     const result = await prisma.faultCode.findUnique({

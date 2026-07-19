@@ -11,9 +11,9 @@ import { redis } from '@/lib/cache';
  *   AI endpoint'lerinde true kullan → bot saldırısında Gemini kotasının patlamasını engeller.
  * @returns {Promise<{success: boolean, limit: number, remaining: number, degraded?: boolean}>}
  */
-export async function rateLimit(ip, limit = 60, windowSec = 60, opts = {}) {
+export async function rateLimit(namespace, identifier, limit = 60, windowSec = 60, opts = {}) {
   const { failClosed = false } = opts;
-  const key = `rate-limit:${ip}`;
+  const key = `rl:${namespace}:${identifier}`;
 
   try {
     const current = await redis.incr(key);

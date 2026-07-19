@@ -180,8 +180,8 @@ export async function POST(req) {
           code: z.string().describe('Arıza kodu (örn: P0171)')
         }),
         execute: async ({ brand, model, code }) => {
-          const cacheKey = `fault_${brand}_${model}_${code}`;
-          const cachedResult = await getCache(cacheKey);
+          const cacheKey = `${brand}_${model}_${code}`;
+          const cachedResult = await getCache('fault', cacheKey);
           if (cachedResult) return cachedResult;
 
           const data = await DataAccessLayer.getFaultCodeAnalysis(brand, model, code);
@@ -196,7 +196,7 @@ export async function POST(req) {
                 mechanic_advice: data.mechanic_advice || "Öneri yok"
               }
             };
-            await setCache(cacheKey, response, 3600); // 1 saat cache
+            await setCache('fault', cacheKey, response, 3600); // 1 saat cache
             return response;
           }
           return { success: false, message: 'Bu koda ait veri bulunamadı.' };
@@ -209,8 +209,8 @@ export async function POST(req) {
           model: z.string().describe('Araç modeli (örn: acura_adx_2025_2026_fuses)')
         }),
         execute: async ({ brand, model }) => {
-          const cacheKey = `fuse_${brand}_${model}`;
-          const cachedResult = await getCache(cacheKey);
+          const cacheKey = `${brand}_${model}`;
+          const cachedResult = await getCache('fuse', cacheKey);
           if (cachedResult) return cachedResult;
 
           const data = await DataAccessLayer.getFuseboxDiagrams(brand, model);
@@ -219,7 +219,7 @@ export async function POST(req) {
               success: true,
               data: data
             };
-            await setCache(cacheKey, response, 3600); // 1 saat cache
+            await setCache('fuse', cacheKey, response, 3600); // 1 saat cache
             return response;
           }
           return { success: false, message: 'Bu araca ait sigorta verisi bulunamadı.' };

@@ -21,7 +21,7 @@ export async function POST(req) {
     const correlationId = req.headers.get('x-correlation-id') || crypto.randomUUID();
 
     // 0. Rate Limit (fail-closed — AI kotasını korur)
-    const limitStatus = await rateLimit(ip, 20, 60, { failClosed: true });
+    const limitStatus = await rateLimit('ai:ask', ip, 20, 60, { failClosed: true });
     if (!limitStatus.success) {
       return NextResponse.json({ error: 'Too Many Requests' }, { status: 429 });
     }
@@ -83,6 +83,9 @@ export async function POST(req) {
     });
   } catch (error) {
     console.error('[API/ai/ask] Hata:', error.message);
+    if (error.message === 'CIRCUIT_BREAKER_OPEN_ALL') {
+      return NextResponse.json({ error: 'Sanal Usta şu anda yoğun, lütfen bizi arayın.' }, { status: 503 });
+    }
     return NextResponse.json({ error: error.message }, { status: 500 });
   }
 }

@@ -87,7 +87,7 @@ export async function decodeVin(vin) {
   
   try {
     // 1. Check Cache
-    const cachedData = await getCache(cacheKey);
+    const cachedData = await getCache('vin', vin);
     if (cachedData) {
       return { success: true, data: cachedData, source: 'cache' };
     }
@@ -106,7 +106,7 @@ export async function decodeVin(vin) {
     const enrichedData = enrichVehicleData(decodedData);
 
     // 5. Save to Cache (Cache for 30 days since VIN data doesn't change)
-    await setCache(cacheKey, enrichedData, 60 * 60 * 24 * 30);
+    await setCache('vin', vin, enrichedData, 60 * 60 * 24 * 30);
 
     return { success: true, data: enrichedData, source: 'api' };
 

@@ -51,7 +51,7 @@ class AIOrchestrator {
     const complexity = this.classifyPromptComplexity(prompt);
     const chain = this.getRoutingChain(complexity);
     let lastError = null;
-    const timeoutMs = 10000; // 10 saniye
+    const timeoutMs = 16000; // >15 saniye
 
     for (const provider of chain) {
       const cb = await this.getCircuitState(provider.name);
@@ -59,9 +59,9 @@ class AIOrchestrator {
       // [Kritik Fix]: Half-Open / Self-Healing mantığı
       if (cb.isOpen) {
         const elapsed = Date.now() - cb.lastFailureAt;
-        if (elapsed < 60000) {
-          console.log(`[CircuitBreaker] ⏳ ${provider.name} karantinada (${Math.round((60000-elapsed)/1000)}s kaldı). Atlanıyor.`);
-          continue; // 60 saniye dolmadıysa es geç
+        if (elapsed < 300000) {
+          console.log(`[CircuitBreaker] ⏳ ${provider.name} karantinada (${Math.round((300000-elapsed)/1000)}s kaldı). Atlanıyor.`);
+          continue; // 5 dakika dolmadıysa es geç
         } else {
           console.log(`[CircuitBreaker] 🔄 ${provider.name} karantina süresi doldu. Half-Open moduna geçiliyor.`);
           cb.isOpen = false; // Yarım açık (tekrar dene)
@@ -99,12 +99,12 @@ class AIOrchestrator {
         cb.lastFailureAt = Date.now();
         if (cb.failures >= 3) {
           cb.isOpen = true;
-          console.warn(`[CircuitBreaker] 🛑 ${provider.name} DEVRESİ AÇILDI! 60 saniye karantina.`);
+          console.warn(`[CircuitBreaker] 🛑 ${provider.name} DEVRESİ AÇILDI! 5 dakika karantina.`);
         }
         await this.setCircuitState(provider.name, cb);
       }
     }
-    throw new Error(`[AIOrchestrator] ❌ Tüm AI sağlayıcıları başarısız oldu. Son hata: ${lastError?.message || 'Bilinmeyen'}`);
+    throw new Error(`CIRCUIT_BREAKER_OPEN_ALL`);
   }
 }
 
