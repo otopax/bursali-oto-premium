@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-
 import HreflangTags from '@/components/HreflangTags';
 
 const Chatbot = dynamic(() => import('@/components/Chatbot'));
@@ -90,9 +89,6 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
-      <head>
-        <HreflangTags />
-      </head>
       <body className="mobile-padded-body">
         <style dangerouslySetInnerHTML={{__html: `
           @media (max-width: 768px) {
@@ -102,6 +98,7 @@ export default async function RootLayout({ children, params }) {
           }
         `}} />
         <StructuredData />
+        <HreflangTags />
 
         <Navigation locale={locale} />
         <Providers>
