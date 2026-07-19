@@ -29,6 +29,30 @@ class AIOrchestrator {
     return Promise.race([promise, timeoutPromise]).finally(() => clearTimeout(timeoutId));
   }
 
+  async logAnalytics(providerName, metrics) {
+    try {
+      const date = new Date().toISOString().split('T')[0];
+      const key = `analytics:ai:${date}`;
+      const pipeline = redisClient.pipeline();
+      
+      for (const [metric, value] of Object.entries(metrics)) {
+        pipeline.hincrby(key, `model:${providerName}:${metric}`, value);
+      }
+      
+      // Update latency_max manually
+      if (metrics.latency) {
+        const currentMax = await redisClient.hget(key, `model:${providerName}:latency_max`);
+        if (!currentMax || metrics.latency > parseInt(currentMax, 10)) {
+          pipeline.hset(key, `model:${providerName}:latency_max`, metrics.latency);
+        }
+      }
+      
+      await pipeline.exec();
+    } catch (e) {
+      console.warn(`[AI Analytics Error] ${e.message}`);
+    }
+  }
+
   classifyPromptComplexity(prompt) {
     const complexKeywords = ['analiz', 'karşılaştır', 'diyagram', 'verileri', 'sistematik'];
     if (prompt.length > 500) return 'COMPLEX';
@@ -87,6 +111,15 @@ class AIOrchestrator {
         cb.avgLatency = cb.avgLatency === 0 ? latency : (cb.avgLatency * 0.7) + (latency * 0.3);
         await this.setCircuitState(provider.name, cb);
 
+        // Analitik Log
+        const estimatedTokens = Math.ceil(prompt.length / 4) + Math.ceil(response.length / 4);
+        await this.logAnalytics(provider.name, {
+          requests: 1,
+          success: 1,
+          latency: latency,
+          tokens: estimatedTokens
+        });
+
         console.log(`[AIOrchestrator] ✅ ${provider.name} ile başarılı (${latency}ms)`);
         return response;
 
@@ -102,6 +135,14 @@ class AIOrchestrator {
           console.warn(`[CircuitBreaker] 🛑 ${provider.name} DEVRESİ AÇILDI! 5 dakika karantina.`);
         }
         await this.setCircuitState(provider.name, cb);
+        
+        // Analitik Log (Başarısızlık)
+        const isTimeout = error.message.includes('Timeout');
+        await this.logAnalytics(provider.name, {
+          requests: 1,
+          failure: 1,
+          timeout: isTimeout ? 1 : 0
+        });
       }
     }
     throw new Error(`CIRCUIT_BREAKER_OPEN_ALL`);
