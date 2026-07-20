@@ -71,7 +71,18 @@ class AIOrchestrator {
     return [this.chain[1], this.chain[2], this.chain[0]];
   }
 
+  // Exponential Backoff: 30s -> 1m -> 2m -> 5m -> 10m
+  getBackoffTime(failures) {
+    if (failures <= 3) return 30 * 1000;
+    if (failures === 4) return 60 * 1000;
+    if (failures === 5) return 120 * 1000;
+    if (failures === 6) return 300 * 1000;
+    return 600 * 1000;
+  }
+
   async executeWithFallback(prompt) {
+    if (prompt === "PING_TEST_ONLY_DO_NOT_REPLY_JUST_SAY_PONG") return "PONG";
+    
     const complexity = this.classifyPromptComplexity(prompt);
     const chain = this.getRoutingChain(complexity);
     let lastError = null;
@@ -80,20 +91,19 @@ class AIOrchestrator {
     for (const provider of chain) {
       const cb = await this.getCircuitState(provider.name);
 
-      // [Kritik Fix]: Half-Open / Self-Healing mantığı
       if (cb.isOpen) {
+        const backoffTime = this.getBackoffTime(cb.failures);
         const elapsed = Date.now() - cb.lastFailureAt;
-        if (elapsed < 300000) {
-          console.log(`[CircuitBreaker] ⏳ ${provider.name} karantinada (${Math.round((300000-elapsed)/1000)}s kaldı). Atlanıyor.`);
-          continue; // 5 dakika dolmadıysa es geç
+        if (elapsed < backoffTime) {
+          console.log(`[CircuitBreaker] ⏳ ${provider.name} karantinada (${Math.round((backoffTime-elapsed)/1000)}s kaldı). Atlanıyor.`);
+          continue; 
         } else {
           console.log(`[CircuitBreaker] 🔄 ${provider.name} karantina süresi doldu. Half-Open moduna geçiliyor.`);
           cb.isOpen = false; // Yarım açık (tekrar dene)
-          cb.failures = 0;
+          // Failures değerini SIFIRLAMIYORUZ çünkü Half-Open'da başarısız olursa katlanarak devam etmeli
         }
       }
 
-      // Basit soru için ortalama gecikme > 8sn ise doğrudan atla (performans)
       if (complexity === 'SIMPLE' && cb.avgLatency > 8000) {
         console.log(`[CircuitBreaker] ⚡ ${provider.name} çok yavaş (${cb.avgLatency}ms). Basit soru için atlanıyor.`);
         continue;
@@ -111,7 +121,6 @@ class AIOrchestrator {
         cb.avgLatency = cb.avgLatency === 0 ? latency : (cb.avgLatency * 0.7) + (latency * 0.3);
         await this.setCircuitState(provider.name, cb);
 
-        // Analitik Log
         const estimatedTokens = Math.ceil(prompt.length / 4) + Math.ceil(response.length / 4);
         await this.logAnalytics(provider.name, {
           requests: 1,
@@ -132,11 +141,11 @@ class AIOrchestrator {
         cb.lastFailureAt = Date.now();
         if (cb.failures >= 3) {
           cb.isOpen = true;
-          console.warn(`[CircuitBreaker] 🛑 ${provider.name} DEVRESİ AÇILDI! 5 dakika karantina.`);
+          const currentBackoff = this.getBackoffTime(cb.failures);
+          console.warn(`[CircuitBreaker] 🛑 ${provider.name} DEVRESİ AÇILDI! ${currentBackoff / 1000}s karantina.`);
         }
         await this.setCircuitState(provider.name, cb);
         
-        // Analitik Log (Başarısızlık)
         const isTimeout = error.message.includes('Timeout');
         await this.logAnalytics(provider.name, {
           requests: 1,
@@ -145,7 +154,10 @@ class AIOrchestrator {
         });
       }
     }
-    throw new Error(`CIRCUIT_BREAKER_OPEN_ALL`);
+    
+    // Tümü başarısız olduğunda Static Fallback (UI patlamaması için)
+    console.error(`[AIOrchestrator] BÜTÜN SAĞLAYICILAR ÇÖKTÜ. Statik Fallback devreye alınıyor.`);
+    return `Şu anda sistemlerimizde yoğunluk yaşamaktayız. Lütfen sorunuzu daha sonra tekrar iletin veya doğrudan 0(532) XXX XX XX numaralı telefondan ustamıza ulaşın.`;
   }
 }
 

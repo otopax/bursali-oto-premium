@@ -23,6 +23,22 @@ export async function middleware(request) {
   const pathname = request.nextUrl.pathname;
   request.headers.set('x-current-path', pathname);
   
+  // 1.5 Global Rate Limiting (Lazy-Loaded for Fail-Open)
+  try {
+    const { rateLimit } = await import('@/lib/rate-limit');
+    // Default rate limit for public pages: 200 reqs / 60 seconds.
+    // IP is usually available in x-forwarded-for or remoteAddress
+    const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
+    const rl = await rateLimit('global', ip, 200, 60, { failClosed: false });
+    
+    if (!rl.success) {
+      return new NextResponse('Too Many Requests', { status: 429 });
+    }
+  } catch (err) {
+    // Fail-Open: Redis fails, we let the traffic through.
+    console.warn('[Middleware] Global rate limiting error (Fail-Open active):', err.message);
+  }
+  
   // 2. Güvenlik Kontrolü (Authentication)
   // Route'un başındaki dili (/tr veya /en) kesip ana rotayı buluyoruz
   const pathWithoutLocale = pathname.replace(/^\/[^\/]+/, '') || pathname;

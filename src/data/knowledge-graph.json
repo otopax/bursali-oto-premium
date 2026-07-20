@@ -1,0 +1,67 @@
+{
+  "entities": {
+    "P0420": {
+      "type": "Fault",
+      "description": "Catalyst System Efficiency Below Threshold (Bank 1)",
+      "severity": "HIGH",
+      "related": [
+        { "id": "O2_SENSOR", "type": "Part", "weight": 0.9 },
+        { "id": "CATALYTIC_CONVERTER", "type": "Part", "weight": 0.95 }
+      ]
+    },
+    "P0171": {
+      "type": "Fault",
+      "description": "System Too Lean (Bank 1)",
+      "severity": "HIGH",
+      "related": [
+        { "id": "MAF_SENSOR", "type": "Part", "weight": 0.85 },
+        { "id": "VACUUM_LEAK", "type": "Symptom", "weight": 0.9 }
+      ]
+    },
+    "O2_SENSOR": {
+      "type": "Part",
+      "name": "Oxygen Sensor",
+      "related": [
+        { "id": "P0420", "type": "Fault", "weight": 1.0 },
+        { "id": "P0133", "type": "Fault", "weight": 0.8 }
+      ]
+    },
+    "CATALYTIC_CONVERTER": {
+      "type": "Part",
+      "name": "Katalitik Konvertör",
+      "related": [
+        { "id": "P0420", "type": "Fault", "weight": 1.0 }
+      ]
+    },
+    "BMW": {
+      "type": "Brand",
+      "name": "BMW",
+      "related": [
+        { "id": "N20", "type": "Engine", "weight": 1.0 },
+        { "id": "B48", "type": "Engine", "weight": 1.0 }
+      ]
+    },
+    "N20": {
+      "type": "Engine",
+      "name": "N20B20",
+      "related": [
+        { "id": "BMW", "type": "Brand", "weight": 1.0 },
+        { "id": "TIMING_CHAIN", "type": "Part", "weight": 0.9 }
+      ]
+    },
+    "TIMING_CHAIN": {
+      "type": "Part",
+      "name": "Eksantrik Zinciri",
+      "related": [
+        { "id": "N20", "type": "Engine", "weight": 0.9 },
+        { "id": "ARTICLE_BMW_CHAIN", "type": "Article", "weight": 1.0 }
+      ]
+    },
+    "ARTICLE_BMW_CHAIN": {
+      "type": "Article",
+      "title": "BMW N20 Zincir Sesi ve Çözümü",
+      "url": "/tr/ariza-cozumleri/bmw-n20-zincir-degisimi",
+      "related": []
+    }
+  }
+}

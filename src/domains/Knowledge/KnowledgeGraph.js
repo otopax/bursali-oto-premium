@@ -8,38 +8,49 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
 class KnowledgeGraph {
   constructor() {
-    // Statik anlamsal ağ (SEO ve AI İç Linkleme için ağırlıklı graf)
-    this.semanticGraph = {
-      'P0420': [
-        { target: 'Lambda Sensörü', weight: 0.9 },
-        { target: 'Katalitik Konvertör', weight: 0.95 },
-        { target: 'O2 Sensörü', weight: 0.8 },
-        { target: 'Egzoz Kaçağı', weight: 0.4 },
-        { target: 'P0430', weight: 0.85 },
-        { target: 'BMW Servisi', weight: 0.2 },
-        { target: 'Sanal Usta', weight: 0.5 }
-      ],
-      'P0171': [
-        { target: 'Vakum Kaçağı', weight: 0.9 },
-        { target: 'MAF Sensörü', weight: 0.85 },
-        { target: 'Yakıt Pompası', weight: 0.6 }
-      ],
-      'Lambda': [
-        { target: 'O2 Sensörü', weight: 1.0 },
-        { target: 'Katalitik Konvertör', weight: 0.8 },
-        { target: 'Yakıt Trimleri', weight: 0.7 }
-      ]
-    };
+    this.graphData = require('../../data/knowledge-graph.json');
+  }
+
+  /**
+   * Entity'e (Düğüm) bağlı ilişkili düğümleri getirir
+   * @param {string} nodeId - Entity ID (örn: P0420, N20)
+   * @param {number} depth - Derinlik (şu an sadece 1. derece ilişkiler destekleniyor)
+   */
+  getRelatedEntities(nodeId, depth = 1) {
+    if (!nodeId || !this.graphData.entities) return [];
+    
+    // Exact match
+    let node = this.graphData.entities[nodeId];
+    
+    // Fallback: Case-insensitive match if exact not found
+    if (!node) {
+      const key = Object.keys(this.graphData.entities).find(k => k.toLowerCase() === nodeId.toLowerCase());
+      if (key) node = this.graphData.entities[key];
+    }
+    
+    if (!node || !node.related) return [];
+    
+    // Sort by weight descending
+    return node.related
+      .sort((a, b) => b.weight - a.weight)
+      .map(rel => {
+        const targetNode = this.graphData.entities[rel.id];
+        return {
+          id: rel.id,
+          type: rel.type,
+          weight: rel.weight,
+          details: targetNode || null
+        };
+      });
   }
 
   getSemanticLinks(nodeName) {
-    if (!nodeName) return [];
-    const key = Object.keys(this.semanticGraph).find(k => k.toLowerCase() === nodeName.toLowerCase());
-    if (key) {
-      // Ağırlığa göre azalan sırada döndür
-      return this.semanticGraph[key].sort((a, b) => b.weight - a.weight);
-    }
-    return [];
+    const related = this.getRelatedEntities(nodeName);
+    return related.map(r => ({
+      target: r.details ? (r.details.name || r.details.description || r.id) : r.id,
+      weight: r.weight,
+      url: r.details?.url || null
+    }));
   }
 
   // Bir arıza kodundan başlayarak ilişkili tüm verileri getir (OEM -> Araç -> Motor -> ECU -> Sensör -> Video -> Parça)

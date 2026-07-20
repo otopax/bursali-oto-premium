@@ -1,4 +1,4 @@
-import { cacheRepository } from './cache/CacheRepository';
+import { redis } from './redis';
 
 export const CACHE_TTL = {
   VIN: 30 * 24 * 60 * 60, // 30 Gün
@@ -14,7 +14,7 @@ export const CACHE_TTL = {
  */
 export async function getCache(namespace, identifier) {
   const key = `cache:${namespace}:${identifier}`;
-  return await cacheRepository.get(key);
+  return await redis.get(key);
 }
 
 /**
@@ -26,13 +26,7 @@ export async function getCache(namespace, identifier) {
  */
 export async function setCache(namespace, identifier, value, ttlSeconds = 3600) {
   const key = `cache:${namespace}:${identifier}`;
-  return await cacheRepository.set(key, value, ttlSeconds);
+  return await redis.set(key, value, { ex: ttlSeconds });
 }
 
-export const redis = cacheRepository.adapter.client || {
-  get: async () => null,
-  incr: async () => 1,
-  expire: async () => true,
-  set: async () => "OK",
-  ping: async () => "PONG"
-};
+export { redis };

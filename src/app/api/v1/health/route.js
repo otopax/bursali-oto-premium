@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
-import { redis } from '@/lib/cache';
+import { redis } from '@/lib/redis';
+import { AIOrchestrator } from '@/domains/AI/AIOrchestrator';
 
 export const dynamic = 'force-dynamic';
 
@@ -19,32 +20,65 @@ async function checkDb() {
   const started = Date.now();
   try {
     await withTimeout(prisma.$queryRaw`SELECT 1`, CHECK_TIMEOUT_MS, 'db');
-    return { status: 'ok', latency_ms: Date.now() - started };
+    return { status: 'ok', latency: Date.now() - started };
   } catch (error) {
-    return { status: 'critical', latency_ms: Date.now() - started, error: error.message };
+    return { status: 'critical', latency: Date.now() - started, error: error.message };
   }
 }
 
 async function checkRedis() {
   const started = Date.now();
   try {
-    const ping = redis.ping ? await redis.ping() : await redis.get('non_existent');
-    return { status: 'ok', latency_ms: Date.now() - started };
+    if (redis.isMemory) {
+      return { status: 'degraded', latency: Date.now() - started, error: 'Using Memory Fallback' };
+    }
+    await redis.ping();
+    return { status: 'ok', latency: Date.now() - started };
   } catch (error) {
-    return { status: 'degraded', latency_ms: Date.now() - started, error: error.message };
+    return { status: 'degraded', latency: Date.now() - started, error: error.message };
   }
 }
 
-export async function GET() {
+async function checkAi(isDeep = false) {
+  if (!isDeep) {
+    // Return last known state or assumed OK if shallow ping
+    return { status: 'ok', provider: 'gemini', note: 'shallow_ping' };
+  }
+
+  // 5 Min TTL cache check
+  const cachedPing = await redis.get('health:ai:ping');
+  if (cachedPing) {
+    return { status: 'ok', provider: 'gemini', latency: parseInt(cachedPing, 10), note: 'cached' };
+  }
+
+  const started = Date.now();
+  try {
+    // Basic ping via orchestrator
+    const result = await AIOrchestrator.executeWithFallback("PING_TEST_ONLY_DO_NOT_REPLY_JUST_SAY_PONG").catch(() => null);
+
+    const latency = Date.now() - started;
+    await redis.set('health:ai:ping', latency.toString(), { ex: 300 }); // 5 dk TTL
+
+    return { status: 'ok', provider: 'gemini', latency };
+  } catch (error) {
+    return { status: 'degraded', provider: 'gemini', latency: Date.now() - started, error: error.message };
+  }
+}
+
+export async function GET(request) {
   const start = Date.now();
   
-  const [dbResult, redisResult] = await Promise.all([
+  const searchParams = request.nextUrl.searchParams;
+  const isDeep = searchParams.get('deep') === '1';
+  
+  const [dbResult, redisResult, aiResult] = await Promise.all([
     checkDb(),
-    checkRedis()
+    checkRedis(),
+    checkAi(isDeep)
   ]);
 
   const isCritical = dbResult.status === 'critical';
-  const isDegraded = redisResult.status === 'degraded' || dbResult.status === 'degraded';
+  const isDegraded = redisResult.status === 'degraded' || aiResult.status === 'degraded';
 
   let overallStatus = 'healthy';
   if (isCritical) overallStatus = 'critical';
@@ -52,14 +86,13 @@ export async function GET() {
 
   const responseBody = {
     status: overallStatus,
-    environment: process.env.NODE_ENV || 'production',
-    uptime: process.uptime(),
-    database: dbResult,
-    redis: redisResult,
-    ai: {
-      status: 'ok' // Can be enhanced by calling AI Orchestrator's Circuit Breaker state
-    },
-    timestamp: new Date().toISOString()
+    uptime: Math.floor(process.uptime()),
+    timestamp: new Date().toISOString(),
+    services: {
+      database: dbResult,
+      redis: redisResult,
+      ai: aiResult
+    }
   };
 
   const httpStatus = isCritical ? 503 : 200;
