@@ -5,7 +5,7 @@ import { AIOrchestrator } from '@/domains/AI/AIOrchestrator';
 
 export const dynamic = 'force-dynamic';
 
-const CHECK_TIMEOUT_MS = 5000;
+const CHECK_TIMEOUT_MS = 15000; // Artırıldı: Ücretsiz DB cold start uyku modundan uyanma payı
 
 function withTimeout(promise, ms, label) {
   return Promise.race([

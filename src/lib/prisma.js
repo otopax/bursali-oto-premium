@@ -28,13 +28,27 @@ function createAuditLogExtension() {
             const newValues = {};
             let hasChanges = false;
 
-            // Simplified diff extraction based on what was updated
+            const SENSITIVE_FIELDS = ['passwordHash', 'mfaSecret', 'creditCard', 'token', 'jwt', 'authorization', 'cookie', 'apikey', 'iban', 'tc', 'vin'];
+            const PARTIAL_MASK_FIELDS = ['email', 'phone'];
+            
+            const maskValue = (key, value) => {
+              if (value === null || value === undefined) return value;
+              const k = key.toLowerCase();
+              if (SENSITIVE_FIELDS.some(f => k.includes(f))) return '***MASKED***';
+              if (PARTIAL_MASK_FIELDS.some(f => k.includes(f))) {
+                const str = String(value);
+                if (str.length > 4) return str.substring(0, 2) + '***' + str.substring(str.length - 2);
+                return '***';
+              }
+              return value;
+            };
+
             if (args.data) {
               for (const key of Object.keys(args.data)) {
                 // Sadece db'de değişenleri logla
                 if (oldData[key] !== undefined && result[key] !== undefined && oldData[key] !== result[key]) {
-                  oldValues[key] = oldData[key];
-                  newValues[key] = result[key];
+                  oldValues[key] = maskValue(key, oldData[key]);
+                  newValues[key] = maskValue(key, result[key]);
                   hasChanges = true;
                 }
               }
@@ -70,12 +84,32 @@ function createAuditLogExtension() {
           const result = await query(args);
 
           if (oldData && result.id) {
+            const maskedOldData = {};
+            const SENSITIVE_FIELDS = ['passwordHash', 'mfaSecret', 'creditCard', 'token', 'jwt', 'authorization', 'cookie', 'apikey', 'iban', 'tc', 'vin'];
+            const PARTIAL_MASK_FIELDS = ['email', 'phone'];
+            
+            const maskValue = (key, value) => {
+              if (value === null || value === undefined) return value;
+              const k = key.toLowerCase();
+              if (SENSITIVE_FIELDS.some(f => k.includes(f))) return '***MASKED***';
+              if (PARTIAL_MASK_FIELDS.some(f => k.includes(f))) {
+                const str = String(value);
+                if (str.length > 4) return str.substring(0, 2) + '***' + str.substring(str.length - 2);
+                return '***';
+              }
+              return value;
+            };
+            
+            for (const key of Object.keys(oldData)) {
+              maskedOldData[key] = maskValue(key, oldData[key]);
+            }
+            
             prismaBase.auditLog.create({
               data: {
                 action: 'DELETE',
                 entityType: model,
                 entityId: String(result.id),
-                oldValues: oldData,
+                oldValues: maskedOldData,
               }
             }).catch(err => console.error('[AuditLog Error]', err.message));
           }
@@ -88,7 +122,15 @@ function createAuditLogExtension() {
 }
 
 const prismaClientSingleton = () => {
-  const client = new PrismaClient();
+  let url = process.env.DATABASE_URL;
+  if (url && !url.includes('connection_limit=')) {
+    url = `${url}${url.includes('?') ? '&' : '?'}connection_limit=1`;
+  }
+  const client = new PrismaClient({
+    datasources: {
+      db: { url }
+    }
+  });
   return client.$extends(createAuditLogExtension());
 };
 
