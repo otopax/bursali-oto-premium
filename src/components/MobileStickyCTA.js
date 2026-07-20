@@ -27,7 +27,7 @@ export default function MobileStickyCTA() {
   if (!isVisible) return null;
 
   return (
-    <div className="md:hidden" style={{
+    <div className="mobile-only" style={{
       position: 'fixed',
       bottom: '0',
       left: '0',
@@ -38,7 +38,6 @@ export default function MobileStickyCTA() {
       zIndex: 9998,
       padding: '12px 10px',
       paddingBottom: 'calc(12px + env(safe-area-inset-bottom))',
-      display: 'flex',
       gap: '8px',
       boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.8)',
       animation: 'slideUp 0.3s ease-out forwards'
