@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { logger } from '@/lib/observability/logger';
+import { logger } from '@/lib/observability/Logger';
 import { prisma } from '@/lib/prisma';
 import crypto from 'crypto';
 
