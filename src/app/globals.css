@@ -585,22 +585,6 @@ body.hide-screen-for-print {
   transition: all 0.1s ease !important;
 }
 
-/* Sitedeki tüm yazıları ve resimleri seçilemez/sürüklenemez yap (Sadece form alanları hariç) */
-body {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
-}
-
-/* Girdi alanlarında seçime izin ver */
-input, textarea {
-  -webkit-user-select: auto;
-  user-select: auto;
-}
-
 /* Resimleri sürüklemeyi yasakla */
 img {
   -webkit-user-drag: none;
@@ -608,7 +592,6 @@ img {
   -moz-user-drag: none;
   -o-user-drag: none;
   user-drag: none;
-  pointer-events: none; /* Resme sağ tıklamayı/dokunmayı da zorlaştırır */
 }
 
 /* Yazıcıdan çıktı (Print) alınmasını engelle */
