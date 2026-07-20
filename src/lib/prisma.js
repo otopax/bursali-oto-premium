@@ -121,11 +121,11 @@ const basePrismaSingleton = () => {
   if (url && !url.includes('connection_limit=')) {
     url = `${url}${url.includes('?') ? '&' : '?'}connection_limit=1`;
   }
-  return new PrismaClient({
-    datasources: {
-      db: { url }
-    }
-  });
+  const options = {};
+  if (url) {
+    options.datasources = { db: { url } };
+  }
+  return new PrismaClient(options);
 };
 
 const globalForPrisma = globalThis;
