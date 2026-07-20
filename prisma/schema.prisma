@@ -44,6 +44,7 @@ model User {
   globalRole     Role      @default(MECHANIC)
   tenants        TenantUser[]
   usageLogs      UsageLog[]
+  auditLogs      AuditLog[]
 }
 
 model SubscriptionTier {
@@ -224,11 +225,54 @@ model OutboxEvent {
   @@index([status, createdAt])
 }
 
+// ----- YENİ: İzin Yönetimi (RBAC Overrides) -----
+model Permission {
+  id          String   @id @default(uuid())
+  role        Role
+  resource    String   // Örn: "Vehicle", "WorkOrder", "Invoice"
+  canRead     Boolean  @default(false)
+  canWrite    Boolean  @default(false)
+  canDelete   Boolean  @default(false)
+  canExport   Boolean  @default(false)
+  canApprove  Boolean  @default(false)
+  
+  @@unique([role, resource])
+}
+
+// ----- YENİ: Immutable Audit Log -----
+model AuditLog {
+  id            String   @id @default(uuid())
+  userId        String?
+  user          User?    @relation(fields: [userId], references: [id])
+  action        String   // Örn: "UPDATE", "DELETE", "CREATE"
+  entityType    String   // Örn: "Vehicle", "User"
+  entityId      String?
+  oldValues     Json?
+  newValues     Json?
+  ipAddress     String?
+  userAgent     String?
+  correlationId String?  // OpenTelemetry / Middleware izleme ID'si
+  requestId     String?
+  sessionId     String?
+  createdAt     DateTime @default(now())
+
+  @@index([entityType, entityId])
+  @@index([userId])
+  @@index([createdAt])
+  @@index([correlationId])
+}
+
 // ----- ENUM'lar -----
 enum Role {
+  GUEST
+  CUSTOMER
+  VIP_CUSTOMER
   MECHANIC
-  FLEET_OWNER
+  ADVISOR
+  MANAGER
   ADMIN
+  SUPER_ADMIN
+  SYSTEM
 }
 
 enum TenantRole {

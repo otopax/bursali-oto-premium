@@ -59,44 +59,82 @@ async function checkAi() {
   }
 }
 
-export async function GET() {
+export async function GET(request) {
   const startTime = Date.now();
+  const url = new URL(request.url);
+  const isDeep = url.searchParams.get('deep') === '1';
 
-  // Paralel check — sequential 2×1.5sn beklemek yerine max(1.5sn) toplam
-  const [db, redisResult, aiResult] = await Promise.all([checkDb(), checkRedis(), checkAi()]);
+  if (isDeep) {
+    // Güvenlik: Deep health check sadece internal API key ile yapılabilir
+    const apiKey = request.headers.get('x-internal-api-key') || request.headers.get('authorization')?.split(' ')[1];
+    const validKey = process.env.INTERNAL_API_KEY || 'bursali-oto-internal-secret-2026';
+    
+    if (apiKey !== validKey) {
+      return NextResponse.json({ error: 'Unauthorized for deep health check' }, { status: 401 });
+    }
 
-  const isHealthy = db.status === 'ok' && redisResult.status === 'ok';
+    // Rate Limiting (Deep check)
+    try {
+      const { rateLimit } = await import('@/lib/rate-limit');
+      const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
+      // Deep check için sıkı kısıtlama: 10 istek / 1 dakika
+      const rl = await rateLimit('health-deep', ip, 10, 60, { failClosed: false });
+      if (!rl.success) {
+        return new NextResponse('Too Many Requests', { status: 429 });
+      }
+    } catch (err) {
+      console.warn('[Health] Rate limiting error (Fail-Open active):', err.message);
+    }
 
-  const body = {
-    status: isHealthy ? 'ok' : 'degraded',
-    version: APP_VERSION,
-    uptime: Math.round(process.uptime()),
-    timestamp: new Date().toISOString(),
-    env: process.env.NODE_ENV,
-    db,
-    redis: redisResult,
-    ai: aiResult,
-    latency: {
-      db: `${db.latency}ms`,
-      redis: `${redisResult.latency}ms`,
-      total: `${Date.now() - startTime}ms`,
-    },
-    // Sistem metrikleri (opsiyonel — Linux prod'da anlamlı)
-    os: {
-      memory: {
-        free: Math.round(os.freemem() / 1024 / 1024) + 'MB',
-        total: Math.round(os.totalmem() / 1024 / 1024) + 'MB',
+    // Paralel check — sequential 2×1.5sn beklemek yerine max(1.5sn) toplam
+    const [db, redisResult, aiResult] = await Promise.all([checkDb(), checkRedis(), checkAi()]);
+
+    const isHealthy = db.status === 'ok' && redisResult.status === 'ok';
+
+    const body = {
+      status: isHealthy ? 'ok' : 'degraded',
+      version: APP_VERSION,
+      uptime: Math.round(process.uptime()),
+      timestamp: new Date().toISOString(),
+      env: process.env.NODE_ENV,
+      db,
+      redis: redisResult,
+      ai: aiResult,
+      latency: {
+        db: `${db.latency}ms`,
+        redis: `${redisResult.latency}ms`,
+        total: `${Date.now() - startTime}ms`,
       },
-      loadavg: os.loadavg(),
-    },
-  };
+      // Sistem metrikleri (opsiyonel — Linux prod'da anlamlı)
+      os: {
+        memory: {
+          free: Math.round(os.freemem() / 1024 / 1024) + 'MB',
+          total: Math.round(os.totalmem() / 1024 / 1024) + 'MB',
+        },
+        loadavg: os.loadavg(),
+      },
+    };
 
-  return NextResponse.json(body, {
-    status: isHealthy ? 200 : 503,
-    headers: {
-      'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
-      'Pragma': 'no-cache',
-      'Expires': '0',
-    },
-  });
+    return NextResponse.json(body, {
+      status: isHealthy ? 200 : 503,
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+      },
+    });
+  }
+
+  // Yüzeysel (Shallow) health check - hızlı döner
+  return NextResponse.json(
+    { status: 'ok', version: APP_VERSION, timestamp: new Date().toISOString() },
+    {
+      status: 200,
+      headers: {
+        'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate',
+        'Pragma': 'no-cache',
+        'Expires': '0',
+      },
+    }
+  );
 }

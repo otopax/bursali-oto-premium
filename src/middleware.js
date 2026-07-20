@@ -66,6 +66,14 @@ export async function middleware(request) {
       url.searchParams.set('error', 'login_required');
       return NextResponse.redirect(url);
     }
+    
+    // RBAC: Token içindeki rolleri ve izinleri downstream (alt bileşenlere) iletmek için header'a ekliyoruz.
+    if (token.role) {
+      request.headers.set('x-user-role', token.role);
+    }
+    if (token.permissions) {
+      request.headers.set('x-user-permissions', JSON.stringify(token.permissions));
+    }
   }
 
   // 3. Execute next-intl middleware for language routing (redirects / to /tr)
@@ -73,9 +81,23 @@ export async function middleware(request) {
   
   // Skip next-intl for API routes, just pass them through
   if (request.nextUrl.pathname.startsWith('/api')) {
-    response = NextResponse.next();
+    response = NextResponse.next({
+      request: {
+        headers: request.headers,
+      },
+    });
   } else {
+    // next-intl middleware already clones the request, but to be safe we can re-apply our custom headers
     response = intlMiddleware(request);
+    
+    // Pass custom headers to the response so Server Components can read them if next-intl didn't
+    if (request.headers.get('x-user-role')) {
+      response.headers.set('x-user-role', request.headers.get('x-user-role'));
+    }
+    if (request.headers.get('x-user-permissions')) {
+      response.headers.set('x-user-permissions', request.headers.get('x-user-permissions'));
+    }
+    response.headers.set('x-current-path', request.headers.get('x-current-path'));
   }
 
   // 4. Attach Trace ID to the response
@@ -83,7 +105,7 @@ export async function middleware(request) {
     response.headers.set('x-correlation-id', correlationId);
   }
 
-  return response || NextResponse.next();
+  return response || NextResponse.next({ request: { headers: request.headers } });
 }
 
 export const config = {
