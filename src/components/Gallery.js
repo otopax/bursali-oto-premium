@@ -21,23 +21,18 @@ export default function Gallery() {
   return (
     <div className="container overflow-x-hidden max-w-full">
       <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Servisimizden Kareler</h2>
-      <div className="photo-grid" style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 280px), 1fr))',
-        gap: '1rem',
-        marginBottom: '2rem'
-      }}>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
         {photos.slice(0, visibleCount).map((src, index) => (
-          <div key={index} className={`photo-item relative rounded-xl overflow-hidden bg-gray-800/50 ${index >= 8 ? 'hidden md:block' : ''}`}>
-            <div className="absolute inset-0 bg-gradient-to-r from-gray-800/0 via-gray-700/20 to-gray-800/0 animate-pulse"></div>
+          <div key={index} className={`relative rounded-xl overflow-hidden bg-gray-800/50 aspect-[4/3] shadow-lg group ${index >= 8 ? 'hidden md:block' : ''}`}>
+            <div className="absolute inset-0 bg-gradient-to-r from-gray-800/0 via-gray-700/20 to-gray-800/0 animate-pulse z-0"></div>
             <Image 
               src={src} 
               alt={`Bursalı Oto Servis Fethiye ${index + 1}`}
               title={`Fethiye Premium Oto Servis Galerisi ${index + 1}`}
               fill
               quality={75}
-              style={{ objectFit: 'cover' }} 
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              className="object-cover transition-transform duration-700 ease-out group-hover:scale-110 z-10" 
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
             />
           </div>
         ))}

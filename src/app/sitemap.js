@@ -79,6 +79,8 @@ function expandLocales(path, opts = {}) {
   }));
 }
 
+export const dynamic = 'force-dynamic';
+
 export default async function sitemap() {
   const now = new Date();
   const entries = [];
@@ -164,7 +166,6 @@ export default async function sitemap() {
     }));
   });
 
-  return entries; // DB QUERIES DISABLED FOR VERCEL DEPLOYMENT
 
   // 4) Manufacturers (DB) → /katalog/[marka]
   try {
