@@ -475,7 +475,7 @@ p {
     width: 100%;
     padding: 1rem;
     justify-content: flex-start;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.03) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
   }
 
   .nav-links.mobile-open {
@@ -663,8 +663,8 @@ img {
 }
 
 /* Responsive Helpers */
-.desktop-only { display: flex !important; }
-.mobile-only { display: none !important; }
+.desktop-only { display: flex; }
+.mobile-only { display: none; }
 
 /* Floating Buttons Positioning */
 .chatbot-widget {
@@ -675,8 +675,8 @@ img {
 }
 
 @media (max-width: 768px) {
-  .desktop-only { display: none !important; }
-  .mobile-only { display: flex !important; }
+  .desktop-only { display: none; }
+  .mobile-only { display: flex; }
   
   .chatbot-widget {
     right: 20px !important;

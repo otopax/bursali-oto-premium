@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-import HreflangTags from '@/components/HreflangTags';
 
 const Chatbot = dynamic(() => import('@/components/Chatbot'));
 const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'));
@@ -47,6 +46,12 @@ export async function generateMetadata({ params }) {
     tr: 'tr_TR', en: 'en_GB', ru: 'ru_RU', uk: 'uk_UA', ar: 'ar_AE'
   };
 
+  const languages = {};
+  Object.keys(localeMap).forEach(l => {
+    languages[l] = `/${l}`;
+  });
+  languages['x-default'] = '/tr';
+
   return {
     metadataBase: new URL(SITE_URL),
     title: {
@@ -54,6 +59,9 @@ export async function generateMetadata({ params }) {
       default: t('title')
     },
     description: t('description'),
+    alternates: {
+      languages
+    },
     authors: [{ name: 'Bursalı Oto Servis' }],
     publisher: 'Bursalı Oto Servis',
     robots: 'index, follow',
@@ -93,13 +101,11 @@ export default async function RootLayout({ children, params }) {
         <style dangerouslySetInnerHTML={{__html: `
           @media (max-width: 768px) {
             .mobile-padded-body {
-              padding-bottom: calc(70px + env(safe-area-inset-bottom)) !important;
+              padding-bottom: calc(70px + env(safe-area-inset-bottom));
             }
           }
         `}} />
         <StructuredData />
-        <HreflangTags />
-
         <Navigation locale={locale} />
         <Providers>
           <NextIntlClientProvider messages={messages}>

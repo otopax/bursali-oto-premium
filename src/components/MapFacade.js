@@ -36,7 +36,7 @@ export default function MapFacade() {
         position: 'relative', 
         borderRadius: '16px', 
         overflow: 'hidden',
-        minHeight: '300px',
+        minHeight: '320px',
         backgroundColor: '#1a1a1a',
         display: 'flex',
         alignItems: 'center',

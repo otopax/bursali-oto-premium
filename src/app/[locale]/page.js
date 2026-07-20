@@ -260,7 +260,7 @@ export default async function Home({ params }) {
               </a>
             </div>
           </div>
-          <div style={{ borderRadius: '16px', overflow: 'hidden', minHeight: '300px' }}>
+          <div style={{ borderRadius: '16px', overflow: 'hidden', minHeight: '320px' }}>
             <MapFacade />
           </div>
         </div>

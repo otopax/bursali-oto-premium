@@ -3,11 +3,12 @@ import { GoogleGenAI } from '@google/genai';
 
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { can } from '@/lib/authz';
 
 export async function POST(req) {
   try {
     const session = await getServerSession(authOptions);
-    if (!session || session.user.role !== 'SUPERADMIN' && session.user.role !== 'MANAGER') {
+    if (!session || !can(session.user, 'GooglePost.Create')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 

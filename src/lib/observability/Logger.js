@@ -1,57 +1,52 @@
-/**
- * Enterprise Observability Logger
- * Tracks request timelines, slow queries, and AI latency.
- */
+import os from 'os';
 
-class Logger {
+const isProduction = process.env.NODE_ENV === 'production';
+const hostname = os.hostname();
+
+import { getRequestContext } from './context.js';
+
+export const logger = {
+  info: (message, meta = {}) => log('INFO', message, meta),
+  warn: (message, meta = {}) => log('WARN', message, meta),
+  error: (message, meta = {}) => log('ERROR', message, meta),
+  debug: (message, meta = {}) => log('DEBUG', message, meta),
+};
+
+function log(level, message, meta = {}) {
+  const reqContext = getRequestContext();
   
-  /**
-   * Times a block of code and logs if it exceeds a threshold
-   * @param {string} operationName 
-   * @param {number} thresholdMs 
-   * @param {Function} asyncOperation 
-   */
-  static async trackLatency(operationName, thresholdMs, asyncOperation) {
-    const startTime = Date.now();
+  const logEntry = {
+    timestamp: new Date().toISOString(),
+    level,
+    message,
+    host: hostname,
+    pid: process.pid,
+    env: process.env.NODE_ENV || 'development',
     
-    try {
-      const result = await asyncOperation();
-      const duration = Date.now() - startTime;
-      
-      if (duration > thresholdMs) {
-        console.warn(`[OBSERVABILITY] ⚠️ SLOW OPERATION: ${operationName} took ${duration}ms (Threshold: ${thresholdMs}ms)`);
-        // Here we could send metrics to Datadog or Prometheus
-      } else {
-        console.log(`[OBSERVABILITY] ⚡ ${operationName} completed in ${duration}ms`);
-      }
-      
-      return result;
-    } catch (error) {
-      const duration = Date.now() - startTime;
-      console.error(`[OBSERVABILITY] ❌ FAILED: ${operationName} failed after ${duration}ms. Error: ${error.message}`);
-      throw error;
+    // Zorunlu observability alanları
+    traceId: reqContext.traceId || meta.traceId || 'N/A',
+    spanId: reqContext.spanId || meta.spanId || 'N/A',
+    requestId: reqContext.requestId || meta.requestId || 'N/A',
+    userId: reqContext.userId || meta.userId || 'anonymous',
+    sessionId: reqContext.sessionId || meta.sessionId || 'N/A',
+    method: reqContext.method || meta.method || 'N/A',
+    url: reqContext.url || meta.url || 'N/A',
+    status: reqContext.status || meta.status || 'N/A',
+    latency: reqContext.latency || meta.latency || 0,
+    
+    ...meta
+  };
+
+  // Vercel / Cloud environments handle stdout gracefully
+  if (isProduction || level === 'ERROR') {
+    if (level === 'ERROR') {
+      console.error(JSON.stringify(logEntry));
+    } else {
+      console.log(JSON.stringify(logEntry));
     }
-  }
-
-  static info(correlationId, message, metadata = {}) {
-    console.log(JSON.stringify({
-      level: 'INFO',
-      timestamp: new Date().toISOString(),
-      correlationId,
-      message,
-      ...metadata
-    }));
-  }
-
-  static error(correlationId, message, error) {
-    console.error(JSON.stringify({
-      level: 'ERROR',
-      timestamp: new Date().toISOString(),
-      correlationId,
-      message,
-      stack: error.stack
-    }));
+  } else {
+    // Development fallback (human readable)
+    const color = level === 'ERROR' ? '\x1b[31m' : level === 'WARN' ? '\x1b[33m' : '\x1b[36m';
+    console.log(`${color}[${level}] \x1b[0m${message} | Trace: ${logEntry.traceId}`, Object.keys(meta).length ? meta : '');
   }
 }
-
-module.exports = { Logger };

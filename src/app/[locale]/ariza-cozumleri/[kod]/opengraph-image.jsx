@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og';
 import { getPostData } from '@/lib/blog';
 
-export const runtime = 'edge';
+// export const runtime = 'edge'; // nodejs runtime allows fs usage
 export const alt = 'Bursalı Oto Servis Arıza Kodu';
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';

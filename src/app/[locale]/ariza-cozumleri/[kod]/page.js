@@ -25,7 +25,16 @@ export async function generateMetadata({ params }) {
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri ve onarım rehberleri.';
   const shortDescription = description.length > 150 ? description.substring(0, 155) + '...' : description;
-  const ogImage = postData.image || 'https://www.bursaliotoservis.com/default-fault.jpg';
+  // og:image guard: frontmatter'daki image alani bazen Google arama URL'si gibi
+  // gecersiz degerler iceriyor. Yalnizca gercek gorsel uzantili URL'leri kabul et;
+  // aksi halde varsayilan marka gorseline dus. (default-fault.jpg public'te yok, bg.png var.)
+  const isValidImage = (u) =>
+    typeof u === 'string' &&
+    /\.(jpe?g|png|webp|avif)(\?.*)?$/i.test(u) &&
+    !/google\.[a-z.]+\/search/i.test(u);
+  const ogImage = isValidImage(postData.image)
+    ? postData.image
+    : 'https://www.bursaliotoservis.com/bg.png';
   const canonicalData = buildCanonical(locale, `ariza-cozumleri/${kod}`);
 
   // Max 60 chars title
@@ -87,18 +96,28 @@ export default async function ArizaCozumDetailPage({ params }) {
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri.';
 
+  // og:image guard ile ayni kural: JSON-LD'ye de gecersiz (Google arama URL'si vb.)
+  // gorsel adresi sizmasin.
+  const isValidSchemaImage = (u) =>
+    typeof u === 'string' &&
+    /\.(jpe?g|png|webp|avif)(\?.*)?$/i.test(u) &&
+    !/google\.[a-z.]+\/search/i.test(u);
+  const schemaImageUrl = isValidSchemaImage(postData.image)
+    ? postData.image
+    : 'https://www.bursaliotoservis.com/bg.png';
+
   // 1. Article Schema
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
     headline: postData.title,
     description: description,
-    image: postData.image ? {
+    image: {
       '@type': 'ImageObject',
-      url: postData.image,
+      url: schemaImageUrl,
       width: 1200,
       height: 630
-    } : undefined,
+    },
     author: {
       '@type': 'Organization',
       name: 'Bursalı Oto Servis Uzman Ekibi',

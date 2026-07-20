@@ -33,7 +33,8 @@ export const authOptions = {
           id: user.id,
           email: user.email,
           role: user.globalRole,
-          tenantId: user.tenants.length > 0 ? user.tenants[0].tenantId : null
+          tenantId: user.tenants.length > 0 ? user.tenants[0].tenantId : null,
+          tokenVersion: user.tokenVersion
         };
       }
     }),
@@ -69,7 +70,8 @@ export const authOptions = {
           email: customer.email || `${customer.phone}@bursalioto.customer`,
           name: customer.firstName,
           role: "CUSTOMER",
-          tenantId: customer.tenantId
+          tenantId: customer.tenantId,
+          tokenVersion: 0 // Müşteriler için varsayılan
         };
       }
     }),
@@ -117,16 +119,23 @@ export const authOptions = {
           email: customer.email || `${customer.phone}@bursalioto.customer`,
           name: customer.firstName,
           role: "CUSTOMER",
-          tenantId: customer.tenantId
+          tenantId: customer.tenantId,
+          tokenVersion: 0
         };
       }
     })
   ],
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, account }) {
       if (user) {
         token.role = user.role;
         token.tenantId = user.tenantId;
+        token.tokenVersion = user.tokenVersion;
+        token.permissionVersion = 0; // Varsayılan permissionVersion
+        token.sessionId = crypto.randomUUID(); // Her giriş yeni bir session id üretir
+      }
+      if (!token.jti) {
+        token.jti = crypto.randomUUID();
       }
       return token;
     },
@@ -135,6 +144,9 @@ export const authOptions = {
         session.user.id = token.sub;
         session.user.role = token.role;
         session.user.tenantId = token.tenantId;
+        session.user.tokenVersion = token.tokenVersion;
+        session.user.permissionVersion = token.permissionVersion;
+        session.user.sessionId = token.sessionId;
       }
       return session;
     }

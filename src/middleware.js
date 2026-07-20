@@ -66,6 +66,73 @@ export async function middleware(request) {
       url.searchParams.set('error', 'login_required');
       return NextResponse.redirect(url);
     }
+
+    // Faz 2.5: Token Versioning & Session Revocation
+    // Eğer token içinde tokenVersion varsa (Eski tokenlarda olmayabilir)
+    if (token.tokenVersion !== undefined) {
+      try {
+        const { Redis } = await import('@upstash/redis');
+        // Lazy load Redis client because middleware uses edge runtime
+        const redis = new Redis({
+          url: process.env.UPSTASH_REDIS_REST_URL,
+          token: process.env.UPSTASH_REDIS_REST_TOKEN,
+        });
+
+        const redisKey = `auth:tokenVer:${token.id}`;
+        let version = await redis.get(redisKey);
+        
+        if (version === null) {
+          // Redis'te yoksa iç API'den veritabanı kontrolü yapıp Redis'i doldururuz (Edge uyumlu çözüm)
+          const validKey = process.env.INTERNAL_API_KEY || 'bursali-oto-internal-secret-2026';
+          // Next.js middleware fetch uses the fully qualified URL
+          const apiUrl = new URL(`/api/auth/token-version?userId=${token.id}`, request.url);
+          
+          const dbCheck = await fetch(apiUrl.toString(), {
+            headers: { 'x-internal-api-key': validKey },
+            // timeout logic
+            signal: AbortSignal.timeout(1000)
+          });
+          
+          if (dbCheck.ok) {
+            const data = await dbCheck.json();
+            version = data.version;
+          } else {
+            throw new Error(`DB fallback API failed: ${dbCheck.status}`);
+          }
+        }
+        
+        // Versiyon karşılaştırması
+        if (parseInt(token.tokenVersion) < parseInt(version)) {
+          // Kullanıcı oturumu iptal edilmiş veya yetkisi değişmiş!
+          console.warn(`[Security] Revoked token used by user ${token.id}`);
+          const locale = pathname.split('/')[1] || 'tr';
+          const url = request.nextUrl.clone();
+          url.pathname = `/${locale}/login`;
+          url.searchParams.set('error', 'session_expired');
+          return NextResponse.redirect(url);
+        }
+      } catch (error) {
+        // FAIL-CLOSED Lojik (Admin, Finans, ERP rotaları ve yüksek yetkili roller için)
+        const isPrivilegedRole = token.role && ['ADMIN', 'SUPER_ADMIN', 'FINANCE', 'MANAGER'].includes(token.role);
+        const privilegedRoutes = ['/admin', '/finans', '/erp', '/yonetim', '/api/admin'];
+        const isPrivilegedRoute = privilegedRoutes.some(route => 
+          pathWithoutLocale === route || pathWithoutLocale.startsWith(`${route}/`)
+        );
+        
+        if (isPrivilegedRole || isPrivilegedRoute) {
+          console.error(`[Security BLOCK] Token version check failed for privileged user/route ${token.id}. Failing CLOSED.`, error.message);
+          const locale = pathname.split('/')[1] || 'tr';
+          const url = request.nextUrl.clone();
+          url.pathname = `/${locale}/login`;
+          url.searchParams.set('error', 'system_unavailable');
+          return NextResponse.redirect(url);
+        } else {
+          // FAIL-OPEN Lojik (Misafir/Müşteri sayfaları için Redis/DB çökerse geçişe izin ver)
+          console.warn(`[Security WARNING] Token version check bypassed due to Redis/API failure for user ${token.id} (Fail-Open active)`, error.message);
+        }
+      }
+    }
+
     
     // RBAC: Token içindeki rolleri ve izinleri downstream (alt bileşenlere) iletmek için header'a ekliyoruz.
     if (token.role) {

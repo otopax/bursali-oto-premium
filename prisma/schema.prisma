@@ -42,6 +42,9 @@ model User {
   email          String    @unique
   passwordHash   String?   // V5.0 Güvenlik: bcrytp hash
   globalRole     Role      @default(MECHANIC)
+  tokenVersion   Int       @default(0) // Faz 2.5: Oturum İptali ve Güvenlik
+  mfaEnabled     Boolean   @default(false)
+  mfaSecret      String?
   tenants        TenantUser[]
   usageLogs      UsageLog[]
   auditLogs      AuditLog[]
@@ -251,6 +254,10 @@ model AuditLog {
   newValues     Json?
   ipAddress     String?
   userAgent     String?
+  country       String?
+  browser       String?
+  requestUrl    String?
+  requestMethod String?
   correlationId String?  // OpenTelemetry / Middleware izleme ID'si
   requestId     String?
   sessionId     String?
@@ -272,7 +279,27 @@ enum Role {
   MANAGER
   ADMIN
   SUPER_ADMIN
-  SYSTEM
+  BOT
+  SCHEDULER
+  WEBHOOK
+}
+
+model ApiKey {
+  id             String    @id @default(uuid())
+  name           String    // Örn: "Vercel Cron Job", "Zapier Webhook"
+  keyHash        String    @unique // Asla plaintext saklanmaz, hashlenir
+  role           Role      // BOT, SCHEDULER, WEBHOOK gibi servis rolleri
+  scopes         String[]  // ["Vehicle.Read", "Invoice.Export"] gibi
+  expiresAt      DateTime?
+  lastUsedAt     DateTime?
+  revokedAt      DateTime? // İptal edilme zamanı
+  allowedIPs     String[]  // ["192.168.1.1", "10.0.0.0/8"]
+  allowedOrigins String[]  // ["https://partner.com"]
+  rateLimit      Int       @default(100) // İstek sayısı / dakika
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+  
+  @@index([role])
 }
 
 enum TenantRole {

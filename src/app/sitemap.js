@@ -79,7 +79,7 @@ function expandLocales(path, opts = {}) {
   }));
 }
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 86400; // 24 hours ISR
 
 export default async function sitemap() {
   const now = new Date();
