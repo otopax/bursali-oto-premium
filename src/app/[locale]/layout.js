@@ -6,20 +6,13 @@ import dynamic from 'next/dynamic';
 import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
-
-const Chatbot = dynamic(() => import('@/components/Chatbot'));
-const WhatsAppButton = dynamic(() => import('@/components/WhatsAppButton'));
-const CookieConsent = dynamic(() => import('@/components/CookieConsent'));
-const MobileStickyCTA = dynamic(() => import('@/components/MobileStickyCTA'));
+import ClientWidgets from '@/components/ClientWidgets';
 
 import { businessData } from '@/lib/business';
 import Navigation from '@/components/Navigation';
-import { Analytics } from '@vercel/analytics/react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
 
-
-const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter' });
-const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit' });
+const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap', preload: true });
+const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit', display: 'swap' });
 
 // Faz A / Görev 2 — Canonical + hreflang locale-aware.
 // Base URL www'lu (canlı deploy); metadataBase alt-metadata için relative URL çözer.
@@ -112,8 +105,6 @@ export default async function RootLayout({ children, params }) {
             {children}
           </NextIntlClientProvider>
         </Providers>
-        <Analytics />
-        <SpeedInsights />
         
         {/* Yolda Kalanlar - Floating SOS Button (Desktop only) */}
         <a 
@@ -139,15 +130,12 @@ export default async function RootLayout({ children, params }) {
         </a>
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0.7); }
-            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(225, 29, 72, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(225, 29, 72, 0); }
+            0% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(1); opacity: 0.9; }
           }
         `}} />
-        <WhatsAppButton />
-        <MobileStickyCTA />
-        <Chatbot />
-        <CookieConsent locale={locale} />
+        <ClientWidgets locale={locale} />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-3SNV6H5568"} />
       </body>
     </html>

@@ -48,7 +48,7 @@ export default async function Home({ params }) {
             </div>
             <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: '1.3', marginBottom: '1.5rem', fontWeight: '900', letterSpacing: '-1px', textShadow: '0 10px 30px rgba(0,0,0,0.8)' }}>
               <span style={{ color: '#fff' }}>{t('heroTitlePrefix')}</span><br />
-              <span style={{ background: 'linear-gradient(to right, #d4af37, #f3e5ab, #d4af37)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', display: 'inline-block', filter: 'drop-shadow(0 0 10px rgba(212,175,55,0.3))', marginTop: '0.2rem' }}>{t('title')}</span>
+              <span style={{ background: 'linear-gradient(to right, #d4af37, #f3e5ab, #d4af37)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', display: 'inline-block', marginTop: '0.2rem' }}>{t('title')}</span>
             </h1>
             <p style={{ fontSize: '1.3rem', marginBottom: '3rem', color: '#e2e8f0', lineHeight: '1.7', maxWidth: '750px', fontWeight: '400', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
               {t('subtitle')}
