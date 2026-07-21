@@ -4,15 +4,18 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "prisma generate && next build",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "vitest",
-    "db:generate": "prisma generate",
-    "db:push": "prisma db push",
-    "db:backup": "node scripts/backup-db.js",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
     "test:e2e": "playwright test",
-    "test:ui": "vitest --ui"
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate deploy",
+    "analyze": "ANALYZE=true next build",
+    "benchmark": "k6 run scripts/benchmark/load-test.js",
+    "db:push": "prisma db push",
+    "db:backup": "node scripts/backup-db.js"
   },
   "dependencies": {
     "@ai-sdk/google": "^4.0.0",

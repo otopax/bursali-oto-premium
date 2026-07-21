@@ -36,6 +36,18 @@ const nextConfig = {
       },
     ],
   },
+  async headers() {
+    return [
+      {
+        source: '/(.*)',
+        headers: [
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000; includeSubDomains; preload' }
+        ],
+      },
+    ];
+  },
   // www'suz → www'lu 301 kalıcı yönlendirme (Faz A / Görev 2)
   // Google canonical'ı tek tip toplasın diye şart. Vercel Dashboard'da da
   // yapılabilir ama defense-in-depth için burada da tanımlı.
