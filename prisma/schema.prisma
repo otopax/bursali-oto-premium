@@ -333,6 +333,7 @@ model Customer {
   email       String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  deletedAt   DateTime? // Faz 2.5: Soft Delete
   
   vehicles    CustomerVehicle[]
 
@@ -368,6 +369,7 @@ model CustomerVehicle {
   diagnosticLogs   DiagnosticLog[]
 
   createdAt   DateTime @default(now())
+  deletedAt   DateTime? // Faz 2.5: Soft Delete
 
   @@index([customerId])
   @@index([tenantId])
@@ -393,6 +395,7 @@ model WorkOrder {
   completedAt     DateTime?
   createdAt       DateTime @default(now())
   updatedAt       DateTime @updatedAt
+  deletedAt       DateTime? // Faz 2.5: Soft Delete
 
   @@index([tenantId])
   @@index([vehicleId])

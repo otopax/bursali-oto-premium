@@ -46,6 +46,19 @@ export async function POST(req) {
     await redis.expire(redisKey, 86400); // 24 hours
   }
 
+  // YENİ: Faz 2.5 - Prompt Injection Guard
+  const lastMessage = messages[messages.length - 1];
+  if (lastMessage && lastMessage.role === 'user') {
+    const maliciousPatterns = /ignore previous instructions|system prompt|bana şifreleri ver|bypass|jailbreak|açıklığın/i;
+    if (maliciousPatterns.test(lastMessage.content)) {
+      console.warn('Blocked Prompt Injection Attempt:', lastMessage.content);
+      return new Response(JSON.stringify({ error: 'prompt_injection_detected', message: 'Güvenlik ihlali tespit edildi.' }), {
+        status: 403,
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+  }
+
   // 1. Semantic Cache Kontrolü (Aynı sohbet geçmişi var mı?)
   const cachedResponse = await getAiCache(messages);
   if (cachedResponse) {
