@@ -11,6 +11,7 @@ export default function WhatsAppButton() {
       href="https://wa.me/905548812021?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum.%20Arac%C4%B1m%C4%B1n%20servis%20ve%20bak%C4%B1m%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum."
       target="_blank"
       rel="noopener noreferrer"
+      aria-label="WhatsApp İletişim Hattı"
       className={`animate-pulse-ring desktop-only ${isHovered ? 'scale-110 -translate-y-1' : 'scale-100'}`}
       onClick={() => trackEvent('whatsapp_tiklama', { type: 'floating_button' })}
       style={{

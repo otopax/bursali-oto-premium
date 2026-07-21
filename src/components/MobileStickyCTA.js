@@ -51,6 +51,7 @@ export default function MobileStickyCTA() {
       
       <a 
         href="tel:+905548812021" 
+        aria-label="Hemen Ara"
         onClick={() => trackEvent('mobil_sticky_tel_tikla', { location: 'sticky_bar' })}
         style={{
           backgroundColor: '#991b1b', // Dark red
@@ -74,6 +75,7 @@ export default function MobileStickyCTA() {
 
       <a 
         href="https://wa.me/905548812021" 
+        aria-label="WhatsApp"
         onClick={() => trackEvent('mobil_sticky_wa_tikla', { location: 'sticky_bar' })}
         target="_blank"
         rel="noopener noreferrer"

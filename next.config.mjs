@@ -123,4 +123,10 @@ const sentryBuildOptions = {
   automaticVercelMonitors: true,
 };
 
-export default withSentryConfig(withNextIntl(nextConfig), sentryBuildOptions);
+import withBundleAnalyzer from '@next/bundle-analyzer';
+
+const analyzerPlugin = withBundleAnalyzer({
+  enabled: process.env.ANALYZE === 'true',
+});
+
+export default analyzerPlugin(withSentryConfig(withNextIntl(nextConfig), sentryBuildOptions));
