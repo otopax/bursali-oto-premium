@@ -1,8 +1,16 @@
 import { NextResponse } from 'next/server';
 import { rateLimit } from '@/lib/rate-limit'; 
 import { prisma } from '@/lib/prisma';
+import { validate } from '@/lib/validate';
+import { z } from 'zod';
 
-export async function POST(req) {
+const appointmentSchema = z.object({
+  plate: z.string().min(5).max(15),
+  phone: z.string().min(10).max(20),
+  complaint: z.string().max(1000).optional()
+});
+
+async function postHandler(req) {
   try {
     const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
     const limitStatus = await rateLimit(`vip_appt_${ip}`, 5, 60); 
@@ -11,12 +19,7 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Çok fazla istek. Lütfen biraz bekleyin.' }, { status: 429 });
     }
 
-    const body = await req.json();
-    const { plate, phone, complaint } = body;
-
-    if (!plate || !phone) {
-      return NextResponse.json({ error: 'Plaka ve Telefon numarası zorunludur.' }, { status: 400 });
-    }
+    const { plate, phone, complaint } = req.valid.body;
 
     const cleanPlate = plate.replace(/\s+/g, '').toUpperCase();
     const cleanPhone = phone.replace(/\s+/g, '');
@@ -54,3 +57,5 @@ export async function POST(req) {
     return NextResponse.json({ success: false, error: 'Internal Server Error' }, { status: 500 });
   }
 }
+
+export const POST = validate({ body: appointmentSchema }, postHandler);

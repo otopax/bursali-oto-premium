@@ -14,7 +14,21 @@ import { getCache, setCache, redis } from '@/lib/cache';
 import { prisma } from '@/lib/prisma';
 import { getToken } from 'next-auth/jwt';
 
-export async function POST(req) {
+import { validate } from '@/lib/validate';
+
+const chatBodySchema = z.object({
+  messages: z.array(z.any()),
+  vehicleContext: z.object({
+    isRegistered: z.boolean().optional(),
+    year: z.union([z.number(), z.string()]).optional(),
+    brand: z.string().optional(),
+    model: z.string().optional(),
+    chassis: z.string().optional()
+  }).optional().nullable(),
+  guestId: z.string().optional().nullable()
+});
+
+async function postHandler(req) {
   // IP tabanlı kurumsal Rate Limiting — AI endpoint: Redis düştüğünde REDDET (fail-closed)
   // Gemini kotası bot saldırısında patlamasın diye kritik.
   const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
@@ -24,7 +38,7 @@ export async function POST(req) {
     return new Response('Too Many Requests', { status: 429 });
   }
 
-  const { messages, vehicleContext, guestId } = await req.json();
+  const { messages, vehicleContext, guestId } = req.valid.body;
 
   // Guest Quota Control (3 messages)
   const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026' });
@@ -393,3 +407,4 @@ export async function POST(req) {
          result.toTextStreamResponse();
 }
 
+export const POST = validate({ body: chatBodySchema }, postHandler);

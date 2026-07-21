@@ -1,8 +1,14 @@
 import { NextResponse } from 'next/server';
 import { decodeVin } from '@/lib/vinService';
 import { rateLimit } from '@/lib/rate-limit';
+import { validate } from '@/lib/validate';
+import { z } from 'zod';
 
-export async function POST(req) {
+const vinSchema = z.object({
+  vin: z.string().length(17)
+});
+
+async function postHandler(req) {
   try {
     // Basic Rate Limiting
     const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
@@ -11,12 +17,7 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Çok fazla istek gönderildi.' }, { status: 429 });
     }
 
-    const body = await req.json();
-    const { vin } = body;
-
-    if (!vin || vin.length !== 17) {
-      return NextResponse.json({ error: 'Geçersiz şasi numarası. 17 haneli olmalıdır.' }, { status: 400 });
-    }
+    const { vin } = req.valid.body;
 
     const result = await decodeVin(vin.toUpperCase());
 
@@ -30,3 +31,5 @@ export async function POST(req) {
     return NextResponse.json({ error: 'Sunucu hatası oluştu.' }, { status: 500 });
   }
 }
+
+export const POST = validate({ body: vinSchema }, postHandler);
