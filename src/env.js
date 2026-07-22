@@ -13,7 +13,7 @@ const envSchema = z.object({
   UPSTASH_REDIS_REST_TOKEN: z.string().optional(),
 
   // Required AI
-  GOOGLE_GENERATIVE_AI_API_KEY: z.string().min(1, "Gemini API Anahtarı eksik"),
+  GOOGLE_GENERATIVE_AI_API_KEY: z.string().optional(),
 
   // Authentication
   NEXTAUTH_URL: z.string().url().optional(),

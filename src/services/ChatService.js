@@ -1,5 +1,5 @@
 import { google } from '@ai-sdk/google';
-import { streamText, tool, fallback } from 'ai';
+import { streamText, tool } from 'ai';
 import { z } from 'zod';
 import { GoogleGenAI } from '@google/genai';
 import { DataAccessLayer } from '@/lib/dataAccessLayer';
@@ -135,10 +135,7 @@ export class ChatService {
 
     // 6. Execute LLM with Fallback Resiliency
     const result = streamText({
-      model: fallback([
-        google('gemini-2.5-flash'), // Primary Model
-        google('gemini-1.5-flash')  // Fallback Model in case 2.5 is down or rate-limited
-      ]),
+      model: google('gemini-2.5-flash'), // Primary Model
       system: systemPrompt,
       messages: optimizedMessages,
       tools: this.getAiTools(),
