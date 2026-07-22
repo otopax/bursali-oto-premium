@@ -24,7 +24,8 @@
     "analyze": "ANALYZE=true next build",
     "benchmark": "k6 run scripts/benchmark/load-test.js",
     "db:push": "prisma db push",
-    "db:backup": "node scripts/backup-db.js"
+    "db:backup": "node scripts/backup-db.js",
+    "generate-embeddings": "node src/scripts/generate-embeddings.js"
   },
   "dependencies": {
     "@ai-sdk/google": "^4.0.0",

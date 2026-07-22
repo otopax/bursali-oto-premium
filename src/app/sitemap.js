@@ -143,18 +143,29 @@ export default async function sitemap() {
     console.warn('[Sitemap] Blog yüklenemedi:', e.message);
   }
 
-  // 6) Fault Codes (MDX) → /ariza-cozumleri/[kod]
+  // 6) Fault Codes & Kütüphane (Hierarchy)
   try {
-    const faultCodes = getAllPostIds('faults');
-    faultCodes.forEach((f) => {
-      entries.push(...expandLocales(`/ariza-cozumleri/${f.params.slug}`, {
-        changeFrequency: 'monthly',
-        priority: 0.8,
-        lastModified: now,
-      }));
+    const { getHierarchyData } = require('@/lib/blog');
+    const hierarchy = getHierarchyData('tr', 'faults');
+    
+    Object.entries(hierarchy).forEach(([marka, data]) => {
+      // Ariza-cozumleri Marka and Kutuphane Marka
+      entries.push(...expandLocales(`/ariza-cozumleri/${marka}`, { changeFrequency: 'weekly', priority: 0.9, lastModified: now }));
+      entries.push(...expandLocales(`/kutuphane/${marka}`, { changeFrequency: 'weekly', priority: 0.8, lastModified: now }));
+      
+      Object.keys(data.models).forEach(model => {
+        // Ariza-cozumleri Model and Kutuphane Model
+        entries.push(...expandLocales(`/ariza-cozumleri/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.85, lastModified: now }));
+        entries.push(...expandLocales(`/kutuphane/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.75, lastModified: now }));
+        
+        // Fault codes under model
+        data.models[model].forEach(post => {
+          entries.push(...expandLocales(`/ariza-cozumleri/${marka}/${model}/${post.id}`, { changeFrequency: 'monthly', priority: 0.8, lastModified: now }));
+        });
+      });
     });
   } catch (e) {
-    console.warn('[Sitemap] Fault codes yüklenemedi:', e.message);
+    console.warn('[Sitemap] Fault codes & Kütüphane yüklenemedi:', e.message);
   }
 
   // 6.5) Motor Kodları Hub Sayfaları

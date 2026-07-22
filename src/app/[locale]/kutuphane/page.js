@@ -1,23 +1,134 @@
+import { getHierarchyData } from '@/lib/blog';
+import { setRequestLocale } from 'next-intl/server';
+import Link from 'next/link';
+
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
 export const metadata = {
   title: 'Teknik Kütüphane | Bursalı Oto',
-  description: 'Uzmanlar için interaktif teknik veritabanı. Yapım aşamasında.',
+  description: 'Uzmanlar için interaktif teknik veritabanı. Sigorta şemaları, TSB bültenleri ve teknik onarım kılavuzları.',
 };
 
+const BRAND_LOGOS = {
+  'BMW': 'https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg',
+  'Mercedes-Benz': 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg',
+  'Audi': 'https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg',
+  'Porsche': 'https://upload.wikimedia.org/wikipedia/de/2/2d/Porsche_Wappen.svg',
+  'Volkswagen': 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg',
+  'Land Rover': 'https://upload.wikimedia.org/wikipedia/en/4/4a/LandRover.svg',
+  'Volvo': 'https://upload.wikimedia.org/wikipedia/commons/2/29/Volvo-Iron-Mark-Black.svg',
+  'Opel': 'https://upload.wikimedia.org/wikipedia/commons/9/98/Opel_logo_2020.svg',
+  'Genel / Premium': null
+};
+
+// We reuse the same hierarchy from 'faults' to ensure consistency. 
+// If you want separate library items, you can use getHierarchyData(locale, 'library') in the future.
 export default async function KutuphaneHub({ params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
+  const hierarchy = getHierarchyData(locale, 'faults');
+
+  const brands = Object.entries(hierarchy).map(([slug, data]) => {
+    let totalModels = Object.keys(data.models).length;
+    return {
+      slug,
+      name: data.name,
+      logo: BRAND_LOGOS[data.name] || null,
+      count: totalModels
+    };
+  }).sort((a, b) => b.count - a.count);
 
   return (
-    <main style={{ height: '100vh', paddingTop: '80px', background: '#000', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ textAlign: 'center', padding: '2rem', background: 'rgba(255,255,255,0.03)', border: '1px solid var(--glass-border)', borderRadius: '20px', maxWidth: '600px' }}>
-        <h1 style={{ fontSize: '3rem', marginBottom: '1rem', color: 'var(--accent-gold)' }}>🚧</h1>
-        <h2 style={{ fontSize: '2rem', marginBottom: '1rem', color: '#fff' }}>Kütüphane Yapım Aşamasında</h2>
-        <p style={{ fontSize: '1.2rem', color: 'var(--text-light)', lineHeight: '1.6' }}>
-          Değerli müşterilerimiz, sizlere daha iyi bir dijital deneyim sunabilmek için Teknik Kütüphane altyapımızı güncelliyoruz.<br/><br/>
-          <strong style={{ color: 'var(--accent-gold)' }}>En kısa zamanda hizmetinizde olacağız!</strong>
+    <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
+      <div className="container" style={{ margin: '0 auto', padding: '0 2rem', maxWidth: '1200px' }}>
+        <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center', color: 'var(--text-light)' }}>
+          Teknik <span style={{ color: 'var(--accent-gold)' }}>Kütüphane</span>
+        </h1>
+        <p style={{ color: 'var(--text-muted)', textAlign: 'center', marginBottom: '3rem', maxWidth: '800px', margin: '0 auto 3rem auto', fontSize: '1.1rem' }}>
+          Araçlara özel sigorta şemaları (Fuse Diagrams), teknik bültenler (TSB) ve onarım kılavuzlarına ulaşmak için lütfen aracınızın markasını seçin.
         </p>
-        <a href={`/${locale}`} style={{ display: 'inline-block', marginTop: '2rem', padding: '1rem 2rem', background: 'var(--primary)', color: '#000', fontWeight: 'bold', borderRadius: '50px', textDecoration: 'none' }}>
-          Anasayfaya Dön
-        </a>
+
+        <style dangerouslySetInnerHTML={{__html: `
+          .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+          }
+          @media (min-width: 640px) {
+            .brands-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+          }
+          @media (min-width: 1024px) {
+            .brands-grid { grid-template-columns: repeat(4, 1fr); }
+          }
+          .brand-box {
+            display: flex;
+            align-items: center;
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: #f8fafc;
+          }
+          .brand-box:hover {
+            border-color: #d4af37;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(212, 175, 55, 0.15);
+            background: rgba(212, 175, 55, 0.05);
+          }
+          .brand-box-logo {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.2rem;
+            border-right: 1px solid rgba(255,255,255,0.1);
+            padding-right: 1.2rem;
+          }
+          .brand-box-logo img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+          }
+          .brand-box-name {
+            font-weight: 600;
+            font-size: 1.1rem;
+          }
+          .brand-box-count {
+            margin-left: auto;
+            background: rgba(255,255,255,0.1);
+            color: #cbd5e1;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 700;
+          }
+        `}} />
+
+        <div className="brands-grid">
+          {brands.map(brand => (
+            <Link key={brand.slug} href={`/${locale}/kutuphane/${brand.slug}`} className="brand-box">
+              <div className="brand-box-logo">
+                {brand.logo ? (
+                  <img 
+                    src={brand.logo} 
+                    alt={brand.name} 
+                    style={{ filter: (brand.name === 'Volvo' || brand.name === 'Audi') ? 'invert(1)' : 'none' }} 
+                  />
+                ) : (
+                  <span style={{ fontWeight: 'bold', color: 'var(--accent-gold)', fontSize: '1.5rem' }}>{brand.name.charAt(0)}</span>
+                )}
+              </div>
+              <div className="brand-box-name">{brand.name.toUpperCase()}</div>
+              <div className="brand-box-count">{brand.count} Model</div>
+            </Link>
+          ))}
+        </div>
       </div>
     </main>
   );

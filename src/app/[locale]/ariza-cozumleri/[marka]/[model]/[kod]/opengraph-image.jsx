@@ -7,13 +7,13 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
 export default async function Image({ params }) {
-  const { kod } = await params;
+  const { marka, model, kod } = await params;
   
   let title = `OBD2 Arıza Kodu: ${kod.toUpperCase()}`;
   let description = 'Profesyonel Çözüm ve Tamir Rehberi';
   
   try {
-    const postData = await getPostData('faults', kod);
+    const postData = await getPostData(kod, 'faults');
     if (postData && postData.title) {
       title = postData.title;
       if (postData.description) {

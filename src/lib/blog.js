@@ -81,3 +81,64 @@ export async function getPostData(slug, folder = 'blog') {
     ...matterResult.data,
   };
 }
+
+export function slugify(text) {
+  if (!text) return 'diger';
+  // Türkçe karakterleri dönüştür
+  const trMap = {
+    'çÇ':'c',
+    'ğĞ':'g',
+    'şŞ':'s',
+    'üÜ':'u',
+    'ıİ':'i',
+    'öÖ':'o'
+  };
+  for(let key in trMap) {
+    text = text.replace(new RegExp('['+key+']','g'), trMap[key]);
+  }
+
+  return text.toString().toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with -
+    .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+    .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+    .replace(/^-+/, '')             // Trim - from start of text
+    .replace(/-+$/, '');            // Trim - from end of text
+}
+
+export function getHierarchyData(locale = 'tr', folder = 'faults') {
+  const posts = getSortedPostsData(locale, folder);
+  const hierarchy = {};
+
+  posts.forEach(post => {
+    let brandName = post.brand || 'Diğer';
+    brandName = brandName.trim();
+    if (brandName.toUpperCase() === 'MERCEDES') brandName = 'Mercedes-Benz';
+    if (brandName.toUpperCase() === 'VW') brandName = 'Volkswagen';
+    if (brandName.toUpperCase().includes('AUDI / VW') || brandName.toUpperCase().includes('GENEL / PREMIUM')) brandName = 'Genel / Premium';
+    if (brandName.toUpperCase().includes('GENEL / PORSCHE')) brandName = 'Porsche';
+
+    let modelName = post.model || 'Genel';
+    modelName = modelName.trim();
+
+    const brandSlug = slugify(brandName);
+    const modelSlug = slugify(modelName);
+
+    if (!hierarchy[brandSlug]) {
+      hierarchy[brandSlug] = {
+        name: brandName,
+        models: {}
+      };
+    }
+
+    if (!hierarchy[brandSlug].models[modelSlug]) {
+      hierarchy[brandSlug].models[modelSlug] = {
+        name: modelName,
+        items: []
+      };
+    }
+
+    hierarchy[brandSlug].models[modelSlug].items.push(post);
+  });
+
+  return hierarchy;
+}
