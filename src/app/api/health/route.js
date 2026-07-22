@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { redis } from '@/lib/cache';
-import { GoogleGenerativeAI } from '@google/genai';
+import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 
 export const dynamic = 'force-dynamic';
@@ -42,7 +42,7 @@ export async function GET() {
   // 3. Gemini API Kontrolü
   try {
     if (!process.env.GEMINI_API_KEY) throw new Error('GEMINI_API_KEY missing');
-    const genAI = new GoogleGenerativeAI({ apiKey: process.env.GEMINI_API_KEY });
+    const genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
     // Light test: check if library loads and key exists. Not executing generateContent to save quota.
     checks.gemini = true;
   } catch (e) {

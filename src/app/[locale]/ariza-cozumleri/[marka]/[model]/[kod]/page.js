@@ -1,4 +1,4 @@
-import { getPostData, getAllPostIds, getSortedPostsData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { notFound } from 'next/navigation';
 import ExpertCTA from '@/components/ExpertCTA';
 import { getGBPData } from '@/lib/gbp';
@@ -22,7 +22,7 @@ export const dynamicParams = false;
 export async function generateMetadata({ params }) {
   const { marka, model, kod, locale } = await params;
   setRequestLocale(locale);
-  const postData = await getPostData(kod, 'faults');
+  const postData = await container.getPostDataUseCase.execute(kod, 'faults');
   
   if (!postData) {
     return { title: 'Sayfa Bulunamadı | Bursalı Oto' };
@@ -80,14 +80,14 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  const { getHierarchyData } = require('@/lib/blog');
-  const hierarchy = getHierarchyData('tr', 'faults');
+  const { container } = require('@/application/di/container');
+  const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
   const params = [];
   const LOCALES = ['tr', 'en', 'ru', 'uk', 'ar'];
 
   Object.entries(hierarchy).forEach(([marka, data]) => {
     Object.entries(data.models).forEach(([model, posts]) => {
-      posts.forEach(post => {
+      posts.items.forEach(post => {
         LOCALES.forEach(loc => {
           params.push({ locale: loc, marka, model, kod: post.id });
         });
@@ -100,7 +100,7 @@ export async function generateStaticParams() {
 export default async function ArizaCozumDetailPage({ params }) {
   const { marka, model, kod, locale } = await params;
   setRequestLocale(locale);
-  const postData = await getPostData(kod, 'faults');
+  const postData = await container.getPostDataUseCase.execute(kod, 'faults');
 
   if (!postData) {
     notFound();
@@ -256,7 +256,7 @@ export default async function ArizaCozumDetailPage({ params }) {
     areaServed: 'Fethiye ve çevresi'
   };
 
-  const allFaults = getSortedPostsData('tr', 'faults');
+  const allFaults = await container.getSortedPostsUseCase.execute('tr', 'faults');
   const relatedFaults = allFaults.filter(f => f.brand === postData.brand && f.id !== kod).slice(0, 3);
   
   const readingTime = Math.ceil((postData.rawContent?.split(' ').length || 500) / 200);

@@ -1,4 +1,4 @@
-import { getSortedPostsData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import Link from 'next/link';
 
 import { buildCanonical } from '@/lib/seo/canonical';
@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BrandHubPage({ params }) {
   const { locale, brand } = await params;
-  const allFaults = getSortedPostsData(locale, 'faults');
+  const allFaults = await container.getSortedPostsUseCase.execute(locale, 'faults');
   
   // Filter by brand (slugified)
   const brandFaults = allFaults.filter(fault => {

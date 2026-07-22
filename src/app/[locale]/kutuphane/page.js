@@ -1,4 +1,4 @@
-import { getHierarchyData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
@@ -23,11 +23,11 @@ const BRAND_LOGOS = {
 };
 
 // We reuse the same hierarchy from 'faults' to ensure consistency. 
-// If you want separate library items, you can use getHierarchyData(locale, 'library') in the future.
+// If you want separate library items, you can use await container.hierarchyBuilder.build(locale, 'library') in the future.
 export default async function KutuphaneHub({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const hierarchy = getHierarchyData(locale, 'faults');
+  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
 
   const brands = Object.entries(hierarchy).map(([slug, data]) => {
     let totalModels = Object.keys(data.models).length;

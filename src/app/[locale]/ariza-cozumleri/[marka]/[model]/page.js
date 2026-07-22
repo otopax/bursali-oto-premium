@@ -1,4 +1,4 @@
-import { getHierarchyData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -8,7 +8,7 @@ export const dynamicParams = false;
 
 export async function generateStaticParams({ params }) {
   const { locale } = await params;
-  const hierarchy = getHierarchyData(locale, 'faults');
+  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
   
   const staticParams = [];
   Object.keys(hierarchy).forEach(marka => {
@@ -22,7 +22,7 @@ export async function generateStaticParams({ params }) {
 
 export async function generateMetadata({ params }) {
   const { locale, marka, model } = await params;
-  const hierarchy = getHierarchyData(locale, 'faults');
+  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
   
   const brandData = hierarchy[marka];
   if (!brandData) return { title: 'Bulunamadı' };
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
 export default async function ArizaCozumleriModelPage({ params }) {
   const { locale, marka, model } = await params;
   setRequestLocale(locale);
-  const hierarchy = getHierarchyData(locale, 'faults');
+  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
   
   const brandData = hierarchy[marka];
   if (!brandData) notFound();

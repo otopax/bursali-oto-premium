@@ -1,4 +1,4 @@
-import { getSortedPostsData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ export async function generateMetadata({ params }) {
 export default async function BlogIndex({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'HomePage' }); // veya Global vs.
-  const allPostsData = getSortedPostsData(locale);
+  const allPostsData = await container.getSortedPostsUseCase.execute(locale);
 
   return (
     <div className="container mx-auto px-4 py-16" style={{ minHeight: '80vh', marginTop: '100px' }}>

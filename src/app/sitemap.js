@@ -1,5 +1,5 @@
 import { prisma } from '@/lib/prisma';
-import { getAllPostIds } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { articles } from '@/lib/articles';
 import { SEO_PRIORITY } from '@/data/seo-oncelik';
 
@@ -145,8 +145,7 @@ export default async function sitemap() {
 
   // 6) Fault Codes & Kütüphane (Hierarchy)
   try {
-    const { getHierarchyData } = require('@/lib/blog');
-    const hierarchy = getHierarchyData('tr', 'faults');
+    const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
     
     Object.entries(hierarchy).forEach(([marka, data]) => {
       // Ariza-cozumleri Marka and Kutuphane Marka
@@ -159,7 +158,7 @@ export default async function sitemap() {
         entries.push(...expandLocales(`/kutuphane/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.75, lastModified: now }));
         
         // Fault codes under model
-        data.models[model].forEach(post => {
+        data.models[model].items.forEach(post => {
           entries.push(...expandLocales(`/ariza-cozumleri/${marka}/${model}/${post.id}`, { changeFrequency: 'monthly', priority: 0.8, lastModified: now }));
         });
       });

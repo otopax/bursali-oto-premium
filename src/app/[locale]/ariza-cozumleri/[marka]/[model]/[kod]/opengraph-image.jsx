@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og';
-import { getPostData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 
 // export const runtime = 'edge'; // nodejs runtime allows fs usage
 export const alt = 'Bursalı Oto Servis Arıza Kodu';
@@ -13,7 +13,7 @@ export default async function Image({ params }) {
   let description = 'Profesyonel Çözüm ve Tamir Rehberi';
   
   try {
-    const postData = await getPostData(kod, 'faults');
+    const postData = await container.getPostDataUseCase.execute(kod, 'faults');
     if (postData && postData.title) {
       title = postData.title;
       if (postData.description) {

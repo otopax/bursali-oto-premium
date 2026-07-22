@@ -3,7 +3,7 @@ import Gallery from '@/components/Gallery';
 import TrustBadges from '@/components/TrustBadges';
 import Reviews from '../../components/Reviews';
 import { getTranslations } from 'next-intl/server';
-import { getSortedPostsData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { buildCanonical } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
 import MapFacade from '@/components/MapFacade';
@@ -22,7 +22,7 @@ export default async function Home({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations('HomePage');
-  const recentFaults = getSortedPostsData(locale, 'faults').slice(0, 4);
+  const recentFaults = (await container.getSortedPostsUseCase.execute(locale, 'faults')).slice(0, 4);
 
   return (
     <main>

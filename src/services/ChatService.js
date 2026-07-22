@@ -1,24 +1,24 @@
-import { google } from '@ai-sdk/google';
-import { streamText, tool } from 'ai';
 import { z } from 'zod';
-import { GoogleGenAI } from '@google/genai';
 import { DataAccessLayer } from '@/lib/dataAccessLayer';
 import { getSystemPrompt } from '@/lib/ai/promptRegistry';
 import { getAiCache, setAiCache } from '@/lib/ai/semanticCache';
 import { checkHallucination } from '@/lib/ai/hallucinationGuard';
 import { redis } from '@/lib/cache';
 import { getCache, setCache } from '@/lib/cache';
-import { getSortedPostsData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { VehicleRepository } from '@/lib/repositories/VehicleRepository';
 import { prisma } from '@/lib/prisma';
 import { logger } from '@/lib/observability/Logger';
 
 export class ChatService {
+  constructor(aiProvider) {
+    this.aiProvider = aiProvider;
+  }
   /**
    * AI Context Window Manager
    * Token tasarrufu ve Context taşmasını engellemek için mesaj geçmişini budar.
    */
-  static optimizeContextWindow(messages, maxMessages = 12) {
+  optimizeContextWindow(messages, maxMessages = 12) {
     if (messages.length <= maxMessages) return messages;
     
     logger.info(`Optimizing Context Window: Reducing from ${messages.length} to ${maxMessages}`);
@@ -31,7 +31,7 @@ export class ChatService {
   /**
    * Guest kotasını kontrol eder.
    */
-  static async checkGuestQuota(guestId, messages) {
+  async checkGuestQuota(guestId, messages) {
     const userMessageCount = messages.filter(m => m.role === 'user').length;
     const redisKey = `guest_quota:${guestId}`;
     
@@ -66,7 +66,7 @@ export class ChatService {
   /**
    * VIP Garaj Bilgilerini Sisteme Enjekte Eder
    */
-  static async buildSystemPrompt(vehicleContext) {
+  async buildSystemPrompt(vehicleContext) {
     let dynamicSystemPrompt = getSystemPrompt('CHAT_BOT', 'v2');
     
     if (vehicleContext && vehicleContext.isRegistered) {
@@ -106,7 +106,7 @@ export class ChatService {
   /**
    * Ana sohbet akışını yönetir
    */
-  static async executeChatFlow({ messages, vehicleContext, guestId, token, correlationId = 'unknown' }) {
+  async executeChatFlow({ messages, vehicleContext, guestId, token, correlationId = 'unknown' }) {
     logger.info('AI Chat Request Started', { correlationId, guestId, messagesCount: messages.length });
     
     // 1. Quota Check
@@ -136,10 +136,9 @@ export class ChatService {
     // 5. Context Window Manager (Token Optimization)
     const optimizedMessages = this.optimizeContextWindow(messages, 12);
 
-    // 6. Execute LLM with Fallback Resiliency
-    const result = streamText({
-      model: google('gemini-2.5-flash'), // Primary Model
-      system: systemPrompt,
+    // 6. Execute Model Call via AI Provider (Vercel AI SDK Abstracted)
+    const result = this.aiProvider.streamResponse({
+      systemPrompt,
       messages: optimizedMessages,
       tools: this.getAiTools(),
       onFinish: async ({ text, toolCalls }) => {
@@ -160,7 +159,7 @@ export class ChatService {
     return result;
   }
 
-  static getAiTools() {
+  getAiTools() {
     return {
       searchChronicFaults: tool({
         description: 'Verilen anahtar kelime veya araç modeline göre (örn: bmw n20, airmatic, dsg) kronik arızalar veritabanında (MDX makaleleri) arama yapar. Sonuçlar /ariza-cozumleri/ URL\'sine link vermek için kullanılır.',
@@ -169,7 +168,7 @@ export class ChatService {
         }),
         execute: async ({ keyword }) => {
           try {
-            const allFaults = getSortedPostsData('tr', 'faults');
+            const allFaults = await container.getSortedPostsUseCase.execute('tr', 'faults');
             if (!allFaults || allFaults.length === 0) return { success: false, message: 'Veritabanı boş.' };
             
             const lowerKeyword = keyword.toLowerCase();
@@ -195,7 +194,7 @@ export class ChatService {
         }),
         execute: async ({ keyword }) => {
           try {
-            const allLibrary = getSortedPostsData('tr', 'library');
+            const allLibrary = await container.getSortedPostsUseCase.execute('tr', 'library');
             if (!allLibrary || allLibrary.length === 0) return { success: false, message: 'Kütüphane veritabanı boş.' };
             
             const lowerKeyword = keyword.toLowerCase();
@@ -363,9 +362,8 @@ export class ChatService {
         }),
         execute: async ({ query, brandSlug }) => {
           const startTime = Date.now();
-          const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
-          const embedRes = await ai.models.embedContent({ model: 'gemini-embedding-001', contents: query });
-          const vectorStr = `[${embedRes.embeddings[0].values.join(',')}]`;
+          const values = await this.aiProvider.generateEmbedding(query);
+          const vectorStr = `[${values.join(',')}]`;
 
           let results;
           if (brandSlug) {

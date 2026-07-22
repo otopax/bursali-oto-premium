@@ -1,16 +1,16 @@
-import { getAllPostIds, getPostData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { notFound } from 'next/navigation';
 import Head from 'next/head';
 
 // Dynamic params function for static generation if needed
 export async function generateStaticParams() {
-  const paths = getAllPostIds();
+  const paths = await container.getPostPathsUseCase.execute();
   return paths.map(p => ({ slug: p.params.slug }));
 }
 
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
-  const postData = await getPostData(slug);
+  const postData = await container.getPostDataUseCase.execute(slug);
   
   if (!postData) return { title: 'Not Found' };
 
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
 
 export default async function BlogPost({ params }) {
   const { slug, locale } = await params;
-  const postData = await getPostData(slug);
+  const postData = await container.getPostDataUseCase.execute(slug);
 
   if (!postData) {
     notFound();

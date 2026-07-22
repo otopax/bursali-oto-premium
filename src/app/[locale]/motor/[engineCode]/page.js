@@ -1,4 +1,4 @@
-import { getSortedPostsData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import Link from 'next/link';
 
 export async function generateMetadata({ params }) {
@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
 
 export default async function EngineHubPage({ params }) {
   const { locale, engineCode } = await params;
-  const allFaults = getSortedPostsData(locale, 'faults');
+  const allFaults = await container.getSortedPostsUseCase.execute(locale, 'faults');
   
   // Filter by engineCode (if it matches any models or title strings loosely)
   // Usually, engine codes are in the "model" or title of the fault

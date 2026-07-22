@@ -1,4 +1,4 @@
-import { getHierarchyData } from '@/lib/blog';
+import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
@@ -25,7 +25,7 @@ const BRAND_LOGOS = {
 export default async function ArizaCozumleriHub({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const hierarchy = getHierarchyData(locale, 'faults');
+  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
 
   const brands = Object.entries(hierarchy).map(([slug, data]) => {
     let totalFaults = 0;

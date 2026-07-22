@@ -5,7 +5,7 @@ import { z } from 'zod';
 import { validate } from '@/lib/validate';
 import { rateLimit } from '@/lib/rate-limit';
 import { getToken } from 'next-auth/jwt';
-import { ChatService } from '@/services/ChatService';
+import { container } from '@/application/di/container';
 
 const chatBodySchema = z.object({
   messages: z.array(z.any()),
@@ -33,7 +33,7 @@ async function postHandler(req) {
     const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026' });
 
     // 2. Delegate to Application Service (DDD)
-    const result = await ChatService.executeChatFlow({ 
+    const result = await container.chatService.executeChatFlow({ 
       messages, 
       vehicleContext, 
       guestId, 
