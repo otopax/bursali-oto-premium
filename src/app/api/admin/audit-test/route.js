@@ -8,7 +8,7 @@ export async function GET() {
     
     // Log directly
     await logAudit({
-      userId: 1, // Fallback dummy user for test
+      userId: null, // Fallback dummy user for test
       action: testAction,
       entity: 'SystemTest',
       entityId: '123',

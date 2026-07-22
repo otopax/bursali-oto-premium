@@ -8,7 +8,7 @@ async function testAuditLog() {
   const testAction = `TEST_ACTION_${Date.now()}`;
   
   await logAudit({
-    userId: 1, // assuming user 1 exists, if not it might fail depending on foreign keys. Let's pass null if it's optional.
+    userId: null, // assuming user 1 exists, if not it might fail depending on foreign keys. Let's pass null if it's optional.
     action: testAction,
     entity: 'SystemTest',
     entityId: '123',
