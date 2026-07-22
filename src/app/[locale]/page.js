@@ -5,12 +5,14 @@ import Reviews from '../../components/Reviews';
 import { getTranslations } from 'next-intl/server';
 import { getSortedPostsData } from '@/lib/blog';
 import { buildCanonical } from '@/lib/seo/canonical';
+import { setRequestLocale } from 'next-intl/server';
 import MapFacade from '@/components/MapFacade';
 import Reveal from '@/components/anim/Reveal';
 import dynamic from 'next/dynamic';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   return {
     alternates: buildCanonical(locale, ''),
   };
@@ -18,6 +20,7 @@ export async function generateMetadata({ params }) {
 
 export default async function Home({ params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations('HomePage');
   const recentFaults = getSortedPostsData(locale, 'faults').slice(0, 4);
 

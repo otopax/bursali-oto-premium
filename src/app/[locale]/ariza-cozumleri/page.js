@@ -1,5 +1,6 @@
 import { getSortedPostsData } from '@/lib/blog';
 import FaultsClientView from './FaultsClientView';
+import { setRequestLocale } from 'next-intl/server';
 
 export const metadata = {
   title: 'Arıza Çözümleri | Bursalı Oto Servis Fethiye',
@@ -11,6 +12,7 @@ export const metadata = {
 
 export default async function ArizaCozumleriHub({ params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const faults = getSortedPostsData(locale, 'faults'); // Using folder 'faults'
 
   return (

@@ -1,5 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, getTranslations } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Inter, Outfit } from 'next/font/google';
 import '../globals.css';
 import dynamic from 'next/dynamic';
@@ -33,19 +33,18 @@ export const viewport = {
 
 export const revalidate = 86400; // 1 day ISR Cache for all nested pages unless opted out
 
+export function generateStaticParams() {
+  return [{locale: 'tr'}, {locale: 'en'}, {locale: 'ru'}, {locale: 'uk'}, {locale: 'ar'}];
+}
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   const localeMap = {
     tr: 'tr_TR', en: 'en_GB', ru: 'ru_RU', uk: 'uk_UA', ar: 'ar_AE'
   };
-
-  const languages = {};
-  Object.keys(localeMap).forEach(l => {
-    languages[l] = `/${l}`;
-  });
-  languages['x-default'] = '/tr';
 
   return {
     metadataBase: new URL(SITE_URL),
@@ -54,9 +53,6 @@ export async function generateMetadata({ params }) {
       default: t('title')
     },
     description: t('description'),
-    alternates: {
-      languages
-    },
     authors: [{ name: 'Bursalı Oto Servis' }],
     publisher: 'Bursalı Oto Servis',
     robots: 'index, follow',
@@ -88,6 +84,7 @@ import StructuredData from '@/components/StructuredData';
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
+  setRequestLocale(locale);
   const messages = await getMessages();
 
   return (

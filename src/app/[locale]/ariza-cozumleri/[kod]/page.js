@@ -14,9 +14,11 @@ function extractFirstSentence(text) {
 }
 
 import { buildCanonical } from '@/lib/seo/canonical';
+import { setRequestLocale } from 'next-intl/server';
 
 export async function generateMetadata({ params }) {
   const { kod, locale } = await params;
+  setRequestLocale(locale);
   const postData = await getPostData(kod, 'faults');
   
   if (!postData) {
@@ -38,15 +40,15 @@ export async function generateMetadata({ params }) {
   const canonicalData = buildCanonical(locale, `ariza-cozumleri/${kod}`);
 
   // Max 60 chars title
-  let titleStr = `${postData.title} Çözümü | Bursalı Oto`;
+  let titleStr = `${postData.title || kod} Çözümü | Bursalı Oto`;
   if (titleStr.length > 60) {
-     titleStr = `${postData.title} Çözümü`.substring(0, 60);
+     titleStr = `${postData.title || kod} Çözümü`.substring(0, 60);
   }
 
   return {
     title: titleStr,
     description: shortDescription,
-    keywords: [`${postData.brand} ${postData.title.toLowerCase()}`, 'Fethiye oto servis', 'arıza çözümü', 'Bursalı Oto'],
+    keywords: [`${postData.brand || ''} ${postData.title?.toLowerCase() || ''}`, 'Fethiye oto servis', 'arıza çözümü', 'Bursalı Oto'],
     openGraph: {
       title: titleStr,
       description: shortDescription,
@@ -57,7 +59,7 @@ export async function generateMetadata({ params }) {
           url: ogImage,
           width: 1200,
           height: 630,
-          alt: postData.title
+          alt: postData.title || 'Arıza Çözümü'
         }
       ],
       locale: locale === 'tr' ? 'tr_TR' : locale === 'en' ? 'en_GB' : locale === 'ru' ? 'ru_RU' : 'tr_TR',
@@ -88,6 +90,7 @@ export async function generateStaticParams() {
 
 export default async function ArizaCozumDetailPage({ params }) {
   const { kod, locale } = await params;
+  setRequestLocale(locale);
   const postData = await getPostData(kod, 'faults');
 
   if (!postData) {
@@ -110,7 +113,7 @@ export default async function ArizaCozumDetailPage({ params }) {
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
-    headline: postData.title,
+    headline: postData.title || 'Arıza Çözüm Rehberi',
     description: description,
     image: {
       '@type': 'ImageObject',
@@ -145,7 +148,7 @@ export default async function ArizaCozumDetailPage({ params }) {
       { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`) },
       { '@type': 'ListItem', position: 2, name: 'Arıza Çözümleri', item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/ariza-cozumleri` },
       { '@type': 'ListItem', position: 3, name: postData.brand || 'Marka', item: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/marka/${brandSlug}` },
-      { '@type': 'ListItem', position: 4, name: postData.title, item: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/ariza-cozumleri/${kod}` }
+      { '@type': 'ListItem', position: 4, name: postData.title || kod, item: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/ariza-cozumleri/${kod}` }
     ]
   };
 
@@ -159,7 +162,7 @@ export default async function ArizaCozumDetailPage({ params }) {
   else if (brandLower.includes('volvo')) diagnosticTool = 'VIDA diyagnoz yazılımıyla';
   else if (brandLower.includes('land rover') || brandLower.includes('range rover')) diagnosticTool = 'SDD/Pathfinder arıza tespit cihazlarıyla';
 
-  const faqAnswer = `Bursalı Oto uzman servisinde, ${postData.brand} araçlarına özel ${diagnosticTool} arıza tespiti yapılır ve ${postData.title} sorununun kök nedeni mekanik/elektronik olarak garantili şekilde onarılır. İlgili arıza için parça değişimi veya mekatronik onarımı uzman ekibimizce gerçekleştirilir.`;
+  const faqAnswer = `Bursalı Oto uzman servisinde, ${postData.brand || 'premium'} araçlarına özel ${diagnosticTool} arıza tespiti yapılır ve ${postData.title || 'bu'} sorununun kök nedeni mekanik/elektronik olarak garantili şekilde onarılır. İlgili arıza için parça değişimi veya mekatronik onarımı uzman ekibimizce gerçekleştirilir.`;
 
   const faqSchema = {
     '@context': 'https://schema.org',
@@ -167,7 +170,7 @@ export default async function ArizaCozumDetailPage({ params }) {
     mainEntity: [
       {
         '@type': 'Question',
-        name: `${postData.title} belirtileri nelerdir?`,
+        name: `${postData.title || 'Bu arıza'} belirtileri nelerdir?`,
         acceptedAnswer: {
           '@type': 'Answer',
           text: description
@@ -175,7 +178,7 @@ export default async function ArizaCozumDetailPage({ params }) {
       },
       {
         '@type': 'Question',
-        name: `${postData.title} kalıcı çözümü nedir?`,
+        name: `${postData.title || 'Bu arızanın'} kalıcı çözümü nedir?`,
         acceptedAnswer: {
           '@type': 'Answer',
           text: faqAnswer
@@ -214,7 +217,7 @@ export default async function ArizaCozumDetailPage({ params }) {
   const howToSchema = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
-    name: `${postData.title} Nasıl Çözülür?`,
+    name: `${postData.title || 'Arıza'} Nasıl Çözülür?`,
     description: faqAnswer,
     step: [
       {
@@ -239,7 +242,7 @@ export default async function ArizaCozumDetailPage({ params }) {
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
-    serviceType: postData.title,
+    serviceType: postData.title || 'Arıza Onarımı',
     provider: { '@id': (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`) },
     areaServed: 'Fethiye ve çevresi'
   };
@@ -268,7 +271,7 @@ export default async function ArizaCozumDetailPage({ params }) {
           <span>/</span>
           <a href={`/ariza-cozumleri?brand=${postData.brand}`} style={{ textDecoration: 'none', color: 'inherit' }}>{postData.brand}</a> 
           <span>/</span>
-          <span style={{ color: 'var(--accent-gold)' }}>{postData.title}</span>
+          <span style={{ color: 'var(--accent-gold)' }}>{postData.title || kod}</span>
         </nav>
 
         <header style={{ marginBottom: '3rem', textAlign: 'center' }}>
@@ -278,7 +281,7 @@ export default async function ArizaCozumDetailPage({ params }) {
             </span>
           </div>
           <h1 style={{ fontSize: '2.5rem', color: 'var(--text-light)', marginBottom: '1rem', fontWeight: '800', lineHeight: '1.2' }}>
-            {postData.title}
+            {postData.title || kod}
           </h1>
           <div style={{ color: 'var(--text-muted)', fontSize: '1.1rem', marginBottom: '1.5rem' }}>
             <strong>Etkilenen Modeller:</strong> {postData.model}
@@ -356,11 +359,11 @@ export default async function ArizaCozumDetailPage({ params }) {
         {/* Teknik Onarım ve İşçilik Bloğu (SEO Thin Content Çözümü) */}
         <section style={{ marginTop: '3rem', padding: '2rem', background: '#0a0a0c', borderRadius: '16px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '1.5rem' }}>
-            {postData.brand} {postData.title} Teknik Onarım Süreci
+            {postData.brand || ''} {postData.title || ''} Teknik Onarım Süreci
           </h2>
           <div style={{ color: '#ccc', lineHeight: '1.8' }}>
             <p>
-              Bursalı Oto Servis olarak Fethiye'de {postData.brand} araçlarında karşılaşılan <strong>{postData.title}</strong> sorunu için ezbere parça değişimi yerine, öncelikle OEM standartlarında bilgisayarlı arıza teşhisi uyguluyoruz. Bu arızanın kök nedeni genellikle {postData.potentialCauses || 'sensör okuma hataları, mekanik aşınmalar veya elektronik beyin (ECU) iletişim kopukluklarından'} kaynaklanır.
+              Bursalı Oto Servis olarak Fethiye'de {postData.brand || 'premium'} araçlarında karşılaşılan <strong>{postData.title || 'bu'}</strong> sorunu için ezbere parça değişimi yerine, öncelikle OEM standartlarında bilgisayarlı arıza teşhisi uyguluyoruz. Bu arızanın kök nedeni genellikle {postData.potentialCauses || 'sensör okuma hataları, mekanik aşınmalar veya elektronik beyin (ECU) iletişim kopukluklarından'} kaynaklanır.
             </p>
             <h3 style={{ fontSize: '1.2rem', color: '#fff', marginTop: '1.5rem', marginBottom: '0.5rem' }}>Kullanılan Ekipman ve İşçilik Süresi</h3>
             <ul style={{ listStyleType: 'disc', paddingLeft: '1.5rem', marginBottom: '1.5rem' }}>
@@ -378,11 +381,11 @@ export default async function ArizaCozumDetailPage({ params }) {
         <section style={{ marginTop: '3rem', padding: '2rem', background: '#121212', borderRadius: '16px', border: '1px solid #333' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#fff', marginBottom: '1.5rem' }}>Sıkça Sorulan Sorular</h2>
           <div style={{ marginBottom: '1.5rem' }}>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>{postData.title} belirtileri nelerdir?</h3>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>{postData.title || 'Bu arıza'} belirtileri nelerdir?</h3>
             <p style={{ color: '#ccc', lineHeight: '1.6' }}>{description}</p>
           </div>
           <div>
-            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>{postData.title} kalıcı çözümü nedir?</h3>
+            <h3 style={{ fontSize: '1.2rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '0.5rem' }}>{postData.title || 'Bu arızanın'} kalıcı çözümü nedir?</h3>
             <p style={{ color: '#ccc', lineHeight: '1.6' }}>{faqAnswer}</p>
           </div>
         </section>
