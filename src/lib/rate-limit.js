@@ -5,7 +5,8 @@ const MAX_REQUESTS = 50; // IP başına max istek
 
 export async function rateLimit(namespace, identifier, limit = MAX_REQUESTS, windowSec = RATE_LIMIT_WINDOW) {
   if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
-    throw new Error('REDIS_UNAVAILABLE: Rate limiting disabled, blocking request.');
+    console.warn('REDIS_UNAVAILABLE: Rate limiting disabled, failing open.');
+    return { remaining: limit - 1, limit };
   }
 
   const redis = new Redis({
@@ -29,8 +30,8 @@ export async function rateLimit(namespace, identifier, limit = MAX_REQUESTS, win
     return { remaining: limit - current, limit: limit };
   } catch (error) {
     if (error.message === 'RATE_LIMIT_EXCEEDED') throw error;
-    // Bağlantı kopması vs. durumlarda da fail-closed
-    console.error('[Rate Limit] Redis error, fail-closed triggered:', error.message);
-    throw new Error('REDIS_UNAVAILABLE: Rate limiting failed, blocking request.');
+    // Bağlantı kopması vs. durumlarda da fail-closed yerine fail-open
+    console.error('[Rate Limit] Redis error, fail-open triggered:', error.message);
+    return { remaining: limit - 1, limit };
   }
 }

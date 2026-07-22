@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "node scripts/railway-build.js",
     "start": "next start",
     "start:web": "next start",
     "start:worker": "tsx --tsconfig jsconfig.json src/scripts/jobs/worker.js",
