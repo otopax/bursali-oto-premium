@@ -6,9 +6,9 @@ export const businessData = {
   name: "Bursalı Oto Servis Fethiye",
   alternateName: "Bursalı Oto",
   description: "Fethiye premium oto servis. PIWIS ve ODIS ile garantili BMW, Mercedes, Porsche tamiri. 7/24 VIP yol yardım ve orijinal yedek parça güvencesi.",
-  url: "https://www.bursaliotoservis.com",
-  logo: "https://www.bursaliotoservis.com/bg.png",
-  image: "https://www.bursaliotoservis.com/bg.png",
+  url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'),
+  logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`,
+  image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`,
   telephone: "+905548812021",
   priceRange: "₺₺-₺₺₺",
   address: {

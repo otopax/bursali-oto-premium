@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import Head from 'next/head';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`);
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;

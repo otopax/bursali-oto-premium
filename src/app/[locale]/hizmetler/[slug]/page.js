@@ -1,7 +1,7 @@
 import { getTranslations } from 'next-intl/server';
 import { buildCanonical } from '@/lib/seo/canonical';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`);
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;

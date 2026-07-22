@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
     !/google\.[a-z.]+\/search/i.test(u);
   const ogImage = isValidImage(postData.image)
     ? postData.image
-    : 'https://www.bursaliotoservis.com/bg.png';
+    : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`;
   const canonicalData = buildCanonical(locale, `ariza-cozumleri/${kod}`);
 
   // Max 60 chars title
@@ -104,7 +104,7 @@ export default async function ArizaCozumDetailPage({ params }) {
     !/google\.[a-z.]+\/search/i.test(u);
   const schemaImageUrl = isValidSchemaImage(postData.image)
     ? postData.image
-    : 'https://www.bursaliotoservis.com/bg.png';
+    : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`;
 
   // 1. Article Schema
   const articleSchema = {
@@ -121,14 +121,14 @@ export default async function ArizaCozumDetailPage({ params }) {
     author: {
       '@type': 'Organization',
       name: 'Bursalı Oto Servis Uzman Ekibi',
-      url: 'https://www.bursaliotoservis.com'
+      url: (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)
     },
     publisher: {
       '@type': 'Organization',
       name: 'Bursalı Oto Servis',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://www.bursaliotoservis.com/logo.png' 
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/logo.png` 
       }
     },
     datePublished: postData.date || new Date().toISOString(),
@@ -142,10 +142,10 @@ export default async function ArizaCozumDetailPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: 'https://www.bursaliotoservis.com' },
-      { '@type': 'ListItem', position: 2, name: 'Arıza Çözümleri', item: 'https://www.bursaliotoservis.com/ariza-cozumleri' },
-      { '@type': 'ListItem', position: 3, name: postData.brand || 'Marka', item: `https://www.bursaliotoservis.com/marka/${brandSlug}` },
-      { '@type': 'ListItem', position: 4, name: postData.title, item: `https://www.bursaliotoservis.com/ariza-cozumleri/${kod}` }
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`) },
+      { '@type': 'ListItem', position: 2, name: 'Arıza Çözümleri', item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/ariza-cozumleri` },
+      { '@type': 'ListItem', position: 3, name: postData.brand || 'Marka', item: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/marka/${brandSlug}` },
+      { '@type': 'ListItem', position: 4, name: postData.title, item: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/ariza-cozumleri/${kod}` }
     ]
   };
 
@@ -191,9 +191,9 @@ export default async function ArizaCozumDetailPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'AutoRepair',
     name: 'Bursalı Oto Servis',
-    image: 'https://www.bursaliotoservis.com/logo.png',
-    '@id': 'https://www.bursaliotoservis.com',
-    url: 'https://www.bursaliotoservis.com',
+    image: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/logo.png`,
+    '@id': (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`),
+    url: (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`),
     telephone: '+905548812021',
     address: {
       '@type': 'PostalAddress',
@@ -240,7 +240,7 @@ export default async function ArizaCozumDetailPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'Service',
     serviceType: postData.title,
-    provider: { '@id': 'https://www.bursaliotoservis.com' },
+    provider: { '@id': (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`) },
     areaServed: 'Fethiye ve çevresi'
   };
 

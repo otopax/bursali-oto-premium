@@ -118,13 +118,13 @@ export default function TowingPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Ana Sayfa",
-                  "item": "https://www.bursaliotoservis.com"
+                  "item": (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com')
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "7/24 Acil Oto Çekici",
-                  "item": "https://www.bursaliotoservis.com/fethiye-7-24-oto-cekici"
+                  "item": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/fethiye-7-24-oto-cekici`
                 }
               ]
             }

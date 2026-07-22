@@ -5,7 +5,7 @@ export const metadata = {
   title: 'Arıza Çözümleri | Bursalı Oto Servis Fethiye',
   description: 'Fethiye premium oto servis olarak karşılaştığımız kronik arızalar ve çözümleri.',
   alternates: {
-    canonical: 'https://www.bursaliotoservis.com/ariza-cozumleri'
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/ariza-cozumleri`
   }
 };
 

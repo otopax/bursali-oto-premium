@@ -21,7 +21,7 @@ export async function generateMetadata({ params }) {
     title: `Fethiye ${capitalizedMarka} Servis | Uzman Bakım ve Orijinal Cihazlı Tamir`,
     description: `Fethiye ve bölgesinde ${capitalizedMarka} aracınız için garantili bakım, şanzıman tamiri ve orijinal PIWIS/ODIS/XENTRY arıza tespiti. ${capitalizedMarka} özel servis.`,
     alternates: {
-      canonical: `https://www.bursaliotoservis.com/${locale}/${marka}-servis-fethiye`
+      canonical: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/${locale}/${marka}-servis-fethiye`
     },
     openGraph: {
       title: `Fethiye ${capitalizedMarka} Özel Servis`,

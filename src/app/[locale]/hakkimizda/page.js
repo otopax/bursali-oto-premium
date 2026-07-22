@@ -115,13 +115,13 @@ export default function AboutPage() {
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Ana Sayfa",
-                  "item": "https://www.bursaliotoservis.com"
+                  "item": (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com')
                 },
                 {
                   "@type": "ListItem",
                   "position": 2,
                   "name": "Hakkımızda",
-                  "item": "https://www.bursaliotoservis.com/tr/hakkimizda"
+                  "item": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/tr/hakkimizda`
                 }
               ]
             }

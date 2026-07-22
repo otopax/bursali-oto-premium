@@ -39,13 +39,13 @@ export default async function BlogPost({ params }) {
     "@type": "Article",
     "headline": postData.title,
     "image": [
-      `https://www.bursaliotoservis.com${postData.image || '/bg.png'}`
+      `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}${postData.image || '/bg.png'}`
     ],
     "datePublished": postData.date,
     "author": [{
         "@type": "Organization",
         "name": "Bursalı Oto Servis",
-        "url": "https://www.bursaliotoservis.com"
+        "url": (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com')
       }]
   };
 

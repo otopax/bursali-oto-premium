@@ -1,5 +1,6 @@
 import { UpstashRedisAdapter } from './upstash';
 import { MemoryRedisAdapter } from './memory';
+import { StandardRedisAdapter } from './standard';
 
 class RedisFactory {
   constructor() {
@@ -13,13 +14,16 @@ class RedisFactory {
       if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
         this.adapter = new UpstashRedisAdapter();
         this.isMemory = false;
+      } else if (process.env.REDIS_URL) {
+        this.adapter = new StandardRedisAdapter();
+        this.isMemory = false;
       } else {
-        console.warn("[RedisFactory] Upstash credentials not found. Falling back to Memory Adapter.");
+        console.warn("[RedisFactory] Redis credentials not found. Falling back to Memory Adapter.");
         this.adapter = new MemoryRedisAdapter();
         this.isMemory = true;
       }
     } catch (error) {
-      console.warn("[RedisFactory] Failed to init Upstash, falling back to Memory Adapter.", error.message);
+      console.warn("[RedisFactory] Failed to init Redis, falling back to Memory Adapter.", error.message);
       this.adapter = new MemoryRedisAdapter();
       this.isMemory = true;
     }

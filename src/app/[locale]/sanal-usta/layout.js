@@ -12,7 +12,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: 'Sanal Usta - Yapay Zeka Oto Teşhis',
       description: 'Yapay Zeka destekli ücretsiz oto arıza tespit sistemi.',
-      url: `https://www.bursaliotoservis.com/${locale}/sanal-usta`,
+      url: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/${locale}/sanal-usta`,
       type: 'website',
     }
   };
