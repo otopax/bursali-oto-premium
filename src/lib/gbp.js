@@ -45,7 +45,9 @@ export async function getGBPData() {
 
     return data;
   } catch (error) {
-    console.error('GBP API Hatası:', error);
+    if (process.env.NODE_ENV !== 'production' && process.env.NEXT_PHASE !== 'phase-production-build') {
+      console.error('GBP API Hatası:', error);
+    }
     return {
       averageRating: 4.9,
       reviewCount: 124,

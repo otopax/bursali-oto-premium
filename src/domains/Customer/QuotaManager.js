@@ -7,8 +7,14 @@ const globalForPrisma = globalThis;
 const prisma = globalForPrisma.prisma ?? new PrismaClient();
 if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 
-const redisClient = new IORedis(process.env.REDIS_URL || 'redis://localhost:6379');
-redisClient.on('error', (err) => console.error('Redis Client Error', err));
+const redisClient = new IORedis(process.env.REDIS_URL || 'redis://localhost:6379', {
+  lazyConnect: true
+});
+redisClient.on('error', (err) => {
+  if (process.env.NODE_ENV !== 'production' && process.env.NEXT_PHASE !== 'phase-production-build') {
+    console.error('Redis Client Error', err);
+  }
+});
 
 // 🚀 V4.0 PLATFORM RELIABILITY: REDIS LUA SCRIPT
 // Ensures Check-And-Set is 100% atomic, preventing any race conditions even if 10.000 requests hit simultaneously.

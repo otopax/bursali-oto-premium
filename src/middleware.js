@@ -22,6 +22,21 @@ export async function middleware(request) {
 
   const pathname = request.nextUrl.pathname;
   request.headers.set('x-current-path', pathname);
+
+  // 1.2 Chaos Engineering (Fail-Open / Resiliency Testing)
+  const chaosDelay = request.headers.get('x-chaos-delay');
+  const chaosError = request.headers.get('x-chaos-error');
+  
+  if (chaosError === 'true' && process.env.NODE_ENV !== 'production') {
+    return new NextResponse('Chaos Engineering: Simulated Fatal Error', { status: 500 });
+  }
+  
+  if (chaosDelay) {
+    const delayMs = parseInt(chaosDelay, 10);
+    if (!isNaN(delayMs) && delayMs > 0 && delayMs <= 10000) {
+      await new Promise(resolve => setTimeout(resolve, delayMs));
+    }
+  }
   
   // 1.5 Global Rate Limiting (Edge Compatible via Upstash REST or Fail-Open)
   try {

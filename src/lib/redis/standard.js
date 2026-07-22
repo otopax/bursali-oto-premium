@@ -2,7 +2,7 @@ import client from './client';
 
 export class StandardRedisAdapter {
   constructor() {
-    this.client = client;
+    this.client = client.getInstance();
   }
 
   async get(key) {

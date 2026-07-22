@@ -33,10 +33,12 @@ export const businessData = {
     "Fethiye",
     "Göcek",
     "Ölüdeniz",
-    "Çalış",
-    "Kayaköy",
+    "Dalaman",
+    "Kaş",
+    "Kalkan",
     "Seydikemer",
-    "Dalaman"
+    "Çalış",
+    "Kayaköy"
   ],
   knowsLanguage: ["tr", "en", "ru", "uk", "ar"],
   sameAs: [

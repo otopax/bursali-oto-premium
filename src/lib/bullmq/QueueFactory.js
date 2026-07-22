@@ -5,6 +5,13 @@ import Redis from 'ioredis';
 export const redisConnection = new Redis(process.env.REDIS_URL || 'redis://127.0.0.1:6379', {
   maxRetriesPerRequest: null, // BullMQ requires this to be null
   enableReadyCheck: false,
+  lazyConnect: true,
+});
+
+redisConnection.on('error', (err) => {
+  if (process.env.NODE_ENV !== 'production' && process.env.NEXT_PHASE !== 'phase-production-build') {
+    console.error('[BullMQ Redis] ❌ Connection Error:', err.message);
+  }
 });
 
 // 2. Enterprise Queue Defaults (Retry Matrix, DLQ, Backoff)

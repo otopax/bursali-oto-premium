@@ -16,7 +16,7 @@ try {
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  // output: 'standalone',
   eslint: {
     ignoreDuringBuilds: false,
   },

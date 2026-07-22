@@ -3,8 +3,12 @@ const IORedis = require('ioredis');
 
 class RedisClient {
   constructor() {
-    if (!RedisClient.instance) {
-      RedisClient.instance = new IORedis(process.env.REDIS_URL, {
+    this.instance = null;
+  }
+
+  getInstance() {
+    if (!this.instance && process.env.REDIS_URL) {
+      this.instance = new IORedis(process.env.REDIS_URL, {
         maxRetriesPerRequest: null,
         enableReadyCheck: false,
         lazyConnect: true,
@@ -13,11 +17,14 @@ class RedisClient {
           return Math.min(times * 100, 3000);
         }
       });
-      RedisClient.instance.on('error', (err) => {
-        console.error('[Redis] ❌ Global Client Error:', err.message);
+      this.instance.on('error', (err) => {
+        // Build ortamında (Prerender) ECONNREFUSED hatasını yoksay veya sustur
+        if (process.env.NODE_ENV !== 'production' && process.env.NEXT_PHASE !== 'phase-production-build') {
+           console.error('[Redis] ❌ Global Client Error:', err.message);
+        }
       });
     }
-    return RedisClient.instance;
+    return this.instance;
   }
 }
 

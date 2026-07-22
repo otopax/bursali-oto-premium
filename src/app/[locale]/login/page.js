@@ -1,10 +1,11 @@
 'use client';
 
+import { Suspense } from 'react';
 import { useState, useEffect } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 
-export default function LoginPage() {
+function LoginForm() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -54,6 +55,79 @@ export default function LoginPage() {
     }
   };
 
+  return (
+    <>
+      {error && (
+        <div style={styles.errorBox}>
+          <span style={styles.errorIcon}>⚠️</span>
+          <span>{error}</span>
+        </div>
+      )}
+
+      <form onSubmit={handleSubmit}>
+        <div style={styles.inputGroup}>
+          <label style={styles.label}>E-posta Adresi</label>
+          <div style={styles.inputWrapper}>
+            <span style={styles.inputIcon}>✉️</span>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              style={styles.input}
+              placeholder="admin@bursalioto.com"
+              autoComplete="email"
+            />
+          </div>
+        </div>
+
+        <div style={styles.inputGroup}>
+          <label style={styles.label}>Şifre</label>
+          <div style={styles.inputWrapper}>
+            <span style={styles.inputIcon}>🔒</span>
+            <input
+              type={showPassword ? 'text' : 'password'}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              style={styles.input}
+              placeholder="••••••••"
+              autoComplete="current-password"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              style={styles.eyeBtn}
+              tabIndex={-1}
+            >
+              {showPassword ? '🙈' : '👁️'}
+            </button>
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          disabled={loading}
+          style={{
+            ...styles.submitBtn,
+            ...(loading ? styles.submitBtnDisabled : {}),
+          }}
+        >
+          {loading ? (
+            <span style={styles.loadingContent}>
+              <span style={styles.spinner} />
+              Giriş Yapılıyor...
+            </span>
+          ) : (
+            'Giriş Yap →'
+          )}
+        </button>
+      </form>
+    </>
+  );
+}
+
+export default function LoginPage() {
   return (
     <div style={styles.page}>
       {/* Animated Background */}
@@ -109,72 +183,9 @@ export default function LoginPage() {
               <p style={styles.formSubtitle}>Yetkili personel girişi</p>
             </div>
 
-            {error && (
-              <div style={styles.errorBox}>
-                <span style={styles.errorIcon}>⚠️</span>
-                <span>{error}</span>
-              </div>
-            )}
-
-            <form onSubmit={handleSubmit}>
-              <div style={styles.inputGroup}>
-                <label style={styles.label}>E-posta Adresi</label>
-                <div style={styles.inputWrapper}>
-                  <span style={styles.inputIcon}>✉️</span>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    style={styles.input}
-                    placeholder="admin@bursalioto.com"
-                    autoComplete="email"
-                  />
-                </div>
-              </div>
-
-              <div style={styles.inputGroup}>
-                <label style={styles.label}>Şifre</label>
-                <div style={styles.inputWrapper}>
-                  <span style={styles.inputIcon}>🔒</span>
-                  <input
-                    type={showPassword ? 'text' : 'password'}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                    style={styles.input}
-                    placeholder="••••••••"
-                    autoComplete="current-password"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    style={styles.eyeBtn}
-                    tabIndex={-1}
-                  >
-                    {showPassword ? '🙈' : '👁️'}
-                  </button>
-                </div>
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                style={{
-                  ...styles.submitBtn,
-                  ...(loading ? styles.submitBtnDisabled : {}),
-                }}
-              >
-                {loading ? (
-                  <span style={styles.loadingContent}>
-                    <span style={styles.spinner} />
-                    Giriş Yapılıyor...
-                  </span>
-                ) : (
-                  'Giriş Yap →'
-                )}
-              </button>
-            </form>
+            <Suspense fallback={<div style={{color: '#fafafa'}}>Yükleniyor...</div>}>
+              <LoginForm />
+            </Suspense>
 
             <div style={styles.helpSection}>
               <p style={styles.helpText}>
@@ -187,6 +198,7 @@ export default function LoginPage() {
           </div>
         </div>
       </div>
+
 
       <style>{`
         @keyframes float1 {
