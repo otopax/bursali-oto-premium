@@ -1,4 +1,5 @@
 import { get } from '@vercel/edge-config';
+import { logger } from '@/lib/observability/Logger';
 
 /**
  * Feature Flags Servisi
@@ -30,7 +31,7 @@ export async function getFeatureFlag(flagName, defaultValue = false) {
   } catch (error) {
     // Edge Config hatası, timeout veya connection failure:
     // Fail-open mantığı gereği env değişkenine dönüyoruz.
-    console.warn(`Feature Flag Warning: Failed to read ${flagName} from Edge Config. Falling back to env. Reason: ${error.message}`);
+    logger.warn(`Feature Flag Warning: Failed to read ${flagName} from Edge Config. Falling back to env.`, { error: error.message });
     return process.env[envKey] !== undefined ? envValue : defaultValue;
   }
 }

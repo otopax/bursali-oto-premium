@@ -1,4 +1,6 @@
 import { PrismaClient } from '@prisma/client';
+import '@/env'; // Validate environment variables when Prisma initializes
+import { logger } from '@/lib/observability/Logger';
 
 /**
  * Prisma Query Interceptor for Audit Logging
@@ -138,3 +140,16 @@ globalForPrisma.__basePrisma = basePrisma;
 
 export const prisma = globalForPrisma.__prisma ?? basePrisma.$extends(createAuditLogExtension(basePrisma));
 globalForPrisma.__prisma = prisma;
+
+// 🚀 Graceful Shutdown (Sprint 8: Production Readiness)
+// Prevents connection leaks when the container/server stops
+if (process.env.NODE_ENV !== 'development') {
+  const shutdown = async () => {
+    logger.info('[Prisma] Disconnecting database gracefully due to process termination signal...');
+    await basePrisma.$disconnect();
+    process.exit(0);
+  };
+
+  process.on('SIGINT', shutdown);
+  process.on('SIGTERM', shutdown);
+}
