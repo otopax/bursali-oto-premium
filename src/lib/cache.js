@@ -13,8 +13,13 @@ export const CACHE_TTL = {
  * @param {string} identifier - Benzersiz değer (vin numarası, slug vb.)
  */
 export async function getCache(namespace, identifier) {
-  const key = `cache:${namespace}:${identifier}`;
-  return await redis.get(key);
+  try {
+    const key = `cache:${namespace}:${identifier}`;
+    return await redis.get(key);
+  } catch (error) {
+    console.warn(`[Cache] Redis GET Error for ${namespace}:${identifier} - Failing Open`, error.message);
+    return null; // Return null so application continues without cache
+  }
 }
 
 /**
@@ -25,8 +30,13 @@ export async function getCache(namespace, identifier) {
  * @param {number} ttlSeconds - Yaşam süresi (CAHCE_TTL sabiti kullanın)
  */
 export async function setCache(namespace, identifier, value, ttlSeconds = 3600) {
-  const key = `cache:${namespace}:${identifier}`;
-  return await redis.set(key, value, { ex: ttlSeconds });
+  try {
+    const key = `cache:${namespace}:${identifier}`;
+    return await redis.set(key, value, { ex: ttlSeconds });
+  } catch (error) {
+    console.warn(`[Cache] Redis SET Error for ${namespace}:${identifier} - Ignoring`, error.message);
+    return null;
+  }
 }
 
 export { redis };

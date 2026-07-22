@@ -20,13 +20,19 @@ export class ChatService {
     const userMessageCount = messages.filter(m => m.role === 'user').length;
     const redisKey = `guest_quota:${guestId}`;
     
-    const currentQuota = await redis.get(redisKey);
-    if (currentQuota && parseInt(currentQuota) >= 3 && userMessageCount > 3) {
-      throw new Error('GUEST_QUOTA_EXCEEDED');
-    }
+    try {
+      const currentQuota = await redis.get(redisKey);
+      if (currentQuota && parseInt(currentQuota) >= 3 && userMessageCount > 3) {
+        throw new Error('GUEST_QUOTA_EXCEEDED');
+      }
 
-    await redis.incr(redisKey);
-    await redis.expire(redisKey, 86400); // 24 hours
+      await redis.incr(redisKey);
+      await redis.expire(redisKey, 86400); // 24 hours
+    } catch (error) {
+      if (error.message === 'GUEST_QUOTA_EXCEEDED') throw error;
+      console.warn('[ChatService] Redis Quota Error (Failing Open):', error.message);
+      // FAIL OPEN: If Redis is down, allow the user to continue chatting
+    }
   }
 
   /**
