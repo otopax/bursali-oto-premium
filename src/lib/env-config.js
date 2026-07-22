@@ -2,7 +2,7 @@ import { z } from 'zod';
 
 const envSchema = z.object({
   DATABASE_URL: z.string().url("Geçerli bir veritabanı URL'si girilmelidir."),
-  GEMINI_API_KEY: z.string().min(30, "Gemini API anahtarı geçersiz veya çok kısa."),
+  GOOGLE_GENERATIVE_AI_API_KEY: z.string().min(30, "Gemini API anahtarı geçersiz veya çok kısa."),
   REDIS_URL: z.string().url("Geçerli bir Redis URL'si girilmelidir.").optional(),
   UPSTASH_REDIS_REST_URL: z.string().url("Geçerli bir Upstash URL'si girilmelidir.").optional(),
   UPSTASH_REDIS_REST_TOKEN: z.string().min(10, "Upstash Token geçersiz.").optional(),
