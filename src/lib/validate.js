@@ -1,5 +1,7 @@
 import { z } from 'zod';
 import { NextResponse } from 'next/server';
+import { requestContext } from '@/lib/observability/context';
+import { logger } from '@/lib/observability/Logger';
 
 /**
  * Enterprise Validation Middleware for Next.js App Router
@@ -48,8 +50,16 @@ export function validate(schemas, handler) {
       // Inject validated data into the request object for the controller to use safely
       req.valid = validatedData;
 
-      // Proceed to the actual handler
-      return await handler(req, context);
+      // Proceed to the actual handler within an AsyncLocalStorage context
+      const traceId = req.headers.get('x-trace-id') || crypto.randomUUID();
+      const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
+      
+      return await requestContext.run({ traceId, method: req.method, url: req.nextUrl.pathname, ip }, async () => {
+        logger.info(`[API Request] ${req.method} ${req.nextUrl.pathname}`);
+        const response = await handler(req, context);
+        logger.info(`[API Response] ${req.method} ${req.nextUrl.pathname} - Status: ${response.status}`);
+        return response;
+      });
 
     } catch (error) {
       if (error instanceof z.ZodError) {
@@ -66,7 +76,7 @@ export function validate(schemas, handler) {
       }
 
       // Unhandled validation error
-      console.error('Validation Middleware Error:', error);
+      logger.error('Validation Middleware Error:', { error: error.message, stack: error.stack });
       return NextResponse.json({ error: 'Internal Server Error during validation' }, { status: 500 });
     }
   };
