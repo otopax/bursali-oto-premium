@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { rateLimit } from '@/lib/rate-limit'; 
 import { prisma } from '@/lib/prisma';
 import { validate } from '@/lib/validate';
+import { enqueueAppointment } from '@/queues/appointmentQueue';
 import { z } from 'zod';
 
 const appointmentSchema = z.object({
@@ -51,7 +52,17 @@ async function postHandler(req) {
       }
     });
 
-    return NextResponse.json({ success: true, data: workOrder });
+    // Enqueue background job for SMS/Email and Heavy processing (BullMQ)
+    await enqueueAppointment({
+      plate: cleanPlate,
+      phone: cleanPhone,
+      complaint,
+      tenantId: vehicle.tenantId,
+      vehicleId: vehicle.id,
+      workOrderId: workOrder.id
+    }, { priority: 1 }); // VIP is highest priority
+
+    return NextResponse.json({ success: true, data: workOrder, message: 'İşlem kuyruğa alındı' }, { status: 202 });
   } catch (error) {
     console.error('VIP Appointment Error:', error);
     return NextResponse.json({ success: false, error: 'Internal Server Error' }, { status: 500 });
