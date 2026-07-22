@@ -21,11 +21,13 @@ class RedisFactory {
         console.warn("[RedisFactory] Redis credentials not found. Falling back to Memory Adapter.");
         this.adapter = new MemoryRedisAdapter();
         this.isMemory = true;
+        this.initError = "No credentials found";
       }
     } catch (error) {
       console.warn("[RedisFactory] Failed to init Redis, falling back to Memory Adapter.", error.message);
       this.adapter = new MemoryRedisAdapter();
       this.isMemory = true;
+      this.initError = error.message;
     }
   }
 

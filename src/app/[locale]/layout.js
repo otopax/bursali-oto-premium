@@ -31,6 +31,8 @@ export const viewport = {
   userScalable: true,
 };
 
+export const revalidate = 86400; // 1 day ISR Cache for all nested pages unless opted out
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'Metadata' });

@@ -30,7 +30,14 @@ async function checkRedis() {
   const started = Date.now();
   try {
     if (redis.isMemory) {
-      return { status: 'degraded', latency: Date.now() - started, error: 'Using Memory Fallback' };
+      return { 
+        status: 'degraded', 
+        latency: Date.now() - started, 
+        error: 'Using Memory Fallback',
+        debug_redis_url_exists: !!process.env.REDIS_URL,
+        debug_upstash_exists: !!process.env.UPSTASH_REDIS_REST_URL,
+        debug_init_error: redis.initError
+      };
     }
     await redis.ping();
     return { status: 'ok', latency: Date.now() - started };

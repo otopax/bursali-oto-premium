@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
-
 export default function VipGaragePage() {
   const t = useTranslations('Index'); // Fallback translation if needed
   
