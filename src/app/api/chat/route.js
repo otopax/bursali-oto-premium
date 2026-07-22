@@ -23,7 +23,7 @@ async function postHandler(req) {
   try {
     // 1. Edge/Infrastructure Level Rate Limiting (Fail Closed if Redis is up)
     const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
-    const limitStatus = await rateLimit(ip, 30, 60, { failClosed: true });
+    const limitStatus = await rateLimit('chat', ip, 30, 60, { failClosed: true });
     
     if (!limitStatus.success) {
       return new Response('Too Many Requests', { status: 429 });
