@@ -16,6 +16,9 @@ function extractFirstSentence(text) {
 import { buildCanonical } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
 
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }) {
   const { kod, locale } = await params;
   setRequestLocale(locale);

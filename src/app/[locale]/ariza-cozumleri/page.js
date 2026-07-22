@@ -2,6 +2,9 @@ import { getSortedPostsData } from '@/lib/blog';
 import FaultsClientView from './FaultsClientView';
 import { setRequestLocale } from 'next-intl/server';
 
+export const dynamic = 'force-static';
+export const dynamicParams = false;
+
 export const metadata = {
   title: 'Arıza Çözümleri | Bursalı Oto Servis Fethiye',
   description: 'Fethiye premium oto servis olarak karşılaştığımız kronik arızalar ve çözümleri.',

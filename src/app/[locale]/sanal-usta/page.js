@@ -24,6 +24,7 @@ export default function SanalUstaPage() {
   const [formYear, setFormYear] = useState('');
   const [formChassis, setFormChassis] = useState('');
   const [vinLoading, setVinLoading] = useState(false);
+  const [acceptedDisclaimer, setAcceptedDisclaimer] = useState(false);
 
   const handleVinDecode = async () => {
     if (!formChassis || formChassis.length !== 17) {
@@ -163,6 +164,11 @@ export default function SanalUstaPage() {
                   year: formYear,
                   chassis: formChassis
                 });
+                trackEvent('AI_DISCLAIMER_ACCEPTED', { 
+                  guestId, 
+                  version: 'V7.0',
+                  timestamp: new Date().toISOString()
+                });
               }} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
                 
                 <div>
@@ -182,7 +188,14 @@ export default function SanalUstaPage() {
                 
                 <input required value={formYear} onChange={e => setFormYear(e.target.value)} type="number" min="1990" max="2025" name="year" placeholder="Üretim Yılı (Örn: 2018)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
                 
-                <button type="submit" className="btn btn-gold w-full mt-2 py-3 rounded-lg" style={{ fontSize: '1.1rem', letterSpacing: '1px' }}>
+                <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginTop: '0.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
+                  <input type="checkbox" id="disclaimer" required checked={acceptedDisclaimer} onChange={e => setAcceptedDisclaimer(e.target.checked)} style={{ marginTop: '4px', accentColor: 'var(--accent-gold)', width: '18px', height: '18px' }} />
+                  <label htmlFor="disclaimer" style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5' }}>
+                    Yapay zeka (Sanal Usta) tarafından verilen arıza teşhislerinin <strong>tavsiye niteliğinde olduğunu</strong>, kesin teşhisin servisimizde fiziki kontrol ile konulabileceğini ve olası hatalı yönlendirmelerden Bursalı Oto'nun sorumlu olmadığını kabul ediyorum.
+                  </label>
+                </div>
+                
+                <button type="submit" disabled={!acceptedDisclaimer} className="btn w-full mt-2 py-3 rounded-lg" style={{ fontSize: '1.1rem', letterSpacing: '1px', background: acceptedDisclaimer ? 'var(--accent-gold)' : '#333', color: acceptedDisclaimer ? '#000' : '#888', cursor: acceptedDisclaimer ? 'pointer' : 'not-allowed', transition: 'all 0.3s' }}>
                   Sanal Atölyeye Bağlan
                 </button>
               </form>

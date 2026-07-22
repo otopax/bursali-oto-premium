@@ -95,8 +95,9 @@ export class ChatService {
     }
     
     dynamicSystemPrompt += `\n\nDOKTOR MODU VE SATIŞ ODAKLI ASİSTAN: Asla eksik bilgiyle anında kesin bir teşhis koyma. Eğer arızanın kesin sebebini bulmak için kullanıcının verdiği şikayet yetersizse, bir Oto Diagnostik uzmanı gibi kısa sorular sor. 
-    ŞİMDİ ÇOK ÖNEMLİ: Müşteri bir arıza (örn: triger sesi, airmatic patlaması vb.) söylediğinde, MUTLAKA "searchChronicFaults" aracını kullanarak veritabanımızdaki makaleleri ara. Eğer müşteri bir ARIZA KODU (Örn: P0420, P0171) sorarsa veya teorik bir bilgi isterse MUTLAKA "searchLibrary" aracını kullanarak Kütüphanemizdeki makaleleri ara.
-    Eğer eşleşen bir makale (Arıza Çözümü veya Kütüphane) bulursan, kullanıcıya ŞU ŞEKİLDE HTML link ver: "Bu konu hakkında detaylı makalemizi buradan okuyabilirsiniz: <a href='/kutuphane/makale-slug' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>". Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
+      ŞİMDİ ÇOK ÖNEMLİ: Müşteri bir arıza kodu sormadan doğrudan bir şikayet, belirti veya mekanik sorun (örn: titreme, siyah duman, geç çalışma) tarif ederse İLK OLARAK MUTLAKA "semanticSearch" aracını kullanarak vektör veritabanında arama yap! Bu sayede doğrudan en alakalı arıza kodunu ve çözümünü bulursun. 
+      Eğer müşteri bir ARIZA KODU (Örn: P0420, P0171) sorarsa veya teorik bir bilgi isterse MUTLAKA "searchLibrary" aracını kullanarak Kütüphanemizdeki makaleleri ara. Eğer marka kronik arızası sorarsa "searchChronicFaults" kullan.
+      Eğer eşleşen bir makale (Arıza Çözümü veya Kütüphane) bulursan, kullanıcıya ŞU ŞEKİLDE HTML link ver: "Bu konu hakkında detaylı makalemizi buradan okuyabilirsiniz: <a href='/kutuphane/makale-slug' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>". Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
     EN ÖNEMLİ KURAL: Her diyaloğun veya teşhisin sonunda KESİNLİKLE "Müsait olduğunuz bir zaman aracınızı Fethiye'deki özel servisimize getirin, ustalarımızla birlikte ücretsiz detaylı check-up yapalım ve kesin randevu oluşturalım. Randevu talebinizi hemen iletebilirim, ne dersiniz?" şeklinde RANDEVU (Lead) satışı yapmaya çalış. Arıza ciddiyse müşteriyi korkutmadan servise gelmesi gerektiğine ikna et!`;
 
     return dynamicSystemPrompt;
@@ -105,7 +106,9 @@ export class ChatService {
   /**
    * Ana sohbet akışını yönetir
    */
-  static async executeChatFlow({ messages, vehicleContext, guestId, token }) {
+  static async executeChatFlow({ messages, vehicleContext, guestId, token, correlationId = 'unknown' }) {
+    logger.info('AI Chat Request Started', { correlationId, guestId, messagesCount: messages.length });
+    
     // 1. Quota Check
     if (!token && guestId) {
       await this.checkGuestQuota(guestId, messages);
@@ -359,6 +362,7 @@ export class ChatService {
           brandSlug: z.string().optional()
         }),
         execute: async ({ query, brandSlug }) => {
+          const startTime = Date.now();
           const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
           const embedRes = await ai.models.embedContent({ model: 'gemini-embedding-001', contents: query });
           const vectorStr = `[${embedRes.embeddings[0].values.join(',')}]`;
@@ -367,26 +371,41 @@ export class ChatService {
           if (brandSlug) {
             results = await prisma.$queryRawUnsafe(`
               SELECT f.code, f."symptoms", f."commonCauses", v.model as model, m.name as brand,
-                     1 - (f.embedding <=> $1::vector) as similarity
+                     1 - (f.embedding <=> $1::vector) as similarity,
+                     (f.embedding <=> $1::vector) as distance
               FROM "FaultCode" f
               LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
               LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
-              WHERE (m.name ILIKE $2 OR $2 IS NULL) AND f.embedding IS NOT NULL
-              ORDER BY f.embedding <=> $1::vector DESC
-              LIMIT 3;
+              WHERE (m.name ILIKE $2 OR $2 IS NULL) AND f.embedding IS NOT NULL AND (1 - (f.embedding <=> $1::vector)) > 0.85
+              ORDER BY f.embedding <=> $1::vector ASC
+              LIMIT 5;
             `, vectorStr, `%${brandSlug}%`);
           } else {
             results = await prisma.$queryRawUnsafe(`
               SELECT f.code, f."symptoms", f."commonCauses", f."description", v.model as model, m.name as brand,
-                     1 - (f.embedding <=> $1::vector) as similarity
+                     1 - (f.embedding <=> $1::vector) as similarity,
+                     (f.embedding <=> $1::vector) as distance
               FROM "FaultCode" f
               LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
               LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
-              WHERE f.embedding IS NOT NULL
-              ORDER BY f.embedding <=> $1::vector DESC
-              LIMIT 3;
+              WHERE f.embedding IS NOT NULL AND (1 - (f.embedding <=> $1::vector)) > 0.85
+              ORDER BY f.embedding <=> $1::vector ASC
+              LIMIT 5;
             `, vectorStr);
           }
+
+          const latency = Date.now() - startTime;
+          
+          results.forEach(r => {
+             logger.info('Retrieval Log', {
+                 Question: query,
+                 EmbeddingDistance: r.distance,
+                 RetrievedFaultCode: r.code,
+                 RetrievedSource: `${r.brand} ${r.model}`,
+                 Similarity: r.similarity,
+                 Latency: `${latency}ms`
+             });
+          });
 
           return {
             success: true,
