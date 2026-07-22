@@ -1,5 +1,5 @@
 import { google } from '@ai-sdk/google';
-import { streamText, tool } from 'ai';
+import { streamText, tool, fallback } from 'ai';
 import { z } from 'zod';
 import { GoogleGenAI } from '@google/genai';
 import { DataAccessLayer } from '@/lib/dataAccessLayer';
@@ -13,6 +13,20 @@ import { VehicleRepository } from '@/lib/repositories/VehicleRepository';
 import { prisma } from '@/lib/prisma';
 
 export class ChatService {
+  /**
+   * AI Context Window Manager
+   * Token tasarrufu ve Context taşmasını engellemek için mesaj geçmişini budar.
+   */
+  static optimizeContextWindow(messages, maxMessages = 12) {
+    if (messages.length <= maxMessages) return messages;
+    
+    console.log(`[ChatService] Optimizing Context Window: Reducing from ${messages.length} to ${maxMessages}`);
+    // İlk mesajı (genelde ilk context) ve son N mesajı tutar
+    const firstMessage = messages[0];
+    const recentMessages = messages.slice(-(maxMessages - 1));
+    return [firstMessage, ...recentMessages];
+  }
+
   /**
    * Guest kotasını kontrol eder.
    */
@@ -115,11 +129,17 @@ export class ChatService {
     // 4. Build System Prompt with Context
     const systemPrompt = await this.buildSystemPrompt(vehicleContext);
 
-    // 5. Execute LLM
+    // 5. Context Window Manager (Token Optimization)
+    const optimizedMessages = this.optimizeContextWindow(messages, 12);
+
+    // 6. Execute LLM with Fallback Resiliency
     const result = streamText({
-      model: google('gemini-2.5-flash'),
+      model: fallback([
+        google('gemini-2.5-flash'), // Primary Model
+        google('gemini-1.5-flash')  // Fallback Model in case 2.5 is down or rate-limited
+      ]),
       system: systemPrompt,
-      messages,
+      messages: optimizedMessages,
       tools: this.getAiTools(),
       onFinish: async ({ text, toolCalls }) => {
         const toolsUsedCount = toolCalls ? toolCalls.length : 0;
@@ -131,6 +151,7 @@ export class ChatService {
           console.warn('AI Hallucination Detected:', text.substring(0, 50));
         }
 
+        // Cache using original full messages array to ensure exact match on next request
         await setAiCache(messages, finalText, 86400);
       }
     });
