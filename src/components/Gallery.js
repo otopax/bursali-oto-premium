@@ -21,9 +21,9 @@ export default function Gallery() {
   return (
     <div className="container overflow-x-hidden max-w-full">
       <h2 style={{ textAlign: 'center', marginBottom: '3rem' }}>Servisimizden Kareler</h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+      <div style={{ display: 'grid' }} className="grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
         {photos.slice(0, visibleCount).map((src, index) => (
-          <div key={index} className={`relative rounded-xl overflow-hidden bg-gray-800/50 aspect-[4/3] shadow-lg group ${index >= 8 ? 'desktop-only' : ''}`}>
+          <div key={index} className="relative rounded-xl overflow-hidden bg-gray-800/50 aspect-video shadow-lg group">
             <div className="absolute inset-0 bg-gradient-to-r from-gray-800/0 via-gray-700/20 to-gray-800/0 animate-pulse z-0"></div>
             <Image 
               src={src} 
@@ -39,7 +39,7 @@ export default function Gallery() {
       </div>
       
       {visibleCount < totalPhotos && (
-        <div className="desktop-only" style={{ textAlign: 'center', marginTop: '2rem' }}>
+        <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <button 
             onClick={handleLoadMore} 
             className="btn btn-gold" 
