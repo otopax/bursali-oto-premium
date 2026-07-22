@@ -370,6 +370,7 @@ export class ChatService {
           let results;
           if (brandSlug) {
             results = await prisma.$queryRawUnsafe(`
+              SET hnsw.ef_search = 120;
               SELECT f.code, f."symptoms", f."commonCauses", v.model as model, m.name as brand,
                      1 - (f.embedding <=> $1::vector) as similarity,
                      (f.embedding <=> $1::vector) as distance
@@ -382,6 +383,7 @@ export class ChatService {
             `, vectorStr, `%${brandSlug}%`);
           } else {
             results = await prisma.$queryRawUnsafe(`
+              SET hnsw.ef_search = 120;
               SELECT f.code, f."symptoms", f."commonCauses", f."description", v.model as model, m.name as brand,
                      1 - (f.embedding <=> $1::vector) as similarity,
                      (f.embedding <=> $1::vector) as distance

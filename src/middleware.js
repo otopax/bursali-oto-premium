@@ -38,30 +38,19 @@ export async function middleware(request) {
     }
   }
   
-  // 1.5 Global Rate Limiting (Edge Compatible via Upstash REST or Fail-Open)
+  // 1.5 Global Rate Limiting (Strict Fail-Closed)
   try {
-    const ip = request.headers.get('x-forwarded-for') || '127.0.0.1';
-    const key = `rl:global:${ip}`;
-    const limit = 200;
-    
-    // We only rate-limit if Upstash is available. Otherwise we Fail-Open instantly.
-    if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
-      const { Redis } = await import('@upstash/redis');
-      const redis = new Redis({
-        url: process.env.UPSTASH_REDIS_REST_URL,
-        token: process.env.UPSTASH_REDIS_REST_TOKEN,
-      });
-      
-      const current = await redis.incr(key);
-      if (current === 1) {
-        await redis.expire(key, 60);
-      }
-      if (current > limit) {
-        return new NextResponse('Too Many Requests', { status: 429 });
-      }
-    }
+    const ip = request.ip || request.headers.get('x-forwarded-for') || '127.0.0.1';
+    const { rateLimit } = await import('@/lib/rate-limit');
+    await rateLimit('global', ip);
   } catch (err) {
-    console.warn('[Middleware] Global rate limiting error (Fail-Open active):', err.message);
+    if (err.message === 'RATE_LIMIT_EXCEEDED') {
+      return new NextResponse('Too Many Requests', { status: 429 });
+    }
+    if (err.message.includes('REDIS_UNAVAILABLE')) {
+      return new NextResponse('Service Unavailable - Redis missing or down', { status: 503 });
+    }
+    console.error('[Middleware] Rate limiting error:', err.message);
   }
   
   // 2. Güvenlik Kontrolü (Authentication)
