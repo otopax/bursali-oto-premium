@@ -51,22 +51,44 @@ export const CloudflareKV = {
   async getVinCache(vin) {
     return fetchKV(process.env.CLOUDFLARE_KV_VIN_ID, `cache:vin:${vin}`);
   },
-  
   async setVinCache(vin, data) {
-    return fetchKV(process.env.CLOUDFLARE_KV_VIN_ID, `cache:vin:${vin}`, { 
-      method: 'PUT', 
-      body: JSON.stringify(data)
-    });
+    return fetchKV(process.env.CLOUDFLARE_KV_VIN_ID, `cache:vin:${vin}`, { method: 'PUT', body: JSON.stringify(data) });
   },
 
-  async getAiCache(promptHash) {
-    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${promptHash}`);
+  async getAiCache(promptHash, modelVersion = 'gemini-2.5') {
+    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${modelVersion}:${promptHash}`);
+  },
+  async setAiCache(promptHash, data, modelVersion = 'gemini-2.5') {
+    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${modelVersion}:${promptHash}`, { method: 'PUT', body: JSON.stringify(data) });
   },
 
-  async setAiCache(promptHash, data) {
-    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${promptHash}`, { 
-      method: 'PUT', 
-      body: JSON.stringify(data) 
-    });
+  // Additional Namespaces for Enterprise taxonomy
+  async getCache(type, key) {
+    // type: seo, faq, parts
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `cache:${type}:${key}`);
+  },
+  async setCache(type, key, data) {
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `cache:${type}:${key}`, { method: 'PUT', body: JSON.stringify(data) });
+  },
+
+  async getConfig(key) {
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `config:${key}`);
+  },
+  async setConfig(key, data) {
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `config:${key}`, { method: 'PUT', body: JSON.stringify(data) });
+  },
+
+  async getSession(key) {
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `session:${key}`);
+  },
+  async setSession(key, data) {
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `session:${key}`, { method: 'PUT', body: JSON.stringify(data) });
+  },
+
+  async getRateLimit(key) {
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `ratelimit:${key}`);
+  },
+  async setRateLimit(key, data) {
+    return fetchKV(process.env.CLOUDFLARE_KV_GENERAL_ID, `ratelimit:${key}`, { method: 'PUT', body: JSON.stringify(data) });
   }
 };

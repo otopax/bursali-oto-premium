@@ -37,8 +37,9 @@ export async function POST(req) {
     }
 
     // KV Cache Check
+    const modelVersion = 'gemini-2.5';
     const cacheKey = crypto.createHash('sha256').update(safePrompt + (vehicleId || '')).digest('hex');
-    const cachedResponse = await CloudflareKV.getAiCache(cacheKey);
+    const cachedResponse = await CloudflareKV.getAiCache(cacheKey, modelVersion);
     
     if (cachedResponse) {
       // 6. Kota tuket (Cache'den gelse de kotadan düşüyoruz, çünkü ticari mantık)
@@ -97,7 +98,7 @@ export async function POST(req) {
     };
 
     // Background'da KV'ye yaz (hata verirse akışı bölmesin)
-    CloudflareKV.setAiCache(cacheKey, finalResponse).catch(e => console.error('KV set error', e));
+    CloudflareKV.setAiCache(cacheKey, finalResponse, modelVersion).catch(e => console.error('KV set error', e));
 
     return NextResponse.json({ ...finalResponse, correlationId });
   } catch (error) {

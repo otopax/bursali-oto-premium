@@ -188,6 +188,13 @@ export async function middleware(request) {
     }
     response.headers.set('x-current-path', request.headers.get('x-current-path'));
     
+    // Cloudflare Cache-Tags
+    if (pathWithoutLocale.startsWith('/teknik-kutuphane')) {
+      response.headers.set('Cache-Tag', 'library, article');
+    } else if (pathWithoutLocale.startsWith('/ariza-kodlari')) {
+      response.headers.set('Cache-Tag', 'fault-code');
+    }
+
     // Strict CSP with Nonce
     const csp = `
       default-src 'self';
