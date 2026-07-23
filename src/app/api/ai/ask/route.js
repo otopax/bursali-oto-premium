@@ -11,11 +11,13 @@ import KnowledgeGraph from '@/domains/Knowledge/KnowledgeGraph';
 import { prisma } from '@/lib/prisma';
 import { rateLimit } from '@/lib/rate-limit';
 import { CloudflareKV } from '@/lib/cloudflare/kv';
+import { Logger } from '@/lib/observability/logger';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
 
 export async function POST(req) {
+  const startTime = Date.now();
   try {
     const { prompt, vehicleId, ip: bodyIp } = await req.json();
     const ip = bodyIp || req.headers.get('x-forwarded-for') || '127.0.0.1';
@@ -98,11 +100,14 @@ export async function POST(req) {
     };
 
     // Background'da KV'ye yaz (hata verirse akışı bölmesin)
-    CloudflareKV.setAiCache(cacheKey, finalResponse, modelVersion).catch(e => console.error('KV set error', e));
+    CloudflareKV.setAiCache(cacheKey, finalResponse, modelVersion).catch(e => {
+      Logger.error('KV set error', { correlationId, error: e.message, route: '/api/ai/ask' });
+    });
 
+    Logger.info('AI query successful', { correlationId, route: '/api/ai/ask', userId: ip, durationMs: Date.now() - startTime });
     return NextResponse.json({ ...finalResponse, correlationId });
   } catch (error) {
-    console.error('[API/ai/ask] Hata:', error.message);
+    Logger.error('AI Route Hata', { correlationId, error: error.message, route: '/api/ai/ask' });
     if (error.message === 'CIRCUIT_BREAKER_OPEN_ALL') {
       return NextResponse.json({ error: 'Sanal Usta şu anda yoğun, lütfen bizi arayın.' }, { status: 503 });
     }

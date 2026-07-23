@@ -29,6 +29,9 @@ export async function middleware(request) {
   // 1.2 Chaos Engineering (Fail-Open / Resiliency Testing)
   const chaosDelay = request.headers.get('x-chaos-delay');
   const chaosError = request.headers.get('x-chaos-error');
+  const chaosKvFail = request.headers.get('x-chaos-kv-fail');
+  const chaosQueueFail = request.headers.get('x-chaos-queue-fail');
+  const chaosAiTimeout = request.headers.get('x-chaos-ai-timeout');
   
   if (chaosError === 'true' && process.env.NODE_ENV !== 'production') {
     return new NextResponse('Chaos Engineering: Simulated Fatal Error', { status: 500 });
@@ -40,6 +43,11 @@ export async function middleware(request) {
       await new Promise(resolve => setTimeout(resolve, delayMs));
     }
   }
+
+  // Set internal headers so endpoints can read them to simulate specific failures
+  if (chaosKvFail) request.headers.set('x-internal-chaos-kv', chaosKvFail);
+  if (chaosQueueFail) request.headers.set('x-internal-chaos-queue', chaosQueueFail);
+  if (chaosAiTimeout) request.headers.set('x-internal-chaos-ai', chaosAiTimeout);
   
   // 1.5 Global Rate Limiting (Strict Fail-Closed)
   try {
@@ -188,12 +196,24 @@ export async function middleware(request) {
     }
     response.headers.set('x-current-path', request.headers.get('x-current-path'));
     
-    // Cloudflare Cache-Tags
+    // Cloudflare Cache-Tags (Hiyerarşik)
+    const locale = pathname.split('/')[1] || 'tr';
+    let tags = [`locale:${locale}`];
+
     if (pathWithoutLocale.startsWith('/teknik-kutuphane')) {
-      response.headers.set('Cache-Tag', 'library, article');
+      tags.push('library', 'library:article');
     } else if (pathWithoutLocale.startsWith('/ariza-kodlari')) {
-      response.headers.set('Cache-Tag', 'fault-code');
+      tags.push('fault', 'fault:code');
+      // Örn: /ariza-kodlari/p0420
+      const code = pathWithoutLocale.split('/')[2];
+      if (code) tags.push(`fault:${code.toLowerCase()}`);
+    } else if (pathWithoutLocale.startsWith('/bmw-ozel-servis')) {
+      tags.push('brand:bmw', 'service');
+    } else if (pathWithoutLocale.startsWith('/mercedes-ozel-servis')) {
+      tags.push('brand:mercedes', 'service');
     }
+
+    response.headers.set('Cache-Tag', tags.join(', '));
 
     // Strict CSP with Nonce
     const csp = `

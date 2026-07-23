@@ -5,9 +5,29 @@
  * Cloudflare Worker API'leri kullanılabilir.
  */
 
+import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import { getSignedUrl } from '@aws-sdk/s3-request-presigner';
+
 const ACCOUNT_ID = process.env.CLOUDFLARE_ACCOUNT_ID;
-const API_TOKEN = process.env.CLOUDFLARE_API_TOKEN;
+const ACCESS_KEY_ID = process.env.CLOUDFLARE_R2_ACCESS_KEY_ID;
+const SECRET_ACCESS_KEY = process.env.CLOUDFLARE_R2_SECRET_ACCESS_KEY;
 const R2_BUCKET = process.env.CLOUDFLARE_R2_BUCKET || 'bursali-oto-media';
+
+// Lazy init S3 Client to avoid errors during build if env vars are missing
+let s3Client = null;
+function getS3Client() {
+  if (!s3Client && ACCOUNT_ID && ACCESS_KEY_ID && SECRET_ACCESS_KEY) {
+    s3Client = new S3Client({
+      region: 'auto',
+      endpoint: `https://${ACCOUNT_ID}.r2.cloudflarestorage.com`,
+      credentials: {
+        accessKeyId: ACCESS_KEY_ID,
+        secretAccessKey: SECRET_ACCESS_KEY
+      }
+    });
+  }
+  return s3Client;
+}
 
 export const CloudflareR2 = {
   /**
@@ -15,24 +35,43 @@ export const CloudflareR2 = {
    * folder: 'vehicle-images' | 'damage-images' | 'invoice-pdf' | 'reports' | 'ocr' | 'avatars' | 'temp'
    */
   async uploadFile(fileBuffer, fileName, contentType, folder = 'temp') {
-    if (!ACCOUNT_ID || !API_TOKEN) return null;
+    const s3 = getS3Client();
+    if (!s3) return null;
     
     const key = `${folder}/${fileName}`;
     console.log(`[R2] Uploading ${key} to bucket ${R2_BUCKET}`);
     
-    // Gerçek implementasyon AWS S3 client (@aws-sdk/client-s3) ile:
-    // const s3 = new S3Client({ endpoint: `https://${ACCOUNT_ID}.r2.cloudflarestorage.com`, ... })
-    // await s3.send(new PutObjectCommand({ Bucket: R2_BUCKET, Key: key, Body: fileBuffer, ContentType: contentType }))
+    const command = new PutObjectCommand({ 
+      Bucket: R2_BUCKET, 
+      Key: key, 
+      Body: fileBuffer, 
+      ContentType: contentType 
+    });
     
+    await s3.send(command);
     return `https://media.bursaliotoservis.com/${key}`;
   },
 
   /**
    * İstemciye doğrudan upload yetkisi vermek için Presigned URL üretme.
    */
-  async generatePresignedUrl(fileName, folder = 'temp') {
+  async generatePresignedUrl(fileName, folder = 'temp', contentType = 'application/octet-stream') {
+    const s3 = getS3Client();
+    if (!s3) return null;
+
     const key = `${folder}/${fileName}`;
-    // S3 getSignedUrl implementasyonu buraya gelebilir.
-    return `https://media.bursaliotoservis.com/upload/${key}?token=temp-token`;
+    const command = new PutObjectCommand({ 
+      Bucket: R2_BUCKET, 
+      Key: key,
+      ContentType: contentType
+    });
+
+    // 1 saat (3600 sn) geçerli URL üretir
+    const signedUrl = await getSignedUrl(s3, command, { expiresIn: 3600 });
+    
+    return {
+      uploadUrl: signedUrl,
+      publicUrl: `https://media.bursaliotoservis.com/${key}`
+    };
   }
 };

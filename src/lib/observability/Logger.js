@@ -1,52 +1,63 @@
-import os from 'os';
+/**
+ * Enterprise Observability Logger (OpenTelemetry Format)
+ * 
+ * Standart bir JSON log yapısı sağlar. Tüm sistem (Worker, Next.js Middleware, API'ler)
+ * boyunca izlenebilirliği (traceId, spanId) kolaylaştırır.
+ */
 
-const isProduction = process.env.NODE_ENV === 'production';
-const hostname = os.hostname();
+export const Logger = {
+  /**
+   * 
+   * @param {'info' | 'warn' | 'error' | 'debug'} level 
+   * @param {string} message 
+   * @param {object} context - Ek bağlam (correlationId, spanId, durationMs vb.)
+   */
+  log(level, message, context = {}) {
+    const logEntry = {
+      timestamp: new Date().toISOString(),
+      level: level.toUpperCase(),
+      message,
+      correlationId: context.correlationId || 'unknown',
+      traceId: context.traceId || context.correlationId || 'unknown',
+      spanId: context.spanId || null,
+      requestId: context.requestId || null,
+      userId: context.userId || 'guest',
+      organizationId: context.organizationId || null,
+      route: context.route || 'unknown',
+      durationMs: context.durationMs || 0,
+      ...context.extra
+    };
 
-import { getRequestContext } from './context.js';
+    const logString = JSON.stringify(logEntry);
 
-export const logger = {
-  info: (message, meta = {}) => log('INFO', message, meta),
-  warn: (message, meta = {}) => log('WARN', message, meta),
-  error: (message, meta = {}) => log('ERROR', message, meta),
-  debug: (message, meta = {}) => log('DEBUG', message, meta),
-};
-
-function log(level, message, meta = {}) {
-  const reqContext = getRequestContext();
-  
-  const logEntry = {
-    timestamp: new Date().toISOString(),
-    level,
-    message,
-    host: hostname,
-    pid: process.pid,
-    env: process.env.NODE_ENV || 'development',
-    
-    // Zorunlu observability alanları
-    traceId: reqContext.traceId || meta.traceId || 'N/A',
-    spanId: reqContext.spanId || meta.spanId || 'N/A',
-    requestId: reqContext.requestId || meta.requestId || 'N/A',
-    userId: reqContext.userId || meta.userId || 'anonymous',
-    sessionId: reqContext.sessionId || meta.sessionId || 'N/A',
-    method: reqContext.method || meta.method || 'N/A',
-    url: reqContext.url || meta.url || 'N/A',
-    status: reqContext.status || meta.status || 'N/A',
-    latency: reqContext.latency || meta.latency || 0,
-    
-    ...meta
-  };
-
-  // Vercel / Cloud environments handle stdout gracefully
-  if (isProduction || level === 'ERROR') {
-    if (level === 'ERROR') {
-      console.error(JSON.stringify(logEntry));
+    // Development ortamında daha okunabilir, Prod'da saf JSON
+    if (process.env.NODE_ENV === 'development') {
+      const colors = {
+        INFO: '\x1b[32m',
+        WARN: '\x1b[33m',
+        ERROR: '\x1b[31m',
+        DEBUG: '\x1b[36m'
+      };
+      const reset = '\x1b[0m';
+      console[level === 'error' ? 'error' : 'log'](
+        `${colors[logEntry.level]}[${logEntry.level}]${reset} [${logEntry.correlationId}] ${message} ${context.durationMs ? `(+${context.durationMs}ms)` : ''}`
+      );
     } else {
-      console.log(JSON.stringify(logEntry));
+      // Production: Splunk, Datadog, ELK, Grafana Loki uyumlu tek satır JSON
+      console[level === 'error' ? 'error' : 'log'](logString);
     }
-  } else {
-    // Development fallback (human readable)
-    const color = level === 'ERROR' ? '\x1b[31m' : level === 'WARN' ? '\x1b[33m' : '\x1b[36m';
-    console.log(`${color}[${level}] \x1b[0m${message} | Trace: ${logEntry.traceId}`, Object.keys(meta).length ? meta : '');
+  },
+
+  info(message, context) {
+    this.log('info', message, context);
+  },
+  warn(message, context) {
+    this.log('warn', message, context);
+  },
+  error(message, context) {
+    this.log('error', message, context);
+  },
+  debug(message, context) {
+    this.log('debug', message, context);
   }
-}
+};

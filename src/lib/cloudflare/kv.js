@@ -55,11 +55,11 @@ export const CloudflareKV = {
     return fetchKV(process.env.CLOUDFLARE_KV_VIN_ID, `cache:vin:${vin}`, { method: 'PUT', body: JSON.stringify(data) });
   },
 
-  async getAiCache(promptHash, modelVersion = 'gemini-2.5') {
-    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${modelVersion}:${promptHash}`);
+  async getAiCache(promptHash, modelVersion = 'gemini-2.5', promptSchema = 'v2') {
+    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${promptSchema}:${modelVersion}:${promptHash}`);
   },
-  async setAiCache(promptHash, data, modelVersion = 'gemini-2.5') {
-    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${modelVersion}:${promptHash}`, { method: 'PUT', body: JSON.stringify(data) });
+  async setAiCache(promptHash, data, modelVersion = 'gemini-2.5', promptSchema = 'v2') {
+    return fetchKV(process.env.CLOUDFLARE_KV_AI_ID, `cache:ai:${promptSchema}:${modelVersion}:${promptHash}`, { method: 'PUT', body: JSON.stringify(data) });
   },
 
   // Additional Namespaces for Enterprise taxonomy
