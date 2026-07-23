@@ -1,5 +1,3 @@
-'use client';
-
 export default function TrustBadges({ locale }) {
   const badges = [
     {
@@ -74,7 +72,7 @@ export default function TrustBadges({ locale }) {
           border-radius: 12px;
           padding: 2rem 1.5rem;
           text-align: center;
-          transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+          transition: transform 0.3s ease;
         }
         .trust-card:hover {
           transform: translateY(-5px);

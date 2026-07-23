@@ -27,7 +27,7 @@ export default function WhatsAppButton() {
         zIndex: 1000,
         alignItems: 'center',
         justifyContent: 'center',
-        transition: 'transform 0.3s, box-shadow 0.3s',
+        transition: 'transform 0.3s',
         textDecoration: 'none'
       }}
       onMouseOver={() => setIsHovered(true)}

@@ -1,14 +1,21 @@
 import Image from 'next/image';
 import Gallery from '@/components/Gallery';
 import TrustBadges from '@/components/TrustBadges';
-import Reviews from '../../components/Reviews';
 import { getTranslations } from 'next-intl/server';
 import { container } from '@/application/di/container';
 import { buildCanonical } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
-import MapFacade from '@/components/MapFacade';
 import Reveal from '@/components/anim/Reveal';
 import dynamic from 'next/dynamic';
+
+const Reviews = dynamic(() => import('../../components/Reviews'), { 
+  loading: () => <div style={{ height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Yorumlar yükleniyor...</div>,
+  ssr: false 
+});
+const MapFacade = dynamic(() => import('@/components/MapFacade'), { 
+  loading: () => <div style={{ height: '320px', background: '#2a2a2a', borderRadius: '16px' }}>Harita yükleniyor...</div>,
+  ssr: false 
+});
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -212,13 +219,13 @@ export default async function Home({ params }) {
               <h2 style={{ marginBottom: '0.5rem' }}>{t('faultsTitle')}</h2>
               <p style={{ color: 'var(--text-muted)', margin: 0 }}>{t('faultsDesc')}</p>
             </div>
-            <a href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
+            <a href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" aria-label="Tüm Arıza Çözümlerini Gör" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
               {t('faultsBtn')}
             </a>
           </div>
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
             {recentFaults.map(fault => (
-              <a key={fault.id} href={`/${locale}/ariza-cozumleri/${fault.id}`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.5rem', textDecoration: 'none' }}>
+              <a key={fault.id} href={`/${locale}/ariza-cozumleri/${fault.id}`} aria-label={`${fault.title} Detayları`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.5rem', textDecoration: 'none' }}>
                 <span style={{ display: 'inline-block', padding: '4px 10px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '1rem' }}>
                   {fault.brand}
                 </span>

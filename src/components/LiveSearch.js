@@ -87,7 +87,7 @@ export default function LiveSearch({ locale }) {
           padding: 1rem 2rem;
           font-weight: 600;
           cursor: pointer;
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          transition: transform 0.2s ease;
           display: flex;
           align-items: center;
           gap: 0.5rem;

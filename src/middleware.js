@@ -16,9 +16,12 @@ const protectedRoutes = [
 ];
 
 export async function middleware(request) {
+  const nonce = crypto.randomUUID().replace(/-/g, '');
+  
   // 1. Trace ID for observability
   const correlationId = request.headers.get('x-correlation-id') || crypto.randomUUID();
   request.headers.set('x-correlation-id', correlationId);
+  request.headers.set('x-nonce', nonce);
 
   const pathname = request.nextUrl.pathname;
   request.headers.set('x-current-path', pathname);
@@ -160,8 +163,13 @@ export async function middleware(request) {
   // 3. Execute next-intl middleware for language routing (redirects / to /tr)
   let response;
   
-  // Skip next-intl for API routes, just pass them through
-  if (request.nextUrl.pathname.startsWith('/api')) {
+  if (request.nextUrl.pathname === '/') {
+    // 307 Redirect yerine doğrudan rewrite (Lighthouse optimizasyonu)
+    const url = request.nextUrl.clone();
+    url.pathname = '/tr';
+    response = NextResponse.rewrite(url);
+    response.headers.set('x-current-path', '/tr');
+  } else if (request.nextUrl.pathname.startsWith('/api')) {
     response = NextResponse.next({
       request: {
         headers: request.headers,
@@ -179,6 +187,22 @@ export async function middleware(request) {
       response.headers.set('x-user-permissions', request.headers.get('x-user-permissions'));
     }
     response.headers.set('x-current-path', request.headers.get('x-current-path'));
+    
+    // Strict CSP with Nonce
+    const csp = `
+      default-src 'self';
+      script-src 'self' 'nonce-${nonce}' 'unsafe-eval' 'strict-dynamic' https: http:;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+      img-src 'self' blob: data: https:;
+      font-src 'self' data: https://fonts.gstatic.com;
+      connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://challenges.cloudflare.com https://maps.googleapis.com https://vitals.vercel-insights.com https://cloudflareinsights.com;
+      frame-src 'self' https://challenges.cloudflare.com https://www.google.com https://www.youtube.com;
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+    `.replace(/\s{2,}/g, ' ').trim();
+    response.headers.set('Content-Security-Policy', csp);
+    response.headers.set('x-nonce', nonce);
   }
 
   // 4. Attach Trace ID to the response

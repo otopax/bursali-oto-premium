@@ -89,6 +89,23 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
+      <head>
+        <script type="speculationrules" dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            prefetch: [{
+              source: "document",
+              where: {
+                and: [
+                  { href_matches: "/*" },
+                  { not: { href_matches: "/api/*" } },
+                  { not: { href_matches: "*/login*" } }
+                ]
+              },
+              eagerness: "moderate"
+            }]
+          })
+        }} />
+      </head>
       <body className="mobile-padded-body">
         <style dangerouslySetInnerHTML={{__html: `
           @media (max-width: 768px) {
