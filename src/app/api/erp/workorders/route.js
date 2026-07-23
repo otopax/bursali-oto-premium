@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { auth } from '@/auth';
+import { withIdempotency, completeIdempotency } from '@/lib/middleware/idempotency';
 
 // GET: İş Emirlerini Listele (Tenant'a Göre - Mobil Uyumlu)
 export async function GET(req) {
@@ -13,6 +14,9 @@ export async function GET(req) {
     const { searchParams } = new URL(req.url);
     const status = searchParams.get('status'); // PENDING, IN_PROGRESS vb.
     const limit = parseInt(searchParams.get('limit') || '50');
+    // Faz 4: Pagination
+    const page = parseInt(searchParams.get('page') || '1');
+    const skip = (page - 1) * limit;
 
     const query = {
       where: {
@@ -29,16 +33,20 @@ export async function GET(req) {
       orderBy: {
         createdAt: 'desc'
       },
-      take: limit
+      take: limit,
+      skip: skip
     };
 
     if (status) {
       query.where.status = status;
     }
 
-    const workOrders = await prisma.workOrder.findMany(query);
+    const [workOrders, total] = await prisma.$transaction([
+      prisma.workOrder.findMany(query),
+      prisma.workOrder.count({ where: query.where })
+    ]);
 
-    return NextResponse.json({ success: true, data: workOrders });
+    return NextResponse.json({ success: true, data: workOrders, meta: { total, page, limit } });
   } catch (error) {
     console.error('WorkOrders GET Error:', error);
     return NextResponse.json({ success: false, error: 'Internal Server Error' }, { status: 500 });
@@ -53,7 +61,18 @@ export async function POST(req) {
       return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
     }
 
-    const body = await req.json();
+    // Faz 4: Idempotency Kontrolü
+    const { isIdempotent, error, record, cachedResponse, status } = await withIdempotency(req, session.user.id);
+    if (isIdempotent) {
+      if (error) return NextResponse.json({ error }, { status });
+      return NextResponse.json(cachedResponse, { status });
+    }
+
+    // Request stream consume edildiği için cloned req üzerinden body parse yapıldı
+    // `req.json()` çalışmayabilir çünkü middleware'de `.text()` ile okuduk.
+    // Ancak next/server'da bazen multiple read izni verilir. 
+    // Daha güvenli olması için klon kullanarak body alıyoruz.
+    const body = await req.clone().json();
     const { plate, phone, firstName, brand, model, year, complaint, mileage, notes, vehicleId } = body;
 
     let targetVehicleId = vehicleId;
@@ -99,21 +118,53 @@ export async function POST(req) {
       targetVehicleId = vehicle.id;
     }
 
-    const workOrder = await prisma.workOrder.create({
-      data: {
-        tenantId: session.user.tenantId,
-        vehicleId: targetVehicleId,
-        complaint: complaint,
-        mileage: mileage ? parseInt(mileage) : null,
-        notes: notes,
-        status: 'PENDING'
-      },
-      include: {
-        vehicle: true
-      }
+    // Faz 4: Transactional Outbox Pattern
+    const idempotencyKey = record?.key || null;
+    
+    const result = await prisma.$transaction(async (tx) => {
+      const workOrder = await tx.workOrder.create({
+        data: {
+          tenantId: session.user.tenantId,
+          vehicleId: targetVehicleId,
+          complaint: complaint,
+          mileage: mileage ? parseInt(mileage) : null,
+          notes: notes,
+          status: 'PENDING',
+          idempotencyKey: idempotencyKey
+        },
+        include: {
+          vehicle: true
+        }
+      });
+
+      // Outbox event oluştur
+      await tx.outboxEvent.create({
+        data: {
+          aggregateType: 'WorkOrder',
+          aggregateId: workOrder.id,
+          eventType: 'WorkOrderCreated',
+          eventVersion: 'v1',
+          payload: {
+            id: workOrder.id,
+            tenantId: workOrder.tenantId,
+            vehicleId: workOrder.vehicleId,
+            status: workOrder.status
+          },
+          status: 'PENDING'
+        }
+      });
+
+      return workOrder;
     });
 
-    return NextResponse.json({ success: true, data: workOrder }, { status: 201 });
+    const responsePayload = { success: true, data: result };
+
+    // Idempotency kaydını tamamla
+    if (record?.key) {
+      await completeIdempotency(record.key, responsePayload);
+    }
+
+    return NextResponse.json(responsePayload, { status: 201 });
   } catch (error) {
     console.error('WorkOrder POST Error:', error);
     return NextResponse.json({ success: false, error: 'Internal Server Error' }, { status: 500 });

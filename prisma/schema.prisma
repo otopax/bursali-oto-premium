@@ -218,14 +218,22 @@ model Part {
 
 // ----- YENİ: Outbox Event Tablosu (Transactional Outbox için) -----
 model OutboxEvent {
-  id          String   @id @default(uuid())
-  eventName   String
-  payload     Json
-  status      String   @default("PENDING") // PENDING, PROCESSED, FAILED
-  createdAt   DateTime @default(now())
-  processedAt DateTime?
+  id            String   @id @default(uuid())
+  aggregateType String   // e.g. "WorkOrder"
+  aggregateId   String   // e.g. "1234-abcd"
+  eventType     String   // e.g. "WorkOrderCreated"
+  eventVersion  String   @default("v1")
+  payload       Json
+  status        String   @default("PENDING") // PENDING, PROCESSED, FAILED, DLQ
+  retryCount    Int      @default(0)
+  createdAt     DateTime @default(now())
+  processedAt   DateTime?
+  lastError     String?  @db.Text
+  traceId       String?
+  correlationId String?
 
   @@index([status, createdAt])
+  @@index([aggregateType, aggregateId])
 }
 
 // ----- YENİ: İzin Yönetimi (RBAC Overrides) -----
@@ -389,6 +397,10 @@ model WorkOrder {
   mileage         Int?     // Giriş Kilometresi
   notes           String?  @db.Text // Usta Notları (Müşteri de görebilir veya gizli tutulabilir)
   
+  // Phase 4: Enterprise Consistency
+  version         Int      @default(1)
+  idempotencyKey  String?  @unique
+  
   items           WorkOrderItem[]
   
   startedAt       DateTime?
@@ -399,6 +411,21 @@ model WorkOrder {
 
   @@index([tenantId])
   @@index([vehicleId])
+}
+
+// ----- YENİ: Idempotency Record Tablosu -----
+model IdempotencyRecord {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  requestHash String
+  userId      String?
+  response    Json?
+  status      String   @default("STARTED") // STARTED, COMPLETED, FAILED
+  createdAt   DateTime @default(now())
+  expiresAt   DateTime
+
+  @@index([key])
+  @@index([expiresAt])
 }
 
 model WorkOrderItem {
