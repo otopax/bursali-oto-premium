@@ -37,7 +37,11 @@ export async function logAudit({
       }
     });
   } catch (error) {
-    // We don't want an audit failure to break the main application flow
+    // We don't want an audit failure to break the main application flow normally,
+    // but for debugging we will temporarily throw it if action includes API_TEST_ACTION
+    if (action && action.includes('API_TEST_ACTION')) {
+        throw error;
+    }
     console.error('Audit Log failed:', error);
   }
 }

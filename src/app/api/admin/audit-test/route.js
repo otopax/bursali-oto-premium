@@ -26,9 +26,9 @@ export async function GET() {
     if (log) {
       return NextResponse.json({ success: true, message: 'Audit Logging is working!', log });
     } else {
-      return NextResponse.json({ success: false, message: 'Audit Logging failed to write.' }, { status: 500 });
+      return NextResponse.json({ success: false, message: 'Audit Logging failed to write. Log not found in DB.' }, { status: 500 });
     }
   } catch (err) {
-    return NextResponse.json({ success: false, message: err.message }, { status: 500 });
+    return NextResponse.json({ success: false, message: err.message, stack: err.stack }, { status: 500 });
   }
 }
