@@ -4,9 +4,9 @@
  * Database connection -> Queue -> Crawler -> Normalizer -> AI Processing
  */
 
-const { PrismaClient } = require('@prisma/client');
-const { QueueManager } = require('../lib/crawler/QueueManager');
-const { Normalizer } = require('../lib/data/Normalizer');
+import { PrismaClient } from '@prisma/client';
+import { createQueue } from '../lib/bullmq/QueueFactory.js';
+import { Normalizer } from '../lib/data/Normalizer.js';
 
 const prisma = new PrismaClient();
 
@@ -33,7 +33,8 @@ async function runE2ETest() {
 
     // 3. Crawler Queue (İş Kuyruğu) Testi
     console.log("\n[3/5] BullMQ / Redis İş Kuyruğu test ediliyor...");
-    const job = await QueueManager.addJob('crawler-queue', 'e2e-test', {
+    const crawlerQueue = createQueue('crawler-queue');
+    const job = await crawlerQueue.add('e2e-test', {
       testID: 'T-100',
       message: 'Uçtan uca test mesajı'
     });

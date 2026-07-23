@@ -1,9 +1,12 @@
 import { gracefulShutdown } from '@/lib/bullmq/QueueFactory';
 import { appointmentWorker } from '@/workers/appointmentWorker';
+import { crawlerWorker } from '@/workers/crawlerWorker';
+import { embeddingWorker } from '@/workers/embeddingWorker';
 
 const workers = [
   appointmentWorker,
-  // Diğer worker'lar buraya eklenebilir
+  crawlerWorker,
+  embeddingWorker
 ];
 
 console.log('🚀 BullMQ Enterprise Worker System Started.');
