@@ -4,6 +4,7 @@ import { Suspense } from 'react';
 import { useState, useEffect } from 'react';
 import { signIn } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import { Turnstile } from '@marsidev/react-turnstile';
 
 function LoginForm() {
   const [email, setEmail] = useState('');
@@ -11,6 +12,7 @@ function LoginForm() {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState('');
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -32,10 +34,17 @@ function LoginForm() {
     setLoading(true);
     setError('');
 
+    if (!turnstileToken) {
+      setError('Lütfen güvenlik doğrulamasını tamamlayın.');
+      setLoading(false);
+      return;
+    }
+
     try {
       const result = await signIn('credentials', {
         email,
         password,
+        turnstileToken,
         redirect: false,
       });
 
@@ -103,6 +112,14 @@ function LoginForm() {
               {showPassword ? '🙈' : '👁️'}
             </button>
           </div>
+        </div>
+
+        <div style={{ marginBottom: '20px', display: 'flex', justifyContent: 'center' }}>
+          <Turnstile 
+            siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'} 
+            onSuccess={(token) => setTurnstileToken(token)}
+            onError={() => setError('Güvenlik doğrulaması başarısız oldu.')}
+          />
         </div>
 
         <button

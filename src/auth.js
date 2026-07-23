@@ -11,13 +11,34 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
       name: "Admin",
       credentials: {
         email: { label: "Email", type: "email", placeholder: "usta@bursalioto.com" },
-        password: { label: "Şifre", type: "password" }
+        password: { label: "Şifre", type: "password" },
+        turnstileToken: { label: "Turnstile Token", type: "text" }
       },
       async authorize(credentials, req) {
         const ip = req?.headers?.get?.('x-forwarded-for') || '127.0.0.1';
         const { allowed } = await rateLimit(ip, 5, 60); 
         
         if (!allowed) throw new Error("Too many login attempts. Please try again later.");
+        
+        // Turnstile Doğrulama
+        if (!credentials?.turnstileToken) throw new Error("Güvenlik doğrulaması başarısız.");
+        const turnstileData = new FormData();
+        turnstileData.append('secret', process.env.TURNSTILE_SECRET_KEY || '1x0000000000000000000000000000000AA');
+        turnstileData.append('response', credentials.turnstileToken);
+        
+        try {
+          const tRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+            method: 'POST',
+            body: turnstileData
+          });
+          const tOutcome = await tRes.json();
+          if (!tOutcome.success) {
+            throw new Error("Bot tespiti: Güvenlik doğrulaması geçilemedi.");
+          }
+        } catch (e) {
+           throw new Error("Güvenlik servisine ulaşılamadı.");
+        }
+        
         if (!credentials?.email || !credentials?.password) throw new Error("Lütfen email ve şifre giriniz.");
 
         const user = await prisma.user.findUnique({

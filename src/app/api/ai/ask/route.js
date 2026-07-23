@@ -10,6 +10,7 @@ import { PredictiveEngine } from '@/domains/Vehicle/PredictiveEngine';
 import KnowledgeGraph from '@/domains/Knowledge/KnowledgeGraph';
 import { prisma } from '@/lib/prisma';
 import { rateLimit } from '@/lib/rate-limit';
+import { CloudflareKV } from '@/lib/cloudflare/kv';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
@@ -33,6 +34,20 @@ export async function POST(req) {
     const quota = await QuotaManager.checkGuestQuota(ip);
     if (!quota.allowed) {
       return NextResponse.json({ error: quota.reason }, { status: 429 });
+    }
+
+    // KV Cache Check
+    const cacheKey = crypto.createHash('sha256').update(safePrompt + (vehicleId || '')).digest('hex');
+    const cachedResponse = await CloudflareKV.getAiCache(cacheKey);
+    
+    if (cachedResponse) {
+      // 6. Kota tuket (Cache'den gelse de kotadan düşüyoruz, çünkü ticari mantık)
+      await QuotaManager.consumeGuestQuota(ip);
+      return NextResponse.json({
+        ...cachedResponse,
+        correlationId,
+        cached: true
+      });
     }
 
     // 3. AI Sorgusu (Circuit Breaker + Timeout + Cost-Aware)
@@ -73,14 +88,18 @@ export async function POST(req) {
     // 6. Kota tuket
     await QuotaManager.consumeGuestQuota(ip);
 
-    return NextResponse.json({
+    const finalResponse = {
       success: true,
-      correlationId,
       response: aiResponse,
       diagnosis,
       prediction,
       quotaUsed: 1
-    });
+    };
+
+    // Background'da KV'ye yaz (hata verirse akışı bölmesin)
+    CloudflareKV.setAiCache(cacheKey, finalResponse).catch(e => console.error('KV set error', e));
+
+    return NextResponse.json({ ...finalResponse, correlationId });
   } catch (error) {
     console.error('[API/ai/ask] Hata:', error.message);
     if (error.message === 'CIRCUIT_BREAKER_OPEN_ALL') {

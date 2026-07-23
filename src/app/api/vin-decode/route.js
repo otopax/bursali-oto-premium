@@ -3,6 +3,7 @@ import { decodeVin } from '@/lib/vinService';
 import { rateLimit } from '@/lib/rate-limit';
 import { validate } from '@/lib/validate';
 import { z } from 'zod';
+import { CloudflareKV } from '@/lib/cloudflare/kv';
 
 const vinSchema = z.object({
   vin: z.string().length(17)
@@ -18,8 +19,20 @@ async function postHandler(req) {
     }
 
     const { vin } = req.valid.body;
+    const normalizedVin = vin.toUpperCase();
 
-    const result = await decodeVin(vin.toUpperCase());
+    // 1. Check Cloudflare KV Cache
+    const cachedData = await CloudflareKV.getVinCache(normalizedVin);
+    if (cachedData) {
+      return NextResponse.json(cachedData);
+    }
+
+    const result = await decodeVin(normalizedVin);
+
+    if (result.success) {
+      // 2. Set Cloudflare KV Cache (background)
+      CloudflareKV.setVinCache(normalizedVin, result).catch(e => console.error('KV set error', e));
+    }
 
     if (!result.success) {
       return NextResponse.json({ error: result.error }, { status: 404 });
