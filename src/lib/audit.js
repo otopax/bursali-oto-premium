@@ -28,10 +28,10 @@ export async function logAudit({
       data: {
         userId,
         action,
-        entity,
+        entityType: entity,
         entityId: entityId ? String(entityId) : null,
-        oldData: oldData ? JSON.stringify(oldData) : null,
-        newData: newData ? JSON.stringify(newData) : null,
+        oldValues: oldData ? oldData : null,
+        newValues: newData ? newData : null,
         ipAddress,
         userAgent
       }
