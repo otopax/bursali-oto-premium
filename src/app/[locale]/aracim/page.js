@@ -1,11 +1,10 @@
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { can } from "@/lib/authz";
 
 export default async function AracimDashboard() {
-  const session = await getServerSession(authOptions);
+  const session = await auth();
 
   if (!session || !can(session?.user, 'Vehicle.Read')) {
     // Redirect to login if not authenticated or not authorized

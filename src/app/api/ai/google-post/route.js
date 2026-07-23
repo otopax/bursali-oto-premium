@@ -1,13 +1,12 @@
 import { NextResponse } from 'next/server';
 import { GoogleGenAI } from '@google/genai';
 
-import { getServerSession } from 'next-auth';
-import { authOptions } from '@/app/api/auth/[...nextauth]/route';
+import { auth } from '@/auth';
 import { can } from '@/lib/authz';
 
 export async function POST(req) {
   try {
-    const session = await getServerSession(authOptions);
+    const session = await auth();
     if (!session || !can(session.user, 'GooglePost.Create')) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
