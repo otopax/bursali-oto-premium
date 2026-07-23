@@ -9,12 +9,10 @@ import Reveal from '@/components/anim/Reveal';
 import dynamic from 'next/dynamic';
 
 const Reviews = dynamic(() => import('../../components/Reviews'), { 
-  loading: () => <div style={{ height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Yorumlar yükleniyor...</div>,
-  ssr: false 
+  loading: () => <div style={{ height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Yorumlar yükleniyor...</div>
 });
 const MapFacade = dynamic(() => import('@/components/MapFacade'), { 
-  loading: () => <div style={{ height: '320px', background: '#2a2a2a', borderRadius: '16px' }}>Harita yükleniyor...</div>,
-  ssr: false 
+  loading: () => <div style={{ height: '320px', background: '#2a2a2a', borderRadius: '16px' }}>Harita yükleniyor...</div>
 });
 
 export async function generateMetadata({ params }) {

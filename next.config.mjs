@@ -27,9 +27,7 @@ const nextConfig = {
       },
     ],
   },
-  experimental: {
-    ppr: 'incremental',
-  },
+
 
   // www'suz → www'lu 301 kalıcı yönlendirme (Faz A / Görev 2)
   // Google canonical'ı tek tip toplasın diye şart. Vercel Dashboard'da da
