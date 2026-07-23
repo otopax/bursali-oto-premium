@@ -3,17 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.js');
 
-// Sentry wrapper — DSN varsa source map upload + release tracking yapar,
-// yoksa no-op (build kırılmaz). Faz A / Görev 5.
-let withSentryConfig = (config) => config;
-try {
-  const sentryPkg = await import('@sentry/nextjs');
-  if (sentryPkg?.withSentryConfig) {
-    withSentryConfig = sentryPkg.withSentryConfig;
-  }
-} catch {
-  // Sentry paketi kurulmamışsa (opt-out) sessizce geç
-}
+// Sentry has been removed.
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -114,21 +104,10 @@ const nextConfig = {
   },
 };
  
-// Sentry seçenekleri — org/project env'den okunur; yoksa source map yükleme kapalı.
-const sentryBuildOptions = {
-  org: process.env.SENTRY_ORG,
-  project: process.env.SENTRY_PROJECT,
-  authToken: process.env.SENTRY_AUTH_TOKEN,
-  silent: true,
-  hideSourceMaps: true,
-  disableLogger: true,
-  automaticVercelMonitors: true,
-};
-
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const analyzerPlugin = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-export default analyzerPlugin(withSentryConfig(withNextIntl(nextConfig), sentryBuildOptions));
+export default analyzerPlugin(withNextIntl(nextConfig));
