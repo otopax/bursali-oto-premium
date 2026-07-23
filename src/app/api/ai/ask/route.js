@@ -11,7 +11,7 @@ import KnowledgeGraph from '@/domains/Knowledge/KnowledgeGraph';
 import { prisma } from '@/lib/prisma';
 import { rateLimit } from '@/lib/rate-limit';
 import { CloudflareKV } from '@/lib/cloudflare/kv';
-import { Logger } from '@/lib/observability/logger';
+import { Logger } from '@/lib/observability/Logger';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 30;
