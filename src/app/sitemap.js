@@ -176,6 +176,20 @@ export default async function sitemap() {
     }));
   });
 
+  // 6.8) Phase 5: Programmatic SEO - Arıza Kodları
+  try {
+    const faultCodes = await prisma.faultCode.findMany({ select: { code: true }, take: 1000 });
+    faultCodes.forEach((fc) => {
+      entries.push(...expandLocales(`/ariza-kodlari/${fc.code}`, {
+        changeFrequency: 'monthly',
+        priority: 0.75,
+        lastModified: now,
+      }));
+    });
+  } catch (e) {
+    console.warn('[Sitemap] FaultCodes (P-SEO) yüklenemedi:', e.message);
+  }
+
 
   // 4) Manufacturers (DB) → /katalog/[marka]
   try {
