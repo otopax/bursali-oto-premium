@@ -1,6 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import '@/env'; // Validate environment variables when Prisma initializes
-import { logger } from '@/lib/observability/Logger';
+import { Logger } from '@/lib/observability/Logger';
 
 /**
  * Prisma Query Interceptor for Audit Logging
@@ -145,7 +145,7 @@ globalForPrisma.__prisma = prisma;
 // Prevents connection leaks when the container/server stops
 if (process.env.NODE_ENV !== 'development') {
   const shutdown = async () => {
-    logger.info('[Prisma] Disconnecting database gracefully due to process termination signal...');
+    Logger.info('[Prisma] Disconnecting database gracefully due to process termination signal...');
     await basePrisma.$disconnect();
     process.exit(0);
   };

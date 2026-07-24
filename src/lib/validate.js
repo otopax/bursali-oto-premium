@@ -1,7 +1,7 @@
 import { z } from 'zod';
 import { NextResponse } from 'next/server';
 import { requestContext } from '@/lib/observability/context';
-import { logger } from '@/lib/observability/Logger';
+import { Logger } from '@/lib/observability/Logger';
 
 /**
  * Enterprise Validation Middleware for Next.js App Router
@@ -55,9 +55,9 @@ export function validate(schemas, handler) {
       const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
       
       return await requestContext.run({ traceId, method: req.method, url: req.nextUrl.pathname, ip }, async () => {
-        logger.info(`[API Request] ${req.method} ${req.nextUrl.pathname}`);
+        Logger.info(`[API Request] ${req.method} ${req.nextUrl.pathname}`);
         const response = await handler(req, context);
-        logger.info(`[API Response] ${req.method} ${req.nextUrl.pathname} - Status: ${response.status}`);
+        Logger.info(`[API Response] ${req.method} ${req.nextUrl.pathname} - Status: ${response.status}`);
         return response;
       });
 
@@ -76,7 +76,7 @@ export function validate(schemas, handler) {
       }
 
       // Unhandled validation error
-      logger.error('Validation Middleware Error:', { error: error.message, stack: error.stack });
+      Logger.error('Validation Middleware Error:', { error: error.message, stack: error.stack });
       return NextResponse.json({ error: 'Internal Server Error during validation' }, { status: 500 });
     }
   };

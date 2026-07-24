@@ -8,7 +8,7 @@ import { getCache, setCache } from '@/lib/cache';
 import { container } from '@/application/di/container';
 import { VehicleRepository } from '@/lib/repositories/VehicleRepository';
 import { prisma } from '@/lib/prisma';
-import { logger } from '@/lib/observability/Logger';
+import { Logger } from '@/lib/observability/Logger';
 
 export class ChatService {
   constructor(aiProvider) {
@@ -21,7 +21,7 @@ export class ChatService {
   optimizeContextWindow(messages, maxMessages = 12) {
     if (messages.length <= maxMessages) return messages;
     
-    logger.info(`Optimizing Context Window: Reducing from ${messages.length} to ${maxMessages}`);
+    Logger.info(`Optimizing Context Window: Reducing from ${messages.length} to ${maxMessages}`);
     // İlk mesajı (genelde ilk context) ve son N mesajı tutar
     const firstMessage = messages[0];
     const recentMessages = messages.slice(-(maxMessages - 1));
@@ -45,7 +45,7 @@ export class ChatService {
       await redis.expire(redisKey, 86400); // 24 hours
     } catch (error) {
       if (error.message === 'GUEST_QUOTA_EXCEEDED') throw error;
-      logger.warn('Redis Quota Error (Failing Open)', { error: error.message });
+      Logger.warn('Redis Quota Error (Failing Open)', { error: error.message });
       // FAIL OPEN: If Redis is down, allow the user to continue chatting
     }
   }
@@ -89,7 +89,7 @@ export class ChatService {
             dynamicSystemPrompt += `\n\nKRİTİK GÖREV: Müşterinin sorduğu arızayı teşhis ederken KESİNLİKLE bu geçmiş servis kayıtlarını ve değiştirilen parçaları göz önünde bulundur. Örneğin müşteri motordan ses geliyor diyorsa ve geçmişte zincir değişmişse, "Triger zincirinizi 3 ay önce değiştirmiştik, o kısımdan kaynaklandığını düşünmüyorum, turbo borularına bakalım" şeklinde "Seni ve aracını tanıyorum" hissi veren, son derece zeki ve profesyonel bir cevap ver!`;
           }
         } catch (e) {
-          logger.error("VIP Garage AI Lookup Error", { error: e.message, stack: e.stack });
+          Logger.error("VIP Garage AI Lookup Error", { error: e.message, stack: e.stack });
         }
       }
     }
@@ -107,7 +107,7 @@ export class ChatService {
    * Ana sohbet akışını yönetir
    */
   async executeChatFlow({ messages, vehicleContext, guestId, token, correlationId = 'unknown' }) {
-    logger.info('AI Chat Request Started', { correlationId, guestId, messagesCount: messages.length });
+    Logger.info('AI Chat Request Started', { correlationId, guestId, messagesCount: messages.length });
     
     // 1. Quota Check
     if (!token && guestId) {
@@ -148,7 +148,7 @@ export class ChatService {
         
         if (guardResult.isHallucinated) {
           finalText = text + "\n\n" + guardResult.warning;
-          logger.warn('AI Hallucination Detected', { textSnippet: text.substring(0, 50) });
+          Logger.warn('AI Hallucination Detected', { textSnippet: text.substring(0, 50) });
         }
 
         // Cache using original full messages array to ensure exact match on next request
@@ -397,7 +397,7 @@ export class ChatService {
           const latency = Date.now() - startTime;
           
           results.forEach(r => {
-             logger.info('Retrieval Log', {
+             Logger.info('Retrieval Log', {
                  Question: query,
                  EmbeddingDistance: r.distance,
                  RetrievedFaultCode: r.code,

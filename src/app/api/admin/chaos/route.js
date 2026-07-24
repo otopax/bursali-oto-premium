@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { logger } from '@/lib/observability/Logger';
+import { Logger } from '@/lib/observability/Logger';
 import { prisma } from '@/lib/prisma';
 import crypto from 'crypto';
 
@@ -10,32 +10,32 @@ export async function POST(req) {
   // Sadece yetkili hesaplar bu route'u çağırabilmeli (Middleware'de Fail-Closed test ediliyor)
   const role = req.headers.get('x-user-role');
   if (role !== 'ADMIN' && role !== 'SUPER_ADMIN') {
-    logger.warn('Unauthorized Chaos testing attempt', { traceId, spanId, role });
+    Logger.warn('Unauthorized Chaos testing attempt', { traceId, spanId, role });
     return NextResponse.json({ error: 'Unauthorized' }, { status: 403 });
   }
 
   const { scenario } = await req.json();
 
-  logger.info(`Starting Chaos Scenario: ${scenario}`, { traceId, spanId });
+  Logger.info(`Starting Chaos Scenario: ${scenario}`, { traceId, spanId });
 
   try {
     switch (scenario) {
       case 'redis_down': {
         // Redis connection simulation failure
-        logger.debug('Simulating Redis timeout...', { traceId, spanId });
+        Logger.debug('Simulating Redis timeout...', { traceId, spanId });
         await new Promise((_, reject) => setTimeout(() => reject(new Error('Redis connection timeout')), 500));
         break;
       }
       case 'db_timeout': {
         // Simüle edilmiş Prisma timeout
-        logger.debug('Simulating Prisma query timeout...', { traceId, spanId });
+        Logger.debug('Simulating Prisma query timeout...', { traceId, spanId });
         // Gerçekte prisma'ya aşırı yük bindirebiliriz ama burada error throw ediyoruz:
         const start = Date.now();
         await new Promise((_, reject) => setTimeout(() => reject(new Error('P2024: Timed out fetching a new connection from the connection pool')), 1000));
         break;
       }
       case 'gemini_timeout': {
-        logger.debug('Simulating Gemini API Timeout & Circuit Breaker...', { traceId, spanId });
+        Logger.debug('Simulating Gemini API Timeout & Circuit Breaker...', { traceId, spanId });
         
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), 100); // Kasıtlı çok kısa timeout
@@ -47,7 +47,7 @@ export async function POST(req) {
         } catch (err) {
           clearTimeout(timeoutId);
           // Circuit breaker devreye giriyor
-          logger.warn('Circuit Breaker OPEN for Gemini', { 
+          Logger.warn('Circuit Breaker OPEN for Gemini', { 
             traceId, 
             spanId,
             error: err.message,
@@ -66,7 +66,7 @@ export async function POST(req) {
     }
   } catch (error) {
     // Merkezi Hata Yakalama (Sentry / OTel'e gidecek yer)
-    logger.error(`Chaos Scenario Failed: ${scenario}`, {
+    Logger.error(`Chaos Scenario Failed: ${scenario}`, {
       traceId,
       spanId,
       error: error.message,
