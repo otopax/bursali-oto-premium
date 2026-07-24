@@ -1,14 +1,18 @@
 import { NextResponse } from 'next/server';
-import { Queue } from 'bullmq';
 
-const redisUrl = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
-
-const appointmentQueue = new Queue('appointment-queue', {
-  connection: { url: redisUrl }
-});
+// Build-güvenli: statik "page data collection" sırasında Redis'e bağlanmayı önler.
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
 
 export async function GET() {
   try {
+    // Lazy import + lazy Queue: bağlantı yalnızca çalışma anında kurulur, build'de değil.
+    const { Queue } = await import('bullmq');
+    const redisUrl = process.env.REDIS_URL || 'redis://127.0.0.1:6379';
+    const appointmentQueue = new Queue('appointment-queue', {
+      connection: { url: redisUrl }
+    });
+
     const job = await appointmentQueue.add('testAppointment', {
       plate: 'TEST-123',
       phone: '5551234567',
