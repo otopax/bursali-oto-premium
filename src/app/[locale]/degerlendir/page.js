@@ -1,8 +1,8 @@
 'use client';
-import { useState } from 'react';
+import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
-export default function ReviewPage() {
+function ReviewForm() {
   const searchParams = useSearchParams();
   const workOrderId = searchParams.get('wid') || '';
   const tenantId = searchParams.get('tid') || '';
@@ -105,5 +105,13 @@ export default function ReviewPage() {
         )}
       </div>
     </div>
+  );
+}
+
+export default function ReviewPage() {
+  return (
+    <Suspense fallback={<div>Yükleniyor...</div>}>
+      <ReviewForm />
+    </Suspense>
   );
 }
