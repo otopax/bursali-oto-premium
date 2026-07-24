@@ -7,11 +7,12 @@ const intlMiddleware = createMiddleware(routing);
 
 // V5.0 Güvenlik: Korumalı Rotalar (Login zorunlu)
 // Sanal Usta artık Misafir moduna açık olduğu için buradan çıkarıldı.
+// NOT: '/ariza-kodlari' buradan ÇIKARILDI — public P-SEO içerik rotasıdır,
+// Googlebot'un erişebilmesi için login zorunluluğu olmamalı.
 const protectedRoutes = [
-  '/teknik-kutuphane', 
-  '/bilgi-bankasi', 
+  '/teknik-kutuphane',
+  '/bilgi-bankasi',
   '/katalog',
-  '/ariza-kodlari',
   '/vip-garaj'
 ];
 
@@ -64,6 +65,31 @@ export async function middleware(request) {
     console.error('[Middleware] Rate limiting error:', err.message);
   }
   
+  // 1.6 Admin API Koruması (GÜVENLİK: /api/admin uçları auth'suz kalmasın)
+  // check-embeddings / test-rag (Gemini maliyeti) / test-worker (kuyruk flood) açıkta olmamalı.
+  // Geçiş: geçerli admin oturumu VEYA x-admin-secret header (curl doğrulaması için).
+  if (pathname.startsWith('/api/admin')) {
+    const adminSecret = process.env.ADMIN_SECRET;
+    const providedSecret = request.headers.get('x-admin-secret');
+    let isAdmin = false;
+    try {
+      const adminToken = await getToken({
+        req: request,
+        secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026'
+      });
+      isAdmin = !!(adminToken && ['ADMIN', 'SUPER_ADMIN', 'MANAGER'].includes(adminToken.role));
+    } catch (e) {
+      isAdmin = false;
+    }
+    const secretOk = !!adminSecret && providedSecret === adminSecret;
+    if (!isAdmin && !secretOk) {
+      return new NextResponse(
+        JSON.stringify({ success: false, error: 'Unauthorized: admin access required' }),
+        { status: 401, headers: { 'content-type': 'application/json' } }
+      );
+    }
+  }
+
   // 2. Güvenlik Kontrolü (Authentication)
   // Route'un başındaki dili (/tr veya /en) kesip ana rotayı buluyoruz
   const pathWithoutLocale = pathname.replace(/^\/[^\/]+/, '') || pathname;

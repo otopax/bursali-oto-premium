@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
     title: `${fault.code} Arıza Kodu Çözümü | ${brand} ${fault.title} | Bursalı Oto`,
     description: `${fault.code} arızası nedir, belirtileri nelerdir ve nasıl tamir edilir? ${brand} araçlarda ${fault.code} kodunun uzman onarım rehberi.`,
     alternates: {
-      canonical: `https://www.bursalioto.com/ariza-kodlari/${fault.code}`
+      canonical: `https://www.bursaliotoservis.com/tr/ariza-kodlari/${fault.code}`
     }
   };
 }
