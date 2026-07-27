@@ -401,7 +401,12 @@ export class ChatService {
           brandSlug: z.string().optional()
         }),
         execute: async ({ query, brandSlug }) => {
-          return await self.semanticSearch(query, 5, brandSlug);
+          try {
+            const results = await self.semanticSearch(query, 5, brandSlug);
+            return { success: true, results };
+          } catch (e) {
+            return { success: false, error: e.message };
+          }
         }
       })
     };
