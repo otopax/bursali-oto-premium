@@ -25,10 +25,12 @@ try {
 
 console.log('🚀 Running standard Next.js build...');
 try {
-  // BUILD OOM FIX + ÖLÇÜM: heap limitini yükselt + --trace_gc ile GC/bellek büyümesini logla
-  // (böylece bir sonraki build log'unda belleğin nerede/nasıl tükendiği KANITLA görülür).
-  const memFlag = '--max-old-space-size=4096 --trace_gc';
-  const NODE_OPTIONS = `${process.env.NODE_OPTIONS || ''} ${memFlag}`.trim();
+  // GERÇEK KÖK NEDEN (kanıt: builder 58GB RAM, limit YOK — ama build 384MB'da OOM ediyordu):
+  // Railway'de tanımlı NODE_OPTIONS env'i Node heap'ini DÜŞÜK sabitliyordu (ör. --max-old-space-size=384).
+  // Çözüm: env'deki bu değeri derlemede KULLANMA; NODE_OPTIONS'ı temiz ve yüksek bir heap ile EZ.
+  // (Gelen değeri kanıt için logluyoruz. --trace_gc kaldırıldı: Node onu NODE_OPTIONS'ta kabul etmiyordu.)
+  console.log('[build-mem] gelen process.env.NODE_OPTIONS =', JSON.stringify(process.env.NODE_OPTIONS || '(yok)'));
+  const NODE_OPTIONS = '--max-old-space-size=4096';
   execSync('next build', {
     stdio: 'inherit',
     env: { ...process.env, NODE_OPTIONS },
