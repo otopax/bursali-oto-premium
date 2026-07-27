@@ -110,6 +110,13 @@ const nextConfig = {
       },
     ];
   },
+
+  // BUILD OOM FIX: webpack build cache'i belleği şişiriyordu; derleme sırasında kapat.
+  // (Yalnız build hızını biraz düşürür; RAM tüketimini belirgin azaltır.)
+  webpack: (config) => {
+    config.cache = false;
+    return config;
+  },
 };
  
 import withBundleAnalyzer from '@next/bundle-analyzer';

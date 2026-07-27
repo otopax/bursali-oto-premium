@@ -18,7 +18,10 @@ import { setRequestLocale } from 'next-intl/server';
 import { arizaUrl } from '@/lib/urls';
 
 export const dynamic = 'force-static';
-export const dynamicParams = false;
+// BUILD OOM FIX: dynamicParams=true → generateStaticParams'ta ÜRETİLMEYEN sayfalar
+// build anında değil, ilk istekte on-demand (ISR) üretilir. Geçersiz kod hâlâ notFound() ile 404.
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }) {
   const { marka, model, kod, locale } = await params;
@@ -84,17 +87,20 @@ export async function generateStaticParams() {
   const { container } = require('@/application/di/container');
   const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
   const params = [];
-  const LOCALES = ['tr', 'en', 'ru', 'uk', 'ar'];
-
-  Object.entries(hierarchy).forEach(([marka, data]) => {
-    Object.entries(data.models).forEach(([model, posts]) => {
-      posts.items.forEach(post => {
-        LOCALES.forEach(loc => {
-          params.push({ locale: loc, marka, model, kod: post.id });
-        });
-      });
-    });
-  });
+  // BUILD OOM FIX: eskiden TÜM arızalar × 5 locale build anında render ediliyordu (binlerce sayfa,
+  // her biri MDX + metadata + JSON-LD + related sorgusu) → heap OOM. Artık yalnızca en fazla
+  // BUILD_LIMIT kadar 'tr' sayfası önceden üretilir; kalan tüm arızalar ve diğer diller
+  // dynamicParams=true sayesinde ilk istekte on-demand ISR ile üretilir (SEO korunur).
+  const BUILD_LIMIT = 50;
+  outer:
+  for (const [marka, data] of Object.entries(hierarchy)) {
+    for (const [model, posts] of Object.entries(data.models)) {
+      for (const post of posts.items) {
+        params.push({ locale: 'tr', marka, model, kod: post.id });
+        if (params.length >= BUILD_LIMIT) break outer;
+      }
+    }
+  }
   return params;
 }
 
