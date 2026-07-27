@@ -3,13 +3,12 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { Inter, Outfit } from 'next/font/google';
 import '../globals.css';
 import dynamic from 'next/dynamic';
-import TopBanner from '@/components/TopBanner';
 import Providers from '@/components/Providers';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
 import ClientWidgets from '@/components/ClientWidgets';
-
-import { businessData } from '@/lib/business';
 import Navigation from '@/components/Navigation';
+import StructuredData from '@/components/StructuredData';
+
+const GoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false });
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap', preload: true });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit', display: 'swap' });
@@ -80,7 +79,6 @@ export async function generateMetadata({ params }) {
   };
 }
 
-import StructuredData from '@/components/StructuredData';
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
@@ -90,6 +88,9 @@ export default async function RootLayout({ children, params }) {
   return (
     <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script type="speculationrules" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             prefetch: [{

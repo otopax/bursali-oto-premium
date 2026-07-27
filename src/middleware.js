@@ -258,6 +258,12 @@ export async function middleware(request) {
     `.replace(/\s{2,}/g, ' ').trim();
     response.headers.set('Content-Security-Policy', csp);
     response.headers.set('x-nonce', nonce);
+
+    // Cache-Control: Cloudflare ve tarayıcı önbellek stratejisi
+    // HTML sayfaları: kısa tarayıcı cache + uzun Cloudflare edge cache (stale-while-revalidate)
+    if (!pathname.startsWith('/api') && !pathname.startsWith('/login') && !pathname.startsWith('/admin')) {
+      response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=86400, stale-while-revalidate=43200');
+    }
   }
 
   // 4. Attach Trace ID to the response

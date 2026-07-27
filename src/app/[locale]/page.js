@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Gallery from '@/components/Gallery';
 import TrustBadges from '@/components/TrustBadges';
 import { getTranslations } from 'next-intl/server';
 import { container } from '@/application/di/container';
@@ -14,6 +13,9 @@ const Reviews = dynamic(() => import('../../components/Reviews'), {
 });
 const MapFacade = dynamic(() => import('@/components/MapFacade'), { 
   loading: () => <div style={{ height: '320px', background: '#2a2a2a', borderRadius: '16px' }}>Harita yükleniyor...</div>
+});
+const Gallery = dynamic(() => import('@/components/Gallery'), {
+  loading: () => <div style={{ height: '200px' }} />
 });
 
 export async function generateMetadata({ params }) {
