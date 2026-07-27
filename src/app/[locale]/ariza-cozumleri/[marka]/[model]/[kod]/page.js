@@ -17,9 +17,9 @@ import { buildCanonical } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
 import { arizaUrl } from '@/lib/urls';
 
-export const dynamic = 'force-static';
 // BUILD OOM FIX: dynamicParams=true → generateStaticParams'ta ÜRETİLMEYEN sayfalar
 // build anında değil, ilk istekte on-demand (ISR) üretilir. Geçersiz kod hâlâ notFound() ile 404.
+// (force-static kaldırıldı: dynamicParams=true + revalidate ile çakışma riskini elemek için.)
 export const dynamicParams = true;
 export const revalidate = 86400;
 
