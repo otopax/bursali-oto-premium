@@ -148,17 +148,19 @@ export default async function ArizaCozumDetailPage({ params }) {
     dateModified: postData.updated || postData.date || new Date().toISOString(),
   };
 
-  const brandSlug = (postData.brand || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') || 'marka';
+  const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
 
-  // 2. Breadcrumb Schema
+  // 2. Breadcrumb Schema — locale onekli + 3-seviye (canonical/rota ile birebir tutarli).
+  // marka/model = rota parametreleri = HierarchyBuilder slug'lari ( or. mercedes-benz, tum-modeller).
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`) },
-      { '@type': 'ListItem', position: 2, name: 'Arıza Çözümleri', item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/ariza-cozumleri` },
-      { '@type': 'ListItem', position: 3, name: postData.brand || 'Marka', item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/ariza-cozumleri/${brandSlug}` },
-      { '@type': 'ListItem', position: 4, name: postData.title || kod, item: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/ariza-cozumleri/${kod}` }
+      { '@type': 'ListItem', position: 1, name: 'Ana Sayfa', item: `${SITE}/${locale}` },
+      { '@type': 'ListItem', position: 2, name: 'Arıza Çözümleri', item: `${SITE}/${locale}/ariza-cozumleri` },
+      { '@type': 'ListItem', position: 3, name: postData.brand || 'Marka', item: `${SITE}/${locale}/ariza-cozumleri/${marka}` },
+      { '@type': 'ListItem', position: 4, name: postData.model || 'Tüm Modeller', item: `${SITE}/${locale}/ariza-cozumleri/${marka}/${model}` },
+      { '@type': 'ListItem', position: 5, name: postData.title || kod, item: `${SITE}/${locale}/ariza-cozumleri/${marka}/${model}/${kod}` }
     ]
   };
 
@@ -275,15 +277,15 @@ export default async function ArizaCozumDetailPage({ params }) {
         
         {/* UI Breadcrumb */}
         <nav style={{ fontSize: '0.9rem', color: 'var(--text-muted)', marginBottom: '2rem', display: 'flex', gap: '0.5rem', alignItems: 'center', flexWrap: 'wrap' }}>
-          <a href="/" style={{ textDecoration: 'none', color: 'inherit' }}>Ana Sayfa</a> 
+          <a href={`/${locale}`} style={{ textDecoration: 'none', color: 'inherit' }}>Ana Sayfa</a>
           <span>/</span>
-          <a href="/ariza-cozumleri" style={{ textDecoration: 'none', color: 'inherit' }}>Arıza Çözümleri</a> 
+          <a href={`/${locale}/ariza-cozumleri`} style={{ textDecoration: 'none', color: 'inherit' }}>Arıza Çözümleri</a>
           <span>/</span>
-          <a href={`/ariza-cozumleri/${brandSlug}`} style={{ textDecoration: 'none', color: 'inherit' }}>{postData.brand}</a> 
+          <a href={`/${locale}/ariza-cozumleri/${marka}`} style={{ textDecoration: 'none', color: 'inherit' }}>{postData.brand}</a>
           {postData.model && (
             <>
               <span>/</span>
-              <a href={`/ariza-cozumleri/${brandSlug}/${postData.model.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} style={{ textDecoration: 'none', color: 'inherit' }}>{postData.model}</a>
+              <a href={`/${locale}/ariza-cozumleri/${marka}/${model}`} style={{ textDecoration: 'none', color: 'inherit' }}>{postData.model}</a>
             </>
           )}
           <span>/</span>
