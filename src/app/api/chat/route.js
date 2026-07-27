@@ -46,12 +46,8 @@ async function postHandler(req) {
     }
 
     // Otherwise, return the streaming response
-    // GEÇİCİ TEŞHİS (yeni anahtar sonrası hâlâ hata var — gerçek mesajı gör):
-    const dbgErr = {
-      onError: (e) => 'DBG: ' + String((e && (e.message || (e.error && e.error.message))) || e).slice(0, 400),
-    };
-    return result.toUIMessageStreamResponse ? result.toUIMessageStreamResponse(dbgErr) :
-           result.toDataStreamResponse ? result.toDataStreamResponse(dbgErr) :
+    return result.toDataStreamResponse ? result.toDataStreamResponse() : 
+           result.toUIMessageStreamResponse ? result.toUIMessageStreamResponse() : 
            result.toTextStreamResponse();
 
   } catch (error) {
