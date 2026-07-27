@@ -67,7 +67,12 @@ async function postHandler(req) {
     }
 
     console.error('Chat API Error:', error);
-    return new Response(JSON.stringify({ error: 'Internal Server Error' }), { status: 500 });
+    // GEÇİCİ TEŞHİS: gerçek hatayı gör (diagnoz sonrası geri alınacak)
+    return new Response(JSON.stringify({
+      error: 'Internal Server Error',
+      detail: String(error && error.message || error),
+      where: (error && error.stack) ? String(error.stack).split('\n').slice(0, 4).join(' | ') : ''
+    }), { status: 500, headers: { 'Content-Type': 'application/json' } });
   }
 }
 
