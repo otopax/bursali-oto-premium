@@ -10,9 +10,8 @@ export async function GET(req) {
   const q = searchParams.get('q') || 'BMW motor isinma sorunu';
 
   try {
-    // Lazy import: ağır ChatService chunk'ı build'de değil, istek anında yüklenir.
-    const { ChatService } = await import('@/services/ChatService');
-    const service = new ChatService();
+    const { container } = await import('@/application/di/container');
+    const service = container.chatService;
     const results = await service.semanticSearch(q, 3); // top 3
 
     return NextResponse.json({

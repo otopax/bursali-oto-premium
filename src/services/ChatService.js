@@ -361,64 +361,69 @@ export class ChatService {
           brandSlug: z.string().optional()
         }),
         execute: async ({ query, brandSlug }) => {
-          const startTime = Date.now();
-          const values = await this.aiProvider.generateEmbedding(query);
-          const vectorStr = `[${values.join(',')}]`;
-
-          let results;
-          if (brandSlug) {
-            results = await prisma.$queryRawUnsafe(`
-              SET hnsw.ef_search = 120;
-              SELECT f.code, f."symptoms", f."commonCauses", v.model as model, m.name as brand,
-                     1 - (f.embedding <=> $1::vector) as similarity,
-                     (f.embedding <=> $1::vector) as distance
-              FROM "FaultCode" f
-              LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
-              LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
-              WHERE (m.name ILIKE $2 OR $2 IS NULL) AND f.embedding IS NOT NULL AND (1 - (f.embedding <=> $1::vector)) > 0.85
-              ORDER BY f.embedding <=> $1::vector ASC
-              LIMIT 5;
-            `, vectorStr, `%${brandSlug}%`);
-          } else {
-            results = await prisma.$queryRawUnsafe(`
-              SET hnsw.ef_search = 120;
-              SELECT f.code, f."symptoms", f."commonCauses", f."description", v.model as model, m.name as brand,
-                     1 - (f.embedding <=> $1::vector) as similarity,
-                     (f.embedding <=> $1::vector) as distance
-              FROM "FaultCode" f
-              LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
-              LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
-              WHERE f.embedding IS NOT NULL AND (1 - (f.embedding <=> $1::vector)) > 0.85
-              ORDER BY f.embedding <=> $1::vector ASC
-              LIMIT 5;
-            `, vectorStr);
-          }
-
-          const latency = Date.now() - startTime;
-          
-          results.forEach(r => {
-             Logger.info('Retrieval Log', {
-                 Question: query,
-                 EmbeddingDistance: r.distance,
-                 RetrievedFaultCode: r.code,
-                 RetrievedSource: `${r.brand} ${r.model}`,
-                 Similarity: r.similarity,
-                 Latency: `${latency}ms`
-             });
-          });
-
-          return {
-            success: true,
-            results: results.map(r => ({
-              faultCode: r.code,
-              vehicle: `${r.brand} ${r.model}`,
-              similarity: r.similarity,
-              description: r.description || '',
-              causes: r.commonCauses || []
-            }))
-          };
+          return await this.semanticSearch(query, 5, brandSlug);
         }
       })
     };
   }
+
+  async semanticSearch(query, limit = 5, brandSlug = null) {
+    const startTime = Date.now();
+    const values = await this.aiProvider.generateEmbedding(query);
+    const vectorStr = `[${values.join(',')}]`;
+
+    let results;
+    if (brandSlug) {
+      results = await prisma.$queryRawUnsafe(`
+        SET hnsw.ef_search = 120;
+        SELECT f.code, f."symptoms", f."commonCauses", v.model as model, m.name as brand,
+               1 - (f.embedding <=> $1::vector) as similarity,
+               (f.embedding <=> $1::vector) as distance
+        FROM "FaultCode" f
+        LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
+        LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
+        WHERE (m.name ILIKE $2 OR $2 IS NULL) AND f.embedding IS NOT NULL AND (1 - (f.embedding <=> $1::vector)) > 0.85
+        ORDER BY f.embedding <=> $1::vector ASC
+        LIMIT $3;
+      `, vectorStr, `%${brandSlug}%`, limit);
+    } else {
+      results = await prisma.$queryRawUnsafe(`
+        SET hnsw.ef_search = 120;
+        SELECT f.code, f."symptoms", f."commonCauses", f."description", v.model as model, m.name as brand,
+               1 - (f.embedding <=> $1::vector) as similarity,
+               (f.embedding <=> $1::vector) as distance
+        FROM "FaultCode" f
+        LEFT JOIN "Vehicle" v ON f."vehicleId" = v.id
+        LEFT JOIN "Manufacturer" m ON v."manufacturerId" = m.id
+        WHERE f.embedding IS NOT NULL AND (1 - (f.embedding <=> $1::vector)) > 0.85
+        ORDER BY f.embedding <=> $1::vector ASC
+        LIMIT $2;
+      `, vectorStr, limit);
+    }
+
+    const latency = Date.now() - startTime;
+    
+    results.forEach(r => {
+       Logger.info('Retrieval Log', {
+           Question: query,
+           EmbeddingDistance: r.distance,
+           RetrievedFaultCode: r.code,
+           RetrievedSource: `${r.brand} ${r.model}`,
+           Similarity: r.similarity,
+           Latency: `${latency}ms`
+       });
+    });
+
+    return {
+      success: true,
+      results: results.map(r => ({
+        faultCode: r.code,
+        vehicle: `${r.brand} ${r.model}`,
+        similarity: r.similarity,
+        description: r.description || '',
+        causes: r.commonCauses || []
+      }))
+    };
+  }
 }
+
