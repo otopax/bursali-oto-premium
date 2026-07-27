@@ -2,13 +2,13 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Inter, Outfit } from 'next/font/google';
 import '../globals.css';
-import dynamic from 'next/dynamic';
 import Providers from '@/components/Providers';
 import ClientWidgets from '@/components/ClientWidgets';
 import Navigation from '@/components/Navigation';
 import StructuredData from '@/components/StructuredData';
-
-const GoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false });
+// BUILD FIX (Next.js 15): Server Component'te dynamic(..,{ssr:false}) YASAK.
+// GoogleAnalytics zaten 'use client' + consent-guard'lı; normal import edilir (SSR'da zararsız).
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap', preload: true });
 const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit', display: 'swap' });
