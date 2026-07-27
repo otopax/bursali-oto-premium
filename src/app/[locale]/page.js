@@ -153,7 +153,7 @@ export default async function Home({ params }) {
       <section id="yabanci" className="services-section section-dark">
         <div className="container">
           <div className="glass-panel" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
-            <span className="badge" style={{ background: 'rgba(59, 130, 246, 0.2)', color: 'var(--accent-blue)', borderColor: 'var(--accent-blue)' }}>
+            <span className="badge" style={{ background: 'rgba(96, 165, 250, 0.25)', color: '#93c5fd', borderColor: 'rgba(96, 165, 250, 0.5)' }}>
               {t('expatBadge')}
             </span>
             <h2 style={{ color: 'white' }}>{t('expatTitle')}</h2>
@@ -260,7 +260,7 @@ export default async function Home({ params }) {
           <div className="glass-panel">
             <h3 style={{ color: 'var(--accent-gold)' }}>{t('contactInfoTitle')}</h3>
             <p><strong>Adres:</strong> {t('contactAddress')}</p>
-            <p><strong>{t('contactPhone1')}</strong> <a href="tel:+905548812021" style={{ color: 'var(--accent-blue)' }}>+90 554 881 20 21</a></p>
+            <p><strong>{t('contactPhone1')}</strong> <a href="tel:+905548812021" style={{ color: '#93c5fd', textDecoration: 'underline', textUnderlineOffset: '3px' }}>+90 554 881 20 21</a></p>
             <p><strong>{t('contactPhone2')}</strong> <a href="tel:+902526141586" style={{ color: 'var(--text-light)' }}>0252 614 15 86</a></p>
             <p><strong>Çalışma Saatleri:</strong> {t('contactHours')}</p>
             <div style={{ marginTop: '2rem' }}>
