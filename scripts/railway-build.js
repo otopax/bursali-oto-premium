@@ -7,12 +7,27 @@ if (serviceName.toLowerCase().includes('worker') || process.env.IS_WORKER === 't
   process.exit(0);
 }
 
+// === ÖLÇÜM: builder'ın gerçek RAM'ini ve cgroup bellek limitini yazdır (tahmin değil, kanıt) ===
+try {
+  const os = require('os');
+  const fs = require('fs');
+  console.log(`[build-mem] os.totalmem: ${(os.totalmem() / 1024 / 1024).toFixed(0)} MB, freemem: ${(os.freemem() / 1024 / 1024).toFixed(0)} MB, cpus: ${os.cpus().length}`);
+  let cg = 'bilinmiyor';
+  if (fs.existsSync('/sys/fs/cgroup/memory.max')) {
+    cg = 'v2 memory.max=' + fs.readFileSync('/sys/fs/cgroup/memory.max', 'utf8').trim();
+  } else if (fs.existsSync('/sys/fs/cgroup/memory/memory.limit_in_bytes')) {
+    cg = 'v1 limit_in_bytes=' + fs.readFileSync('/sys/fs/cgroup/memory/memory.limit_in_bytes', 'utf8').trim();
+  }
+  console.log(`[build-mem] cgroup: ${cg}  (bu değer builder'ın gerçek bellek duvarıdır)`);
+} catch (e) {
+  console.log('[build-mem] ölçüm alınamadı:', e.message);
+}
+
 console.log('🚀 Running standard Next.js build...');
 try {
-  // BUILD OOM FIX: 2320+ statik sayfa (generateStaticParams) build anında üretiliyor;
-  // Node varsayılan heap'i (küçük cgroup'ta ~384MB) yetmeyip "JavaScript heap out of memory"
-  // ile patlıyordu. Heap limitini açıkça yükseltiyoruz (Railway builder RAM'i buna yeter).
-  const memFlag = '--max-old-space-size=4096';
+  // BUILD OOM FIX + ÖLÇÜM: heap limitini yükselt + --trace_gc ile GC/bellek büyümesini logla
+  // (böylece bir sonraki build log'unda belleğin nerede/nasıl tükendiği KANITLA görülür).
+  const memFlag = '--max-old-space-size=4096 --trace_gc';
   const NODE_OPTIONS = `${process.env.NODE_OPTIONS || ''} ${memFlag}`.trim();
   execSync('next build', {
     stdio: 'inherit',
