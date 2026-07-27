@@ -23,16 +23,7 @@ export class GoogleAiProvider extends IAiProvider {
       system: systemPrompt,
       messages: messages,
       tools: tools,
-      onFinish: onFinish,
-      // GEÇİCİ TEŞHİS: stream içi gerçek hatayı deploy log'una yaz (AI SDK "An error occurred" ile maskeliyor).
-      onError: (e) => {
-        const err = (e && e.error) ? e.error : e;
-        console.error('[streamText onError]', JSON.stringify({
-          message: err && err.message ? String(err.message) : String(err),
-          name: err && err.name,
-          stack: err && err.stack ? String(err.stack).split('\n').slice(0, 4).join(' | ') : undefined,
-        }));
-      }
+      onFinish: onFinish
     });
   }
 
