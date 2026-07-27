@@ -121,7 +121,7 @@ function createAuditLogExtension(baseClient) {
 const basePrismaSingleton = () => {
   let url = process.env.DATABASE_URL;
   if (url && !url.includes('connection_limit=')) {
-    url = `${url}${url.includes('?') ? '&' : '?'}connection_limit=1`;
+    url = `${url}${url.includes('?') ? '&' : '?'}connection_limit=20&pool_timeout=15`;
   }
   const options = {};
   if (url) {

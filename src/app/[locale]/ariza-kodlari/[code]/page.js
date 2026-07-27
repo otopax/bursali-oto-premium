@@ -2,9 +2,37 @@ import { prisma } from '@/lib/prisma';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
+import { cache } from 'react';
+import { getCache, setCache, CACHE_TTL } from '@/lib/cache';
+
 export const revalidate = 86400; // Her gün revalidate (ISR)
 
 const SITE = 'https://www.bursaliotoservis.com';
+
+const getCachedFaultCode = cache(async (code) => {
+  const upperCode = code.toUpperCase();
+  const cacheKey = `faultCode:${upperCode}`;
+  
+  // 1. Check Redis Cache
+  const cached = await getCache('obd', cacheKey);
+  if (cached) {
+    try {
+      return typeof cached === 'string' ? JSON.parse(cached) : cached;
+    } catch(e) {}
+  }
+
+  // 2. Fetch from DB
+  const fault = await prisma.faultCode.findUnique({
+    where: { code: upperCode }
+  });
+
+  // 3. Save to Redis
+  if (fault) {
+    await setCache('obd', cacheKey, JSON.stringify(fault), CACHE_TTL.OBD || 604800);
+  }
+  
+  return fault;
+});
 
 // Json/array/string alanlarını güvenli şekilde string listesine çevirir
 function toList(value) {
@@ -34,11 +62,9 @@ export async function generateStaticParams() {
 
 // Dinamik Meta Data (Title, Description) - CTR Optimizasyonu
 export async function generateMetadata({ params }) {
-  const { code } = params;
+  const { code } = await params;
 
-  const fault = await prisma.faultCode.findUnique({
-    where: { code: code.toUpperCase() }
-  });
+  const fault = await getCachedFaultCode(code);
 
   if (!fault) return { title: 'Arıza Kodu Bulunamadı | Bursalı Oto' };
 
@@ -52,11 +78,9 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function FaultCodePage({ params }) {
-  const { code } = params;
+  const { code } = await params;
 
-  const fault = await prisma.faultCode.findUnique({
-    where: { code: code.toUpperCase() }
-  });
+  const fault = await getCachedFaultCode(code);
 
   if (!fault) {
     notFound();

@@ -1,3 +1,5 @@
+import { getCache, setCache, CACHE_TTL } from '@/lib/cache';
+
 export class HierarchyBuilder {
   /**
    * @param {import('../interfaces/IContentRepository').IContentRepository} contentRepository 
@@ -24,6 +26,16 @@ export class HierarchyBuilder {
   }
 
   async build(locale = 'tr', folder = 'faults') {
+    const cacheKey = `hierarchy:${locale}:${folder}`;
+    const cached = await getCache('page', cacheKey);
+    if (cached) {
+      try {
+        return typeof cached === 'string' ? JSON.parse(cached) : cached;
+      } catch (e) {
+        console.warn('HierarchyCache JSON parse error, rebuilding...');
+      }
+    }
+
     const posts = await this.contentRepository.getSortedPostsData(locale, folder);
     const hierarchy = {};
 
@@ -58,6 +70,7 @@ export class HierarchyBuilder {
       hierarchy[brandSlug].models[modelSlug].items.push(post);
     });
 
+    await setCache('page', cacheKey, JSON.stringify(hierarchy), CACHE_TTL.PAGE || 86400);
     return hierarchy;
   }
 }

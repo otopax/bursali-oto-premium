@@ -2,77 +2,66 @@ import crypto from 'crypto';
 import { redis } from '@/lib/cache';
 import { prisma } from '@/lib/prisma';
 import { GoogleGenAI } from '@google/genai';
+import { Logger } from '@/lib/observability/Logger';
 
 /**
  * Enterprise Semantic Cache
- * Faz 2.5: Redis Exact Match + Prisma Vector Semantic Match
+ * Faz 2 (P1): Hash(MODEL + SYSTEM_PROMPT_VERSION + LOCALE + VEHICLE_CONTEXT + NORMALIZED_PROMPT)
  */
 
-function generateHash(messages) {
-  // Sadece son kullanici sorusunu hashle (baglam degisimini cosine similarity ile yakalariz)
-  const lastUserMsg = messages.filter(m => m.role === 'user').pop();
-  const content = lastUserMsg ? lastUserMsg.content : JSON.stringify(messages);
-  return crypto.createHash('sha256').update(content).digest('hex');
+function normalizePrompt(text) {
+  if (!text) return '';
+  return text.toLowerCase().trim().replace(/\s+/g, ' ');
 }
 
-export async function getAiCache(messages) {
+function generateHash(messages, context = {}) {
+  const lastUserMsg = messages.filter(m => m.role === 'user').pop();
+  const rawPrompt = lastUserMsg ? lastUserMsg.content : JSON.stringify(messages);
+  const normalizedPrompt = normalizePrompt(rawPrompt);
+  
+  const aiModel = context.aiModel || 'gemini-2.5-flash';
+  const systemPromptVersion = context.systemPromptVersion || 'v2';
+  const locale = context.locale || 'tr';
+  const vehicleCtx = context.vehicleContext ? JSON.stringify({
+    brand: context.vehicleContext.brand,
+    model: context.vehicleContext.model,
+    year: context.vehicleContext.year
+  }) : 'none';
+
+  const payload = `${aiModel}|${systemPromptVersion}|${locale}|${vehicleCtx}|${normalizedPrompt}`;
+  return crypto.createHash('sha256').update(payload).digest('hex');
+}
+
+export async function getAiCache(messages, context = {}) {
   try {
-    const hash = generateHash(messages);
+    const hash = generateHash(messages, context);
     
     // 1. Exact Match (Redis) - O(1)
     const cached = await redis.get(`ai:chat:${hash}`);
-    if (cached) return JSON.parse(cached);
-
-    // 2. Semantic Vector Match (Prisma/pgvector) - O(N)
-    const lastUserMsg = messages.filter(m => m.role === 'user').pop();
-    if (!lastUserMsg) return null;
-
-    if (!process.env.GOOGLE_GENERATIVE_AI_API_KEY) return null;
-
-    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
-    const embedRes = await ai.models.embedContent({ model: 'text-embedding-004', contents: lastUserMsg.content });
-    const vectorStr = `[${embedRes.embeddings[0].values.join(',')}]`;
-    
-    // pgvector <=> operator is cosine distance. 0 is identical, 1 is orthogonal, 2 is opposite.
-    // ASC ordering is crucial (as fixed in P0). We require distance < 0.08 (similarity > 92%)
-    const semanticMatches = await prisma.$queryRawUnsafe(`
-      SELECT response, (embedding <=> $1::vector) as distance 
-      FROM "SemanticCache" 
-      WHERE (embedding <=> $1::vector) < 0.08 
-      ORDER BY (embedding <=> $1::vector) ASC 
-      LIMIT 1
-    `, vectorStr);
-    
-    if (semanticMatches && semanticMatches.length > 0) {
-      return semanticMatches[0].response;
+    if (cached) {
+      Logger.info(`[Semantic Cache HIT] ${hash}`);
+      return JSON.parse(cached);
     }
-
+    
+    Logger.info(`[Semantic Cache MISS] ${hash}`);
     return null;
   } catch (error) {
-    console.error('Semantic Cache Get Error:', error);
+    Logger.warn('[Semantic Cache Error]', { error: error.message });
     return null;
   }
 }
 
-export async function setAiCache(messages, responseText, ttlSeconds = 86400) {
+export async function setAiCache(messages, responseText, ttlSeconds = 86400, context = {}) {
   try {
-    const hash = generateHash(messages);
+    if (!responseText || responseText.length < 10) return; // Boş veya anlamsız kısa cevapları cache'leme
+    if (responseText.includes('Internal Error') || responseText.includes('üzgünüm') || responseText.includes('anlayamadım')) {
+      return; // Başarısız / Hata içeren cevapları cache'e yazma
+    }
+
+    const hash = generateHash(messages, context);
     await redis.set(`ai:chat:${hash}`, JSON.stringify(responseText), 'EX', ttlSeconds);
     
-    const lastUserMsg = messages.filter(m => m.role === 'user').pop();
-    if (lastUserMsg && process.env.GOOGLE_GENERATIVE_AI_API_KEY) {
-      // Vector db'ye asenkron kayit:
-      const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
-      const embedRes = await ai.models.embedContent({ model: 'text-embedding-004', contents: lastUserMsg.content });
-      const vectorStr = `[${embedRes.embeddings[0].values.join(',')}]`;
-      
-      await prisma.$executeRawUnsafe(`
-        INSERT INTO "SemanticCache" ("id", "queryHash", "query", "response", "embedding", "createdAt", "updatedAt") 
-        VALUES (gen_random_uuid(), $1, $2, $3, $4::vector, NOW(), NOW())
-        ON CONFLICT ("queryHash") DO NOTHING
-      `, hash, lastUserMsg.content, responseText, vectorStr);
-    }
   } catch (error) {
-    console.error('Semantic Cache Set Error:', error);
+    Logger.warn('[Semantic Cache Set Error]', { error: error.message });
   }
 }

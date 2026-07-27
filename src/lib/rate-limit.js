@@ -12,10 +12,9 @@ const MAX_REQUESTS = 50; // IP başına max istek
  *   (Chat / VIP giriş gibi kritik akışları Redis yok diye kilitlememek için.)
  * - Limit aşılırsa → { success: false }.
  */
-export async function rateLimit(namespace, identifier, limit = MAX_REQUESTS, windowSec = RATE_LIMIT_WINDOW) {
+export async function rateLimit(namespace, identifier, limits = { burstLimit: 10, burstWindow: 60, sustainedLimit: 60, sustainedWindow: 3600 }) {
   if (!process.env.UPSTASH_REDIS_REST_URL || !process.env.UPSTASH_REDIS_REST_TOKEN) {
-    // Redis yapılandırılmamış → engelleme yapma (fail-open)
-    return { success: true, remaining: limit - 1, limit };
+    return { success: true, remaining: 1, limit: limits.burstLimit };
   }
 
   const redis = new Redis({
@@ -23,23 +22,30 @@ export async function rateLimit(namespace, identifier, limit = MAX_REQUESTS, win
     token: process.env.UPSTASH_REDIS_REST_TOKEN,
   });
 
-  const key = `rl:${namespace}:${identifier}`;
+  const burstKey = `rl:burst:${namespace}:${identifier}`;
+  const sustainedKey = `rl:sustained:${namespace}:${identifier}`;
 
   try {
-    const current = await redis.incr(key);
+    const p = redis.pipeline();
+    p.incr(burstKey);
+    p.incr(sustainedKey);
+    const [burstCount, sustainedCount] = await p.exec();
 
-    if (current === 1) {
-      await redis.expire(key, windowSec);
+    const pExpire = redis.pipeline();
+    if (burstCount === 1) pExpire.expire(burstKey, limits.burstWindow);
+    if (sustainedCount === 1) pExpire.expire(sustainedKey, limits.sustainedWindow);
+    if (burstCount === 1 || sustainedCount === 1) await pExpire.exec();
+
+    if (burstCount > limits.burstLimit) {
+      return { success: false, reason: 'burst' };
+    }
+    if (sustainedCount > limits.sustainedLimit) {
+      return { success: false, reason: 'sustained' };
     }
 
-    if (current > limit) {
-      return { success: false, remaining: 0, limit };
-    }
-
-    return { success: true, remaining: limit - current, limit };
+    return { success: true, remainingBurst: limits.burstLimit - burstCount };
   } catch (error) {
-    // Bağlantı kopması vb. → fail-OPEN (isteği bloklama)
     console.error('[Rate Limit] Redis error, fail-open:', error.message);
-    return { success: true, remaining: limit - 1, limit };
+    return { success: true, remaining: 1 };
   }
 }

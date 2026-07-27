@@ -3,8 +3,9 @@ import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 export async function generateStaticParams({ params }) {
   const { locale } = await params;

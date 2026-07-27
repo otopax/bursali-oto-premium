@@ -21,16 +21,23 @@ const chatBodySchema = z.object({
 
 async function postHandler(req) {
   try {
-    // 1. Edge/Infrastructure Level Rate Limiting (Fail Closed if Redis is up)
-    const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
-    const limitStatus = await rateLimit('chat', ip, 30, 60, { failClosed: true });
-    
-    if (!limitStatus.success) {
-      return new Response('Too Many Requests', { status: 429 });
-    }
-
     const { messages, vehicleContext, guestId } = req.valid.body;
     const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026' });
+
+    // 1. SRE Rate Limit Identifier Priority: Auth User -> Guest ID -> IP
+    const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';
+    const identifier = (token && token.sub) ? `usr_${token.sub}` : (guestId ? `gst_${guestId}` : `ip_${ip}`);
+    
+    const limitStatus = await rateLimit('chat', identifier, {
+      burstLimit: 10, burstWindow: 60,
+      sustainedLimit: 60, sustainedWindow: 3600
+    });
+    
+    if (!limitStatus.success) {
+      return new Response(JSON.stringify({ error: 'rate_limit_exceeded', reason: limitStatus.reason }), { 
+        status: 429, headers: { 'Content-Type': 'application/json' } 
+      });
+    }
 
     // 2. Delegate to Application Service (DDD)
     const result = await container.chatService.executeChatFlow({ 

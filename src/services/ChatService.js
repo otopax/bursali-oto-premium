@@ -123,8 +123,15 @@ export class ChatService {
     // 2. Prompt Injection Check (static metod — sinif adiyla cagrilmali, this ile degil)
     ChatService.checkPromptInjection(messages);
 
+    const aiContext = {
+      locale: 'tr', // TODO: dynamic if possible
+      vehicleContext,
+      aiModel: 'gemini-2.5-flash',
+      systemPromptVersion: 'v2'
+    };
+
     // 3. Semantic Cache Check
-    const cachedResponse = await getAiCache(messages);
+    const cachedResponse = await getAiCache(messages, aiContext);
     if (cachedResponse) {
       const encoder = new TextEncoder();
       const stream = new ReadableStream({
@@ -158,7 +165,8 @@ export class ChatService {
         }
 
         // Cache using original full messages array to ensure exact match on next request
-        await setAiCache(messages, finalText, 86400);
+        // TTL for Chat AI is 6-24 hours according to user (we set 12 hours)
+        await setAiCache(messages, finalText, 12 * 3600, aiContext);
       }
     });
 

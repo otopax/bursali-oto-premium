@@ -2,8 +2,9 @@ import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
-export const dynamic = 'force-static';
-export const dynamicParams = false;
+
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 export const metadata = {
   title: 'Arıza Çözümleri | Bursalı Oto Servis Fethiye',
