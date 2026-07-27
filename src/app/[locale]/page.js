@@ -44,7 +44,7 @@ export default async function Home({ params }) {
             priority
             fetchPriority="high"
             sizes="(max-width: 1600px) 100vw, 1600px"
-            quality={85}
+            quality={75}
             style={{ objectFit: 'cover', zIndex: -2 }}
           />
         </div>
