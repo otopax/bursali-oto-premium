@@ -1,7 +1,13 @@
-import { google } from '@ai-sdk/google';
+import { createGoogleGenerativeAI } from '@ai-sdk/google';
 import { streamText } from 'ai';
 import { GoogleGenAI } from '@google/genai';
 import { IAiProvider } from '@/application/interfaces/IAiProvider';
+
+// API ANAHTARI ÇÖZÜMÜ: Sağlayıcı varsayılan olarak yalnızca GOOGLE_GENERATIVE_AI_API_KEY'i okur.
+// Anahtar GEMINI_API_KEY'de tanımlıysa "API key not valid" alınıyordu. Artık ikisinden geçerli
+// olanı açıkça kullanıyoruz (önce GEMINI_API_KEY, sonra GOOGLE_GENERATIVE_AI_API_KEY).
+const GEMINI_KEY = process.env.GEMINI_API_KEY || process.env.GOOGLE_GENERATIVE_AI_API_KEY;
+const google = createGoogleGenerativeAI({ apiKey: GEMINI_KEY });
 
 export class GoogleAiProvider extends IAiProvider {
   constructor() {
@@ -31,7 +37,7 @@ export class GoogleAiProvider extends IAiProvider {
   }
 
   async generateEmbedding(text) {
-    const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_GENERATIVE_AI_API_KEY });
+    const ai = new GoogleGenAI({ apiKey: GEMINI_KEY });
     const embedRes = await ai.models.embedContent({ 
       model: this.embeddingModelName, 
       contents: text 
