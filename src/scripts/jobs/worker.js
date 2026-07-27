@@ -2,6 +2,7 @@ import { gracefulShutdown } from '@/lib/bullmq/QueueFactory';
 import { appointmentWorker } from '@/workers/appointmentWorker';
 import { crawlerWorker } from '@/workers/crawlerWorker';
 import { embeddingWorker } from '@/workers/embeddingWorker';
+import { logger } from '@/lib/logger';
 
 const workers = [
   appointmentWorker,
@@ -9,11 +10,12 @@ const workers = [
   embeddingWorker
 ];
 
-console.log('🚀 BullMQ Enterprise Worker System Started.');
-console.log(`[Registered Workers]: ${workers.length}`);
+logger.app.info('🚀 BullMQ Enterprise Worker System Started.');
+logger.app.info(`[Registered Workers]: ${workers.length}`);
 
 // Graceful Shutdown for SigTerm and SigInt (Docker/Kubernetes/Railway)
 const shutdown = async () => {
+  logger.app.info('Shutting down workers gracefully...');
   await gracefulShutdown(workers);
 };
 

@@ -119,8 +119,8 @@ export class ChatService {
       await this.checkGuestQuota(guestId, messages);
     }
 
-    // 2. Prompt Injection Check
-    this.checkPromptInjection(messages);
+    // 2. Prompt Injection Check (static metod — sinif adiyla cagrilmali, this ile degil)
+    ChatService.checkPromptInjection(messages);
 
     // 3. Semantic Cache Check
     const cachedResponse = await getAiCache(messages);
@@ -165,6 +165,7 @@ export class ChatService {
   }
 
   getAiTools() {
+    const self = this;
     return {
       searchChronicFaults: tool({
         description: 'Verilen anahtar kelime veya araç modeline göre (örn: bmw n20, airmatic, dsg) kronik arızalar veritabanında (MDX makaleleri) arama yapar. Sonuçlar /ariza-cozumleri/ URL\'sine link vermek için kullanılır.',
@@ -400,7 +401,7 @@ export class ChatService {
           brandSlug: z.string().optional()
         }),
         execute: async ({ query, brandSlug }) => {
-          return await this.semanticSearch(query, 5, brandSlug);
+          return await self.semanticSearch(query, 5, brandSlug);
         }
       })
     };
