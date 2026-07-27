@@ -80,7 +80,7 @@ export default async function ArizaCozumleriModelPage({ params }) {
             {faults.map((fault) => (
               <Link 
                 key={fault.id} 
-                href={`/${locale}/ariza-cozumleri/${fault.id}`}
+                href={`/${locale}/ariza-cozumleri/${marka}/${model}/${fault.id}`}
                 className="glass-panel hover-gold-border"
                 style={{ 
                   display: 'flex', flexDirection: 'column', padding: '1.5rem', 

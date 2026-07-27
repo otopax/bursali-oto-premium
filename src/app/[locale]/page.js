@@ -7,6 +7,7 @@ import { buildCanonical } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
 import Reveal from '@/components/anim/Reveal';
 import dynamic from 'next/dynamic';
+import { arizaUrl } from '@/lib/urls';
 
 const Reviews = dynamic(() => import('../../components/Reviews'), { 
   loading: () => <div style={{ height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Yorumlar yükleniyor...</div>
@@ -223,7 +224,7 @@ export default async function Home({ params }) {
           </div>
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
             {recentFaults.map(fault => (
-              <a key={fault.id} href={`/${locale}/ariza-cozumleri/${fault.id}`} aria-label={`${fault.title} Detayları`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.5rem', textDecoration: 'none' }}>
+              <a key={fault.id} href={arizaUrl(locale, fault)} aria-label={`${fault.title} Detayları`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.5rem', textDecoration: 'none' }}>
                 <span style={{ display: 'inline-block', padding: '4px 10px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '1rem' }}>
                   {fault.brand}
                 </span>

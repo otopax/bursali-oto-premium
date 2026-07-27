@@ -2,6 +2,7 @@ import { container } from '@/application/di/container';
 import Link from 'next/link';
 
 import { buildCanonical } from '@/lib/seo/canonical';
+import { arizaUrl } from '@/lib/urls';
 
 export async function generateMetadata({ params }) {
   const { brand, locale } = await params;
@@ -38,7 +39,7 @@ export default async function BrandHubPage({ params }) {
             {brandFaults.map((fault) => (
               <Link 
                 key={fault.id} 
-                href={`/${locale}/ariza-cozumleri/${fault.id}`}
+                href={arizaUrl(locale, fault)}
                 className="group block p-6 bg-[#1a1a1a] rounded-2xl border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-gold)] transition-all duration-300 relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent-gold)]/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

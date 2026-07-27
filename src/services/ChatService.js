@@ -9,6 +9,8 @@ import { container } from '@/application/di/container';
 import { VehicleRepository } from '@/lib/repositories/VehicleRepository';
 import { prisma } from '@/lib/prisma';
 import { Logger } from '@/lib/observability/Logger';
+import { arizaUrl } from '@/lib/urls';
+import { getVehicleServiceStatus } from '@/lib/vipGarage';
 
 export class ChatService {
   constructor(aiProvider) {
@@ -94,10 +96,13 @@ export class ChatService {
       }
     }
     
-    dynamicSystemPrompt += `\n\nDOKTOR MODU VE SATIŞ ODAKLI ASİSTAN: Asla eksik bilgiyle anında kesin bir teşhis koyma. Eğer arızanın kesin sebebini bulmak için kullanıcının verdiği şikayet yetersizse, bir Oto Diagnostik uzmanı gibi kısa sorular sor. 
-      ŞİMDİ ÇOK ÖNEMLİ: Müşteri bir arıza kodu sormadan doğrudan bir şikayet, belirti veya mekanik sorun (örn: titreme, siyah duman, geç çalışma) tarif ederse İLK OLARAK MUTLAKA "semanticSearch" aracını kullanarak vektör veritabanında arama yap! Bu sayede doğrudan en alakalı arıza kodunu ve çözümünü bulursun. 
-      Eğer müşteri bir ARIZA KODU (Örn: P0420, P0171) sorarsa veya teorik bir bilgi isterse MUTLAKA "searchLibrary" aracını kullanarak Kütüphanemizdeki makaleleri ara. Eğer marka kronik arızası sorarsa "searchChronicFaults" kullan.
-      Eğer eşleşen bir makale (Arıza Çözümü veya Kütüphane) bulursan, kullanıcıya ŞU ŞEKİLDE HTML link ver: "Bu konu hakkında detaylı makalemizi buradan okuyabilirsiniz: <a href='/kutuphane/makale-slug' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>". Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
+    dynamicSystemPrompt += `\n\nDOKTOR MODU VE SATIŞ ODAKLI ASİSTAN: Asla eksik bilgiyle anında kesin bir teşhis koyma. Eğer arızanın kesin sebebini bulmak için kullanıcının verdiği şikayet yetersizse, bir Oto Diagnostik uzmanı gibi kısa sorular sor.
+      KAYNAK ÖNCELİĞİ (ÇOK ÖNEMLİ): Her soruya cevap vermeden ÖNCE MUTLAKA kendi içerik kaynaklarımızdan ara ve cevabını bunlara dayandır. Genel/ezbere bilgiyi ancak bu üç kaynakta sonuç yoksa kullan. Üç kaynağın:
+      1) ARIZA ÇÖZÜMLERİ (marka/model kronik arızaları ve belirtiler): "searchChronicFaults" aracını kullan.
+      2) KÜTÜPHANE (arıza kodu makaleleri örn. P0420/P0171 ve teknik bilgi): "searchLibrary" aracını kullan.
+      3) VIP GARAJ (müşterinin KENDİ aracının servis durumu / iş emri / bakım geçmişi): "getServiceStatus" aracını kullan; plaka ve telefon iste. Müşteri "aracım hazır mı, servis durumu, geçmiş bakımlarım" gibi kişisel araç sorusu sorarsa cevabı buradan ver.
+      Müşteri belirti/şikayet (titreme, siyah duman, geç çalışma vb.) tarif ederse önce "searchChronicFaults", gerekiyorsa "searchLibrary" ile ara; ek olarak "semanticSearch" de deneyebilirsin.
+      Eğer eşleşen bir makale bulursan, kullanıcıya aracın DÖNDÜRDÜĞÜ "url" alanını kullanarak HTML link ver: "Detaylı makalemiz: <a href='DÖNEN_URL' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>". Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
     EN ÖNEMLİ KURAL: Her diyaloğun veya teşhisin sonunda KESİNLİKLE "Müsait olduğunuz bir zaman aracınızı Fethiye'deki özel servisimize getirin, ustalarımızla birlikte ücretsiz detaylı check-up yapalım ve kesin randevu oluşturalım. Randevu talebinizi hemen iletebilirim, ne dersiniz?" şeklinde RANDEVU (Lead) satışı yapmaya çalış. Arıza ciddiyse müşteriyi korkutmadan servise gelmesi gerektiğine ikna et!`;
 
     return dynamicSystemPrompt;
@@ -179,7 +184,7 @@ export class ChatService {
             ).slice(0, 3);
             
             if (results.length > 0) {
-              return { success: true, articles: results.map(r => ({ id: r.id, title: r.title, url: `/ariza-cozumleri/${r.id}` })) };
+              return { success: true, articles: results.map(r => ({ id: r.id, title: r.title, url: arizaUrl('tr', r) })) };
             }
             return { success: false, message: 'Eşleşen kronik arıza makalesi bulunamadı.' };
           } catch(e) {
@@ -209,6 +214,40 @@ export class ChatService {
             }
             return { success: false, message: 'Makale bulunamadı.' };
           } catch(e) {
+            return { success: false, error: e.message };
+          }
+        }
+      }),
+      getServiceStatus: tool({
+        description: 'VIP GARAJ: Müşterinin kendi aracının güncel servis durumunu, iş emrini ve geçmiş bakım karnesini getirir. Kullanıcı "aracım hazır mı", "servis durumu ne", "iş emrim ne durumda", "bakım geçmişim" gibi sorarsa kullan. ZORUNLU: plaka ve telefon. Verilmediyse kullanıcıdan nazikçe iste.',
+        parameters: z.object({
+          plate: z.string().describe('Araç plakası, örn: 48 ABC 123'),
+          phone: z.string().describe('Sisteme kayıtlı telefon numarası')
+        }),
+        execute: async ({ plate, phone }) => {
+          try {
+            const data = await getVehicleServiceStatus(plate, phone);
+            if (!data) {
+              return { success: false, message: 'Bu plaka ve telefona ait kayıt bulunamadı. Lütfen bilgileri kontrol edin ya da servisimizle iletişime geçin.' };
+            }
+            const latest = (data.history && data.history[0]) ? data.history[0] : null;
+            return {
+              success: true,
+              vehicle: `${data.vehicleInfo.brand} ${data.vehicleInfo.model} (${data.vehicleInfo.plate})`,
+              customer: data.customerInfo.firstName,
+              serviceName: data.serviceName,
+              totalRecords: data.history ? data.history.length : 0,
+              latestStatus: latest ? latest.status : null,
+              latestComplaint: latest ? latest.complaint : null,
+              history: (data.history || []).map(o => ({
+                date: o.createdAt,
+                status: o.status,
+                complaint: o.complaint,
+                notes: o.notes,
+                items: (o.items || []).map(i => i.name)
+              }))
+            };
+          } catch (e) {
             return { success: false, error: e.message };
           }
         }

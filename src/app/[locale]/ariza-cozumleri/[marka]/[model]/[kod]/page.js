@@ -15,6 +15,7 @@ function extractFirstSentence(text) {
 
 import { buildCanonical } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
+import { arizaUrl } from '@/lib/urls';
 
 export const dynamic = 'force-static';
 export const dynamicParams = false;
@@ -40,7 +41,7 @@ export async function generateMetadata({ params }) {
   const ogImage = isValidImage(postData.image)
     ? postData.image
     : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`;
-  const canonicalData = buildCanonical(locale, `ariza-cozumleri/${kod}`);
+  const canonicalData = buildCanonical(locale, `ariza-cozumleri/${marka}/${model}/${kod}`);
 
   // Max 60 chars title
   let titleStr = `${postData.title || kod} Çözümü | Bursalı Oto`;
@@ -422,7 +423,7 @@ export default async function ArizaCozumDetailPage({ params }) {
             </h2>
             <div className="grid">
               {relatedFaults.map(fault => (
-                <a key={fault.id} href={`/ariza-cozumleri/${fault.id}`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.25rem', textDecoration: 'none' }}>
+                <a key={fault.id} href={arizaUrl(locale, fault)} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.25rem', textDecoration: 'none' }}>
                   <h3 style={{ color: 'var(--accent-gold)', fontWeight: 'bold', marginBottom: '0.5rem', fontSize: '1.1rem' }}>{fault.title}</h3>
                   <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>{fault.description || extractFirstSentence(fault.rawContent)}</p>
                 </a>
