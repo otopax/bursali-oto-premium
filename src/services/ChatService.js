@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { tool } from 'ai';
 import { DataAccessLayer } from '@/lib/dataAccessLayer';
 import { getSystemPrompt } from '@/lib/ai/promptRegistry';
 import { getAiCache, setAiCache } from '@/lib/ai/semanticCache';
