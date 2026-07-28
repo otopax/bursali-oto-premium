@@ -1,0 +1,53 @@
+import { NextResponse } from 'next/server';
+import { prisma } from '@/lib/prisma';
+
+// GEÇİCİ ADMIN UCU — Veri kapsamı ölçümü (Railway iç ağından çalışır, sadece SAYIM döner, PII yok).
+// Kullanım: /api/admin/db-coverage?token=bursali-cov-9f3a2c
+// Ölçüm alındıktan sonra bu dosya SİLİNMELİDİR.
+export const dynamic = 'force-dynamic';
+export const runtime = 'nodejs';
+
+const TOKEN = 'bursali-cov-9f3a2c';
+
+export async function GET(request) {
+  const token = request.nextUrl.searchParams.get('token');
+  if (token !== TOKEN) {
+    return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
+  }
+
+  try {
+    const [faultCodes, parts, videos, diag, diagWithOutcome, customerVehicles] = await Promise.all([
+      prisma.faultCode.count(),
+      prisma.part.count(),
+      prisma.repairVideo.count(),
+      prisma.diagnosticLog.count(),
+      prisma.diagnosticLog.count({ where: { actualOutcome: { not: null } } }),
+      prisma.customerVehicle.count(),
+    ]);
+
+    const [partsWithPrice, partsInStock, fcWithParts, fcWithVideos, fcWithSolution] = await Promise.all([
+      prisma.part.count({ where: { price: { not: null } } }),
+      prisma.part.count({ where: { stock: { gt: 0 } } }),
+      prisma.faultCode.count({ where: { parts: { some: {} } } }),
+      prisma.faultCode.count({ where: { repairVideos: { some: {} } } }),
+      prisma.faultCode.count({ where: { stepByStepSolution: { not: null } } }),
+    ]);
+
+    let fcWithEmbedding = null;
+    try {
+      const r = await prisma.$queryRawUnsafe(`SELECT COUNT(*)::int AS c FROM "FaultCode" WHERE embedding IS NOT NULL`);
+      fcWithEmbedding = r && r[0] ? r[0].c : null;
+    } catch (e) { fcWithEmbedding = 'err: ' + e.message; }
+
+    return NextResponse.json({
+      ok: true,
+      faultCode: { total: faultCodes, withParts: fcWithParts, withVideos: fcWithVideos, withSolution: fcWithSolution, withEmbedding: fcWithEmbedding },
+      part: { total: parts, withPrice: partsWithPrice, inStock: partsInStock },
+      repairVideo: { total: videos },
+      diagnosticLog: { total: diag, withActualOutcome: diagWithOutcome },
+      customerVehicle: { total: customerVehicles },
+    });
+  } catch (e) {
+    return NextResponse.json({ ok: false, error: e.message }, { status: 500 });
+  }
+}
