@@ -1,6 +1,6 @@
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
-import { Inter, Outfit } from 'next/font/google';
+import { Inter } from 'next/font/google';
 import '../globals.css';
 import Providers from '@/components/Providers';
 import ClientWidgets from '@/components/ClientWidgets';
@@ -11,7 +11,6 @@ import StructuredData from '@/components/StructuredData';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter', display: 'swap', preload: true });
-const outfit = Outfit({ subsets: ['latin', 'latin-ext'], variable: '--font-outfit', display: 'swap' });
 
 // Faz A / Görev 2 — Canonical + hreflang locale-aware.
 // Base URL www'lu (canlı deploy); metadataBase alt-metadata için relative URL çözer.
@@ -86,10 +85,8 @@ export default async function RootLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${inter.variable} ${outfit.variable}`}>
+    <html lang={locale} className={`${inter.variable}`}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script type="speculationrules" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
