@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { tool } from 'ai';
+import * as Sentry from "@sentry/nextjs";
 import { DataAccessLayer } from '@/lib/dataAccessLayer';
 import { getSystemPrompt } from '@/lib/ai/promptRegistry';
 import { getAiCache, setAiCache } from '@/lib/ai/semanticCache';
@@ -154,7 +155,14 @@ export class ChatService {
       systemPrompt,
       messages: optimizedMessages,
       tools: this.getAiTools(),
-      onFinish: async ({ text, toolCalls }) => {
+      onFinish: async ({ text, toolCalls, usage }) => {
+        if (usage && usage.totalTokens) {
+          try {
+            Sentry.metrics.distribution('ai.token.usage', usage.totalTokens, { unit: 'count' });
+          } catch (e) {
+            Logger.warn('Sentry Metric Error', e.message);
+          }
+        }
         const toolsUsedCount = toolCalls ? toolCalls.length : 0;
         const guardResult = checkHallucination(text, toolsUsedCount);
         let finalText = text;
