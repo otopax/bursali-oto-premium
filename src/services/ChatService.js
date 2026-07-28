@@ -107,6 +107,13 @@ export class ChatService {
       Eğer eşleşen bir makale bulursan, kullanıcıya aracın DÖNDÜRDÜĞÜ "url" alanını kullanarak HTML link ver: "Detaylı makalemiz: <a href='DÖNEN_URL' target='_blank' style='color:#d4af37;text-decoration:underline;'>Makale Başlığı</a>". Asla Markdown kullanma, her zaman HTML <a> etiketi kullan!
     EN ÖNEMLİ KURAL: Her diyaloğun veya teşhisin sonunda KESİNLİKLE "Müsait olduğunuz bir zaman aracınızı Fethiye'deki özel servisimize getirin, ustalarımızla birlikte ücretsiz detaylı check-up yapalım ve kesin randevu oluşturalım. Randevu talebinizi hemen iletebilirim, ne dersiniz?" şeklinde RANDEVU (Lead) satışı yapmaya çalış. Arıza ciddiyse müşteriyi korkutmadan servise gelmesi gerektiğine ikna et!`;
 
+    dynamicSystemPrompt += `\n\n[TEŞHİS & PARÇA PROTOKOLÜ — ÇOK ÖNEMLİ]
+- Müşteri bir arıza KODU verirse (örn: P0087) HER ZAMAN önce "searchFaultCode" aracını çağır (marka, model, kod ile). Dönen severity, belirti, sebep, çözüm adımları ve PARÇA listesini kullan.
+- PARÇA & FİYAT UYDURMA YASAĞI: Yalnızca "searchFaultCode" veya "findPartsForFault" araçlarının döndürdüğü parçaları, OEM numaralarını ve fiyatları öner. Araç parça döndürmediyse OEM numarası veya fiyat UYDURMA; "Kesin parça ve fiyat için servisimize danışın" de. Fiyatı olan parçalarda stok durumunu belirt (stokta var / tedarik edilir).
+- MALİYET: Fiyat verirken "estimateCost" aracını kullan ve varsa OEM numarasını gönder. Araç "priceKnown=false" dönerse bunun kaba tahmin olduğunu açıkça söyle, kesin rakam verme.
+- CİDDİYET (severity) YÖNLENDİRME: severity CRITICAL/HIGH ise "aracı zorlamayın, en kısa sürede servise getirin" de ve randevuyu öne çıkar; LOW ise bilgilendirici/rahatlatıcı ol.
+- GEÇMİŞ DENEYİM: Uygun olduğunda "getDiagnosticHistory" ile aynı marka/modeldeki servis-doğrulanmış geçmiş sonuçları çek ve "Bu modelde benzer belirtide çoğu zaman gerçek sebep ... çıkıyor" gibi tecrübe aktar. Yalnızca aracın döndürdüğü doğrulanmış kayıtları kullan.`;
+
     return dynamicSystemPrompt;
   }
 
@@ -175,6 +182,28 @@ export class ChatService {
         // Cache using original full messages array to ensure exact match on next request
         // TTL for Chat AI is 6-24 hours according to user (we set 12 hours)
         await setAiCache(messages, finalText, 12 * 3600, aiContext);
+
+        // TEŞHİS GERİ-BESLEME: VIP araç (şasi -> CustomerVehicle) için seansı logla.
+        // actualOutcome sonradan serviste doldurulur; getDiagnosticHistory bu doğrulanmış
+        // kayıtları kullanır. Guest'lerde CustomerVehicle olmadığından yazılmaz (FK güvenliği).
+        try {
+          if (vehicleContext && vehicleContext.chassis && finalText) {
+            const cv = await VehicleRepository.getVehicleWithHistory(vehicleContext.chassis);
+            if (cv && cv.id) {
+              const lastUser = [...messages].reverse().find(m => m.role === 'user');
+              await prisma.diagnosticLog.create({
+                data: {
+                  vehicleId: cv.id,
+                  symptoms: (lastUser && lastUser.content ? String(lastUser.content) : '(belirti yok)').slice(0, 1000),
+                  aiSuggestion: String(finalText).slice(0, 4000),
+                  aiConfidence: (guardResult && guardResult.isHallucinated) ? 0.4 : 0.8
+                }
+              });
+            }
+          }
+        } catch (e) {
+          Logger.warn('DiagnosticLog write skipped', { error: e.message });
+        }
       }
     });
 
@@ -278,34 +307,136 @@ export class ChatService {
         },
       }),
       searchFaultCode: tool({
-        description: 'Verilen marka, model ve arıza kodu (örn: P0171) için analiz.',
+        description: 'Verilen marka, model ve arıza kodu (örn: P0171) için TAM analiz: açıklama, ciddiyet (severity), belirtiler, olası sebepler, çözüm adımları, ilgili OEM parçalar (fiyat/stok) ve onarım videoları.',
         parameters: z.object({
           brand: z.string(),
           model: z.string(),
           code: z.string()
         }),
         execute: async ({ brand, model, code }) => {
-          const cacheKey = `${brand}_${model}_${code}`;
+          const normCode = (code || '').trim().toUpperCase();
+          const cacheKey = `${brand}_${model}_${normCode}_v2`;
           const cachedResult = await getCache('fault', cacheKey);
           if (cachedResult) return cachedResult;
 
+          // 1) Mevcut içerik analizi (Postgres FaultCode -> yoksa JSON fallback)
           const data = await DataAccessLayer.getFaultCodeAnalysis(brand, model, code);
-          if (data) {
-            const response = {
-              success: true,
-              data: {
-                title: data.title || data.description,
-                description: data.description || "Açıklama yok",
-                symptoms: data.symptoms || [],
-                causes: data.causes || [],
-                mechanic_advice: data.mechanic_advice || "Öneri yok"
+
+          // 2) Bilgi grafiği zenginleştirme: severity + OEM parçalar + videolar (varsa)
+          let graph = null;
+          try {
+            graph = await prisma.faultCode.findFirst({
+              where: { code: { equals: normCode, mode: 'insensitive' } },
+              include: {
+                parts: { select: { name: true, oemNumber: true, category: true, price: true, currency: true, stock: true } },
+                repairVideos: { select: { title: true, url: true, source: true } },
+                sensor: { select: { name: true, type: true } }
               }
-            };
-            await setCache('fault', cacheKey, response, 3600);
-            return response;
+            });
+          } catch (e) { /* tablo boş/yok ise sessiz geç */ }
+
+          if (!data && !graph) {
+            return { success: false, message: 'Veri bulunamadı.' };
           }
-          return { success: false, message: 'Veri bulunamadı.' };
+
+          const parts = (graph && Array.isArray(graph.parts)) ? graph.parts.map(p => ({
+            name: p.name,
+            oemNumber: p.oemNumber || null,
+            category: p.category,
+            price: (p.price != null) ? p.price : null,
+            currency: p.currency || 'TRY',
+            inStock: p.stock > 0,
+            stock: p.stock
+          })) : [];
+
+          const response = {
+            success: true,
+            data: {
+              title: (data && (data.title || data.description)) || (graph && graph.description) || normCode,
+              description: (data && data.description) || (graph && graph.description) || 'Açıklama yok',
+              severity: (graph && graph.severity) || null,
+              symptoms: (data && data.symptoms) || (graph && graph.symptoms) || [],
+              causes: (data && data.causes) || (graph && graph.commonCauses) || [],
+              solution: (data && data.mechanic_advice) || (graph && graph.stepByStepSolution) || null,
+              parts,
+              partsAvailable: parts.length > 0,
+              repairVideos: (graph && graph.repairVideos && graph.repairVideos.length) ? graph.repairVideos : ((data && data.videos) || []),
+              relatedSensor: (graph && graph.sensor) ? graph.sensor : null
+            }
+          };
+          await setCache('fault', cacheKey, response, 3600);
+          return response;
         },
+      }),
+      findPartsForFault: tool({
+        description: 'Bir arıza kodu (örn: P0171) için servis kataloğundaki uyumlu OEM parçaları, fiyat ve stok durumuyla getirir. Parça önerisi YALNIZCA bu aracın veya searchFaultCode\'un döndürdüğü parçalardan yapılabilir.',
+        parameters: z.object({
+          code: z.string().describe('Arıza kodu, örn: P0171')
+        }),
+        execute: async ({ code }) => {
+          const normCode = (code || '').trim().toUpperCase();
+          try {
+            const fc = await prisma.faultCode.findFirst({
+              where: { code: { equals: normCode, mode: 'insensitive' } },
+              include: { parts: { select: { name: true, oemNumber: true, category: true, price: true, currency: true, stock: true } } }
+            });
+            if (!fc || !fc.parts || fc.parts.length === 0) {
+              return { success: false, message: 'Bu arıza kodu için katalogda kayıtlı parça yok. Kesin parça bilgisi için servise danışılmalı; OEM numarası/fiyat uydurma.' };
+            }
+            return {
+              success: true,
+              code: normCode,
+              parts: fc.parts.map(p => ({
+                name: p.name, oemNumber: p.oemNumber || null, category: p.category,
+                price: (p.price != null) ? p.price : null, currency: p.currency || 'TRY',
+                inStock: p.stock > 0, stock: p.stock
+              }))
+            };
+          } catch (e) {
+            return { success: false, error: e.message };
+          }
+        }
+      }),
+      getDiagnosticHistory: tool({
+        description: 'Aynı marka/modelde geçmişte SERVİSTE DOĞRULANMIŞ gerçek arıza sonuçlarını (actualOutcome) getirir. "Bu modelde benzer belirtide gerçek sebep genelde şu çıkıyor" demek için kullan. Yalnızca doğrulanmış kayıtları döndürür; yoksa uydurma.',
+        parameters: z.object({
+          brand: z.string(),
+          model: z.string(),
+          symptom: z.string().optional().describe('Opsiyonel belirti filtresi')
+        }),
+        execute: async ({ brand, model, symptom }) => {
+          try {
+            const logs = await prisma.diagnosticLog.findMany({
+              where: {
+                actualOutcome: { not: null },
+                vehicle: {
+                  brand: { contains: brand, mode: 'insensitive' },
+                  model: { contains: model, mode: 'insensitive' }
+                },
+                ...(symptom ? { symptoms: { contains: symptom, mode: 'insensitive' } } : {})
+              },
+              orderBy: { createdAt: 'desc' },
+              take: 15,
+              select: { symptoms: true, aiSuggestion: true, actualOutcome: true, aiConfidence: true, createdAt: true }
+            });
+            if (!logs || logs.length === 0) {
+              return { success: false, message: 'Bu marka/model için doğrulanmış geçmiş teşhis kaydı yok.' };
+            }
+            return {
+              success: true,
+              total: logs.length,
+              cases: logs.map(l => ({
+                symptoms: l.symptoms,
+                aiSuggestion: l.aiSuggestion,
+                confirmedCause: l.actualOutcome,
+                confidence: l.aiConfidence,
+                date: l.createdAt
+              }))
+            };
+          } catch (e) {
+            return { success: false, error: e.message };
+          }
+        }
       }),
       searchFuse: tool({
         description: 'Sigorta (fuse box) verilerini getirir.',
@@ -328,25 +459,40 @@ export class ChatService {
         },
       }),
       estimateCost: tool({
-        description: 'Tahmini maliyet hesaplar.',
+        description: 'Tahmini onarım maliyeti. Mümkünse OEM parça numarası ver; katalogda fiyat varsa GERÇEK fiyat kullanılır. Katalogda yoksa fiyat uydurulmaz, kaba tahmin olduğu belirtilir.',
         parameters: z.object({
           partName: z.string(),
           brand: z.string(),
-          basePartCost: z.number()
+          oemNumber: z.string().optional().describe('Varsa parçanın OEM numarası (gerçek fiyat için)'),
+          basePartCost: z.number().optional().describe('Katalog fiyatı yoksa kaba tahmin (opsiyonel)')
         }),
-        execute: async ({ partName, brand, basePartCost }) => {
+        execute: async ({ partName, brand, oemNumber, basePartCost }) => {
+          let realPart = null;
+          try {
+            if (oemNumber) realPart = await prisma.part.findFirst({ where: { oemNumber } });
+            if (!realPart && partName) realPart = await prisma.part.findFirst({ where: { name: { contains: partName, mode: 'insensitive' } } });
+          } catch (e) { /* Part tablosu yok/boş ise geç */ }
+
+          const priceKnown = !!(realPart && realPart.price != null);
+          const partCost = priceKnown ? realPart.price : (basePartCost || 0);
+
           const premiumBrands = ['bmw', 'mercedes', 'audi', 'porsche', 'land rover', 'volvo'];
           const isPremium = premiumBrands.some(b => (brand || '').toLowerCase().includes(b));
-          
           const multiplier = isPremium ? 1.5 : 1.0;
           const laborCost = 2500 * multiplier;
-          const totalMin = Math.round((basePartCost * multiplier) + laborCost);
+          const totalMin = Math.round((partCost * multiplier) + laborCost);
           const totalMax = Math.round(totalMin * 1.3);
-          
-          return { 
-            partName, 
+
+          return {
+            partName: (realPart && realPart.name) || partName,
+            oemNumber: (realPart && realPart.oemNumber) || oemNumber || null,
+            priceKnown,
+            inStock: realPart ? (realPart.stock > 0) : null,
             estimatedRange: `${totalMin.toLocaleString('tr-TR')} TL - ${totalMax.toLocaleString('tr-TR')} TL`,
-            breakdown: { part: Math.round(basePartCost * multiplier), labor: laborCost, region: 'Fethiye' }
+            breakdown: { part: Math.round(partCost * multiplier), labor: laborCost, region: 'Fethiye' },
+            note: priceKnown
+              ? 'Parça fiyatı servis kataloğundan alınmıştır; işçilik bölgesel tahmindir.'
+              : 'Parça fiyatı katalogda kayıtlı değil; verilen aralık kaba tahmindir, kesin fiyat için servise danışın.'
           };
         }
       }),
