@@ -135,25 +135,10 @@ const nextConfig = {
   },
 };
  
-import { withSentryConfig } from "@sentry/nextjs";
 import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const analyzerPlugin = withBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',
 });
 
-const baseConfig = analyzerPlugin(withNextIntl(nextConfig));
-
-export default withSentryConfig(baseConfig, {
-  org: "hesabinizin-organizasyon-ismi", // Sentry.io > Settings > Organization
-  project: "bursali-oto-servis",
-  authToken: process.env.SENTRY_AUTH_TOKEN, // Build sırasında sourcemap göndermek için
-  silent: false,
-  hideSourcemaps: true,
-  widenClientFileUpload: true,
-  reactComponentAnnotation: {
-    enabled: true,
-  },
-  tunnelRoute: "/monitoring", // Railway'de CORS sorunlarını aşmak için
-  disableLogger: true,
-});
+export default analyzerPlugin(withNextIntl(nextConfig));
