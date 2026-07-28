@@ -1,5 +1,5 @@
 import { createGoogleGenerativeAI } from '@ai-sdk/google';
-import { streamText } from 'ai';
+import { streamText, stepCountIs } from 'ai';
 import { GoogleGenAI } from '@google/genai';
 import { IAiProvider } from '@/application/interfaces/IAiProvider';
 
@@ -23,6 +23,9 @@ export class GoogleAiProvider extends IAiProvider {
       system: systemPrompt,
       messages: messages,
       tools: tools,
+      // ÇOK-ADIMLI TOOL KULLANIMI: tool çağrısından sonra modelin tool sonucunu
+      // okuyup final metni üretmesi için gerekli. Yoksa tool çağrısı sonrası boş yanıt döner.
+      stopWhen: stepCountIs(5),
       onFinish: onFinish
     });
   }
