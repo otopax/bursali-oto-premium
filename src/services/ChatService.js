@@ -319,21 +319,23 @@ export class ChatService {
           const cachedResult = await getCache('fault', cacheKey);
           if (cachedResult) return cachedResult;
 
-          // 1) Mevcut içerik analizi (Postgres FaultCode -> yoksa JSON fallback)
-          const data = await DataAccessLayer.getFaultCodeAnalysis(brand, model, code);
+          // 1) Mevcut içerik analizi (JSON fallback) — throw ederse yut (aktif provider prisma.model'e bakıp patlayabiliyor)
+          let data = null;
+          try { data = await DataAccessLayer.getFaultCodeAnalysis(brand, model, code); } catch (e) { /* JSON yok/hatalı ise geç */ }
 
           // 2) Bilgi grafiği zenginleştirme: severity + OEM parçalar + videolar (varsa)
+          const includeGraph = {
+            parts: { select: { name: true, oemNumber: true, category: true, price: true, currency: true, stock: true } },
+            repairVideos: { select: { title: true, url: true, source: true } },
+            sensor: { select: { name: true, type: true } }
+          };
           let graph = null;
           try {
-            graph = await prisma.faultCode.findFirst({
-              where: { code: { equals: normCode, mode: 'insensitive' } },
-              include: {
-                parts: { select: { name: true, oemNumber: true, category: true, price: true, currency: true, stock: true } },
-                repairVideos: { select: { title: true, url: true, source: true } },
-                sensor: { select: { name: true, type: true } }
-              }
-            });
-          } catch (e) { /* tablo boş/yok ise sessiz geç */ }
+            graph = await prisma.faultCode.findFirst({ where: { code: { equals: normCode, mode: 'insensitive' } }, include: includeGraph });
+          } catch (e) { /* insensitive filtre sorunu olabilir; aşağıda exact denenir */ }
+          if (!graph) {
+            try { graph = await prisma.faultCode.findUnique({ where: { code: normCode }, include: includeGraph }); } catch (e) { /* geç */ }
+          }
 
           if (!data && !graph) {
             return { success: false, message: 'Veri bulunamadı.' };
