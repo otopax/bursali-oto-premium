@@ -145,15 +145,14 @@ const analyzerPlugin = withBundleAnalyzer({
 const baseConfig = analyzerPlugin(withNextIntl(nextConfig));
 
 export default withSentryConfig(baseConfig, {
-  org: "hesabinizin-organizasyon-ismi", // Sentry.io > Settings > Organization
-  project: "bursali-oto-servis",
-  authToken: process.env.SENTRY_AUTH_TOKEN, // Build sırasında sourcemap göndermek için
-  silent: false,
-  hideSourcemaps: true,
+  silent: true,
+  sourcemaps: {
+    disable: true,
+  },
   widenClientFileUpload: true,
   reactComponentAnnotation: {
     enabled: true,
   },
-  tunnelRoute: "/monitoring", // Railway'de CORS sorunlarını aşmak için
+  tunnelRoute: "/monitoring",
   disableLogger: true,
 });
