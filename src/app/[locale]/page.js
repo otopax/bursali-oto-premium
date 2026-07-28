@@ -17,6 +17,9 @@ const MapFacade = dynamic(() => import('@/components/MapFacade'), {
 const Gallery = dynamic(() => import('@/components/Gallery'), {
   loading: () => <div style={{ height: '200px' }} />
 });
+const ImageUploader = dynamic(() => import('@/components/ai/ImageUploader'), {
+  loading: () => <div style={{ height: '300px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>Vision AI yükleniyor...</div>
+});
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -100,6 +103,17 @@ export default async function Home({ params }) {
             </a>
           </div>
         </div>
+      </section>
+
+      {/* Vision AI Section */}
+      <section className="services-section container" style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
+        <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>
+          Otonom Tamir Asistanı (Vision AI)
+        </h2>
+        <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 2rem auto', color: '#94a3b8' }}>
+          Arızalı parçanın fotoğrafını çekin, yapay zekamız hasarı saniyeler içinde analiz etsin.
+        </p>
+        <ImageUploader />
       </section>
 
       {/* Trust & Credibility Section */}

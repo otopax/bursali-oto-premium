@@ -5,6 +5,7 @@ import { GetPostPathsUseCase } from '@/application/use-cases/GetPostPathsUseCase
 import { HierarchyBuilder } from '@/application/use-cases/HierarchyBuilder';
 import { GoogleAiProvider } from '@/infrastructure/ai/GoogleAiProvider';
 import { ChatService } from '@/services/ChatService';
+import { VisionService } from '@/services/VisionService';
 
 // Dependency Injection Container (Singleton)
 class DIContainer {
@@ -23,6 +24,7 @@ class DIContainer {
     
     // Services
     this.chatService = new ChatService(this.aiProvider);
+    this.visionService = new VisionService(this.aiProvider);
   }
 }
 
