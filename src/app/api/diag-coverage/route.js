@@ -1,20 +1,12 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 
-// GEÇİCİ ADMIN UCU — Veri kapsamı ölçümü (Railway iç ağından çalışır, sadece SAYIM döner, PII yok).
-// Kullanım: /api/admin/db-coverage?token=bursali-cov-9f3a2c
-// Ölçüm alındıktan sonra bu dosya SİLİNMELİDİR.
+// GEÇİCİ ÖLÇÜM UCU — Bilgi grafiği doluluk raporu (yalnızca SAYIM döner, PII yok).
+// Admin-dışı yolda; middleware /api/admin korumasına takılmaz. Ölçüm alınınca SİLİNMELİDİR.
 export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
-const TOKEN = 'bursali-cov-9f3a2c';
-
-export async function GET(request) {
-  const token = request.nextUrl.searchParams.get('token');
-  if (token !== TOKEN) {
-    return NextResponse.json({ error: 'unauthorized' }, { status: 401 });
-  }
-
+export async function GET() {
   try {
     const [faultCodes, parts, videos, diag, diagWithOutcome, customerVehicles] = await Promise.all([
       prisma.faultCode.count(),
@@ -37,7 +29,7 @@ export async function GET(request) {
     try {
       const r = await prisma.$queryRawUnsafe(`SELECT COUNT(*)::int AS c FROM "FaultCode" WHERE embedding IS NOT NULL`);
       fcWithEmbedding = r && r[0] ? r[0].c : null;
-    } catch (e) { fcWithEmbedding = 'err: ' + e.message; }
+    } catch (e) { fcWithEmbedding = 'err'; }
 
     return NextResponse.json({
       ok: true,
