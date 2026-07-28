@@ -1,10 +1,35 @@
 "use client";
 
-import { useChat } from '@ai-sdk/react';
 import { useRef, useEffect, useState } from 'react';
 import { generateDiagnosticPDF } from '@/lib/pdfGenerator';
 import { trackEvent, AnalyticsEvent } from '@/lib/analytics';
 import Image from 'next/image';
+
+// Marka → yaygın modeller (otomatik öneri / datalist için)
+const BRAND_MODELS = {
+  'BMW': ['1 Serisi','2 Serisi','3 Serisi','4 Serisi','5 Serisi','6 Serisi','7 Serisi','X1','X3','X4','X5','X6','E90','F30','G20','G30'],
+  'Mercedes-Benz': ['A Serisi','B Serisi','C Serisi','E Serisi','S Serisi','CLA','GLA','GLB','GLC','GLE','Vito','Sprinter','W204','W205','W212','W213'],
+  'Audi': ['A1','A3','A4','A5','A6','A7','A8','Q2','Q3','Q5','Q7','Q8','TT'],
+  'Volkswagen': ['Polo','Golf','Passat','Jetta','Tiguan','Touareg','Caddy','Transporter','Arteon','T-Roc'],
+  'Porsche': ['911','Cayenne','Macan','Panamera','Cayman','Boxster','Taycan'],
+  'Volvo': ['S60','S90','V40','V60','XC40','XC60','XC90'],
+  'Ford': ['Fiesta','Focus','Mondeo','Kuga','Puma','Transit','Ranger','Tourneo'],
+  'Renault': ['Clio','Megane','Symbol','Talisman','Captur','Kadjar','Fluence','Taliant'],
+  'Fiat': ['Egea','Panda','500','Doblo','Linea','Punto','Fiorino'],
+  'Opel': ['Corsa','Astra','Insignia','Mokka','Grandland','Crossland'],
+  'Peugeot': ['208','301','308','2008','3008','5008','Partner','Rifter'],
+  'Citroen': ['C3','C4','C5','Berlingo','C-Elysee'],
+  'Toyota': ['Corolla','Yaris','C-HR','RAV4','Auris','Hilux','Camry'],
+  'Honda': ['Civic','Jazz','CR-V','City','HR-V'],
+  'Hyundai': ['i10','i20','i30','Tucson','Accent','Elantra','Bayon'],
+  'Skoda': ['Fabia','Octavia','Superb','Kodiaq','Scala','Kamiq'],
+  'Seat': ['Ibiza','Leon','Arona','Ateca'],
+  'Nissan': ['Micra','Qashqai','Juke','X-Trail'],
+  'Dacia': ['Sandero','Duster','Logan','Lodgy','Jogger'],
+  'Kia': ['Rio','Ceed','Sportage','Stonic','Picanto'],
+  'Volkswagen Ticari': ['Transporter','Caddy','Crafter','Amarok'],
+};
+const CAR_BRANDS = Object.keys(BRAND_MODELS);
 
 export default function SanalUstaPage() {
   const [isListening, setIsListening] = useState(false);
@@ -63,20 +88,93 @@ export default function SanalUstaPage() {
     setGuestId(id);
   }, []);
 
-  const { messages, input, handleInputChange, handleSubmit, isLoading, setMessages } = useChat({
-    api: '/api/chat',
-    body: { vehicleContext, guestId },
-    initialMessages: [],
-    onError: (err) => {
-      try {
-        if (err.message.includes('guest_quota_exceeded')) {
+  // NOT: @ai-sdk/react v4 (useChat) eski data-stream protokolü bekliyor; backend ise
+  // ai v7 ile yeni UIMessage SSE (data: {"type":"text-delta"...}) üretiyor. Bu uyumsuzluk
+  // "Gönder"i kilitliyor ve yanıtı göstermiyordu. Sürümden bağımsız kendi stream parser'ımız:
+  const [messages, setMessages] = useState([]);
+  const [input, setInput] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = (e) => setInput(e?.target?.value ?? '');
+
+  const sendMessage = async (overrideText) => {
+    const content = ((overrideText ?? input) || '').trim();
+    if (!content || isLoading) return;
+
+    const userMsg = { id: 'u' + Date.now(), role: 'user', content };
+    const history = [...messages, userMsg];
+    const assistantId = 'a' + Date.now();
+    setMessages([...history, { id: assistantId, role: 'assistant', content: '' }]);
+    setInput('');
+    setIsLoading(true);
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: history.map(({ role, content }) => ({ role, content })),
+          vehicleContext,
+          guestId,
+        }),
+      });
+
+      if (res.status === 403 || res.status === 429) {
+        const j = await res.json().catch(() => ({}));
+        if (j && (j.error === 'guest_quota_exceeded' || j.code === 'guest_quota_exceeded')) {
           setShowLeadForm(true);
         }
-      } catch (e) {
-        console.error(e);
+        setMessages((m) => m.filter((x) => x.id !== assistantId));
+        setIsLoading(false);
+        return;
       }
+      if (!res.ok || !res.body) {
+        setMessages((m) => m.map((x) => (x.id === assistantId ? { ...x, content: 'Bir hata oluştu, lütfen tekrar deneyin.' } : x)));
+        setIsLoading(false);
+        return;
+      }
+
+      const reader = res.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      let acc = '';
+      // eslint-disable-next-line no-constant-condition
+      while (true) {
+        const { done, value } = await reader.read();
+        if (done) break;
+        buffer += decoder.decode(value, { stream: true });
+        const lines = buffer.split('\n');
+        buffer = lines.pop() ?? '';
+        for (const line of lines) {
+          const t = line.trim();
+          if (!t.startsWith('data:')) continue;
+          const payload = t.slice(5).trim();
+          if (!payload || payload === '[DONE]') continue;
+          try {
+            const evt = JSON.parse(payload);
+            // ai v7 UIMessage stream: text parçaları "text-delta" olarak gelir
+            const piece = (evt.type === 'text-delta') ? (evt.delta ?? evt.textDelta ?? '') : '';
+            if (piece) {
+              acc += piece;
+              setMessages((m) => m.map((x) => (x.id === assistantId ? { ...x, content: acc } : x)));
+            } else if (evt.type === 'error' && !acc) {
+              acc = 'Bir hata oluştu, lütfen tekrar deneyin.';
+              setMessages((m) => m.map((x) => (x.id === assistantId ? { ...x, content: acc } : x)));
+            }
+          } catch (_) { /* JSON olmayan satırları atla */ }
+        }
+      }
+      if (!acc) {
+        setMessages((m) => m.map((x) => (x.id === assistantId ? { ...x, content: 'Yanıt alınamadı, lütfen tekrar deneyin.' } : x)));
+      }
+    } catch (e) {
+      setMessages((m) => m.map((x) => (x.id === assistantId ? { ...x, content: 'Bağlantı hatası, lütfen tekrar deneyin.' } : x)));
+    } finally {
+      setIsLoading(false);
     }
-  });
+  };
+
+  const handleSubmit = (e) => { if (e && e.preventDefault) e.preventDefault(); sendMessage(); };
 
   // Dinamik ilk mesaj (Araç kayıt edildikten sonra tetiklenecek)
   useEffect(() => {
@@ -182,8 +280,14 @@ export default function SanalUstaPage() {
                 </div>
 
                 <div style={{ display: 'flex', gap: '1rem' }}>
-                  <input required value={formBrand} onChange={e => setFormBrand(e.target.value)} name="brand" placeholder="Marka (Örn: BMW)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
-                  <input required value={formModel} onChange={e => setFormModel(e.target.value)} name="model" placeholder="Model (Örn: 320i)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                  <input required list="brandList" autoComplete="off" value={formBrand} onChange={e => { setFormBrand(e.target.value); setFormModel(''); }} name="brand" placeholder="Marka seçin (Örn: BMW)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                  <datalist id="brandList">
+                    {CAR_BRANDS.map(b => <option key={b} value={b} />)}
+                  </datalist>
+                  <input required list="modelList" autoComplete="off" value={formModel} onChange={e => setFormModel(e.target.value)} name="model" placeholder="Model seçin (Örn: 3 Serisi)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
+                  <datalist id="modelList">
+                    {(BRAND_MODELS[formBrand] || []).map(m => <option key={m} value={m} />)}
+                  </datalist>
                 </div>
                 
                 <input required value={formYear} onChange={e => setFormYear(e.target.value)} type="number" min="1990" max="2025" name="year" placeholder="Üretim Yılı (Örn: 2018)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
@@ -274,7 +378,7 @@ export default function SanalUstaPage() {
         </div>
 
         {/* Side by Side Layout */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-6xl mx-auto w-full items-stretch" style={{ filter: !vehicleContext.isRegistered ? 'blur(8px)' : 'none', pointerEvents: !vehicleContext.isRegistered ? 'none' : 'auto', transition: 'filter 0.5s ease' }}>
+        <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-7xl mx-auto w-full items-stretch" style={{ filter: !vehicleContext.isRegistered ? 'blur(8px)' : 'none', pointerEvents: !vehicleContext.isRegistered ? 'none' : 'auto', transition: 'filter 0.5s ease' }}>
           
           {/* Avatar Section (Left) */}
           <div className="glass-panel" style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '2rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
@@ -306,7 +410,7 @@ export default function SanalUstaPage() {
           </div>
 
           {/* Chat Section (Right) */}
-          <div className="glass-panel hover-gold-border flex-2 min-w-full md:min-w-[350px] flex flex-col p-0 overflow-hidden h-[60dvh] md:h-[65vh] w-full">
+          <div className="glass-panel hover-gold-border flex-2 min-w-full md:min-w-[350px] flex flex-col p-0 overflow-hidden h-[72dvh] md:h-[82vh] w-full">
             
             {/* Chat Header */}
             <div style={{ background: 'rgba(212, 175, 55, 0.1)', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
@@ -389,7 +493,7 @@ export default function SanalUstaPage() {
               {/* Quick Action Chips */}
               <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '12px', scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}>
                 {["Motor arıza lambası yandı", "Klima soğutmuyor", "Şanzımandan vuruntu sesi geliyor", "Fren yapınca titreme var"].map(chip => (
-                  <button key={chip} type="button" onClick={() => handleInputChange({ target: { value: chip } })} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '100px', fontSize: '0.85rem', whiteSpace: 'nowrap', color: '#e2e8f0', transition: 'background 0.2s' }}>
+                  <button key={chip} type="button" disabled={isLoading} onClick={() => sendMessage(chip)} style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', padding: '6px 14px', borderRadius: '100px', fontSize: '0.85rem', whiteSpace: 'nowrap', color: '#e2e8f0', transition: 'background 0.2s', cursor: isLoading ? 'not-allowed' : 'pointer' }}>
                     {chip}
                   </button>
                 ))}
