@@ -1,31 +1,37 @@
-// 🚀 V5.0 FIX: Tek bir Redis bağlantısı (Connection Pooling) - Kaynak sızıntısını önler.
-const IORedis = require('ioredis');
+// src/lib/redis/client.js
+import Redis from 'ioredis';
 
-class RedisClient {
-  constructor() {
-    this.instance = null;
-  }
+let redisClient = null;
+let bullRedisClient = null;
 
-  getInstance() {
-    if (!this.instance && process.env.REDIS_URL) {
-      this.instance = new IORedis(process.env.REDIS_URL, {
-        maxRetriesPerRequest: null,
-        enableReadyCheck: false,
-        lazyConnect: true,
-        retryStrategy(times) {
-          if (times > 10) return null; // 10 denemeden sonra vazgeç
-          return Math.min(times * 100, 3000);
-        }
-      });
-      this.instance.on('error', (err) => {
-        // Build ortamında (Prerender) ECONNREFUSED hatasını yoksay veya sustur
-        if (process.env.NODE_ENV !== 'production' && process.env.NEXT_PHASE !== 'phase-production-build') {
-           console.error('[Redis] ❌ Global Client Error:', err.message);
-        }
-      });
+export function getRedisClient() {
+  if (!redisClient) {
+    const url = process.env.REDIS_URL || process.env.UPSTASH_REDIS_REST_URL;
+    if (!url) {
+      console.warn('[Redis] No REDIS_URL found. Running in mock mode.');
+      return null;
     }
-    return this.instance;
+    redisClient = new Redis(url, {
+      maxRetriesPerRequest: 3,
+      enableReadyCheck: false,
+      lazyConnect: true,
+      retryStrategy: (times) => Math.min(times * 50, 2000),
+    });
+    redisClient.on('error', (err) => console.error('[Redis Client Error]', err.message));
   }
+  return redisClient;
 }
 
-module.exports = new RedisClient();
+// BullMQ özel bağlantısı (QueueFactory ve EventConsumer bunu kullanacak)
+export function getBullRedisClient() {
+  if (!bullRedisClient) {
+    const url = process.env.REDIS_URL || process.env.UPSTASH_REDIS_REST_URL;
+    if (!url) return null;
+    bullRedisClient = new Redis(url, {
+      maxRetriesPerRequest: null, // BullMQ için özel
+      enableReadyCheck: false,
+      lazyConnect: true,
+    });
+  }
+  return bullRedisClient;
+}

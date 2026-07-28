@@ -90,6 +90,21 @@ export async function middleware(request) {
     }
   }
 
+  // --- YENİ EKLENEN ADMIN KORUMASI ---
+  if (pathname.startsWith('/admin') || pathname.startsWith('/tr/admin') || pathname.startsWith('/en/admin')) {
+    const session = request.cookies.get('next-auth.session-token') || request.cookies.get('__Secure-next-auth.session-token');
+    
+    if (!session) {
+      const locale = pathname.split('/')[1] || 'tr';
+      const loginUrl = new URL(`/${locale}/login`, request.url);
+      loginUrl.searchParams.set('callbackUrl', pathname);
+      return NextResponse.redirect(loginUrl);
+    }
+    
+    return NextResponse.next();
+  }
+  // --- MEVCUT DİĞER KONTROLLER ---
+
   // 2. Güvenlik Kontrolü (Authentication)
   // Route'un başındaki dili (/tr veya /en) kesip ana rotayı buluyoruz
   const pathWithoutLocale = pathname.replace(/^\/[^\/]+/, '') || pathname;

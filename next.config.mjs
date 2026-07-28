@@ -3,7 +3,7 @@ import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin('./src/i18n/request.js');
 
-// Sentry has been removed.
+// Sentry is enabled.
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -146,9 +146,6 @@ const baseConfig = analyzerPlugin(withNextIntl(nextConfig));
 
 export default withSentryConfig(baseConfig, {
   silent: true,
-  sourcemaps: {
-    disable: true,
-  },
   widenClientFileUpload: true,
   reactComponentAnnotation: {
     enabled: true,

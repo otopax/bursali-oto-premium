@@ -1,9 +1,7 @@
-const IORedis = require('ioredis');
+const { getBullRedisClient } = require('../redis/client.js');
 
 // Prevent multiple connections in Next.js/dev by using a global or standardizing
-const redis = new IORedis(process.env.REDIS_URL || 'redis://localhost:6379');
-// R2 SPOF: handle edilmeyen 'error' event'i process'i çökertir — log'a çevir.
-redis.on('error', (err) => console.error('[Redis EventConsumer] bağlantı hatası:', err.message));
+const redis = getBullRedisClient();
 
 /**
  * Ensures a specific event is processed only once (Idempotency).
