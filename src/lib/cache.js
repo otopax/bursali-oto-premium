@@ -1,4 +1,5 @@
 import { Redis } from '@upstash/redis';
+import * as Sentry from "@sentry/nextjs";
 
 const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL || 'https://mock-upstash-url.upstash.io';
 const isMock = REDIS_URL.includes('mock') || process.env.NEXT_PHASE === 'phase-production-build';
@@ -33,6 +34,10 @@ export async function getCache(namespace, identifier) {
     return result;
   } catch (error) {
     console.warn(`[Cache ERROR] Redis GET Error for ${namespace}:${identifier} - Failing Open`, error.message);
+    Sentry.captureException(error, {
+      tags: { service: 'redis', failOpen: 'true' },
+      extra: { operation: 'get', namespace, identifier }
+    });
     return null; // Return null so application continues without cache
   }
 }
