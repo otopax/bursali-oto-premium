@@ -46,11 +46,14 @@ const COOLDOWN_TRIGGER = parseInt(process.env.WDB_COOLTRIG || '5', 10);  // üst
 const CDP_URL = process.env.WDB_CDP || 'http://127.0.0.1:9222'; // mevcut Chrome'a bağlanma adresi
 
 // Hedef markalar (makesOverview'daki isimlerle EŞLEŞİR, büyük/küçük duyarsız)
-const TARGET_BRANDS = [
-  'MERCEDES-BENZ', 'AUDI', 'VOLKSWAGEN', 'SEAT', 'SKODA', 'RENAULT', 'FIAT',
-  'OPEL', 'PEUGEOT', 'FORD', 'LAND ROVER', 'VOLVO', 'BMW', 'DACIA',
-  'TOYOTA', 'KIA', 'HYUNDAI'
-];
+// WDB_BRANDS env ile override edilebilir (virgülle): $env:WDB_BRANDS="PORSCHE,MINI,NISSAN"
+const TARGET_BRANDS = (process.env.WDB_BRANDS
+  ? process.env.WDB_BRANDS.split(',').map(s => s.trim()).filter(Boolean)
+  : [
+      'MERCEDES-BENZ', 'AUDI', 'VOLKSWAGEN', 'SEAT', 'SKODA', 'RENAULT', 'FIAT',
+      'OPEL', 'PEUGEOT', 'FORD', 'LAND ROVER', 'VOLVO', 'BMW', 'DACIA',
+      'TOYOTA', 'KIA', 'HYUNDAI', 'PORSCHE',
+    ]);
 
 // Windows Chrome yol adayları
 const CHROME_CANDIDATES = [

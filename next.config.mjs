@@ -87,6 +87,12 @@ const nextConfig = {
         source: '/:locale(tr|en|ru|uk|ar)/blog',
         destination: '/:locale/ariza-cozumleri',
         permanent: true,
+      },
+      // Kod makaleleri Kütüphane'ye taşındı (model="Tüm Modeller"): eski ariza-cozumleri linkleri → kutuphane
+      {
+        source: '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri/:brand/tum-modeller/:slug',
+        destination: '/:locale/kutuphane/:slug',
+        permanent: true,
       }
     ];
   },
