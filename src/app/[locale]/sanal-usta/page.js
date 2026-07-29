@@ -51,6 +51,30 @@ export default function SanalUstaPage() {
   const [vinLoading, setVinLoading] = useState(false);
   const [acceptedDisclaimer, setAcceptedDisclaimer] = useState(false);
 
+  // Gerçek araç ağacı (webdatabays crawl → /api/vehicle-tree): marka/model otomatik öneri
+  const [vtBrands, setVtBrands] = useState([]); // [{slug,name,...}]
+  const [vtModels, setVtModels] = useState([]); // [{name,...}]
+
+  useEffect(() => {
+    fetch('/api/vehicle-tree')
+      .then(r => r.json())
+      .then(d => { if (Array.isArray(d.brands)) setVtBrands(d.brands); })
+      .catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    const b = vtBrands.find(x => x.name.toLowerCase() === (formBrand || '').toLowerCase());
+    if (!b) { setVtModels([]); return; }
+    fetch(`/api/vehicle-tree?brand=${encodeURIComponent(b.slug)}`)
+      .then(r => r.json())
+      .then(d => { if (Array.isArray(d.models)) setVtModels(d.models); })
+      .catch(() => setVtModels([]));
+  }, [formBrand, vtBrands]);
+
+  // Datalist kaynakları: canlı ağaç varsa onu kullan, yoksa gömülü listeye düş
+  const brandOptions = vtBrands.length ? vtBrands.map(b => b.name) : CAR_BRANDS;
+  const modelOptions = vtModels.length ? vtModels.map(m => m.name) : (BRAND_MODELS[formBrand] || []);
+
   const handleVinDecode = async () => {
     if (!formChassis || formChassis.length !== 17) {
       alert("Şasi numarası tam 17 hane olmalıdır.");
@@ -282,11 +306,11 @@ export default function SanalUstaPage() {
                 <div style={{ display: 'flex', gap: '1rem' }}>
                   <input required list="brandList" autoComplete="off" value={formBrand} onChange={e => { setFormBrand(e.target.value); setFormModel(''); }} name="brand" placeholder="Marka seçin (Örn: BMW)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
                   <datalist id="brandList">
-                    {CAR_BRANDS.map(b => <option key={b} value={b} />)}
+                    {brandOptions.map(b => <option key={b} value={b} />)}
                   </datalist>
                   <input required list="modelList" autoComplete="off" value={formModel} onChange={e => setFormModel(e.target.value)} name="model" placeholder="Model seçin (Örn: 3 Serisi)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
                   <datalist id="modelList">
-                    {(BRAND_MODELS[formBrand] || []).map(m => <option key={m} value={m} />)}
+                    {modelOptions.map(m => <option key={m} value={m} />)}
                   </datalist>
                 </div>
                 
