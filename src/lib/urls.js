@@ -53,8 +53,8 @@ export function modelSlug(model) {
  * @returns {string} örn: /tr/ariza-cozumleri/volkswagen/passat/volkswagen-p2458-ariza-kodu-cozumu
  */
 export function arizaUrl(locale, fault) {
-  if (!fault || !fault.id) return `/${locale}/ariza-cozumleri`;
-  return `/${locale}/ariza-cozumleri/${markaSlug(fault.brand)}/${modelSlug(fault.model)}/${fault.id}`;
+  if (!fault || !fault.id) return `/${locale}/kutuphane`;
+  return `/${locale}/kutuphane/${markaSlug(fault.brand)}/${modelSlug(fault.model)}/arizalar/${fault.id}`;
 }
 
 /** Locale önekli path'ten (canonical/sitemap için) locale'siz sürüm. */

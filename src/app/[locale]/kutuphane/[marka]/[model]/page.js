@@ -191,7 +191,7 @@ export default async function KutuphaneModelPage({ params }) {
                 {brandData.name} {modelData.name} modeline ait kronik arızalar, DTC arıza kodları (P0087 vb.), belirtileri ve servis çözüm adımlarımız.
               </p>
             </div>
-            <Link href={`/${locale}/ariza-cozumleri/${marka}/${model}`} style={{
+            <Link href={`/${locale}/kutuphane/${marka}/${model}/arizalar`} style={{
               display: 'block',
               width: '100%',
               background: 'var(--accent-gold)',
