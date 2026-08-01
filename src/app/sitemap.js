@@ -4,11 +4,10 @@ import { articles } from '@/lib/articles';
 import { SEO_PRIORITY } from '@/data/seo-oncelik';
 
 /**
- * Kurumsal Dinamik Sitemap Generator (Faz A / Görev 1)
- * - 4 dil (tr, en, ru, uk) × tüm public sayfalar
+ * Kurumsal Dinamik Sitemap Generator
+ * - 5 dil (tr, en, ru, uk, ar) × tüm public sayfalar
  * - Dinamik sayfalar: blog, katalog, ariza-cozumleri, sigorta-kutuphanesi, bilgi-bankasi
- * - hreflang alternates.languages her URL için (Google multi-locale SEO)
- * - Base URL www'lu (canlı deploy www.bursaliotoservis.com'da)
+ * - Maximum 10,000 URL emniyet sınırı (Next.js sitemap 50,000 limit koruması)
  */
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
@@ -21,6 +20,7 @@ const STATIC_PATHS = [
   '/ariza-cozumleri',
   '/sigorta-kutuphanesi',
   '/teknik-kutuphane',
+  '/kutuphane',
   // SEO landing pages
   '/fethiye-7-24-oto-cekici',
   '/english-speaking-mechanic',
@@ -37,20 +37,16 @@ const SEO_BRAND_SLUGS = [
   'volkswagen', 'land-rover', 'volvo', 'range-rover', 'mini', 'skoda', 'seat'
 ];
 
-// YENİ: Agresif Yerel SEO (Bölgeler)
+// Yerel SEO (Bölgeler)
 const SEO_DISTRICTS = [
   'fethiye', 'gocek', 'oludeniz', 'dalaman', 'kas', 'kalkan', 'seydikemer', 'ortaca', 'koycegiz'
 ];
 
-// YENİ: Popüler Motor Kodları
+// Popüler Motor Kodları
 const SEO_ENGINE_CODES = [
   'ea888', 'ea211', 'b48', 'b58', 'n20', 'om651', 'om654', 'm271', 'm274'
 ];
 
-/**
- * Verilen path için tüm dillerde alternates map'i döndürür.
- * Google hreflang için sitemap standard formatı.
- */
 function buildAlternates(path) {
   const languages = {};
   LOCALES.forEach((loc) => {
@@ -60,9 +56,6 @@ function buildAlternates(path) {
   return { languages };
 }
 
-/**
- * Tek path'i 4 dil için sitemap entry'sine çevirir.
- */
 function expandLocales(path, opts = {}) {
   const {
     changeFrequency = 'weekly',
@@ -85,30 +78,26 @@ export default async function sitemap() {
   const now = new Date();
   const entries = [];
 
-  // 1) Statik public sayfalar × 4 dil
+  // 1) Statik public sayfalar × 5 dil
   STATIC_PATHS.forEach((path) => {
     const priority = path === '' ? 1.0 : 0.8;
     entries.push(...expandLocales(path, { changeFrequency: 'daily', priority, lastModified: now }));
   });
 
-  // 2) Programmatic SEO brand pages × 4 dil
+  // 2) Programmatic SEO brand pages × 5 dil
   SEO_BRAND_SLUGS.forEach((brand) => {
-    // Hizmet sayfaları
     entries.push(...expandLocales(`/hizmetler/${brand}-otomatik-sanziman-tamiri-fethiye`, {
       changeFrequency: 'weekly',
       priority: 0.85,
       lastModified: now,
     }));
 
-    // YENİ: Dinamik Marka Hub Sayfaları
     entries.push(...expandLocales(`/marka/${brand}`, {
       changeFrequency: 'weekly',
       priority: 0.95,
       lastModified: now,
     }));
 
-    // YENİ: Tam Programatik Local SEO (Her Marka x Her Bölge) -> /bolge/bmw-servisi-gocek
-    // GÖREV A3: Kademeli İndeksleme (Sadece TIER1 kombinasyonları haritaya eklenir)
     SEO_DISTRICTS.forEach((district) => {
       const s1 = `${brand}-servisi-${district}`;
       if (SEO_PRIORITY.isTier1(s1)) {
@@ -129,7 +118,7 @@ export default async function sitemap() {
     });
   });
 
-  // 3) Blog yazıları (articles.js — statik data source) × 4 dil
+  // 3) Blog yazıları × 5 dil
   try {
     articles.forEach((article) => {
       const lastMod = article.date ? new Date(article.date) : now;
@@ -143,23 +132,22 @@ export default async function sitemap() {
     console.warn('[Sitemap] Blog yüklenemedi:', e.message);
   }
 
-  // 6) Fault Codes & Kütüphane (Hierarchy)
+  // 4) Fault Codes & Kütüphane (Hierarchy) - Sınırlandırılmış Harita
   try {
     const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
     
     Object.entries(hierarchy).forEach(([marka, data]) => {
-      // Ariza-cozumleri Marka and Kutuphane Marka
       entries.push(...expandLocales(`/ariza-cozumleri/${marka}`, { changeFrequency: 'weekly', priority: 0.9, lastModified: now }));
       entries.push(...expandLocales(`/kutuphane/${marka}`, { changeFrequency: 'weekly', priority: 0.8, lastModified: now }));
       
       Object.keys(data.models).forEach(model => {
-        // Ariza-cozumleri Model and Kutuphane Model
         entries.push(...expandLocales(`/ariza-cozumleri/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.85, lastModified: now }));
         entries.push(...expandLocales(`/kutuphane/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.75, lastModified: now }));
         
-        // Fault codes under model
-        data.models[model].items.forEach(post => {
-          entries.push(...expandLocales(`/ariza-cozumleri/${marka}/${model}/${post.id}`, { changeFrequency: 'monthly', priority: 0.8, lastModified: now }));
+        // Model başına ilk 10 popüler arızayı sitemap'e al (sitemap şişmesini önle)
+        const topItems = (data.models[model].items || []).slice(0, 10);
+        topItems.forEach(post => {
+          entries.push(...expandLocales(`/kutuphane/${marka}/${model}/arizalar/${post.id}`, { changeFrequency: 'monthly', priority: 0.8, lastModified: now }));
         });
       });
     });
@@ -167,7 +155,7 @@ export default async function sitemap() {
     console.warn('[Sitemap] Fault codes & Kütüphane yüklenemedi:', e.message);
   }
 
-  // 6.5) Motor Kodları Hub Sayfaları
+  // 5) Motor Kodları
   SEO_ENGINE_CODES.forEach((engine) => {
     entries.push(...expandLocales(`/motor/${engine}`, {
       changeFrequency: 'monthly',
@@ -175,89 +163,6 @@ export default async function sitemap() {
       lastModified: now,
     }));
   });
-
-  // 6.8) Phase 5: Programmatic SEO - Arıza Kodları
-  try {
-    const faultCodes = await prisma.faultCode.findMany({ select: { code: true }, take: 1000 });
-    faultCodes.forEach((fc) => {
-      entries.push(...expandLocales(`/ariza-kodlari/${fc.code}`, {
-        changeFrequency: 'monthly',
-        priority: 0.75,
-        lastModified: now,
-      }));
-    });
-  } catch (e) {
-    console.warn('[Sitemap] FaultCodes (P-SEO) yüklenemedi:', e.message);
-  }
-
-
-  // 4) Manufacturers (DB) → /katalog/[marka]
-  try {
-    const manufacturers = await prisma.manufacturer.findMany({ select: { name: true } });
-    manufacturers.forEach((m) => {
-      const slug = m.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      entries.push(...expandLocales(`/katalog/${slug}`, {
-        changeFrequency: 'weekly',
-        priority: 0.75,
-        lastModified: now,
-      }));
-    });
-  } catch (e) {
-    console.warn('[Sitemap] Manufacturers yüklenemedi:', e.message);
-  }
-
-  // 5) Vehicles (DB) → /katalog/[marka]/[id]
-  try {
-    const vehicles = await prisma.vehicle.findMany({
-      select: { id: true, manufacturer: { select: { name: true } } },
-      take: 5000, // sitemap boyutunu koru
-    });
-    vehicles.forEach((v) => {
-      const brandSlug = v.manufacturer.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      entries.push(...expandLocales(`/katalog/${brandSlug}/${v.id}`, {
-        changeFrequency: 'weekly',
-        priority: 0.65,
-        lastModified: now,
-      }));
-    });
-  } catch (e) {
-    console.warn('[Sitemap] Vehicles yüklenemedi:', e.message);
-  }
-
-
-  // 7) Sigorta kütüphanesi (fusebox) — public'lerden liste (path locale'siz)
-  try {
-    const fuseBoxVehicles = await prisma.vehicle.findMany({
-      where: { fuseBoxes: { some: {} } },
-      select: { manufacturer: { select: { name: true } } },
-      distinct: ['manufacturerId'],
-    });
-    fuseBoxVehicles.forEach((v) => {
-      const brandSlug = v.manufacturer.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      entries.push(...expandLocales(`/sigorta-kutuphanesi/${brandSlug}`, {
-        changeFrequency: 'weekly',
-        priority: 0.7,
-        lastModified: now,
-      }));
-    });
-  } catch (e) {
-    console.warn('[Sitemap] Sigorta kütüphanesi yüklenemedi:', e.message);
-  }
-
-  // 8) Bilgi bankası — make bazında
-  try {
-    const bilgiMakes = await prisma.manufacturer.findMany({ select: { name: true }, take: 100 });
-    bilgiMakes.forEach((m) => {
-      const slug = m.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-      entries.push(...expandLocales(`/bilgi-bankasi/${slug}`, {
-        changeFrequency: 'monthly',
-        priority: 0.6,
-        lastModified: now,
-      }));
-    });
-  } catch (e) {
-    console.warn('[Sitemap] Bilgi bankası yüklenemedi:', e.message);
-  }
 
   return entries;
 }
