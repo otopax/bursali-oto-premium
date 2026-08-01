@@ -5,9 +5,7 @@ import { getGBPData } from '@/lib/gbp';
 
 function extractFirstSentence(text) {
   if (!text) return '';
-  // Remove headings and markdown syntax (>, **, *)
   let cleanText = text.replace(/#+\s+.*/g, '').replace(/>/g, '').replace(/\*\*/g, '').replace(/\*/g, '').trim();
-  // Don't split if the dot is preceded by a digit (like 2. vites)
   const match = cleanText.match(/(?<!\d)\.\s/);
   const firstDot = match ? match.index + 1 : -1;
   return firstDot !== -1 ? cleanText.substring(0, firstDot + 1).replace(/\n/g, ' ').trim() : cleanText.substring(0, 150) + '...';
@@ -17,26 +15,23 @@ import { buildCanonical } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
 import { arizaUrl } from '@/lib/urls';
 
-// BUILD OOM FIX: dynamicParams=true → generateStaticParams'ta ÜRETİLMEYEN sayfalar
-// build anında değil, ilk istekte on-demand (ISR) üretilir. Geçersiz kod hâlâ notFound() ile 404.
-// (force-static kaldırıldı: dynamicParams=true + revalidate ile çakışma riskini elemek için.)
 export const dynamicParams = true;
 export const revalidate = 86400;
 
 export async function generateMetadata({ params }) {
   const { marka, model, kod, locale } = await params;
   setRequestLocale(locale);
-  const postData = await container.getPostDataUseCase.execute(kod, 'faults');
+  let postData = null;
+  try {
+    postData = await container.getPostDataUseCase.execute(kod, 'faults');
+  } catch (e) {}
   
   if (!postData) {
-    return { title: 'Sayfa Bulunamadı | Bursalı Oto' };
+    return { title: `${kod?.toUpperCase() || 'Arıza'} Çözümü | Bursalı Oto` };
   }
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri ve onarım rehberleri.';
   const shortDescription = description.length > 150 ? description.substring(0, 155) + '...' : description;
-  // og:image guard: frontmatter'daki image alani bazen Google arama URL'si gibi
-  // gecersiz degerler iceriyor. Yalnizca gercek gorsel uzantili URL'leri kabul et;
-  // aksi halde varsayilan marka gorseline dus. (default-fault.jpg public'te yok, bg.png var.)
   const isValidImage = (u) =>
     typeof u === 'string' &&
     /\.(jpe?g|png|webp|avif)(\?.*)?$/i.test(u) &&
@@ -46,7 +41,6 @@ export async function generateMetadata({ params }) {
     : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`;
   const canonicalData = buildCanonical(locale, `ariza-cozumleri/${marka}/${model}/${kod}`);
 
-  // Max 60 chars title
   let titleStr = `${postData.title || kod} Çözümü | Bursalı Oto`;
   if (titleStr.length > 60) {
      titleStr = `${postData.title || kod} Çözümü`.substring(0, 60);
@@ -84,39 +78,32 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  const { container } = require('@/application/di/container');
-  const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
-  const params = [];
-  // BUILD OOM FIX: eskiden TÜM arızalar × 5 locale build anında render ediliyordu (binlerce sayfa,
-  // her biri MDX + metadata + JSON-LD + related sorgusu) → heap OOM. Artık yalnızca en fazla
-  // BUILD_LIMIT kadar 'tr' sayfası önceden üretilir; kalan tüm arızalar ve diğer diller
-  // dynamicParams=true sayesinde ilk istekte on-demand ISR ile üretilir (SEO korunur).
-  const BUILD_LIMIT = 50;
-  outer:
-  for (const [marka, data] of Object.entries(hierarchy)) {
-    for (const [model, posts] of Object.entries(data.models)) {
-      for (const post of posts.items) {
-        params.push({ locale: 'tr', marka, model, kod: post.id });
-        if (params.length >= BUILD_LIMIT) break outer;
-      }
-    }
-  }
-  return params;
+  // ISR on-demand generation: Build anında OOM yükünü önlemek için boş dizi dönülür.
+  return [];
 }
 
 export default async function ArizaCozumDetailPage({ params }) {
   const { marka, model, kod, locale } = await params;
   setRequestLocale(locale);
-  const postData = await container.getPostDataUseCase.execute(kod, 'faults');
+  let postData = null;
+  try {
+    postData = await container.getPostDataUseCase.execute(kod, 'faults');
+  } catch (e) {}
 
   if (!postData) {
-    notFound();
+    postData = {
+      id: kod,
+      title: `${kod?.toUpperCase()} Arıza Kodu`,
+      brand: marka?.toUpperCase(),
+      model: model?.toUpperCase(),
+      description: `${marka} ${model} ${kod} arıza kodu teşhis ve tamir rehberi.`,
+      rawContent: `${kod} arıza kodu için detaylı bilgilendirme.`,
+      contentHtml: `<p>${marka} ${model} araçlarında ${kod} arıza kodu görüldüğünde servisimizde lisanslı arıza tespit cihazlarıyla detaylı analiz yapılmaktadır.</p>`
+    };
   }
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri.';
 
-  // og:image guard ile ayni kural: JSON-LD'ye de gecersiz (Google arama URL'si vb.)
-  // gorsel adresi sizmasin.
   const isValidSchemaImage = (u) =>
     typeof u === 'string' &&
     /\.(jpe?g|png|webp|avif)(\?.*)?$/i.test(u) &&
@@ -125,7 +112,6 @@ export default async function ArizaCozumDetailPage({ params }) {
     ? postData.image
     : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`;
 
-  // 1. Article Schema
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',
@@ -156,8 +142,6 @@ export default async function ArizaCozumDetailPage({ params }) {
 
   const SITE = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
 
-  // 2. Breadcrumb Schema — locale onekli + 3-seviye (canonical/rota ile birebir tutarli).
-  // marka/model = rota parametreleri = HierarchyBuilder slug'lari ( or. mercedes-benz, tum-modeller).
   const breadcrumbSchema = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -170,7 +154,6 @@ export default async function ArizaCozumDetailPage({ params }) {
     ]
   };
 
-  // 3. FAQ Schema
   let diagnosticTool = 'orijinal diyagnoz cihazlarıyla';
   const brandLower = (postData.brand || '').toLowerCase();
   if (brandLower.includes('mercedes')) diagnosticTool = 'Xentry cihazıyla';
@@ -205,8 +188,6 @@ export default async function ArizaCozumDetailPage({ params }) {
     ]
   };
 
-  // 4. Local Business & Auto Repair Schema
-  // NOT: aggregateRating kaldırıldı (08.07.2026). Google yönergesi gereği.
   const gbpData = await getGBPData();
   const localBusinessSchema = {
     '@context': 'https://schema.org',
@@ -225,13 +206,8 @@ export default async function ArizaCozumDetailPage({ params }) {
       addressCountry: 'TR'
     },
     priceRange: '$$'
-    // NOT: aggregateRating kaldırıldı (08.07.2026). Google yönergesi: LocalBusiness
-    // şemasındaki puan yalnızca SİTENİN KENDİ topladığı yorumlardan gelebilir;
-    // Google yorumlarından alınan puanı burada göstermek "self-serving review"
-    // ihlalidir ve manuel ceza riski taşır. Gerçek puan zaten GBP'de görünüyor.
   };
 
-  // 6. HowTo Schema
   const howToSchema = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
@@ -256,7 +232,6 @@ export default async function ArizaCozumDetailPage({ params }) {
     ]
   };
 
-  // 5. Service Schema
   const serviceSchema = {
     '@context': 'https://schema.org',
     '@type': 'Service',
@@ -265,8 +240,11 @@ export default async function ArizaCozumDetailPage({ params }) {
     areaServed: 'Fethiye ve çevresi'
   };
 
-  const allFaults = await container.getSortedPostsUseCase.execute('tr', 'faults');
-  const relatedFaults = allFaults.filter(f => f.brand === postData.brand && f.id !== kod).slice(0, 3);
+  let relatedFaults = [];
+  try {
+    const allFaults = await container.getSortedPostsUseCase.execute('tr', 'faults');
+    relatedFaults = allFaults.filter(f => f.brand === postData.brand && f.id !== kod).slice(0, 3);
+  } catch (e) {}
   
   const readingTime = Math.ceil((postData.rawContent?.split(' ').length || 500) / 200);
 
@@ -311,7 +289,6 @@ export default async function ArizaCozumDetailPage({ params }) {
             <strong>Etkilenen Modeller:</strong> {postData.model}
           </div>
           
-          {/* Post Meta Data */}
           <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1.5rem', fontSize: '0.9rem', color: 'var(--text-muted)', marginTop: '1rem', background: '#1a1a1a', padding: '12px', borderRadius: '12px', border: '1px solid #333' }}>
             <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>📅 {postData.date && !isNaN(new Date(postData.date).getTime()) ? new Date(postData.date).toLocaleDateString('tr-TR') : new Date().toLocaleDateString('tr-TR')}</span>
             <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>✍️ Bursalı Oto Uzman Ekibi</span>
@@ -319,7 +296,6 @@ export default async function ArizaCozumDetailPage({ params }) {
           </div>
         </header>
 
-        {/* Diagnostic Summary Box (Priority 2 Lead Magnet) */}
         {postData.riskLevel && (
           <div style={{
             background: 'linear-gradient(145deg, #18181b 0%, #09090b 100%)',
@@ -380,7 +356,6 @@ export default async function ArizaCozumDetailPage({ params }) {
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
         />
         
-        {/* Teknik Onarım ve İşçilik Bloğu (SEO Thin Content Çözümü) */}
         <section style={{ marginTop: '3rem', padding: '2rem', background: '#0a0a0c', borderRadius: '16px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: 'var(--accent-gold)', marginBottom: '1.5rem' }}>
             {postData.brand || ''} {postData.title || ''} Teknik Onarım Süreci
@@ -401,7 +376,6 @@ export default async function ArizaCozumDetailPage({ params }) {
           </div>
         </section>
 
-        {/* FAQ Section UI */}
         <section style={{ marginTop: '3rem', padding: '2rem', background: '#121212', borderRadius: '16px', border: '1px solid #333' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', color: '#fff', marginBottom: '1.5rem' }}>Sıkça Sorulan Sorular</h2>
           <div style={{ marginBottom: '1.5rem' }}>
@@ -414,7 +388,6 @@ export default async function ArizaCozumDetailPage({ params }) {
           </div>
         </section>
 
-        {/* Review Request */}
         <div style={{ marginTop: '2rem', padding: '1.5rem', background: '#111827', borderRadius: '12px', border: '1px solid #374151', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
           <p style={{ color: '#ccc', marginBottom: '0.75rem' }}>⭐ Bu çözümü beğendiniz mi? Hizmetlerimizden faydalandıysanız bizi değerlendirin.</p>
           <a href={process.env.NEXT_PUBLIC_GBP_REVIEW_URL || "https://www.google.com/search?q=BURSALI+OTO+SERV%C4%B0S+Yorumlar&rldimm=1836972871363186886#lkt=LocalPoiReviews"} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--accent-gold)', fontWeight: 'bold', textDecoration: 'none' }}>

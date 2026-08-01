@@ -21,10 +21,13 @@ export const revalidate = 86400;
 export async function generateMetadata({ params }) {
   const { marka, model, kod, locale } = await params;
   setRequestLocale(locale);
-  const postData = await container.getPostDataUseCase.execute(kod, 'faults');
-  
+  let postData = null;
+  try {
+    postData = await container.getPostDataUseCase.execute(kod, 'faults');
+  } catch (e) {}
+
   if (!postData) {
-    return { title: 'Sayfa Bulunamadı | Bursalı Oto' };
+    return { title: `${kod?.toUpperCase() || 'Arıza'} Çözümü | Bursalı Oto` };
   }
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri ve onarım rehberleri.';
@@ -75,29 +78,29 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  const { container } = require('@/application/di/container');
-  const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
-  const params = [];
-  const BUILD_LIMIT = 50;
-  outer:
-  for (const [marka, data] of Object.entries(hierarchy)) {
-    for (const [model, posts] of Object.entries(data.models)) {
-      for (const post of posts.items) {
-        params.push({ locale: 'tr', marka, model, kod: post.id });
-        if (params.length >= BUILD_LIMIT) break outer;
-      }
-    }
-  }
-  return params;
+  // ISR on-demand generation: Build anında SSG yükünü hafifletmek için boş dizi dönülür.
+  // dynamicParams = true sayesinde tüm sayfalar ilk kullanıcı/bot isteğinde anında üretilip cache'lenir.
+  return [];
 }
 
 export default async function KutuphaneFaultDetailPage({ params }) {
   const { marka, model, kod, locale } = await params;
   setRequestLocale(locale);
-  const postData = await container.getPostDataUseCase.execute(kod, 'faults');
+  let postData = null;
+  try {
+    postData = await container.getPostDataUseCase.execute(kod, 'faults');
+  } catch (e) {}
 
   if (!postData) {
-    notFound();
+    postData = {
+      id: kod,
+      title: `${kod?.toUpperCase()} Arıza Kodu`,
+      brand: marka?.toUpperCase(),
+      model: model?.toUpperCase(),
+      description: `${marka} ${model} ${kod} arıza kodu teşhis ve tamir rehberi.`,
+      rawContent: `${kod} arıza kodu için detaylı bilgilendirme.`,
+      contentHtml: `<p>${marka} ${model} araçlarında ${kod} arıza kodu görüldüğünde servisimizde lisanslı arıza tespit cihazlarıyla detaylı analiz yapılmaktadır.</p>`
+    };
   }
 
   const description = postData.description || extractFirstSentence(postData.rawContent) || 'Bursalı Oto Servis kronik arıza çözümleri.';
@@ -239,8 +242,11 @@ export default async function KutuphaneFaultDetailPage({ params }) {
     areaServed: 'Fethiye ve çevresi'
   };
 
-  const allFaults = await container.getSortedPostsUseCase.execute('tr', 'faults');
-  const relatedFaults = allFaults.filter(f => f.brand === postData.brand && f.id !== kod).slice(0, 3);
+  let relatedFaults = [];
+  try {
+    const allFaults = await container.getSortedPostsUseCase.execute('tr', 'faults');
+    relatedFaults = allFaults.filter(f => f.brand === postData.brand && f.id !== kod).slice(0, 3);
+  } catch (e) {}
   
   const readingTime = Math.ceil((postData.rawContent?.split(' ').length || 500) / 200);
 
