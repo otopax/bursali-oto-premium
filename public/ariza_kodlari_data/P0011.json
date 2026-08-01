@@ -1,0 +1,40 @@
+{
+  "code": "P0011",
+  "vagCode": "16395",
+  "title": "Eksantrik Mili Pozisyonu - A Sırası Zamansız İleri / Sistem Performansı (Camshaft Position Bank 1)",
+  "brand": "Audi / Volkswagen / Porsche",
+  "models": [
+    "A4",
+    "A5",
+    "A6",
+    "Q7",
+    "Golf GTI",
+    "Cayenne"
+  ],
+  "engines": [
+    "1.8 TFSI",
+    "2.0 TFSI",
+    "3.0 TFSI",
+    "3.2 FSI"
+  ],
+  "severity": "Orta-Yüksek",
+  "symptoms": [
+    "Motor rölantide sarsıntılı çalışıyor",
+    "Eksantrik zincirinden gürültü / şıkırtı sesi gelmesi",
+    "Motor arıza ışığı (Check Engine) yanması",
+    "Yakıt tüketiminde artış"
+  ],
+  "commonCauses": [
+    "Vanos / N205 eksantrik ayar selenoid valfi arızası veya yağ kanallarının tıkanması",
+    "Eksantrik triger zincirinde uzama (stretch) veya gergide boşluk",
+    "Düşük motor yağ basıncı veya yanlış vizkozitede yağ kullanımı",
+    "Eksantrik mili konum sensörü (G40) arızası"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS ile 091 ve 093 nolu kanallardan eksantrik açı değerleri (Phase Position) okunur (+/- 5 derece dışı zincir uzamasını gösterir).",
+    "2. N205 Vanos selenoid valfi sökülüp direnç ve mekanik takılma testi yapılır.",
+    "3. Motor yağ basıncı mekanik manometre ile sıcak motorda ölçülür.",
+    "4. Zincir uzamışsa triger zincir seti ve gergi bilyası orijinal parçayla yenilenir."
+  ],
+  "technicalNotes": "1.8 ve 2.0 TFSI motorlarda 100.000 km üzeri zincir uzaması çok sık görülür. Şıkırtı sesi ihmal edilirse sente atlayarak supap eğilmesine sebep olur."
+}

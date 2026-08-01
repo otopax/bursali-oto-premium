@@ -1,0 +1,40 @@
+{
+  "code": "P0087",
+  "vagCode": "16471",
+  "title": "Yakıt Rayı / Sistem Basıncı Çok Düşük (Fuel Rail/System Pressure - Too Low)",
+  "brand": "Audi / Volkswagen",
+  "models": [
+    "A3",
+    "A4",
+    "A6",
+    "Q5",
+    "Passat",
+    "Golf",
+    "Tiguan"
+  ],
+  "engines": [
+    "2.0 TDI",
+    "3.0 TDI",
+    "2.0 TSI / TFSI"
+  ],
+  "severity": "Yüksek (Acil Servis Kontrolü)",
+  "symptoms": [
+    "Motor arıza lambası (MIL) yanıyor",
+    "Yüksek devirde veya anı hızlanmada güç kaybı ve pürüzlü çalışma",
+    "Motorun limp moda (koruma modu) geçmesi",
+    "Soğuk ve sıcak ilk çalıştırmada marş süresinin uzaması"
+  ],
+  "commonCauses": [
+    "Yüksek basınç yakıt pompası (HPFP) iç aşınması ve kam mili takipçisi (cam follower) arızası",
+    "Depo içi düşük basınç yakıt pompasının debi düşüklüğü",
+    "Tıkalı veya kirlenmiş yakıt filtresi",
+    "Yakıt rayı basınç regülatörü (N276) veya basınç sensörü (G247) arızası"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS / ODIS ile ölçüm bloklarından (Measuring Blocks) G247 sensörü canlı ray basınç verisi kontrol edilir.",
+    "2. Depo içi elektrikli besleme pompasının basıncı (minimum 4.5-6 bar arası) test edilir.",
+    "3. HPFP yüksek basınç pompasının üzerindeki valf sökülerek içinde metal talaşı olup olmadığı mikroskop altında incelenir.",
+    "4. Talaş tespit edilirse tüm enjektörler, yüksek basınç boruları ve yakıt deposu yıkanmalı/değiştirilmelidir."
+  ],
+  "technicalNotes": "VAG 2.0 TDI CR motorlarda HPFP pompa talaşı yapması kronik bir durumdur. Pompa sökülmeden sadece sensör değiştirilirse yeni sensör de kısa sürede bozulur."
+}

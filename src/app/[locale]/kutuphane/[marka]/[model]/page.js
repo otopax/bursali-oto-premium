@@ -3,7 +3,6 @@ import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-
 export const dynamicParams = true;
 export const revalidate = 86400;
 
@@ -32,8 +31,8 @@ export async function generateMetadata({ params }) {
   if (!modelData) return { title: 'Bulunamadı' };
   
   return {
-    title: `${brandData.name} ${modelData.name} Teknik Kütüphane | Bursalı Oto`,
-    description: `${brandData.name} ${modelData.name} modeline ait sigorta şemaları, bakım kılavuzları ve TSB bültenleri.`
+    title: `${brandData.name} ${modelData.name} Teknik Kütüphane & Arıza Rehberi | Bursalı Oto`,
+    description: `${brandData.name} ${modelData.name} aracı için arıza kodları, çözümleri, sigorta şemaları ve teknik ayar kılavuzları.`
   };
 }
 
@@ -48,11 +47,13 @@ export default async function KutuphaneModelPage({ params }) {
   const modelData = brandData.models[model];
   if (!modelData) notFound();
 
+  const faultCount = modelData.items ? modelData.items.length : 0;
+
   return (
     <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
       <div className="container" style={{ margin: '0 auto', padding: '0 2rem', maxWidth: '1200px' }}>
         
-        {/* Breadcrumb */}
+        {/* Breadcrumb Navigation */}
         <div style={{ marginBottom: '2rem', fontSize: '0.9rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
           <Link href={`/${locale}/kutuphane`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
             Kütüphane
@@ -66,92 +67,147 @@ export default async function KutuphaneModelPage({ params }) {
         </div>
 
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-light)' }}>
-          {brandData.name} {modelData.name} <span style={{ color: 'var(--accent-gold)' }}>Dokümanları</span>
+          {brandData.name} {modelData.name} <span style={{ color: 'var(--accent-gold)' }}>Teknik Bilgi Bankası</span>
         </h1>
         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '800px', fontSize: '1.1rem' }}>
-          {brandData.name} {modelData.name} aracı için sigorta (fuse) şemalarına ve servis pdf'lerine aşağıdan ulaşabilirsiniz.
+          {brandData.name} {modelData.name} aracı için sigorta şemalarına, PDF servis kılavuzlarına, motor teknik ayar verilerine ve arıza çözümlerine aşağıdan ulaşabilirsiniz.
         </p>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+        {/* 4 Cards Grid Layout */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '1.5rem' }}>
           
-          {/* Fuse Diagrams Card */}
+          {/* Card 1: Sigorta Şemaları */}
           <div style={{
             background: 'rgba(30, 41, 59, 0.4)',
             border: '1px solid rgba(255, 255, 255, 0.05)',
             borderRadius: '16px',
-            padding: '2rem'
+            padding: '2rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justify: 'space-between'
           }}>
-            <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚡</div>
-            <h2 style={{ fontSize: '1.5rem', color: '#fff', marginBottom: '1rem' }}>Sigorta Şemaları</h2>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-              Motor içi, bagaj ve yolcu bölmesindeki sigorta kutularının Türkçe çevirileri, amper değerleri ve röle dizilimleri.
-            </p>
+            <div>
+              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚡</div>
+              <h2 style={{ fontSize: '1.35rem', color: '#fff', marginBottom: '0.75rem', fontWeight: '600' }}>Sigorta Şemaları</h2>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                Motor içi, bagaj ve yolcu bölmesindeki sigorta kutularının Türkçe çevirileri, amper değerleri ve röle dizilimleri.
+              </p>
+            </div>
             <button style={{
-              background: 'rgba(212, 175, 55, 0.1)',
-              color: 'var(--accent-gold)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
-              padding: '0.75rem 1.5rem',
+              width: '100%',
+              background: 'rgba(255, 255, 255, 0.05)',
+              color: 'var(--text-muted)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              padding: '0.75rem 1rem',
               borderRadius: '8px',
-              fontWeight: 'bold',
+              fontWeight: '600',
               cursor: 'not-allowed',
-              opacity: 0.7
+              textAlign: 'center'
             }}>
               Yakında Eklenecek
             </button>
           </div>
 
-          {/* Manuals Card */}
+          {/* Card 2: PDF Kılavuzlar */}
           <div style={{
             background: 'rgba(30, 41, 59, 0.4)',
             border: '1px solid rgba(255, 255, 255, 0.05)',
             borderRadius: '16px',
-            padding: '2rem'
+            padding: '2rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justify: 'space-between'
           }}>
-            <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📚</div>
-            <h2 style={{ fontSize: '1.5rem', color: '#fff', marginBottom: '1rem' }}>PDF Kılavuzlar</h2>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-              Orijinal bakım periyotları, üretici TSB (Teknik Servis Bülteni) uyarıları ve montaj kılavuzları.
-            </p>
+            <div>
+              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📚</div>
+              <h2 style={{ fontSize: '1.35rem', color: '#fff', marginBottom: '0.75rem', fontWeight: '600' }}>PDF Kılavuzlar</h2>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                Orijinal bakım periyotları, üretici TSB (Teknik Servis Bülteni) uyarıları ve montaj kılavuzları.
+              </p>
+            </div>
             <button style={{
-              background: 'rgba(212, 175, 55, 0.1)',
-              color: 'var(--accent-gold)',
-              border: '1px solid rgba(212, 175, 55, 0.3)',
-              padding: '0.75rem 1.5rem',
+              width: '100%',
+              background: 'rgba(255, 255, 255, 0.05)',
+              color: 'var(--text-muted)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              padding: '0.75rem 1rem',
               borderRadius: '8px',
-              fontWeight: 'bold',
+              fontWeight: '600',
               cursor: 'not-allowed',
-              opacity: 0.7
+              textAlign: 'center'
             }}>
               Yakında Eklenecek
             </button>
           </div>
 
-          {/* Faults Shortcut Card */}
+          {/* Card 3: Teknik Spesifikasyonlar & Ayar Verileri */}
           <div style={{
-            background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.4) 0%, rgba(212, 175, 55, 0.05) 100%)',
-            border: '1px solid rgba(212, 175, 55, 0.2)',
+            background: 'rgba(30, 41, 59, 0.4)',
+            border: '1px solid rgba(255, 255, 255, 0.05)',
             borderRadius: '16px',
-            padding: '2rem'
+            padding: '2rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justify: 'space-between'
           }}>
-            <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚠️</div>
-            <h2 style={{ fontSize: '1.5rem', color: 'var(--accent-gold)', marginBottom: '1rem' }}>Kronik Arızalar</h2>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6' }}>
-              Bu araca ait sık karşılaşılan kronik sorunlar ve uzman servis çözümlerimiz.
-            </p>
+            <div>
+              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚙️</div>
+              <h2 style={{ fontSize: '1.35rem', color: '#fff', marginBottom: '0.75rem', fontWeight: '600' }}>Teknik Ayar Verileri</h2>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                Motor sıkıştırma torkları, rölanti devri, buji tırnak aralığı, şanzıman ve motor yağ dolum kapasiteleri.
+              </p>
+            </div>
+            <button style={{
+              width: '100%',
+              background: 'rgba(255, 255, 255, 0.05)',
+              color: 'var(--text-muted)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              padding: '0.75rem 1rem',
+              borderRadius: '8px',
+              fontWeight: '600',
+              cursor: 'not-allowed',
+              textAlign: 'center'
+            }}>
+              Yakında Eklenecek
+            </button>
+          </div>
+
+          {/* Card 4: Arıza Çözümleri & Kronik Sorunlar (Aktif & Bağlantılı) */}
+          <div style={{
+            background: 'linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(212, 175, 55, 0.1) 100%)',
+            border: '1px solid rgba(212, 175, 55, 0.3)',
+            borderRadius: '16px',
+            padding: '2rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justify: 'space-between'
+          }}>
+            <div>
+              <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚠️</div>
+              <h2 style={{ fontSize: '1.35rem', color: 'var(--accent-gold)', marginBottom: '0.75rem', fontWeight: '600' }}>
+                Arıza Çözümleri ({faultCount})
+              </h2>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
+                {brandData.name} {modelData.name} modeline ait kronik arızalar, DTC arıza kodları (P0087 vb.), belirtileri ve servis çözüm adımlarımız.
+              </p>
+            </div>
             <Link href={`/${locale}/ariza-cozumleri/${marka}/${model}`} style={{
-              display: 'inline-block',
+              display: 'block',
+              width: '100%',
               background: 'var(--accent-gold)',
               color: '#000',
-              padding: '0.75rem 1.5rem',
+              padding: '0.75rem 1rem',
               borderRadius: '8px',
               fontWeight: 'bold',
-              textDecoration: 'none'
+              textDecoration: 'none',
+              textAlign: 'center'
             }}>
-              Arızaları Görüntüle
+              Arızaları Görüntüle →
             </Link>
           </div>
 
         </div>
+
       </div>
     </main>
   );
