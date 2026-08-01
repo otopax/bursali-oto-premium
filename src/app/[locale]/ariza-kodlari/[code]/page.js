@@ -1,40 +1,26 @@
 import { prisma } from '@/lib/prisma';
-import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-import { cache } from 'react';
-import { getCache, setCache, CACHE_TTL } from '@/lib/cache';
-
-export const revalidate = 86400; // Her gün revalidate (ISR)
+export const dynamicParams = true;
+export const revalidate = 86400;
 
 const SITE = 'https://www.bursaliotoservis.com';
 
-const getCachedFaultCode = cache(async (code) => {
-  const upperCode = code.toUpperCase();
-  const cacheKey = `faultCode:${upperCode}`;
-  
-  // 1. Check Redis Cache
-  const cached = await getCache('obd', cacheKey);
-  if (cached) {
-    try {
-      return typeof cached === 'string' ? JSON.parse(cached) : cached;
-    } catch(e) {}
+const getCachedFaultCode = async (code) => {
+  const upperCode = (code || '').toUpperCase();
+  try {
+    const isBuild = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+    if (isBuild) return null;
+
+    const fault = await prisma.faultCode.findUnique({
+      where: { code: upperCode }
+    });
+    return fault;
+  } catch (e) {
+    return null;
   }
+};
 
-  // 2. Fetch from DB
-  const fault = await prisma.faultCode.findUnique({
-    where: { code: upperCode }
-  });
-
-  // 3. Save to Redis
-  if (fault) {
-    await setCache('obd', cacheKey, JSON.stringify(fault), CACHE_TTL.OBD || 604800);
-  }
-  
-  return fault;
-});
-
-// Json/array/string alanlarını güvenli şekilde string listesine çevirir
 function toList(value) {
   if (value === null || value === undefined) return [];
   if (Array.isArray(value)) {
@@ -46,31 +32,25 @@ function toList(value) {
   return [String(value)].filter(Boolean);
 }
 
-// Statik parametreler (build time'da üretilir; DB erişilemezse boş → on-demand ISR)
 export async function generateStaticParams() {
-  try {
-    const codes = await prisma.faultCode.findMany({
-      select: { code: true },
-      take: 100 // Test için ilk 100. Gerçek P-SEO'da artırılır.
-    });
-    return codes.map((c) => ({ code: c.code }));
-  } catch (error) {
-    console.error('P-SEO Error fetching fault codes:', error);
-    return [];
-  }
+  return [];
 }
 
-// Dinamik Meta Data (Title, Description) - CTR Optimizasyonu
 export async function generateMetadata({ params }) {
   const { code } = await params;
-
+  const upperCode = (code || '').toUpperCase();
   const fault = await getCachedFaultCode(code);
 
-  if (!fault) return { title: 'Arıza Kodu Bulunamadı | Bursalı Oto' };
+  if (!fault) {
+    return {
+      title: `${upperCode} Arıza Kodu Çözümü | Bursalı Oto`,
+      description: `${upperCode} OBD2 arıza kodu teşhis ve tamir rehberi.`
+    };
+  }
 
   return {
     title: `${fault.code} Arıza Kodu Çözümü: ${fault.description} | Bursalı Oto`,
-    description: `${fault.code} arızası nedir, belirtileri ve nasıl tamir edilir? ${fault.description} — uzman onarım rehberi ve maliyet bilgisi.`,
+    description: `${fault.code} arızası nedir, belirtileri ve nasıl tamir edilir? ${fault.description} — uzman onarım rehberi.`,
     alternates: {
       canonical: `${SITE}/tr/ariza-kodlari/${fault.code}`
     }
@@ -79,11 +59,18 @@ export async function generateMetadata({ params }) {
 
 export default async function FaultCodePage({ params }) {
   const { code } = await params;
-
-  const fault = await getCachedFaultCode(code);
+  const upperCode = (code || '').toUpperCase();
+  let fault = await getCachedFaultCode(code);
 
   if (!fault) {
-    notFound();
+    fault = {
+      code: upperCode,
+      description: `${upperCode} OBD2 Arıza Kodu Teşhisi ve Onarım Rehberi`,
+      symptoms: ['Motor arıza lambası (Check Engine) yanması', 'Performans düşüklüğü'],
+      commonCauses: ['Sensör veya kablo tesisatı arızası', 'Elektronik modül iletişim hatası'],
+      stepByStepSolution: ['Bilgisayarlı diagnostik cihazı (ODIS/ISTA/XENTRY) ile tarama', 'İlgili sensör veya tesisatın kontrol edilmesi'],
+      severity: 'Orta / Yüksek'
+    };
   }
 
   const symptoms = toList(fault.symptoms);
@@ -91,7 +78,6 @@ export default async function FaultCodePage({ params }) {
   const steps = toList(fault.stepByStepSolution);
   const publishedIso = fault.createdAt ? new Date(fault.createdAt).toISOString() : new Date().toISOString();
 
-  // JSON-LD Schema (E-E-A-T Sinyalleri)
   const schema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -107,7 +93,7 @@ export default async function FaultCodePage({ params }) {
       "name": "Bursalı Oto",
       "logo": {
         "@type": "ImageObject",
-        "url": `${SITE}/images/logo.png`
+        "url": `${SITE}/logo.png`
       }
     },
     "datePublished": publishedIso,
@@ -119,106 +105,74 @@ export default async function FaultCodePage({ params }) {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-slate-900 py-12 px-4 sm:px-6 lg:px-8 text-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <div className="max-w-4xl mx-auto bg-white shadow-xl rounded-2xl overflow-hidden">
-        {/* Header */}
-        <div className="bg-slate-800 text-white p-8">
-          <div className="flex items-center space-x-2 text-sm text-slate-300 mb-4">
+      <div className="max-w-4xl mx-auto bg-slate-800 shadow-xl rounded-2xl overflow-hidden border border-slate-700">
+        <div className="bg-slate-950 text-white p-8 border-b border-slate-800">
+          <div className="flex items-center space-x-2 text-sm text-slate-400 mb-4">
             <Link href="/" className="hover:text-white">Anasayfa</Link>
             <span>/</span>
-            <Link href="/ariza-kodlari" className="hover:text-white">Arıza Kodları</Link>
+            <Link href="/tr/ariza-cozumleri" className="hover:text-white">Arıza Çözümleri</Link>
             <span>/</span>
-            <span className="text-blue-400 font-semibold">{fault.code}</span>
+            <span className="text-amber-400 font-semibold">{fault.code}</span>
           </div>
-          <h1 className="text-4xl font-extrabold tracking-tight mb-2">
+          <h1 className="text-4xl font-extrabold tracking-tight mb-2 text-amber-400">
             {fault.code} Arıza Kodu Çözümü
           </h1>
           <p className="text-xl text-slate-300">{fault.description}</p>
           {fault.severity && (
-            <span className="inline-block mt-4 px-3 py-1 rounded-full text-sm font-semibold bg-slate-700 text-slate-100">
+            <span className="inline-block mt-4 px-3 py-1 rounded-full text-sm font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
               Önem Derecesi: {fault.severity}
             </span>
           )}
         </div>
 
-        {/* Content */}
-        <div className="p-8 prose prose-lg max-w-none text-slate-700">
-          <section className="mb-8">
-            <h2 className="text-2xl font-bold text-slate-800 mb-4">{fault.code} Nedir?</h2>
+        <div className="p-8 space-y-8 text-slate-300">
+          <section>
+            <h2 className="text-2xl font-bold text-white mb-4">{fault.code} Nedir?</h2>
             <p className="leading-relaxed">{fault.description}</p>
           </section>
 
           {symptoms.length > 0 && (
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-slate-800 mb-4">Belirtileri Nelerdir?</h2>
-              <ul className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg text-red-800 list-disc list-inside space-y-1">
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">Belirtileri Nelerdir?</h2>
+              <ul className="bg-red-950/40 border-l-4 border-red-500 p-4 rounded-r-lg text-red-200 list-disc list-inside space-y-1">
                 {symptoms.map((s, i) => <li key={i}>{s}</li>)}
               </ul>
             </section>
           )}
 
           {commonCauses.length > 0 && (
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-slate-800 mb-4">Olası Nedenleri</h2>
-              <ul className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-lg text-yellow-800 list-disc list-inside space-y-1">
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">Olası Nedenleri</h2>
+              <ul className="bg-amber-950/40 border-l-4 border-amber-500 p-4 rounded-r-lg text-amber-200 list-disc list-inside space-y-1">
                 {commonCauses.map((c, i) => <li key={i}>{c}</li>)}
               </ul>
             </section>
           )}
 
           {steps.length > 0 && (
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-slate-800 mb-4">Adım Adım Çözüm</h2>
-              <ol className="bg-green-50 border-l-4 border-green-500 p-4 rounded-r-lg text-green-900 list-decimal list-inside space-y-1">
+            <section>
+              <h2 className="text-2xl font-bold text-white mb-4">Adım Adım Çözüm</h2>
+              <ol className="bg-emerald-950/40 border-l-4 border-emerald-500 p-4 rounded-r-lg text-emerald-200 list-decimal list-inside space-y-1">
                 {steps.map((s, i) => <li key={i}>{s}</li>)}
               </ol>
             </section>
           )}
 
-          {fault.estimatedCostInfo && (
-            <section className="mb-8">
-              <h2 className="text-2xl font-bold text-slate-800 mb-4">Tahmini Onarım Maliyeti</h2>
-              <p className="bg-slate-100 p-4 rounded-lg">{fault.estimatedCostInfo}</p>
-            </section>
-          )}
-
-          <section className="mb-10">
-            <h2 className="text-2xl font-bold text-slate-800 mb-4">Uzman Notu (E-E-A-T)</h2>
-            <div className="bg-blue-50 p-6 rounded-xl">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                  U
-                </div>
-                <div className="ml-4">
-                  <h3 className="font-bold text-slate-800">Master Technician</h3>
-                  <p className="text-sm text-slate-500">20+ Yıl Deneyim | Bursalı Oto</p>
-                </div>
-              </div>
-              <p className="italic text-slate-700">
-                "{fault.code} arızası genellikle sensör ömrünün dolmasından veya kablo tesisatındaki oksitlenmeden kaynaklanır.
-                Sadece parçayı değiştirmek yeterli olmayabilir, adaptasyon işlemi yapılması şarttır."
-              </p>
-            </div>
-          </section>
-
-          {/* Call to Action */}
-          <div className="bg-slate-800 text-white rounded-xl p-8 text-center mt-12">
-            <h3 className="text-2xl font-bold mb-4">Aracınızdaki {fault.code} Arızasını Çözelim</h3>
+          <div className="bg-amber-500/10 border border-amber-500/30 text-white rounded-xl p-8 text-center mt-12">
+            <h3 className="text-2xl font-bold mb-4 text-amber-400">Aracınızdaki {fault.code} Arızasını Çözelim</h3>
             <p className="mb-6 text-slate-300">
-              Bu arızanın teşhis ve onarımı profesyonel cihazlar gerektirir. Yapay Zeka destekli Sanal Ustamıza danışın veya hemen yerel servisimizden randevu alın.
+              Bu arızanın teşhis ve onarımı profesyonel cihazlar gerektirir. Uzman ekibimize danışın.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Link href="/sanal-usta" className="bg-blue-600 hover:bg-blue-500 text-white px-8 py-3 rounded-full font-semibold transition-colors duration-200 shadow-lg">
-                🤖 Sanal Ustaya Sor
-              </Link>
-              <Link href="/randevu" className="bg-white hover:bg-slate-100 text-slate-900 px-8 py-3 rounded-full font-semibold transition-colors duration-200 shadow-lg">
-                📅 Randevu Al
-              </Link>
+              <a href="https://wa.me/905548812021" className="bg-amber-500 hover:bg-amber-400 text-black px-8 py-3 rounded-full font-bold transition-colors">
+                💬 WhatsApp ile Usta Danışma
+              </a>
             </div>
           </div>
         </div>

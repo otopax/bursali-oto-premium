@@ -1,35 +1,42 @@
-import { Queue, Worker, QueueEvents } from 'bullmq';
+import { Queue, QueueEvents } from 'bullmq';
 import IORedis from 'ioredis';
 
-// Redis bağlantısı — REDIS_URL varsa onu kullan, yoksa host/port env'lerine düş
-const connection = process.env.REDIS_URL
-  ? new IORedis(process.env.REDIS_URL, { maxRetriesPerRequest: null })
-  : new IORedis({
-      host: process.env.REDIS_HOST || '127.0.0.1',
-      port: parseInt(process.env.REDIS_PORT || '6379', 10),
-      maxRetriesPerRequest: null // BullMQ için zorunlu ayar
+const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+
+let connection = null;
+let crawlerQueue = null;
+
+if (!isBuildPhase && process.env.REDIS_URL && !process.env.REDIS_URL.includes('localhost') && !process.env.REDIS_URL.includes('127.0.0.1')) {
+  try {
+    connection = new IORedis(process.env.REDIS_URL, { maxRetriesPerRequest: null, lazyConnect: true });
+    connection.on('error', (err) => console.error('[BullMQ Redis Error]', err.message));
+    crawlerQueue = new Queue('crawler-queue', { connection });
+    const queueEvents = new QueueEvents('crawler-queue', { connection });
+
+    queueEvents.on('completed', ({ jobId }) => {
+      console.log(`[BULLMQ] İşlem başarıyla tamamlandı: ${jobId}`);
     });
 
-export const crawlerQueue = new Queue('crawler-queue', { connection });
+    queueEvents.on('failed', ({ jobId, failedReason }) => {
+      console.error(`[BULLMQ] İşlem HATASI: ${jobId} - Sebep: ${failedReason}`);
+    });
+  } catch (e) {
+    console.warn('[BullMQ] Queue initialization bypassed:', e.message);
+  }
+}
 
-// Olay dinleyici (Başarı ve hataları loglamak için)
-const queueEvents = new QueueEvents('crawler-queue', { connection });
+export { crawlerQueue };
 
-queueEvents.on('completed', ({ jobId }) => {
-  console.log(`[BULLMQ] İşlem başarıyla tamamlandı: ${jobId}`);
-});
-
-queueEvents.on('failed', ({ jobId, failedReason }) => {
-  console.error(`[BULLMQ] İşlem HATASI: ${jobId} - Sebep: ${failedReason}`);
-});
-
-// Kuyruğa iş ekleme fonksiyonu
 export async function addCrawlerJob(jobName, payload) {
+  if (!crawlerQueue) {
+    console.warn('[BullMQ] Queue not active. Skipping job.');
+    return null;
+  }
   return await crawlerQueue.add(jobName, payload, {
-    attempts: 5, // Gemini 429 hatası verirse 5 kez dene
+    attempts: 5,
     backoff: {
-      type: 'exponential', // Her hatada bekleme süresini katlayarak artır
-      delay: 60000 // İlk hata sonrası 60 saniye bekle
+      type: 'exponential',
+      delay: 60000
     }
   });
 }
