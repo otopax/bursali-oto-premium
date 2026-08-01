@@ -1,0 +1,29 @@
+{
+  "code": "16705",
+  "vagCode": "16705",
+  "title": "16705 - 16705/P0321/000801",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A3 / VW Golf / Seat Leon",
+    "VW Tiguan / Touareg / Audi Q7"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Engine shuts off",
+    "Engine doesn't start",
+    "Speedometer inoperative",
+    "Glow Plug Indicator Lamp (K29) flashes"
+  ],
+  "commonCauses": [
+    "Engine Speed Sensör Okuma Değerleri (G28) loose",
+    "Engine Speed Sensör Okuma Değerleri (G28) faulty"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  Engine Speed Sensör Okuma Değerleri (G28)"
+  ],
+  "technicalNotes": "The Engine Speed Sensör Okuma Değerleri (G28) is also used as a reference sensor for the crankshaft position and correlates with the Camshaft Position Sensör Okuma Değerleri Bank 1 (G40) and Camshaft Position Sensör Okuma Değerleri Bank 2 (G163).\nWhen an engine will not start due to mechanical (spark/fuel/compression/timing) related issues it is not uncommon to set a false G28 fault codes due to extended cranking with a no-start condition.\nWhen found in a VW Golf/Jetta (1J/9M) or Audi A3 (8L) with 1.9l TDI-PD (AXR), check TPI 2007067 which explains issues with electro magnetic interference. A modification to the wiring will fix this problem, extensive details can be found in the named TPI. Even though this TPI was originally released for VW Golf/Jetta (1J/9M), a customer of ours came across the same issue on an Audi A3 (8L).\nWhen found in a 2004 VW Golf, Jetta, or New Beetle with 1.9l TDI-PD (BEW), check for TSB 2010461 (01-07-45 formerly 97-05-03) or 201463 (01-07-44 formerly 97-05-04) calling for a flash update to the ECU and a secondary ground installation.\nGeneral note for any engine type: Kontrol edin:  the wiring to/from the sensor and engine control module to rule out harness and module damage due to engine oil or coolant from a failed sensor or tensioner. This is an example from a 2012 Tiguan with Coolant in the ECM which resulted in G28 DTCs in addition to intermittent stalling.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/16705/P0321/000801"
+}

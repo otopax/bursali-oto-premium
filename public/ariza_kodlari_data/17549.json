@@ -1,0 +1,28 @@
+{
+  "code": "17549",
+  "vagCode": "17549",
+  "title": "17549 - 17549/P1141/004417",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Motor arıza ikaz lambası (MIL) yanıyor",
+    "Performans ve çekiş düşüklüğü"
+  ],
+  "commonCauses": [
+    "Mass Air Flow Sensör Okuma Değerleri (G70) OR Manifold Pressure Sensör Okuma Değerleri (G71) faulty",
+    "Vacuum Lines faulty"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  Mass Air Flow Sensör Okuma Değerleri (G70) OR Manifold Pressure Sensör Okuma Değerleri (G71)",
+    "Kontrol edin:  Vacuum Lines",
+    "Kontrol edin:  Engine Operating Conditions => Meas. Blocks"
+  ],
+  "technicalNotes": "Uwe: I think this code is set when the airflow being measured (or otherwise calculated) by the ECU doesn't make sense given other operating parameters such as RPM and throttle opening, manifold pressure, etc.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/17549/P1141/004417"
+}

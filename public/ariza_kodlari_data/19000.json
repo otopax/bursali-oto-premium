@@ -1,0 +1,27 @@
+{
+  "code": "19000",
+  "vagCode": "19000",
+  "title": "19000 - 19000/P2568/009576",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Motor arıza ikaz lambası (MIL) yanıyor",
+    "Performans ve çekiş düşüklüğü"
+  ],
+  "commonCauses": [
+    "Incorrect/wrong ID from the G611-Radiator Identification Sensör Okuma Değerleri",
+    "Possible tapering or attempting to bypass the PremAir® system"
+  ],
+  "stepByStepSolution": [
+    "Verify installation of G611-Radiator Identification Sensör Okuma Değerleri on radiator.\nSensör Okuma Değerleri can not be removed, doing so will cause intentional sensor damage.",
+    "Sensör Okuma Değerleri can not be removed, doing so will cause intentional sensor damage."
+  ],
+  "technicalNotes": "The G611 communicates to the ECM via LIN-Bus, the sensor's unique ID (encrypted) and temperature.\nThere are no Measuring Value Block for this information.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/19000/P2568/009576"
+}

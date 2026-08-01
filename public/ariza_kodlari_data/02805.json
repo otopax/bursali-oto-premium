@@ -1,0 +1,29 @@
+{
+  "code": "02805",
+  "vagCode": "02805",
+  "title": "02805 - 02805",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Automatic Roof not working"
+  ],
+  "commonCauses": [
+    "Automatic Roof Positions Sensör Okuma Değerleris issue\nSensör Okuma Değerleri not sending a signal\nConflicting signal from a sensor\nUnable to verify known good location of roof hardware",
+    "Sensör Okuma Değerleri not sending a signal",
+    "Conflicting signal from a sensor\nUnable to verify known good location of roof hardware",
+    "Unable to verify known good location of roof hardware"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS / ODIS ile canlı veri grupları taranır.",
+    "2. Tesisat ve voltaj beslemeleri test edilir.",
+    "3. Gerekirse OEM yedek parça ile yenilenip adaptör sürüşü yapılır."
+  ],
+  "technicalNotes": "When found in the Eos Roof Electronics:\nThis fault code is most likely flagged when control module is unable to determine the position of the top based on data from the sensors.  Please see VW Eos (1F) Convertible Top for information.\nIf sensor data in MVB 002 is correct for top position, note that the J657 \"Door Closing Assist Control Module\" may have an issue.  This is the adjustable striker on the body of the vehicle for the rear lid.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/02805"
+}

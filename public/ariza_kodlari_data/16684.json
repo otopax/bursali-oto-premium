@@ -1,0 +1,45 @@
+{
+  "code": "16684",
+  "vagCode": "16684",
+  "title": "16684 - 16684/P0300/000768",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A3 / VW Golf / Seat Leon",
+    "Audi A4 / VW Passat / Skoda Octavia",
+    "Audi A6 / A5 / Q5",
+    "VW Tiguan / Touareg / Audi Q7"
+  ],
+  "engines": [
+    "2.0 TSI / TFSI (EA888 Gen2/Gen3)"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Motor arıza ikaz lambası (MIL) yanıyor",
+    "Performans ve çekiş düşüklüğü"
+  ],
+  "commonCauses": [
+    "Air Intake System leaking",
+    "Fuel Supply faulty",
+    "Injector(s) faulty",
+    "Ignition Cable(s) and/or Spark Plug(s) faulty",
+    "Ignition Coil(s) faulty",
+    "Exhaust Gas Recirculation (EGR) Valve (N18) stuck/open",
+    "Camshaft Position Sensör Okuma Değerleri (G40) faulty"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  Misfire Recognition",
+    "Kontrol edin:  Air Intake System for leaks",
+    "Kontrol edin:  Fuel Supply (pressure, quality, delivery quantity)",
+    "Kontrol edin:  Injector(s) and Injector Sealing",
+    "Kontrol edin:  Ignition Cable(s) and Spark Plug(s)",
+    "Kontrol edin:  Ignition Coil(s)",
+    "Kontrol edin:  Engine Speed Sensör Okuma Değerleri (G28)",
+    "Kontrol edin:  engine compression",
+    "Kontrol edin:  for Carbon buildup (compression too high)",
+    "Kontrol edin:  for valvetrain concerns",
+    "Kontrol edin:  Exhaust Gas Recirculation (EGR) Valve (N18)",
+    "Kontrol edin:  Camshaft Position Sensör Okuma Değerleri (G40)"
+  ],
+  "technicalNotes": "This DTC indicates that one or multiple cylinders are misfiring, but the ECU fails to identify the cylinder.\nSee this Volkswagen Diagnostic Aid https://static.nhtsa.gov/odi/tsbs/2022/MC-10214471-0001.pdf\nWhen found in 2008-2013 A3, TT and 2009-2013 A4, A5, Q5 and A6 vehicles with the 2,0l TFSI (EA888) engines it maybe necessary to Reset the Misfire Adaptions.\nAs per TSB [01 13 73] | TPI [2033223] - 01 Engine warning light on after engine replacement EA888 2.0 TFSI\nTo Reset Misfire Adaptions: Clear the 01-Engine fault codes three times in a row in less than 29 seconds \"to remove the programed values.\"\nhttps://static.nhtsa.gov/odi/tsbs/2014/MC-10124866-9999.pdf  NHTSA\nFor the Tiguan with the 2.0T DGUE engine that has one or more of the following fault codes, please see TSB 054615 for possible ECM update and hardware update.\nP0172, P0300, P0301, P0302,P0303, P0304, P0441, P0456, P060C, P2440 and/or P2450\nhttps://static.nhtsa.gov/odi/tsbs/2019/MC-10162819-0001.pdf  nhtsa.gov",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/16684/P0300/000768"
+}

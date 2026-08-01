@@ -1,0 +1,37 @@
+{
+  "code": "00017",
+  "vagCode": "00017",
+  "title": "00017 - P00AF/000175",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "2.0 TDI (CR Engine)"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Malfunction Indicator Light (MIL) ON",
+    "Glow Plug light flashing",
+    "Reduced engine performance"
+  ],
+  "commonCauses": [
+    "Defective N75",
+    "N75 connector plugged into the wrong 2 wire component. Kontrol edin:  wiring diagram to confirm",
+    "Vacuum leak or low vacuum",
+    "VNT sticking or seized",
+    "G581 sensor"
+  ],
+  "stepByStepSolution": [
+    "Verify N75 is working to design, use Output Testing",
+    "Verify the N75 connector plugged into N75 per the factory level wiring diagram rather than any other component that may not set a fault code such as N79 (Positive Crankcase Ventilation (PCV) heating element)",
+    "Verify vacuum lines are good, check engine vacuum at idle",
+    "Test VNT and G581, apply vacuum to VNT and watch MVB 120.4\nEngine off, no vacuum 120.4 should read about 3.5V\nEngine Off, apply 17 Inches of mercury, 120.4 should drop to about .7V\nEngine at idle, 120.4 should read about .7V\nIf 120.4 voltage doesn't alter, VNT may be seized or G581 failed",
+    "Engine off, no vacuum 120.4 should read about 3.5V",
+    "Engine Off, apply 17 Inches of mercury, 120.4 should drop to about .7V",
+    "Engine at idle, 120.4 should read about .7V",
+    "If 120.4 voltage doesn't alter, VNT may be seized or G581 failed"
+  ],
+  "technicalNotes": "TDI",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P00AF/000175"
+}

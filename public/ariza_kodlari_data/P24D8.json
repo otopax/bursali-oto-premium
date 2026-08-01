@@ -1,0 +1,26 @@
+{
+  "code": "P24D8",
+  "vagCode": "",
+  "title": "P24D8 - P24D8",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A6 / A5 / Q5"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "MIL on"
+  ],
+  "commonCauses": [
+    "EVAP Pressure Sensör Okuma Değerleri (G950) faulty",
+    "EVAP Pressure Sensör Okuma Değerleri (G950)"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:   EVAP Pressure Sensör Okuma Değerleri (G950) sensor and wiring.",
+    "Note, this fault text corresponds to what is shown in the factory scan tool but may be partially incorrect (we think it should be \" Pressure Sensör Okuma Değerleri\" instead of \"Pressure Sensör Okuma Değerleri 2\". For example, in a 2019 Audi A6 3.0T with the DLZA engine, there is only one EVAP pressure sensor, not two. Unplugging the sensor G950 will set this fault. Some V8 applications may have multiple sensors and it's unclear if this fault is used with those or something different exists."
+  ],
+  "technicalNotes": "VAG grubu araçlarda bu kod görüldüğünde öncelikle yetkili diyagnoz cihazı (ODIS/VCDS) ile canlı değer testi yapılmalıdır.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P24D8"
+}
