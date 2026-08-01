@@ -1,51 +1,57 @@
 import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 
 export const dynamicParams = true;
 export const revalidate = 86400;
 
-export async function generateStaticParams({ params }) {
-  const { locale } = await params;
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
-  
+export async function generateStaticParams() {
   const staticParams = [];
-  Object.keys(hierarchy).forEach(marka => {
-    Object.keys(hierarchy[marka].models).forEach(model => {
-      staticParams.push({ marka, model });
+  try {
+    const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
+    Object.keys(hierarchy).forEach(marka => {
+      if (hierarchy[marka]?.models) {
+        Object.keys(hierarchy[marka].models).forEach(model => {
+          staticParams.push({ marka, model });
+        });
+      }
     });
-  });
-  
+  } catch (e) {}
   return staticParams;
 }
 
 export async function generateMetadata({ params }) {
   const { locale, marka, model } = await params;
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
-  
-  const brandData = hierarchy[marka];
-  if (!brandData) return { title: 'Bulunamadı' };
-  
-  const modelData = brandData.models[model];
-  if (!modelData) return { title: 'Bulunamadı' };
-  
-  return {
-    title: `${brandData.name} ${modelData.name} Arıza Çözümleri Kütüphanesi | Bursalı Oto`,
-    description: `${brandData.name} ${modelData.name} modeline ait kronik arıza kodları, belirtileri ve uzman tamir çözümleri.`
-  };
+  try {
+    const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
+    const brandData = hierarchy[marka] || { name: marka };
+    const modelData = brandData.models?.[model] || { name: model };
+    
+    return {
+      title: `${brandData.name || marka} ${modelData.name || model} Arıza Çözümleri Kütüphanesi | Bursalı Oto`,
+      description: `${brandData.name || marka} ${modelData.name || model} modeline ait kronik arıza kodları, belirtileri ve uzman tamir çözümleri.`
+    };
+  } catch (e) {
+    return { title: 'Arıza Çözümleri Kütüphanesi | Bursalı Oto' };
+  }
 }
 
 export default async function KutuphaneFaultsListPage({ params }) {
   const { locale, marka, model } = await params;
   setRequestLocale(locale);
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
   
-  const brandData = hierarchy[marka];
-  if (!brandData) notFound();
-  
-  const modelData = brandData.models[model];
-  if (!modelData) notFound();
+  let brandData = { name: marka, models: {} };
+  let modelData = { name: model, items: [] };
+
+  try {
+    const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
+    if (hierarchy[marka]) {
+      brandData = hierarchy[marka];
+      if (brandData.models?.[model]) {
+        modelData = brandData.models[model];
+      }
+    }
+  } catch (e) {}
 
   const faults = modelData.items || [];
 
@@ -60,21 +66,21 @@ export default async function KutuphaneFaultsListPage({ params }) {
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
           <Link href={`/${locale}/kutuphane/${marka}`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
-            {brandData.name}
+            {brandData.name || marka}
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
           <Link href={`/${locale}/kutuphane/${marka}/${model}`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
-            {modelData.name}
+            {modelData.name || model}
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
           <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri</span>
         </div>
 
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-light)' }}>
-          {brandData.name} {modelData.name} <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri</span>
+          {brandData.name || marka} {modelData.name || model} <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri</span>
         </h1>
         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '800px', fontSize: '1.1rem' }}>
-          {brandData.name} {modelData.name} model araçlarda servisimize en sık gelen arıza kodlarını (DTC), belirtilerini ve uyguladığımız garantili tamir prosedürlerini inceleyin.
+          {brandData.name || marka} {modelData.name || model} model araçlarda servisimize en sık gelen arıza kodlarını (DTC), belirtilerini ve uyguladığımız garantili tamir prosedürlerini inceleyin.
         </p>
 
         {faults.length === 0 ? (
@@ -105,7 +111,7 @@ export default async function KutuphaneFaultsListPage({ params }) {
                     borderRadius: '12px',
                     textTransform: 'uppercase'
                   }}>
-                    {fault.brand} {fault.model}
+                    {fault.brand || marka} {fault.model || model}
                   </span>
                 </div>
                 <h3 style={{ fontSize: '1.1rem', fontWeight: 'bold', color: 'var(--text-light)', marginBottom: '0.5rem', lineHeight: '1.4' }}>
