@@ -9,7 +9,20 @@ export default function robots() {
   return {
     rules: [
       {
-        userAgent: ['GPTBot', 'ClaudeBot', 'Bytespider', 'CCBot', 'Google-Extended', 'ChatGPT-User', 'OAI-SearchBot'],
+        userAgent: [
+          'GPTBot',
+          'ClaudeBot',
+          'Claude-Web',
+          'Anthropic-AI',
+          'Bytespider',
+          'CCBot',
+          'Google-Extended',
+          'ChatGPT-User',
+          'OAI-SearchBot',
+          'PerplexityBot',
+          'Applebot-Extended',
+          'Meta-ExternalAgent'
+        ],
         allow: '/',
       },
       {
@@ -27,7 +40,6 @@ export default function robots() {
           '/private/'
         ],
       },
-
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
     host: baseUrl,
