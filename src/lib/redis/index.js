@@ -10,15 +10,25 @@ class RedisFactory {
 
   init() {
     try {
+      const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+      
+      // Build aşamasında asla dış Redis bağlantısı kurulmasın (ECONNREFUSED 127.0.0.1:6379 önlemek için)
+      if (isBuildPhase) {
+        console.log("[RedisFactory] Running in build phase. Using Memory Adapter.");
+        this.adapter = new MemoryRedisAdapter();
+        this.isMemory = true;
+        return;
+      }
+
       // Check if Upstash is configured properly
-      if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
+      if (process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN && !process.env.UPSTASH_REDIS_REST_URL.includes('mock')) {
         this.adapter = new UpstashRedisAdapter();
         this.isMemory = false;
-      } else if (process.env.REDIS_URL) {
+      } else if (process.env.REDIS_URL && !process.env.REDIS_URL.includes('localhost') && !process.env.REDIS_URL.includes('127.0.0.1')) {
         this.adapter = new StandardRedisAdapter();
         this.isMemory = false;
       } else {
-        console.warn("[RedisFactory] Redis credentials not found. Falling back to Memory Adapter.");
+        console.warn("[RedisFactory] Redis credentials not found or local. Falling back to Memory Adapter.");
         this.adapter = new MemoryRedisAdapter();
         this.isMemory = true;
         this.initError = "No credentials found";
