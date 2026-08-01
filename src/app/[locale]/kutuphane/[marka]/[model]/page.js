@@ -1,51 +1,57 @@
 import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
-import { notFound } from 'next/navigation';
 
 export const dynamicParams = true;
 export const revalidate = 86400;
 
-export async function generateStaticParams({ params }) {
-  const { locale } = await params;
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
-  
+export async function generateStaticParams() {
   const staticParams = [];
-  Object.keys(hierarchy).forEach(marka => {
-    Object.keys(hierarchy[marka].models).forEach(model => {
-      staticParams.push({ marka, model });
+  try {
+    const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
+    Object.keys(hierarchy).forEach(marka => {
+      if (hierarchy[marka]?.models) {
+        Object.keys(hierarchy[marka].models).forEach(model => {
+          staticParams.push({ marka, model });
+        });
+      }
     });
-  });
-  
+  } catch (e) {}
   return staticParams;
 }
 
 export async function generateMetadata({ params }) {
   const { locale, marka, model } = await params;
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
-  
-  const brandData = hierarchy[marka];
-  if (!brandData) return { title: 'Bulunamadı' };
-  
-  const modelData = brandData.models[model];
-  if (!modelData) return { title: 'Bulunamadı' };
-  
-  return {
-    title: `${brandData.name} ${modelData.name} Teknik Kütüphane & Arıza Rehberi | Bursalı Oto`,
-    description: `${brandData.name} ${modelData.name} aracı için arıza kodları, çözümleri, sigorta şemaları ve teknik ayar kılavuzları.`
-  };
+  try {
+    const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
+    const brandData = hierarchy[marka] || { name: marka };
+    const modelData = brandData.models?.[model] || { name: model };
+    
+    return {
+      title: `${brandData.name || marka} ${modelData.name || model} Teknik Kütüphane & Arıza Rehberi | Bursalı Oto`,
+      description: `${brandData.name || marka} ${modelData.name || model} aracı için arıza kodları, çözümleri, sigorta şemaları ve teknik ayar kılavuzları.`
+    };
+  } catch (e) {
+    return { title: 'Teknik Kütüphane | Bursalı Oto' };
+  }
 }
 
 export default async function KutuphaneModelPage({ params }) {
   const { locale, marka, model } = await params;
   setRequestLocale(locale);
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
-  
-  const brandData = hierarchy[marka];
-  if (!brandData) notFound();
-  
-  const modelData = brandData.models[model];
-  if (!modelData) notFound();
+
+  let brandData = { name: marka, models: {} };
+  let modelData = { name: model, items: [] };
+
+  try {
+    const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
+    if (hierarchy[marka]) {
+      brandData = hierarchy[marka];
+      if (brandData.models?.[model]) {
+        modelData = brandData.models[model];
+      }
+    }
+  } catch (e) {}
 
   const faultCount = modelData.items ? modelData.items.length : 0;
 
@@ -60,17 +66,17 @@ export default async function KutuphaneModelPage({ params }) {
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
           <Link href={`/${locale}/kutuphane/${marka}`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
-            {brandData.name}
+            {brandData.name || marka}
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
-          <span style={{ color: 'var(--accent-gold)' }}>{modelData.name}</span>
+          <span style={{ color: 'var(--accent-gold)' }}>{modelData.name || model}</span>
         </div>
 
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-light)' }}>
-          {brandData.name} {modelData.name} <span style={{ color: 'var(--accent-gold)' }}>Teknik Bilgi Bankası</span>
+          {brandData.name || marka} {modelData.name || model} <span style={{ color: 'var(--accent-gold)' }}>Teknik Bilgi Bankası</span>
         </h1>
         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '800px', fontSize: '1.1rem' }}>
-          {brandData.name} {modelData.name} aracı için sigorta şemalarına, PDF servis kılavuzlarına, motor teknik ayar verilerine ve arıza çözümlerine aşağıdan ulaşabilirsiniz.
+          {brandData.name || marka} {modelData.name || model} aracı için sigorta şemalarına, PDF servis kılavuzlarına, motor teknik ayar verilerine ve arıza çözümlerine aşağıdan ulaşabilirsiniz.
         </p>
 
         {/* 4 Cards Grid Layout */}
@@ -84,7 +90,7 @@ export default async function KutuphaneModelPage({ params }) {
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            justify: 'space-between'
+            justifyContent: 'space-between'
           }}>
             <div>
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚡</div>
@@ -116,7 +122,7 @@ export default async function KutuphaneModelPage({ params }) {
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            justify: 'space-between'
+            justifyContent: 'space-between'
           }}>
             <div>
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>📚</div>
@@ -148,7 +154,7 @@ export default async function KutuphaneModelPage({ params }) {
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            justify: 'space-between'
+            justifyContent: 'space-between'
           }}>
             <div>
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚙️</div>
@@ -180,7 +186,7 @@ export default async function KutuphaneModelPage({ params }) {
             padding: '2rem',
             display: 'flex',
             flexDirection: 'column',
-            justify: 'space-between'
+            justifyContent: 'space-between'
           }}>
             <div>
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚠️</div>
@@ -188,7 +194,7 @@ export default async function KutuphaneModelPage({ params }) {
                 Arıza Çözümleri ({faultCount})
               </h2>
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
-                {brandData.name} {modelData.name} modeline ait kronik arızalar, DTC arıza kodları (P0087 vb.), belirtileri ve servis çözüm adımlarımız.
+                {brandData.name || marka} {modelData.name || model} modeline ait kronik arızalar, DTC arıza kodları (P0087 vb.), belirtileri ve servis çözüm adımlarımız.
               </p>
             </div>
             <Link href={`/${locale}/kutuphane/${marka}/${model}/arizalar`} style={{

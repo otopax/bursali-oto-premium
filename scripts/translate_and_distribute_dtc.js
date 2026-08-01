@@ -2,17 +2,12 @@ import fs from 'fs';
 import path from 'path';
 
 /**
- * MASTER VAG DTC TRANSLATOR & MULTI-BRAND MODEL DISTRIBUTOR
+ * MASTER VAG DTC TRANSLATOR & STRICT BRAND-MODEL DISTRIBUTOR
  * 1. Tüm VAG DTC JSON dosyalarındaki İngilizce metinleri %100 kusursuz Türkçe otomotiv diline çevirir.
- * 2. Marka ve modelleri VAG şemsiyesi altındaki tüm markalara (Volkswagen, Audi, SEAT, Skoda, Porsche) 
- *    ve bilinen tüm modellere (Passat, Golf, Tiguan, Polo, Transporter, A3, A4, A6, Q5, Q7, Leon, Ibiza, Octavia, Superb, Cayenne, Macan) 
- *    otomatik olarak tam dağıtır.
+ * 2. Modelleri SADECE ait oldukları ana markalara bağlar (Golf -> VW, A4 -> Audi, Leon -> SEAT, Octavia -> Skoda, Cayenne -> Porsche).
  */
 
 const DATA_DIR = path.join(process.cwd(), 'public', 'ariza_kodlari_data');
-
-// Tüm VAG Marka ve Modelleri Matrix'i
-const VAG_BRANDS = ['Volkswagen', 'Audi', 'SEAT', 'Skoda', 'Porsche'];
 
 const BRAND_MODELS_MAP = {
   'Volkswagen': ['Passat', 'Golf', 'Tiguan', 'Polo', 'Arteon', 'Touareg', 'Transporter', 'Caddy', 'Amarok', 'Scirocco', 'Jetta'],
@@ -21,6 +16,13 @@ const BRAND_MODELS_MAP = {
   'Skoda': ['Octavia', 'Superb', 'Kodiaq', 'Karoq', 'Fabia', 'Scala'],
   'Porsche': ['Cayenne', 'Macan', 'Panamera', '911', 'Taycan']
 };
+
+const MODEL_TO_BRAND = {};
+Object.entries(BRAND_MODELS_MAP).forEach(([brand, models]) => {
+  models.forEach(model => {
+    MODEL_TO_BRAND[model.toUpperCase()] = brand;
+  });
+});
 
 // Kapsamlı İngilizce -> Türkçe Otomotiv Çeviri Sözlüğü
 const DICTIONARY = [
@@ -98,40 +100,31 @@ function translateString(str) {
   return text;
 }
 
-// Marka ve Modelleri Otomatik Tespitle Dağıtma
-function detectBrandsAndModels(text, json) {
+// Marka ve Modelleri Sıkı Hiyerarşi ile Eşleştirme
+function detectBrandsAndModels(text) {
   const textUpper = text.toUpperCase();
 
   const brands = new Set();
   const models = new Set();
 
-  // Marka tespiti
-  if (textUpper.includes('VW') || textUpper.includes('VOLKSWAGEN') || textUpper.includes('PASSAT') || textUpper.includes('GOLF') || textUpper.includes('TIGUAN') || textUpper.includes('POLO')) {
-    brands.add('Volkswagen');
-  }
-  if (textUpper.includes('AUDI') || textUpper.includes('A3') || textUpper.includes('A4') || textUpper.includes('A6') || textUpper.includes('Q5') || textUpper.includes('Q7')) {
-    brands.add('Audi');
-  }
-  if (textUpper.includes('SEAT') || textUpper.includes('LEON') || textUpper.includes('IBIZA')) {
-    brands.add('SEAT');
-  }
-  if (textUpper.includes('SKODA') || textUpper.includes('OCTAVIA') || textUpper.includes('SUPERB')) {
-    brands.add('Skoda');
-  }
-  if (textUpper.includes('PORSCHE') || textUpper.includes('CAYENNE') || textUpper.includes('MACAN') || textUpper.includes('PANAMERA')) {
-    brands.add('Porsche');
-  }
-
-  // Eğer spesifik marka bulunamadıysa tüm VAG grubuna dağıt
-  if (brands.size === 0) {
-    VAG_BRANDS.forEach(b => brands.add(b));
-  }
-
-  // Modellere Dağıtım
-  brands.forEach(b => {
-    const defaultModels = BRAND_MODELS_MAP[b] || ['Genel'];
-    defaultModels.forEach(m => models.add(m));
+  // Model bazlı hassas eşleştirme
+  Object.keys(MODEL_TO_BRAND).forEach(modelKey => {
+    if (textUpper.includes(modelKey)) {
+      const parentBrand = MODEL_TO_BRAND[modelKey];
+      brands.add(parentBrand);
+      // Modeli düzgün camel-case ismiyle ekle
+      const originalModelName = BRAND_MODELS_MAP[parentBrand].find(m => m.toUpperCase() === modelKey);
+      if (originalModelName) models.add(originalModelName);
+    }
   });
+
+  // Eğer hiçbir özel model bulunamadıysa varsayılan VAG modellerine dağıt
+  if (models.size === 0) {
+    Object.entries(BRAND_MODELS_MAP).forEach(([brand, defaultModels]) => {
+      brands.add(brand);
+      defaultModels.slice(0, 2).forEach(m => models.add(m)); // Her markanın ilk 2 ana modelini ekle
+    });
+  }
 
   return {
     brands: Array.from(brands),
@@ -153,14 +146,13 @@ function processFile(filePath) {
     if (Array.isArray(data.stepByStepSolution)) data.stepByStepSolution = data.stepByStepSolution.map(translateString);
     if (data.technicalNotes) data.technicalNotes = translateString(data.technicalNotes);
 
-    // Dağıtım
-    const distribution = detectBrandsAndModels(fullText, data);
+    // Sıkı Hiyerarşili Dağıtım
+    const distribution = detectBrandsAndModels(fullText);
     data.brands = distribution.brands;
     data.models = distribution.models;
 
-    // Geriye dönük uyumluluk string alanları
     data.brand = distribution.brands.join(' / ');
-    data.model = distribution.models.slice(0, 4).join(', ');
+    data.model = distribution.models.join(', ');
 
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
     return true;
@@ -170,17 +162,17 @@ function processFile(filePath) {
 }
 
 function runTranslatorAndDistributor() {
-  console.log('🌐 ROSS-TECH DEV KÜTÜPHANE ÇEVİRİ VE MODEL DAĞITIMI BAŞLATILIYOR...');
+  console.log('🌐 ROSS-TECH SIKI HİYERARŞİLİ MARKA/MODEL DAĞITIMI VE ÇEVİRİ BAŞLATILIYOR...');
 
   const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json') && !f.startsWith('_'));
-  console.log(`📌 Toplam ${files.length} adet arıza dokümanı %100 Türkçe Çeviri ve Marka/Model dağıtımından geçiriliyor...`);
+  console.log(`📌 Toplam ${files.length} adet arıza dokümanı işleniyor...`);
 
   let count = 0;
   files.forEach(f => {
     if (processFile(path.join(DATA_DIR, f))) count++;
   });
 
-  console.log(`\n🎉 İŞLEM BAŞARIYLA TAMAMLANDI! Toplam ${count} adet arıza dokümanı %100 Türkçe yapıldı ve TÜM marka/modellere dağıtıldı!`);
+  console.log(`\n🎉 İŞLEM BAŞARIYLA TAMAMLANDI! ${count} dosya sıkı marka-model kurallarıyla güncellendi!`);
 }
 
 runTranslatorAndDistributor();
