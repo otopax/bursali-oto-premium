@@ -118,10 +118,12 @@ export default function ImageUploader({ onAnalysisComplete }) {
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="vehicle-photo-input" className="block text-sm font-medium text-gray-700 mb-1">
             Arızalı Parçanın Fotoğrafı
           </label>
           <input
+            id="vehicle-photo-input"
+            aria-label="Arızalı Parçanın Fotoğrafı"
             type="file"
             accept="image/*"
             ref={fileInputRef}
@@ -141,10 +143,12 @@ export default function ImageUploader({ onAnalysisComplete }) {
         )}
 
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="vehicle-prompt-input" className="block text-sm font-medium text-gray-700 mb-1">
             Ek Açıklama (Opsiyonel)
           </label>
           <input
+            id="vehicle-prompt-input"
+            aria-label="Ek Açıklama (Opsiyonel)"
             type="text"
             ref={promptInputRef}
             placeholder="Örn: Sağ kapıdaki çizik, Motor bloğundaki yağ kaçağı"
