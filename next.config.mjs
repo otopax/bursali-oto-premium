@@ -12,6 +12,7 @@ const nextConfig = {
   // Bunları derlemek/parse etmek webpack heap'ini şişiriyordu (OOM webpack fazındaydı).
   // Runtime'da node_modules'tan require edilirler; bundle'a girmezler.
   serverExternalPackages: [
+    'sharp',
     'puppeteer-core',
     '@aws-sdk/client-s3',
     '@aws-sdk/s3-request-presigner',
@@ -110,42 +111,6 @@ const nextConfig = {
         source: '/images/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400' },
-        ],
-      },
-      {
-        source: '/gallery-:path*',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/bg.webp',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/bg.png',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/avatar.png',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
-        ],
-      },
-      {
-        source: '/llms.txt',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600' },
-        ],
-      },
-      {
-        source: '/llms-full.txt',
-        headers: [
-          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600' },
         ],
       },
       {

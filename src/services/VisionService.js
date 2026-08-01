@@ -1,4 +1,10 @@
-import sharp from 'sharp';
+let sharpModule;
+try {
+  sharpModule = require('sharp');
+} catch (_) {
+  sharpModule = null;
+}
+
 import crypto from 'crypto';
 import { z } from 'zod';
 import { generateObject } from 'ai';
@@ -31,10 +37,15 @@ export class VisionService {
       const base64Data = base64Image.includes(',') ? base64Image.split(',')[1] : base64Image;
       const buffer = Buffer.from(base64Data, 'base64');
       
-      const optimizedBuffer = await sharp(buffer)
-        .resize({ width: 1024, height: 1024, fit: 'inside' })
-        .jpeg({ quality: 75, progressive: true })
-        .toBuffer();
+      let optimizedBuffer = buffer;
+      if (sharpModule) {
+        try {
+          optimizedBuffer = await sharpModule(buffer)
+            .resize({ width: 1024, height: 1024, fit: 'inside' })
+            .jpeg({ quality: 75, progressive: true })
+            .toBuffer();
+        } catch (_) {}
+      }
       
       const processTimeMs = Date.now() - startTime;
       const sizeKb = Math.round(optimizedBuffer.length / 1024);
