@@ -1,0 +1,41 @@
+{
+  "code": "P2458",
+  "vagCode": "18890",
+  "title": "Dizel Partikül Filtresi (DPF) Rejenerasyon Süresi Aşımı / Tıkanıklık",
+  "brand": "Audi / Volkswagen / SEAT / Skoda",
+  "models": [
+    "A3",
+    "A4",
+    "A6",
+    "Q5",
+    "Golf",
+    "Passat",
+    "Caddy",
+    "Crafter",
+    "Octavia"
+  ],
+  "engines": [
+    "1.6 TDI",
+    "2.0 TDI"
+  ],
+  "severity": "Yüksek (Partikül İkazı)",
+  "symptoms": [
+    "Gösterge panelinde DPF filtre simgesi ve egzoz ikaz ışığının yanması",
+    "Motor rölanti devrinin 1000 d/d'ye yükselmesi ve radyatör fanının sürekli yüksek devirde çalışması",
+    "Egzozdan ağır koku gelmesi",
+    "Çekiş düşüklüğü ve araç hızı kısıtlaması"
+  ],
+  "commonCauses": [
+    "Kısa mesafe / şehir içi düşük devirli kullanım nedeniyle DPF rejenerasyonunun tamamlanamaması",
+    "Fark basınç sensörü (G450) okuma hatası veya hortum yırtığı",
+    "Kızdırma bujilerinden birinin arızalı olması (DPF rejenerasyonunu engeller!)",
+    "Enjektör işemesi sonucu aşırı kurum dolumu (Soot Mass > 45g)"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS ile 068 / 075 gruplarından Kurum Miktarı (Soot Mass Calculated / Measured) okunur.",
+    "2. Kurum 45 gramın altındaysa VCDS ile Servis Tipi DPF Rejenerasyonu (Emergency Regeneration) başlatılır.",
+    "3. Kurum 45 gramın üzerindeyse filtre sökülerek profesyonel DPF yıkama makinesinde solüsyonla temizlenir.",
+    "4. Fark basınç sensörü (G450) sıfırlama adaptasyonu yapılır."
+  ],
+  "technicalNotes": "VAG TDI motorlarda kızdırma bujisi arızalıyken DPF rejenerasyon yapmaz. DPF tıkanıklığı arızasında önce kızdırma bujileri taranmalıdır."
+}

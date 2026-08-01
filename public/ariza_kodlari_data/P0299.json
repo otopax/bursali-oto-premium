@@ -1,0 +1,43 @@
+{
+  "code": "P0299",
+  "vagCode": "16683",
+  "title": "Turboşarj / Kompresör Düşük Şarj Basıncı (Underboost Condition)",
+  "brand": "Audi / Volkswagen / SEAT / Skoda",
+  "models": [
+    "A3",
+    "A4",
+    "A6",
+    "Q5",
+    "Golf",
+    "Passat",
+    "Tiguan",
+    "Leon",
+    "Superb"
+  ],
+  "engines": [
+    "1.6 TDI",
+    "2.0 TDI",
+    "1.4 TSI",
+    "2.0 TSI"
+  ],
+  "severity": "Yüksek",
+  "symptoms": [
+    "Yokuş tırmanırken veya sollamaya çıkarken aracın bir anda çekişten düşmesi",
+    "Motorun kızdırma bujisi lambası (ısıtma ikazı) yakarak koruma moduna geçmesi",
+    "Gaza basıldığında motordan ıslık veya hava üfleme sesi gelmesi",
+    "Maksimum hızın 100-120 km/s ile sınırlanması"
+  ],
+  "commonCauses": [
+    "Intercooler (hava soğutucu) hortumlarında yırtık veya kelepçe çıkması",
+    "Turbo wastegate actuatör (N75 selenoid valfi) vakum kaçağı veya mekanik sıkışması",
+    "Turbo milinde boşluk veya kanatçık (geometry) kurum kilitlenmesi",
+    "DV (Diverter Valve) tahliye valfi diyafram yırtılması"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS ile 011 nolu gruptan Ist-Druck (Gerçekleşen Basınç) ile Soll-Druck (Hedef Basınç) grafiği çizdirilir.",
+    "2. Intercooler hortumları duman test cihazı veya basınçlı hava ile sızıntı kontrolüne tabi tutulur.",
+    "3. N75 selenoidine vakum pompası (Mityvac) bağlanarak actuatörün 0.6 bar vakumda tam stroke yapıp yapmadığı bakılır.",
+    "4. Turbo basıyorsa fakat kaçak yoksa N75 valfi veya turbo geomeji temizliği yapılır."
+  ],
+  "technicalNotes": "2.0 TDI motorlarda P0299 kodu genellikle turbo vakum actuatörü (aktüatör) diyafram delinmesinden kaynaklanır. Sadece aktüatör değişimi ile turbo kurtarılabilir."
+}
