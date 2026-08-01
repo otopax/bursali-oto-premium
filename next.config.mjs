@@ -104,19 +104,31 @@ const nextConfig = {
       {
         source: '/_next/static/(.*)',
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
         ],
       },
       {
         source: '/images/(.*)',
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=2592000, stale-while-revalidate=86400' },
+          { key: 'Cache-Control', value: 'public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/(bg.webp|bg.png|avatar.png|gallery-(.*))',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
         ],
       },
       {
         source: '/:path*.woff2',
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=31536000, immutable' },
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/(llms.txt|llms-full.txt)',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600' },
         ],
       },
       {
