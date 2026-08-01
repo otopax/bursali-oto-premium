@@ -1,10 +1,7 @@
-import { get } from '@vercel/edge-config';
 import { Logger } from '@/lib/observability/Logger';
 
 /**
- * Feature Flags Servisi
- * Vercel Edge Config'ten flag değerini okur. 
- * Eğer 500ms içinde cevap gelmezse veya bağlantı hatası olursa fail-open (process.env) olarak çalışır.
+ * Feature Flags Servisi (Ortam Değişkenleri & Fail-Open Tabanlı)
  * 
  * @param {string} flagName - Okunacak flag'in adı (örn: "ai_v2_enabled")
  * @param {boolean} defaultValue - Bulunamazsa dönülecek varsayılan değer
@@ -14,26 +11,11 @@ export async function getFeatureFlag(flagName, defaultValue = false) {
   const envKey = `FF_${flagName.toUpperCase()}`;
   const envValue = process.env[envKey] === 'true';
 
-  // Eğer Edge Config tanımlı değilse doğrudan env veya defaultValue dön.
-  if (!process.env.EDGE_CONFIG) {
-    return process.env[envKey] !== undefined ? envValue : defaultValue;
+  if (process.env[envKey] !== undefined) {
+    return envValue;
   }
 
-  try {
-    const fetchPromise = get(flagName);
-    const timeoutPromise = new Promise((_, reject) =>
-      setTimeout(() => reject(new Error('Edge Config Timeout')), 500)
-    );
-
-    const value = await Promise.race([fetchPromise, timeoutPromise]);
-    
-    return value !== undefined ? value : defaultValue;
-  } catch (error) {
-    // Edge Config hatası, timeout veya connection failure:
-    // Fail-open mantığı gereği env değişkenine dönüyoruz.
-    Logger.warn(`Feature Flag Warning: Failed to read ${flagName} from Edge Config. Falling back to env.`, { error: error.message });
-    return process.env[envKey] !== undefined ? envValue : defaultValue;
-  }
+  return defaultValue;
 }
 
 /**

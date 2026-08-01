@@ -47,8 +47,7 @@ const nextConfig = {
 
 
   // www'suz → www'lu 301 kalıcı yönlendirme (Faz A / Görev 2)
-  // Google canonical'ı tek tip toplasın diye şart. Vercel Dashboard'da da
-  // yapılabilir ama defense-in-depth için burada da tanımlı.
+  // Google canonical'ı tek tip toplasın diye şart. Cloudflare / Railway ile uyumlu.
   async redirects() {
     return [
       {
