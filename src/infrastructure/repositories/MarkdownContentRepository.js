@@ -9,81 +9,164 @@ export class MarkdownContentRepository extends IContentRepository {
   constructor() {
     super();
     this.basePath = path.join(process.cwd(), 'src', 'content');
+    this.jsonFaultsDir = path.join(process.cwd(), 'public', 'ariza_kodlari_data');
+  }
+
+  formatJsonFaultToPost(id, json) {
+    const brandStr = Array.isArray(json.brand) ? json.brand[0] : (json.brand || 'Volkswagen');
+    const modelStr = Array.isArray(json.models) ? json.models[0] : (json.models || 'Genel');
+    
+    // Semptomlar
+    const symptomsList = Array.isArray(json.symptoms) && json.symptoms.length > 0
+      ? `<h3>Olası Belirtiler</h3><ul>${json.symptoms.map(s => `<li>${s}</li>`).join('')}</ul>`
+      : '';
+
+    // Kök Nedenler
+    const causesList = Array.isArray(json.commonCauses) && json.commonCauses.length > 0
+      ? `<h3>Kök Nedenler ve Muhtemel Sebepler</h3><ul>${json.commonCauses.map(c => `<li>${c}</li>`).join('')}</ul>`
+      : '';
+
+    // Çözüm Adımları
+    const solutionsList = Array.isArray(json.stepByStepSolution) && json.stepByStepSolution.length > 0
+      ? `<h3>Adım Adım Servis Çözüm Adımları</h3><ul>${json.stepByStepSolution.map(sol => `<li>${sol}</li>`).join('')}</ul>`
+      : '';
+
+    // Servis Notu
+    const notesBlock = json.technicalNotes
+      ? `<blockquote style="background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--accent-gold); padding: 1rem; margin-top: 1.5rem;"><strong>VAG Grubu Özel Servis Notu:</strong><p>${json.technicalNotes}</p></blockquote>`
+      : '';
+
+    const contentHtml = `<div>${symptomsList}${causesList}${solutionsList}${notesBlock}</div>`;
+
+    return {
+      id,
+      title: json.title || id,
+      brand: brandStr.split('/')[0].trim(),
+      model: modelStr.split('/')[0].trim(),
+      date: '2026-08-01',
+      riskLevel: json.severity || 'Orta-Yüksek',
+      canDrive: 'Servise Danışın',
+      estimatedTime: '2-4 Saat',
+      estimatedCost: 'Tespitten Sonra',
+      potentialCauses: Array.isArray(json.commonCauses) ? json.commonCauses.join(', ') : json.commonCauses,
+      contentHtml,
+      rawContent: `${json.title}\n${json.technicalNotes || ''}`,
+      isDtcJson: true
+    };
   }
 
   async getSortedPostsData(locale = 'tr', folder = 'blog') {
     const directory = path.join(this.basePath, folder);
-    if (!fs.existsSync(directory)) return [];
+    let posts = [];
 
-    const fileNames = fs.readdirSync(directory);
-    const allPostsData = fileNames
-      .filter((fileName) => fileName.endsWith('.md') || fileName.endsWith('.mdx'))
-      .map((fileName) => {
-        const id = fileName.replace(/\.mdx?$/, '');
-        const fullPath = path.join(directory, fileName);
-        const fileContents = fs.readFileSync(fullPath, 'utf8');
+    // 1. Markdown (.md / .mdx) dosyalarını oku
+    if (fs.existsSync(directory)) {
+      const fileNames = fs.readdirSync(directory);
+      const mdPosts = fileNames
+        .filter((fileName) => fileName.endsWith('.md') || fileName.endsWith('.mdx'))
+        .map((fileName) => {
+          const id = fileName.replace(/\.mdx?$/, '');
+          const fullPath = path.join(directory, fileName);
+          const fileContents = fs.readFileSync(fullPath, 'utf8');
 
-        const matterResult = matter(fileContents);
+          const matterResult = matter(fileContents);
 
-        if (matterResult.data.locale && matterResult.data.locale !== locale) {
-          return null;
+          if (matterResult.data.locale && matterResult.data.locale !== locale) {
+            return null;
+          }
+
+          return {
+            id,
+            ...matterResult.data,
+          };
+        })
+        .filter(Boolean);
+
+      posts = [...mdPosts];
+    }
+
+    // 2. Eğer folder === 'faults' ise public/ariza_kodlari_data/ altındaki tüm JSON dosyalarını da ekle!
+    if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
+      const jsonFiles = fs.readdirSync(this.jsonFaultsDir);
+      jsonFiles.forEach(file => {
+        if (file.endsWith('.json') && !file.startsWith('_')) {
+          const id = file.replace('.json', '');
+          try {
+            const rawData = fs.readFileSync(path.join(this.jsonFaultsDir, file), 'utf-8');
+            const jsonData = JSON.parse(rawData);
+            posts.push(this.formatJsonFaultToPost(id, jsonData));
+          } catch (e) {}
         }
+      });
+    }
 
-        return {
-          id,
-          ...matterResult.data,
-        };
-      })
-      .filter(Boolean);
-
-    return allPostsData.sort((a, b) => {
-      if (a.date < b.date) {
-        return 1;
-      } else {
-        return -1;
-      }
-    });
+    return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
   }
 
   async getAllPostIds(folder = 'blog') {
     const directory = path.join(this.basePath, folder);
-    if (!fs.existsSync(directory)) return [];
-    
-    const fileNames = fs.readdirSync(directory);
-    return fileNames
-      .filter(fileName => fileName.endsWith('.md') || fileName.endsWith('.mdx'))
-      .map((fileName) => {
-        return {
-          params: {
-            slug: fileName.replace(/\.mdx?$/, ''),
-          },
-        };
+    const ids = [];
+
+    if (fs.existsSync(directory)) {
+      const fileNames = fs.readdirSync(directory);
+      fileNames
+        .filter(fileName => fileName.endsWith('.md') || fileName.endsWith('.mdx'))
+        .forEach(fileName => {
+          ids.push({ params: { slug: fileName.replace(/\.mdx?$/, '') } });
+        });
+    }
+
+    if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
+      const jsonFiles = fs.readdirSync(this.jsonFaultsDir);
+      jsonFiles.forEach(file => {
+        if (file.endsWith('.json') && !file.startsWith('_')) {
+          ids.push({ params: { slug: file.replace('.json', '') } });
+        }
       });
+    }
+
+    return ids;
   }
 
   async getPostData(slug, folder = 'blog') {
+    // 1. Önce Markdown dosyasını ara
     const directory = path.join(this.basePath, folder);
     let fullPath = path.join(directory, `${slug}.md`);
     
     if (!fs.existsSync(fullPath)) {
       fullPath = path.join(directory, `${slug}.mdx`);
-      if (!fs.existsSync(fullPath)) return null;
     }
 
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
+    if (fs.existsSync(fullPath)) {
+      const fileContents = fs.readFileSync(fullPath, 'utf8');
+      const matterResult = matter(fileContents);
 
-    const processedContent = await remark()
-      .use(html)
-      .process(matterResult.content);
-      
-    const contentHtml = processedContent.toString();
+      const processedContent = await remark()
+        .use(html)
+        .process(matterResult.content);
+        
+      const contentHtml = processedContent.toString();
 
-    return {
-      id: slug,
-      contentHtml,
-      rawContent: matterResult.content,
-      ...matterResult.data,
-    };
+      return {
+        id: slug,
+        contentHtml,
+        rawContent: matterResult.content,
+        ...matterResult.data,
+      };
+    }
+
+    // 2. Eğer Markdown bulunamadıysa ve folder === 'faults' ise JSON verisini ara
+    if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
+      const jsonPath = path.join(this.jsonFaultsDir, `${slug}.json`);
+      if (fs.existsSync(jsonPath)) {
+        try {
+          const rawData = fs.readFileSync(jsonPath, 'utf-8');
+          const jsonData = JSON.parse(rawData);
+          return this.formatJsonFaultToPost(slug, jsonData);
+        } catch (e) {}
+      }
+    }
+
+    return null;
   }
 }
