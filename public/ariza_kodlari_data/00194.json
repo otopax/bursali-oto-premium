@@ -2,10 +2,46 @@
   "code": "00194",
   "vagCode": "00194",
   "title": "00194 - 00194",
-  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "brand": "Volkswagen / Audi / SEAT / Skoda / Porsche",
   "models": [
-    "Audi A3 / VW Golf / Seat Leon",
-    "Audi A6 / A5 / Q5"
+    "Passat",
+    "Golf",
+    "Tiguan",
+    "Polo",
+    "Arteon",
+    "Touareg",
+    "Transporter",
+    "Caddy",
+    "Amarok",
+    "Scirocco",
+    "Jetta",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "Q3",
+    "Q5",
+    "Q7",
+    "Q8",
+    "TT",
+    "Leon",
+    "Ibiza",
+    "Ateca",
+    "Arona",
+    "Tarraco",
+    "Octavia",
+    "Superb",
+    "Kodiaq",
+    "Karoq",
+    "Fabia",
+    "Scala",
+    "Cayenne",
+    "Macan",
+    "Panamera",
+    "911",
+    "Taycan"
   ],
   "engines": [
     "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
@@ -13,7 +49,7 @@
   "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
   "symptoms": [
     "Ignition Key cannot be removed from ignition switch with Transmission in Park.",
-    "PRND21 indicator is not reading correctly in the instrument cluster.",
+    "PRND21 indicator is not reading correctly in the Gösterge Paneli.",
     "Ignition Key CAN be removed from ignition switch with Transmission in ANY selector position."
   ],
   "commonCauses": [
@@ -26,14 +62,22 @@
   ],
   "stepByStepSolution": [
     "Kontrol edin:  Communication with Gear Selector Module",
-    "Kontrol edin:  Selector Lever (E313)\nKontrol edin:  Measuring Value Block (MVB) in Transmission Control Module",
-    "Kontrol edin:  Measuring Value Block (MVB) in Transmission Control Module",
-    "Kontrol edin:  Tiptronic Buttons (F189) in Selector Lever (E313)\nKontrol edin:  Measuring Value Block (MVB) in Transmission Control Module",
-    "Kontrol edin:  Measuring Value Block (MVB) in Transmission Control Module",
+    "Kontrol edin:  Selector Lever (E313)\nKontrol edin:  Measuring Value Block (MVB) in Transmission Kontrol Modülü",
+    "Kontrol edin:  Measuring Value Block (MVB) in Transmission Kontrol Modülü",
+    "Kontrol edin:  Tiptronic Buttons (F189) in Selector Lever (E313)\nKontrol edin:  Measuring Value Block (MVB) in Transmission Kontrol Modülü",
+    "Kontrol edin:  Measuring Value Block (MVB) in Transmission Kontrol Modülü",
     "Verify the N376-Ignition Key Withdrawal Lock Solenoid is installed correctly.",
     "Verify the N376 is not an Açık Devre / Kablo Kopukluğu'",
     "Değiştirin / Yenileyin: d failed N376 with newest/updated part from the manufacture"
   ],
   "technicalNotes": "Most of the above is applicable Bu arıza kodu şu modülde görüldüğünde: 2005 and newer Jetta A5, 2006 and newer Volkswagen GTI, Golf, Rabbit and EOS\nPlease see Volkswagen's Tech Tip (28-08-02). It states \"DO NOT Değiştirin / Yenileyin: the ignition switch, lock cylinder, or lock housing assembly\" before verifying the proper operation of the N376 (sometimes referred to as the 'catch')\nhttps://static.nhtsa.gov/odi/tsbs/2013/MC-10157607-9999.pdf  NHTSA\nUse Measuring Value Block Group [005] in the [16-Steering wheel] controller to verify proper operation of the N376.\nField (3) in the MVB-[005] must display [On] when any driving position is selected.\nField (4) in MVB-[005] must display [Ok]\nPart number for the \"catch\" has been updated several times, Kontrol edin: with your local parts department for the latest and correct part for the vehicle in question.",
-  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/00194"
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/00194",
+  "brands": [
+    "Volkswagen",
+    "Audi",
+    "SEAT",
+    "Skoda",
+    "Porsche"
+  ],
+  "model": "Passat, Golf, Tiguan, Polo"
 }

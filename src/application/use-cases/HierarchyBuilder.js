@@ -40,34 +40,63 @@ export class HierarchyBuilder {
     const hierarchy = {};
 
     posts.forEach(post => {
-      let brandName = post.brand || 'Diğer';
-      brandName = brandName.trim();
-      if (brandName.toUpperCase() === 'MERCEDES') brandName = 'Mercedes-Benz';
-      if (brandName.toUpperCase() === 'VW') brandName = 'Volkswagen';
-      if (brandName.toUpperCase().includes('AUDI / VW') || brandName.toUpperCase().includes('GENEL / PREMIUM')) brandName = 'Genel / Premium';
-      if (brandName.toUpperCase().includes('GENEL / PORSCHE')) brandName = 'Porsche';
-
-      let modelName = post.model || 'Genel';
-      modelName = modelName.trim();
-
-      const brandSlug = this.slugify(brandName);
-      const modelSlug = this.slugify(modelName);
-
-      if (!hierarchy[brandSlug]) {
-        hierarchy[brandSlug] = {
-          name: brandName,
-          models: {}
-        };
+      // 1. Markaları belirle (Çoklu marka desteği)
+      let rawBrands = [];
+      if (Array.isArray(post.brands) && post.brands.length > 0) {
+        rawBrands = post.brands;
+      } else if (typeof post.brand === 'string') {
+        rawBrands = post.brand.split('/').map(b => b.trim());
+      } else {
+        rawBrands = ['Diğer'];
       }
 
-      if (!hierarchy[brandSlug].models[modelSlug]) {
-        hierarchy[brandSlug].models[modelSlug] = {
-          name: modelName,
-          items: []
-        };
+      // 2. Modelleri belirle (Çoklu model desteği)
+      let rawModels = [];
+      if (Array.isArray(post.models) && post.models.length > 0) {
+        rawModels = post.models;
+      } else if (typeof post.model === 'string') {
+        rawModels = post.model.split(',').map(m => m.trim());
+      } else {
+        rawModels = ['Genel'];
       }
 
-      hierarchy[brandSlug].models[modelSlug].items.push(post);
+      // 3. Marka ve modelleri hiyerarşi ağacına işle
+      rawBrands.forEach(brandName => {
+        let cleanBrandName = brandName;
+        if (cleanBrandName.toUpperCase() === 'MERCEDES') cleanBrandName = 'Mercedes-Benz';
+        if (cleanBrandName.toUpperCase() === 'VW') cleanBrandName = 'Volkswagen';
+
+        const brandSlug = this.slugify(cleanBrandName);
+
+        if (!hierarchy[brandSlug]) {
+          hierarchy[brandSlug] = {
+            name: cleanBrandName,
+            models: {}
+          };
+        }
+
+        rawModels.forEach(modelName => {
+          const cleanModelName = modelName.trim();
+          const modelSlug = this.slugify(cleanModelName);
+
+          if (!hierarchy[brandSlug].models[modelSlug]) {
+            hierarchy[brandSlug].models[modelSlug] = {
+              name: cleanModelName,
+              items: []
+            };
+          }
+
+          // Aynı arızanın aynı modele mükerrer eklenmesini engelle
+          const exists = hierarchy[brandSlug].models[modelSlug].items.some(item => item.id === post.id);
+          if (!exists) {
+            hierarchy[brandSlug].models[modelSlug].items.push({
+              ...post,
+              brand: cleanBrandName,
+              model: cleanModelName
+            });
+          }
+        });
+      });
     });
 
     await setCache('page', cacheKey, JSON.stringify(hierarchy), CACHE_TTL.PAGE || 86400);
