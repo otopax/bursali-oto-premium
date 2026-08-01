@@ -43,6 +43,8 @@ export class MarkdownContentRepository extends IContentRepository {
       title: json.title || id,
       brand: brandStr.split('/')[0].trim(),
       model: modelStr.split('/')[0].trim(),
+      brands: json.brands || [brandStr],
+      models: json.models || [modelStr],
       date: '2026-08-01',
       riskLevel: json.severity || 'Orta-Yüksek',
       canDrive: 'Servise Danışın',
