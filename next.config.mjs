@@ -101,37 +101,55 @@ const nextConfig = {
 
     return [
       {
-        source: '/_next/static/(.*)',
+        source: '/_next/static/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
         ],
       },
       {
-        source: '/images/(.*)',
+        source: '/images/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400' },
         ],
       },
       {
-        source: '/(bg.webp|bg.png|avatar.png|gallery-(.*))',
+        source: '/gallery-:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
         ],
       },
       {
-        source: '/:path*.woff2',
+        source: '/bg.webp',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
         ],
       },
       {
-        source: '/(llms.txt|llms-full.txt)',
+        source: '/bg.png',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/avatar.png',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/llms.txt',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600' },
         ],
       },
       {
-        source: '/(.*)',
+        source: '/llms-full.txt',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=3600' },
+        ],
+      },
+      {
+        source: '/:path*',
         headers: [
           { key: 'X-DNS-Prefetch-Control', value: 'on' },
           { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
