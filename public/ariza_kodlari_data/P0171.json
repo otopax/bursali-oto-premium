@@ -1,59 +1,40 @@
 {
   "code": "P0171",
-  "description": "P0171 kodu, motor kontrol modülünün (ECM) BİRİNCİ silindir bankasındaki yakıt/hava karışımının çok fakir olduğunu (çok fazla hava veya çok az yakıt) algıladığını gösterir. Banka 1, motorun 1. silindirini içeren tarafıdır.",
-  "severity": "Medium",
+  "vagCode": "16555",
+  "title": "Sistem Çok Fakir - Sıra 1 (System Too Lean - Bank 1)",
+  "brand": "Audi / Volkswagen / SEAT / Skoda",
+  "models": [
+    "A3",
+    "A4",
+    "Golf",
+    "Passat",
+    "Leon",
+    "Octavia"
+  ],
+  "engines": [
+    "1.2 TSI",
+    "1.4 TSI",
+    "1.8 TFSI",
+    "2.0 TFSI"
+  ],
+  "severity": "Orta",
   "symptoms": [
-    "Motor arıza lambasının (MIL) yanması",
-    "Düzensiz rölanti",
-    "Zayıf hızlanma",
-    "Motorun teklemesi",
-    "Yakıt ekonomisinde düşüş",
-    "Egzozdan farklı koku gelmesi",
-    "Motorun zor çalışması"
+    "Motor arıza lambasının yanması",
+    "Rölantide motor devrinin dalgalanması (yükselip düşmesi)",
+    "Egzoz patlatması veya silkeleme",
+    "Fren pedalının sertleşmesi (vakum kaybı durumunda)"
   ],
   "commonCauses": [
-    "Vakum kaçakları (emme manifoldu contası, hortumlar, PCV valfi)",
-    "Kütle hava akış (MAF) sensörü arızası veya kirliliği",
-    "Banka 1 Oksijen (O2) sensörü arızası",
-    "Yakıt basıncı regülatörü arızası",
-    "Yakıt pompası yetersizliği veya arızası",
-    "Tıkalı veya arızalı yakıt enjektörleri",
-    "Egzoz kaçakları (O2 sensörü öncesi)",
-    "Tıkalı yakıt filtresi"
+    "PCV (Karter Havalandırma) valfi diyafram yırtılması",
+    "Emme manifoldu contalarından veya vakum hortumlarından kaçak hava girmesi",
+    "Hava Akış Sensörü (MAF - G70) kirlenmesi veya hatalı ölçümü",
+    "Ön Oksijen Sensörü (Lambda - G39) yaşlanması"
   ],
   "stepByStepSolution": [
-    "OBD-II tarayıcı ile arıza kodlarını doğrula ve dondurulmuş çerçeve (freeze frame) verilerini incele.",
-    "Motorun rölantide çalışırken veya duman testi ile vakum kaçaklarını kontrol et.",
-    "Kütle hava akış (MAF) sensörünün temizliğini ve voltaj değerlerini kontrol et, gerekirse temizle veya değiştir.",
-    "Banka 1'deki ısıtmalı oksijen (O2) sensörlerinin canlı verilerini (voltaj dalgalanmaları) izle.",
-    "Yakıt basıncını test et ve yakıt pompası ile yakıt filtresinin durumunu kontrol et.",
-    "Yakıt enjektörlerinin püskürtme modellerini ve tıkanıklıklarını kontrol et (gerekirse akış testi).",
-    "Egzoz sisteminde O2 sensörü öncesi kaçak olup olmadığını kontrol et.",
-    "Tüm hava emiş borularını, hortumları ve elektrik bağlantılarını görsel olarak incele.",
-    "Tespit edilen soruna göre onarımı yap ve arıza kodunu sil, sonra sürüş testi yaparak sistemin normale döndüğünden emin ol."
+    "1. Motor çalışırken duman test cihazı (Smoke Test) ile emme manifoldu ve PCV hattına duman verilerek kaçak bulunur.",
+    "2. Yağ kapağı açıldığında aşırı vakum çekişi varsa PCV karter havalandırma valfi yenilenir.",
+    "3. MAF sensör canlı değerleri rölantide ve 3000 devirde g/s cinsinden kontrol edilir.",
+    "4. Enjektör yakıt düzeltme (Fuel Trim) değerleri (STFT / LTFT) sıfırlanır."
   ],
-  "estimatedCostInfo": "Arızanın kaynağına bağlı olarak maliyet büyük ölçüde değişir. Basit bir vakum kaçağının onarımı düşük maliyetli olabilir (50-200 USD). MAF sensörü değişimi 150-500 USD, O2 sensörü değişimi 100-400 USD, yakıt pompası değişimi 300-1000 USD ve yakıt enjektörleri 200-800 USD (adet başına) veya daha fazlası olabilir. İşçilik süresi 1 saatten 4 saate kadar değişebilir.",
-  "videos": [
-    {
-      "title": "Check Engine Light? System Too Lean - Code P0171 or P0174 on Your Car or Truck",
-      "url": "https://www.youtube.com/watch?v=tPZb1uWu9oo",
-      "duration": 555,
-      "source": "YouTube",
-      "thumbnail": "https://i.ytimg.com/vi/tPZb1uWu9oo/hqdefault.jpg"
-    },
-    {
-      "title": "How to Fix P0171 Engine Code in 2 Minutes [2 DIY Methods / Only $8.37]",
-      "url": "https://www.youtube.com/watch?v=nZPJGtZxzko",
-      "duration": 114,
-      "source": "YouTube",
-      "thumbnail": "https://i.ytimg.com/vi/nZPJGtZxzko/hqdefault.jpg"
-    },
-    {
-      "title": "P0171 Code Explained: Causes, Diagnosis & Fix for Vacuum Leak / System Too Lean Bank 1",
-      "url": "https://www.youtube.com/watch?v=jJPIIW2dses",
-      "duration": 83,
-      "source": "YouTube",
-      "thumbnail": "https://i.ytimg.com/vi/jJPIIW2dses/hqdefault.jpg"
-    }
-  ]
+  "technicalNotes": "TFSI motorlarda PCV valfi yırtıldığında karterde yüksek vakum oluşur ve karter keçelerini öttürür. PCV değişimi ilk bakılması gereken yerdir."
 }

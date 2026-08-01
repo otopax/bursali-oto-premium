@@ -9,6 +9,7 @@
     "A6",
     "Q7",
     "Golf GTI",
+    "Passat CC",
     "Cayenne"
   ],
   "engines": [
@@ -17,24 +18,24 @@
     "3.0 TFSI",
     "3.2 FSI"
   ],
-  "severity": "Orta-Yüksek",
+  "severity": "Yüksek",
   "symptoms": [
-    "Motor rölantide sarsıntılı çalışıyor",
-    "Eksantrik zincirinden gürültü / şıkırtı sesi gelmesi",
-    "Motor arıza ışığı (Check Engine) yanması",
-    "Yakıt tüketiminde artış"
+    "Motor rölantide sarsıntılı ve dizel gibi sesli çalışıyor",
+    "İlk çalıştırmada eksantrik triger zincirinden şıkırtı / şakırtı sesi",
+    "Motor arıza ikaz ışığının (Check Engine) yanması",
+    "Alt devirlerde tork kaybı ve yakıt sarfiyatında artış"
   ],
   "commonCauses": [
-    "Vanos / N205 eksantrik ayar selenoid valfi arızası veya yağ kanallarının tıkanması",
-    "Eksantrik triger zincirinde uzama (stretch) veya gergide boşluk",
-    "Düşük motor yağ basıncı veya yanlış vizkozitede yağ kullanımı",
-    "Eksantrik mili konum sensörü (G40) arızası"
+    "Vanos / N205 eksantrik ayar selenoid valfi arızası veya yağ kanallarının çapakla tıkanması",
+    "Eksantrik triger zincirinde uzama (stretch) veya gergide kilit boşluğu",
+    "Düşük motor yağ basıncı veya yanlış vizkozitede motor yağı kullanımı",
+    "Eksantrik mili konum sensörü (G40) okuma sapması"
   ],
   "stepByStepSolution": [
-    "1. VCDS ile 091 ve 093 nolu kanallardan eksantrik açı değerleri (Phase Position) okunur (+/- 5 derece dışı zincir uzamasını gösterir).",
-    "2. N205 Vanos selenoid valfi sökülüp direnç ve mekanik takılma testi yapılır.",
-    "3. Motor yağ basıncı mekanik manometre ile sıcak motorda ölçülür.",
-    "4. Zincir uzamışsa triger zincir seti ve gergi bilyası orijinal parçayla yenilenir."
+    "1. VCDS ile 091 ve 093 nolu kanallardan eksantrik faz açısı (Phase Position) okunur (+/- 4 derece dışı zincir uzamasıdır).",
+    "2. N205 Vanos selenoid valfi sökülüp ohm ölçümü ve mekanik takılma testi yapılır.",
+    "3. Motor yağ basıncı sıcak motorda 2000 devirde manometre ile ölçülür (min 2.0 bar).",
+    "4. Zincir uzamışsa yenilenmiş revize triger zincir seti, gergisi ve paletleri orijinal yedek parçayla değiştirilir."
   ],
-  "technicalNotes": "1.8 ve 2.0 TFSI motorlarda 100.000 km üzeri zincir uzaması çok sık görülür. Şıkırtı sesi ihmal edilirse sente atlayarak supap eğilmesine sebep olur."
+  "technicalNotes": "1.8 ve 2.0 TFSI (EA888 Gen2/Gen3) motorlarda zincir uzaması 80.000 km sonrası sıktır. Şıkırtı sesi ihmal edilirse sente atlayıp piston supaba çarpar."
 }

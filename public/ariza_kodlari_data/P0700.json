@@ -1,0 +1,40 @@
+{
+  "code": "P0700",
+  "vagCode": "17084",
+  "title": "Şanzıman Kontrol Sistemi Arızası / DSG Mekatronik Arızası (Transmission Control System)",
+  "brand": "Audi / Volkswagen / SEAT / Skoda",
+  "models": [
+    "A3",
+    "A4",
+    "Golf",
+    "Passat",
+    "Polo",
+    "Leon",
+    "Octavia"
+  ],
+  "engines": [
+    "1.6 TDI DSG",
+    "1.4 TSI DSG",
+    "2.0 TDI DSG"
+  ],
+  "severity": "Kritik (Şanzıman Koruma Modu)",
+  "symptoms": [
+    "Gösterge panelinde PRNDS vites harflerinin yanıp sönmesi veya anahtar simgesi çıkması",
+    "Aracın tekli veya çiftli viteslere (1-3-5-7 veya 2-4-6-R) geçmemesi",
+    "Vites geçişlerinde şiddetli vuruntu, sarsıntı ve devir kaçırma",
+    "Aracın hareket etmemesi veya geriye takılamaması"
+  ],
+  "commonCauses": [
+    "DQ200 (7 İleri Kuru) DSG Mekatronik hidrolik tüp basınç plakası çatlaması",
+    "DQ250 / DQ500 (Islak) DSG şanzıman yağ kirliliği veya selonoid valf tıkanması",
+    "Mekatronik kartı (TCM) üzerindeki elektronik mikro işlemci veya hat yanması",
+    "Debriyaj / Kavrama balatası aşınması ve aralık toleransının bitmesi"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS / ODIS ile Şanzıman Beyni (02 Auto Trans) taranır, özel DSG arıza kodları (örn: P17BF / P1895) okunur.",
+    "2. DQ200 mekatronik hidrolik pompası canlı basınç değeri (42-60 bar) kontrol edilir.",
+    "3. Hidrolik tüp basınç plakasında kılcal çatlak veya yağ sızıntısı var ise revize çelik güçlendirilmiş tüp ve plaka takılır.",
+    "4. İşlem sonrası VCDS ile DSG Temel Ayar (Basic Settings) ve Adaptasyon Sürüşü gerçekleştirilir."
+  ],
+  "technicalNotes": "Bursalı Oto Servis bünyesinde DSG DQ200 mekatronik basınç tüpü çatlakları güçlendirilmiş çelik plakalar ile 2 yıl garantili olarak tamir edilmektedir."
+}

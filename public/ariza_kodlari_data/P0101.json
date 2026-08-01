@@ -1,0 +1,41 @@
+{
+  "code": "P0101",
+  "vagCode": "16485",
+  "title": "Kütle Hava Akış Sensörü (MAF G70) Devre Aralığı / Performans Sorunu",
+  "brand": "Audi / Volkswagen / SEAT / Skoda",
+  "models": [
+    "A3",
+    "A4",
+    "A6",
+    "Q5",
+    "Golf",
+    "Passat",
+    "Tiguan",
+    "Octavia"
+  ],
+  "engines": [
+    "1.6 TDI",
+    "2.0 TDI",
+    "2.0 TSI"
+  ],
+  "severity": "Orta",
+  "symptoms": [
+    "EPC / Motor arıza lambası yanması",
+    "Ani gaza basıldığında motorun boğulması ve siyah duman atması",
+    "Vites geçişlerinde silkeleme",
+    "Yakıt tüketiminin belirgin şekilde artması"
+  ],
+  "commonCauses": [
+    "MAF sensörü (G70) telinin yağ, toz veya karter buharıyla kirlenmesi",
+    "Hava filtresi kutusu ile turbo arasındaki hava hortumunda yırtık veya gevşek kelepçe",
+    "EGR valfinin açık kalması ve emmeye kaçak egzoz gazı vermesi",
+    "Sensör soketinde oksitlenme veya kablo tesisatı kopukluğu"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS ile 003 nolu gruptan beklenen MAF değeri ile gerçekleşen MAF değeri kıyaslanır.",
+    "2. Hava filtresi ve filtresiz hava emiş boruları fiziksel olarak incelenir.",
+    "3. MAF sensörü özel sensör temizleme spreyi ile temizlenir (yağlı kontak sprey kullanılmaz).",
+    "4. Düzelme olmazsa OEM Bosch / Continental sensör ile değişim yapılır."
+  ],
+  "technicalNotes": "Aşırı yağlanmış spor hava filtreleri (K&N vb.) MAF sensör telini yağlayarak P0101 kodunu tetikler."
+}
