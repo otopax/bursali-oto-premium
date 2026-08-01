@@ -88,6 +88,8 @@ export default async function RootLayout({ children, params }) {
     <html lang={locale} className={`${inter.variable}`}>
       <head>
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://static.cloudflareinsights.com" />
+        <link rel="dns-prefetch" href="https://static.cloudflareinsights.com" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="AI Agent Specification" />
         <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Full AI Agent Knowledge Base" />
         <script type="speculationrules" dangerouslySetInnerHTML={{
