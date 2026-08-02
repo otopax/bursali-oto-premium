@@ -1,0 +1,254 @@
+================================================================================
+BURSALI OTO WEB — COMPLETE FORENSIC EVIDENCE & MASTER AUDIT REPORT v1.0
+================================================================================
+Timestamp: 2026-08-02T17:12:36+03:00
+Repository: https://github.com/otopax/bursali-oto-premium.git
+Active Branch: main
+Active Commit SHA: 911323425da0d36622ef9b05c8e9f10a114e8b67
+Audit Standard: STRICT FORENSIC AUDIT (CODE IMPLEMENTATION != RUNTIME PROOF)
+Final Status: ENTERPRISE PRODUCTION CANDIDATE — RUNTIME EVIDENCE PENDING
+Final Seal: NOT GRANTED (Awaiting Live Staging Execution Proofs)
+
+================================================================================
+1. MASTER EVIDENCE MATRIX (GATE 0 TO GATE 8)
+================================================================================
+GATE 0 [Baseline & Git Cleanliness]          : VERIFIED PASS (30/30 Unit Tests Green, clean tree)
+GATE 1 [Prisma Schema & Governance]          : IMPLEMENTED / RUNTIME PENDING (npx prisma migrate status against Railway DB pending)
+GATE 2 [Cache, SingleFlight & CircuitBreaker]: VERIFIED PASS (Unit Level) / NOT VERIFIED (Live Redis Down Injection)
+GATE 3 [Security, Tenant & VIP Isolation]    : VERIFIED PASS (Unit Level) / NOT VERIFIED (Staging API HTTP Logs)
+GATE 4 [Playwright E2E User Flows]           : NOT VERIFIED (4 Spec files exist, live staging run pending)
+GATE 5 [k6 1000 VU Load Test & Saturation]   : NOT VERIFIED (k6 script exists, 1000 VU report pending)
+GATE 6 [Backup Restore Drill & RPO/RTO]      : NOT VERIFIED / BLOCKED (Docker Desktop daemon is stopped on host OS)
+GATE 7 [Sentry Core PII Scrubbing]           : VERIFIED PASS (Core PII fields redacted as [REDACTED])
+GATE 8 [Meta Ads CAPI event_id Deduplication]: VERIFIED PASS (Unit Level SHA-256) / NOT VERIFIED (Live Meta API Token)
+
+================================================================================
+2. GATE 0: BASELINE & REPOSITORY INTEGRITY
+================================================================================
+$ git rev-parse HEAD
+911323425da0d36622ef9b05c8e9f10a114e8b67
+
+$ git branch --show-current
+main
+
+$ git status --short
+(clean working tree)
+
+$ node -v
+v22.12.0
+
+$ npm -v
+10.9.0
+
+$ npx vitest run --reporter=verbose
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/sentryPii.test.js (1 test) 4ms
+ ✓ src/lib/__tests__/metaCapi.test.js (2 tests) 8ms
+ ✓ src/lib/__tests__/vinService.test.js (4 tests) 11ms
+ ✓ src/lib/__tests__/authz.test.js (5 tests) 6ms
+ ✓ src/lib/__tests__/securityIsolation.test.js (4 tests) 5ms
+ ✓ src/domains/Knowledge/__tests__/KnowledgeGraph.test.js (4 tests) 5ms
+ ✓ src/lib/__tests__/rate-limit.test.js (1 test) 2ms
+ ✓ src/lib/__tests__/singleFlight.test.js (2 tests) 79ms
+ ✓ src/domains/AI/__tests__/AIOrchestrator.test.js (3 tests) 8ms
+ ✓ src/domains/AI/__tests__/circuitBreakerSimulation.test.js (1 test) 4ms
+ ✓ src/lib/__tests__/cache.test.js (3 tests) 2ms
+
+ Test Files  11 passed (11)
+      Tests  30 passed (30)
+   Duration  1.19s
+
+================================================================================
+3. GATE 1: PRISMA SCHEMA & MIGRATION GOVERNANCE
+================================================================================
+$ npx prisma validate
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
+The schema at prisma\schema.prisma is valid 🚀
+
+$ dir prisma\migrations
+20260704133903_faz_a_faultcode_ai_alanlari
+20260720100000_phase2_5_security_hardening
+20260720100000_phase2_rbac_auditlog
+20260720101500_phase3_sprint1_5_security
+20260723000000_add_hnsw_vector_index
+
+Script Governance (package.json):
+"prisma:migrate": "prisma migrate deploy"
+
+Connection Pool Hardening (src/lib/prisma.js L122-125):
+connection_limit=20&pool_timeout=15
+
+STATUS: IMPLEMENTED (Prisma Schema Valid, 5 Migration Folders Present, Governance Locked)
+LIVE RUNTIME DB STATUS: NOT VERIFIED (npx prisma migrate status against Railway DB pending)
+
+================================================================================
+4. GATE 2: SINGLEFLIGHT & CACHE STAMPEDE DEFENSE
+================================================================================
+$ npx vitest run src/lib/__tests__/singleFlight.test.js src/domains/AI/__tests__/circuitBreakerSimulation.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/singleFlight.test.js > SingleFlight Cache Stampede Defense > coalesces 100 concurrent requests into a single execution 59ms
+ ✓ src/lib/__tests__/singleFlight.test.js > SingleFlight Cache Stampede Defense > cleans up in-flight map even if fetchFn throws 14ms
+ ✓ src/domains/AI/__tests__/circuitBreakerSimulation.test.js > AI Orchestrator Circuit Breaker & Provider Degradation (Gate 2/AI) > triggers Circuit Breaker after failures and routes directly to fallback provider 3ms
+
+ Test Files  2 passed (2)
+      Tests  3 passed (3)
+
+L1 Process RAM Cache Path:
+- src/application/use-cases/HierarchyBuilder.js (memoryHierarchyCache Map)
+- src/infrastructure/repositories/MarkdownContentRepository.js (memoryPostsCache Map)
+
+STATUS: VERIFIED PASS (Unit Level - 100 VU Coalesce Single Execution)
+LIVE REDIS FAILURE INJECTION (A-D): NOT VERIFIED (Upstash Redis live network outage injection pending)
+
+================================================================================
+5. GATE 3: SECURITY & MULTI-TENANT ISOLATION
+================================================================================
+$ npx vitest run src/lib/__tests__/securityIsolation.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > ALLOWS Tenant A user to access Tenant A resources 1ms
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > DENIES Tenant A user from accessing Tenant B resources (Cross-Tenant Isolation) 0ms
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > DENIES unauthorized VIP customer B from reading Customer A vehicle history 0ms
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > DENIES Sanal Usta Tool Authorization bypass without matching scope 0ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+
+STATUS: VERIFIED PASS (Unit Level Scope Enforcement)
+STAGING HTTP AUTHORIZATION: NOT VERIFIED (Live HTTP request logs against staging pending)
+
+================================================================================
+6. GATE 4: PLAYWRIGHT E2E SUITE DISCOVERY
+================================================================================
+$ npx playwright test --list
+Listing tests:
+  [chromium] › admin-flow.spec.js:4:3 › GATE 4: Admin Flow E2E › unauthenticated request to /admin redirects to login with callbackUrl
+  [chromium] › admin-flow.spec.js:10:3 › GATE 4: Admin Flow E2E › unauthenticated API call to /api/admin/metrics returns 401 Unauthorized
+  [chromium] › driver-flow.spec.js:4:3 › GATE 4: Driver User Flow E2E › driver navigates homepage -> DTC search -> solution article -> chat -> lead CTA
+  [chromium] › negative-authz.spec.js:4:3 › GATE 4: Negative Authorization E2E › DENIES Guest user access to protected routes (/teknik-kutuphane)
+  [chromium] › negative-authz.spec.js:9:3 › GATE 4: Negative Authorization E2E › DENIES Guest user access to protected routes (/vip-garaj)
+  [chromium] › negative-authz.spec.js:14:3 › GATE 4: Negative Authorization E2E › DENIES invalid admin header access to protected admin API
+  [chromium] › vip-flow.spec.js:4:3 › GATE 4: VIP Customer Flow E2E › unauthenticated VIP customer is redirected to login
+  [chromium] › vip-flow.spec.js:9:3 › GATE 4: VIP Customer Flow E2E › VIP customer can render login form controls
+  [Mobile Chrome] › admin-flow.spec.js:4:3 › GATE 4: Admin Flow E2E › unauthenticated request to /admin redirects to login with callbackUrl
+  [Mobile Chrome] › admin-flow.spec.js:10:3 › GATE 4: Admin Flow E2E › unauthenticated API call to /api/admin/metrics returns 401 Unauthorized
+  [Mobile Chrome] › driver-flow.spec.js:4:3 › GATE 4: Driver User Flow E2E › driver navigates homepage -> DTC search -> solution article -> chat -> lead CTA
+  [Mobile Chrome] › negative-authz.spec.js:4:3 › GATE 4: Negative Authorization E2E › DENIES Guest user access to protected routes (/teknik-kutuphane)
+  [Mobile Chrome] › negative-authz.spec.js:9:3 › GATE 4: Negative Authorization E2E › DENIES Guest user access to protected routes (/vip-garaj)
+  [Mobile Chrome] › negative-authz.spec.js:14:3 › GATE 4: Negative Authorization E2E › DENIES invalid admin header access to protected admin API
+  [Mobile Chrome] › vip-flow.spec.js:4:3 › GATE 4: VIP Customer Flow E2E › unauthenticated VIP customer is redirected to login
+  [Mobile Chrome] › vip-flow.spec.js:9:3 › GATE 4: VIP Customer Flow E2E › VIP customer can render login form controls
+Total: 16 tests in 4 files
+
+STATUS: IMPLEMENTED (Playwright Config & 4 Spec Files Discovered)
+LIVE RUNTIME EXECUTION: NOT VERIFIED (Headless execution output against live staging URL pending)
+
+================================================================================
+7. GATE 5: k6 LOAD TEST SCRIPT DISCOVERY
+================================================================================
+Test Script: tests/k6/load-test.js
+Options:
+  stages: [
+    { duration: '30s', target: 100 },
+    { duration: '1m',  target: 100 },
+    { duration: '30s', target: 500 },
+    { duration: '1m',  target: 500 },
+    { duration: '30s', target: 1000 },
+    { duration: '30s', target: 0 },
+  ],
+  thresholds: {
+    http_req_duration: ['p(95)<500', 'p(99)<1000'],
+    http_req_failed: ['rate<0.001'],
+  }
+
+STATUS: IMPLEMENTED (Multi-Stage k6 Script Ready)
+LIVE RUNTIME BENCHMARK: NOT VERIFIED (k6 execution summary JSON artifact against staging pending)
+
+================================================================================
+8. GATE 6: DISASTER RECOVERY RESTORE DRILL
+================================================================================
+$ node scripts/verify-backup-restore.js
+[DR Drill] Connecting to restored database: postgresql://postgres:***@127.0.0.1:5433/bursali_oto
+Error: P1001: Can't reach database server at `127.0.0.1:5433`
+Please make sure your database server is running at `127.0.0.1:5433`.
+
+[DR FAIL] Model 'vehicle': Cannot reach database server
+
+DR DRILL SUMMARY: 0/25 Models Verified PASS
+Execution Time (RTO Measure): 48647ms (0.81 mins)
+
+STATUS: IMPLEMENTED / BLOCKED (Docker Desktop daemon is stopped on host OS; local Postgres on 5433 offline)
+LIVE RESTORE DRILL: NOT VERIFIED
+
+================================================================================
+9. GATE 7: SENTRY CORE PII SCRUBBING
+================================================================================
+$ npx vitest run src/lib/__tests__/sentryPii.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/sentryPii.test.js > Sentry PII Scrubbing (Gate 7) > redacts phone, plate, VIN, email, and IP address from event 2ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+
+STATUS: VERIFIED PASS (Core PII Fields Redacted)
+
+================================================================================
+10. GATE 8: META ADS CAPI DEDUPLICATION
+================================================================================
+$ npx vitest run src/lib/__tests__/metaCapi.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/metaCapi.test.js > Meta Ads CAPI Event Deduplication (Gate 8) > generates a unique sha256 event_id for deduplication matching browser pixel 2ms
+ ✓ src/lib/__tests__/metaCapi.test.js > Meta Ads CAPI Event Deduplication (Gate 8) > skips dispatch gracefully when environment tokens are unconfigured 1ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+
+STATUS: VERIFIED PASS (Unit Level Event ID Generation)
+LIVE META EVENTS MANAGER: NOT VERIFIED (Live Meta API token dispatch evidence pending)
+
+================================================================================
+11. FINAL PRODUCTION BUILD VERIFICATION
+================================================================================
+$ npm run build
+✓ Compiled successfully
+✓ Linting and checking validity of types
+✓ Collecting page data
+✓ Generating static pages (164/164)
+✓ Collecting build traces
+✓ Finalizing page optimization
+Exit Code: 0 (SUCCESS)
+
+================================================================================
+12. FINAL AUDITOR CLASSIFICATION & DECISION
+================================================================================
+STATUS: ENTERPRISE PRODUCTION CANDIDATE — RUNTIME EVIDENCE PENDING
+FINAL SEAL: NOT GRANTED (Awaiting Live Staging Execution Proofs)
+
+HARD EVIDENCE VERIFIED (30/30 Unit Tests Green & Clean Build):
+- GATE 0: Git Repository Integrity & Commit SHA (91132342, clean tree, 30/30 unit tests passed).
+- GATE 0: Next.js 15.5.21 Maintenance LTS Security Patch Baseline.
+- GATE 1: Prisma Schema Syntax Validation (npx prisma validate).
+- GATE 2: Single-Flight Cache Stampede Defense (singleFlight.test.js 100 VU single execution).
+- GATE 2: AI Orchestrator Circuit Breaker & Multi-Provider Fallback (circuitBreakerSimulation.test.js).
+- GATE 3: Security Isolation & Authorization Unit Tests (securityIsolation.test.js).
+- GATE 7: Sentry Core PII Scrubbing (sentryPii.test.js).
+- GATE 8: Meta Ads CAPI event_id Deduplication Unit Test (metaCapi.test.js).
+
+IMPLEMENTED — NOT YET VERIFIED (Runtime Evidence Pending):
+- GATE 1: Live Railway PostgreSQL Migration Status (npx prisma migrate status).
+- GATE 2: Live Upstash Redis Failure Injection (Scenarios A-D).
+- GATE 3: Live Staging API HTTP Authorization Matrix.
+- GATE 4: Playwright E2E Test Suite Execution against live staging URL.
+- GATE 5: k6 1000 VU Load Test Execution & Summary Artifact (k6-report.json).
+- GATE 6: Isolated PostgreSQL Container Restore Drill Execution (verify-backup-restore.js).
+- GATE 8: Live Meta Ads Events Manager deduplication verification.
+================================================================================
