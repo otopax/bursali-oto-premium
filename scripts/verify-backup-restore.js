@@ -21,7 +21,7 @@ async function verifyBackupRestore() {
 
   const models = [
     'tenant', 'tenantUser', 'user', 'subscriptionTier', 'apiKey', 'auditLog',
-    'manufacturer', 'vehicle', 'engine', 'ecu', 'sensor', 'faultCode',
+    'manufacturer', 'vehicle', 'engine', 'eCU', 'sensor', 'faultCode',
     'repairVideo', 'part', 'fuseBox', 'fuse', 'customer', 'customerVehicle',
     'workOrder', 'workOrderItem', 'serviceHistory', 'diagnosticLog',
     'socialLead', 'vectorEmbedding', 'semanticCache'
