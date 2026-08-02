@@ -28,6 +28,12 @@ const defaultQueueOptions = {
  * Includes DLQ (Dead Letter Queue) support.
  */
 export function createQueue(queueName) {
+  if (!redisConnection) {
+    return {
+      add: async () => console.warn(`[Queue][${queueName}] Redis unavailable, skipping job enqueue.`),
+      close: async () => {}
+    };
+  }
   return new Queue(queueName, defaultQueueOptions);
 }
 
@@ -35,6 +41,14 @@ export function createQueue(queueName) {
  * Creates an Enterprise Grade Worker with Error Tracking and Poison Queue handling.
  */
 export function createWorker(queueName, processor, options = {}) {
+  if (!redisConnection) {
+    console.warn(`[Worker][${queueName}] Redis connection unavailable. Worker running in standby mode.`);
+    return {
+      close: async () => {},
+      on: () => {}
+    };
+  }
+
   const worker = new Worker(queueName, async (job) => {
     // Idempotency check can be handled by job.id
     console.log(`[Worker][${queueName}] Processing Job: ${job.id} - Attempt: ${job.attemptsMade + 1}`);
@@ -71,9 +85,13 @@ export function createWorker(queueName, processor, options = {}) {
 export async function gracefulShutdown(workers) {
   console.log('Shutting down workers gracefully...');
   for (const worker of workers) {
-    await worker.close();
+    if (worker && typeof worker.close === 'function') {
+      await worker.close();
+    }
   }
-  await redisConnection.quit();
+  if (redisConnection && typeof redisConnection.quit === 'function') {
+    await redisConnection.quit();
+  }
   console.log('Workers stopped.');
   process.exit(0);
 }
