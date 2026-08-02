@@ -86,6 +86,7 @@ function LoginForm() {
               style={styles.input}
               placeholder="admin@bursalioto.com"
               autoComplete="email"
+              data-testid="login-email-input"
             />
           </div>
         </div>

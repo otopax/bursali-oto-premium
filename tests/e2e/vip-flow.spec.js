@@ -8,7 +8,7 @@ test.describe('GATE 4: VIP Customer Flow E2E', () => {
 
   test('VIP customer can render login form controls', async ({ page }) => {
     await page.goto('/tr/login');
-    const emailInput = page.locator('input[type="email"], input[name="email"], input[name="phone"]');
-    await expect(emailInput.first()).toBeVisible();
+    const emailInput = page.getByPlaceholder('admin@bursalioto.com');
+    await expect(emailInput).toBeVisible();
   });
 });
