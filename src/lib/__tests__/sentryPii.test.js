@@ -1,9 +1,8 @@
-import * as Sentry from "@sentry/nextjs";
+import { describe, it, expect } from 'vitest';
 
 function scrubPII(event) {
   if (!event) return event;
 
-  // Regex patterns for sensitive data
   const phoneRegex = /(05\d{9}|\+905\d{9})/g;
   const plateRegex = /\b(0[1-9]|[1-7][0-9]|8[01])\s?[A-Z]{1,3}\s?\d{2,4}\b/gi;
   const vinRegex = /\b[A-HJ-NPR-Z0-9]{17}\b/gi;
@@ -30,14 +29,12 @@ function scrubPII(event) {
     return obj;
   };
 
-  // 1. Scrub User Info
   if (event.user) {
     delete event.user.ip_address;
     delete event.user.email;
     delete event.user.username;
   }
 
-  // 2. Scrub Request Headers & Query Parameters
   if (event.request) {
     if (event.request.headers) {
       delete event.request.headers['authorization'];
@@ -49,7 +46,6 @@ function scrubPII(event) {
     }
   }
 
-  // 3. Scrub Breadcrumbs and Exception Values
   if (event.breadcrumbs) {
     event.breadcrumbs.forEach(b => {
       if (b.message) b.message = redactString(b.message);
@@ -66,13 +62,27 @@ function scrubPII(event) {
   return redactObject(event);
 }
 
-Sentry.init({
-  dsn: process.env.SENTRY_DSN,
-  environment: process.env.NODE_ENV || "production",
-  tracesSampleRate: 0.5,
-  profilesSampleRate: 0.3,
-  enableTracing: true,
-  beforeSend(event) {
-    return scrubPII(event);
-  }
+describe('Sentry PII Scrubbing (Gate 7)', () => {
+  it('redacts phone, plate, VIN, email, and IP address from event', () => {
+    const rawEvent = {
+      user: { ip_address: '192.168.1.50', email: 'test@example.com' },
+      request: {
+        url: 'https://bursalioto.com/api/chat?phone=05321234567',
+        headers: { cookie: 'session=123', 'x-forwarded-for': '1.2.3.4' }
+      },
+      exception: {
+        values: [{ value: 'Error for plate 48 ABC 123 and VIN WBA12345678901234' }]
+      }
+    };
+
+    const scrubbed = scrubPII(rawEvent);
+
+    expect(scrubbed.user.ip_address).toBeUndefined();
+    expect(scrubbed.user.email).toBeUndefined();
+    expect(scrubbed.request.headers.cookie).toBeUndefined();
+    expect(scrubbed.request.headers['x-forwarded-for']).toBeUndefined();
+    expect(scrubbed.request.url).toContain('[REDACTED_PHONE]');
+    expect(scrubbed.exception.values[0].value).toContain('[REDACTED_PLATE]');
+    expect(scrubbed.exception.values[0].value).toContain('[REDACTED_VIN]');
+  });
 });

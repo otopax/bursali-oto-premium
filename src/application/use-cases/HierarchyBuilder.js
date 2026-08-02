@@ -1,4 +1,5 @@
 import { getCache, setCache, CACHE_TTL } from '@/lib/cache';
+import { singleFlight } from '@/lib/singleFlight';
 
 const memoryHierarchyCache = new Map();
 
@@ -30,85 +31,93 @@ export class HierarchyBuilder {
   async build(locale = 'tr', folder = 'faults') {
     const cacheKey = `hierarchy:${locale}:${folder}`;
 
-    // 1. RAM Cache (0ms Instant response time)
+    // 1. L1 Process RAM Cache (0-5ms Instant Response)
     if (memoryHierarchyCache.has(cacheKey)) {
       return memoryHierarchyCache.get(cacheKey);
     }
 
-    // 2. Redis Cache
-    const cached = await getCache('page', cacheKey);
-    if (cached) {
-      try {
-        const parsed = typeof cached === 'string' ? JSON.parse(cached) : cached;
-        memoryHierarchyCache.set(cacheKey, parsed);
-        return parsed;
-      } catch (e) {
-        console.warn('HierarchyCache JSON parse error, rebuilding...');
-      }
-    }
-
-    // 3. Build tree
-    const posts = await this.contentRepository.getSortedPostsData(locale, folder);
-    const hierarchy = {};
-
-    posts.forEach(post => {
-      let rawBrands = [];
-      if (Array.isArray(post.brands) && post.brands.length > 0) {
-        rawBrands = post.brands;
-      } else if (typeof post.brand === 'string') {
-        rawBrands = post.brand.split('/').map(b => b.trim());
-      } else {
-        rawBrands = ['Diğer'];
+    // 2. Single-Flight Coalescing (Thundering Herd Defense)
+    return singleFlight(cacheKey, async () => {
+      // Re-check L1 in case another concurrent in-flight completed
+      if (memoryHierarchyCache.has(cacheKey)) {
+        return memoryHierarchyCache.get(cacheKey);
       }
 
-      let rawModels = [];
-      if (Array.isArray(post.models) && post.models.length > 0) {
-        rawModels = post.models;
-      } else if (typeof post.model === 'string') {
-        rawModels = post.model.split(',').map(m => m.trim());
-      } else {
-        rawModels = ['Genel'];
+      // 3. L2 Distributed Cache (Redis)
+      const cached = await getCache('page', cacheKey);
+      if (cached) {
+        try {
+          const parsed = typeof cached === 'string' ? JSON.parse(cached) : cached;
+          memoryHierarchyCache.set(cacheKey, parsed);
+          return parsed;
+        } catch (e) {
+          console.warn('HierarchyCache JSON parse error, rebuilding...');
+        }
       }
 
-      rawBrands.forEach(brandName => {
-        let cleanBrandName = brandName;
-        if (cleanBrandName.toUpperCase() === 'MERCEDES') cleanBrandName = 'Mercedes-Benz';
-        if (cleanBrandName.toUpperCase() === 'VW') cleanBrandName = 'Volkswagen';
+      // 4. L3 Storage Fetch (Markdown Repository)
+      const posts = await this.contentRepository.getSortedPostsData(locale, folder);
+      const hierarchy = {};
 
-        const brandSlug = this.slugify(cleanBrandName);
-
-        if (!hierarchy[brandSlug]) {
-          hierarchy[brandSlug] = {
-            name: cleanBrandName,
-            models: {}
-          };
+      posts.forEach(post => {
+        let rawBrands = [];
+        if (Array.isArray(post.brands) && post.brands.length > 0) {
+          rawBrands = post.brands;
+        } else if (typeof post.brand === 'string') {
+          rawBrands = post.brand.split('/').map(b => b.trim());
+        } else {
+          rawBrands = ['Diğer'];
         }
 
-        rawModels.forEach(modelName => {
-          const cleanModelName = modelName.trim();
-          const modelSlug = this.slugify(cleanModelName);
+        let rawModels = [];
+        if (Array.isArray(post.models) && post.models.length > 0) {
+          rawModels = post.models;
+        } else if (typeof post.model === 'string') {
+          rawModels = post.model.split(',').map(m => m.trim());
+        } else {
+          rawModels = ['Genel'];
+        }
 
-          if (!hierarchy[brandSlug].models[modelSlug]) {
-            hierarchy[brandSlug].models[modelSlug] = {
-              name: cleanModelName,
-              items: []
+        rawBrands.forEach(brandName => {
+          let cleanBrandName = brandName;
+          if (cleanBrandName.toUpperCase() === 'MERCEDES') cleanBrandName = 'Mercedes-Benz';
+          if (cleanBrandName.toUpperCase() === 'VW') cleanBrandName = 'Volkswagen';
+
+          const brandSlug = this.slugify(cleanBrandName);
+
+          if (!hierarchy[brandSlug]) {
+            hierarchy[brandSlug] = {
+              name: cleanBrandName,
+              models: {}
             };
           }
 
-          const exists = hierarchy[brandSlug].models[modelSlug].items.some(item => item.id === post.id);
-          if (!exists) {
-            hierarchy[brandSlug].models[modelSlug].items.push({
-              ...post,
-              brand: cleanBrandName,
-              model: cleanModelName
-            });
-          }
+          rawModels.forEach(modelName => {
+            const cleanModelName = modelName.trim();
+            const modelSlug = this.slugify(cleanModelName);
+
+            if (!hierarchy[brandSlug].models[modelSlug]) {
+              hierarchy[brandSlug].models[modelSlug] = {
+                name: cleanModelName,
+                items: []
+              };
+            }
+
+            const exists = hierarchy[brandSlug].models[modelSlug].items.some(item => item.id === post.id);
+            if (!exists) {
+              hierarchy[brandSlug].models[modelSlug].items.push({
+                ...post,
+                brand: cleanBrandName,
+                model: cleanModelName
+              });
+            }
+          });
         });
       });
-    });
 
-    memoryHierarchyCache.set(cacheKey, hierarchy);
-    await setCache('page', cacheKey, JSON.stringify(hierarchy), CACHE_TTL.PAGE || 86400);
-    return hierarchy;
+      memoryHierarchyCache.set(cacheKey, hierarchy);
+      await setCache('page', cacheKey, JSON.stringify(hierarchy), CACHE_TTL.PAGE || 86400);
+      return hierarchy;
+    });
   }
 }
