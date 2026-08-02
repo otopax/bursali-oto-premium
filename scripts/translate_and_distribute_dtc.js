@@ -2,29 +2,72 @@ import fs from 'fs';
 import path from 'path';
 
 /**
- * MASTER VAG DTC TRANSLATOR & STRICT BRAND-MODEL DISTRIBUTOR
- * 1. Tüm VAG DTC JSON dosyalarındaki İngilizce metinleri %100 kusursuz Türkçe otomotiv diline çevirir.
- * 2. Modelleri SADECE ait oldukları ana markalara bağlar (Golf -> VW, A4 -> Audi, Leon -> SEAT, Octavia -> Skoda, Cayenne -> Porsche).
+ * MASTER VAG DTC TRANSLATOR & STRICT CANONICAL BRAND-MODEL DISTRIBUTOR
+ * 1. Translates all English text into automotive Turkish.
+ * 2. Normalizes fragmented model names (e.g. "VW Golf Mk4 GTI" -> "Golf", "VW Passat B6..." -> "Passat").
+ * 3. STRICTLY maps models ONLY to their legitimate parent brand:
+ *    - Cayenne, Macan, Panamera, 911, Taycan -> ONLY Porsche
+ *    - Golf, Passat, Jetta, Tiguan, Polo, Arteon, Touareg, Transporter, Caddy, Amarok, Scirocco, Bora -> ONLY Volkswagen
+ *    - A1, A3, A4, A5, A6, A7, A8, Q3, Q5, Q7, Q8, TT -> ONLY Audi
+ *    - Leon, Ibiza, Ateca, Arona, Tarraco -> ONLY SEAT
+ *    - Octavia, Superb, Kodiaq, Karoq, Fabia, Scala -> ONLY Skoda
  */
 
 const DATA_DIR = path.join(process.cwd(), 'public', 'ariza_kodlari_data');
 
-const BRAND_MODELS_MAP = {
-  'Volkswagen': ['Passat', 'Golf', 'Tiguan', 'Polo', 'Arteon', 'Touareg', 'Transporter', 'Caddy', 'Amarok', 'Scirocco', 'Jetta'],
-  'Audi': ['A3', 'A4', 'A5', 'A6', 'A7', 'A8', 'Q3', 'Q5', 'Q7', 'Q8', 'TT'],
-  'SEAT': ['Leon', 'Ibiza', 'Ateca', 'Arona', 'Tarraco'],
-  'Skoda': ['Octavia', 'Superb', 'Kodiaq', 'Karoq', 'Fabia', 'Scala'],
-  'Porsche': ['Cayenne', 'Macan', 'Panamera', '911', 'Taycan']
-};
+// Canonical model-to-brand dictionary
+const CANONICAL_MODELS = [
+  // Porsche
+  { keywords: ['CAYENNE'], brand: 'Porsche', canonicalModel: 'Cayenne' },
+  { keywords: ['MACAN'], brand: 'Porsche', canonicalModel: 'Macan' },
+  { keywords: ['PANAMERA'], brand: 'Porsche', canonicalModel: 'Panamera' },
+  { keywords: ['911'], brand: 'Porsche', canonicalModel: '911' },
+  { keywords: ['TAYCAN'], brand: 'Porsche', canonicalModel: 'Taycan' },
 
-const MODEL_TO_BRAND = {};
-Object.entries(BRAND_MODELS_MAP).forEach(([brand, models]) => {
-  models.forEach(model => {
-    MODEL_TO_BRAND[model.toUpperCase()] = brand;
-  });
-});
+  // Audi
+  { keywords: ['A1'], brand: 'Audi', canonicalModel: 'A1' },
+  { keywords: ['A3', '8P', '8V', '8L'], brand: 'Audi', canonicalModel: 'A3' },
+  { keywords: ['A4', 'B5', 'B6', 'B7', 'B8', 'B9'], brand: 'Audi', canonicalModel: 'A4' },
+  { keywords: ['A5'], brand: 'Audi', canonicalModel: 'A5' },
+  { keywords: ['A6', 'C5', 'C6', 'C7', 'C8'], brand: 'Audi', canonicalModel: 'A6' },
+  { keywords: ['A7'], brand: 'Audi', canonicalModel: 'A7' },
+  { keywords: ['A8', 'D2', 'D3', 'D4', 'D5'], brand: 'Audi', canonicalModel: 'A8' },
+  { keywords: ['Q3'], brand: 'Audi', canonicalModel: 'Q3' },
+  { keywords: ['Q5'], brand: 'Audi', canonicalModel: 'Q5' },
+  { keywords: ['Q7'], brand: 'Audi', canonicalModel: 'Q7' },
+  { keywords: ['Q8'], brand: 'Audi', canonicalModel: 'Q8' },
+  { keywords: ['AUDI TT', ' TT '], brand: 'Audi', canonicalModel: 'TT' },
 
-// Kapsamlı İngilizce -> Türkçe Otomotiv Çeviri Sözlüğü
+  // SEAT
+  { keywords: ['LEON'], brand: 'SEAT', canonicalModel: 'Leon' },
+  { keywords: ['IBIZA'], brand: 'SEAT', canonicalModel: 'Ibiza' },
+  { keywords: ['ATECA'], brand: 'SEAT', canonicalModel: 'Ateca' },
+  { keywords: ['ARONA'], brand: 'SEAT', canonicalModel: 'Arona' },
+  { keywords: ['TARRACO'], brand: 'SEAT', canonicalModel: 'Tarraco' },
+
+  // Skoda
+  { keywords: ['OCTAVIA'], brand: 'Skoda', canonicalModel: 'Octavia' },
+  { keywords: ['SUPERB'], brand: 'Skoda', canonicalModel: 'Superb' },
+  { keywords: ['KODIAQ'], brand: 'Skoda', canonicalModel: 'Kodiaq' },
+  { keywords: ['KAROQ'], brand: 'Skoda', canonicalModel: 'Karoq' },
+  { keywords: ['FABIA'], brand: 'Skoda', canonicalModel: 'Fabia' },
+  { keywords: ['SCALA'], brand: 'Skoda', canonicalModel: 'Scala' },
+
+  // Volkswagen
+  { keywords: ['PASSAT'], brand: 'Volkswagen', canonicalModel: 'Passat' },
+  { keywords: ['GOLF'], brand: 'Volkswagen', canonicalModel: 'Golf' },
+  { keywords: ['JETTA'], brand: 'Volkswagen', canonicalModel: 'Jetta' },
+  { keywords: ['TIGUAN'], brand: 'Volkswagen', canonicalModel: 'Tiguan' },
+  { keywords: ['POLO'], brand: 'Volkswagen', canonicalModel: 'Polo' },
+  { keywords: ['ARTEON'], brand: 'Volkswagen', canonicalModel: 'Arteon' },
+  { keywords: ['TOUAREG'], brand: 'Volkswagen', canonicalModel: 'Touareg' },
+  { keywords: ['TRANSPORTER', 'MULTIVAN', 'CARAVELLE', 'T5', 'T6'], brand: 'Volkswagen', canonicalModel: 'Transporter' },
+  { keywords: ['CADDY'], brand: 'Volkswagen', canonicalModel: 'Caddy' },
+  { keywords: ['AMAROK'], brand: 'Volkswagen', canonicalModel: 'Amarok' },
+  { keywords: ['SCIROCCO'], brand: 'Volkswagen', canonicalModel: 'Scirocco' },
+  { keywords: ['BORA'], brand: 'Volkswagen', canonicalModel: 'Bora' },
+];
+
 const DICTIONARY = [
   { en: /Control Module faulty/gi, tr: 'Kontrol Modülü / Elektronik Beyin (ECU/TCM) Donanımsal Arızalı' },
   { en: /Control Module Software Issue/gi, tr: 'Kontrol Modülü Yazılım / Kalibrasyon Güncelleme Hatası' },
@@ -73,22 +116,12 @@ const DICTIONARY = [
   { en: /Range\/Performance/gi, tr: 'Çalışma Toleransı / Performans Hatası' },
   { en: /Supply Voltage/gi, tr: 'Besleme Gerilimi / Voltajı' },
   { en: /Signal Too Low/gi, tr: 'Sinyal Gerilimi Çok Düşük' },
-  { en: /Signal Too High/gi, tr: 'Sinyal Gerilimi Çok Yüksek' },
+  { en: /Signal Too High/gi, tr: 'Sinyal Gerilimi Yüksek' },
   { en: /Check /gi, tr: 'Kontrol edin: ' },
   { en: /Replace /gi, tr: 'Değiştirin / Yenileyin: ' },
   { en: /Perform /gi, tr: 'Gerçekleştirin: ' },
-  { en: /Adaptasyon \/ Kalibrasyon Yapın:/gi, tr: 'Adaptasyon ve Kalibrasyon:' },
   { en: /VAG Grubu Özel Servis ve Kronik Notları/gi, tr: 'VAG Grubu Teknik Servis Notları' },
-  { en: /Details for/gi, tr: 'Şu araç için detaylar:' },
-  { en: /Intake/gi, tr: 'Emme' },
-  { en: /Disconnecting/gi, tr: 'Tahliye / Kesme' },
-  { en: /Valves/gi, tr: 'Valfleri' },
-  { en: /Brake/gi, tr: 'Fren' },
-  { en: /Electronics/gi, tr: 'Elektroniği' },
-  { en: /Control Module/gi, tr: 'Kontrol Modülü' },
-  { en: /Hydraulics Unit/gi, tr: 'Hidrolik Ünitesi' },
-  { en: /Instrument Cluster/gi, tr: 'Gösterge Paneli' },
-  { en: /Automatic Roof/gi, tr: 'Otomatik Tente' }
+  { en: /Details for/gi, tr: 'Şu araç için detaylar:' }
 ];
 
 function translateString(str) {
@@ -100,35 +133,38 @@ function translateString(str) {
   return text;
 }
 
-// Marka ve Modelleri Sıkı Hiyerarşi ile Eşleştirme
-function detectBrandsAndModels(text) {
+function detectStrictBrandsAndModels(text) {
   const textUpper = text.toUpperCase();
 
-  const brands = new Set();
-  const models = new Set();
+  const brandMap = new Map(); // brand -> Set of canonical models
 
-  // Model bazlı hassas eşleştirme
-  Object.keys(MODEL_TO_BRAND).forEach(modelKey => {
-    if (textUpper.includes(modelKey)) {
-      const parentBrand = MODEL_TO_BRAND[modelKey];
-      brands.add(parentBrand);
-      // Modeli düzgün camel-case ismiyle ekle
-      const originalModelName = BRAND_MODELS_MAP[parentBrand].find(m => m.toUpperCase() === modelKey);
-      if (originalModelName) models.add(originalModelName);
+  CANONICAL_MODELS.forEach(({ keywords, brand, canonicalModel }) => {
+    const matches = keywords.some(kw => textUpper.includes(kw));
+    if (matches) {
+      if (!brandMap.has(brand)) {
+        brandMap.set(brand, new Set());
+      }
+      brandMap.get(brand).add(canonicalModel);
     }
   });
 
-  // Eğer hiçbir özel model bulunamadıysa varsayılan VAG modellerine dağıt
-  if (models.size === 0) {
-    Object.entries(BRAND_MODELS_MAP).forEach(([brand, defaultModels]) => {
-      brands.add(brand);
-      defaultModels.slice(0, 2).forEach(m => models.add(m)); // Her markanın ilk 2 ana modelini ekle
-    });
+  // Default fallback if no specific model was mentioned in the text
+  if (brandMap.size === 0) {
+    brandMap.set('Volkswagen', new Set(['Passat', 'Golf']));
+    brandMap.set('Audi', new Set(['A4', 'A6']));
+    brandMap.set('SEAT', new Set(['Leon']));
+    brandMap.set('Skoda', new Set(['Octavia']));
   }
 
+  const brands = Array.from(brandMap.keys());
+  const allModels = new Set();
+  brandMap.forEach((modelSet) => {
+    modelSet.forEach(m => allModels.add(m));
+  });
+
   return {
-    brands: Array.from(brands),
-    models: Array.from(models)
+    brands,
+    models: Array.from(allModels)
   };
 }
 
@@ -139,15 +175,15 @@ function processFile(filePath) {
 
     const fullText = JSON.stringify(data);
 
-    // Çeviri
+    // Translation
     if (data.title) data.title = translateString(data.title);
     if (Array.isArray(data.symptoms)) data.symptoms = data.symptoms.map(translateString);
     if (Array.isArray(data.commonCauses)) data.commonCauses = data.commonCauses.map(translateString);
     if (Array.isArray(data.stepByStepSolution)) data.stepByStepSolution = data.stepByStepSolution.map(translateString);
     if (data.technicalNotes) data.technicalNotes = translateString(data.technicalNotes);
 
-    // Sıkı Hiyerarşili Dağıtım
-    const distribution = detectBrandsAndModels(fullText);
+    // Detect strict brands and canonical models
+    const distribution = detectStrictBrandsAndModels(fullText);
     data.brands = distribution.brands;
     data.models = distribution.models;
 
@@ -162,7 +198,7 @@ function processFile(filePath) {
 }
 
 function runTranslatorAndDistributor() {
-  console.log('🌐 ROSS-TECH SIKI HİYERARŞİLİ MARKA/MODEL DAĞITIMI VE ÇEVİRİ BAŞLATILIYOR...');
+  console.log('🌐 ROSS-TECH KUSURSUZ MARKA/MODEL NORMALİZASYONU VE ÇEVİRİ BAŞLATILIYOR...');
 
   const files = fs.readdirSync(DATA_DIR).filter(f => f.endsWith('.json') && !f.startsWith('_'));
   console.log(`📌 Toplam ${files.length} adet arıza dokümanı işleniyor...`);
@@ -172,7 +208,7 @@ function runTranslatorAndDistributor() {
     if (processFile(path.join(DATA_DIR, f))) count++;
   });
 
-  console.log(`\n🎉 İŞLEM BAŞARIYLA TAMAMLANDI! ${count} dosya sıkı marka-model kurallarıyla güncellendi!`);
+  console.log(`\n🎉 İŞLEM BAŞARIYLA TAMAMLANDI! ${count} dosya kusursuz canonical modellerle güncellendi!`);
 }
 
 runTranslatorAndDistributor();

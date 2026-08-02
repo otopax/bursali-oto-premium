@@ -90,9 +90,14 @@ export default async function ArizaCozumleriBrandPage({ params }) {
           .model-box-name {
             font-weight: 600;
             font-size: 1.2rem;
+            flex: 1;
+            min-width: 0;
+            padding-right: 0.5rem;
           }
           .model-box-count {
             margin-left: auto;
+            flex-shrink: 0;
+            white-space: nowrap;
             background: rgba(255,255,255,0.05);
             color: #94a3b8;
             font-size: 0.85rem;

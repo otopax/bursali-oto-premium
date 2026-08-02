@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const FUSEBOX_DIR = path.join(process.cwd(), 'public/fusebox_data');
+const FUSEBOX_DIR = path.join(process.cwd(), 'public/catalog');
 
 export function getAvailableFuseboxBrands() {
   if (!fs.existsSync(FUSEBOX_DIR)) return [];

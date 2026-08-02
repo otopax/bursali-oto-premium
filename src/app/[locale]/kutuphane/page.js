@@ -98,10 +98,18 @@ export default async function KutuphaneHub({ params }) {
           }
           .brand-box-name {
             font-weight: 600;
-            font-size: 1.1rem;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 0.5rem;
           }
           .brand-box-count {
             margin-left: auto;
+            flex-shrink: 0;
+            white-space: nowrap;
             background: rgba(255,255,255,0.1);
             color: #cbd5e1;
             font-size: 0.8rem;

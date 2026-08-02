@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bursalı Oto Servis - Kütüphane Önizleme</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: rgba(30, 41, 59, 0.7);
+      --primary: #3b82f6;
+      --primary-glow: rgba(59, 130, 246, 0.5);
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: rgba(255, 255, 255, 0.1);
+    }
+    
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      min-height: 100vh;
+      background-image: 
+        radial-gradient(circle at 15% 50%, rgba(59, 130, 246, 0.15), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(220, 38, 38, 0.15), transparent 25%);
+      padding: 2rem;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(to right, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .actions button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px var(--primary-glow);
+    }
+
+    .actions button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 0 25px var(--primary-glow);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .vehicle-header {
+      margin-bottom: 2rem;
+    }
+
+    .vehicle-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .vehicle-subtitle {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #60a5fa;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .data-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .data-row:last-child {
+      border-bottom: none;
+    }
+
+    .data-label {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .data-value {
+      font-weight: 500;
+      color: #f8fafc;
+      text-align: right;
+    }
+
+    .badge {
+      background: rgba(59, 130, 246, 0.2);
+      color: #93c5fd;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .highlight {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header class="header">
+      <div class="logo-area">
+        <div class="logo-text">BURSALI OTO SERVİS</div>
+        <div class="badge">Sanal Kütüphane FAZ 1</div>
+      </div>
+      <div class="actions">
+        <button onclick="alert('PDF Olarak İndiriliyor... \n\n(Arkaplanda bizim kendi kusursuz şablonumuzla basılacak. Siyah menü veya 140 boş sayfa asla olmayacak!)')">🖨️ Kılavuzu Yazdır (Kusursuz PDF)</button>
+      </div>
+    </header>
+
+    <div class="vehicle-header">
+      <h1 class="vehicle-title">AUDI 100/200/V8</h1>
+      <p class="vehicle-subtitle">Motor Kodu: <span style="color:white; font-weight:bold;">DS (1.8 L)</span> — Ayarlama Verileri & Spesifikasyonlar</p>
+    </div>
+
+    <div class="grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <h2 class="card-title">⚙️ Motor Spesifikasyonları</h2>
+        <div class="data-row">
+          <span class="data-label">Kapasite</span>
+          <span class="data-value">1781 cc</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Silindir Sayısı</span>
+          <span class="data-value">4</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Ateşleme Sırası</span>
+          <span class="data-value highlight">1-3-4-2</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Motor Yönetimi</span>
+          <span class="data-value">Bosch KE-Jetronic</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Sıkıştırma Basıncı</span>
+          <span class="data-value">9.0 - 12.0 bar</span>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <h2 class="card-title">⚡ Elektriksel & Ateşleme</h2>
+        <div class="data-row">
+          <span class="data-label">Buji Tipi</span>
+          <span class="data-value">Bosch W7DTC / Champ. N7BYC</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Buji Tırnak Aralığı</span>
+          <span class="data-value">0.7 - 0.9 mm</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Rölanti Devri</span>
+          <span class="data-value highlight">900 ± 30 rpm</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Zamanlama (BTDC)</span>
+          <span class="data-value">18 ± 1/750 °/rpm</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Alternatör</span>
+          <span class="data-value">65 A</span>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <h2 class="card-title">🔧 Tork Ayarları & Kapasiteler</h2>
+        <div class="data-row">
+          <span class="data-label">Silindir Kapağı - Evre 1</span>
+          <span class="data-value">40 Nm</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Silindir Kapağı - Evre 2</span>
+          <span class="data-value">60 Nm</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Bujiler</span>
+          <span class="data-value">20 Nm</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Tekerlek Bijonları</span>
+          <span class="data-value highlight">110 Nm</span>
+        </div>
+        <div class="data-row">
+          <span class="data-label">Motor Yağı Kapasitesi</span>
+          <span class="data-value">3.0 Litre</span>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+</body>
+</html>

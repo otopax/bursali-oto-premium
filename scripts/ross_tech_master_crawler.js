@@ -4,28 +4,21 @@ import axios from 'axios';
 import * as cheerio from 'cheerio';
 
 /**
- * Ross-Tech Wiki MASTER Web Crawler & Parser
- * Tüm VAG (VW, Audi, SEAT, Škoda, Porsche) arıza kodlarını,
- * adaptasyon prosedürlerini, modül kodlama kılavuzlarını ve servis ayarlarını
- * otomatik olarak Ross-Tech Wiki'den tarar, Türkçe otomotiv diline çevirir 
- * ve sitemizin Kütüphane veritabanına (`public/ariza_kodlari_data/` & `public/kutuphane_data/`) kaydeder.
+ * Ross-Tech Wiki MASTER Web Crawler & Parser (Araç ve Motor Kodu Ayrıştırmalı)
+ * Tüm VAG (VW, Audi, SEAT, Škoda, Porsche) arıza kodlarını Ross-Tech Wiki'nin
+ * TÜM sayfalarından tarar. Metin içinden Marka, Araç Modeli ve Spesifik Motor Kodlarını (2.0 TDI, 1.4 TSI, EA888, DQ200 vb.) 
+ * otomatik ayrıştırarak `public/ariza_kodlari_data/` dizinine kaydeder.
  */
 
 const FAULTS_DIR = path.join(process.cwd(), 'public', 'ariza_kodlari_data');
-const PROCEDURES_DIR = path.join(process.cwd(), 'public', 'kutuphane_data', 'prosedurler');
 
-[FAULTS_DIR, PROCEDURES_DIR].forEach((dir) => {
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
-  }
-});
+if (!fs.existsSync(FAULTS_DIR)) {
+  fs.mkdirSync(FAULTS_DIR, { recursive: true });
+}
 
-// Ross-Tech Wiki Base URL
 const BASE_URL = 'https://wiki.ross-tech.com';
 const CATEGORY_FAULTS_URL = `${BASE_URL}/wiki/index.php/Category:Fault_Codes`;
-const CATEGORY_PROCEDURES_URL = `${BASE_URL}/wiki/index.php/Category:Diagnostic_Procedures`;
 
-// Genel Sözlük (İngilizce Teknik Terimleri Türkçe Otomotiv Diline Çeviri)
 const TECH_DICTIONARY = {
   'Possible Symptoms': 'Olası Belirtiler ve Semptomlar',
   'Possible Causes': 'Kök Nedenler ve Muhtemel Sebepler',
@@ -50,81 +43,117 @@ function translateText(text) {
   return translated;
 }
 
-// Master Crawler İşlevi
+// Araç Modeli ve Motor Kodu Otomatik Tespit Fonksiyonu
+function extractVehicleAndEngineInfo(fullText) {
+  const textUpper = fullText.toUpperCase();
+
+  // Model tespiti
+  const detectedModels = [];
+  if (textUpper.includes('A3') || textUpper.includes('GOLF') || textUpper.includes('LEON')) detectedModels.push('Audi A3 / VW Golf / Seat Leon');
+  if (textUpper.includes('A4') || textUpper.includes('PASSAT') || textUpper.includes('OCTAVIA')) detectedModels.push('Audi A4 / VW Passat / Skoda Octavia');
+  if (textUpper.includes('A6') || textUpper.includes('A5') || textUpper.includes('Q5')) detectedModels.push('Audi A6 / A5 / Q5');
+  if (textUpper.includes('TIGUAN') || textUpper.includes('TOUAREG') || textUpper.includes('Q7')) detectedModels.push('VW Tiguan / Touareg / Audi Q7');
+  if (textUpper.includes('POLO') || textUpper.includes('IBIZA') || textUpper.includes('FABIA')) detectedModels.push('VW Polo / Seat Ibiza / Skoda Fabia');
+
+  if (detectedModels.length === 0) {
+    detectedModels.push('Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)');
+  }
+
+  // Motor Kodu ve Şanzıman Tespiti
+  const detectedEngines = [];
+  if (textUpper.includes('2.0') && textUpper.includes('TDI')) detectedEngines.push('2.0 TDI (CR Engine)');
+  if (textUpper.includes('1.6') && textUpper.includes('TDI')) detectedEngines.push('1.6 TDI (CR Engine)');
+  if (textUpper.includes('1.4') && (textUpper.includes('TSI') || textUpper.includes('TFSI'))) detectedEngines.push('1.4 TSI / TFSI (EA111 / EA211)');
+  if (textUpper.includes('2.0') && (textUpper.includes('TSI') || textUpper.includes('TFSI'))) detectedEngines.push('2.0 TSI / TFSI (EA888 Gen2/Gen3)');
+  if (textUpper.includes('1.8') && (textUpper.includes('TSI') || textUpper.includes('TFSI'))) detectedEngines.push('1.8 TSI / TFSI');
+  if (textUpper.includes('3.0') && (textUpper.includes('TDI') || textUpper.includes('TSI'))) detectedEngines.push('3.0 TDI / TFSI V6');
+  if (textUpper.includes('DSG') || textUpper.includes('DQ200') || textUpper.includes('DQ250') || textUpper.includes('DQ500')) detectedEngines.push('DSG Otomatik Şanzıman (DQ200 / DQ250 / DQ500)');
+
+  if (detectedEngines.length === 0) {
+    detectedEngines.push('Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar');
+  }
+
+  return {
+    models: Array.from(new Set(detectedModels)),
+    engines: Array.from(new Set(detectedEngines))
+  };
+}
+
+async function fetchAllFaultLinks(initialUrl) {
+  let currentUrl = initialUrl;
+  let allLinks = [];
+  let pageCounter = 1;
+
+  while (currentUrl && pageCounter <= 10) {
+    try {
+      console.log(`📡 Kategori Sayfası ${pageCounter} taranıyor: ${currentUrl}`);
+      const response = await axios.get(currentUrl, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+        },
+        timeout: 10000
+      });
+
+      const $ = cheerio.load(response.data);
+      let pageLinksCount = 0;
+
+      $('#mw-pages .mw-category a, #mw-pages .mw-content-ltr a').each((_, el) => {
+        const href = $(el).attr('href');
+        const title = $(el).text().trim();
+        if (href && !href.includes('Category:') && !href.includes('Special:')) {
+          allLinks.push({
+            title,
+            url: href.startsWith('http') ? href : `${BASE_URL}${href}`
+          });
+          pageLinksCount++;
+        }
+      });
+
+      console.log(`  -> Bu sayfada ${pageLinksCount} arıza linki bulundu.`);
+
+      const nextLinkEl = $('#mw-pages a:contains("next page"), #mw-pages a:contains("next 200")').first();
+      if (nextLinkEl && nextLinkEl.attr('href')) {
+        const nextHref = nextLinkEl.attr('href');
+        currentUrl = nextHref.startsWith('http') ? nextHref : `${BASE_URL}${nextHref}`;
+        pageCounter++;
+      } else {
+        currentUrl = null;
+      }
+
+    } catch (err) {
+      console.warn(`⚠ Sayfa taranamadı: ${currentUrl}`, err.message);
+      break;
+    }
+  }
+
+  return allLinks;
+}
+
 async function startMasterCrawl() {
   console.log('🌐 ========================================================');
-  console.log('🚀 ROSS-TECH MASTER WEB CRAWLER BAŞLATILIYOR...');
+  console.log('🚀 SINIRSIZ ROSS-TECH MASTER CRAWLER (MOTOR & MODEL AYRIŞTIRMALI)...');
   console.log('🌐 ========================================================\n');
 
-  try {
-    // 1. Kategori 1: Arıza Kodları (Fault Codes)
-    console.log('📡 1. Arıza Kodları Kategorisi Taranıyor...');
-    const faultLinks = await fetchCategoryLinks(CATEGORY_FAULTS_URL);
-    console.log(`📌 Toplam ${faultLinks.length} adet VAG arıza kodu sayfası bulundu.`);
+  const faultLinks = await fetchAllFaultLinks(CATEGORY_FAULTS_URL);
+  console.log(`\n📌 TOPLAM BULUNAN TÜM VAG ARIZA KODU SAYISI: ${faultLinks.length}\n`);
 
-    // 2. Kategori 2: Teşhis Prosedürleri (Diagnostic Procedures)
-    console.log('\n📡 2. Teşhis ve Adaptasyon Prosedürleri Taranıyor...');
-    const procedureLinks = await fetchCategoryLinks(CATEGORY_PROCEDURES_URL);
-    console.log(`📌 Toplam ${procedureLinks.length} adet VAG adaptasyon ve prosedür sayfası bulundu.`);
-
-    // Çekim Sayısını Güvenli Limit ve Test İçin Yapılandırıyoruz
-    const MAX_CRAWL = Math.min(faultLinks.length, 25);
-    console.log(`\n⚙️ İlk etapta ${MAX_CRAWL} adet arıza kodu ve prosedür detaylandırılıyor...\n`);
-
-    let savedFaults = 0;
-    for (let i = 0; i < MAX_CRAWL; i++) {
-      const link = faultLinks[i];
-      const pageData = await scrapeFaultPage(link.url, link.title);
-      if (pageData) {
-        const filePath = path.join(FAULTS_DIR, `${pageData.code}.json`);
-        fs.writeFileSync(filePath, JSON.stringify(pageData, null, 2), 'utf-8');
-        console.log(`  ✅ [İNDİRİLDİ] ${pageData.code} -> ${pageData.title.substring(0, 45)}...`);
-        savedFaults++;
-      }
-      // Sunucuyu yormamak ve IP engeline takılmamak için 300ms bekleme
-      await new Promise((r) => setTimeout(r, 300));
+  let savedFaults = 0;
+  for (let i = 0; i < faultLinks.length; i++) {
+    const link = faultLinks[i];
+    const pageData = await scrapeFaultPage(link.url, link.title);
+    if (pageData) {
+      const filePath = path.join(FAULTS_DIR, `${pageData.code}.json`);
+      fs.writeFileSync(filePath, JSON.stringify(pageData, null, 2), 'utf-8');
+      console.log(`  [${i + 1}/${faultLinks.length}] ✅ ${pageData.code} -> Model: ${pageData.models.join(', ')} | Motor: ${pageData.engines.join(', ')}`);
+      savedFaults++;
     }
-
-    console.log(`\n🎉 MASTER CRAWLER TAMAMLANDI!`);
-    console.log(`✅ Toplam ${savedFaults} yeni VAG arıza çözümü başarıyla Türkçe'ye çevrilip kütüphaneye kaydedildi.\n`);
-
-  } catch (error) {
-    console.error('❌ Master Crawler sırasında hata oluştu:', error.message);
+    await new Promise((r) => setTimeout(r, 150));
   }
+
+  console.log(`\n🎉 TAM PARSING CRAWLER TAMAMLANDI!`);
+  console.log(`✅ Toplam ${savedFaults} VAG arıza çözümü Araç ve Motor Kodu ayrıştırması ile kütüphaneye kaydedildi.\n`);
 }
 
-// Kategori Sayfasından Link Toplama
-async function fetchCategoryLinks(categoryUrl) {
-  try {
-    const response = await axios.get(categoryUrl, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-      },
-      timeout: 10000
-    });
-
-    const $ = cheerio.load(response.data);
-    const links = [];
-
-    $('#mw-pages .mw-category a, #mw-pages .mw-content-ltr a').each((_, el) => {
-      const href = $(el).attr('href');
-      const title = $(el).text().trim();
-      if (href && !href.includes('Category:') && !href.includes('Special:')) {
-        links.push({
-          title,
-          url: href.startsWith('http') ? href : `${BASE_URL}${href}`
-        });
-      }
-    });
-
-    return links;
-  } catch (err) {
-    console.warn(`⚠ Kategori taranamadı: ${categoryUrl}`, err.message);
-    return [];
-  }
-}
-
-// Tekil Arıza Sayfasını Detaylı Kazıma (Scrape)
 async function scrapeFaultPage(pageUrl, rawTitle) {
   try {
     const response = await axios.get(pageUrl, {
@@ -136,8 +165,8 @@ async function scrapeFaultPage(pageUrl, rawTitle) {
 
     const $ = cheerio.load(response.data);
     const content = $('#mw-content-text');
+    const fullPageText = content.text();
 
-    // Kod Tespiti (Örn: 16471/P0087 veya P0087)
     const codeMatch = rawTitle.match(/P\d{4}|U\d{4}|\d{5}/i);
     const code = codeMatch ? codeMatch[0].toUpperCase() : rawTitle.replace(/[^a-zA-Z0-9]/g, '_');
 
@@ -161,13 +190,16 @@ async function scrapeFaultPage(pageUrl, rawTitle) {
       }
     });
 
+    // Otomatik Araç ve Motor Kodu Ayrıştırma
+    const vehicleInfo = extractVehicleAndEngineInfo(`${rawTitle} ${fullPageText} ${specialNotes}`);
+
     return {
       code: code,
       vagCode: rawTitle.match(/\d{5}/)?.[0] || "",
       title: `${code} - ${translateText(rawTitle)}`,
       brand: "Audi / Volkswagen / SEAT / Skoda / Porsche",
-      models: ["A3", "A4", "A6", "Q5", "Golf", "Passat", "Tiguan", "Leon", "Octavia"],
-      engines: ["TDI", "TSI", "TFSI", "FSI"],
+      models: vehicleInfo.models,
+      engines: vehicleInfo.engines,
       severity: "Orta-Yüksek (VAG Teşhisi Gerekli)",
       symptoms: symptoms.length > 0 ? symptoms : ["Motor arıza ikaz lambası (MIL) yanıyor", "Performans ve çekiş düşüklüğü"],
       commonCauses: causes.length > 0 ? causes : ["Sensör okuma hatası veya tesisat temassızlığı", "Mekanik aşınma veya hava kaçağı"],
@@ -181,10 +213,8 @@ async function scrapeFaultPage(pageUrl, rawTitle) {
     };
 
   } catch (err) {
-    console.warn(`  ⚠ Sayfa çekilemedi (${pageUrl}):`, err.message);
     return null;
   }
 }
 
-// Master Crawler'ı Başlat
 startMasterCrawl();
