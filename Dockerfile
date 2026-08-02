@@ -18,9 +18,9 @@ COPY . .
 
 # Generate prisma client before build
 RUN npx prisma generate
-ENV NEXT_TELEMETRY_DISABLED 1
-ENV NODE_ENV production
-ENV IS_BUILD true
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
+ENV IS_BUILD=true
 
 RUN npm run build
 
@@ -28,8 +28,10 @@ RUN npm run build
 FROM base AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
 
 # Security: Non-root user
 RUN addgroup --system --gid 1001 nodejs
@@ -41,15 +43,17 @@ COPY --from=builder /app/public ./public
 RUN mkdir .next
 RUN chown nextjs:nodejs .next
 
-# Automatically leverage output traces to reduce image size
+# Copy standalone Next.js server build
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Copy src and prisma folders so background worker scripts and prisma CLI have full access
+COPY --from=builder --chown=nextjs:nodejs /app/src ./src
+COPY --from=builder --chown=nextjs:nodejs /app/prisma ./prisma
 
 USER nextjs
 
 EXPOSE 3000
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
 
 # Native Container Healthcheck
 HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
