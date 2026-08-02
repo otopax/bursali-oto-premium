@@ -43,19 +43,7 @@ export class HierarchyBuilder {
         return memoryHierarchyCache.get(cacheKey);
       }
 
-      // 3. L2 Distributed Cache (Redis)
-      const cached = await getCache('page', cacheKey);
-      if (cached) {
-        try {
-          const parsed = typeof cached === 'string' ? JSON.parse(cached) : cached;
-          memoryHierarchyCache.set(cacheKey, parsed);
-          return parsed;
-        } catch (e) {
-          console.warn('HierarchyCache JSON parse error, rebuilding...');
-        }
-      }
-
-      // 4. L3 Storage Fetch (Markdown Repository)
+      // 3. L3 Storage Fetch (Markdown Repository)
       const posts = await this.contentRepository.getSortedPostsData(locale, folder);
       const hierarchy = {};
 
@@ -116,7 +104,6 @@ export class HierarchyBuilder {
       });
 
       memoryHierarchyCache.set(cacheKey, hierarchy);
-      await setCache('page', cacheKey, JSON.stringify(hierarchy), CACHE_TTL.PAGE || 86400);
       return hierarchy;
     });
   }
