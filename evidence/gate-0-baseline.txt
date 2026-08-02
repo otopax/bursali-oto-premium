@@ -1,0 +1,41 @@
+==================== GATE 0: BASELINE & REPOSITORY INTEGRITY ====================
+Execution Timestamp: 2026-08-02T17:10:27+03:00
+Target Commit SHA: 2e1132af5da0d36622ef9b05c8e9f10a114e8b67
+Target Branch: main
+
+$ git rev-parse HEAD
+2e1132af5da0d36622ef9b05c8e9f10a114e8b67
+
+$ git branch --show-current
+main
+
+$ git status --short
+(clean working tree)
+
+$ node -v
+v22.12.0
+
+$ npm -v
+10.9.0
+
+$ npx vitest run --reporter=verbose
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/sentryPii.test.js (1 test) 4ms
+ ✓ src/lib/__tests__/metaCapi.test.js (2 tests) 8ms
+ ✓ src/lib/__tests__/vinService.test.js (4 tests) 11ms
+ ✓ src/lib/__tests__/authz.test.js (5 tests) 6ms
+ ✓ src/lib/__tests__/securityIsolation.test.js (4 tests) 5ms
+ ✓ src/domains/Knowledge/__tests__/KnowledgeGraph.test.js (4 tests) 5ms
+ ✓ src/lib/__tests__/rate-limit.test.js (1 test) 2ms
+ ✓ src/lib/__tests__/singleFlight.test.js (2 tests) 79ms
+ ✓ src/domains/AI/__tests__/AIOrchestrator.test.js (3 tests) 8ms
+ ✓ src/domains/AI/__tests__/circuitBreakerSimulation.test.js (1 test) 4ms
+ ✓ src/lib/__tests__/cache.test.js (3 tests) 2ms
+
+ Test Files  11 passed (11)
+      Tests  30 passed (30)
+   Start at  16:59:02
+   Duration  1.19s
+
+STATUS: VERIFIED PASS

@@ -1,0 +1,17 @@
+==================== GATE 2: SINGLEFLIGHT & CACHE STAMPEDE DEFENSE ====================
+Execution Timestamp: 2026-08-02T17:10:30+03:00
+Target Commit SHA: 2e1132af
+
+$ npx vitest run src/lib/__tests__/singleFlight.test.js src/domains/AI/__tests__/circuitBreakerSimulation.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/singleFlight.test.js > SingleFlight Cache Stampede Defense > coalesces 100 concurrent requests into a single execution 59ms
+ ✓ src/lib/__tests__/singleFlight.test.js > SingleFlight Cache Stampede Defense > cleans up in-flight map even if fetchFn throws 14ms
+ ✓ src/domains/AI/__tests__/circuitBreakerSimulation.test.js > AI Orchestrator Circuit Breaker & Provider Degradation (Gate 2/AI) > triggers Circuit Breaker after failures and routes directly to fallback provider 3ms
+
+ Test Files  2 passed (2)
+      Tests  3 passed (3)
+
+STATUS: VERIFIED PASS (Unit Level - 100 VU Coalesce Single Execution)
+LIVE REDIS FAILURE INJECTION (A-D): NOT VERIFIED (Upstash Redis live network outage injection pending)

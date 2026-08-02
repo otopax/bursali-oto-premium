@@ -1,0 +1,18 @@
+==================== GATE 3: SECURITY & MULTI-TENANT ISOLATION ====================
+Execution Timestamp: 2026-08-02T17:10:30+03:00
+Target Commit SHA: 2e1132af
+
+$ npx vitest run src/lib/__tests__/securityIsolation.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > ALLOWS Tenant A user to access Tenant A resources 1ms
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > DENIES Tenant A user from accessing Tenant B resources (Cross-Tenant Isolation) 0ms
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > DENIES unauthorized VIP customer B from reading Customer A vehicle history 0ms
+ ✓ src/lib/__tests__/securityIsolation.test.js > Security & Multi-Tenant Isolation (Gate 3) > DENIES Sanal Usta Tool Authorization bypass without matching scope 0ms
+
+ Test Files  1 passed (1)
+      Tests  4 passed (4)
+
+STATUS: VERIFIED PASS (Unit Level Scope Enforcement)
+STAGING HTTP AUTHORIZATION: NOT VERIFIED (Live HTTP request logs against staging pending)

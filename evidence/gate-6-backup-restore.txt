@@ -1,0 +1,18 @@
+==================== GATE 6: DISASTER RECOVERY BACKUP RESTORE DRILL ====================
+Execution Timestamp: 2026-08-02T17:10:30+03:00
+Target Commit SHA: 2e1132af
+
+$ node scripts/verify-backup-restore.js
+[DR Drill] Connecting to restored database: postgresql://postgres:***@127.0.0.1:5433/bursali_oto
+Error: P1001: Can't reach database server at `127.0.0.1:5433`
+Please make sure your database server is running at `127.0.0.1:5433`.
+
+[DR FAIL] Model 'vehicle': Cannot reach database server
+
+================================================================================
+DR DRILL SUMMARY: 0/25 Models Verified PASS
+Execution Time (RTO Measure): 48647ms (0.81 mins)
+================================================================================
+
+STATUS: IMPLEMENTED / BLOCKED (Docker Desktop daemon is stopped on host OS; local Postgres on 5433 offline)
+LIVE RESTORE DRILL: NOT VERIFIED

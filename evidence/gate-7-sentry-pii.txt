@@ -1,0 +1,14 @@
+==================== GATE 7: SENTRY CORE PII SCRUBBING ====================
+Execution Timestamp: 2026-08-02T17:10:30+03:00
+Target Commit SHA: 2e1132af
+
+$ npx vitest run src/lib/__tests__/sentryPii.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/sentryPii.test.js > Sentry PII Scrubbing (Gate 7) > redacts phone, plate, VIN, email, and IP address from event 2ms
+
+ Test Files  1 passed (1)
+      Tests  1 passed (1)
+
+STATUS: VERIFIED PASS (Core PII Fields Redacted)

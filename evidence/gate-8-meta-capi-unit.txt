@@ -1,0 +1,16 @@
+==================== GATE 8: META ADS CAPI DEDUPLICATION ====================
+Execution Timestamp: 2026-08-02T17:10:30+03:00
+Target Commit SHA: 2e1132af
+
+$ npx vitest run src/lib/__tests__/metaCapi.test.js --reporter=verbose
+
+ RUN  v4.1.10 C:/Users/xbors/OneDrive/Desktop/Bursali_Oto_Dijital_Yonetim/Web_Sitesi/bursali-oto-web
+
+ ✓ src/lib/__tests__/metaCapi.test.js > Meta Ads CAPI Event Deduplication (Gate 8) > generates a unique sha256 event_id for deduplication matching browser pixel 2ms
+ ✓ src/lib/__tests__/metaCapi.test.js > Meta Ads CAPI Event Deduplication (Gate 8) > skips dispatch gracefully when environment tokens are unconfigured 1ms
+
+ Test Files  1 passed (1)
+      Tests  2 passed (2)
+
+STATUS: VERIFIED PASS (Unit Level Event ID Generation)
+LIVE META EVENTS MANAGER: NOT VERIFIED (Live Meta API token dispatch evidence pending)
