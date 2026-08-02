@@ -1,24 +1,42 @@
-// 🚀 V5.0 HOTFIX: Circuit Breaker artık 60 saniye sonra kendi kendini iyileştiriyor (Half-Open).
 const { GeminiProvider, ClaudeProvider, OpenAIProvider } = require('./Providers');
-const redisClient = require('../../lib/redis/client');
+const { getRedisClient } = require('../../lib/redis/client');
+
+const inMemoryCircuitMap = new Map();
 
 class AIOrchestrator {
   constructor() {
     this.chain = [new GeminiProvider(), new ClaudeProvider(), new OpenAIProvider()];
-    // Circuit Breaker durumları artık Redis'te saklanıyor (Distributed)
     this.cbKeyPrefix = 'cb:provider:';
   }
 
   async getCircuitState(name) {
     const key = this.cbKeyPrefix + name;
-    const data = await redisClient.get(key);
-    if (!data) return { failures: 0, isOpen: false, lastFailureAt: 0, avgLatency: 0 };
-    return JSON.parse(data);
+    const client = getRedisClient();
+    if (client) {
+      try {
+        const data = await client.get(key);
+        if (data) return typeof data === 'string' ? JSON.parse(data) : data;
+      } catch (e) {
+        console.warn(`[CircuitBreaker] Redis error: ${e.message}`);
+      }
+    }
+    if (inMemoryCircuitMap.has(key)) {
+      return inMemoryCircuitMap.get(key);
+    }
+    return { failures: 0, isOpen: false, lastFailureAt: 0, avgLatency: 0 };
   }
 
   async setCircuitState(name, state) {
     const key = this.cbKeyPrefix + name;
-    await redisClient.set(key, JSON.stringify(state), 'EX', 3600); // 1 saat TTL
+    inMemoryCircuitMap.set(key, state);
+    const client = getRedisClient();
+    if (client) {
+      try {
+        await client.set(key, JSON.stringify(state), 'EX', 3600);
+      } catch (e) {
+        console.warn(`[CircuitBreaker] Redis set error: ${e.message}`);
+      }
+    }
   }
 
   async withTimeout(promise, ms, providerName) {
@@ -31,17 +49,19 @@ class AIOrchestrator {
 
   async logAnalytics(providerName, metrics) {
     try {
+      const client = getRedisClient();
+      if (!client) return;
+
       const date = new Date().toISOString().split('T')[0];
       const key = `analytics:ai:${date}`;
-      const pipeline = redisClient.pipeline();
+      const pipeline = client.pipeline();
       
       for (const [metric, value] of Object.entries(metrics)) {
         pipeline.hincrby(key, `model:${providerName}:${metric}`, value);
       }
       
-      // Update latency_max manually
       if (metrics.latency) {
-        const currentMax = await redisClient.hget(key, `model:${providerName}:latency_max`);
+        const currentMax = await client.hget(key, `model:${providerName}:latency_max`);
         if (!currentMax || metrics.latency > parseInt(currentMax, 10)) {
           pipeline.hset(key, `model:${providerName}:latency_max`, metrics.latency);
         }
@@ -64,14 +84,11 @@ class AIOrchestrator {
 
   getRoutingChain(complexity) {
     if (complexity === 'SIMPLE') {
-      // Basit sorular: Önce en ucuz (Gemini), sonra OpenAI, sonra Claude
       return [this.chain[0], this.chain[2], this.chain[1]];
     }
-    // Karmaşık sorular: Önce en zeki (Claude), sonra OpenAI, sonra Gemini
     return [this.chain[1], this.chain[2], this.chain[0]];
   }
 
-  // Exponential Backoff: 30s -> 1m -> 2m -> 5m -> 10m
   getBackoffTime(failures) {
     if (failures <= 3) return 30 * 1000;
     if (failures === 4) return 60 * 1000;
@@ -86,7 +103,7 @@ class AIOrchestrator {
     const complexity = this.classifyPromptComplexity(prompt);
     const chain = this.getRoutingChain(complexity);
     let lastError = null;
-    const timeoutMs = 16000; // >15 saniye
+    const timeoutMs = 16000;
 
     for (const provider of chain) {
       const cb = await this.getCircuitState(provider.name);
@@ -99,8 +116,7 @@ class AIOrchestrator {
           continue; 
         } else {
           console.log(`[CircuitBreaker] 🔄 ${provider.name} karantina süresi doldu. Half-Open moduna geçiliyor.`);
-          cb.isOpen = false; // Yarım açık (tekrar dene)
-          // Failures değerini SIFIRLAMIYORUZ çünkü Half-Open'da başarısız olursa katlanarak devam etmeli
+          cb.isOpen = false;
         }
       }
 
@@ -114,7 +130,6 @@ class AIOrchestrator {
         const response = await this.withTimeout(provider.generateText(prompt), timeoutMs, provider.name);
         const latency = Date.now() - start;
 
-        // Başarılı: Devreyi sıfırla (KAPAT)
         cb.failures = 0;
         cb.isOpen = false;
         cb.lastFailureAt = 0;
@@ -136,7 +151,6 @@ class AIOrchestrator {
         lastError = error;
         console.warn(`[AIOrchestrator] ❌ ${provider.name} hata verdi: ${error.message}`);
 
-        // Başarısız: Devreyi aç (Trip)
         cb.failures += 1;
         cb.lastFailureAt = Date.now();
         if (cb.failures >= 3) {
@@ -155,7 +169,6 @@ class AIOrchestrator {
       }
     }
     
-    // Tümü başarısız olduğunda Static Fallback (UI patlamaması için)
     console.error(`[AIOrchestrator] BÜTÜN SAĞLAYICILAR ÇÖKTÜ. Statik Fallback devreye alınıyor.`);
     return `Şu anda sistemlerimizde yoğunluk yaşamaktayız. Lütfen sorunuzu daha sonra tekrar iletin veya doğrudan 0(532) XXX XX XX numaralı telefondan ustamıza ulaşın.`;
   }

@@ -1,50 +1,33 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
-const orchestrator = require('../AIOrchestrator');
 
-vi.mock('../../lib/redis/client', () => ({
-  default: {
-    get: vi.fn(),
-    set: vi.fn(),
-    hincrby: vi.fn(),
-    pipeline: vi.fn(() => ({
-      hincrby: vi.fn(),
-      hset: vi.fn(),
-      exec: vi.fn()
-    }))
-  }
-}));
+const { AIOrchestrator } = require('../AIOrchestrator');
 
 describe('AIOrchestrator', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    // Mock providers
-    orchestrator.chain.forEach(provider => {
-      provider.generateText = vi.fn().mockResolvedValue('success');
-    });
+    if (AIOrchestrator.chain) {
+      AIOrchestrator.chain.forEach(provider => {
+        provider.generateText = vi.fn().mockResolvedValue('success');
+      });
+    }
   });
 
   it('classifies simple prompt correctly', () => {
-    const complexity = orchestrator.classifyPromptComplexity('Merhaba nasılsınız?');
+    const complexity = AIOrchestrator.classifyPromptComplexity('Merhaba nasılsınız?');
     expect(complexity).toBe('SIMPLE');
   });
 
   it('classifies complex prompt correctly', () => {
-    const complexity = orchestrator.classifyPromptComplexity('Verileri analiz et ve sistematik bir karşılaştırma yap.');
+    const complexity = AIOrchestrator.classifyPromptComplexity('Verileri analiz et ve sistematik bir karşılaştırma yap.');
     expect(complexity).toBe('COMPLEX');
   });
 
   it('executes fallback correctly on timeout', async () => {
-    const redisClient = require('../../lib/redis/client').default;
-    redisClient.get.mockResolvedValue(JSON.stringify({ failures: 0, isOpen: false, lastFailureAt: 0, avgLatency: 0 }));
+    AIOrchestrator.chain[0].generateText = vi.fn().mockImplementation(() => new Promise(resolve => setTimeout(resolve, 5000)));
+    AIOrchestrator.withTimeout = vi.fn().mockRejectedValueOnce(new Error('Timeout')).mockResolvedValueOnce('success2');
     
-    // First provider times out
-    orchestrator.chain[0].generateText = vi.fn().mockImplementation(() => new Promise(resolve => setTimeout(resolve, 5000)));
-    
-    // Using a tiny timeout to force failure
-    orchestrator.withTimeout = vi.fn().mockRejectedValueOnce(new Error('Timeout')).mockResolvedValueOnce('success2');
-    
-    const result = await orchestrator.executeWithFallback('test prompt');
+    const result = await AIOrchestrator.executeWithFallback('test prompt');
     expect(result).toBe('success2');
-    expect(orchestrator.withTimeout).toHaveBeenCalledTimes(2);
+    expect(AIOrchestrator.withTimeout).toHaveBeenCalledTimes(2);
   });
 });

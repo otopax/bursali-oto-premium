@@ -1,4 +1,4 @@
-import { getCache, setCache } from './cache';
+import { getCache, setCache } from './cache.js';
 
 // VIN Service Layer (Phase 3 Architecture)
 // Designed to support multiple providers (NHTSA as primary) and fallback logic.
