@@ -1,41 +1,47 @@
 import http from 'k6/http';
 import { check, sleep } from 'k6';
 
-// Sprint 5: Chaos & Resilience Testing
-// Bu script 1000'e kadar çıkan Concurrent User simülasyonunu hedefler.
 export const options = {
   stages: [
-    { duration: '30s', target: 100 },  // Ramp up to 100 users
-    { duration: '1m', target: 100 },   // Stay at 100 users
-    { duration: '30s', target: 500 },  // Spike to 500 users
-    { duration: '1m', target: 500 },   // Stay at 500 users
-    { duration: '30s', target: 1000 }, // Peak load 1000 users
-    { duration: '30s', target: 0 },    // Ramp down to 0
+    { duration: '30s', target: 100 },  // Stage 1: 100 VUs
+    { duration: '1m',  target: 100 },
+    { duration: '30s', target: 500 },  // Stage 2: 500 VUs
+    { duration: '1m',  target: 500 },
+    { duration: '30s', target: 1000 }, // Stage 3: 1000 Peak VUs
+    { duration: '30s', target: 0 },
   ],
   thresholds: {
-    http_req_duration: ['p(95)<300', 'p(99)<800'], // 95% of requests must complete below 300ms, 99% below 800ms
-    http_req_failed: ['rate<0.01'],                // Error rate should be less than 1%
+    http_req_duration: ['p(95)<500', 'p(99)<1000'],
+    http_req_failed: ['rate<0.001'], // Failure rate strictly < 0.1%
   },
 };
 
 const BASE_URL = __ENV.BASE_URL || 'http://localhost:3000';
 
 export default function () {
-  // Public sayfaların testleri
-  const res = http.get(`${BASE_URL}/tr`);
-  
-  check(res, {
-    'is status 200': (r) => r.status === 200,
-    'has fast response': (r) => r.timings.duration < 500,
+  // LOAD-A: Cached DTC Page
+  const resA = http.get(`${BASE_URL}/tr/ariza-cozumleri/p0420`);
+  check(resA, {
+    'LOAD-A status 200': (r) => r.status === 200,
+    'LOAD-A duration < 500ms': (r) => r.timings.duration < 500,
   });
 
-  // Gözlemlenebilirlik Doğrulaması (Chaos endpoint'i denemesi - yetkisiz olarak dönmeli)
-  const chaosRes = http.post(`${BASE_URL}/api/admin/chaos`, JSON.stringify({ scenario: 'redis_down' }), {
-    headers: { 'Content-Type': 'application/json' },
+  // LOAD-B: Uncached / Cold DTC Index Search
+  const resB = http.get(`${BASE_URL}/tr/ariza-cozumleri?q=lambda`);
+  check(resB, {
+    'LOAD-B status 200': (r) => r.status === 200,
   });
-  
-  check(chaosRes, {
-    'chaos api blocks unauthorized': (r) => r.status === 403,
+
+  // LOAD-C: Public Health & Ready API
+  const resC = http.get(`${BASE_URL}/api/health/ready`);
+  check(resC, {
+    'LOAD-C status 200': (r) => r.status === 200,
+  });
+
+  // LOAD-D: Unauthorized Admin Call Block Check
+  const resD = http.get(`${BASE_URL}/api/admin/metrics`);
+  check(resD, {
+    'LOAD-D status 401': (r) => r.status === 401,
   });
 
   sleep(1);

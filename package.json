@@ -22,6 +22,7 @@
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
     "analyze": "ANALYZE=true next build",
+    "test:e2e": "playwright test",
     "benchmark": "k6 run scripts/benchmark/load-test.js",
     "db:push": "prisma db push",
     "db:backup": "node scripts/backup-db.js",
