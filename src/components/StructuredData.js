@@ -1,6 +1,6 @@
 import { businessData } from '@/lib/business';
 
-export default function StructuredData({ breadcrumbs = [], video = null, reviews = null, product = null }) {
+export default function StructuredData({ breadcrumbs = [], video = null, reviews = null, product = null, techArticle = null }) {
   const business = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
@@ -123,6 +123,27 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
     }
   } : null;
 
+  const techArticleData = techArticle ? {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: techArticle.title,
+    description: techArticle.description,
+    articleBody: techArticle.content || techArticle.description,
+    author: {
+      "@type": "Organization",
+      name: businessData.name
+    },
+    publisher: {
+      "@type": "Organization",
+      name: businessData.name,
+      logo: {
+        "@type": "ImageObject",
+        url: businessData.image
+      }
+    },
+    dependencies: techArticle.code ? `DTC Fault Code ${techArticle.code}` : undefined
+  } : null;
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(business) }} />
@@ -132,6 +153,7 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
       {videoData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoData) }} />}
       {reviewData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewData) }} />}
       {productData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />}
+      {techArticleData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleData) }} />}
     </>
   );
 }
