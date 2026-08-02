@@ -3,8 +3,8 @@
 // Tutarlılık, yapay zeka botlarının (ChatGPT, Claude) işletmeyi tanıması için kritiktir.
 
 export const businessData = {
-  name: "Bursalı Oto Servis Fethiye",
-  alternateName: "Bursalı Oto",
+  name: "Bursalı Oto Servis Fethiye | Premium Araç ve Motor Uzmanı",
+  alternateName: "Bursalı Oto Servis",
   description: "Fethiye premium oto servis. PIWIS ve ODIS ile garantili BMW, Mercedes, Porsche tamiri. 7/24 VIP yol yardım ve orijinal yedek parça güvencesi.",
   url: (process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'),
   logo: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`,

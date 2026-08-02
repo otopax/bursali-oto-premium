@@ -1,73 +1,29 @@
 {
   "code": "P0171",
-  "vagCode": "16555",
-  "title": "Sistem Çok Fakir - Sıra 1 (System Too Lean - Bank 1)",
-  "brand": "Audi / SEAT / Skoda / Volkswagen",
-  "models": [
-    "A3",
-    "A4",
-    "A5",
-    "A6",
-    "A7",
-    "A8",
-    "Q3",
-    "Q5",
-    "Q7",
-    "Q8",
-    "Leon",
-    "Ibiza",
-    "Ateca",
-    "Arona",
-    "Tarraco",
-    "Octavia",
-    "Superb",
-    "Kodiaq",
-    "Karoq",
-    "Fabia",
-    "Scala",
-    "Passat",
-    "Golf",
-    "Jetta",
-    "Tiguan",
-    "Polo",
-    "Arteon",
-    "Touareg",
-    "Transporter",
-    "Caddy",
-    "Amarok",
-    "Scirocco"
-  ],
-  "engines": [
-    "1.2 TSI",
-    "1.4 TSI",
-    "1.8 TFSI",
-    "2.0 TFSI"
-  ],
-  "severity": "Orta",
-  "symptoms": [
-    "Motor arıza lambasının yanması",
-    "Rölantide motor devrinin dalgalanması (yükselip düşmesi)",
-    "Egzoz patlatması veya silkeleme",
-    "Fren pedalının sertleşmesi (vakum kaybı durumunda)"
-  ],
-  "commonCauses": [
-    "PCV (Karter Havalandırma) valfi diyafram yırtılması",
-    "Emme manifoldu contalarından veya vakum hortumlarından kaçak hava girmesi",
-    "Hava Akış Sensörü (MAF - G70) kirlenmesi veya hatalı ölçümü",
-    "Ön Oksijen Sensörü (Lambda - G39) yaşlanması"
-  ],
-  "stepByStepSolution": [
-    "1. Motor çalışırken duman test cihazı (Smoke Test) ile emme manifoldu ve PCV hattına duman verilerek kaçak bulunur.",
-    "2. Yağ kapağı açıldığında aşırı vakum çekişi varsa PCV karter havalandırma valfi yenilenir.",
-    "3. MAF sensör canlı değerleri rölantide ve 3000 devirde g/s cinsinden kontrol edilir.",
-    "4. Enjektör yakıt düzeltme (Fuel Trim) değerleri (STFT / LTFT) sıfırlanır."
-  ],
-  "technicalNotes": "TFSI motorlarda PCV valfi yırtıldığında karterde yüksek vakum oluşur ve karter keçelerini öttürür. PCV değişimi ilk bakılması gereken yerdir.",
+  "title": "P0171 - Sistem Çok Fakir Karışım (Bank 1)",
+  "brand": "Audi",
   "brands": [
     "Audi",
-    "SEAT",
-    "Skoda",
-    "Volkswagen"
+    "VW"
   ],
-  "model": "A3, A4, A5, A6, A7, A8, Q3, Q5, Q7, Q8, Leon, Ibiza, Ateca, Arona, Tarraco, Octavia, Superb, Kodiaq, Karoq, Fabia, Scala, Passat, Golf, Jetta, Tiguan, Polo, Arteon, Touareg, Transporter, Caddy, Amarok, Scirocco"
+  "models": [
+    "Audi A4 1.8 TFSI",
+    "VW Golf 5 2.0 GTI"
+  ],
+  "category": "Fuel System",
+  "severity": "MEDIUM",
+  "symptoms": [
+    "Sistem Çok Fakir Karışım (Bank 1) Uyarısı (Ekranda MIL / Arıza Lambası Yandı)",
+    "Performans Kaybı ve Çekiş Düşüklüğü"
+  ],
+  "commonCauses": [
+    "System Too Lean (Bank 1) bileşeninde aşınma veya sinyal hatası",
+    "Kablo demeti tıkanıklığı veya sensör arızası"
+  ],
+  "stepByStepSolution": [
+    "Orijinal Yetkili Servis Diagnostic Cihazı ile canlı değer (measuring block) analizi",
+    "Sensör besleme hatlarının ve vakum borularının fiziki kontrolü",
+    "Orijinal OEM yedek parça değişimi ve kalibrasyon"
+  ],
+  "technicalNotes": "Bursalı Oto Servis: Arıza tekrarlamaması için orijinal kalibrasyon önerilir."
 }

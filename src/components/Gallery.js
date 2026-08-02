@@ -30,7 +30,7 @@ export default function Gallery() {
       </div>
       
       <div style={{ textAlign: 'center', marginTop: '1.5rem', width: '100%' }}>
-        <a href="https://www.google.com/maps/place/BURSALI+OTO+SERV%C4%B0S/@36.6217,29.1164,15z" className="btn btn-gold text-base py-3 font-bold bg-[#d4af37] text-black" target="_blank" rel="noreferrer" style={{ padding: '1rem 3rem', display: 'inline-block', borderRadius: '8px' }}>
+        <a href="https://www.google.com/maps/place/BURSALI+OTO+SERV%C4%B0S/@36.6217,29.1164,15z" className="btn btn-gold text-base py-3 font-bold bg-[#d4af37] text-black" target="_blank" rel="noopener noreferrer" title="Bursalı Oto Servis Google Haritalar" style={{ padding: '1rem 3rem', display: 'inline-block', borderRadius: '8px' }}>
           Tüm Fotoğrafları Haritalar'da Gör
         </a>
       </div>

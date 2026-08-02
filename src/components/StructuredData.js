@@ -43,7 +43,7 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
     "@context": "https://schema.org",
     "@type": "EmergencyService",
     "@id": `${businessData.url}/#emergency`,
-    name: "7/24 Acil Oto Çekici ve Yol Yardım",
+    name: `${businessData.name} - 7/24 Acil Oto Çekici ve Yol Yardım`,
     description: "Fethiye ve çevresinde premium araçlar için 7/24 acil çekici ve yol yardım hizmeti.",
     url: `${businessData.url}/tr/fethiye-7-24-oto-cekici`,
     telephone: businessData.telephone,

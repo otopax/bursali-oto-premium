@@ -1,73 +1,31 @@
 {
   "code": "P0087",
-  "vagCode": "16471",
-  "title": "Yakıt Rayı / Sistem Basıncı Çok Düşük (Yakıt Rayı / Basınç Hattı - Çok Düşük (Basınç Kaybı))",
-  "brand": "Audi / SEAT / Skoda / Volkswagen",
-  "models": [
-    "A3",
-    "A4",
-    "A5",
-    "A6",
-    "A7",
-    "A8",
-    "Q3",
-    "Q5",
-    "Q7",
-    "Q8",
-    "Leon",
-    "Ibiza",
-    "Ateca",
-    "Arona",
-    "Tarraco",
-    "Octavia",
-    "Superb",
-    "Kodiaq",
-    "Karoq",
-    "Fabia",
-    "Scala",
-    "Passat",
-    "Golf",
-    "Jetta",
-    "Tiguan",
-    "Polo",
-    "Arteon",
-    "Touareg",
-    "Transporter",
-    "Caddy",
-    "Amarok",
-    "Scirocco"
-  ],
-  "engines": [
-    "1.6 TDI",
-    "2.0 TDI",
-    "3.0 TDI",
-    "2.0 TSI / TFSI"
-  ],
-  "severity": "Yüksek (Acil Servis Kontrolü)",
-  "symptoms": [
-    "Motor arıza ikaz lambası (MIL / EPC) yanıyor",
-    "Yüksek devirde veya ivmelenmede anı güç kaybı ve silkeleme",
-    "Motorun koruma moduna (limp mode) geçerek devir kısıtlaması yapması",
-    "Soğuk ve sıcak ilk çalıştırmada marş süresinin uzaması"
-  ],
-  "commonCauses": [
-    "Yüksek basınç yakıt pompası (HPFP) iç makara/piston aşınması",
-    "Depo içi düşük basınç elektrikli yakıt pompasının debi düşüklüğü",
-    "Tıkalı yakıt filtresi veya kalitesiz mazot kullanımı",
-    "Yakıt rayı basınç regülatörü (N276) veya basınç sensörü (G247) arızası"
-  ],
-  "stepByStepSolution": [
-    "1. VCDS / ODIS cihazı ile 106 ve 140 nolu canlı değer bloklarından G247 sensörü ray basıncı ölçülür.",
-    "2. Depo içi pompa besleme basıncı manometre ile test edilir (minimum 4.5-6.0 bar).",
-    "3. HPFP yüksek basınç pompasının üzerindeki debi ayar valfi sökülerek içinde metal talaşı kontrolü yapılır.",
-    "4. Talaş tespit edilirse tüm enjektörler, yüksek basınç boruları, kütük ve depo sökülüp özel solüsyonla yıkanır/yenilenir."
-  ],
-  "technicalNotes": "VAG 1.6 ve 2.0 TDI CR motorlarda HPFP pompasının talaş yapması kroniktir. Talaş temizliği yapılmadan sadece pompa değişirse yeni pompa da ilk 500 km'de bozulur.",
+  "title": "P0087 - Yakıt Rayı / Sistem Basıncı Çok Düşük",
+  "brand": "Audi",
   "brands": [
     "Audi",
-    "SEAT",
-    "Skoda",
-    "Volkswagen"
+    "Audi",
+    "VW"
   ],
-  "model": "A3, A4, A5, A6, A7, A8, Q3, Q5, Q7, Q8, Leon, Ibiza, Ateca, Arona, Tarraco, Octavia, Superb, Kodiaq, Karoq, Fabia, Scala, Passat, Golf, Jetta, Tiguan, Polo, Arteon, Touareg, Transporter, Caddy, Amarok, Scirocco"
+  "models": [
+    "Audi A4 2.0 TDI",
+    "Audi Q5 2.0 TDI",
+    "VW Passat B8 2.0 TDI"
+  ],
+  "category": "Fuel Injection",
+  "severity": "CRITICAL",
+  "symptoms": [
+    "Yakıt Rayı / Sistem Basıncı Çok Düşük Uyarısı (Ekranda MIL / Arıza Lambası Yandı)",
+    "Performans Kaybı ve Çekiş Düşüklüğü"
+  ],
+  "commonCauses": [
+    "Fuel Rail/System Pressure - Too Low bileşeninde aşınma veya sinyal hatası",
+    "Kablo demeti tıkanıklığı veya sensör arızası"
+  ],
+  "stepByStepSolution": [
+    "Orijinal Yetkili Servis Diagnostic Cihazı ile canlı değer (measuring block) analizi",
+    "Sensör besleme hatlarının ve vakum borularının fiziki kontrolü",
+    "Orijinal OEM yedek parça değişimi ve kalibrasyon"
+  ],
+  "technicalNotes": "Bursalı Oto Servis: Arıza tekrarlamaması için orijinal kalibrasyon önerilir."
 }

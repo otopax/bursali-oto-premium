@@ -3,11 +3,11 @@
 import { useState } from 'react';
 
 const allReviews = [
-  { name: "Brian Se", text: "\"Volvo'muzla ilgili bize çok yardımcı oldular. Berlin'den sevgilerle...\"", rating: 5 },
-  { name: "Ergün Baysal", text: "\"Almanyadan Fethiye'ye geldim ve arabam arıza verdi. Herkesin tavsiye ettiği İbrahim ustaya gittim ve sorun çözüldü. Gerçek bir usta.\"", rating: 5 },
-  { name: "Hasan CiL", text: "\"Arabada sorunlar vardı w204 kasa (Mercedes) titizlikle ve özenle yaptılar teşekkürler. Fethiye'de Mercedes'ten anlayan nadir yerlerden.\"", rating: 5 },
-  { name: "Олена (Olena)", text: "\"Excellent car service! Quality, speed of repair, service. The mechanics are true professionals. Highly recommend!\"", rating: 5 },
-  { name: "Mehmet Yılmaz", text: "\"Fethiye'de güvenebileceğiniz tek adres. Otomatik şanzıman arızamı nokta atışı buldular. Çok profesyoneller.\"", rating: 5 },
+  { name: "Brian Se", text: "\"Volvo'muzla ilgili bize çok yardımcı oldular. Berlin'den sevgilerle...\"", rating: 5, vehicle: "Volvo XC90", image: "/logos/volvo.png" },
+  { name: "Ergün Baysal", text: "\"Almanyadan Fethiye'ye geldim ve arabam arıza verdi. Herkesin tavsiye ettiği İbrahim ustaya gittim ve sorun çözüldü. Gerçek bir usta.\"", rating: 5, vehicle: "BMW 520i", image: "/logos/bmw.png" },
+  { name: "Hasan CiL", text: "\"Arabada sorunlar vardı w204 kasa (Mercedes) titizlikle ve özenle yaptılar teşekkürler. Fethiye'de Mercedes'ten anlayan nadir yerlerden.\"", rating: 5, vehicle: "Mercedes W204 C180", image: "/logos/mercedes.png" },
+  { name: "Олена (Olena)", text: "\"Excellent car service! Quality, speed of repair, service. The mechanics are true professionals. Highly recommend!\"", rating: 5, vehicle: "Porsche Macan", image: "/logos/porsche.png" },
+  { name: "Mehmet Yılmaz", text: "\"Fethiye'de güvenebileceğiniz tek adres. Otomatik şanzıman arızamı nokta atışı buldular. Çok profesyoneller.\"", rating: 5, vehicle: "Audi A6" },
   { name: "Sarah Jenkins", text: "\"Very professional and helpful. They speak English and explained everything clearly. Honest pricing.\"", rating: 5 },
   { name: "Ahmet K.", text: "\"Gecenin bir yarısı yolda kaldık, Hızır gibi yetiştiler. Çekici hizmetleri de harika, hemen aracı aldılar.\"", rating: 5 },
   { name: "Caner T.", text: "\"Aracımın periyodik bakımını yaptırdım. Şeffaf fiyatlandırma, kaliteli işçilik ve dürüst esnaf.\"", rating: 5 },
@@ -72,10 +72,24 @@ export default function Reviews() {
         marginBottom: '2rem'
       }}>
         {allReviews.slice(0, visibleCount).map((review, index) => (
-          <div key={index} className="review-card" style={{ padding: '2rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-            <div className="review-stars" style={{ color: 'var(--accent-gold)', letterSpacing: '2px', marginBottom: '1rem' }}>★★★★★</div>
-            <p style={{ fontStyle: 'italic', lineHeight: '1.6' }}>{review.text}</p>
-            <p style={{ color: 'var(--text-light)', fontWeight: 'bold', marginTop: '1rem' }}>- {review.name}</p>
+          <div key={index} className="review-card" style={{ padding: '2rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            <div>
+              <div className="review-stars" style={{ color: 'var(--accent-gold)', letterSpacing: '2px', marginBottom: '1rem' }}>★★★★★</div>
+              <p style={{ fontStyle: 'italic', lineHeight: '1.6', marginBottom: '1.5rem' }}>{review.text}</p>
+            </div>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem' }}>
+              {review.image ? (
+                <img src={review.image} alt={review.vehicle || review.name} width={40} height={40} style={{ borderRadius: '50%', objectFit: 'contain', background: 'rgba(255,255,255,0.1)', padding: '5px' }} loading="lazy" />
+              ) : (
+                <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(212, 175, 55, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
+                  {review.name.charAt(0)}
+                </div>
+              )}
+              <div>
+                <p style={{ color: 'var(--text-light)', fontWeight: 'bold', margin: 0 }}>{review.name}</p>
+                {review.vehicle && <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', margin: 0 }}>{review.vehicle}</p>}
+              </div>
+            </div>
           </div>
         ))}
       </div>
@@ -95,7 +109,7 @@ export default function Reviews() {
       {visibleCount === totalReviews && (
         <div style={{ textAlign: 'center', marginTop: '2rem' }}>
           <p style={{ color: 'var(--text-light)', marginBottom: '1.5rem' }}>Tüm öne çıkan yorumları görüntülediniz.</p>
-          <a href="https://www.google.com/search?q=BURSALI+OTO+SERV%C4%B0S+Yorumlar" target="_blank" rel="noreferrer" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.2rem', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
+          <a href="https://www.google.com/search?q=BURSALI+OTO+SERV%C4%B0S+Yorumlar" target="_blank" rel="noopener noreferrer" title="Bizi Google'da Değerlendirin" className="btn btn-primary" style={{ padding: '1rem 2rem', fontSize: '1.2rem', display: 'inline-flex', alignItems: 'center', gap: '10px' }}>
             Müşterimiz Misiniz? Bizi Değerlendirin
           </a>
         </div>

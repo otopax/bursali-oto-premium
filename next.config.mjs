@@ -7,7 +7,7 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.js');
  
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: 'standalone',
+  output: 'standalone',
   // BUILD OOM FIX: ağır server-only paketleri webpack bundle'ından ÇIKAR (external bırak).
   // Bunları derlemek/parse etmek webpack heap'ini şişiriyordu (OOM webpack fazındaydı).
   // Runtime'da node_modules'tan require edilirler; bundle'a girmezler.

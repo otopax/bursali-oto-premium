@@ -1,0 +1,204 @@
+[
+  {
+    "code": "P0300",
+    "description_en": "Random/Multiple Cylinder Misfire Detected",
+    "description_tr": "Rastgele/Birden Fazla Silindir Ateşleme Hatası Tespit Edildi",
+    "category": "Engine",
+    "severity": "HIGH",
+    "vehicles": [
+      "Audi A4 B8",
+      "VW Golf Mk6",
+      "Seat Leon 1P",
+      "Skoda Octavia Mk2"
+    ],
+    "redis_key": "fault:P0300",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0301",
+    "description_en": "Cylinder 1 Misfire Detected",
+    "description_tr": "1. Silindir Ateşleme Hatası Tespit Edildi",
+    "category": "Engine",
+    "severity": "HIGH",
+    "vehicles": [
+      "Audi A3 8P",
+      "VW Passat B7",
+      "Golf 6 1.4 TSI"
+    ],
+    "redis_key": "fault:P0301",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0302",
+    "description_en": "Cylinder 2 Misfire Detected",
+    "description_tr": "2. Silindir Ateşleme Hatası Tespit Edildi",
+    "category": "Engine",
+    "severity": "HIGH",
+    "vehicles": [
+      "Audi A4 2.0 TDI",
+      "VW Tiguan 2.0 TSI"
+    ],
+    "redis_key": "fault:P0302",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0171",
+    "description_en": "System Too Lean (Bank 1)",
+    "description_tr": "Sistem Çok Fakir Karışım (Bank 1)",
+    "category": "Fuel System",
+    "severity": "MEDIUM",
+    "vehicles": [
+      "Audi A4 1.8 TFSI",
+      "VW Golf 5 2.0 GTI"
+    ],
+    "redis_key": "fault:P0171",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0172",
+    "description_en": "System Too Rich (Bank 1)",
+    "description_tr": "Sistem Çok Zengin Karışım (Bank 1)",
+    "category": "Fuel System",
+    "severity": "MEDIUM",
+    "vehicles": [
+      "Audi A6 3.0 TFSI",
+      "VW Touareg 3.6 V6"
+    ],
+    "redis_key": "fault:P0172",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0087",
+    "description_en": "Fuel Rail/System Pressure - Too Low",
+    "description_tr": "Yakıt Rayı / Sistem Basıncı Çok Düşük",
+    "category": "Fuel Injection",
+    "severity": "CRITICAL",
+    "vehicles": [
+      "Audi A4 2.0 TDI",
+      "Audi Q5 2.0 TDI",
+      "VW Passat B8 2.0 TDI"
+    ],
+    "redis_key": "fault:P0087",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0299",
+    "description_en": "Turbocharger/Supercharger Boost Sensor Circuit Low",
+    "description_tr": "Turboşarj / Süperşarj Basınç Sensörü Devre Düşük Voltaj",
+    "category": "Turbocharger",
+    "severity": "HIGH",
+    "vehicles": [
+      "Audi A3 2.0 TDI",
+      "VW Scirocco 2.0 TSI",
+      "Seat Leon Cupra"
+    ],
+    "redis_key": "fault:P0299",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0401",
+    "description_en": "Exhaust Gas Recirculation Valve (EGR) Flow Insufficient",
+    "description_tr": "Egzoz Gazı Devridaim Valfi (EGR) Flow Insufficient",
+    "category": "Emissions",
+    "severity": "MEDIUM",
+    "vehicles": [
+      "VW Caddy 1.6 TDI",
+      "VW Passat B7 2.0 TDI"
+    ],
+    "redis_key": "fault:P0401",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P2002",
+    "description_en": "Diesel Particulate Filter (DPF) Efficiency Below Threshold",
+    "description_tr": "Dizel Partikül Filtresi (DPF) Efficiency Below Threshold",
+    "category": "Emissions",
+    "severity": "HIGH",
+    "vehicles": [
+      "Audi A6 C7 2.0 TDI",
+      "VW Touareg 3.0 TDI"
+    ],
+    "redis_key": "fault:P2002",
+    "redis_ttl": 300
+  },
+  {
+    "code": "P0700",
+    "description_en": "Transmission Control System (MIL Request)",
+    "description_tr": "Transmission Control System (MIL Request)",
+    "category": "Transmission",
+    "severity": "CRITICAL",
+    "vehicles": [
+      "Audi A4 B8 DSG",
+      "VW Golf 7 DSG 7-Speed"
+    ],
+    "redis_key": "fault:P0700",
+    "redis_ttl": 300
+  },
+  {
+    "code": "120308",
+    "description_en": "Charge pressure control, lower value: Pressure too low",
+    "description_tr": "Şarj Basınç Kontrolü: Basınç Çok Düşük (BMW Tahrik Uyarısı)",
+    "category": "Turbocharged Engine",
+    "severity": "CRITICAL",
+    "vehicles": [
+      "BMW F30 320i",
+      "BMW F10 520i",
+      "BMW F32 428i"
+    ],
+    "redis_key": "fault:120308",
+    "redis_ttl": 300
+  },
+  {
+    "code": "108A01",
+    "description_en": "Cylinder 1 Misfire Detected (DME)",
+    "description_tr": "1. Silindir Ateşleme Hatası Tespit Edildi (DME)",
+    "category": "Engine Ignition",
+    "severity": "HIGH",
+    "vehicles": [
+      "BMW F30 316i",
+      "BMW F20 116i"
+    ],
+    "redis_key": "fault:108A01",
+    "redis_ttl": 300
+  },
+  {
+    "code": "11A002",
+    "description_en": "High pressure fuel system, fuel pressure too low",
+    "description_tr": "Yüksek Basınçlı Yakıt Sistemi: Yakıt Basıncı Çok Düşük",
+    "category": "Fuel System",
+    "severity": "CRITICAL",
+    "vehicles": [
+      "BMW F10 528i",
+      "BMW F30 328i",
+      "BMW X5 35i"
+    ],
+    "redis_key": "fault:11A002",
+    "redis_ttl": 300
+  },
+  {
+    "code": "120408",
+    "description_en": "Charging pressure control: Switch-off as consequential reaction",
+    "description_tr": "Charging pressure control: Switch-off as consequential reaction",
+    "category": "Turbocharged Engine",
+    "severity": "HIGH",
+    "vehicles": [
+      "BMW F30 320d",
+      "BMW F10 520d"
+    ],
+    "redis_key": "fault:120408",
+    "redis_ttl": 300
+  },
+  {
+    "code": "130002",
+    "description_en": "VANOS solenoid valve, intake: Camshaft position not reached",
+    "description_tr": "VANOS solenoid valve, intake: Camshaft position not reached",
+    "category": "Engine Timing",
+    "severity": "HIGH",
+    "vehicles": [
+      "BMW E90 320i",
+      "BMW E60 520i"
+    ],
+    "redis_key": "fault:130002",
+    "redis_ttl": 300
+  }
+]

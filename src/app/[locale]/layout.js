@@ -69,6 +69,10 @@ export async function generateMetadata({ params }) {
       locale: localeMap[locale] || 'tr_TR',
       type: 'website',
     },
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/bg.png',
+    },
     twitter: {
       card: 'summary_large_image',
       title: t('title'),

@@ -110,8 +110,8 @@ export default async function Home({ params }) {
         <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>
           Otonom Tamir Asistanı (Vision AI)
         </h2>
-        <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 2rem auto', color: '#94a3b8' }}>
-          Arızalı parçanın fotoğrafını çekin, yapay zekamız hasarı saniyeler içinde analiz etsin.
+        <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 2rem auto', color: '#94a3b8' }}>
+          Arızalı parçanın (örn. çatlak hortumlar, aşınmış kayışlar veya sensör arızaları) fotoğrafını çekin, bilgisayarlı görü (Computer Vision) gücüyle yapay zekamız hasarı saniyeler içinde analiz edip teşhis koysun. Bu sistem, görsel verileri binlerce benzer arıza vakasıyla karşılaştırarak en olası hata kodlarını (DTC) ve en etkili çözüm yollarını sunar.
         </p>
         <ImageUploader />
       </section>
@@ -131,8 +131,11 @@ export default async function Home({ params }) {
       {/* Services Grid */}
       <section id="uzmanlik" className="services-section container">
         <h2 style={{ textAlign: 'center', marginBottom: '1rem' }}>{t('servicesTitle')}</h2>
-        <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 3rem auto' }}>
+        <p style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 1rem auto' }}>
           {t('servicesDesc')}
+        </p>
+        <p style={{ textAlign: 'center', maxWidth: '700px', margin: '0 auto 3rem auto', color: '#94a3b8', fontSize: '0.95rem' }}>
+          Alman premium markaların (BMW, Mercedes, Audi, Porsche, Volkswagen) yanı sıra Jaguar, Land Rover, Volvo ve Tesla gibi diğer seçkin ve yenilikçi otomobil gruplarına da üst düzey periyodik bakım, teşhis ve mekanik servis hizmetleri sunmaktayız.
         </p>
 
         <div className="grid">
@@ -234,7 +237,7 @@ export default async function Home({ params }) {
               <h2 style={{ marginBottom: '0.5rem' }}>{t('faultsTitle')}</h2>
               <p style={{ color: 'var(--text-muted)', margin: 0 }}>{t('faultsDesc')}</p>
             </div>
-            <a href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" aria-label="Tüm Arıza Çözümlerini Gör" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
+            <a href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" aria-label="Tüm Arıza Çözümlerini Gör" title="Tüm Arıza Çözümlerini Gör" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
               {t('faultsBtn')}
             </a>
           </div>
@@ -280,7 +283,7 @@ export default async function Home({ params }) {
             <p><strong>{t('contactPhone2')}</strong> <a href="tel:+902526141586" style={{ color: 'var(--text-light)' }}>0252 614 15 86</a></p>
             <p><strong>Çalışma Saatleri:</strong> {t('contactHours')}</p>
             <div style={{ marginTop: '2rem' }}>
-              <a href="https://wa.me/905548812021" className="btn btn-gold" style={{ display: 'block', textAlign: 'center' }}>
+              <a href="https://wa.me/905548812021" className="btn btn-gold" style={{ display: 'block', textAlign: 'center' }} target="_blank" rel="noopener noreferrer" title="WhatsApp ile İletişim Kurun">
                 {t('contactWhatsappBtn')}
               </a>
             </div>
@@ -331,9 +334,9 @@ export default async function Home({ params }) {
           <p>{t('footerAddress')}</p>
           
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0', flexWrap: 'wrap' }}>
-            <a href={`/${locale}/hakkimizda`} style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerAbout')}</a>
-            <a href={`/${locale}/seffaf-fiyatlandirma`} style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerPricing')}</a>
-            <a href={`/${locale}/ariza-cozumleri`} style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerFaults')}</a>
+            <a href={`/${locale}/hakkimizda`} title="Hakkımızda" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerAbout')}</a>
+            <a href={`/${locale}/seffaf-fiyatlandirma`} title="Şeffaf Fiyatlandırma" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerPricing')}</a>
+            <a href={`/${locale}/ariza-cozumleri`} title="Arıza Çözümleri" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerFaults')}</a>
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0', flexWrap: 'wrap' }}>
