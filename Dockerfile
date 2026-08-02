@@ -20,6 +20,7 @@ COPY . .
 RUN npx prisma generate
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV NODE_ENV production
+ENV IS_BUILD true
 
 RUN npm run build
 
