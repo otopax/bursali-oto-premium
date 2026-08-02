@@ -30,7 +30,6 @@ WORKDIR /app
 
 ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
-ENV PORT=3000
 ENV HOSTNAME="0.0.0.0"
 
 # Security: Non-root user
@@ -55,8 +54,8 @@ USER nextjs
 
 EXPOSE 3000
 
-# Native Container Healthcheck
-HEALTHCHECK --interval=30s --timeout=5s --start-period=15s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:3000/api/health/live || exit 1
+# Native Container Healthcheck (dynamic PORT support)
+HEALTHCHECK --interval=30s --timeout=5s --start-period=20s --retries=3 \
+  CMD wget --no-verbose --tries=1 --spider http://localhost:${PORT:-3000}/api/health/live || exit 1
 
 CMD ["node", "server.js"]
