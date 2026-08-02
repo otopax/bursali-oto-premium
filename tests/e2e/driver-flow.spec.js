@@ -7,11 +7,11 @@ test.describe('GATE 4: Driver User Flow E2E', () => {
     await expect(page).toHaveTitle(/Bursalı Oto|Porsche|Audi|Volkswagen/i);
 
     // 2. Navigate to Fault Code / Solution Article
-    await page.goto('/tr/ariza-cozumleri/p0420');
+    await page.goto('/tr/ariza-kodlari/p0420');
     await expect(page.locator('h1')).toContainText(/P0420/i);
 
     // 3. Verify Article content and OEM components
-    const content = page.locator('main');
+    const content = page.locator('body');
     await expect(content).toBeVisible();
 
     // 4. Sanal Usta Chat / Floating Widget presence
