@@ -19,15 +19,15 @@ export const options = {
 const BASE_URL = __ENV.BASE_URL || 'http://localhost:3000';
 
 export default function () {
-  // LOAD-A: Cached DTC Page
-  const resA = http.get(`${BASE_URL}/tr/ariza-cozumleri/p0420`);
+  // LOAD-A: Fault Code Page
+  const resA = http.get(`${BASE_URL}/tr/ariza-kodlari/p0420`);
   check(resA, {
     'LOAD-A status 200': (r) => r.status === 200,
     'LOAD-A duration < 500ms': (r) => r.timings.duration < 500,
   });
 
-  // LOAD-B: Uncached / Cold DTC Index Search
-  const resB = http.get(`${BASE_URL}/tr/ariza-cozumleri?q=lambda`);
+  // LOAD-B: Uncached / Cold Search Page
+  const resB = http.get(`${BASE_URL}/tr/ariza-kodlari`);
   check(resB, {
     'LOAD-B status 200': (r) => r.status === 200,
   });
