@@ -1,5 +1,5 @@
-import { createWorker } from '@/lib/bullmq/QueueFactory';
-import { logger } from '@/lib/logger';
+import { createWorker } from '../lib/bullmq/QueueFactory.js';
+import { logger } from '../lib/logger.js';
 
 export const crawlerWorker = createWorker('crawler-queue', async (job) => {
   logger.app.info(`[Crawler Worker] Processing job ${job.id}:`, job.data);
@@ -19,6 +19,8 @@ export const crawlerWorker = createWorker('crawler-queue', async (job) => {
   concurrency: 2
 });
 
-crawlerWorker.on('failed', (job, err) => {
-  logger.app.error(`[Crawler Worker] Job ${job?.id} failed:`, err.message);
-});
+if (crawlerWorker && typeof crawlerWorker.on === 'function') {
+  crawlerWorker.on('failed', (job, err) => {
+    logger.app.error(`[Crawler Worker] Job ${job?.id} failed:`, err.message);
+  });
+}

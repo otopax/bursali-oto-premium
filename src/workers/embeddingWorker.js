@@ -1,5 +1,5 @@
-import { createWorker } from '@/lib/bullmq/QueueFactory';
-import { logger } from '@/lib/logger';
+import { createWorker } from '../lib/bullmq/QueueFactory.js';
+import { logger } from '../lib/logger.js';
 
 export const embeddingWorker = createWorker('embedding-queue', async (job) => {
   logger.ai.info(`[Embedding Worker] Processing job ${job.id}:`, job.data);
@@ -19,6 +19,8 @@ export const embeddingWorker = createWorker('embedding-queue', async (job) => {
   concurrency: 5
 });
 
-embeddingWorker.on('failed', (job, err) => {
-  logger.ai.error(`[Embedding Worker] Job ${job?.id} failed:`, err.message);
-});
+if (embeddingWorker && typeof embeddingWorker.on === 'function') {
+  embeddingWorker.on('failed', (job, err) => {
+    logger.ai.error(`[Embedding Worker] Job ${job?.id} failed:`, err.message);
+  });
+}

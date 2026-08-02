@@ -1,5 +1,5 @@
-import { createWorker } from '@/lib/bullmq/QueueFactory';
-import { logger } from '@/lib/logger';
+import { createWorker } from '../lib/bullmq/QueueFactory.js';
+import { logger } from '../lib/logger.js';
 
 export const appointmentWorker = createWorker('appointment-queue', async (job) => {
   logger.business.info(`[AppointmentWorker] Start processing job ${job.id}`);
