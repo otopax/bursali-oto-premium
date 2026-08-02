@@ -2,12 +2,21 @@ import { Redis } from '@upstash/redis';
 import * as Sentry from "@sentry/nextjs";
 
 const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL || 'https://mock-upstash-url.upstash.io';
-const isMock = REDIS_URL.includes('mock') || process.env.NEXT_PHASE === 'phase-production-build';
+const isMock = !process.env.UPSTASH_REDIS_REST_URL || REDIS_URL.includes('mock') || process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
 
-export const redis = new Redis({
-  url: REDIS_URL,
-  token: process.env.UPSTASH_REDIS_REST_TOKEN || 'mock-token',
-});
+let redisInstance = null;
+if (!isMock) {
+  try {
+    redisInstance = new Redis({
+      url: REDIS_URL,
+      token: process.env.UPSTASH_REDIS_REST_TOKEN || 'mock-token',
+    });
+  } catch (e) {
+    redisInstance = null;
+  }
+}
+
+export const redis = redisInstance;
 
 export const CACHE_TTL = {
   VIN: 30 * 24 * 60 * 60, // 30 Gün
@@ -16,47 +25,37 @@ export const CACHE_TTL = {
   FAQ: 7 * 24 * 60 * 60, // 7 Gün
 };
 
+// Helper: Wrap promise with timeout
+function withTimeout(promise, ms = 500) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => setTimeout(() => reject(new Error('Cache timeout')), ms))
+  ]);
+}
+
 /**
  * Cache'den veri getirir
- * @param {string} namespace - 'vin', 'obd', 'page' vb.
- * @param {string} identifier - Benzersiz değer (vin numarası, slug vb.)
  */
 export async function getCache(namespace, identifier) {
-  if (isMock) return null;
+  if (isMock || !redisInstance) return null;
   try {
     const key = `cache:${namespace}:${identifier}`;
-    const result = await redis.get(key);
-    if (result) {
-      console.log(`[Cache HIT] ${key}`);
-    } else {
-      console.log(`[Cache MISS] ${key}`);
-    }
+    const result = await withTimeout(redisInstance.get(key), 500);
     return result;
   } catch (error) {
-    console.warn(`[Cache ERROR] Redis GET Error for ${namespace}:${identifier} - Failing Open`, error.message);
-    Sentry.captureException(error, {
-      tags: { service: 'redis', failOpen: 'true' },
-      extra: { operation: 'get', namespace, identifier }
-    });
-    return null; // Return null so application continues without cache
+    return null; // Return null fast without blocking page rendering
   }
 }
 
 /**
  * Cache'e veri yazar
- * @param {string} namespace - 'vin', 'obd', 'page' vb.
- * @param {string} identifier - Benzersiz değer
- * @param {any} value - Saklanacak veri
- * @param {number} ttlSeconds - Yaşam süresi (CAHCE_TTL sabiti kullanın)
  */
 export async function setCache(namespace, identifier, value, ttlSeconds = 3600) {
-  if (isMock) return;
+  if (isMock || !redisInstance) return null;
   try {
     const key = `cache:${namespace}:${identifier}`;
-    return await redis.set(key, value, { ex: ttlSeconds });
+    return await withTimeout(redisInstance.set(key, value, { ex: ttlSeconds }), 500);
   } catch (error) {
-    console.warn(`[Cache] Redis SET Error for ${namespace}:${identifier} - Ignoring`, error.message);
     return null;
   }
 }
-
