@@ -33,7 +33,7 @@ try {
   const NODE_OPTIONS = '--max-old-space-size=4096';
   execSync('next build', {
     stdio: 'inherit',
-    env: { ...process.env, NODE_OPTIONS },
+    env: { ...process.env, NODE_OPTIONS, IS_BUILD: 'true' },
   });
 } catch (error) {
   console.error('❌ Next.js build failed:', error.message);
