@@ -1,5 +1,7 @@
 import { getCache, setCache, CACHE_TTL } from '@/lib/cache';
 
+const memoryHierarchyCache = new Map();
+
 export class HierarchyBuilder {
   /**
    * @param {import('../interfaces/IContentRepository').IContentRepository} contentRepository 
@@ -27,20 +29,29 @@ export class HierarchyBuilder {
 
   async build(locale = 'tr', folder = 'faults') {
     const cacheKey = `hierarchy:${locale}:${folder}`;
+
+    // 1. RAM Cache (0ms Instant response time)
+    if (memoryHierarchyCache.has(cacheKey)) {
+      return memoryHierarchyCache.get(cacheKey);
+    }
+
+    // 2. Redis Cache
     const cached = await getCache('page', cacheKey);
     if (cached) {
       try {
-        return typeof cached === 'string' ? JSON.parse(cached) : cached;
+        const parsed = typeof cached === 'string' ? JSON.parse(cached) : cached;
+        memoryHierarchyCache.set(cacheKey, parsed);
+        return parsed;
       } catch (e) {
         console.warn('HierarchyCache JSON parse error, rebuilding...');
       }
     }
 
+    // 3. Build tree
     const posts = await this.contentRepository.getSortedPostsData(locale, folder);
     const hierarchy = {};
 
     posts.forEach(post => {
-      // 1. Markaları belirle (Çoklu marka desteği)
       let rawBrands = [];
       if (Array.isArray(post.brands) && post.brands.length > 0) {
         rawBrands = post.brands;
@@ -50,7 +61,6 @@ export class HierarchyBuilder {
         rawBrands = ['Diğer'];
       }
 
-      // 2. Modelleri belirle (Çoklu model desteği)
       let rawModels = [];
       if (Array.isArray(post.models) && post.models.length > 0) {
         rawModels = post.models;
@@ -60,7 +70,6 @@ export class HierarchyBuilder {
         rawModels = ['Genel'];
       }
 
-      // 3. Marka ve modelleri hiyerarşi ağacına işle
       rawBrands.forEach(brandName => {
         let cleanBrandName = brandName;
         if (cleanBrandName.toUpperCase() === 'MERCEDES') cleanBrandName = 'Mercedes-Benz';
@@ -86,7 +95,6 @@ export class HierarchyBuilder {
             };
           }
 
-          // Aynı arızanın aynı modele mükerrer eklenmesini engelle
           const exists = hierarchy[brandSlug].models[modelSlug].items.some(item => item.id === post.id);
           if (!exists) {
             hierarchy[brandSlug].models[modelSlug].items.push({
@@ -99,6 +107,7 @@ export class HierarchyBuilder {
       });
     });
 
+    memoryHierarchyCache.set(cacheKey, hierarchy);
     await setCache('page', cacheKey, JSON.stringify(hierarchy), CACHE_TTL.PAGE || 86400);
     return hierarchy;
   }

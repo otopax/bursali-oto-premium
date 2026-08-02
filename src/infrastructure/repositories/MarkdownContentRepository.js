@@ -5,6 +5,9 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { IContentRepository } from '@/application/interfaces/IContentRepository';
 
+// In-Memory RAM Cache to avoid re-reading 978 JSON files from disk on every HTTP request
+const memoryPostsCache = new Map();
+
 export class MarkdownContentRepository extends IContentRepository {
   constructor() {
     super();
@@ -16,22 +19,18 @@ export class MarkdownContentRepository extends IContentRepository {
     const brandStr = Array.isArray(json.brand) ? json.brand[0] : (json.brand || 'Volkswagen');
     const modelStr = Array.isArray(json.models) ? json.models[0] : (json.models || 'Genel');
     
-    // Semptomlar
     const symptomsList = Array.isArray(json.symptoms) && json.symptoms.length > 0
       ? `<h3>Olası Belirtiler</h3><ul>${json.symptoms.map(s => `<li>${s}</li>`).join('')}</ul>`
       : '';
 
-    // Kök Nedenler
     const causesList = Array.isArray(json.commonCauses) && json.commonCauses.length > 0
       ? `<h3>Kök Nedenler ve Muhtemel Sebepler</h3><ul>${json.commonCauses.map(c => `<li>${c}</li>`).join('')}</ul>`
       : '';
 
-    // Çözüm Adımları
     const solutionsList = Array.isArray(json.stepByStepSolution) && json.stepByStepSolution.length > 0
       ? `<h3>Adım Adım Servis Çözüm Adımları</h3><ul>${json.stepByStepSolution.map(sol => `<li>${sol}</li>`).join('')}</ul>`
       : '';
 
-    // Servis Notu
     const notesBlock = json.technicalNotes
       ? `<blockquote style="background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--accent-gold); padding: 1rem; margin-top: 1.5rem;"><strong>VAG Grubu Özel Servis Notu:</strong><p>${json.technicalNotes}</p></blockquote>`
       : '';
@@ -58,10 +57,15 @@ export class MarkdownContentRepository extends IContentRepository {
   }
 
   async getSortedPostsData(locale = 'tr', folder = 'blog') {
+    const cacheKey = `${locale}:${folder}`;
+    if (memoryPostsCache.has(cacheKey)) {
+      return memoryPostsCache.get(cacheKey);
+    }
+
     const directory = path.join(this.basePath, folder);
     let posts = [];
 
-    // 1. Markdown (.md / .mdx) dosyalarını oku
+    // 1. Markdown (.md / .mdx)
     if (fs.existsSync(directory)) {
       const fileNames = fs.readdirSync(directory);
       const mdPosts = fileNames
@@ -70,7 +74,6 @@ export class MarkdownContentRepository extends IContentRepository {
           const id = fileName.replace(/\.mdx?$/, '');
           const fullPath = path.join(directory, fileName);
           const fileContents = fs.readFileSync(fullPath, 'utf8');
-
           const matterResult = matter(fileContents);
 
           if (matterResult.data.locale && matterResult.data.locale !== locale) {
@@ -87,7 +90,7 @@ export class MarkdownContentRepository extends IContentRepository {
       posts = [...mdPosts];
     }
 
-    // 2. Eğer folder === 'faults' ise public/ariza_kodlari_data/ altındaki tüm JSON dosyalarını da ekle!
+    // 2. JSON DTC Faults
     if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
       const jsonFiles = fs.readdirSync(this.jsonFaultsDir);
       jsonFiles.forEach(file => {
@@ -102,7 +105,9 @@ export class MarkdownContentRepository extends IContentRepository {
       });
     }
 
-    return posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+    const sortedPosts = posts.sort((a, b) => (a.date < b.date ? 1 : -1));
+    memoryPostsCache.set(cacheKey, sortedPosts);
+    return sortedPosts;
   }
 
   async getAllPostIds(folder = 'blog') {
@@ -131,7 +136,6 @@ export class MarkdownContentRepository extends IContentRepository {
   }
 
   async getPostData(slug, folder = 'blog') {
-    // 1. Önce Markdown dosyasını ara
     const directory = path.join(this.basePath, folder);
     let fullPath = path.join(directory, `${slug}.md`);
     
@@ -157,7 +161,6 @@ export class MarkdownContentRepository extends IContentRepository {
       };
     }
 
-    // 2. Eğer Markdown bulunamadıysa ve folder === 'faults' ise JSON verisini ara
     if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
       const jsonPath = path.join(this.jsonFaultsDir, `${slug}.json`);
       if (fs.existsSync(jsonPath)) {
