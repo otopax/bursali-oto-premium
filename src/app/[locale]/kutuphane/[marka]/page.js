@@ -7,12 +7,8 @@ import { notFound } from 'next/navigation';
 export const dynamicParams = true;
 export const revalidate = 86400;
 
-export async function generateStaticParams({ params }) {
-  const { locale } = await params;
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
-  return Object.keys(hierarchy).map((marka) => ({
-    marka: marka
-  }));
+export async function generateStaticParams() {
+  return [];
 }
 
 export async function generateMetadata({ params }) {

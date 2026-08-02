@@ -6,18 +6,7 @@ export const dynamicParams = true;
 export const revalidate = 86400;
 
 export async function generateStaticParams() {
-  const staticParams = [];
-  try {
-    const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
-    Object.keys(hierarchy).forEach(marka => {
-      if (hierarchy[marka]?.models) {
-        Object.keys(hierarchy[marka].models).forEach(model => {
-          staticParams.push({ marka, model });
-        });
-      }
-    });
-  } catch (e) {}
-  return staticParams;
+  return [];
 }
 
 export async function generateMetadata({ params }) {
