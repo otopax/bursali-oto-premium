@@ -58,7 +58,7 @@ export class MarkdownContentRepository extends IContentRepository {
 
   async getSortedPostsData(locale = 'tr', folder = 'blog') {
     const cacheKey = `${locale}:${folder}`;
-    if (memoryPostsCache.has(cacheKey)) {
+    if (folder !== 'faults' && memoryPostsCache.has(cacheKey)) {
       return memoryPostsCache.get(cacheKey);
     }
 

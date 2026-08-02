@@ -32,14 +32,14 @@ export class HierarchyBuilder {
     const cacheKey = `hierarchy:${locale}:${folder}`;
 
     // 1. L1 Process RAM Cache (0-5ms Instant Response)
-    if (memoryHierarchyCache.has(cacheKey)) {
+    if (folder !== 'faults' && memoryHierarchyCache.has(cacheKey)) {
       return memoryHierarchyCache.get(cacheKey);
     }
 
     // 2. Single-Flight Coalescing (Thundering Herd Defense)
     return singleFlight(cacheKey, async () => {
       // Re-check L1 in case another concurrent in-flight completed
-      if (memoryHierarchyCache.has(cacheKey)) {
+      if (folder !== 'faults' && memoryHierarchyCache.has(cacheKey)) {
         return memoryHierarchyCache.get(cacheKey);
       }
 
