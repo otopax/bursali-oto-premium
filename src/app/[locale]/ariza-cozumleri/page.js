@@ -29,15 +29,15 @@ export default async function ArizaCozumleriHub({ params }) {
   const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
 
   const brands = Object.entries(hierarchy).map(([slug, data]) => {
-    let totalFaults = 0;
+    const uniquePostIds = new Set();
     Object.values(data.models).forEach(model => {
-      totalFaults += model.items.length;
+      model.items.forEach(item => uniquePostIds.add(item.id));
     });
     return {
       slug,
       name: data.name,
       logo: BRAND_LOGOS[data.name] || null,
-      count: totalFaults
+      count: uniquePostIds.size
     };
   }).sort((a, b) => b.count - a.count);
 
