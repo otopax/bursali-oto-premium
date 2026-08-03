@@ -276,7 +276,10 @@ export async function middleware(request) {
 
     // Cache-Control: Cloudflare ve tarayıcı önbellek stratejisi
     // HTML sayfaları: kısa tarayıcı cache + uzun Cloudflare edge cache (stale-while-revalidate)
-    if (!pathname.startsWith('/api') && !pathname.startsWith('/login') && !pathname.startsWith('/admin')) {
+    // NOT: /ariza-cozumleri dinamik verileri anlık göstermeli (no-store)
+    if (pathname.includes('/ariza-cozumleri')) {
+      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
+    } else if (!pathname.startsWith('/api') && !pathname.startsWith('/login') && !pathname.startsWith('/admin')) {
       response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=86400, stale-while-revalidate=43200');
     }
   }
