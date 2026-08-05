@@ -58,7 +58,9 @@ export class MarkdownContentRepository extends IContentRepository {
 
   async getSortedPostsData(locale = 'tr', folder = 'blog') {
     const cacheKey = `${locale}:${folder}`;
-    if (folder !== 'faults' && memoryPostsCache.has(cacheKey)) {
+    const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
+    
+    if ((folder !== 'faults' || isBuildPhase) && memoryPostsCache.has(cacheKey)) {
       return memoryPostsCache.get(cacheKey);
     }
 

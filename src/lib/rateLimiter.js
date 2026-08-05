@@ -3,7 +3,7 @@ const IORedis = require('ioredis');
 let redisClient = null;
 
 function getLimiterClient() {
-  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
   if (isBuildPhase) return null;
 
   if (!redisClient) {

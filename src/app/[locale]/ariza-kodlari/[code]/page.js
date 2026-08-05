@@ -9,7 +9,7 @@ const SITE = 'https://www.bursaliotoservis.com';
 const getCachedFaultCode = async (code) => {
   const upperCode = (code || '').toUpperCase();
   try {
-    const isBuild = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+    const isBuild = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
     if (isBuild) return null;
 
     const fault = await prisma.faultCode.findUnique({

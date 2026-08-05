@@ -3,7 +3,7 @@ const { default: RedlockDefault } = require('redlock');
 const _Redlock = Redlock || RedlockDefault || require('redlock');
 const IORedis = require('ioredis');
 
-const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
 
 let redis = null;
 let redlock = null;

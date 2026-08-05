@@ -1,7 +1,7 @@
 import { Queue, QueueEvents } from 'bullmq';
 import IORedis from 'ioredis';
 
-const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
 
 let connection = null;
 let crawlerQueue = null;

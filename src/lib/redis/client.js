@@ -4,7 +4,7 @@ let redisClient = null;
 let bullRedisClient = null;
 
 export function getRedisClient() {
-  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
   if (isBuildPhase) return null;
 
   if (!redisClient) {
@@ -30,7 +30,7 @@ export function getRedisClient() {
 }
 
 export function getBullRedisClient() {
-  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
   if (isBuildPhase) return null;
 
   if (!bullRedisClient) {

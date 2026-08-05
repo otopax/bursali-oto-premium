@@ -10,7 +10,7 @@ class RedisFactory {
 
   init() {
     try {
-      const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true';
+      const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
       
       // Build aşamasında asla dış Redis bağlantısı kurulmasın (ECONNREFUSED 127.0.0.1:6379 önlemek için)
       if (isBuildPhase) {
