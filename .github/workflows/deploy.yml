@@ -1,0 +1,48 @@
+name: Production Deployment with Health Check & Auto-Rollback
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-and-verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Deploy Cloudflare Worker
+        id: deploy-worker
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          workingDirectory: 'cloudflare-worker'
+
+      - name: Wait for Cloudflare Edge Propagation
+        run: sleep 10
+
+      - name: Health Check & Verification Gate
+        id: health-check
+        run: |
+          echo "Checking https://www.bursaliotoservis.com/api/health/live..."
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://www.bursaliotoservis.com/api/health/live)
+          if [ "$STATUS" -eq 200 ]; then
+            echo "✅ Health check PASSED (HTTP 200 OK)"
+          else
+            echo "❌ Health check FAILED (HTTP $STATUS)"
+            exit 1
+          fi
+
+      - name: Auto-Rollback on Failure
+        if: failure() && steps.deploy-worker.outcome == 'success'
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: rollback
+          workingDirectory: 'cloudflare-worker'
