@@ -2,12 +2,32 @@ import { container } from '@/application/di/container';
 import Link from 'next/link';
 import { arizaUrl } from '@/lib/urls';
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
-  const { engineCode } = await params;
+  const { engineCode, locale } = await params;
   const engineName = engineCode.toUpperCase();
+
+  const titles = {
+    tr: `${engineName} Motor Kronik Arıza Çözümleri | Bursalı Oto Servis`,
+    en: `${engineName} Engine Common Fault Solutions & Repair | Bursali Auto Repair`,
+    ru: `${engineName} Двигатель Диагностика и Ремонт | Bursali Auto Repair`,
+    uk: `${engineName} Двигун Діагностика та Ремонт | Bursali Auto Repair`,
+    ar: `${engineName} تشخيص أعطال المحرك وإصلاحها | Bursali Auto Repair`,
+  };
+
+  const descriptions = {
+    tr: `${engineName} motor kodlu premium araçlarda en sık görülen kronik arızalar, kök nedenleri ve garantili tamir çözümleri.`,
+    en: `${engineName} engine code common faults, root causes and guaranteed repair solutions at Bursali Auto Repair Fethiye.`,
+    ru: `Частые неисправности двигателя ${engineName} и гарантированный ремонт в автосервисе Bursali Fethiye.`,
+    uk: `Найпоширеніші несправності двигуна ${engineName} та гарантований ремонт в автосервісі Bursali Fethiye.`,
+    ar: `أكثر أعطال محركات ${engineName} شيوعاً وأسبابها وحلول الإصلاح المضمونة في ورشة بورصالي فتحية.`,
+  };
+
   return {
-    title: `${engineName} Motor Arıza Çözümleri | Bursalı Oto`,
-    description: `${engineName} motor kodlu premium araçlarda sık görülen arızalar ve uzman çözümleri.`,
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, `/motor/${engineCode}`),
   };
 }
 

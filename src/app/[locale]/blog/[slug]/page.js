@@ -8,16 +8,27 @@ export async function generateStaticParams() {
   return paths.map(p => ({ slug: p.params.slug }));
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { slug, locale } = await params;
   const postData = await container.getPostDataUseCase.execute(slug);
   
-  if (!postData) return { title: 'Not Found' };
+  if (!postData) return { title: 'Makale Bulunamadı | Bursalı Oto Servis' };
 
   return {
-    title: `${postData.title} | Bursalı Oto Servis`,
+    title: `${postData.title} | Bursalı Oto Servis Fethiye`,
     description: postData.description,
+    alternates: buildCanonical(locale, `/blog/${slug}`),
     openGraph: {
+      title: postData.title,
+      description: postData.description,
+      images: [postData.image || '/bg.png'],
+      url: `https://www.bursaliotoservis.com/${locale}/blog/${slug}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
       title: postData.title,
       description: postData.description,
       images: [postData.image || '/bg.png'],

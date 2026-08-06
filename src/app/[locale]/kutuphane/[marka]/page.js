@@ -11,16 +11,34 @@ export async function generateStaticParams() {
   return [];
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale, marka } = await params;
   const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
   const brandData = hierarchy[marka];
-  
-  if (!brandData) return { title: 'Bulunamadı' };
-  
+  const bName = brandData ? brandData.name : marka.toUpperCase();
+
+  const titles = {
+    tr: `${bName} Teknik Dokümanlar & Şemalar | Bursalı Oto Servis`,
+    en: `${bName} Technical Manuals & Fuse Diagrams | Bursali Auto Repair`,
+    ru: `${bName} Технические Руководства и Схемы | Bursali Auto Repair`,
+    uk: `${bName} Технічні Посібники та Схеми | Bursali Auto Repair`,
+    ar: `${bName} الأدلة الفنية ومخططات الصيانة | Bursali Auto Repair`,
+  };
+
+  const descriptions = {
+    tr: `${bName} markasına ait teknik servis dokümanları, sigorta kutusu şemaları ve tamir kılavuzları.`,
+    en: `${bName} technical service manuals, fuse box diagrams and repair guides at Bursali Auto Repair Fethiye.`,
+    ru: `Техническая документация и схемы предохранителей ${bName} в автосервисе Bursali Fethiye.`,
+    uk: `Технічна документація та схеми запобіжників ${bName} в автосервісі Bursali Fethiye.`,
+    ar: `الوثائق الفنية ومخططات المصاهر لسيارات ${bName} في ورشة بورصالي فتحية.`,
+  };
+
   return {
-    title: `${brandData.name} Teknik Kütüphane | Bursalı Oto`,
-    description: `${brandData.name} markasına ait teknik servis dokümanları, sigorta şemaları ve pdf kılavuzları.`
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, `/kutuphane/${marka}`),
   };
 }
 

@@ -36,24 +36,33 @@ export async function generateStaticParams() {
   return [];
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
-  const { code } = await params;
+  const { code, locale } = await params;
   const upperCode = (code || '').toUpperCase();
   const fault = await getCachedFaultCode(code);
 
-  if (!fault) {
-    return {
-      title: `${upperCode} Arıza Kodu Çözümü | Bursalı Oto`,
-      description: `${upperCode} OBD2 arıza kodu teşhis ve tamir rehberi.`
-    };
-  }
+  const titles = {
+    tr: `${upperCode} Arıza Kodu Çözümü ${fault ? `: ${fault.description}` : ''} | Bursalı Oto Servis`,
+    en: `${upperCode} Fault Code Diagnosis & Solution | Bursali Auto Repair`,
+    ru: `${upperCode} Код Ошибки Диагностика и Ремонт | Bursali Auto Repair`,
+    uk: `${upperCode} Код Помилки Діагностика та Ремонт | Bursali Auto Repair`,
+    ar: `${upperCode} تشخيص رمز العطل وإصلاحه | Bursali Auto Repair`,
+  };
+
+  const descriptions = {
+    tr: `${upperCode} arızası nedir, belirtileri ve nasıl tamir edilir? Uzman Fethiye oto servis onarım rehberi.`,
+    en: `${upperCode} OBD2 fault code diagnosis, symptoms and expert repair guide at Bursali Auto Repair Fethiye.`,
+    ru: `${upperCode} симптомы и инструкция по ремонту в автосервисе Bursali Fethiye.`,
+    uk: `${upperCode} симптоми та посібник з ремонту в автосервісі Bursali Fethiye.`,
+    ar: `${upperCode} أعراض رمز العطل ودليل الإصلاح لدى ميكانيكي بورصالي فتحية.`,
+  };
 
   return {
-    title: `${fault.code} Arıza Kodu Çözümü: ${fault.description} | Bursalı Oto`,
-    description: `${fault.code} arızası nedir, belirtileri ve nasıl tamir edilir? ${fault.description} — uzman onarım rehberi.`,
-    alternates: {
-      canonical: `${SITE}/tr/ariza-kodlari/${fault.code}`
-    }
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, `/ariza-kodlari/${upperCode}`),
   };
 }
 

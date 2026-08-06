@@ -1,12 +1,32 @@
 import Link from 'next/link';
 import { MaintenanceRepository } from '@/lib/repositories/MaintenanceRepository';
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale, brand, mileage } = await params;
   const brandName = brand.toUpperCase();
+
+  const titles = {
+    tr: `${brandName} ${mileage} km Bakım Programı & Maliyeti | Bursalı Oto Servis`,
+    en: `${brandName} ${mileage} km Service Schedule & Cost | Bursali Auto Repair`,
+    ru: `${brandName} ${mileage} км График ТО и Стоимость | Bursali Auto Repair`,
+    uk: `${brandName} ${mileage} км Графік ТО та Вартість | Bursali Auto Repair`,
+    ar: `${brandName} ${mileage} كم جدول الصيانة والتكلفة | Bursali Auto Repair`,
+  };
+
+  const descriptions = {
+    tr: `${brandName} aracınızın ${mileage} km periyodik/ağır bakımında değişmesi gereken parçalar, kullanılacak yağ spesifikasyonu ve tahmini maliyetleri.`,
+    en: `${brandName} ${mileage} km service schedule, parts to replace, oil specifications and estimated repair cost at Bursali Auto Repair Fethiye.`,
+    ru: `График ТО ${brandName} ${mileage} км, замена запчастей и стоимость в автосервисе Bursali Fethiye.`,
+    uk: `Графік ТО ${brandName} ${mileage} км, заміна запчастин та вартість в автосервісі Bursali Fethiye.`,
+    ar: `جدول صيانة ${brandName} ${mileage} كم والقطع الواجب استبدالها في ورشة بورصالي فتحية.`,
+  };
+
   return {
-    title: `${brandName} ${mileage} km Bakım Programı ve Maliyeti | Bursalı Oto`,
-    description: `${brandName} aracınızın ${mileage} km periyodik/ağır bakımında değişmesi gereken parçalar, kullanılacak yağ spesifikasyonu ve tahmini maliyetleri öğrenin.`
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, `/bakim-merkezi/${brand}/${mileage}`),
   };
 }
 

@@ -9,19 +9,43 @@ export async function generateStaticParams() {
   return [];
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale, marka, model } = await params;
   try {
     const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
     const brandData = hierarchy[marka] || { name: marka };
     const modelData = brandData.models?.[model] || { name: model };
-    
+    const bName = brandData.name || marka.toUpperCase();
+    const mName = modelData.name || model.toUpperCase();
+
+    const titles = {
+      tr: `${bName} ${mName} Teknik Kütüphane & Şemalar | Bursalı Oto Servis`,
+      en: `${bName} ${mName} Wiring Diagrams & Repair Manuals | Bursali Auto Repair`,
+      ru: `${bName} ${mName} Схемы и Руководства по Ремонту | Bursali Auto Repair`,
+      uk: `${bName} ${mName} Схеми та Посібники з Ремонту | Bursali Auto Repair`,
+      ar: `${bName} ${mName} مخططات وأدلة الإصلاح | Bursali Auto Repair`,
+    };
+
+    const descriptions = {
+      tr: `${bName} ${mName} modeline ait arıza kodları, sigorta şemaları ve teknik tamir kılavuzları. Fethiye özel oto servis.`,
+      en: `${bName} ${mName} fuse diagrams, wiring schematics and technical repair guides at Bursali Auto Repair Fethiye.`,
+      ru: `Технические руководства и схемы предохранителей ${bName} ${mName} в автосервисе Bursali Fethiye.`,
+      uk: `Технічні посібники та схеми запобіжників ${bName} ${mName} в автосервісі Bursali Fethiye.`,
+      ar: `الوثائق الفنية ومخططات المصاهر لسيارات ${bName} ${mName} في ورشة بورصالي فتحية.`,
+    };
+
     return {
-      title: `${brandData.name || marka} ${modelData.name || model} Teknik Kütüphane & Arıza Rehberi | Bursalı Oto`,
-      description: `${brandData.name || marka} ${modelData.name || model} aracı için arıza kodları, çözümleri, sigorta şemaları ve teknik ayar kılavuzları.`
+      title: titles[locale] || titles.tr,
+      description: descriptions[locale] || descriptions.tr,
+      alternates: buildCanonical(locale, `/kutuphane/${marka}/${model}`),
     };
   } catch (e) {
-    return { title: 'Teknik Kütüphane | Bursalı Oto' };
+    return {
+      title: 'Teknik Kütüphane | Bursalı Oto Servis',
+      alternates: buildCanonical(locale, `/kutuphane/${marka}/${model}`),
+    };
   }
 }
 

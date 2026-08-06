@@ -2,11 +2,15 @@
 // NOT: Bu metin bir TASLAKTIR. Yayına almadan önce [KÖŞELİ] alanları doldurulmalı
 // ve bir avukat tarafından gözden geçirilmelidir.
 
-export async function generateMetadata() {
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   return {
     title: 'KVKK Aydınlatma Metni | Bursalı Oto Servis',
     description:
       '6698 sayılı KVKK kapsamında kişisel verilerin işlenmesine ilişkin aydınlatma metni.',
+    alternates: buildCanonical(locale, '/kvkk'),
     robots: { index: true, follow: true },
   };
 }

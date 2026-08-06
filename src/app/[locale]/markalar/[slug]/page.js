@@ -3,6 +3,8 @@ import Head from 'next/head';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`);
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'SEO' });
@@ -14,26 +16,14 @@ export async function generateMetadata({ params }) {
   // Format brand name beautifully (e.g. land-rover -> Land Rover)
   const formattedBrand = rawBrand.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
-  // Fix cannibalization: point canonical to the district-specific local SEO page
-  const canonical = `${SITE_URL}/${locale}/bolge/${slug}`;
-
   return {
     title: t('brandServiceTitle', { brand: formattedBrand }),
     description: t('brandServiceDesc', { brand: formattedBrand }),
-    alternates: {
-      canonical,
-      languages: {
-        tr: `${SITE_URL}/tr/markalar/${slug}`,
-        en: `${SITE_URL}/en/markalar/${slug}`,
-        ru: `${SITE_URL}/ru/markalar/${slug}`,
-        uk: `${SITE_URL}/uk/markalar/${slug}`,
-        'x-default': `${SITE_URL}/tr/markalar/${slug}`,
-      },
-    },
+    alternates: buildCanonical(locale, `/markalar/${slug}`),
     openGraph: {
       title: t('brandServiceTitle', { brand: formattedBrand }),
       description: t('brandServiceDesc', { brand: formattedBrand }),
-      url: canonical,
+      url: `${SITE_URL}/${locale}/markalar/${slug}`,
       type: 'website',
       locale: locale,
     }

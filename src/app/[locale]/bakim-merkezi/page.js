@@ -1,11 +1,31 @@
 import Link from 'next/link';
 import BakimHesaplaForm from './BakimHesaplaForm';
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+
+  const titles = {
+    tr: 'Otomotiv Bilgi & Bakım Merkezi | Bursalı Oto Servis',
+    en: 'Auto Maintenance & Diagnostics Hub | Bursali Auto Repair',
+    ru: 'Центр Обслуживания и Диагностики Авто | Bursali Auto Repair',
+    uk: 'Центр Обслуговування та Діагностики Авто | Bursali Auto Repair',
+    ar: 'مركز صيانة وتخيص السيارات | Bursali Auto Repair',
+  };
+
+  const descriptions = {
+    tr: 'Ücretsiz VIN çözücü, periyodik bakım hesaplayıcı, OBD2 arıza kodu sorgulama ve tahmini onarım maliyeti hesaplama.',
+    en: 'Free VIN decoder, periodic maintenance calculator, OBD2 fault code lookup and estimated repair cost calculator in Fethiye.',
+    ru: 'Бесплатный VIN декодер, калькулятор ТО и поиск кодов ошибок OBD2.',
+    uk: 'Безкоштовний VIN декодер, калькулятор ТО та пошук кодів помилок OBD2.',
+    ar: 'فك تشفير VIN المجاني ومحاسب الصيانة الدورية والبحث عن رموز الأعطال.',
+  };
+
   return {
-    title: 'Otomotiv Bilgi & Bakım Merkezi | Bursalı Oto',
-    description: 'Ücretsiz VIN çözücü, bakım hesaplayıcı, OBD arıza kodu sorgulama ve tahmini onarım maliyeti hesaplama araçları.'
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, '/bakim-merkezi'),
   };
 }
 

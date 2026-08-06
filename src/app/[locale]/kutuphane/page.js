@@ -6,10 +6,33 @@ import Link from 'next/link';
 export const dynamicParams = true;
 export const revalidate = 86400;
 
-export const metadata = {
-  title: 'Teknik Kütüphane | Bursalı Oto',
-  description: 'Uzmanlar için interaktif teknik veritabanı. Sigorta şemaları, TSB bültenleri ve teknik onarım kılavuzları.',
-};
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+
+  const titles = {
+    tr: 'Teknik Kütüphane & Şema Rehberi | Bursalı Oto Servis',
+    en: 'Technical Library & Wiring Diagram Guide | Bursali Auto Repair',
+    ru: 'Техническая Библиотека и Схемы | Bursali Auto Repair',
+    uk: 'Технічна Блокнот-Бібліотека та Схеми | Bursali Auto Repair',
+    ar: 'المكتبة التقنية ومخططات الأسلاك | Bursali Auto Repair',
+  };
+
+  const descriptions = {
+    tr: 'Araçlara özel sigorta kutusu şemaları (Fuse Diagrams), TSB teknik bültenleri ve mekanik onarım kılavuzları.',
+    en: 'Vehicle-specific fuse diagrams, technical service bulletins (TSB) and repair manuals.',
+    ru: 'Схемы предохранителей, технические бюллетени (TSB) и руководства по ремонту.',
+    uk: 'Схеми запобіжників, технічні бюлетені (TSB) та посібники з ремонту.',
+    ar: 'مخططات صندوق المصاهر والمقالات الفنية وأدلة الصيانة.',
+  };
+
+  return {
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, '/kutuphane'),
+  };
+}
 
 const BRAND_LOGOS = {
   'BMW': 'https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg',

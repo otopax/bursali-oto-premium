@@ -2,11 +2,15 @@
 // NOT: Şu an başvuru e-posta (mailto) ile iletilir. İleride bir API endpoint'i +
 // Customer.consentAt / silme talebi kaydı eklenebilir. [KÖŞELİ] alanlar doldurulmalı.
 
-export async function generateMetadata() {
+import { buildCanonical } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
   return {
     title: 'Veri Silme ve KVKK Başvurusu | Bursalı Oto Servis',
     description:
       'Kişisel verilerinizin silinmesi veya KVKK kapsamındaki haklarınıza ilişkin başvuru.',
+    alternates: buildCanonical(locale, '/veri-silme-talebi'),
     robots: { index: true, follow: true },
   };
 }

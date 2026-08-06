@@ -11,16 +11,34 @@ export async function generateStaticParams() {
   return [];
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale, marka } = await params;
   const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
   const brandData = hierarchy[marka];
-  
-  if (!brandData) return { title: 'Bulunamadı' };
-  
+  const bName = brandData ? brandData.name : marka.toUpperCase();
+
+  const titles = {
+    tr: `${bName} Kronik Arıza Çözümleri | Bursalı Oto Servis Fethiye`,
+    en: `${bName} Chronic Fault Solutions & Repair | Bursali Auto Repair`,
+    ru: `${bName} Инструкция по Ремонту и Диагностика | Bursali Auto Repair`,
+    uk: `${bName} Посібник з Ремонту та Діагностика | Bursali Auto Repair`,
+    ar: `${bName} دليل إصلاح الأعطال والتشخيص | Bursali Auto Repair`,
+  };
+
+  const descriptions = {
+    tr: `${bName} markasına ait en sık karşılaşılan kronik arızalar, kök nedenleri ve garantili tamir çözümleri. Fethiye özel servisi.`,
+    en: `Most common ${bName} chronic faults, root causes and guaranteed repair solutions at Bursali Auto Repair Fethiye.`,
+    ru: `Частые неисправности ${bName}, причины и гарантированный ремонт в автосервисе Bursali Fethiye.`,
+    uk: `Найпоширеніші несправності ${bName}, причини та гарантований ремонт в автосервісі Bursali Fethiye.`,
+    ar: `أكثر أعطال ${bName} شيوعاً وأسبابها وحلول الإصلاح المضمونة في ورشة بورصالي فتحية.`,
+  };
+
   return {
-    title: `${brandData.name} Arıza Çözümleri | Bursalı Oto`,
-    description: `${brandData.name} markasına ait en sık karşılaşılan kronik arızalar ve çözümleri. Lütfen aracınızın modelini seçin.`
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, `/ariza-cozumleri/${marka}`),
   };
 }
 

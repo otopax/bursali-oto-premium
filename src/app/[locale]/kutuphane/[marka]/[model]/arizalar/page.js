@@ -9,19 +9,43 @@ export async function generateStaticParams() {
   return [];
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale, marka, model } = await params;
   try {
     const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
     const brandData = hierarchy[marka] || { name: marka };
     const modelData = brandData.models?.[model] || { name: model };
-    
+    const bName = brandData.name || marka.toUpperCase();
+    const mName = modelData.name || model.toUpperCase();
+
+    const titles = {
+      tr: `${bName} ${mName} Arıza Kodu Çözümleri Kütüphanesi | Bursalı Oto Servis`,
+      en: `${bName} ${mName} Fault Solutions Library | Bursali Auto Repair Fethiye`,
+      ru: `${bName} ${mName} Библиотека Решения Ошибок | Bursali Auto Repair Fethiye`,
+      uk: `${bName} ${mName} Бібліотека Рішення Помилок | Bursali Auto Repair Fethiye`,
+      ar: `${bName} ${mName} مكتبة حلول الأعطال | Bursali Auto Repair Fethiye`,
+    };
+
+    const descriptions = {
+      tr: `${bName} ${mName} kronik arıza kodları, belirtileri ve garantili tamir çözümleri. Fethiye özel oto servis.`,
+      en: `${bName} ${mName} chronic fault codes, symptoms and guaranteed repair solutions at Bursali Auto Repair Fethiye.`,
+      ru: `Коды ошибок и решение неисправностей ${bName} ${mName} в автосервисе Bursali Fethiye.`,
+      uk: `Коди помилок та рішення несправностей ${bName} ${mName} в автосервісі Bursali Fethiye.`,
+      ar: `رموز الأعطال وحلول الصيانة لسيارات ${bName} ${mName} في ورشة بورصالي فتحية.`,
+    };
+
     return {
-      title: `${brandData.name || marka} ${modelData.name || model} Arıza Çözümleri Kütüphanesi | Bursalı Oto`,
-      description: `${brandData.name || marka} ${modelData.name || model} modeline ait kronik arıza kodları, belirtileri ve uzman tamir çözümleri.`
+      title: titles[locale] || titles.tr,
+      description: descriptions[locale] || descriptions.tr,
+      alternates: buildCanonical(locale, `/kutuphane/${marka}/${model}/arizalar`),
     };
   } catch (e) {
-    return { title: 'Arıza Çözümleri Kütüphanesi | Bursalı Oto' };
+    return {
+      title: 'Arıza Çözümleri Kütüphanesi | Bursalı Oto Servis',
+      alternates: buildCanonical(locale, `/kutuphane/${marka}/${model}/arizalar`),
+    };
   }
 }
 

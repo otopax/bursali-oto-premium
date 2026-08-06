@@ -9,19 +9,43 @@ export async function generateStaticParams() {
   return [];
 }
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale, marka, model } = await params;
   try {
     const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
     const brandData = hierarchy[marka] || { name: marka };
     const modelData = brandData.models?.[model] || { name: model };
-    
+    const bName = brandData.name || marka.toUpperCase();
+    const mName = modelData.name || model.toUpperCase();
+
+    const titles = {
+      tr: `${bName} ${mName} Arıza Çözümleri & Tamir | Bursalı Oto Servis Fethiye`,
+      en: `${bName} ${mName} Common Fault Solutions | Bursali Auto Repair Fethiye`,
+      ru: `${bName} ${mName} Частые Ошибки и Ремонт | Bursali Auto Repair Fethiye`,
+      uk: `${bName} ${mName} Поширені Помилки та Ремонт | Bursali Auto Repair Fethiye`,
+      ar: `${bName} ${mName} حلول الأعطال والإصلاح | Bursali Auto Repair Fethiye`,
+    };
+
+    const descriptions = {
+      tr: `${bName} ${mName} modeline ait kronik arıza kodları, belirtileri ve uzman tamir çözümleri. Fethiye özel oto servis.`,
+      en: `${bName} ${mName} fault codes, symptoms and expert repair solutions at Bursali Auto Repair Fethiye.`,
+      ru: `Диагностика и ремонт редких неисправностей ${bName} ${mName} в автосервисе Bursali Fethiye.`,
+      uk: `Діагностика та ремонт редких несправностей ${bName} ${mName} в автосервісі Bursali Fethiye.`,
+      ar: `تشخيص وإصلاح أعطال ${bName} ${mName} في ورشة بورصالي فتحية.`,
+    };
+
     return {
-      title: `${brandData.name || marka} ${modelData.name || model} Arıza Çözümleri | Bursalı Oto`,
-      description: `${brandData.name || marka} ${modelData.name || model} modeline ait kronik arıza kodları, belirtileri ve uzman tamir çözümleri.`
+      title: titles[locale] || titles.tr,
+      description: descriptions[locale] || descriptions.tr,
+      alternates: buildCanonical(locale, `/ariza-cozumleri/${marka}/${model}`),
     };
   } catch (e) {
-    return { title: 'Arıza Çözümleri | Bursalı Oto' };
+    return {
+      title: 'Arıza Çözümleri | Bursalı Oto Servis',
+      alternates: buildCanonical(locale, `/ariza-cozumleri/${marka}/${model}`),
+    };
   }
 }
 
