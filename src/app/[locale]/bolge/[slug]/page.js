@@ -78,8 +78,16 @@ export default async function ProgrammaticSeoPage({ params }) {
     }
   };
 
+  const serviceLabel = {
+    tr: 'Servisi & Tamiri',
+    en: 'Specialist Repair',
+    ru: 'Спецавтосервис',
+    uk: 'Спецавтосервіс',
+    ar: 'مركز صيانة',
+  };
+
   return (
-    <main style={{ minHeight: '100vh', paddingTop: '120px' }}>
+    <main style={{ paddingTop: '120px', minHeight: '100vh', background: 'var(--background)' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
@@ -91,7 +99,7 @@ export default async function ProgrammaticSeoPage({ params }) {
           📍 {district} Bölgesine Özel Hizmet
         </span>
         <h1 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontWeight: '900', lineHeight: '1.2' }}>
-          {district} <span style={{ color: 'var(--accent-gold)' }}>{brand} Servisi</span>
+          {district} <span style={{ color: 'var(--accent-gold)' }}>{brand} {serviceLabel[locale] || serviceLabel.tr}</span>
         </h1>
         <p style={{ fontSize: '1.25rem', color: '#94a3b8', maxWidth: '800px', margin: '0 auto', marginBottom: '3rem' }}>
           Aracınız {district} çevresinde arıza mı yaptı veya bakıma mı ihtiyacı var? Profesyonel ekibimiz ve orijinal {brand} diagnostik cihazlarımızla yanınızdayız.

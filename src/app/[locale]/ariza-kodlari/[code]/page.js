@@ -121,8 +121,8 @@ export default async function FaultCodePage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
 
-      <div className="max-w-4xl mx-auto bg-slate-800 shadow-xl rounded-2xl overflow-hidden border border-slate-700">
-        <div className="bg-slate-950 text-white p-8 border-b border-slate-800">
+      <div className="max-w-4xl mx-auto bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden shadow-2xl">
+        <div className="bg-gradient-to-r from-amber-950/40 to-slate-900 p-8 border-b border-slate-800">
           <div className="flex items-center space-x-2 text-sm text-slate-400 mb-4">
             <Link href={`/${locale}`} className="hover:text-white">Anasayfa</Link>
             <span>/</span>
@@ -131,7 +131,7 @@ export default async function FaultCodePage({ params }) {
             <span className="text-amber-400 font-semibold">{fault.code}</span>
           </div>
           <h1 className="text-4xl font-extrabold tracking-tight mb-2 text-amber-400">
-            {fault.code} Arıza Kodu Çözümü
+            {h1Titles[locale] || h1Titles.tr}
           </h1>
           <p className="text-xl text-slate-300">{fault.description}</p>
           {fault.severity && (

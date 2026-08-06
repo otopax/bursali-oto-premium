@@ -2,13 +2,25 @@
 
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { useParams } from 'next/navigation';
+
 export default function VipGaragePage() {
   const t = useTranslations('Index'); // Fallback translation if needed
+  const params = useParams();
+  const locale = params?.locale || 'tr';
   
   const [loginForm, setLoginForm] = useState({ plate: '', phone: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [vehicleData, setVehicleData] = useState(null);
+
+  const h1Titles = {
+    tr: 'VIP Garaj & Özel Araç Takibi',
+    en: 'VIP Garage & Private Vehicle Tracking',
+    ru: 'VIP Гараж и Мониторинг Автомобиля',
+    uk: 'VIP Гараж та Моніторинг Автомобіля',
+    ar: 'كراج VIP ومتابعة السيارة الخاصة',
+  };
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -53,7 +65,7 @@ export default function VipGaragePage() {
         <div className="max-w-md mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-4" style={{ background: 'linear-gradient(45deg, #d4af37, #fef08a)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              VIP Garaj
+              {h1Titles[locale] || h1Titles.tr}
             </h1>
             <p className="text-[var(--text-muted)] text-lg">
               Aracınızın servis durumunu ve geçmiş bakım karnesini anlık takip edin.

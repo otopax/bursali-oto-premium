@@ -1,10 +1,21 @@
 "use client";
 
 import { useState } from 'react';
+import { useParams } from 'next/navigation';
 
 export default function VipFleetPage() {
+  const params = useParams();
+  const locale = params?.locale || 'tr';
   const [form, setForm] = useState({ plate: '', phone: '', complaint: '' });
   const [status, setStatus] = useState({ loading: false, success: false, error: '' });
+
+  const h1Titles = {
+    tr: 'Fethiye VIP Transfer ve Turizm Filo Bakımı (Night-Shift)',
+    en: 'Fethiye VIP Fleet & Tourism Fleet Night-Shift Maintenance',
+    ru: 'Ночное Обслуживание VIP И Туристических Автопарков в Фетхие',
+    uk: 'Нічне Обслуговування VIP та Туристичних Автопарків у Фетхіє',
+    ar: 'صيانة أسطول نقل VIP والسيارات السياحية في فتحية (الوردية الليلية)',
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -31,7 +42,7 @@ export default function VipFleetPage() {
     <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
       <div className="container">
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
-          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Fethiye VIP Transfer ve Turizm Filo Bakımı (Night-Shift)</h1>
+          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
           <p style={{ fontSize: '1.2rem', lineHeight: '1.8', marginBottom: '2rem' }}>
             Fethiye, Göcek ve Dalaman bölgesindeki turizm acenteleri ve VIP transfer firmaları için araç yatmasına son veriyoruz. <strong>Mercedes Vito, Sprinter, VW Transporter ve Crafter</strong> gibi ticari filolarınızın bakımlarını "Night-Shift" (Gece Vardiyası) sistemimizle gece yapıyor, sabah işinize devam etmenizi sağlıyoruz.
           </p>

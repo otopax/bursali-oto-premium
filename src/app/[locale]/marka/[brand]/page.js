@@ -41,10 +41,18 @@ export default async function BrandHubPage({ params }) {
     return fBrandSlug === brand;
   });
 
+  const h1Titles = {
+    tr: `${brand.replace('-', ' ')} Arıza Çözümleri Merkezi`,
+    en: `${brand.replace('-', ' ')} Fault Solutions Center`,
+    ru: `${brand.replace('-', ' ')} — Центр Диагностики и Устранения Неисправностей`,
+    uk: `${brand.replace('-', ' ')} — Центр Діагностики та Усунення Несправностей`,
+    ar: `${brand.replace('-', ' ')} — مركز تشخيص وإصلاح الأعطال`,
+  };
+
   return (
     <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
       <div className="container mx-auto px-4 max-w-6xl">
-        <h1 className="text-4xl font-bold mb-4 text-center text-white capitalize">{brand.replace('-', ' ')} Arıza Çözümleri Merkezi</h1>
+        <h1 className="text-4xl font-bold mb-4 text-center text-white capitalize">{h1Titles[locale] || h1Titles.tr}</h1>
         <p className="text-gray-400 text-center mb-12 max-w-2xl mx-auto">
           {brand.replace('-', ' ').toUpperCase()} marka araçların en sık karşılaşılan kronik arızalarını, kök nedenlerini ve servisimizde uyguladığımız kalıcı çözümleri inceleyin.
         </p>
