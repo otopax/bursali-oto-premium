@@ -63,11 +63,19 @@ export default async function KutuphaneHub({ params }) {
     };
   }).sort((a, b) => b.count - a.count);
 
+  const h1Titles = {
+    tr: 'Teknik Kütüphane & Onarım Rehberleri',
+    en: 'Technical Library & Repair Manuals',
+    ru: 'Техническая Библиотека и Руководства по Ремонту',
+    uk: 'Технічна Бібліотека та Посібники з Ремонту',
+    ar: 'المكتبة الفنية وأدلة الصيانة',
+  };
+
   return (
     <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
       <div className="container" style={{ margin: '0 auto', padding: '0 2rem', maxWidth: '1200px' }}>
         <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center', color: 'var(--text-light)' }}>
-          Teknik <span style={{ color: 'var(--accent-gold)' }}>Kütüphane</span>
+          {h1Titles[locale] || h1Titles.tr}
         </h1>
         <p style={{ color: 'var(--text-muted)', textAlign: 'center', marginBottom: '3rem', maxWidth: '800px', margin: '0 auto 3rem auto', fontSize: '1.1rem' }}>
           Araçlara özel sigorta şemaları (Fuse Diagrams), teknik bültenler (TSB) ve onarım kılavuzlarına ulaşmak için lütfen aracınızın markasını seçin.

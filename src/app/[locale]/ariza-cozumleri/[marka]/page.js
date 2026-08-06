@@ -70,7 +70,7 @@ export default async function ArizaCozumleriBrandPage({ params }) {
         </div>
 
         <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-light)' }}>
-          {brandData.name} <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri</span>
+          {h1Titles[locale] || h1Titles.tr}
         </h1>
         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '800px', fontSize: '1.1rem' }}>
           Aşağıdaki listeden aracınızın modelini seçerek, o modele ait yaygın arızaları ve çözümlerini inceleyebilirsiniz.

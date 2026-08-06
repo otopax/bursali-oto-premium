@@ -35,10 +35,18 @@ export default async function BlogIndex({ params }) {
   const t = await getTranslations({ locale, namespace: 'HomePage' }); // veya Global vs.
   const allPostsData = await container.getSortedPostsUseCase.execute(locale);
 
+  const h1Titles = {
+    tr: 'Oto Servis & Bakım Rehberi',
+    en: 'Auto Service & Maintenance Guide',
+    ru: 'Руководство по Ремонту и Обслуживанию Авто',
+    uk: 'Посібник з Ремонту та Обслуговування Авто',
+    ar: 'دليل صيانة وإصلاح السيارات',
+  };
+
   return (
     <div className="container mx-auto px-4 py-16" style={{ minHeight: '80vh', marginTop: '100px' }}>
       <h1 className="text-4xl font-bold mb-8 text-center" style={{ color: 'var(--accent-gold)' }}>
-        {locale === 'tr' ? 'Oto Servis Rehberi' : 'Auto Service Guide'}
+        {h1Titles[locale] || h1Titles.tr}
       </h1>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

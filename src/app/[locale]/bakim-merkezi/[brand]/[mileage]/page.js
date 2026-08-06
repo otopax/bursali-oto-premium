@@ -48,6 +48,14 @@ export default async function MaintenanceResultPage({ params }) {
   const items = scheduleRes.items;
   const brandName = brand.toUpperCase();
 
+  const h1Titles = {
+    tr: `${brandName} ${mileage} km Bakım Programı`,
+    en: `${brandName} ${mileage} km Service Schedule`,
+    ru: `${brandName} ${mileage} km Регламент ТО`,
+    uk: `${brandName} ${mileage} km Регламент ТО`,
+    ar: `${brandName} ${mileage} km جدول الصيانة`,
+  };
+
   return (
     <main style={{ minHeight: '100vh', paddingTop: '120px', backgroundColor: 'var(--bg-dark)' }}>
       <section className="container mx-auto px-4 max-w-4xl pb-20">
@@ -57,7 +65,7 @@ export default async function MaintenanceResultPage({ params }) {
             ← Bakım Merkezine Dön
           </Link>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
-            {brandName} <span className="text-[var(--accent-gold)]">{mileage} km</span> Bakım Programı
+            {h1Titles[locale] || h1Titles.tr}
           </h1>
           <p className="text-xl text-gray-400">
             Fethiye Bursalı Oto Servis'te bu bakım işlemi için yapılacak parça değişimleri ve kontroller aşağıda listelenmiştir.

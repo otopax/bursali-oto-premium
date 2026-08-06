@@ -3,7 +3,6 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const SITE_URL = 'https://www.bursaliotoservis.com';
-const LOCALES = ['tr', 'en', 'ru', 'uk', 'ar'];
 
 const seedUrls = [
   `${SITE_URL}/tr`, `${SITE_URL}/en`, `${SITE_URL}/ru`, `${SITE_URL}/uk`, `${SITE_URL}/ar`,
@@ -34,11 +33,13 @@ const seedUrls = [
 
 const h1Map = new Map();
 
-console.log(`Executing H1 Forensic Cluster Analysis across ${seedUrls.length} live URLs...`);
+console.log(`Executing Fresh NOCACHE H1 Forensic Cluster Analysis across ${seedUrls.length} live URLs...`);
 
 seedUrls.forEach(url => {
   try {
-    const html = execSync(`curl.exe -sL "${url}?cache_v=4"`, { encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
+    const timestamp = Date.now() + Math.floor(Math.random() * 10000);
+    const nocacheUrl = `${url}?nocache=${timestamp}`;
+    const html = execSync(`curl.exe -sL "${nocacheUrl}"`, { encoding: 'utf8', maxBuffer: 10 * 1024 * 1024 });
     const h1Matches = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi) || [];
     const firstH1 = h1Matches.length > 0 ? h1Matches[0].replace(/<[^>]+>/g, '').trim() : '';
 
@@ -66,7 +67,6 @@ h1Map.forEach((entryList, h1Text) => {
 
     urls.forEach(u => affectedUrlSet.add(u));
 
-    // Determine route family
     let family = 'Statik Sayfalar';
     if (urls[0].includes('/ariza-kodlari/')) family = '/ariza-kodlari/*';
     else if (urls[0].includes('/ariza-cozumleri/')) family = '/ariza-cozumleri/*';
@@ -79,7 +79,6 @@ h1Map.forEach((entryList, h1Text) => {
 
     routeFamiliesSet.add(family);
 
-    // Differentiate Cross-locale vs True Same-Language
     const isCrossLocale = locales.length > 1;
     if (isCrossLocale) {
       crossLocaleCount += (urls.length - 1);
@@ -118,6 +117,6 @@ fs.writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf8');
 console.log(`=== H1 FORENSIC CLUSTER MANIFEST GENERATED ===`);
 console.log(`Unique Duplicate H1 Strings: ${clusters.length}`);
 console.log(`Unique Affected URLs: ${affectedUrlSet.size}`);
-console.log(`Cross-Locale Duplicates: ${crossLocaleCount} (${output.summary.crossLocalePercentage})`);
+console.log(`Cross-Locale Duplicates: ${crossLocaleCount}`);
 console.log(`True Same-Language Duplicates: ${trueSameLanguageCount}`);
 console.log(`Saved cluster report to: ${outputPath}`);

@@ -3,61 +3,32 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const SITE_URL = 'https://www.bursaliotoservis.com';
-const LOCALES = ['tr', 'en', 'ru', 'uk', 'ar'];
 
-// Seed URLs to start crawl
 const initialUrls = [
-  `${SITE_URL}/tr`,
-  `${SITE_URL}/en`,
-  `${SITE_URL}/ru`,
-  `${SITE_URL}/uk`,
-  `${SITE_URL}/ar`,
-  `${SITE_URL}/tr/hakkimizda`,
-  `${SITE_URL}/en/hakkimizda`,
-  `${SITE_URL}/tr/ariza-kodlari/P0171`,
-  `${SITE_URL}/en/ariza-kodlari/P0171`,
-  `${SITE_URL}/tr/bakim-merkezi/bmw/60000`,
-  `${SITE_URL}/en/bakim-merkezi/bmw/60000`,
-  `${SITE_URL}/tr/ariza-cozumleri/bmw`,
-  `${SITE_URL}/en/ariza-cozumleri/bmw`,
-  `${SITE_URL}/tr/otomatik-sanziman-tamiri`,
-  `${SITE_URL}/en/otomatik-sanziman-tamiri`,
-  `${SITE_URL}/tr/porsche-mercedes-ozel-servis`,
-  `${SITE_URL}/en/porsche-mercedes-ozel-servis`,
-  `${SITE_URL}/tr/sanal-usta`,
-  `${SITE_URL}/en/sanal-usta`,
-  `${SITE_URL}/tr/seffaf-fiyatlandirma`,
-  `${SITE_URL}/en/seffaf-fiyatlandirma`,
-  `${SITE_URL}/tr/gocek-cekici`,
-  `${SITE_URL}/en/gocek-cekici`,
-  `${SITE_URL}/tr/kalkan-kas-yol-yardim`,
-  `${SITE_URL}/en/kalkan-kas-yol-yardim`,
-  `${SITE_URL}/tr/oludeniz-yol-yardim`,
-  `${SITE_URL}/en/oludeniz-yol-yardim`,
-  `${SITE_URL}/tr/blog`,
-  `${SITE_URL}/en/blog`,
-  `${SITE_URL}/tr/kutuphane`,
-  `${SITE_URL}/en/kutuphane`,
-  `${SITE_URL}/tr/marka/bmw`,
-  `${SITE_URL}/en/marka/bmw`,
-  `${SITE_URL}/tr/marka/mercedes`,
-  `${SITE_URL}/en/marka/mercedes`,
-  `${SITE_URL}/tr/marka/porsche`,
-  `${SITE_URL}/en/marka/porsche`,
-  `${SITE_URL}/tr/marka/audi`,
-  `${SITE_URL}/en/marka/audi`,
-  `${SITE_URL}/tr/bolge/fethiye-merkez`,
-  `${SITE_URL}/en/bolge/fethiye-merkez`,
-  `${SITE_URL}/tr/bolge/gocek`,
-  `${SITE_URL}/en/bolge/gocek`,
-  `${SITE_URL}/tr/bolge/oludeniz`,
-  `${SITE_URL}/en/bolge/oludeniz`,
-  `${SITE_URL}/tr/hizmetler/periyodik-bakim`,
-  `${SITE_URL}/en/hizmetler/periyodik-bakim`,
-  `${SITE_URL}/tr/vip-garaj`,
-  `${SITE_URL}/en/vip-garaj`,
-  `${SITE_URL}/tr/vip-filo-gece-bakimi`,
-  `${SITE_URL}/en/vip-filo-gece-bakimi`,
+  `${SITE_URL}/tr`, `${SITE_URL}/en`, `${SITE_URL}/ru`, `${SITE_URL}/uk`, `${SITE_URL}/ar`,
+  `${SITE_URL}/tr/hakkimizda`, `${SITE_URL}/en/hakkimizda`, `${SITE_URL}/ru/hakkimizda`, `${SITE_URL}/uk/hakkimizda`, `${SITE_URL}/ar/hakkimizda`,
+  `${SITE_URL}/tr/ariza-kodlari/P0171`, `${SITE_URL}/en/ariza-kodlari/P0171`, `${SITE_URL}/ru/ariza-kodlari/P0171`, `${SITE_URL}/uk/ariza-kodlari/P0171`, `${SITE_URL}/ar/ariza-kodlari/P0171`,
+  `${SITE_URL}/tr/bakim-merkezi/bmw/60000`, `${SITE_URL}/en/bakim-merkezi/bmw/60000`, `${SITE_URL}/ru/bakim-merkezi/bmw/60000`, `${SITE_URL}/uk/bakim-merkezi/bmw/60000`, `${SITE_URL}/ar/bakim-merkezi/bmw/60000`,
+  `${SITE_URL}/tr/ariza-cozumleri/bmw`, `${SITE_URL}/en/ariza-cozumleri/bmw`, `${SITE_URL}/ru/ariza-cozumleri/bmw`, `${SITE_URL}/uk/ariza-cozumleri/bmw`, `${SITE_URL}/ar/ariza-cozumleri/bmw`,
+  `${SITE_URL}/tr/otomatik-sanziman-tamiri`, `${SITE_URL}/en/otomatik-sanziman-tamiri`, `${SITE_URL}/ru/otomatik-sanziman-tamiri`, `${SITE_URL}/uk/otomatik-sanziman-tamiri`, `${SITE_URL}/ar/otomatik-sanziman-tamiri`,
+  `${SITE_URL}/tr/porsche-mercedes-ozel-servis`, `${SITE_URL}/en/porsche-mercedes-ozel-servis`, `${SITE_URL}/ru/porsche-mercedes-ozel-servis`, `${SITE_URL}/uk/porsche-mercedes-ozel-servis`, `${SITE_URL}/ar/porsche-mercedes-ozel-servis`,
+  `${SITE_URL}/tr/sanal-usta`, `${SITE_URL}/en/sanal-usta`, `${SITE_URL}/ru/sanal-usta`, `${SITE_URL}/uk/sanal-usta`, `${SITE_URL}/ar/sanal-usta`,
+  `${SITE_URL}/tr/seffaf-fiyatlandirma`, `${SITE_URL}/en/seffaf-fiyatlandirma`, `${SITE_URL}/ru/seffaf-fiyatlandirma`, `${SITE_URL}/uk/seffaf-fiyatlandirma`, `${SITE_URL}/ar/seffaf-fiyatlandirma`,
+  `${SITE_URL}/tr/gocek-cekici`, `${SITE_URL}/en/gocek-cekici`, `${SITE_URL}/ru/gocek-cekici`, `${SITE_URL}/uk/gocek-cekici`, `${SITE_URL}/ar/gocek-cekici`,
+  `${SITE_URL}/tr/kalkan-kas-yol-yardim`, `${SITE_URL}/en/kalkan-kas-yol-yardim`, `${SITE_URL}/ru/kalkan-kas-yol-yardim`, `${SITE_URL}/uk/kalkan-kas-yol-yardim`, `${SITE_URL}/ar/kalkan-kas-yol-yardim`,
+  `${SITE_URL}/tr/oludeniz-yol-yardim`, `${SITE_URL}/en/oludeniz-yol-yardim`, `${SITE_URL}/ru/oludeniz-yol-yardim`, `${SITE_URL}/uk/oludeniz-yol-yardim`, `${SITE_URL}/ar/oludeniz-yol-yardim`,
+  `${SITE_URL}/tr/blog`, `${SITE_URL}/en/blog`, `${SITE_URL}/ru/blog`, `${SITE_URL}/uk/blog`, `${SITE_URL}/ar/blog`,
+  `${SITE_URL}/tr/kutuphane`, `${SITE_URL}/en/kutuphane`, `${SITE_URL}/ru/kutuphane`, `${SITE_URL}/uk/kutuphane`, `${SITE_URL}/ar/kutuphane`,
+  `${SITE_URL}/tr/marka/bmw`, `${SITE_URL}/en/marka/bmw`, `${SITE_URL}/ru/marka/bmw`, `${SITE_URL}/uk/marka/bmw`, `${SITE_URL}/ar/marka/bmw`,
+  `${SITE_URL}/tr/marka/mercedes`, `${SITE_URL}/en/marka/mercedes`, `${SITE_URL}/ru/marka/mercedes`, `${SITE_URL}/uk/marka/mercedes`, `${SITE_URL}/ar/marka/mercedes`,
+  `${SITE_URL}/tr/marka/porsche`, `${SITE_URL}/en/marka/porsche`, `${SITE_URL}/ru/marka/porsche`, `${SITE_URL}/uk/marka/porsche`, `${SITE_URL}/ar/marka/porsche`,
+  `${SITE_URL}/tr/marka/audi`, `${SITE_URL}/en/marka/audi`, `${SITE_URL}/ru/marka/audi`, `${SITE_URL}/uk/marka/audi`, `${SITE_URL}/ar/marka/audi`,
+  `${SITE_URL}/tr/bolge/fethiye-merkez`, `${SITE_URL}/en/bolge/fethiye-merkez`, `${SITE_URL}/ru/bolge/fethiye-merkez`, `${SITE_URL}/uk/bolge/fethiye-merkez`, `${SITE_URL}/ar/bolge/fethiye-merkez`,
+  `${SITE_URL}/tr/bolge/gocek`, `${SITE_URL}/en/bolge/gocek`, `${SITE_URL}/ru/bolge/gocek`, `${SITE_URL}/uk/bolge/gocek`, `${SITE_URL}/ar/bolge/gocek`,
+  `${SITE_URL}/tr/bolge/oludeniz`, `${SITE_URL}/en/bolge/oludeniz`, `${SITE_URL}/ru/bolge/oludeniz`, `${SITE_URL}/uk/bolge/oludeniz`, `${SITE_URL}/ar/bolge/oludeniz`,
+  `${SITE_URL}/tr/vip-garaj`, `${SITE_URL}/en/vip-garaj`, `${SITE_URL}/ru/vip-garaj`, `${SITE_URL}/uk/vip-garaj`, `${SITE_URL}/ar/vip-garaj`,
+  `${SITE_URL}/tr/vip-filo-gece-bakimi`, `${SITE_URL}/en/vip-filo-gece-bakimi`, `${SITE_URL}/ru/vip-filo-gece-bakimi`, `${SITE_URL}/uk/vip-filo-gece-bakimi`, `${SITE_URL}/ar/vip-filo-gece-bakimi`,
+  `${SITE_URL}/tr/kampanya/ucretsiz-checkup`, `${SITE_URL}/en/kampanya/ucretsiz-checkup`, `${SITE_URL}/ru/kampanya/ucretsiz-checkup`, `${SITE_URL}/uk/kampanya/ucretsiz-checkup`, `${SITE_URL}/ar/kampanya/ucretsiz-checkup`,
 ];
 
 const crawledResults = new Map();
@@ -68,7 +39,7 @@ const titlesMap = new Map();
 const descriptionsMap = new Map();
 const h1sMap = new Map();
 
-console.log('Starting Bursalı Oto Full Site Auditor Crawler...');
+console.log('Starting Bursalı Oto Fresh NOCACHE Web Crawler Audit...');
 
 let missingCanonicalCount = 0;
 let missingHreflangCount = 0;
@@ -79,7 +50,9 @@ let totalCrawled = 0;
 
 function fetchUrl(url) {
   try {
-    const cmd = `curl.exe -sL -w "%{http_code}" "${url}?cache_v=4"`;
+    const timestamp = Date.now() + Math.floor(Math.random() * 10000);
+    const nocacheUrl = `${url}${url.includes('?') ? '&' : '?'}nocache=${timestamp}`;
+    const cmd = `curl.exe -sL -w "%{http_code}" "${nocacheUrl}"`;
     const rawOutput = execSync(cmd, { encoding: 'utf8', maxBuffer: 10 * 1024 * 1024, timeout: 15000 });
     const statusCode = rawOutput.slice(-3);
     const html = rawOutput.slice(0, -3);
@@ -116,7 +89,6 @@ while (queue.length > 0 && totalCrawled < 250) {
   const description = descMatch ? descMatch[1].trim() : '';
 
   const h1Matches = html.match(/<h1[^>]*>([\s\S]*?)<\/h1>/gi) || [];
-  const h1Count = h1Matches.length;
   const firstH1 = h1Matches.length > 0 ? h1Matches[0].replace(/<[^>]+>/g, '').trim() : '';
 
   const canonicalMatch = html.match(/<link\s+rel="canonical"\s+href="([^"]*)"/i);
@@ -167,7 +139,6 @@ while (queue.length > 0 && totalCrawled < 250) {
     statusCode,
     title,
     description,
-    h1Count,
     firstH1,
     canonical,
     hreflangCount: hreflangs.length,
@@ -196,7 +167,6 @@ h1sMap.forEach((urls) => {
 
 const criticalIssues = missingCanonicalCount + duplicateTitleCount + duplicateDescCount + duplicateH1Count + missingHreflangCount;
 
-// Calculate Website Score (Sitechecker style formula)
 let websiteScore = 100;
 websiteScore -= Math.min(40, criticalIssues * 0.5);
 websiteScore -= Math.min(20, (missingOgCount + missingTwitterCount) * 0.1);
