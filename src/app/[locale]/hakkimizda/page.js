@@ -3,9 +3,26 @@ import { businessData } from '@/lib/business';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+
+  const titles = {
+    tr: 'Hakkımızda | Bursalı Oto Servis Fethiye',
+    en: 'About Us | Bursali Auto Repair Fethiye',
+    ru: 'О нас | Bursali Oto Servis Fethiye',
+    uk: 'Про нас | Bursali Oto Servis Fethiye',
+    ar: 'من نحن | Bursali Oto Servis Fethiye',
+  };
+
+  const descriptions = {
+    tr: 'Babadan oğula 50 yıllık ustalık geleneğiyle Fethiye\'de premium oto servis hizmeti sunuyoruz.',
+    en: '50 years of master craftsmanship offering premium auto repair service in Fethiye.',
+    ru: '50-летний опыт и традиции премиального автосервиса в Фетхие.',
+    uk: '50-річний досвід та традиції преміального автосервісу у Фетхіє.',
+    ar: '50 عاماً من الخبرة والتقاليد في تقديم خدمات صيانة السيارات الفاخرة في فتحية.',
+  };
+
   return {
-    title: 'Hakkımızda | Bursalı Oto Servis Fethiye',
-    description: 'Babadan oğula 50 yıllık ustalık geleneğiyle Fethiye\'de premium oto servis (Porsche, BMW, Mercedes) hizmeti sunuyoruz. %100 Orijinal parça ve cihaz garantisi.',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
     alternates: buildCanonical(locale, '/hakkimizda'),
   };
 }

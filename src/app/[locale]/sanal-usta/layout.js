@@ -3,12 +3,27 @@ import { buildCanonical } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  const t = await getTranslations('SanalUstaTeaser');
+
+  const titles = {
+    tr: 'Sanal Usta - Yapay Zeka Oto Teşhis | Bursalı Oto Servis',
+    en: 'AI Mechanic Diagnostic Assistant | Bursali Auto Repair',
+    ru: 'AI Автомеханик Онлайн Диагностика | Bursali Auto Repair',
+    uk: 'AI Автомеханік Онлайн Діагностика | Bursali Auto Repair',
+    ar: 'الميكانيكي الافتراضي للتشخيص الذكي | Bursali Auto Repair',
+  };
+
+  const descriptions = {
+    tr: 'Arızanızı yazın, Bursalı Oto Sanal Usta 50 yıllık tecrübesiyle anında teşhis koysun. Ücretsiz AI danışman.',
+    en: 'Describe your car issue and let our AI Mechanic diagnose it instantly with 50 years of expertise.',
+    ru: 'Опишите проблему, и наш онлайн AI автомеханик мгновенно проведет диагностику.',
+    uk: 'Опишіть проблему з авто, і наш онлайн AI автомеханік миттєво проведе діагностику.',
+    ar: 'اكتب أعطال سيارتك وسيقوم الميكانيكي الافتراضي بالتشخيص الفوري بناءً على خبرة 50 عاماً.',
+  };
 
   return {
-    title: locale === 'tr' ? 'Sanal Usta - Yapay Zeka Oto Teşhis | Bursalı Oto Servis' : 'AI Mechanic Diagnostic | Bursalı Oto Servis',
-    description: locale === 'tr' ? 'Arızanızı yazın, Bursalı Oto Sanal Usta 40 yıllık tecrübesiyle anında teşhis koysun. Ücretsiz AI oto servis danışmanınız.' : 'Describe your car issue and let our AI Mechanic diagnose it instantly. Free AI auto service consultant.',
-    alternates: buildCanonical(locale, 'sanal-usta'),
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, '/sanal-usta'),
     openGraph: {
       title: 'Sanal Usta - Yapay Zeka Oto Teşhis',
       description: 'Yapay Zeka destekli ücretsiz oto arıza tespit sistemi.',

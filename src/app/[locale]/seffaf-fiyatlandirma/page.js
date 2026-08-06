@@ -3,9 +3,26 @@ import { buildCanonical } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+
+  const titles = {
+    tr: 'Şeffaf Fiyatlandırma Politikası | Bursalı Oto Servis Fethiye',
+    en: 'Transparent Pricing Policy | Bursali Auto Repair Fethiye',
+    ru: 'Прозрачная Политика Цен | Bursali Oto Servis Fethiye',
+    uk: 'Прозора Політика Цін | Bursali Oto Servis Fethiye',
+    ar: 'سياسة التسعير الشفافة | Bursali Oto Servis Fethiye',
+  };
+
+  const descriptions = {
+    tr: 'Fethiye premium oto servis fiyatları. Sürpriz maliyet olmadan %100 şeffaf işçilik ve orijinal yedek parça garantisi.',
+    en: 'Transparent auto service pricing in Fethiye with zero hidden fees and 100% genuine parts warranty.',
+    ru: 'Прозрачные цены на автосервис в Фетхие без скрытых платежей и с гарантией оригинальных запчастей.',
+    uk: 'Прозорі ціни на автосервіс у Фетхіє без прихованих платежів та з гарантією оригінальних запчастин.',
+    ar: 'أسعار خدمات السيارات الشفافة في فتحية بدون رسوم خفية وضمان قطع غيار أصلية 100%.',
+  };
+
   return {
-    title: 'Şeffaf Fiyatlandırma | Bursalı Oto Servis',
-    description: 'Fethiye premium oto servis fiyatları. Sürpriz maliyet olmadan, %100 orijinal yedek parça ve şeffaf işçilik ücretleri.',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
     alternates: buildCanonical(locale, '/seffaf-fiyatlandirma'),
   };
 }

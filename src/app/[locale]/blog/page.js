@@ -2,11 +2,31 @@ import { container } from '@/application/di/container';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
+import { buildCanonical } from '@/lib/seo/canonical';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+
+  const titles = {
+    tr: 'Oto Servis Rehberi ve Uzmanlık Blogu | Bursalı Oto Servis',
+    en: 'Auto Service Guide & Technical Blog | Bursali Auto Repair',
+    ru: 'Автосервис Гид и Технический Блог | Bursali Auto Repair',
+    uk: 'Автосервіс Гід та Технічний Блог | Bursali Auto Repair',
+    ar: 'دليل خدمة السيارات والمدونة التقنية | Bursali Auto Repair',
+  };
+
+  const descriptions = {
+    tr: 'Bursalı Oto Servis Fethiye premium araç bakım rehberleri, kronik arıza çözümleri ve uzman teknik makaleler.',
+    en: 'Bursali Auto Repair Fethiye premium car maintenance guides, fault solutions and expert articles.',
+    ru: 'Руководства по обслуживанию авто премиум-класса в Фетхие и технические статьи.',
+    uk: 'Посібники з обслуговування авто преміум-класу у Фетхіє та технічні статті.',
+    ar: 'أدلة صيانة السيارات الفاخرة في فتحية وحلول الأعطال ومقالات الخبراء.',
+  };
+
   return {
-    title: locale === 'tr' ? 'Oto Servis Rehberi ve Blog | Bursalı Oto Servis' : 'Auto Service Guide & Blog',
-    description: 'Bursalı Oto Servis premium araç bakım rehberi ve makaleleri.',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, '/blog'),
   };
 }
 

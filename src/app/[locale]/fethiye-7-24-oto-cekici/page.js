@@ -2,9 +2,26 @@ import { buildCanonical } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+
+  const titles = {
+    tr: '7/24 Fethiye Oto Çekici ve Yol Yardım | Bursalı Oto Servis',
+    en: '24/7 Fethiye Tow Truck & Roadside Assistance | Bursali Auto Repair',
+    ru: '24/7 Эвакуатор и Помощь На Дорогах В Фетхие | Bursali Auto Repair',
+    uk: '24/7 Евакуатор Та Допомога На Дорогах У Фетхіє | Bursali Auto Repair',
+    ar: 'سطحة وخدمة سحب السيارات 24/7 في فتحية | Bursali Auto Repair',
+  };
+
+  const descriptions = {
+    tr: 'Fethiye ve çevresinde 7/24 oto çekici, oto kurtarma ve acil yol yardım hizmeti. WhatsApp ile konum gönderin.',
+    en: '24/7 emergency tow truck and roadside assistance in Fethiye and surrounding areas. Send location via WhatsApp.',
+    ru: '24/7 услуги эвакуатора и помощь на дорогах в Фетхие. Отправьте геопозицию через WhatsApp.',
+    uk: '24/7 послуги евакуатора та допомога на дорогах у Фетхіє. Надішліть геопозицію через WhatsApp.',
+    ar: 'خدمة سحب السيارات والمساعدة على الطريق على مدار 24/7 في فتحية. أرسل موقعك عبر WhatsApp.',
+  };
+
   return {
-    title: '7/24 Fethiye Oto Çekici ve Yol Yardım | Bursalı Oto',
-    description: 'Fethiye ve çevresinde yolda mı kaldınız? 7/24 oto çekici, kurtarma ve yol yardım hizmetimizle anında yanınızdayız. Tek tıkla WhatsApp konum gönderin.',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
     alternates: buildCanonical(locale, '/fethiye-7-24-oto-cekici'),
   };
 }
