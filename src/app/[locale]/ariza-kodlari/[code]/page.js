@@ -114,6 +114,14 @@ export default async function FaultCodePage({ params }) {
     }
   };
 
+  const h1Titles = {
+    tr: `${fault.code} Arıza Kodu Çözümü`,
+    en: `${fault.code} Fault Code Diagnosis & Solution`,
+    ru: `Диагностика и решение ошибки ${fault.code}`,
+    uk: `Діагностика та вирішення помилки ${fault.code}`,
+    ar: `تشخيص وحل رمز الخطأ ${fault.code}`,
+  };
+
   return (
     <div className="min-h-screen bg-slate-900 py-12 px-4 sm:px-6 lg:px-8 text-white">
       <script
