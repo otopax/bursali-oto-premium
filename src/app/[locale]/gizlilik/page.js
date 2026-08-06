@@ -2,17 +2,16 @@
 // NOT: Bu metin bir TASLAKTIR. Yayına almadan önce [KÖŞELİ] alanları doldurulmalı
 // ve bir avukat tarafından gözden geçirilmelidir.
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
+  return buildSEOContract({
+    locale,
+    path: '/gizlilik',
     title: 'Gizlilik ve Çerez Politikası | Bursalı Oto Servis',
-    description:
-      'Bursalı Oto Servis gizlilik ve çerez politikası: kişisel verilerin işlenmesi, çerez kullanımı ve haklarınız.',
-    alternates: buildCanonical(locale, '/gizlilik'),
-    robots: { index: true, follow: true },
-  };
+    description: 'Bursalı Oto Servis gizlilik ve çerez politikası: kişisel verilerin işlenmesi, çerez kullanımı ve haklarınız.',
+  });
 }
 
 export default async function GizlilikPage({ params }) {

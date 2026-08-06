@@ -11,7 +11,6 @@ export default function MobileStickyCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show the CTA after scrolling down 300px
       if (window.scrollY > 300) {
         setIsVisible(true);
       } else {
@@ -23,126 +22,100 @@ export default function MobileStickyCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Show it on sanal-usta now because it's consolidated
   if (!isVisible) return null;
+
+  const locale = (pathname?.split('/')[1] && ['tr', 'en', 'ru', 'uk', 'ar'].includes(pathname.split('/')[1])) 
+    ? pathname.split('/')[1] 
+    : 'tr';
 
   return (
     <div className="mobile-only" style={{
       position: 'fixed',
       bottom: '0',
       left: '0',
-      width: '100%',
-      backgroundColor: 'rgba(20, 20, 20, 0.95)',
+      right: '0',
+      zIndex: 9990,
+      backgroundColor: 'rgba(9, 9, 11, 0.95)',
       backdropFilter: 'blur(12px)',
       borderTop: '1px solid rgba(212, 175, 55, 0.3)',
-      zIndex: 9998,
-      padding: '12px 10px',
-      paddingBottom: 'calc(12px + env(safe-area-inset-bottom))',
-      gap: '8px',
-      boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.8)',
-      animation: 'slideUp 0.3s ease-out forwards'
+      padding: '10px 12px calc(10px + env(safe-area-inset-bottom)) 12px',
+      boxShadow: '0 -10px 25px rgba(0,0,0,0.8)',
     }}>
-      <style dangerouslySetInnerHTML={{__html: `
-        @keyframes slideUp {
-          from { transform: translateY(150%); }
-          to { transform: translateY(0); }
-        }
-      `}} />
-      
-      <a 
-        href="tel:+905548812021" 
-        aria-label="Hemen Ara"
-        onClick={() => trackEvent('mobil_sticky_tel_tikla', { location: 'sticky_bar' })}
-        style={{
-          backgroundColor: '#991b1b', // Dark red
-          color: 'white',
-          padding: '10px 0',
-          borderRadius: '12px',
-          fontWeight: 'bold',
-          fontSize: '0.85rem',
-          textDecoration: 'none',
-          display: 'flex',
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '4px',
-          border: '1px solid rgba(255,255,255,0.1)',
-        }}
-      >
-        <span style={{ fontSize: '1.2rem' }}>📞</span> 
-        <span className="hidden min-[360px]:inline">Ara</span>
-      </a>
+      <div style={{
+        display: 'grid',
+        gridTemplateColumns: '1fr 1fr 1.2fr',
+        gap: '8px',
+        maxWidth: '500px',
+        margin: '0 auto',
+      }}>
+        <a 
+          href="https://wa.me/905548812021?text=Merhaba,%20web%20sitenizden%20ula%C5%9F%C4%B1yorum." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          onClick={() => trackEvent('mobile_cta_click', { type: 'whatsapp' })}
+          style={{
+            backgroundColor: '#25D366',
+            color: 'white',
+            padding: '10px 0',
+            borderRadius: '12px',
+            fontWeight: 'bold',
+            fontSize: '0.85rem',
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '5px',
+            boxShadow: '0 4px 10px rgba(37, 211, 102, 0.3)'
+          }}
+        >
+          <span style={{ fontSize: '1.1rem' }}>💬</span>
+          <span>WhatsApp</span>
+        </a>
 
-      <a 
-        href="https://wa.me/905548812021" 
-        aria-label="WhatsApp"
-        onClick={() => trackEvent('mobil_sticky_wa_tikla', { location: 'sticky_bar' })}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          backgroundColor: '#166534', // Dark green
-          color: 'white',
-          padding: '10px 0',
-          borderRadius: '12px',
-          fontWeight: 'bold',
-          fontSize: '0.85rem',
-          textDecoration: 'none',
-          display: 'flex',
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '4px',
-          border: '1px solid rgba(255,255,255,0.1)',
-        }}
-      >
-        <span style={{ fontSize: '1.2rem' }}>💬</span> 
-        <span className="hidden min-[360px]:inline">WhatsApp</span>
-      </a>
+        <a 
+          href="tel:+905548812021"
+          onClick={() => trackEvent('mobile_cta_click', { type: 'call' })}
+          style={{
+            backgroundColor: '#e11d48',
+            color: 'white',
+            padding: '10px 0',
+            borderRadius: '12px',
+            fontWeight: 'bold',
+            fontSize: '0.85rem',
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '5px',
+            boxShadow: '0 4px 10px rgba(225, 29, 72, 0.3)'
+          }}
+        >
+          <span style={{ fontSize: '1.1rem' }}>🚨</span>
+          <span>Çekici</span>
+        </a>
 
-      <a 
-        href="tel:+905548812021" 
-        onClick={() => trackEvent('mobil_sticky_cekici_tikla', { location: 'sticky_bar' })}
-        style={{
-          backgroundColor: '#e11d48', // Bright red
-          color: 'white',
-          padding: '10px 0',
-          borderRadius: '12px',
-          fontWeight: 'bold',
-          fontSize: '0.85rem',
-          textDecoration: 'none',
-          display: 'flex',
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '4px',
-          border: '1px solid rgba(255,255,255,0.1)',
-        }}
-      >
-        <span style={{ fontSize: '1.2rem' }}>🚨</span> 
-        <span className="hidden min-[360px]:inline">Çekici</span>
-      </a>
-
-      <Link 
-        href="/tr/sanal-usta" 
-        style={{
-          backgroundColor: '#b45309', // Dark orange/gold
-          color: 'white',
-          padding: '10px 0',
-          borderRadius: '12px',
-          fontWeight: 'bold',
-          fontSize: '0.85rem',
-          textDecoration: 'none',
-          display: 'flex',
-          flex: 1,
-          justifyContent: 'center',
-          alignItems: 'center',
-          gap: '4px',
-          border: '1px solid rgba(255,255,255,0.1)',
-        }}
-      >
-        <span style={{ fontSize: '1.2rem' }}>🤖</span> 
-        <span className="hidden min-[360px]:inline">Usta</span>
-      </Link>
+        <Link 
+          href={`/${locale}/sanal-usta`} 
+          style={{
+            backgroundColor: '#b45309',
+            color: 'white',
+            padding: '10px 0',
+            borderRadius: '12px',
+            fontWeight: 'bold',
+            fontSize: '0.85rem',
+            textDecoration: 'none',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '5px',
+            boxShadow: '0 4px 10px rgba(180, 83, 9, 0.4)',
+            border: '1px solid rgba(255, 255, 255, 0.2)'
+          }}
+        >
+          <span style={{ fontSize: '1.1rem' }}>🤖</span>
+          <span>Sanal Usta</span>
+        </Link>
+      </div>
     </div>
   );
 }

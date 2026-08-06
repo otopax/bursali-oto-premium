@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import BakimHesaplaForm from './BakimHesaplaForm';
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -25,7 +25,7 @@ export async function generateMetadata({ params }) {
   return {
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, '/bakim-merkezi'),
+    ...buildSEOContract({ locale, path: '/bakim-merkezi', title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
   };
 }
 

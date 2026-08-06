@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const dynamicParams = true;
 export const revalidate = 86400;
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }) {
   return {
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, '/kutuphane'),
+    ...buildSEOContract({ locale, path: '/kutuphane', title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
   };
 }
 

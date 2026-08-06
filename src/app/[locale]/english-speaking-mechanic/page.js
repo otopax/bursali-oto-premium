@@ -1,12 +1,30 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'English Speaking Auto Mechanic in Fethiye | Car Repair',
-    description: 'Looking for an English-speaking auto mechanic in Fethiye? We offer premium car repair, 24/7 towing, and transparent pricing for expats and tourists.',
-    alternates: buildCanonical(locale, '/english-speaking-mechanic'),
+
+  const titles = {
+    tr: 'İngilizce Konuşan Oto Tamir Servisi Fethiye | Bursalı Oto',
+    en: 'English Speaking Auto Mechanic in Fethiye | Bursali Auto Repair',
+    ru: 'Англоговорящий автомеханик в Фетхие | Bursali Auto Repair',
+    uk: 'Англомовний автомеханік у Фетхіє | Bursali Auto Repair',
+    ar: 'ميكانيكي يتحدث الإنجليزية في فتحية | Bursali Auto Repair',
   };
+
+  const descriptions = {
+    tr: 'Fethiye bölgesinde yabancı misafirlerimiz ve turistler için İngilizce konuşan uzman ekibimizle premium garantili oto servis.',
+    en: 'Looking for an English-speaking auto mechanic in Fethiye? Premium car repair, 24/7 towing, and transparent pricing for tourists & expats.',
+    ru: 'Англоговорящий автомеханик в Фетхие. Премиальный автосервис для туристов и экспатов с гарантией.',
+    uk: 'Англомовний автомеханік у Фетхіє. Преміальний автосервіс для туристів та експатів з гарантією.',
+    ar: 'ميكانيكي سيارات يتحدث الإنجليزية في فتحية. خدمة صيانة فاخرة مع سحب 24/7 للسيارات.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/english-speaking-mechanic',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function EnglishSpeakingMechanicPage() {

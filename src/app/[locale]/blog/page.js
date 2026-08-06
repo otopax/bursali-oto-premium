@@ -2,7 +2,7 @@ import { container } from '@/application/di/container';
 import { getTranslations } from 'next-intl/server';
 import Link from 'next/link';
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
   return {
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, '/blog'),
+    ...buildSEOContract({ locale, path: '/blog', title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
   };
 }
 

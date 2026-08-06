@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { SEO_PRIORITY } from '@/data/seo-oncelik';
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
@@ -25,12 +25,17 @@ export async function generateMetadata({ params }) {
 
   const isTier1 = SEO_PRIORITY.isTier1(slug);
 
-  return {
+  const seo = buildSEOContract({
+    locale,
+    path: `/bolge/${slug}`,
     title,
     description,
+  });
+
+  return {
+    ...seo,
     keywords: `${district} ${brand} servisi, ${brand} tamircisi ${district}, fethiye oto servis, ${brand} yedek parça`,
-    alternates: buildCanonical(locale, `bolge/${slug}`),
-    ...(!isTier1 && { robots: { index: false, follow: true } })
+    ...(!isTier1 && { robots: { index: false, follow: true } }),
   };
 }
 

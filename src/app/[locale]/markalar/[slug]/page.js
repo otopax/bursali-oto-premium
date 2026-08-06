@@ -1,9 +1,8 @@
 import { getTranslations } from 'next-intl/server';
 import Head from 'next/head';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`);
-
-import { buildCanonical } from '@/lib/seo/canonical';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
@@ -16,18 +15,12 @@ export async function generateMetadata({ params }) {
   // Format brand name beautifully (e.g. land-rover -> Land Rover)
   const formattedBrand = rawBrand.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
 
-  return {
+  return buildSEOContract({
+    locale,
+    path: `/markalar/${slug}`,
     title: t('brandServiceTitle', { brand: formattedBrand }),
     description: t('brandServiceDesc', { brand: formattedBrand }),
-    alternates: buildCanonical(locale, `/markalar/${slug}`),
-    openGraph: {
-      title: t('brandServiceTitle', { brand: formattedBrand }),
-      description: t('brandServiceDesc', { brand: formattedBrand }),
-      url: `${SITE_URL}/${locale}/markalar/${slug}`,
-      type: 'website',
-      locale: locale,
-    }
-  };
+  });
 }
 
 export default async function BrandSeoPage({ params }) {

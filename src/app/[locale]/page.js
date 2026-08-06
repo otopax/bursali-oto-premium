@@ -2,7 +2,7 @@ import Image from 'next/image';
 import TrustBadges from '@/components/TrustBadges';
 import { getTranslations } from 'next-intl/server';
 import { container } from '@/application/di/container';
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
 import Reveal from '@/components/anim/Reveal';
 import dynamic from 'next/dynamic';
@@ -24,9 +24,29 @@ const ImageUploader = dynamic(() => import('@/components/ai/ImageUploader'), {
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  return {
-    alternates: buildCanonical(locale, ''),
+
+  const titles = {
+    tr: 'Bursalı Oto Servis Fethiye | Premium Araç & Motor Uzmanı',
+    en: 'Bursali Auto Repair Fethiye | Premium Car & Engine Specialist',
+    ru: 'Bursali Автосервис Фетхие | Ремонт Премиум Автомобилей',
+    uk: 'Bursali Автосервіс Фетхіє | Ремонт Преміум Автомобілів',
+    ar: 'ورشة بورصالي فتحية | متخصص صيانة السيارات الفاخرة',
   };
+
+  const descriptions = {
+    tr: 'Fethiye\'de Porsche, Mercedes, BMW, Audi araçlar için lisanslı cihazlarla arıza tespiti, şanzıman ve motor revizyonu. 7/24 çekici ve yol yardım.',
+    en: 'English speaking mechanic in Fethiye. Guaranteed BMW, Mercedes, Porsche, Audi repair with ISTA, XENTRY, PIWIS, ODIS. 24/7 VIP tow truck.',
+    ru: 'Ремонт премиум автомобилей в Фетхие. Официальная диагностика PIWIS, ODIS, ISTA, XENTRY. 24/7 эвакуатор.',
+    uk: 'Ремонт преміум автомобілів у Фетхіє. Офіційна діагностика PIWIS, ODIS, ISTA, XENTRY. 24/7 евакуатор.',
+    ar: 'خدمة صيانة وإصلاح السيارات الفاخرة في فتحية بأجهزة التشخيص الأصلية. سحب 24/7.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default async function Home({ params }) {

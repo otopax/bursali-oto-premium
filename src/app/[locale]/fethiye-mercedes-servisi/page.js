@@ -1,13 +1,31 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import TrustBadges from '@/components/TrustBadges';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'Fethiye Mercedes Servisi | XENTRY Arıza Tespiti & Orijinal Parça Garantisi',
-    description: 'Fethiye\'de Mercedes-Benz araçlarınız için orijinal XENTRY (Star Diagnosis) cihazı ile noktasal arıza tespiti, motor ve şanzıman tamiri. Yetkili servis kalitesinde hizmet.',
-    alternates: buildCanonical(locale, '/fethiye-mercedes-servisi'),
+
+  const titles = {
+    tr: 'Fethiye Mercedes Özel Servisi | Star Diagnosis ile Garantili Tamir',
+    en: 'Fethiye Mercedes-Benz Specialist Repair | Star Diagnosis',
+    ru: 'Специализированный автосервис Mercedes в Фетхие | Bursali Auto',
+    uk: 'Спеціалізований автосервіс Mercedes у Фетхіє | Bursali Auto',
+    ar: 'مركز صيانة مرسيدس المتخصص في فتحية | Bursali Auto',
   };
+
+  const descriptions = {
+    tr: 'Fethiye\'de Mercedes-Benz otomobil ve Vito/Sprinter hafif ticari araçlarınız için Star Diagnosis ile nokta atışı bilgisayarlı arıza tespiti.',
+    en: 'Mercedes-Benz car and Vito/Sprinter fleet specialist service in Fethiye. Official Star Diagnosis fault code lookup and engine rebuild.',
+    ru: 'Ремонт легковых и коммерческих Mercedes-Benz в Фетхие на оригинальном оборудовании Star Diagnosis.',
+    uk: 'Ремонт легкових та комерційних Mercedes-Benz у Фетхіє на оригінальному обладнанні Star Diagnosis.',
+    ar: 'خدمة صيانة مرسيدس بنز وسيارات نقل فايتو وسبρινتر في فتحية بأعلى مستويات الجودة.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/fethiye-mercedes-servisi',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function MercedesServisiPage() {

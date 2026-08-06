@@ -2,6 +2,20 @@ import { auth } from "@/auth";
 import { prisma } from "@/lib/prisma";
 import { redirect } from "next/navigation";
 import { can } from "@/lib/authz";
+import { buildSEOContract } from '@/lib/seo/canonical';
+
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  return {
+    ...buildSEOContract({
+      locale,
+      path: '/aracim',
+      title: 'Müşteri Paneli & Araç Takibi | Bursalı Oto Servis',
+      description: 'Bursalı Oto Servis müşteri araç takip ve geçmiş bakım kayıtları paneli.',
+    }),
+    robots: { index: false, follow: false },
+  };
+}
 
 export default async function AracimDashboard() {
   const session = await auth();

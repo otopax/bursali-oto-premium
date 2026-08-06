@@ -11,7 +11,7 @@ function extractFirstSentence(text) {
   return firstDot !== -1 ? cleanText.substring(0, firstDot + 1).replace(/\n/g, ' ').trim() : cleanText.substring(0, 150) + '...';
 }
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import { setRequestLocale } from 'next-intl/server';
 import { arizaUrl } from '@/lib/urls';
 
@@ -38,43 +38,17 @@ export async function generateMetadata({ params }) {
     !/google\.[a-z.]+\/search/i.test(u);
   const ogImage = isValidImage(postData.image)
     ? postData.image
-    : `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}/bg.png`;
-  const canonicalData = buildCanonical(locale, `kutuphane/${marka}/${model}/arizalar/${kod}`);
+    : undefined;
 
-  let titleStr = `${postData.title || kod} Çözümü | Kütüphane | Bursalı Oto`;
-  if (titleStr.length > 60) {
-     titleStr = `${postData.title || kod} Çözümü | Kütüphane`.substring(0, 60);
-  }
+  let titleStr = `${postData.title || kod} Çözümü | Kütüphane | Bursalı Oto Servis`;
 
-  return {
+  return buildSEOContract({
+    locale,
+    path: `/kutuphane/${marka}/${model}/arizalar/${kod}`,
     title: titleStr,
     description: shortDescription,
-    keywords: [`${postData.brand || ''} ${postData.title?.toLowerCase() || ''}`, 'Fethiye oto servis', 'kütüphane arıza çözümü', 'Bursalı Oto'],
-    openGraph: {
-      title: titleStr,
-      description: shortDescription,
-      url: canonicalData.canonical,
-      siteName: 'Bursalı Oto Servis',
-      images: [
-        {
-          url: ogImage,
-          width: 1200,
-          height: 630,
-          alt: postData.title || 'Arıza Çözümü'
-        }
-      ],
-      locale: locale === 'tr' ? 'tr_TR' : locale === 'en' ? 'en_GB' : locale === 'ru' ? 'ru_RU' : 'tr_TR',
-      type: 'article',
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: titleStr,
-      description: shortDescription,
-      images: [ogImage],
-    },
-    robots: { index: true, follow: true },
-    alternates: canonicalData
-  };
+    image: ogImage,
+  });
 }
 
 export async function generateStaticParams() {

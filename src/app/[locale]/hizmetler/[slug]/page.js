@@ -1,25 +1,18 @@
 import { getTranslations } from 'next-intl/server';
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`);
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
 
 export async function generateMetadata({ params }) {
   const { locale, slug } = await params;
   const t = await getTranslations({ locale, namespace: 'SEO' });
-  const canonical = `${SITE_URL}/${locale}/hizmetler/${slug}`;
 
-  return {
+  return buildSEOContract({
+    locale,
+    path: `/hizmetler/${slug}`,
     title: t('transmissionTitle'),
     description: t('transmissionDesc'),
-    alternates: buildCanonical(locale, `hizmetler/${slug}`),
-    openGraph: {
-      title: t('transmissionTitle'),
-      description: t('transmissionDesc'),
-      url: canonical,
-      type: 'website',
-      locale: locale,
-    }
-  };
+  });
 }
 
 export default async function ServiceSeoPage({ params }) {

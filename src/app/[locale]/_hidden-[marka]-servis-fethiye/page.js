@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations } from 'next-intl/server';
 import { DataAccessLayer } from '@/lib/dataAccessLayer';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 // Desteklenen markalar (Sadece lüks ve popüler olanlara özel SEO sayfası)
 const SUPPORTED_BRANDS = [
@@ -17,17 +18,12 @@ export async function generateMetadata({ params }) {
 
   const capitalizedMarka = marka.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
 
-  return {
-    title: `Fethiye ${capitalizedMarka} Servis | Uzman Bakım ve Orijinal Cihazlı Tamir`,
-    description: `Fethiye ve bölgesinde ${capitalizedMarka} aracınız için garantili bakım, şanzıman tamiri ve orijinal PIWIS/ODIS/XENTRY arıza tespiti. ${capitalizedMarka} özel servis.`,
-    alternates: {
-      canonical: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/${locale}/${marka}-servis-fethiye`
-    },
-    openGraph: {
-      title: `Fethiye ${capitalizedMarka} Özel Servis`,
-      description: `Premium ${capitalizedMarka} aracınızın Fethiye'deki güvenilir adresi.`,
-    }
-  };
+  return buildSEOContract({
+    locale,
+    path: `/${marka}-servis-fethiye`,
+    title: `Fethiye ${capitalizedMarka} Servis | Uzman Bakım & Orijinal Tamir`,
+    description: `Fethiye ve bölgesinde ${capitalizedMarka} aracınız için garantili bakım, şanzıman tamiri ve orijinal diagnostik arıza tespiti.`,
+  });
 }
 
 export default async function BrandServicePage({ params }) {

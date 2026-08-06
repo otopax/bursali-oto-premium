@@ -1,12 +1,30 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'Otomatik Şanzıman Tamiri ve Revizyonu Fethiye | Bursalı Oto',
-    description: 'Fethiye\'de Volvo, BMW, Mercedes ve VAG grubu araçlarınız için Aisin, DCT, DSG otomatik şanzıman tamiri ve garantili beyin revizyonu uzmanı.',
-    alternates: buildCanonical(locale, '/otomatik-sanziman-tamiri'),
+
+  const titles = {
+    tr: 'Fethiye Otomatik Şanzıman Tamiri & Revizyonu | 1 Yıl Garantili',
+    en: 'Fethiye Automatic Transmission Repair & Rebuild | Guaranteed',
+    ru: 'Ремонт и Ревизия АКПП в Фетхие | Гарантия 1 Год | Bursali Auto',
+    uk: 'Ремонт та Ревізія АКПП у Фетхіє | Гарантія 1 Рік | Bursali Auto',
+    ar: 'إصلاح وتجديد ناقل الحركة الأوتوماتيكي في فتحية | ضمان لمدة عام',
   };
+
+  const descriptions = {
+    tr: 'DSG, ZF, Aisin, Powershift otomatik şanzımanlarda vuruntu, kaydırma ve mekatronik arızalarına 1 yıl garantili revizyon çözümü.',
+    en: 'Guaranteed DSG, ZF, Aisin automatic transmission repair, valve body testing and mechatronic rebuild in Fethiye.',
+    ru: 'Гарантированный ремонт АКПП DSG, ZF, Aisin в Фетхие. Диагностика гидроблока и мехатроника.',
+    uk: 'Гарантований ремонт АКПП DSG, ZF, Aisin у Фетхіє. Діагностика гідроблоку та мехатроніка.',
+    ar: 'خدمة إصلاح ناقل الحركة الأوتوماتيكي DSG و ZF و Aisin في فتحية مع ضمان لمدة عام.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/otomatik-sanziman-tamiri',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function TransmissionPage() {

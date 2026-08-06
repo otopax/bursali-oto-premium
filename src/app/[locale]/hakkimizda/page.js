@@ -1,4 +1,5 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import Link from 'next/link';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import { businessData } from '@/lib/business';
 
 export async function generateMetadata({ params }) {
@@ -20,14 +21,16 @@ export async function generateMetadata({ params }) {
     ar: '50 عاماً من الخبرة والتقاليد في تقديم خدمات صيانة السيارات الفاخرة في فتحية.',
   };
 
-  return {
+  return buildSEOContract({
+    locale,
+    path: '/hakkimizda',
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, '/hakkimizda'),
-  };
+  });
 }
 
-export default function AboutPage() {
+export default async function AboutPage({ params }) {
+  const { locale } = await params;
   return (
     <main style={{ paddingTop: '100px', minHeight: '100vh', paddingBottom: '4rem' }}>
       <div className="container">
@@ -75,7 +78,7 @@ export default function AboutPage() {
 
           <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', marginTop: '2rem' }}>
             <a href="https://wa.me/905548812021" className="btn btn-primary">İletişime Geç</a>
-            <a href="/tr/seffaf-fiyatlandirma" className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--glass-border)' }}>Fiyat Politikamız</a>
+            <Link href={`/${locale}/seffaf-fiyatlandirma`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--glass-border)' }}>Fiyat Politikamız</Link>
           </div>
         </div>
 

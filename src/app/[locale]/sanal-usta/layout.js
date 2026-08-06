@@ -1,5 +1,5 @@
 import { getTranslations } from 'next-intl/server';
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
@@ -20,17 +20,12 @@ export async function generateMetadata({ params }) {
     ar: 'اكتب أعطال سيارتك وسيقوم الميكانيكي الافتراضي بالتشخيص الفوري بناءً على خبرة 50 عاماً.',
   };
 
-  return {
+  return buildSEOContract({
+    locale,
+    path: '/sanal-usta',
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, '/sanal-usta'),
-    openGraph: {
-      title: 'Sanal Usta - Yapay Zeka Oto Teşhis',
-      description: 'Yapay Zeka destekli ücretsiz oto arıza tespit sistemi.',
-      url: `${process.env.NEXT_PUBLIC_SITE_URL || (process.env.NEXT_PUBLIC_SITE_URL || `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com'}`)}/${locale}/sanal-usta`,
-      type: 'website',
-    }
-  };
+  });
 }
 
 export default function SanalUstaLayout({ children }) {

@@ -1,13 +1,31 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import TrustBadges from '@/components/TrustBadges';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'Fethiye BMW Servisi | ISTA Arıza Tespiti & Orijinal Parça Garantili Onarım',
-    description: 'Fethiye bölgesinde BMW araçlarınız için orijinal ISTA diagnostik cihazıyla noktasal arıza tespiti, motor ve şanzıman revizyonu. Deneme yanılma yok, garantili hizmet.',
-    alternates: buildCanonical(locale, '/fethiye-bmw-servisi'),
+
+  const titles = {
+    tr: 'Fethiye BMW Özel Servisi | Orijinal ISTA Cihazı ile Bakım & Tamir',
+    en: 'Fethiye BMW Specialist Auto Repair | ISTA Diagnostic Service',
+    ru: 'Специализированный автосервис BMW в Фетхие | Bursali Auto Repair',
+    uk: 'Спеціалізований автосервіс BMW у Фетхіє | Bursali Auto Repair',
+    ar: 'مركز صيانة BMW المتخصص في فتحية | Bursali Auto Repair',
   };
+
+  const descriptions = {
+    tr: 'Fethiye\'de BMW araçlarınız için lisanslı ISTA yazılımı ile bilgisayarlı arıza tespiti, motor/şanzıman revizyonu ve 1 yıl garantili servis.',
+    en: 'Specialized BMW repair in Fethiye using official ISTA software. Transmission rebuild, heavy maintenance and 1 year repair guarantee.',
+    ru: 'Профессиональный ремонт и диагностика BMW в Фетхие на официальном оборудовании ISTA.',
+    uk: 'Професійний ремонт та діагностика BMW у Фетхіє на офіційному обладнанні ISTA.',
+    ar: 'خدمة صيانة واختبار BMW في فتحية باستخدام أجهزة التشخيص الأصلية مع ضمان لمدة عام.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/fethiye-bmw-servisi',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function BmwServisiPage() {

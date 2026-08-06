@@ -1,13 +1,31 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import TrustBadges from '@/components/TrustBadges';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'Kalkan & Kaş Acil Oto Çekici ve Yol Yardım | Hızlı Ulaşım',
-    description: 'Kalkan, Kaş ve Seydikemer bölgelerinde yolda kalan araçlarınız için 7/24 hızlı oto çekici ve yol yardım hizmeti. Fethiye merkez servisimize güvenle taşıyoruz.',
-    alternates: buildCanonical(locale, '/kalkan-kas-yol-yardim'),
+
+  const titles = {
+    tr: 'Kalkan & Kaş 7/24 Oto Çekici & Yol Yardım | Bursalı Oto',
+    en: 'Kalkan & Kas 24/7 Car Towing & Roadside Assistance | Bursali Auto',
+    ru: 'Калкан и Каш 24/7 Эвакуатор и Помощь на Дороге | Bursali Auto',
+    uk: 'Калкан та Каш 24/7 Евакуатор та Допомога на Дорозі | Bursali Auto',
+    ar: 'خدمة سحب السيارات في كالكان وكاش 24/7 | Bursali Auto',
   };
+
+  const descriptions = {
+    tr: 'Kalkan ve Kaş bölgesinde acil oto çekici, akü takviyesi ve oto kurtarma servisi. 7/24 güvenli araç taşıma.',
+    en: 'Emergency car towing, battery jump-start and roadside repair service in Kalkan and Kaş. 24/7 safe vehicle transport.',
+    ru: 'Срочный эвакуатор, прикуривание аккумулятора и помощь на дороге в Калкане и Каше.',
+    uk: 'Терміновий евакуатор, прикурювання акумулятора та допомога на дорозі в Калкані та Каші.',
+    ar: 'خدمة سحب وتمرير السيارات والمساعدة على الطريق في كالكان وكاش على مدار 24 ساعة.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/kalkan-kas-yol-yardim',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function KalkanKasCekiciPage() {

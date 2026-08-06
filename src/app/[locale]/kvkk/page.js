@@ -2,17 +2,16 @@
 // NOT: Bu metin bir TASLAKTIR. Yayına almadan önce [KÖŞELİ] alanları doldurulmalı
 // ve bir avukat tarafından gözden geçirilmelidir.
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
+  return buildSEOContract({
+    locale,
+    path: '/kvkk',
     title: 'KVKK Aydınlatma Metni | Bursalı Oto Servis',
-    description:
-      '6698 sayılı KVKK kapsamında kişisel verilerin işlenmesine ilişkin aydınlatma metni.',
-    alternates: buildCanonical(locale, '/kvkk'),
-    robots: { index: true, follow: true },
-  };
+    description: '6698 sayılı KVKK kapsamında kişisel verilerin işlenmesine ilişkin aydınlatma metni.',
+  });
 }
 
 export default async function KvkkPage({ params }) {

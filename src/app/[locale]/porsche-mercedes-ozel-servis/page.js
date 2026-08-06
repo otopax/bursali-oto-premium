@@ -1,12 +1,30 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'Porsche, Mercedes, BMW, Audi Özel Servis Fethiye | Bursalı Oto',
-    description: 'Fethiye\'de Porsche, Mercedes, BMW ve Audi premium araçlarınız için orijinal PIWIS, ODIS arıza tespiti ve garantili bakım onarım servisi. Deneme yanılma yok, kesin çözüm.',
-    alternates: buildCanonical(locale, '/porsche-mercedes-ozel-servis'),
+
+  const titles = {
+    tr: 'Porsche, Mercedes, BMW, Audi Özel Servis Fethiye | Bursalı Oto',
+    en: 'Porsche, Mercedes, BMW, Audi Specialist Service Fethiye | Bursali Auto',
+    ru: 'Специализированный сервис Porsche, Mercedes, BMW, Audi в Фетхие',
+    uk: 'Спеціалізований сервіс Porsche, Mercedes, BMW, Audi у Фетхіє',
+    ar: 'مركز صيانة بورش ومرسيدس وبي إم دبليو وآودي في فتحية',
   };
+
+  const descriptions = {
+    tr: 'Fethiye\'de Porsche, Mercedes, BMW ve Audi premium araçlarınız için orijinal PIWIS, ODIS arıza tespiti ve garantili bakım onarım servisi.',
+    en: 'Specialist repair service for Porsche, Mercedes, BMW and Audi in Fethiye using official PIWIS and ODIS diagnostic tools.',
+    ru: 'Профессиональный ремонт Porsche, Mercedes, BMW, Audi в Фетхие на дилерском оборудовании PIWIS и ODIS.',
+    uk: 'Професійний ремонт Porsche, Mercedes, BMW, Audi у Фетхіє на дилерському обладнанні PIWIS та ODIS.',
+    ar: 'خدمة صيانة واختبار سيارات بورش ومرسيدس وبي إم دبليو وآودي في فتحية بأجهزة الأصيلة.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/porsche-mercedes-ozel-servis',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function PorscheMercedesPage() {

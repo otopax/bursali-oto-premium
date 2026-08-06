@@ -1,13 +1,31 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import TrustBadges from '@/components/TrustBadges';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'Göcek Oto Çekici ve Yol Yardım | VIP Kurtarma 7/24',
-    description: 'Göcek ve Dalaman bölgelerinde premium araçlarınız için 7/24 VIP oto çekici ve yol yardım. Aracınız bulunduğu yerden sıfır hasar ile alınır.',
-    alternates: buildCanonical(locale, '/gocek-cekici'),
+
+  const titles = {
+    tr: 'Göcek 7/24 Oto Çekici & Yol Yardım | Bursalı Oto Servis',
+    en: 'Göcek 24/7 Car Towing & Roadside Assistance | Bursali Auto',
+    ru: 'Гёчек 24/7 Эвакуатор и Помощь на Дороге | Bursali Auto',
+    uk: 'Гьочек 24/7 Евакуатор та Допомога на Дорозі | Bursali Auto',
+    ar: 'خدمة سحب السيارات 24/7 في غوجيك | Bursali Auto Repair',
   };
+
+  const descriptions = {
+    tr: 'Göcek marina ve çevresinde yolda kalan araçlarınız için 7/24 hızlı ve sigortalı oto çekici ve acil oto kurtarma servisi.',
+    en: 'Fast, insured 24/7 car towing and emergency roadside assistance around Göcek marina and surrounding areas.',
+    ru: 'Быстрый и страховой эвакуатор 24/7 в районе марины Гёчек и окрестностях.',
+    uk: 'Швидкий та застрахований евакуатор 24/7 в районі марини Гьочек та околицях.',
+    ar: 'خدمة سحب ونجدة السيارات على مدار 24 ساعة في غوجيك والميناء البحري.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/gocek-cekici',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function GocekCekiciPage() {

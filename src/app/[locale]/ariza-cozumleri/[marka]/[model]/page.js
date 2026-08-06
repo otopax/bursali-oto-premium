@@ -9,7 +9,7 @@ export async function generateStaticParams() {
   return [];
 }
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale, marka, model } = await params;
@@ -39,12 +39,12 @@ export async function generateMetadata({ params }) {
     return {
       title: titles[locale] || titles.tr,
       description: descriptions[locale] || descriptions.tr,
-      alternates: buildCanonical(locale, `/ariza-cozumleri/${marka}/${model}`),
+      ...buildSEOContract({ locale, path: `/ariza-cozumleri/${marka}/${model}`, title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
     };
   } catch (e) {
     return {
       title: 'Arıza Çözümleri | Bursalı Oto Servis',
-      alternates: buildCanonical(locale, `/ariza-cozumleri/${marka}/${model}`),
+      ...buildSEOContract({ locale, path: `/ariza-cozumleri/${marka}/${model}`, title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
     };
   }
 }

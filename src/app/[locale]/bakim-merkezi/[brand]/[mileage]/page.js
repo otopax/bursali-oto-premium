@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { MaintenanceRepository } from '@/lib/repositories/MaintenanceRepository';
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { locale, brand, mileage } = await params;
@@ -26,7 +26,7 @@ export async function generateMetadata({ params }) {
   return {
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, `/bakim-merkezi/${brand}/${mileage}`),
+    ...buildSEOContract({ locale, path: `/bakim-merkezi/${brand}/${mileage}`, title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
   };
 }
 

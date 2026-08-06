@@ -1,7 +1,7 @@
 import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
   return {
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, '/ariza-cozumleri'),
+    ...buildSEOContract({ locale, path: '/ariza-cozumleri', title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
   };
 }
 

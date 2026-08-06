@@ -36,7 +36,7 @@ export async function generateStaticParams() {
   return [];
 }
 
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 
 export async function generateMetadata({ params }) {
   const { code, locale } = await params;
@@ -59,11 +59,12 @@ export async function generateMetadata({ params }) {
     ar: `${upperCode} أعراض رمز العطل ودليل الإصلاح لدى ميكانيكي بورصالي فتحية.`,
   };
 
-  return {
+  return buildSEOContract({
+    locale,
+    path: `/ariza-kodlari/${upperCode}`,
     title: titles[locale] || titles.tr,
     description: descriptions[locale] || descriptions.tr,
-    alternates: buildCanonical(locale, `/ariza-kodlari/${upperCode}`),
-  };
+  });
 }
 
 export default async function FaultCodePage({ params }) {
@@ -123,9 +124,9 @@ export default async function FaultCodePage({ params }) {
       <div className="max-w-4xl mx-auto bg-slate-800 shadow-xl rounded-2xl overflow-hidden border border-slate-700">
         <div className="bg-slate-950 text-white p-8 border-b border-slate-800">
           <div className="flex items-center space-x-2 text-sm text-slate-400 mb-4">
-            <Link href="/" className="hover:text-white">Anasayfa</Link>
+            <Link href={`/${locale}`} className="hover:text-white">Anasayfa</Link>
             <span>/</span>
-            <Link href="/tr/ariza-cozumleri" className="hover:text-white">Arıza Çözümleri</Link>
+            <Link href={`/${locale}/ariza-cozumleri`} className="hover:text-white">Arıza Çözümleri</Link>
             <span>/</span>
             <span className="text-amber-400 font-semibold">{fault.code}</span>
           </div>

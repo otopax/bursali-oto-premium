@@ -1,13 +1,31 @@
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import TrustBadges from '@/components/TrustBadges';
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  return {
-    title: 'Ölüdeniz Acil Yol Yardım ve Oto Çekici | 7/24 Hızlı Servis',
-    description: 'Ölüdeniz, Ovacık, Hisarönü ve Kayaköy bölgeleri için 7/24 acil oto çekici ve yol yardım hizmeti. Aracınız yolda kaldıysa hemen konum atın, anında gelelim.',
-    alternates: buildCanonical(locale, '/oludeniz-yol-yardim'),
+
+  const titles = {
+    tr: 'Ölüdeniz 7/24 Oto Çekici & Yol Yardım | Bursalı Oto',
+    en: 'Oludeniz 24/7 Car Towing & Roadside Assistance | Bursali Auto',
+    ru: 'Олюдениз 24/7 Эвакуатор и Помощь на Дороге | Bursali Auto',
+    uk: 'Олюденіз 24/7 Евакуатор та Допомога на Дорозі | Bursali Auto',
+    ar: 'خدمة سحب السيارات 24/7 في أولودينيز | Bursali Auto',
   };
+
+  const descriptions = {
+    tr: 'Ölüdeniz, Hisarönü ve Ovacık bölgesinde yolda kalan araçlarınız için 7/24 hızlı oto çekici ve acil yol yardım servisi.',
+    en: 'Fast 24/7 car towing and emergency roadside repair service in Oludeniz, Hisaronu and Ovacik.',
+    ru: 'Быстрый эвакуатор 24/7 и помощь на дороге в Олюденизе, Хисароню и Оваджике.',
+    uk: 'Швидкий евакуатор 24/7 та допомога на дорозі в Олюденізі, Хісароню та Оваджику.',
+    ar: 'خدمة نجدة وسحب السيارات على مدار 24 ساعة في أولودينيز وهيسارونو وأوفاجيك.',
+  };
+
+  return buildSEOContract({
+    locale,
+    path: '/oludeniz-yol-yardim',
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default function OludenizYolYardimPage() {

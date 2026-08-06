@@ -1,17 +1,34 @@
 import { container } from '@/application/di/container';
 import Link from 'next/link';
-
-import { buildCanonical } from '@/lib/seo/canonical';
+import { buildSEOContract } from '@/lib/seo/canonical';
 import { arizaUrl } from '@/lib/urls';
 
 export async function generateMetadata({ params }) {
   const { brand, locale } = await params;
   const brandName = brand.toUpperCase();
-  return {
-    title: `${brandName} Arıza Çözümleri | Bursalı Oto`,
-    description: `${brandName} marka premium araçlarda sık görülen arızalar ve uzman çözümleri.`,
-    alternates: buildCanonical(locale, `marka/${brand}`)
+
+  const titles = {
+    tr: `${brandName} Özel Servisi & Tamir | Bursalı Oto Servis Fethiye`,
+    en: `Fethiye ${brandName} Specialist Repair & Maintenance | Bursali Auto`,
+    ru: `Автосервис ${brandName} в Фетхие | Bursali Auto Repair`,
+    uk: `Автосервіс ${brandName} у Фетхіє | Bursali Auto Repair`,
+    ar: `مركز صيانة ${brandName} المتخصص في فتحية | Bursali Auto`,
   };
+
+  const descriptions = {
+    tr: `Fethiye'de ${brandName} marka aracınız için bilgisayarlı arıza tespiti, motor/şanzıman bakımı ve 1 yıl garantili onarım.`,
+    en: `Specialized ${brandName} auto repair in Fethiye using official diagnostic tools. 1 year repair guarantee.`,
+    ru: `Профессиональный ремонт ${brandName} в Фетхие на оригинальном оборудовании с гарантией 1 год.`,
+    uk: `Професійний ремонт ${brandName} у Фетхіє на оригінальному обладнанні з гарантією 1 рік.`,
+    ar: `خدمة صيانة وإصلاح سيارات ${brandName} في فتحية بأحدث الأجهزة مع ضمان لمدة عام.`,
+  };
+
+  return buildSEOContract({
+    locale,
+    path: `/marka/${brand}`,
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+  });
 }
 
 export default async function BrandHubPage({ params }) {
