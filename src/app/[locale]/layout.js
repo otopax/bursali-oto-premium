@@ -54,6 +54,17 @@ export async function generateMetadata({ params }) {
     authors: [{ name: 'Bursalı Oto Servis' }],
     publisher: 'Bursalı Oto Servis',
     robots: 'index, follow',
+    alternates: {
+      canonical: `${SITE_URL}/${locale}`,
+      languages: {
+        'tr': `${SITE_URL}/tr`,
+        'en': `${SITE_URL}/en`,
+        'ru': `${SITE_URL}/ru`,
+        'uk': `${SITE_URL}/uk`,
+        'ar': `${SITE_URL}/ar`,
+        'x-default': `${SITE_URL}/tr`,
+      },
+    },
     openGraph: {
       title: t('title'),
       description: t('description'),
