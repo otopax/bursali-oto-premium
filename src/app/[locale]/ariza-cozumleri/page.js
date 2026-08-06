@@ -1,15 +1,37 @@
 import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
-
+import { buildCanonical } from '@/lib/seo/canonical';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-export const metadata = {
-  title: 'Arıza Çözümleri | Bursalı Oto Servis Fethiye',
-  description: 'Fethiye premium oto servis olarak karşılaştığımız kronik arızalar ve çözümleri.',
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+
+  const titles = {
+    tr: 'Kronik Arıza Çözümleri Rehberi | Bursalı Oto Servis Fethiye',
+    en: 'Chronic Fault Solutions Guide | Bursali Auto Repair Fethiye',
+    ru: 'Справочник По Ремонту Неисправностей | Bursali Oto Servis Fethiye',
+    uk: 'Довідник З Ремонту Несправностей | Bursali Oto Servis Fethiye',
+    ar: 'دليل حلول الأعطال المزمنة | Bursali Oto Servis Fethiye',
+  };
+
+  const descriptions = {
+    tr: 'Fethiye premium oto servis olarak karşılaştığımız kronik arızalar, kök nedenleri ve çözümleri.',
+    en: 'Chronic car faults, root causes and expert repair solutions at Bursali Auto Repair Fethiye.',
+    ru: 'Типичные неисправности автомобилей, причины и решения по ремонту в Bursali Oto Servis.',
+    uk: 'Типові несправності авто, причини та якісний ремонт у Bursali Oto Servis Fethiye.',
+    ar: 'أعطال السيارات الشائعة وأسبابها وحلول الإصلاح المعتمدة في Bursali Oto Servis.',
+  };
+
+  return {
+    title: titles[locale] || titles.tr,
+    description: descriptions[locale] || descriptions.tr,
+    alternates: buildCanonical(locale, '/ariza-cozumleri'),
+  };
+}
 
 const BRAND_LOGOS = {
   'BMW': 'https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg',
