@@ -27,12 +27,22 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default function TransmissionPage() {
+export default async function TransmissionPage({ params }) {
+  const { locale } = await params;
+
+  const h1Titles = {
+    tr: 'Fethiye Otomatik Şanzıman Tamiri ve Revizyonu',
+    en: 'Fethiye Automatic Transmission Repair & Rebuild',
+    ru: 'Ремонт и Ревизия АКПП в Фетхие',
+    uk: 'Ремонт та Ревізія АКПП у Фетхіє',
+    ar: 'إصلاح وتجديد ناقل الحركة الأوتوماتيكي في فتحية',
+  };
+
   return (
     <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
       <div className="container">
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
-          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Fethiye Otomatik Şanzıman Tamiri ve Revizyonu</h1>
+          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
           
           <div className="answer-first-block" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--gold)', marginBottom: '2rem' }}>
             <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>

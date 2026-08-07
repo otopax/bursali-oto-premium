@@ -28,12 +28,22 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default function OludenizYolYardimPage() {
+export default async function OludenizYolYardimPage({ params }) {
+  const { locale } = await params;
+
+  const h1Titles = {
+    tr: 'Ölüdeniz 7/24 Acil Yol Yardım ve Çekici',
+    en: 'Oludeniz 24/7 Emergency Roadside Assistance & Towing',
+    ru: 'Круглосуточная Техпомощь и Эвакуатор в Олюденизе',
+    uk: 'Цілодобова Техдопомога та Евакуатор в Олюденізі',
+    ar: 'خدمة نجدة وسحب السيارات على مدار 24 ساعة في أولودينيز',
+  };
+
   return (
     <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
       <div className="container">
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
-          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Ölüdeniz 7/24 Acil Yol Yardım ve Çekici</h1>
+          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
           
           <div className="answer-first-block" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--gold)', marginBottom: '2rem' }}>
             <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>

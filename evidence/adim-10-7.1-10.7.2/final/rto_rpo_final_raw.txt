@@ -1,0 +1,6 @@
+﻿=== ADIM 10.7.1 + 10.7.2 — PHASE 11: RTO / RPO FORENSIC LOG ===
+Timestamp: 2026-08-07T02:53:44+03:00
+RTO_THEORETICAL: < 5 minutes (Based on pg_dump file size ~207 bytes / small volume)
+RTO_RUNTIME_MEASURED: NOT DETERMINABLE (Standby DB pg_restore was offline during test)
+RPO_RUNTIME_VERIFIED: NOT DETERMINABLE
+REASON: Live PostgreSQL transaction log (WAL) sync timestamps and standby restore duration could not be measured because standby DB at 127.0.0.1:5433 was offline during runtime execution.

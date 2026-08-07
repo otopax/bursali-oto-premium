@@ -27,12 +27,22 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default function EnglishSpeakingMechanicPage() {
+export default async function EnglishSpeakingMechanicPage({ params }) {
+  const { locale } = await params;
+
+  const h1Titles = {
+    tr: 'Fethiye İngilizce Konuşan Oto Tamircisi',
+    en: 'English Speaking Auto Mechanic in Fethiye',
+    ru: 'Англоговорящий Автомеханик в Фетхие',
+    uk: 'Англомовний Автомеханік у Фетхіє',
+    ar: 'ميكانيكي سيارات يتحدث الإنجليزية في فتحية',
+  };
+
   return (
     <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
       <div className="container">
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
-          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>English Speaking Auto Mechanic in Fethiye</h1>
+          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
           
           <div className="answer-first-block" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--gold)', marginBottom: '2rem' }}>
             <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>

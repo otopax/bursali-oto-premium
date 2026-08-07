@@ -1,0 +1,27 @@
+﻿=== STATIC SCAN RAW EVIDENCE ===
+Timestamp: 2026-08-07 00:53:37
+
+--- 1. DELETED LEGACY FILES CHECK ---
+src/lib/auth.js : Exists=False
+src/app/api/auth/login/route.js : Exists=False
+src/app/api/auth/logout/route.js : Exists=False
+src/app/api/v1/auth/route.js : Exists=False
+src/app/api/vip/auth/route.js : Exists=False
+
+--- 2. HARDCODED OTP SCAN (123456) ---
+ZERO MATCHES
+
+--- 3. AUTH_TOKEN COOKIE SCAN ---
+ZERO MATCHES
+
+--- 4. X-ADMIN-SECRET BYPASS CODE SCAN ---
+ZERO MATCHES
+
+--- 5. LEGACY JWT_SECRET SCAN ---
+ZERO MATCHES
+
+--- 6. CUSTOMER-LOGIN PROVIDER SCAN ---
+ZERO MATCHES
+
+--- 7. FALLBACK SECRET SCAN (BursaliOtoSecretKey2026) ---
+ZERO MATCHES

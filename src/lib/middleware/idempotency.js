@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import prisma from '../prisma.js';
+import { prisma } from '../prisma.js';
 
 /**
  * Idempotency Kontrol Servisi

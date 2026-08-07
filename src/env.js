@@ -17,7 +17,7 @@ const envSchema = z.object({
 
   // Authentication
   NEXTAUTH_URL: z.string().url().optional(),
-  NEXTAUTH_SECRET: z.string().min(10, "Güvenli bir NEXTAUTH_SECRET tanımlanmalı").default('BursaliOtoSecretKey2026'),
+  NEXTAUTH_SECRET: z.string().min(10, "Güvenli bir NEXTAUTH_SECRET tanımlanmalı").optional(),
 });
 
 const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.IS_BUILD === 'true' || !process.env.DATABASE_URL;

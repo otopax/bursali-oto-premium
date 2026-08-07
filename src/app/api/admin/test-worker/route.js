@@ -5,6 +5,12 @@ export const dynamic = 'force-dynamic';
 export const runtime = 'nodejs';
 
 export async function GET() {
+  // Build (Statik analiz) sırasında Redis bağlantısı açılmasını engelle
+  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true' || process.env.npm_lifecycle_event === 'build';
+  if (isBuildPhase) {
+    return NextResponse.json({ success: true, message: 'Build phase bypassed' });
+  }
+
   try {
     // Lazy import + lazy Queue: bağlantı yalnızca çalışma anında kurulur, build'de değil.
     const { Queue } = await import('bullmq');

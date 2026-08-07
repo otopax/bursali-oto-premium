@@ -2,8 +2,19 @@
 
 import Link from 'next/link';
 import { trackEvent } from '@/lib/tracking';
+import { useParams } from 'next/navigation';
 
 export default function CampaignPage() {
+  const params = useParams();
+  const locale = params?.locale || 'tr';
+
+  const h1Titles = {
+    tr: <>İlk Kez Gelen Müşterilerimize Özel <br/><span className="text-[var(--accent-gold)]">Ücretsiz Bilgisayarlı Arıza Tespiti</span> (Check-Up)</>,
+    en: <>Special for First-Time Customers <br/><span className="text-[var(--accent-gold)]">Free Computer Diagnostics</span> (Check-Up)</>,
+    ru: <>Специально для Новых Клиентов <br/><span className="text-[var(--accent-gold)]">Бесплатная Компьютерная Диагностика</span> (Check-Up)</>,
+    uk: <>Спеціально для Нових Клієнтів <br/><span className="text-[var(--accent-gold)]">Безкоштовна Комп'ютерна Діагностика</span> (Check-Up)</>,
+    ar: <>خاص للعملاء الجدد <br/><span className="text-[var(--accent-gold)]">فحص كمبيوتر مجاني</span> (Check-Up)</>
+  };
   return (
     <main style={{ minHeight: '100vh', background: '#09090b', position: 'relative', overflow: 'hidden' }}>
       {/* Background Accent */}
@@ -17,8 +28,7 @@ export default function CampaignPage() {
         </div>
 
         <h1 className="text-4xl md:text-6xl font-black text-white mb-6 leading-tight">
-          İlk Kez Gelen Müşterilerimize Özel <br/>
-          <span className="text-[var(--accent-gold)]">Ücretsiz Bilgisayarlı Arıza Tespiti</span> (Check-Up)
+          {h1Titles[locale] || h1Titles.tr}
         </h1>
 
         <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">

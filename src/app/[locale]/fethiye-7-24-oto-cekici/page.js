@@ -26,7 +26,17 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function TowingPage() {
+export default async function TowingPage({ params }) {
+  const { locale } = await params;
+
+  const h1Titles = {
+    tr: 'Fethiye 7/24 Oto Çekici ve Yol Yardım',
+    en: 'Fethiye 24/7 Tow Truck and Roadside Assistance',
+    ru: '24/7 Эвакуатор и Помощь на Дорогах в Фетхие',
+    uk: '24/7 Евакуатор та Допомога на Дорогах у Фетхіє',
+    ar: 'خدمة سحب السيارات والمساعدة على الطريق على مدار 24/7 في فتحية',
+  };
+
   return (
     <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
       <div className="container">
@@ -34,7 +44,7 @@ export default function TowingPage() {
           <div style={{ display: 'inline-block', background: 'rgba(225, 29, 72, 0.1)', color: '#e11d48', padding: '0.5rem 1rem', borderRadius: '100px', fontWeight: 'bold', marginBottom: '1rem' }}>
             🛡️ 7/24 Kesintisiz Acil Hizmet
           </div>
-          <h1 style={{ color: 'var(--text-light)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Fethiye 7/24 Oto Çekici ve Yol Yardım</h1>
+          <h1 style={{ color: 'var(--text-light)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
           
           <div className="answer-first-block" style={{ backgroundColor: 'rgba(225, 29, 72, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid #e11d48', marginBottom: '2rem' }}>
             <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>

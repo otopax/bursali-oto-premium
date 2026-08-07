@@ -1,0 +1,68 @@
+﻿=== PHASE 0 — ENVIRONMENT FORENSIC DISCOVERY ===
+Timestamp: 2026-08-07 01:08:53
+
+--- 1. GIT IDENTITY ---
+Branch: main
+Commit SHA: 8c537eed8560aec989e812094e3fb82aa21a075b
+Last Commit: 8c537eed fix(seo): complete 5-locale H1 localization for bakim-merkezi, ariza-cozumleri, kutuphane and blog
+Working Tree Status:
+ M evidence/h1-cluster-manifest.json
+ M evidence/seo-sitewide-verification.json
+ M public/llms.txt
+ M src/app/[locale]/_hidden-[marka]-servis-fethiye/page.js
+ M src/app/[locale]/degerlendir/page.js
+ M src/app/[locale]/english-speaking-mechanic/page.js
+ M src/app/[locale]/fethiye-7-24-oto-cekici/page.js
+ M src/app/[locale]/fethiye-bmw-servisi/page.js
+ M src/app/[locale]/fethiye-mercedes-servisi/page.js
+ M src/app/[locale]/gizlilik/page.js
+ M src/app/[locale]/gocek-cekici/page.js
+ M src/app/[locale]/hakkimizda/page.js
+ M src/app/[locale]/kalkan-kas-yol-yardim/page.js
+ M src/app/[locale]/kampanya/ucretsiz-checkup/page.js
+ M src/app/[locale]/kvkk/page.js
+ M src/app/[locale]/oludeniz-yol-yardim/page.js
+ M src/app/[locale]/otomatik-sanziman-tamiri/page.js
+ M src/app/[locale]/porsche-mercedes-ozel-servis/page.js
+ M src/app/[locale]/sanal-usta/page.js
+ M src/app/[locale]/seffaf-fiyatlandirma/page.js
+ M src/app/[locale]/veri-silme-talebi/page.js
+ M src/app/api/admin/test-worker/route.js
+ D src/app/api/auth/login/route.js
+ D src/app/api/auth/logout/route.js
+ M src/app/api/auth/token-version/route.js
+ M src/app/api/chat/route.js
+ D src/app/api/v1/auth/route.js
+ D src/app/api/vip/auth/route.js
+ M src/app/api/vision/analyze/route.js
+ M src/auth.js
+ M src/env.js
+ D src/lib/auth.js
+ M src/lib/events/EventBus.js
+ M src/lib/middleware/idempotency.js
+ M src/middleware.js
+ M src/services/VisionService.js
+?? evidence/adim-10-3/
+?? evidence/h1-localization-verification.json
+?? src/app/[locale]/degerlendir/layout.js
+
+--- 2. RUNTIME ENVIRONMENT ---
+Node Version: v24.14.0
+npm Version: 11.9.0
+
+--- 3. KEY DEPENDENCY VERSIONS (package.json) ---
+Next.js: ^15.5.21
+React: 19.0.0
+Prisma: ^5.22.0
+NextAuth: ^5.0.0-beta.32
+Playwright DevDep: ^1.61.1
+
+--- 4. BINARY AVAILABILITY CHECKS ---
+k6 Binary: NOT INSTALLED LOCALLY (k6 executable not found in PATH)
+Playwright Binary: AVAILABLE (Version 1.61.1)
+
+--- 5. INFRASTRUCTURE & CONFIGURATION FORENSICS ---
+Railway Config Exists: True
+Vercel Config Exists: False
+Cloudflare Wranger/Env Exists: False
+Next.js Config Exists: 

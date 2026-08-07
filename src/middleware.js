@@ -5,10 +5,6 @@ import { getToken } from 'next-auth/jwt';
 
 const intlMiddleware = createMiddleware(routing);
 
-// V5.0 Güvenlik: Korumalı Rotalar (Login zorunlu)
-// Sanal Usta artık Misafir moduna açık olduğu için buradan çıkarıldı.
-// NOT: '/ariza-kodlari' buradan ÇIKARILDI — public P-SEO içerik rotasıdır,
-// Googlebot'un erişebilmesi için login zorunluluğu olmamalı.
 const protectedRoutes = [
   '/teknik-kutuphane',
   '/bilgi-bankasi',
@@ -16,16 +12,32 @@ const protectedRoutes = [
   '/vip-garaj'
 ];
 
+const privilegedPrefixes = [
+  '/admin',
+  '/finans',
+  '/erp',
+  '/yonetim',
+  '/api/admin',
+  '/api/erp'
+];
+
 export async function middleware(request) {
   const nonce = crypto.randomUUID().replace(/-/g, '');
   
-  // 1. Trace ID for observability
+  // 1. Trace ID for observability & Anti-Spoofing: Strip client identity headers
   const correlationId = request.headers.get('x-correlation-id') || crypto.randomUUID();
   request.headers.set('x-correlation-id', correlationId);
   request.headers.set('x-nonce', nonce);
 
+  // Strip client-controlled user headers to prevent header spoofing attacks
+  request.headers.delete('x-user-role');
+  request.headers.delete('x-user-permissions');
+
   const pathname = request.nextUrl.pathname;
   request.headers.set('x-current-path', pathname);
+
+  // Exclude NextAuth internal endpoints from revocation checks so users can log out / fetch sessions
+  const isNextAuthInternal = pathname.startsWith('/api/auth');
 
   // 1.2 Chaos Engineering (Fail-Open / Resiliency Testing)
   const chaosDelay = request.headers.get('x-chaos-delay');
@@ -45,7 +57,6 @@ export async function middleware(request) {
     }
   }
 
-  // Set internal headers so endpoints can read them to simulate specific failures
   if (chaosKvFail) request.headers.set('x-internal-chaos-kv', chaosKvFail);
   if (chaosQueueFail) request.headers.set('x-internal-chaos-queue', chaosQueueFail);
   if (chaosAiTimeout) request.headers.set('x-internal-chaos-ai', chaosAiTimeout);
@@ -65,24 +76,20 @@ export async function middleware(request) {
     console.error('[Middleware] Rate limiting error:', err.message);
   }
   
-  // 1.6 Admin API Koruması (GÜVENLİK: /api/admin uçları auth'suz kalmasın)
-  // check-embeddings / test-rag (Gemini maliyeti) / test-worker (kuyruk flood) açıkta olmamalı.
-  // Geçiş: geçerli admin oturumu VEYA x-admin-secret header (curl doğrulaması için).
+  // 1.6 Admin API Protection - Strict NextAuth Token Only (x-admin-secret BYPASS REMOVED)
   if (pathname.startsWith('/api/admin')) {
-    const adminSecret = process.env.ADMIN_SECRET;
-    const providedSecret = request.headers.get('x-admin-secret');
     let isAdmin = false;
     try {
       const adminToken = await getToken({
         req: request,
-        secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026'
+        secret: process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET
       });
-      isAdmin = !!(adminToken && ['ADMIN', 'SUPER_ADMIN', 'MANAGER'].includes(adminToken.role));
+      const userId = adminToken?.sub || adminToken?.id;
+      isAdmin = !!(userId && adminToken && ['ADMIN', 'SUPER_ADMIN', 'MANAGER'].includes(adminToken.role));
     } catch (e) {
       isAdmin = false;
     }
-    const secretOk = !!adminSecret && providedSecret === adminSecret;
-    if (!isAdmin && !secretOk) {
+    if (!isAdmin) {
       return new NextResponse(
         JSON.stringify({ success: false, error: 'Unauthorized: admin access required' }),
         { status: 401, headers: { 'content-type': 'application/json' } }
@@ -90,41 +97,46 @@ export async function middleware(request) {
     }
   }
 
-  // --- YENİ EKLENEN ADMIN KORUMASI ---
+  // Admin UI Protection - Cryptographic Token & Role Verification
   if (pathname.startsWith('/admin') || pathname.startsWith('/tr/admin') || pathname.startsWith('/en/admin')) {
-    const session = request.cookies.get('next-auth.session-token') || request.cookies.get('__Secure-next-auth.session-token');
+    let adminToken = null;
+    try {
+      adminToken = await getToken({
+        req: request,
+        secret: process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET
+      });
+    } catch (e) {
+      adminToken = null;
+    }
     
-    if (!session) {
+    const userId = adminToken?.sub || adminToken?.id;
+    const isAuthorizedAdmin = !!(userId && adminToken && ['ADMIN', 'SUPER_ADMIN', 'MANAGER'].includes(adminToken.role));
+
+    if (!isAuthorizedAdmin) {
       const locale = pathname.split('/')[1] || 'tr';
       const loginUrl = new URL(`/${locale}/login`, request.url);
       loginUrl.searchParams.set('callbackUrl', pathname);
+      loginUrl.searchParams.set('error', 'admin_required');
       return NextResponse.redirect(loginUrl);
     }
-    
-    return NextResponse.next();
   }
-  // --- MEVCUT DİĞER KONTROLLER ---
 
-  // 2. Güvenlik Kontrolü (Authentication)
-  // Route'un başındaki dili (/tr veya /en) kesip ana rotayı buluyoruz
+  // 2. Authentication & Token Revocation Verification
   const pathWithoutLocale = pathname.replace(/^\/[^\/]+/, '') || pathname;
-  
   const isProtected = protectedRoutes.some(route => 
     pathWithoutLocale === route || pathWithoutLocale.startsWith(`${route}/`)
   );
+  const isPrivilegedRoute = privilegedPrefixes.some(prefix =>
+    pathWithoutLocale === prefix || pathWithoutLocale.startsWith(`${prefix}/`) || pathname.startsWith(prefix)
+  );
 
-  if (isProtected) {
-    // NextAuth token kontrolü — hardcoded fallback KALDIRILDI (güvenlik)
-    if (!process.env.NEXTAUTH_SECRET) {
-      console.warn('Warning: NEXTAUTH_SECRET env variable is missing. Using fallback for build purposes.');
-    }
+  if ((isProtected || isPrivilegedRoute) && !isNextAuthInternal) {
     const token = await getToken({
       req: request,
-      secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026'
+      secret: process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET
     });
 
-    if (!token) {
-      // Kullanıcı giriş yapmamışsa, bulunduğu dilin login sayfasına yönlendir
+    if (!token && isProtected) {
       const locale = pathname.split('/')[1] || 'tr';
       const url = request.nextUrl.clone();
       url.pathname = `/${locale}/login`;
@@ -133,87 +145,90 @@ export async function middleware(request) {
       return NextResponse.redirect(url);
     }
 
-    // Faz 2.5: Token Versioning & Session Revocation
-    // Eğer token içinde tokenVersion varsa (Eski tokenlarda olmayabilir)
-    if (token.tokenVersion !== undefined) {
-      try {
-        const { Redis } = await import('@upstash/redis');
-        // Lazy load Redis client because middleware uses edge runtime
-        const redis = new Redis({
-          url: process.env.UPSTASH_REDIS_REST_URL,
-          token: process.env.UPSTASH_REDIS_REST_TOKEN,
-        });
+    if (token) {
+      const userId = token.sub || token.id;
+      if (!userId) {
+        return new NextResponse(
+          JSON.stringify({ success: false, error: 'Unauthorized: Invalid User Identity' }),
+          { status: 401, headers: { 'content-type': 'application/json' } }
+        );
+      }
 
-        const redisKey = `auth:tokenVer:${token.id}`;
-        let version = await redis.get(redisKey);
-        
-        if (version === null) {
-          // Redis'te yoksa iç API'den veritabanı kontrolü yapıp Redis'i doldururuz (Edge uyumlu çözüm)
-          const validKey = process.env.INTERNAL_API_KEY || 'bursali-oto-internal-secret-2026';
-          // Next.js middleware fetch uses the fully qualified URL
-          const apiUrl = new URL(`/api/auth/token-version?userId=${token.id}`, request.url);
-          
-          const dbCheck = await fetch(apiUrl.toString(), {
-            headers: { 'x-internal-api-key': validKey },
-            // timeout logic
-            signal: AbortSignal.timeout(1000)
+      // Token Versioning & Session Revocation
+      if (token.tokenVersion !== undefined) {
+        try {
+          const { Redis } = await import('@upstash/redis');
+          const redis = new Redis({
+            url: process.env.UPSTASH_REDIS_REST_URL,
+            token: process.env.UPSTASH_REDIS_REST_TOKEN,
           });
+
+          const redisKey = `auth:tokenVer:${userId}`;
+          let version = await redis.get(redisKey);
           
-          if (dbCheck.ok) {
-            const data = await dbCheck.json();
-            version = data.version;
-          } else {
-            throw new Error(`DB fallback API failed: ${dbCheck.status}`);
+          if (version === null) {
+            const validKey = process.env.INTERNAL_API_KEY;
+            const apiUrl = new URL(`/api/auth/token-version?userId=${userId}`, request.url);
+            
+            const dbCheck = await fetch(apiUrl.toString(), {
+              headers: validKey ? { 'x-internal-api-key': validKey } : {},
+              signal: AbortSignal.timeout(1000)
+            });
+            
+            if (dbCheck.ok) {
+              const data = await dbCheck.json();
+              version = data.version;
+            } else {
+              throw new Error(`DB fallback API failed: ${dbCheck.status}`);
+            }
+          }
+          
+          if (parseInt(token.tokenVersion) < parseInt(version)) {
+            console.warn(`[Security Block] Revoked token attempt by user ${userId}`);
+            if (pathname.startsWith('/api/')) {
+              return new NextResponse(
+                JSON.stringify({ success: false, error: 'Session Revoked' }),
+                { status: 401, headers: { 'content-type': 'application/json' } }
+              );
+            }
+            const locale = pathname.split('/')[1] || 'tr';
+            const url = request.nextUrl.clone();
+            url.pathname = `/${locale}/login`;
+            url.searchParams.set('error', 'session_expired');
+            return NextResponse.redirect(url);
+          }
+        } catch (error) {
+          if (isPrivilegedRoute) {
+            console.error(`[Security FAIL-CLOSED] Token version check failed for user ${userId}.`, error.message);
+            if (pathname.startsWith('/api/')) {
+              return new NextResponse(
+                JSON.stringify({ success: false, error: 'Service Unavailable: Authentication Verification Failed' }),
+                { status: 503, headers: { 'content-type': 'application/json' } }
+              );
+            }
+            const locale = pathname.split('/')[1] || 'tr';
+            const url = request.nextUrl.clone();
+            url.pathname = `/${locale}/login`;
+            url.searchParams.set('error', 'system_unavailable');
+            return NextResponse.redirect(url);
           }
         }
-        
-        // Versiyon karşılaştırması
-        if (parseInt(token.tokenVersion) < parseInt(version)) {
-          // Kullanıcı oturumu iptal edilmiş veya yetkisi değişmiş!
-          console.warn(`[Security] Revoked token used by user ${token.id}`);
-          const locale = pathname.split('/')[1] || 'tr';
-          const url = request.nextUrl.clone();
-          url.pathname = `/${locale}/login`;
-          url.searchParams.set('error', 'session_expired');
-          return NextResponse.redirect(url);
-        }
-      } catch (error) {
-        // FAIL-CLOSED Lojik (Admin, Finans, ERP rotaları ve yüksek yetkili roller için)
-        const isPrivilegedRole = token.role && ['ADMIN', 'SUPER_ADMIN', 'FINANCE', 'MANAGER'].includes(token.role);
-        const privilegedRoutes = ['/admin', '/finans', '/erp', '/yonetim', '/api/admin'];
-        const isPrivilegedRoute = privilegedRoutes.some(route => 
-          pathWithoutLocale === route || pathWithoutLocale.startsWith(`${route}/`)
-        );
-        
-        if (isPrivilegedRole || isPrivilegedRoute) {
-          console.error(`[Security BLOCK] Token version check failed for privileged user/route ${token.id}. Failing CLOSED.`, error.message);
-          const locale = pathname.split('/')[1] || 'tr';
-          const url = request.nextUrl.clone();
-          url.pathname = `/${locale}/login`;
-          url.searchParams.set('error', 'system_unavailable');
-          return NextResponse.redirect(url);
-        } else {
-          // FAIL-OPEN Lojik (Misafir/Müşteri sayfaları için Redis/DB çökerse geçişe izin ver)
-          console.warn(`[Security WARNING] Token version check bypassed due to Redis/API failure for user ${token.id} (Fail-Open active)`, error.message);
-        }
       }
-    }
 
-    
-    // RBAC: Token içindeki rolleri ve izinleri downstream (alt bileşenlere) iletmek için header'a ekliyoruz.
-    if (token.role) {
-      request.headers.set('x-user-role', token.role);
-    }
-    if (token.permissions) {
-      request.headers.set('x-user-permissions', JSON.stringify(token.permissions));
+      // Propagate verified server-side claims to downstream headers
+      if (token.role) {
+        request.headers.set('x-user-role', token.role);
+      }
+      if (token.permissions) {
+        request.headers.set('x-user-permissions', JSON.stringify(token.permissions));
+      }
     }
   }
 
-  // 3. Execute next-intl middleware for language routing (redirects / to /tr)
+  // 3. Execute next-intl middleware for language routing
   let response;
   
   if (request.nextUrl.pathname === '/') {
-    // 307 Redirect yerine doğrudan rewrite (Lighthouse optimizasyonu)
     const url = request.nextUrl.clone();
     url.pathname = '/tr';
     response = NextResponse.rewrite(url);
@@ -225,10 +240,8 @@ export async function middleware(request) {
       },
     });
   } else {
-    // next-intl middleware already clones the request, but to be safe we can re-apply our custom headers
     response = intlMiddleware(request);
     
-    // Pass custom headers to the response so Server Components can read them if next-intl didn't
     if (request.headers.get('x-user-role')) {
       response.headers.set('x-user-role', request.headers.get('x-user-role'));
     }
@@ -237,7 +250,6 @@ export async function middleware(request) {
     }
     response.headers.set('x-current-path', request.headers.get('x-current-path'));
     
-    // Cloudflare Cache-Tags (Hiyerarşik)
     const locale = pathname.split('/')[1] || 'tr';
     let tags = [`locale:${locale}`];
 
@@ -245,7 +257,6 @@ export async function middleware(request) {
       tags.push('library', 'library:article');
     } else if (pathWithoutLocale.startsWith('/ariza-kodlari')) {
       tags.push('fault', 'fault:code');
-      // Örn: /ariza-kodlari/p0420
       const code = pathWithoutLocale.split('/')[2];
       if (code) tags.push(`fault:${code.toLowerCase()}`);
     } else if (pathWithoutLocale.startsWith('/bmw-ozel-servis')) {
@@ -256,9 +267,6 @@ export async function middleware(request) {
 
     response.headers.set('Cache-Tag', tags.join(', '));
 
-    // CSP — Next.js App Router uyumlu (strict-dynamic kaldırıldı)
-    // strict-dynamic Next.js chunk <script> tag'lerine nonce enjekte edemediği
-    // için TÜM JS'yi engelliyor. Güvenli alternatif: 'self' + 'unsafe-inline'.
     const csp = `
       default-src 'self';
       script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com;
@@ -274,9 +282,6 @@ export async function middleware(request) {
     response.headers.set('Content-Security-Policy', csp);
     response.headers.set('x-nonce', nonce);
 
-    // Cache-Control: Cloudflare ve tarayıcı önbellek stratejisi
-    // HTML sayfaları: kısa tarayıcı cache + uzun Cloudflare edge cache (stale-while-revalidate)
-    // NOT: /ariza-cozumleri dinamik verileri anlık göstermeli (no-store)
     if (pathname.includes('/ariza-cozumleri')) {
       response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
     } else if (!pathname.startsWith('/api') && !pathname.startsWith('/login') && !pathname.startsWith('/admin')) {
@@ -284,7 +289,6 @@ export async function middleware(request) {
     }
   }
 
-  // 4. Attach Trace ID to the response
   if (response) {
     response.headers.set('x-correlation-id', correlationId);
   }
@@ -293,6 +297,6 @@ export async function middleware(request) {
 }
 
 export const config = {
-  // Match all paths except internal Next.js files, images, and static assets
   matcher: ['/((?!_next|.*\\..*).*)', '/api/:path*']
 };
+

@@ -1,0 +1,121 @@
+﻿=== PRE-DEPLOYMENT BUILD VERIFICATION LOG ===
+Timestamp: 2026-08-07T13:07:44+03:00
+Build Duration: 120456 ms
+Exit Code: 1
+Build Output:
+
+> bursali-oto-web@0.1.0 build
+> node scripts/railway-build.js
+
+[build-mem] os.totalmem: 32486 MB, freemem: 10149 MB, cpus: 16
+[build-mem] cgroup: bilinmiyor  (bu de─şer builder'─▒n ger├ğek bellek duvar─▒d─▒r)
+­şÜÇ Running standard Next.js build...
+[build-mem] gelen process.env.NODE_OPTIONS = "(yok)"
+node.exe : [@sentry/nextjs] DEPRECATION WARNING: disableLogger is deprecated and will be removed in a future version. U
+se webpack.treeshake.removeDebugLogging instead.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([@sentry/nextjs...ogging instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[@sentry/nextjs] DEPRECATION WARNING: reactComponentAnnotation is deprecated and will be removed in a future version. U
+se webpack.reactComponentAnnotation instead.
+ ÔÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\xbors\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles
+ if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\package-lock.json
+   * C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\package-lock.json
+
+(node:42180) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/xbors/OneDrive/Desktop/Bursali_Oto
+_Dijital_Yonetim/Web_Sitesi/bursali-oto-web/src/lib/env-config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Site
+si\bursali-oto-web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Ôû▓ Next.js 15.5.21
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     ┬À clientTraceMetadata
+
+   Creating an optimized production build ...
+[@sentry/nextjs] It appears you've configured a `sentry.server.config.js` file. Please ensure to put this file's conten
+t into the `register()` function of a Next.js instrumentation file instead. To ensure correct functionality of the SDK,
+ `Sentry.init` must be called inside of an instrumentation file. Learn more about setting up an instrumentation file in
+ Next.js: https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation. You can safely delete the `
+sentry.server.config.js` file afterward.
+[@sentry/nextjs] Could not find `onRequestError` hook in instrumentation file. This indicates outdated configuration of
+ the Sentry SDK. Use `Sentry.captureRequestError` to instrument the `onRequestError` hook: https://docs.sentry.io/platf
+orms/javascript/guides/nextjs/manual-setup/#errors-from-nested-react-server-components
+[@sentry/nextjs] It appears you've configured a `sentry.edge.config.js` file. Please ensure to put this file's content 
+into the `register()` function of a Next.js instrumentation file instead. To ensure correct functionality of the SDK, `
+Sentry.init` must be called inside of an instrumentation file. Learn more about setting up an instrumentation file in N
+ext.js: https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation. You can safely delete the `se
+ntry.edge.config.js` file afterward.
+[@sentry/nextjs] DEPRECATION WARNING: It is recommended renaming your `sentry.client.config.js` file, or moving its con
+tent to `instrumentation-client.ts`. When using Turbopack `sentry.client.config.js` will no longer work. Read more abou
+t the `instrumentation-client.ts` file: https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-clie
+nt
+ ÔÜá Compiled with warnings in 97s
+
+./node_modules/@upstash/redis/nodejs.mjs
+A Node.js API is used (process.version at line: 240) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/@upstash/redis/nodejs.mjs
+
+./node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (CompressionStream at line: 10) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/jose/dist/webapi/lib/deflate.js
+./node_modules/jose/dist/webapi/jwe/flattened/decrypt.js
+./node_modules/jose/dist/webapi/index.js
+./node_modules/@auth/core/jwt.js
+./node_modules/next-auth/jwt.js
+
+./node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (DecompressionStream at line: 26) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/jose/dist/webapi/lib/deflate.js
+./node_modules/jose/dist/webapi/jwe/flattened/decrypt.js
+./node_modules/jose/dist/webapi/index.js
+./node_modules/@auth/core/jwt.js
+./node_modules/next-auth/jwt.js
+
+   Linting and checking validity of types ...
+ Ô¿» ESLint: Failed to load parser '@typescript-eslint/parser' declared in ' ┬╗ eslint-config-next/core-web-vitals ┬╗ C
+:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\node_modules\eslint-config-next\i
+ndex.js#overrides[0]': Cannot read properties of undefined (reading 'Cjs')
+   Collecting page data ...
+[RedisFactory] Running in build phase. Using Memory Adapter.
+Error: FATAL: NEXTAUTH_SECRET or AUTH_SECRET is not defined in environment.
+    at 37080 (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next\server\chunk
+s\668.js:1:3759)
+    at c (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next\server\webpack-r
+untime.js:1:527)
+    at 2384 (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next\server\app\ap
+i\erp\workorders\route.js:1:986)
+    at c (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next\server\webpack-r
+untime.js:1:527)
+    at <unknown> (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next\server\a
+pp\api\erp\workorders\route.js:1:13280)
+    at c.X (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next\server\webpack
+-runtime.js:1:2594)
+    at <unknown> (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next\server\a
+pp\api\erp\workorders\route.js:1:13226)
+    at Object.<anonymous> (C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\.next
+\server\app\api\erp\workorders\route.js:1:13311)
+
+> Build error occurred
+[Error: Failed to collect page data for /api/erp/workorders] {
+  type: 'Error'
+}
+ÔØî Next.js build failed: Command failed: next build

@@ -1,0 +1,90 @@
+=== BURSALI OTO DIJITAL YONETIM - DATABASE & INFRASTRUCTURE FORENSIC AUDIT ===
+
+FINDING: IDOR vulnerability in WorkOrderItem creation. The endpoint uses the URL `id` directly to associate a WorkOrderItem without validating if the parent `WorkOrder` belongs to the authenticated user's `tenantId`.
+SEVERITY: P1
+FILE: src/app/api/erp/workorders/[id]/items/route.js
+LINE: 20
+EVIDENCE: 
+const item = await prisma.workOrderItem.create({
+  data: {
+    workOrderId: id,
+    type: type,
+    ...
+REMEDIATION: Query the WorkOrder first to ensure it belongs to `session.user.tenantId` before adding items.
+
+FINDING: Insufficient validation of `vehicleId` during WorkOrder creation. If `vehicleId` is passed in the request body, it is directly assigned to the new WorkOrder without verifying if the vehicle belongs to the user's `tenantId`.
+SEVERITY: P1
+FILE: src/app/api/erp/workorders/route.js
+LINE: 78
+EVIDENCE: 
+let targetVehicleId = vehicleId;
+if (!targetVehicleId) {
+  // Finds or creates Customer & Vehicle with tenantId check
+}
+// Then later:
+const workOrder = await tx.workOrder.create({
+  data: {
+    tenantId: session.user.tenantId,
+    vehicleId: targetVehicleId,
+    ...
+REMEDIATION: If `vehicleId` is provided, verify it exists and `tenantId === session.user.tenantId` before proceeding.
+
+FINDING: N+1 query patterns present in utility scripts. While not directly impacting the API performance, these can cause significant delays during batch processing operations.
+SEVERITY: P3
+FILE: src/scripts/migrate-to-postgres.js
+LINE: N/A
+EVIDENCE: N+1 found by static analysis in loops traversing JSON to Prisma models.
+REMEDIATION: Use `prisma.$transaction` with batched `createMany` or `upsert` queries rather than awaiting Prisma inside `for...of` loops.
+
+FINDING: Use of `$queryRawUnsafe` for simple queries. Although not directly exposed to user input (preventing immediate SQLi), using `Unsafe` is generally bad practice when `$queryRaw` or standard Prisma aggregations could be used.
+SEVERITY: P3
+FILE: src/app/api/admin/check-embeddings/route.js
+LINE: 10
+EVIDENCE: const totalResult = await prisma.$queryRawUnsafe(`SELECT count(id) as c FROM "FaultCode"`);
+REMEDIATION: Use `prisma.faultCode.count()` instead of raw SQL queries where ORM capabilities exist.
+
+FINDING: Tenant relationships lack Cascade delete. If a Tenant is deleted, it will trigger foreign key constraint errors because related users, customers, and work orders do not have `onDelete: Cascade`.
+SEVERITY: P3
+FILE: prisma/schema.prisma
+LINE: 22
+EVIDENCE: 
+model Tenant {
+  ...
+  users            TenantUser[]
+  customers        Customer[]
+  customerVehicles CustomerVehicle[]
+  workOrders       WorkOrder[]
+}
+REMEDIATION: If Tenant deletion is supported, add `onDelete: Cascade` to the relation fields on the child models or implement explicit deletion logic.
+
+FINDING: Prisma connection pool is explicitly defined to prevent connection exhaustion. The `prisma.js` file properly implements a singleton and intercepts queries for audit logs.
+SEVERITY: Info
+FILE: src/lib/prisma.js
+LINE: 124
+EVIDENCE: url = `${url}${url.includes('?') ? '&' : '?'}connection_limit=20&pool_timeout=15`;
+REMEDIATION: None. Good practice.
+
+FINDING: Railway Deployment lacks explicit health checks and multiple replicas.
+SEVERITY: P2
+FILE: railway.json
+LINE: 7
+EVIDENCE: 
+"deploy": {
+  "numReplicas": 1,
+  "restartPolicyType": "ON_FAILURE",
+  "restartPolicyMaxRetries": 10
+}
+REMEDIATION: Add an HTTP healthcheck path in `railway.json` pointing to `/api/health/ready` to ensure zero-downtime deployments. Consider scaling `numReplicas` if high availability is required.
+
+FINDING: Next.js security headers are implemented robustly.
+SEVERITY: Info
+FILE: next.config.mjs
+LINE: 118
+EVIDENCE: 
+headers: [
+  { key: 'X-DNS-Prefetch-Control', value: 'on' },
+  { key: 'Strict-Transport-Security', value: 'max-age=31536000; includeSubDomains; preload' },
+  { key: 'X-Frame-Options', value: 'DENY' },
+  ...
+]
+REMEDIATION: None required.

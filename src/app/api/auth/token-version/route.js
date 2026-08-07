@@ -3,12 +3,12 @@ import { prisma } from '@/lib/prisma';
 import { redis } from '@/lib/cache';
 
 export async function GET(request) {
-  // Only allow internal calls
+  // Only allow internal calls with strict env key
   const apiKey = request.headers.get('x-internal-api-key');
-  const validKey = process.env.INTERNAL_API_KEY || 'bursali-oto-internal-secret-2026';
+  const validKey = process.env.INTERNAL_API_KEY;
   
-  if (apiKey !== validKey) {
-    return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+  if (!validKey || apiKey !== validKey) {
+    return NextResponse.json({ error: 'Unauthorized: Internal API Key Invalid' }, { status: 401 });
   }
 
   const { searchParams } = new URL(request.url);
@@ -38,3 +38,4 @@ export async function GET(request) {
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
   }
 }
+

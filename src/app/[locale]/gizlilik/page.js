@@ -17,9 +17,17 @@ export async function generateMetadata({ params }) {
 export default async function GizlilikPage({ params }) {
   const { locale } = await params;
 
+  const h1Titles = {
+    tr: 'Gizlilik ve Çerez Politikası',
+    en: 'Privacy and Cookie Policy',
+    ru: 'Политика конфиденциальности и файлов cookie',
+    uk: 'Політика конфіденційності та файлів cookie',
+    ar: 'سياسة الخصوصية وملفات تعريف الارتباط',
+  };
+
   return (
     <main className="container" style={{ maxWidth: '820px', padding: '2.5rem 1.25rem', lineHeight: 1.7 }}>
-      <h1 style={{ marginBottom: '1rem' }}>Gizlilik ve Çerez Politikası</h1>
+      <h1 style={{ marginBottom: '1rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
       <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>Son güncelleme: [TARİH]</p>
 
       <h2>1. Veri Sorumlusu</h2>

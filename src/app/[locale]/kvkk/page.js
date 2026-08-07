@@ -17,9 +17,17 @@ export async function generateMetadata({ params }) {
 export default async function KvkkPage({ params }) {
   const { locale } = await params;
 
+  const h1Titles = {
+    tr: 'KVKK Aydınlatma Metni',
+    en: 'KVKK Disclosure Text',
+    ru: 'Текст уведомления KVKK',
+    uk: 'Текст повідомлення KVKK',
+    ar: 'نص الإفصاح KVKK',
+  };
+
   return (
     <main className="container" style={{ maxWidth: '820px', padding: '2.5rem 1.25rem', lineHeight: 1.7 }}>
-      <h1 style={{ marginBottom: '1rem' }}>KVKK Aydınlatma Metni</h1>
+      <h1 style={{ marginBottom: '1rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
       <p style={{ opacity: 0.7, fontSize: '0.9rem' }}>6698 sayılı Kişisel Verilerin Korunması Kanunu uyarınca</p>
 
       <h2>1. Veri Sorumlusunun Kimliği</h2>

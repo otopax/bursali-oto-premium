@@ -1,0 +1,36 @@
+﻿=== PHASE 3 — ORIGIN DISCOVERY FORENSICS ===
+Timestamp: 2026-08-07 01:11:16
+
+Railway Configuration (ailway.json):
+{
+  "$schema": "https://railway.app/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "deploy": {
+    "numReplicas": 1,
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}
+
+
+Domain Configuration Check:
+Hardcoded Railway Domain in Repo: NONE
+Public Production Domain: https://bursaliotoservis.com
+
+DNS Resolution for bursaliotoservis.com:
+
+Name                 Type TTL Section IPAddress                
+----                 ---- --- ------- ---------                
+bursaliotoservis.com AAAA 300 Answer  2606:4700:3034::6815:43b4
+bursaliotoservis.com AAAA 300 Answer  2606:4700:3031::ac43:b351
+bursaliotoservis.com A    300 Answer  104.21.67.180            
+bursaliotoservis.com A    300 Answer  172.67.179.81            
+
+
+
+
+ORIGIN DISCOVERY VERDICT:
+Direct Railway Origin URL (.up.railway.app) is not hardcoded in repository source code and requires authenticated Railway CLI / Dashboard access to inspect private service hostname.
+DIRECT ORIGIN TESTING STATUS: BLOCKED (Direct origin hostname not in source control; Cloudflare Edge proxy domain bursaliotoservis.com is available for edge load testing).

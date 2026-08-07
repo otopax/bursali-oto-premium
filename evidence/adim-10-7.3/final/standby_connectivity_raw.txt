@@ -1,0 +1,10 @@
+﻿=== ADIM 10.7.3 — PHASE 3: STANDBY DATABASE CONNECTIVITY AUDIT ===
+Timestamp: 2026-08-07T05:10:50+03:00
+Target Standby Host: 127.0.0.1:5433
+Standby DB TCP Connection (127.0.0.1:5433): OFFLINE / UNREACHABLE (Exception calling "Connect" with "2" argument(s): "Hedef makine etkin olarak reddettiğinden bağlantı kurulamadı 127.0.0.1:5433")
+Standby DB Status: OFFLINE
+
+REQUIRED CONFIGURATION FOR STANDBY RESTORE (OPS-10.7-05):
+  1. Standby PostgreSQL instance running (e.g. local Docker on port 5433 or secondary Railway DB service)
+  2. pg_restore client binary installed in PATH
+  3. STANDBY_DATABASE_URL environment variable (e.g. postgresql://standby:***@127.0.0.1:5433/bursali_restore)

@@ -1,0 +1,40 @@
+﻿=== PHASE 4 — BASELINE HTTP PERFORMANCE RAW EVIDENCE ===
+Timestamp: 2026-08-07 01:11:36
+
+------------------------------------------------------------
+TARGET: https://bursaliotoservis.com/
+STATUS: 200 OK
+LATENCY: 1628 ms
+CF-Cache-Status: DYNAMIC
+CF-Ray: a27160dcecc32463-ADB
+Cache-Control: public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800
+
+------------------------------------------------------------
+TARGET: https://bursaliotoservis.com/tr
+STATUS: 200 OK
+LATENCY: 901 ms
+CF-Cache-Status: HIT
+CF-Ray: a27160e52b7e2463-ADB
+Cache-Control: public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800
+
+------------------------------------------------------------
+TARGET: https://bursaliotoservis.com/tr/sanal-usta
+STATUS: 200 OK
+LATENCY: 534 ms
+CF-Cache-Status: DYNAMIC
+CF-Ray: a27160ead85c2463-ADB
+Cache-Control: public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800
+
+------------------------------------------------------------
+TARGET: https://bursaliotoservis.com/api/health
+STATUS: 200 OK
+LATENCY: 282 ms
+CF-Cache-Status: DYNAMIC
+CF-Ray: a27160ee2b932463-ADB
+Cache-Control: 
+
+------------------------------------------------------------
+TARGET: https://bursaliotoservis.com/api/admin/test-worker
+STATUS: 401 Unauthorized
+LATENCY: 276 ms
+CF-Cache-Status: DYNAMIC

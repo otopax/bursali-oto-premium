@@ -1,0 +1,25 @@
+=== BURSALI OTO DIJITAL YONETIM - BACKUP & RESTORE AUDIT ===
+
+1. BACKUP CAPABILITIES:
+- The system includes a dedicated database backup script (`scripts/backup-db.js`).
+- Backup Method: It uses PostgreSQL's native `pg_dump` utility with custom format (`-Fc`) and `--no-owner`, which allows for flexible and robust restoration on any environment.
+- It has fallback logic to run via Docker (`docker exec bursali_postgres pg_dump`) if the local system lacks `pg_dump` binaries.
+- Output Directory: Backups are stored in the `./backups` directory on the filesystem.
+
+2. ROTATION AND RETENTION:
+- The script implements an automated rotation policy out-of-the-box.
+- It deletes older `.dump` files based on the `BACKUP_RETENTION_DAYS` environment variable (default: 7 days). This prevents disk exhaustion over time.
+
+3. OFF-SITE CAPABILITIES:
+- The script has built-in integration with `rclone` to push backup files to remote storage (such as AWS S3, Google Drive, or Cloudflare R2) if the `BACKUP_RCLONE_REMOTE` environment variable is defined.
+- This fully supports the 3-2-1 backup principle (3 copies, 2 media, 1 off-site) when properly configured.
+
+4. RESTORATION PROCESS:
+- The script explicitly documents the restoration procedure via `pg_restore --clean --if-exists --no-owner -d "$DATABASE_URL" <dosya.dump>`.
+- The use of `--clean --if-exists` makes the restore process idempotent and straightforward for disaster recovery scenarios.
+
+5. SCHEDULING:
+- While the script is well-written, there is no evidence of a dedicated cron job or PM2 process scheduling it within the codebase (e.g., in `ecosystem.config.js` or `railway.json`). It must be executed manually or triggered externally via a system-level cron or CI/CD pipeline. An API endpoint `src/app/api/test-backup/route.js` exists to trigger it programmatically, but doing so via HTTP without authentication presents a potential resource-exhaustion risk and may timeout.
+
+OVERALL ASSESSMENT:
+The backup capability is mature and relies on standard PostgreSQL utilities rather than frail custom data-dumping mechanisms. To achieve production readiness, the backup script execution must be added to a reliable scheduler, and the `BACKUP_RCLONE_REMOTE` should be configured to ensure an off-site copy exists in case of catastrophic instance failure on Railway.

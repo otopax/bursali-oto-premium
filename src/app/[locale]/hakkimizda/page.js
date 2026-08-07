@@ -45,7 +45,16 @@ export default async function AboutPage({ params }) {
         </nav>
 
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
-          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Bursalı Oto Servis Fethiye Hakkında</h1>
+          {(() => {
+            const h1Titles = {
+              tr: 'Bursalı Oto Servis Fethiye Hakkında',
+              en: 'About Bursali Auto Repair Fethiye',
+              ru: 'О компании Bursalı Oto Servis Fethiye',
+              uk: 'Про компанію Bursalı Oto Servis Fethiye',
+              ar: 'نبذة عن مركز بورصالي لخدمات السيارات في فتحية',
+            };
+            return <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>;
+          })()}
           
           <div className="answer-first-block" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--gold)', marginBottom: '2rem' }}>
             <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>

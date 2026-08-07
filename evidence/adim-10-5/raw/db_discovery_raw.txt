@@ -1,0 +1,46 @@
+﻿=== ADIM 10.5 — FAZ 0: DATABASE & RESILIENCE FORENSIC DISCOVERY ===
+Timestamp: 2026-08-07 02:05:43
+
+--- 1. RAILWAY DATABASE & VOLUME STATUS ---
+
+Workspace:       otopax's Projects
+
+Project:         surprising-radiance
+Project ID:      093b38ca-194f-4d53-a44d-8145a3d8fcfd
+
+Environment:     production
+Environment ID:  0fbba32e-54cf-4904-a840-eb7a286b04ac
+
+Linked service
+
+bursali-oto-premium
+    status:        ÔùÅ Online
+    repo:          otopax/bursali-oto-premium
+    url:           https://www.bursaliotoservis.com
+    region:        US East
+    deployment ID: badb5ebf-806d-4d64-94d7-703e1be9da78
+    service ID:    d152ad6a-1b1b-4797-8c57-edc6d92b41d0
+
+ÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇÔöÇ
+
+All resources
+
+    Services
+      - bursali-oto-premium: ÔùÅ Online ┬À https://www.bursaliotoservis.com
+      - Bursali Oto Worker: ÔùÅ Online
+    Databases
+      - Redis: ÔùÅ Online ┬À redis-volume
+      - Postgres: ÔùÅ Online ┬À postgres-volume
+    Volumes
+      - postgres-volume-085T: detached ┬À 0.1 GB / 4.9 GB ┬À ready
+
+
+--- 2. PRISMA SCHEMA & MODEL AUDIT ---
+Prisma Provider: PostgreSQL
+Prisma Vector Extension: Enabled
+Total Prisma Models: 33
+Models List: Tenant, TenantUser, User, SubscriptionTier, UsageLog, VectorEmbedding, Manufacturer, Vehicle, String, Engine, ECU, Sensor, FaultCode, String, RepairVideo, Part, OutboxEvent, Permission, AuditLog, ApiKey, Customer, CustomerVehicle, String, WorkOrder, IdempotencyRecord, WorkOrderItem, FuseBox, Fuse, ServiceHistory, DiagnosticLog, SocialLead, SemanticCache, Feedback
+
+--- 3. REDIS RESILIENCE & FAIL-CLOSED ARCHITECTURE DISCOVERY ---
+Redis helper file: C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\src\lib\redis
+Redis helper file: C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\src\lib\redis\upstash.js

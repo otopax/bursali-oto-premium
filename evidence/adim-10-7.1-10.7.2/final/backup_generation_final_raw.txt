@@ -1,0 +1,24 @@
+﻿=== PHASE 1 — FRESH BACKUP GENERATION RAW LOG ===
+Timestamp: 2026-08-07T02:58:36+03:00
+backup-db.js STDOUT/STDERR:
+Ôùç injected env (12) from .env // tip: Ôîİ enable debugging { debug: true }
+Ôùç injected env (4) from .env.local // tip: Ôîİ suppress logs { quiet: true }
+­şùä´©Å  Yedekleme ba┼şl─▒yor ÔåÆ C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\backups\bursali_oto_2026-08-07_025836.dump
+Ôä╣´©Å Yerel pg_dump bulunamad─▒, Docker ├╝zerinden deneniyor...
+node : failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct a
+nd if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+At line:5 char:8
++ $res = node scripts/backup-db.js 2>&1
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (failed to conne...file specified.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Ôä╣´©Å Docker pg_dump ├ğal─▒┼şt─▒r─▒lamad─▒, do─şrudan Prisma schema/data snapshot moduna ge├ğiliyor...
+Ô£à Yedek al─▒nd─▒ (0.00 MB): bursali_oto_2026-08-07_025836.dump
+Ôä╣´©Å  BACKUP_RCLONE_REMOTE tan─▒ms─▒z ÔÇö sadece yerel yedek al─▒nd─▒.
+
+Local Backups Found in ./backups: 5
+Latest Dump File: bursali_oto_2026-08-07_025836.dump
+Size: 207 bytes
+Created At: 2026-08-07T02:58:36.5169843+03:00
+Dump File SHA256: A6C210316357CB419FA5C65DB1CB32E51C7EA864E03102F31B42588602CB42E5

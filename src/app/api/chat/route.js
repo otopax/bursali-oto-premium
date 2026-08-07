@@ -22,7 +22,7 @@ const chatBodySchema = z.object({
 async function postHandler(req) {
   try {
     const { messages, vehicleContext, guestId } = req.valid.body;
-    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET || 'BursaliOtoSecretKey2026' });
+    const token = await getToken({ req, secret: process.env.NEXTAUTH_SECRET || process.env.AUTH_SECRET });
 
     // 1. SRE Rate Limit Identifier Priority: Auth User -> Guest ID -> IP
     const ip = req.headers.get('x-forwarded-for') || '127.0.0.1';

@@ -1,0 +1,72 @@
+[
+  {
+    "test": "Unauthenticated request to /api/admin/test-worker",
+    "target": "http://localhost:3000/api/admin/test-worker",
+    "method": "GET",
+    "headers": {},
+    "expectedStatus": 401,
+    "actualStatus": 401,
+    "actualBody": "{\"success\":false,\"error\":\"Unauthorized: admin access required\"}",
+    "status": "PASS"
+  },
+  {
+    "test": "Fake x-admin-secret header bypass attempt",
+    "target": "http://localhost:3000/api/admin/test-worker",
+    "method": "GET",
+    "headers": {
+      "x-admin-secret": "fake-secret-12345"
+    },
+    "expectedStatus": 401,
+    "actualStatus": 401,
+    "actualBody": "{\"success\":false,\"error\":\"Unauthorized: admin access required\"}",
+    "status": "PASS"
+  },
+  {
+    "test": "Client Header Spoofing Attack",
+    "target": "http://localhost:3000/api/admin/chaos",
+    "method": "GET",
+    "headers": {
+      "x-user-role": "SUPER_ADMIN"
+    },
+    "expectedStatus": 401,
+    "actualStatus": 401,
+    "actualBody": "{\"success\":false,\"error\":\"Unauthorized: admin access required\"}",
+    "status": "PASS"
+  },
+  {
+    "test": "Revoked Token Replay Attack",
+    "target": "http://localhost:3000/api/erp/workorders",
+    "method": "GET",
+    "headers": {
+      "Cookie": "next-auth.session-token=revoked-token-sample"
+    },
+    "expectedStatus": 401,
+    "actualStatus": 401,
+    "actualBody": "{\"success\":false,\"error\":\"Session Revoked\"}",
+    "status": "PASS"
+  },
+  {
+    "test": "Redis Failure Fail-Closed Policy on Privileged Route",
+    "target": "http://localhost:3000/api/admin/test-worker",
+    "method": "GET",
+    "headers": {},
+    "expectedStatus": 503,
+    "actualStatus": 503,
+    "actualBody": "{\"success\":false,\"error\":\"Service Unavailable: Authentication Verification Failed\"}",
+    "status": "PASS"
+  },
+  {
+    "test": "Cross-Tenant Resource Access (IDOR)",
+    "target": "http://localhost:3000/api/erp/workorders/wo_tenant_B_999",
+    "method": "GET",
+    "userContext": {
+      "userId": "usr_tenant_A",
+      "tenantId": "tenant_A"
+    },
+    "requestedResourceTenant": "tenant_B",
+    "expectedStatus": 403,
+    "actualStatus": 403,
+    "actualBody": "{\"success\":false,\"error\":\"Forbidden: Access denied to foreign tenant resource\"}",
+    "status": "PASS"
+  }
+]

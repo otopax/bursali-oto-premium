@@ -1,0 +1,130 @@
+﻿=== ADIM 10.6 — SECURITY FORENSIC SCAN RAW EVIDENCE ===
+Timestamp: 2026-08-07T02:30:20+03:00
+Commit: 8c537eed8560aec989e812094e3fb82aa21a075b
+
+--- 1. LEGACY AUTH REMNANT SCAN ---
+SCAN: Hardcoded OTP 123456 | MATCHES: 0
+SCAN: auth_token cookie/header | MATCHES: 0
+SCAN: JWT_SECRET env var | MATCHES: 0
+SCAN: BursaliOtoSecretKey fallback | MATCHES: 0
+SCAN: customer-login provider | MATCHES: 0
+SCAN: x-admin-secret bypass | MATCHES: 0
+SCAN: Legacy createToken | MATCHES: 0
+SCAN: Legacy verifyToken | MATCHES: 0
+
+--- 2. SQL INJECTION RISK SCAN ---
+SQL Raw Query Matches: 16
+  HIT: route.js:10 => const totalResult = await prisma.$queryRawUnsafe(`SELECT count(id) as c FROM "FaultCode"`);
+  HIT: route.js:11 => const embeddedResult = await prisma.$queryRawUnsafe(`SELECT count(id) as c FROM "FaultCode" WHERE embedding IS NOT NULL`
+  HIT: route.js:22 => await withTimeout(prisma.$queryRaw`SELECT 1`, CHECK_TIMEOUT_MS, 'db');
+  HIT: route.js:62 => const res = await withTimeout(prisma.$queryRaw`SELECT count(id) as c FROM "FaultCode" WHERE embedding IS NOT NULL`, CHEC
+  HIT: route.js:63 => const total = await withTimeout(prisma.$queryRaw`SELECT count(id) as c FROM "FaultCode"`, CHECK_TIMEOUT_MS, 'total');
+  HIT: route.js:24 => await prisma.$queryRaw`SELECT 1`;
+  HIT: check-embeddings.js:8 => const totalResult = await prisma.$queryRawUnsafe(`SELECT count(id) as c FROM "FaultCode"`);
+  HIT: check-embeddings.js:9 => const embeddedResult = await prisma.$queryRawUnsafe(`SELECT count(id) as c FROM "FaultCode" WHERE embedding IS NOT NULL`
+  HIT: coverage-report.js:6 => const total = await prisma.$queryRaw`SELECT COUNT(*) as count FROM "FaultCode"`;
+  HIT: coverage-report.js:7 => const withEmbedding = await prisma.$queryRaw`SELECT COUNT(*) as count FROM "FaultCode" WHERE embedding IS NOT NULL`;
+  HIT: generate-embeddings.js:37 => const existingVector = await prisma.$queryRaw`SELECT embedding FROM "FaultCode" WHERE id = ${fc.id} AND embedding IS NOT
+  HIT: generate-embeddings.js:64 => await prisma.$executeRawUnsafe(
+  HIT: OutboxRelay.js:11 => const pendingEvents = await tx.$queryRaw`
+  HIT: test-rag.js:18 => const results = await prisma.$queryRawUnsafe(`
+  HIT: ChatService.js:587 => results = await prisma.$queryRawUnsafe(`
+  HIT: ChatService.js:600 => results = await prisma.$queryRawUnsafe(`
+
+--- 3. SSRF RISK SCAN ---
+Potential SSRF fetch patterns: 10
+  HIT: kv.js:28 => const res = await fetch(url, reqOptions);
+  HIT: vinService.js:45 => const res = await fetch(`${NHTSA_BASE_URL}/${vin}?format=json`);
+  HIT: discoverCatalog.js:15 => const res = await fetch(url, {
+  HIT: downloadCatalog.js:36 => const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  HIT: fetchFuseboxData.js:18 => const response = await fetch(url);
+  HIT: fetchFuseboxData.js:155 => const imgRes = await fetch(imgUrl);
+  HIT: fuseBoxCrawler.js:20 => const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' } });
+  HIT: masterCrawler.js:20 => const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  HIT: mergeManualsCrawler.js:15 => const res = await fetch(url, { headers: { 'User-Agent': 'Mozilla/5.0' } });
+  HIT: middleware.js:173 => const dbCheck = await fetch(apiUrl.toString(), {
+
+--- 4. XSS RISK SCAN ---
+dangerouslySetInnerHTML Matches: 64
+  HIT: page.js:227 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+  HIT: page.js:228 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+  HIT: page.js:229 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+  HIT: page.js:230 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+  HIT: page.js:231 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+  HIT: page.js:232 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+  HIT: page.js:330 => dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+  HIT: page.js:79 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:76 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:129 => dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+  HIT: page.js:56 => dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+  HIT: page.js:76 => dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+  HIT: page.js:84 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:92 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:93 => dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+  HIT: page.js:90 => dangerouslySetInnerHTML={{
+  HIT: page.js:95 => dangerouslySetInnerHTML={{
+  HIT: page.js:79 => dangerouslySetInnerHTML={{
+  HIT: page.js:80 => dangerouslySetInnerHTML={{
+  HIT: page.js:78 => dangerouslySetInnerHTML={{
+  HIT: page.js:108 => dangerouslySetInnerHTML={{
+  HIT: page.js:57 => dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+  HIT: page.js:78 => dangerouslySetInnerHTML={{
+  HIT: _page.js:72 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: _page.js:152 => dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(htmlContent) }}
+  HIT: page.js:229 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+  HIT: page.js:230 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+  HIT: page.js:231 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+  HIT: page.js:232 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+  HIT: page.js:233 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+  HIT: page.js:234 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+  HIT: page.js:334 => dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+  HIT: page.js:78 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:84 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:69 => dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
+  HIT: page.js:78 => dangerouslySetInnerHTML={{
+  HIT: page.js:89 => dangerouslySetInnerHTML={{
+  HIT: page.js:94 => dangerouslySetInnerHTML={{
+  HIT: layout.js:59 => dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+  HIT: page.js:479 => dangerouslySetInnerHTML={{ __html: m.content }}
+  HIT: page.js:615 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:165 => dangerouslySetInnerHTML={{
+  HIT: page.js:142 => dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+  HIT: layout.js:99 => <script type="speculationrules" dangerouslySetInnerHTML={{
+  HIT: layout.js:116 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: layout.js:153 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: page.js:378 => dangerouslySetInnerHTML={{
+  HIT: _loading.js:4 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: Chatbot.js:60 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: GoogleAnalytics.js:40 => dangerouslySetInnerHTML={{
+  HIT: InteractiveBrandGrid.js:21 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: LiveSearch.js:50 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: Navigation.js:50 => <script dangerouslySetInnerHTML={{__html: `
+  HIT: Navigation.js:62 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: SanalUstaTeaser.js:151 => <style dangerouslySetInnerHTML={{__html: `
+  HIT: StructuredData.js:149 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(business) }} />
+  HIT: StructuredData.js:150 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyService) }} />
+  HIT: StructuredData.js:151 => <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+  HIT: StructuredData.js:152 => {breadcrumbData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) 
+  HIT: StructuredData.js:153 => {videoData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoData) }} />}
+  HIT: StructuredData.js:154 => {reviewData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewData) }} />}
+  HIT: StructuredData.js:155 => {productData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productData) }} />}
+  HIT: StructuredData.js:156 => {techArticleData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleData
+  HIT: TrustBadges.js:62 => <style dangerouslySetInnerHTML={{__html: `
+
+--- 5. SECRET EXPOSURE SCAN ---
+Hardcoded Secret Matches: 0
+
+--- 6. RATE LIMIT SCAN ---
+Rate Limit References: 33
+
+--- 7. CORS SCAN ---
+CORS References: 1
+  HIT: page.js:20 => 'Opel': ['Corsa','Astra','Insignia','Mokka','Grandland','Crossland'],
+
+--- 8. CSP HEADER SCAN ---
+CSP References: 2
+  HIT: middleware.js:270 => const csp = `
+  HIT: middleware.js:282 => response.headers.set('Content-Security-Policy', csp);
+
+--- 9. TEST-BACKUP AUTH CHECK ---
+test-backup auth check: 0 auth references found

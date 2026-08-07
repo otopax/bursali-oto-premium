@@ -1,0 +1,19 @@
+﻿=== PHASE 8 — ADIM 10.3 REGRESSION RAW TEST EVIDENCE ===
+Timestamp: 2026-08-07 01:18:16
+
+------------------------------------------------------------
+TEST: Unauthenticated Admin API
+URL: https://bursaliotoservis.com/api/admin/test-worker
+STATUS: 401
+
+------------------------------------------------------------
+TEST: Fake Admin Secret
+URL: https://bursaliotoservis.com/api/admin/test-worker
+STATUS: 401
+
+------------------------------------------------------------
+TEST: Header Spoofing
+URL: https://bursaliotoservis.com/api/admin/chaos
+STATUS: 401
+
+REGRESSION VERDICT: NO REGRESSION DETECTED (ADIM 10.3 Auth controls remain 100% active and enforced).

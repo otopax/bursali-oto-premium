@@ -1,0 +1,29 @@
+﻿=== ADIM 10.7.3 — PHASE 1: TOOLCHAIN & ENVIRONMENT DISCOVERY ===
+Timestamp: 2026-08-07T05:10:35+03:00
+Node Version: v24.14.0
+npm Version: 11.9.0
+Git SHA: 8c537eed8560aec989e812094e3fb82aa21a075b
+Git Branch: main
+
+--- 1. TOOLCHAIN BINARY SEARCH ---
+rclone: MISSING (Not in PATH)
+pg_restore: MISSING (Not in PATH)
+pg_dump: MISSING (Not in PATH)
+psql: MISSING (Not in PATH)
+docker: PASS (Docker version 29.5.3, build d1c06ef)
+docker ps: failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if the daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+railway: PASS (railway 5.28.1 )
+
+--- 2. ENVIRONMENT CONFIGURATION PRESENCE (VALUES REDACTED) ---
+DATABASE_URL : MISSING
+DIRECT_URL : MISSING
+BACKUP_RCLONE_REMOTE : MISSING
+BACKUP_DIR : MISSING
+BACKUP_RETENTION_DAYS : MISSING
+INTERNAL_API_KEY : MISSING
+AWS_ACCESS_KEY_ID : MISSING
+R2_ACCESS_KEY_ID : MISSING
+S3_BUCKET : MISSING
+STANDBY_DATABASE_URL : MISSING
+STANDBY_HOST : MISSING
+STANDBY_PORT : MISSING

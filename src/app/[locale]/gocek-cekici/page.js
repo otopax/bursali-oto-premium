@@ -28,12 +28,22 @@ export async function generateMetadata({ params }) {
   });
 }
 
-export default function GocekCekiciPage() {
+export default async function GocekCekiciPage({ params }) {
+  const { locale } = await params;
+
+  const h1Titles = {
+    tr: 'Göcek VIP Oto Çekici ve Yol Yardım',
+    en: 'Gocek VIP Tow Truck and Roadside Assistance',
+    ru: 'VIP Эвакуатор и Техпомощь на Дороге в Гёчеке',
+    uk: 'VIP Евакуатор та Техдопомога на Дорозі в Гьочеку',
+    ar: 'خدمة سحب السيارات VIP والمساعدة على الطريق في غوجيك',
+  };
+
   return (
     <main style={{ paddingTop: '100px', minHeight: '100vh' }}>
       <div className="container">
         <div className="glass-panel" style={{ padding: '3rem', marginBottom: '3rem' }}>
-          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>Göcek VIP Oto Çekici ve Yol Yardım</h1>
+          <h1 style={{ color: 'var(--gold)', marginBottom: '1.5rem', fontSize: '2.5rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
           
           <div className="answer-first-block" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--gold)', marginBottom: '2rem' }}>
             <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0 }}>

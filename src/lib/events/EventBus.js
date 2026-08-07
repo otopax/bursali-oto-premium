@@ -6,7 +6,21 @@ const crypto = require('crypto');
 class PersistentEventBus {
   constructor() {
     this.queueName = 'enterprise-event-bus';
-    this.eventQueue = new Queue(this.queueName, { connection: redisClient });
+    this.handlers = {};
+    
+    const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true' || process.env.npm_lifecycle_event === 'build';
+    if (isBuildPhase) {
+      this.eventQueue = { add: async () => {} };
+      return;
+    }
+
+    const actualRedisClient = redisClient.getBullRedisClient ? redisClient.getBullRedisClient() : null;
+    if (!actualRedisClient) {
+      this.eventQueue = { add: async () => {} };
+      return;
+    }
+
+    this.eventQueue = new Queue(this.queueName, { connection: actualRedisClient });
 
     // Idempotency Shield: İşlenen event'leri 24 saat boyunca hatırla
     this.processedKeyPrefix = 'idempotent:event:';
@@ -16,13 +30,13 @@ class PersistentEventBus {
 
       // ** IDEMPOTENCY KONTROLÜ **
       const idKey = this.processedKeyPrefix + eventId;
-      const isProcessed = await redisClient.setnx(idKey, '1');
+      const isProcessed = await actualRedisClient.setnx(idKey, '1');
       if (!isProcessed) {
         console.log(`[EventBus] ♻️ Idempotency: Event ${eventId} zaten işlenmiş. Atlanıyor.`);
         return; // Sessizce başarılı say
       }
       // 24 saat sonra otomatik silinsin
-      await redisClient.expire(idKey, 86400);
+      await actualRedisClient.expire(idKey, 86400);
 
       // İşleyicileri çalıştır
       if (this.handlers[eventName]) {
@@ -30,9 +44,8 @@ class PersistentEventBus {
           await handler(payload);
         }
       }
-    }, { connection: redisClient });
+    }, { connection: actualRedisClient });
 
-    this.handlers = {};
     this.worker.on('failed', (job, err) => {
       console.error(`[EventBus] ❌ Event ${job.id} başarısız: ${err.message}`);
     });

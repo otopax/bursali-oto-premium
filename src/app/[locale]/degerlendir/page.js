@@ -1,11 +1,30 @@
 'use client';
 import { useState, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useParams } from 'next/navigation';
 
 function ReviewForm() {
   const searchParams = useSearchParams();
+  const params = useParams();
+  const locale = params?.locale || 'tr';
+
   const workOrderId = searchParams.get('wid') || '';
   const tenantId = searchParams.get('tid') || '';
+
+  const h1TitlesFeedback = {
+    tr: 'Hizmetimizi Değerlendirin',
+    en: 'Rate Our Service',
+    ru: 'Оцените Наш Сервис',
+    uk: 'Оцініть Наш Сервіс',
+    ar: 'قيم خدمتنا',
+  };
+
+  const h1TitlesThanks = {
+    tr: 'Teşekkürler',
+    en: 'Thank You',
+    ru: 'Спасибо',
+    uk: 'Дякуємо',
+    ar: 'شكراً لك',
+  };
 
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
@@ -15,7 +34,7 @@ function ReviewForm() {
 
   const submitReview = async () => {
     if (rating === 0) return;
-    
+
     setIsSubmitting(true);
     try {
       const res = await fetch('/api/feedback', {
@@ -24,7 +43,7 @@ function ReviewForm() {
         body: JSON.stringify({ workOrderId, tenantId, rating, comment })
       });
       const data = await res.json();
-      
+
       if (data.redirectUrl) {
         window.location.href = data.redirectUrl;
       } else {
@@ -43,7 +62,7 @@ function ReviewForm() {
       <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
         <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full text-center">
           <div className="text-4xl mb-4">🙏</div>
-          <h1 className="text-2xl font-bold text-slate-800 mb-2">Teşekkürler</h1>
+          <h1 className="text-2xl font-bold text-slate-800 mb-2">{h1TitlesThanks[locale] || h1TitlesThanks.tr}</h1>
           <p className="text-slate-600">{resultMessage}</p>
         </div>
       </div>
@@ -53,13 +72,13 @@ function ReviewForm() {
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col items-center justify-center p-4">
       <div className="bg-white p-8 rounded-xl shadow-lg max-w-md w-full text-center">
-        <img 
-          src="/images/logo.png" 
-          alt="Bursalı Oto" 
-          className="h-16 mx-auto mb-6" 
+        <img
+          src="/images/logo.png"
+          alt="Bursalı Oto"
+          className="h-16 mx-auto mb-6"
           onError={(e) => { e.target.style.display = 'none'; }}
         />
-        <h1 className="text-2xl font-bold text-slate-800 mb-2">Hizmetimizi Değerlendirin</h1>
+        <h1 className="text-2xl font-bold text-slate-800 mb-2">{h1TitlesFeedback[locale] || h1TitlesFeedback.tr}</h1>
         <p className="text-slate-600 mb-6">
           Servis deneyiminiz bizim için çok değerli. Lütfen aşağıdaki yıldızlardan birine tıklayarak bizi değerlendirin.
         </p>

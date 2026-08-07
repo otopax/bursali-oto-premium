@@ -1,0 +1,24 @@
+﻿=== FAZ 4 — DIRECT RAILWAY ORIGIN BASELINE FORENSICS ===
+Timestamp: 2026-08-07 01:58:38
+Discovered Direct Railway Origin URL: https://bursali-oto-premium-production.up.railway.app
+
+------------------------------------------------------------
+TARGET: https://bursali-oto-premium-production.up.railway.app/ (Bypassing Cloudflare Edge)
+STATUS: 200 OK
+LATENCY (TTFB): 803 ms
+Server Header: railway-hikari
+Cache-Control: s-maxage=86400, stale-while-revalidate=31449600
+
+------------------------------------------------------------
+TARGET: https://bursali-oto-premium-production.up.railway.app/tr (Bypassing Cloudflare Edge)
+STATUS: 200 OK
+LATENCY (TTFB): 630 ms
+Server Header: railway-hikari
+Cache-Control: public, max-age=60, s-maxage=86400, stale-while-revalidate=43200
+
+------------------------------------------------------------
+TARGET: https://bursali-oto-premium-production.up.railway.app/api/health (Bypassing Cloudflare Edge)
+STATUS: 200 OK
+LATENCY (TTFB): 198 ms
+Server Header: railway-hikari
+Cache-Control: 

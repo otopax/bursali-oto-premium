@@ -22,9 +22,17 @@ export default async function VeriSilmeTalebiPage({ params }) {
     'Ad-Soyad:\nTelefon:\nAraç Plakası:\nTalebiniz (erişim / düzeltme / silme):\n'
   );
 
+  const h1Titles = {
+    tr: 'Veri Silme ve KVKK Başvurusu',
+    en: 'Data Deletion and KVKK Request',
+    ru: 'Удаление данных и запрос KVKK',
+    uk: 'Видалення даних та запит KVKK',
+    ar: 'حذف البيانات وطلب KVKK',
+  };
+
   return (
     <main className="container" style={{ maxWidth: '820px', padding: '2.5rem 1.25rem', lineHeight: 1.7 }}>
-      <h1 style={{ marginBottom: '1rem' }}>Veri Silme ve KVKK Başvurusu</h1>
+      <h1 style={{ marginBottom: '1rem' }}>{h1Titles[locale] || h1Titles.tr}</h1>
 
       <p>
         6698 sayılı KVKK m.11 kapsamında verilerinize erişme, düzeltme veya silinmesini

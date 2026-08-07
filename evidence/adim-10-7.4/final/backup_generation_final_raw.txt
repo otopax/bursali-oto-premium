@@ -1,0 +1,21 @@
+﻿=== ADIM 10.7.4 — PHASE 3: REAL BACKUP GENERATION LOG ===
+Timestamp: 2026-08-07T09:48:06+03:00
+backup-db.js STDOUT/STDERR:
+Ôùç injected env (12) from .env // tip: Ôîİ multiple files { path: ['.env.local', '.env'] }
+Ôùç injected env (4) from .env.local // tip: Ôùê encrypted .env [www.dotenvx.com]
+­şùä´©Å  Yedekleme ba┼şl─▒yor ÔåÆ C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\backups\bursali_oto_2026-08-07_094806.dump
+node : pg_dump: hata: connection to server at "127.0.0.1", port 5433 failed: Connection refused (0x0000274D/10061)
+At line:5 char:8
++ $res = node scripts/backup-db.js 2>&1
++        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (pg_dump: hata: ...0000274D/10061):String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+	Is the server running on that host and accepting TCP/IP connections?
+ÔØî Yedekleme hata koduyla ├ğ─▒kt─▒: 1
+
+Local Backups Found in ./backups: 6
+Latest Dump File: bursali_oto_2026-08-07_030001.dump
+Size: 207 bytes
+Created At: 2026-08-07T03:00:02.1920271+03:00
+Dump File SHA256: 3F11EBB2FF7B8FFEE92022819B41616A4F83BB3394FA71A699310426B97A3A72

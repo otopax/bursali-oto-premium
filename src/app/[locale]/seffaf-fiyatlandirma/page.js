@@ -38,9 +38,20 @@ export default async function TransparentPricingPage({ params }) {
         <span className="badge" style={{ marginBottom: '1rem', display: 'inline-block', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)' }}>
           {locale === 'tr' ? '%100 Şeffaflık Garantisi' : '100% Transparency Guarantee'}
         </span>
-        <h1 style={{ fontSize: '3rem', color: '#f8fafc', marginBottom: '1.5rem' }}>
-          {locale === 'tr' ? 'Şeffaf Fiyatlandırma' : 'Transparent Pricing'}
-        </h1>
+        {(() => {
+          const h1Titles = {
+            tr: 'Şeffaf Fiyatlandırma',
+            en: 'Transparent Pricing',
+            ru: 'Прозрачное Ценообразование',
+            uk: 'Прозоре Ціноутворення',
+            ar: 'تسعير شفاف',
+          };
+          return (
+            <h1 style={{ fontSize: '3rem', color: '#f8fafc', marginBottom: '1.5rem' }}>
+              {h1Titles[locale] || h1Titles.tr}
+            </h1>
+          );
+        })()}
         
         <div className="answer-first-block container" style={{ backgroundColor: 'rgba(255, 215, 0, 0.05)', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid var(--accent-gold)', marginBottom: '2rem', textAlign: 'left', maxWidth: '800px', margin: '0 auto 2rem auto' }}>
           <p style={{ fontSize: '1.2rem', lineHeight: '1.6', margin: 0, color: '#f8fafc' }}>

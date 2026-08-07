@@ -1,6 +1,7 @@
-let sharpModule;
+let sharpModule = null;
 try {
-  sharpModule = require('sharp');
+  const req = eval('require');
+  sharpModule = req('sharp');
 } catch (_) {
   sharpModule = null;
 }

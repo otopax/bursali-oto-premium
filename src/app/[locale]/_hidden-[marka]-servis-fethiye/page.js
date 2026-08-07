@@ -54,6 +54,14 @@ export default async function BrandServicePage({ params }) {
     // olmadan yıldız şeması Google yapılandırılmış veri cezası riski taşır.
   };
 
+  const h1Prefix = {
+    tr: `Fethiye ${capitalizedMarka} Servisi`,
+    en: `Special Service for ${capitalizedMarka} in Fethiye`,
+    ru: `Специализированный сервис ${capitalizedMarka} в Фетхие`,
+    uk: `Спеціалізований сервіс ${capitalizedMarka} у Фетхіє`,
+    ar: `خدمة ${capitalizedMarka} المتخصصة في فتحية`
+  };
+
   return (
     <main className="min-h-screen pt-32 pb-16">
       
@@ -64,7 +72,7 @@ export default async function BrandServicePage({ params }) {
             PREMIUM {capitalizedMarka} UZMANI
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight">
-            Fethiye <span style={{ color: 'var(--accent-gold)' }}>{capitalizedMarka}</span> Servisi
+            {h1Prefix[locale] || h1Prefix.tr}
           </h1>
           <p className="text-xl text-[var(--text-muted)] max-w-3xl mx-auto leading-relaxed">
             {capitalizedMarka} aracınızın sahip olduğu üst düzey mühendisliği anlayan, fabrika standartlarında 

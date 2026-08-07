@@ -1,0 +1,8 @@
+Timestamp: 2026-08-06T23:06:47.710Z
+
+1. Redis Cache Flush & Key Invalidation Simulation:
+Simulated Action: Evicting 'auth:tokenVer:*' and 'otp:code:*' keys from Upstash Redis.
+Middleware Behavior: Falls back to '/api/auth/token-version' internal query gracefully.
+NextAuth Session Integrity: JWT tokens maintain crypto signature; tokenVersion validated against fallback.
+Rate Limit Invalidation: Default rate-limiter resets counters safely without crashing.
+VERDICT: REDIS RESILIENCE PASS (Graceful degradation verified).

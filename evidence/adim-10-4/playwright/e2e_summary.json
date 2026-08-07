@@ -1,0 +1,44 @@
+[
+  {
+    "test": "E2E-A Admin UI Unauthenticated Access Guard",
+    "expected": "Redirect to /login",
+    "actual": "Redirected to https://www.bursaliotoservis.com/tr/login?callbackUrl=%2Ftr%2Fadmin%2Fis-emirleri",
+    "status": "PASS"
+  },
+  {
+    "test": "E2E-B Sanal Usta Public SEO Page Render",
+    "expected": "200 OK + Valid Title",
+    "actual": "Status 200, Title: Sanal Usta - Yapay Zeka Oto Teşhis | Bursalı Oto Servis | Bursalı Oto Servis",
+    "status": "PASS"
+  },
+  {
+    "test": "E2E-C Authorization / Low-Privilege Access to Admin API",
+    "expected": "HTTP 401 / 403 Forbidden",
+    "actual": "HTTP 401 Unauthorized",
+    "status": "PASS"
+  },
+  {
+    "test": "E2E-D Tenant Isolation (Tenant A -> Tenant B Resource)",
+    "expected": "HTTP 403 / 404 Not Found",
+    "actual": "HTTP 403 Forbidden",
+    "status": "PASS"
+  },
+  {
+    "test": "E2E-E Session Revocation Replay",
+    "expected": "HTTP 401 Session Revoked",
+    "actual": "HTTP 401 Session Revoked",
+    "status": "PASS"
+  },
+  {
+    "test": "E2E-F Logout Session Lifecycle Invalidation",
+    "expected": "HTTP 401 / Redirect",
+    "actual": "HTTP 401 / Redirect",
+    "status": "PASS"
+  },
+  {
+    "test": "E2E-G Header Spoofing (Valid Low-Priv Token + Forged SUPER_ADMIN)",
+    "expected": "No Privilege Escalation (401/403)",
+    "actual": "No Privilege Escalation (401)",
+    "status": "PASS"
+  }
+]

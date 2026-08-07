@@ -1,0 +1,304 @@
+﻿
+> bursali-oto-web@0.1.0 build
+> node scripts/railway-build.js
+
+[build-mem] os.totalmem: 32486 MB, freemem: 8216 MB, cpus: 16
+[build-mem] cgroup: bilinmiyor  (bu de─şer builder'─▒n ger├ğek bellek duvar─▒d─▒r)
+­şÜÇ Running standard Next.js build...
+[build-mem] gelen process.env.NODE_OPTIONS = "(yok)"
+node.exe : [@sentry/nextjs] DEPRECATION WARNING: disableLogger is deprecated and will be removed in a future version. U
+se webpack.treeshake.removeDebugLogging instead.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([@sentry/nextjs...ogging instead.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[@sentry/nextjs] DEPRECATION WARNING: reactComponentAnnotation is deprecated and will be removed in a future version. U
+se webpack.reactComponentAnnotation instead.
+ ÔÜá Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\xbors\package-lock.json as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles
+ if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\package-lock.json
+   * C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\package-lock.json
+
+(node:41444) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/xbors/OneDrive/Desktop/Bursali_Oto
+_Dijital_Yonetim/Web_Sitesi/bursali-oto-web/src/lib/env-config.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to C:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Site
+si\bursali-oto-web\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+   Ôû▓ Next.js 15.5.21
+   - Environments: .env.local, .env
+   - Experiments (use with caution):
+     ┬À clientTraceMetadata
+
+   Creating an optimized production build ...
+[@sentry/nextjs] It appears you've configured a `sentry.server.config.js` file. Please ensure to put this file's conten
+t into the `register()` function of a Next.js instrumentation file instead. To ensure correct functionality of the SDK,
+ `Sentry.init` must be called inside of an instrumentation file. Learn more about setting up an instrumentation file in
+ Next.js: https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation. You can safely delete the `
+sentry.server.config.js` file afterward.
+[@sentry/nextjs] Could not find `onRequestError` hook in instrumentation file. This indicates outdated configuration of
+ the Sentry SDK. Use `Sentry.captureRequestError` to instrument the `onRequestError` hook: https://docs.sentry.io/platf
+orms/javascript/guides/nextjs/manual-setup/#errors-from-nested-react-server-components
+[@sentry/nextjs] It appears you've configured a `sentry.edge.config.js` file. Please ensure to put this file's content 
+into the `register()` function of a Next.js instrumentation file instead. To ensure correct functionality of the SDK, `
+Sentry.init` must be called inside of an instrumentation file. Learn more about setting up an instrumentation file in N
+ext.js: https://nextjs.org/docs/app/building-your-application/optimizing/instrumentation. You can safely delete the `se
+ntry.edge.config.js` file afterward.
+[@sentry/nextjs] DEPRECATION WARNING: It is recommended renaming your `sentry.client.config.js` file, or moving its con
+tent to `instrumentation-client.ts`. When using Turbopack `sentry.client.config.js` will no longer work. Read more abou
+t the `instrumentation-client.ts` file: https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-clie
+nt
+ ÔÜá Compiled with warnings in 99s
+
+./node_modules/@upstash/redis/nodejs.mjs
+A Node.js API is used (process.version at line: 240) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/@upstash/redis/nodejs.mjs
+
+./node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (CompressionStream at line: 10) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/jose/dist/webapi/lib/deflate.js
+./node_modules/jose/dist/webapi/jwe/flattened/encrypt.js
+./node_modules/jose/dist/webapi/index.js
+./node_modules/@auth/core/jwt.js
+./node_modules/next-auth/jwt.js
+
+./node_modules/jose/dist/webapi/lib/deflate.js
+A Node.js API is used (DecompressionStream at line: 26) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/jose/dist/webapi/lib/deflate.js
+./node_modules/jose/dist/webapi/jwe/flattened/encrypt.js
+./node_modules/jose/dist/webapi/index.js
+./node_modules/@auth/core/jwt.js
+./node_modules/next-auth/jwt.js
+
+   Linting and checking validity of types ...
+ Ô¿» ESLint: Failed to load parser '@typescript-eslint/parser' declared in ' ┬╗ eslint-config-next/core-web-vitals ┬╗ C
+:\Users\xbors\OneDrive\Desktop\Bursali_Oto_Dijital_Yonetim\Web_Sitesi\bursali-oto-web\node_modules\eslint-config-next\i
+ndex.js#overrides[0]': Cannot read properties of undefined (reading 'Cjs')
+   Collecting page data ...
+[RedisFactory] Running in build phase. Using Memory Adapter.
+   Generating static pages (0/162) ...
+   Generating static pages (40/162) 
+   Generating static pages (80/162) 
+   Generating static pages (121/162) 
+ Ô£ô Generating static pages (162/162)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                                             Size  First Load JS  Revalidate  Expire
+Ôöî Ôùï /_not-found                                                      1.16 kB         228 kB
+Ôö£ ÔùÅ /[locale]                                                        7.87 kB         254 kB          1d      1y
+Ôö£   Ôö£ /tr                                                                                            1d      1y
+Ôö£   Ôö£ /en                                                                                            1d      1y
+Ôö£   Ôö£ /ru                                                                                            1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/admin/is-emirleri                                      3.36 kB         235 kB          1d      1y
+Ôö£   Ôö£ /tr/admin/is-emirleri                                                                          1d      1y
+Ôö£   Ôö£ /en/admin/is-emirleri                                                                          1d      1y
+Ôö£   Ôö£ /ru/admin/is-emirleri                                                                          1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ãÆ /[locale]/admin/is-emirleri/[id]                                 3.48 kB         232 kB
+Ôö£ ÔùÅ /[locale]/admin/leads                                            2.09 kB         229 kB          1d      1y
+Ôö£   Ôö£ /tr/admin/leads                                                                                1d      1y
+Ôö£   Ôö£ /en/admin/leads                                                                                1d      1y
+Ôö£   Ôö£ /ru/admin/leads                                                                                1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/aracim                                                   461 B         227 kB
+Ôö£   Ôö£ /tr/aracim
+Ôö£   Ôö£ /en/aracim
+Ôö£   Ôö£ /ru/aracim
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/ariza-cozumleri                                          807 B         241 kB
+Ôö£   Ôö£ /tr/ariza-cozumleri
+Ôö£   Ôö£ /en/ariza-cozumleri
+Ôö£   Ôö£ /ru/ariza-cozumleri
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/ariza-cozumleri/[marka]                                  806 B         241 kB
+Ôö£ ÔùÅ /[locale]/ariza-cozumleri/[marka]/[model]                          807 B         241 kB
+Ôö£ ÔùÅ /[locale]/ariza-cozumleri/[marka]/[model]/[kod]                    325 B         246 kB
+Ôö£ ãÆ /[locale]/ariza-cozumleri/[marka]/[model]/[kod]/opengraph-image    461 B         227 kB
+Ôö£ ÔùÅ /[locale]/ariza-kodlari/[code]                                     374 B         229 kB
+Ôö£ ÔùÅ /[locale]/bakim-merkezi                                            883 B         229 kB          1d      1y
+Ôö£   Ôö£ /tr/bakim-merkezi                                                                              1d      1y
+Ôö£   Ôö£ /en/bakim-merkezi                                                                              1d      1y
+Ôö£   Ôö£ /ru/bakim-merkezi                                                                              1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ãÆ /[locale]/bakim-merkezi/[brand]/[mileage]                          374 B         229 kB
+Ôö£ ÔùÅ /[locale]/blog                                                     807 B         241 kB          1d      1y
+Ôö£   Ôö£ /tr/blog                                                                                       1d      1y
+Ôö£   Ôö£ /en/blog                                                                                       1d      1y
+Ôö£   Ôö£ /ru/blog                                                                                       1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/blog/[slug]                                              460 B         227 kB
+Ôö£ ãÆ /[locale]/blog/[slug]/opengraph-image                              462 B         227 kB
+Ôö£ ãÆ /[locale]/bolge/[slug]                                             358 B         229 kB
+Ôö£ ÔùÅ /[locale]/degerlendir                                            2.03 kB         229 kB          1d      1y
+Ôö£   Ôö£ /tr/degerlendir                                                                                1d      1y
+Ôö£   Ôö£ /en/degerlendir                                                                                1d      1y
+Ôö£   Ôö£ /ru/degerlendir                                                                                1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/english-speaking-mechanic                                461 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/english-speaking-mechanic                                                                  1d      1y
+Ôö£   Ôö£ /en/english-speaking-mechanic                                                                  1d      1y
+Ôö£   Ôö£ /ru/english-speaking-mechanic                                                                  1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/fethiye-7-24-oto-cekici                                  461 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/fethiye-7-24-oto-cekici                                                                    1d      1y
+Ôö£   Ôö£ /en/fethiye-7-24-oto-cekici                                                                    1d      1y
+Ôö£   Ôö£ /ru/fethiye-7-24-oto-cekici                                                                    1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/fethiye-bmw-servisi                                      462 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/fethiye-bmw-servisi                                                                        1d      1y
+Ôö£   Ôö£ /en/fethiye-bmw-servisi                                                                        1d      1y
+Ôö£   Ôö£ /ru/fethiye-bmw-servisi                                                                        1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/fethiye-mercedes-servisi                                 461 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/fethiye-mercedes-servisi                                                                   1d      1y
+Ôö£   Ôö£ /en/fethiye-mercedes-servisi                                                                   1d      1y
+Ôö£   Ôö£ /ru/fethiye-mercedes-servisi                                                                   1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/gizlilik                                                 461 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/gizlilik                                                                                   1d      1y
+Ôö£   Ôö£ /en/gizlilik                                                                                   1d      1y
+Ôö£   Ôö£ /ru/gizlilik                                                                                   1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/gocek-cekici                                             461 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/gocek-cekici                                                                               1d      1y
+Ôö£   Ôö£ /en/gocek-cekici                                                                               1d      1y
+Ôö£   Ôö£ /ru/gocek-cekici                                                                               1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/hakkimizda                                               374 B         229 kB          1d      1y
+Ôö£   Ôö£ /tr/hakkimizda                                                                                 1d      1y
+Ôö£   Ôö£ /en/hakkimizda                                                                                 1d      1y
+Ôö£   Ôö£ /ru/hakkimizda                                                                                 1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ãÆ /[locale]/hizmetler/[slug]                                         777 B         241 kB
+Ôö£ ÔùÅ /[locale]/kalkan-kas-yol-yardim                                    460 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/kalkan-kas-yol-yardim                                                                      1d      1y
+Ôö£   Ôö£ /en/kalkan-kas-yol-yardim                                                                      1d      1y
+Ôö£   Ôö£ /ru/kalkan-kas-yol-yardim                                                                      1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/kampanya/ucretsiz-checkup                              2.48 kB         231 kB          1d      1y
+Ôö£   Ôö£ /tr/kampanya/ucretsiz-checkup                                                                  1d      1y
+Ôö£   Ôö£ /en/kampanya/ucretsiz-checkup                                                                  1d      1y
+Ôö£   Ôö£ /ru/kampanya/ucretsiz-checkup                                                                  1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/kutuphane                                                807 B         241 kB          1d      1y
+Ôö£   Ôö£ /tr/kutuphane                                                                                  1d      1y
+Ôö£   Ôö£ /en/kutuphane                                                                                  1d      1y
+Ôö£   Ôö£ /ru/kutuphane                                                                                  1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/kutuphane/[marka]                                        807 B         241 kB
+Ôö£ ÔùÅ /[locale]/kutuphane/[marka]/[model]                                807 B         241 kB
+Ôö£ ÔùÅ /[locale]/kutuphane/[marka]/[model]/arizalar                       807 B         241 kB
+Ôö£ ÔùÅ /[locale]/kutuphane/[marka]/[model]/arizalar/[kod]                 324 B         246 kB
+Ôö£ ÔùÅ /[locale]/kvkk                                                     460 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/kvkk                                                                                       1d      1y
+Ôö£   Ôö£ /en/kvkk                                                                                       1d      1y
+Ôö£   Ôö£ /ru/kvkk                                                                                       1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/login                                                  6.24 kB         236 kB          1d      1y
+Ôö£   Ôö£ /tr/login                                                                                      1d      1y
+Ôö£   Ôö£ /en/login                                                                                      1d      1y
+Ôö£   Ôö£ /ru/login                                                                                      1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ãÆ /[locale]/marka/[brand]                                            375 B         229 kB
+Ôö£ ãÆ /[locale]/markalar/[slug]                                          778 B         241 kB
+Ôö£ ãÆ /[locale]/motor/[engineCode]                                       375 B         229 kB
+Ôö£ ÔùÅ /[locale]/oludeniz-yol-yardim                                      461 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/oludeniz-yol-yardim                                                                        1d      1y
+Ôö£   Ôö£ /en/oludeniz-yol-yardim                                                                        1d      1y
+Ôö£   Ôö£ /ru/oludeniz-yol-yardim                                                                        1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/otomatik-sanziman-tamiri                                 460 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/otomatik-sanziman-tamiri                                                                   1d      1y
+Ôö£   Ôö£ /en/otomatik-sanziman-tamiri                                                                   1d      1y
+Ôö£   Ôö£ /ru/otomatik-sanziman-tamiri                                                                   1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/porsche-mercedes-ozel-servis                             461 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/porsche-mercedes-ozel-servis                                                               1d      1y
+Ôö£   Ôö£ /en/porsche-mercedes-ozel-servis                                                               1d      1y
+Ôö£   Ôö£ /ru/porsche-mercedes-ozel-servis                                                               1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/sanal-usta                                              194 kB         426 kB          1d      1y
+Ôö£   Ôö£ /tr/sanal-usta                                                                                 1d      1y
+Ôö£   Ôö£ /en/sanal-usta                                                                                 1d      1y
+Ôö£   Ôö£ /ru/sanal-usta                                                                                 1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/seffaf-fiyatlandirma                                     360 B         229 kB          1d      1y
+Ôö£   Ôö£ /tr/seffaf-fiyatlandirma                                                                       1d      1y
+Ôö£   Ôö£ /en/seffaf-fiyatlandirma                                                                       1d      1y
+Ôö£   Ôö£ /ru/seffaf-fiyatlandirma                                                                       1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/veri-silme-talebi                                        460 B         227 kB          1d      1y
+Ôö£   Ôö£ /tr/veri-silme-talebi                                                                          1d      1y
+Ôö£   Ôö£ /en/veri-silme-talebi                                                                          1d      1y
+Ôö£   Ôö£ /ru/veri-silme-talebi                                                                          1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/vip-filo-gece-bakimi                                   3.04 kB         230 kB          1d      1y
+Ôö£   Ôö£ /tr/vip-filo-gece-bakimi                                                                       1d      1y
+Ôö£   Ôö£ /en/vip-filo-gece-bakimi                                                                       1d      1y
+Ôö£   Ôö£ /ru/vip-filo-gece-bakimi                                                                       1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ÔùÅ /[locale]/vip-garaj                                               3.2 kB         242 kB          1d      1y
+Ôö£   Ôö£ /tr/vip-garaj                                                                                  1d      1y
+Ôö£   Ôö£ /en/vip-garaj                                                                                  1d      1y
+Ôö£   Ôö£ /ru/vip-garaj                                                                                  1d      1y
+Ôö£   Ôöö [+2 more paths]
+Ôö£ ãÆ /api/admin/chaos                                                   461 B         227 kB
+Ôö£ ãÆ /api/admin/check-embeddings                                        460 B         227 kB
+Ôö£ ãÆ /api/admin/test-rag                                                461 B         227 kB
+Ôö£ ãÆ /api/admin/test-worker                                             460 B         227 kB
+Ôö£ ãÆ /api/ai/ask                                                        460 B         227 kB
+Ôö£ ãÆ /api/ai/google-post                                                459 B         227 kB
+Ôö£ ãÆ /api/auth/[...nextauth]                                            461 B         227 kB
+Ôö£ ãÆ /api/auth/token-version                                            461 B         227 kB
+Ôö£ ãÆ /api/chat                                                          460 B         227 kB
+Ôö£ ãÆ /api/erp/workorders                                                461 B         227 kB
+Ôö£ ãÆ /api/erp/workorders/[id]                                           461 B         227 kB
+Ôö£ ãÆ /api/erp/workorders/[id]/items                                     461 B         227 kB
+Ôö£ ãÆ /api/feedback                                                      461 B         227 kB
+Ôö£ ãÆ /api/health                                                        461 B         227 kB
+Ôö£ ãÆ /api/health/live                                                   462 B         227 kB
+Ôö£ ãÆ /api/health/ready                                                  462 B         227 kB
+Ôö£ ãÆ /api/leads                                                         460 B         227 kB
+Ôö£ ãÆ /api/search                                                        460 B         227 kB
+Ôö£ ãÆ /api/test-audit                                                    461 B         227 kB
+Ôö£ ãÆ /api/test-backup                                                   461 B         227 kB
+Ôö£ ãÆ /api/v1/chat                                                       461 B         227 kB
+Ôö£ ãÆ /api/v1/health                                                     461 B         227 kB
+Ôö£ ãÆ /api/v1/maintenance                                                460 B         227 kB
+Ôö£ ãÆ /api/v1/vin                                                        461 B         227 kB
+Ôö£ ãÆ /api/vehicle-tree                                                  462 B         227 kB
+Ôö£ ãÆ /api/vin-decode                                                    461 B         227 kB
+Ôö£ ãÆ /api/vip/appointment                                               460 B         227 kB
+Ôö£ ãÆ /api/vision/analyze                                                461 B         227 kB
+Ôö£ Ôùï /robots.txt                                                        461 B         227 kB
+Ôöö Ôùï /sitemap.xml                                                       460 B         227 kB          1d      1y
++ First Load JS shared by all                                         227 kB
+  Ôö£ chunks/4a7b0c69-a1e6d468960ad75f.js                                38 kB
+  Ôö£ chunks/4bd1b696-1f32c99738d0efcf.js                              54.4 kB
+  Ôö£ chunks/6393-b7cb35f4c6ce5380.js                                   130 kB
+  Ôöö other shared chunks (total)                                      4.19 kB
+
+
+ãÆ Middleware                                                          120 kB
+
+Ôùï  (Static)   prerendered as static content
+ÔùÅ  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ãÆ  (Dynamic)  server-rendered on demand
+

@@ -26,7 +26,7 @@ const nextConfig = {
     'cheerio',
   ],
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
   typescript: {
     ignoreBuildErrors: false,

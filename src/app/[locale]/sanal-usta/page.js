@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from 'react';
 import { generateDiagnosticPDF } from '@/lib/pdfGenerator';
 import { trackEvent, AnalyticsEvent } from '@/lib/analytics';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 
 // Marka → yaygın modeller (otomatik öneri / datalist için)
 const BRAND_MODELS = {
@@ -32,6 +33,17 @@ const BRAND_MODELS = {
 const CAR_BRANDS = Object.keys(BRAND_MODELS);
 
 export default function SanalUstaPage() {
+  const params = useParams();
+  const locale = params?.locale || 'tr';
+
+  const h1Titles = {
+    tr: 'Sanal Usta',
+    en: 'Virtual Mechanic',
+    ru: 'Виртуальный Мастер',
+    uk: 'Віртуальний Майстер',
+    ar: 'الميكانيكي الافتراضي',
+  };
+
   const [isListening, setIsListening] = useState(false);
   const [vehicleContext, setVehicleContext] = useState({
     isRegistered: false,
@@ -247,8 +259,8 @@ export default function SanalUstaPage() {
         borderBottom: '10px solid #444',
         boxShadow: 'inset 0 -10px 20px rgba(0,0,0,0.8), 0 20px 30px rgba(0,0,0,0.9)'
       }}>
-        <div style={{ 
-          padding: '2rem 4rem', 
+        <div style={{
+          padding: '2rem 4rem',
           textAlign: 'center'
         }}>
           <h2 style={{ color: 'var(--accent-gold)', letterSpacing: '6px', margin: 0, fontSize: '3.5rem', textShadow: '0 0 15px rgba(212, 175, 55, 0.6)' }}>BURSALI OTO SERVİS</h2>
@@ -257,7 +269,7 @@ export default function SanalUstaPage() {
       </div>
 
       <main className="container mx-auto px-4 pt-44 md:pt-32 pb-4 md:pb-16 min-h-[100dvh] flex flex-col relative">
-        
+
         {/* Onboarding Modal Overlay */}
         {!vehicleContext.isRegistered && (
           <div style={{
@@ -276,7 +288,7 @@ export default function SanalUstaPage() {
               <p style={{ color: 'var(--text-muted)', textAlign: 'center', marginBottom: '2rem', fontSize: '0.95rem' }}>
                 Sanal Usta'nın doğrudan sizin aracınıza (fabrika verilerine) özel nokta atışı teşhis yapabilmesi için lütfen bilgileri girin.
               </p>
-              
+
               <form onSubmit={(e) => {
                 e.preventDefault();
                 setVehicleContext({
@@ -286,13 +298,13 @@ export default function SanalUstaPage() {
                   year: formYear,
                   chassis: formChassis
                 });
-                trackEvent('AI_DISCLAIMER_ACCEPTED', { 
-                  guestId, 
+                trackEvent('AI_DISCLAIMER_ACCEPTED', {
+                  guestId,
                   version: 'V7.0',
                   timestamp: new Date().toISOString()
                 });
               }} style={{ display: 'flex', flexDirection: 'column', gap: '1.2rem' }}>
-                
+
                 <div>
                   <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '0.4rem' }}>
                     <input value={formChassis} onChange={e => setFormChassis(e.target.value)} name="chassis" placeholder="Şasi Numarası (VIN) - 17 Hane" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white flex-1 focus:border-[var(--accent-gold)] outline-none transition-colors uppercase" maxLength="17" />
@@ -313,16 +325,16 @@ export default function SanalUstaPage() {
                     {modelOptions.map(m => <option key={m} value={m} />)}
                   </datalist>
                 </div>
-                
+
                 <input required value={formYear} onChange={e => setFormYear(e.target.value)} type="number" min="1990" max="2025" name="year" placeholder="Üretim Yılı (Örn: 2018)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none transition-colors" />
-                
+
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '0.8rem', marginTop: '0.5rem', background: 'rgba(255,255,255,0.02)', padding: '1rem', borderRadius: '8px', border: '1px solid rgba(212, 175, 55, 0.2)' }}>
                   <input type="checkbox" id="disclaimer" required checked={acceptedDisclaimer} onChange={e => setAcceptedDisclaimer(e.target.checked)} style={{ marginTop: '4px', accentColor: 'var(--accent-gold)', width: '18px', height: '18px' }} />
                   <label htmlFor="disclaimer" style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5' }}>
                     Yapay zeka (Sanal Usta) tarafından verilen arıza teşhislerinin <strong>tavsiye niteliğinde olduğunu</strong>, kesin teşhisin servisimizde fiziki kontrol ile konulabileceğini ve olası hatalı yönlendirmelerden Bursalı Oto'nun sorumlu olmadığını kabul ediyorum.
                   </label>
                 </div>
-                
+
                 <button type="submit" disabled={!acceptedDisclaimer} className="btn w-full mt-2 py-3 rounded-lg" style={{ fontSize: '1.1rem', letterSpacing: '1px', background: acceptedDisclaimer ? 'var(--accent-gold)' : '#333', color: acceptedDisclaimer ? '#000' : '#888', cursor: acceptedDisclaimer ? 'pointer' : 'not-allowed', transition: 'all 0.3s' }}>
                   Sanal Atölyeye Bağlan
                 </button>
@@ -350,16 +362,16 @@ export default function SanalUstaPage() {
                 Misafir kullanıcı olarak yapay zeka ile soru sorma limitinize ulaştınız. <br/><br/>
                 Arızanızı <b>gerçek ustalarımıza</b> iletmek ve randevu almak için telefon numaranızı bırakın veya hemen bizi arayın.
               </p>
-              
+
               <form onSubmit={async (e) => {
                 e.preventDefault();
                 const formData = new FormData(e.target);
                 const phone = formData.get('phone');
-                
+
                 // Son mesajlardan müşterinin sorununu çıkart (symptoms)
                 const userMessages = messages.filter(m => m.role === 'user');
                 const lastIssue = userMessages.length > 0 ? userMessages[userMessages.length - 1].content : '';
-                
+
                 try {
                   const res = await fetch('/api/leads', {
                     method: 'POST',
@@ -381,9 +393,9 @@ export default function SanalUstaPage() {
                   alert("Bağlantı hatası, lütfen WhatsApp üzerinden ulaşın.");
                 }
               }} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                
+
                 <input required type="tel" name="phone" placeholder="Telefon Numaranız (05XX XXX XX XX)" className="bg-white/5 border border-white/10 p-3 rounded-lg text-white w-full focus:border-[var(--accent-gold)] outline-none" />
-                
+
                 <button type="submit" className="btn btn-gold w-full mt-2 py-3 rounded-lg flex items-center justify-center gap-2" style={{ fontSize: '1.1rem', fontWeight: 'bold' }}>
                   <span>📞</span> Ustaya İlet
                 </button>
@@ -397,33 +409,33 @@ export default function SanalUstaPage() {
         )}
 
         <div className="text-center mb-6 md:mb-8" style={{ filter: !vehicleContext.isRegistered ? 'blur(4px)' : 'none', transition: 'filter 0.5s ease' }}>
-          <h1 className="text-3xl md:text-5xl font-bold mb-2">Sanal Usta</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-2">{h1Titles[locale] || h1Titles.tr}</h1>
           <p className="text-lg md:text-xl text-[var(--text-muted)]">Bursalı Oto'nun 40 yıllık mekanik hafızasıyla donatılmış Yapay Zeka ustası.</p>
         </div>
 
         {/* Side by Side Layout */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-8 max-w-7xl mx-auto w-full items-stretch" style={{ filter: !vehicleContext.isRegistered ? 'blur(8px)' : 'none', pointerEvents: !vehicleContext.isRegistered ? 'none' : 'auto', transition: 'filter 0.5s ease' }}>
-          
+
           {/* Avatar Section (Left) */}
           <div className="glass-panel" style={{ flex: '1', minWidth: '300px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '2rem', border: '1px solid rgba(212, 175, 55, 0.3)' }}>
             <div style={{ textAlign: 'center', marginBottom: '1.5rem', width: '100%' }}>
-               <h2 style={{ 
-                 color: 'var(--accent-gold)', 
-                 margin: 0, 
-                 fontSize: '1.8rem', 
+               <h2 style={{
+                 color: 'var(--accent-gold)',
+                 margin: 0,
+                 fontSize: '1.8rem',
                  letterSpacing: '3px',
                  textShadow: '0 0 10px rgba(212, 175, 55, 0.8), 0 0 20px rgba(212, 175, 55, 0.5), 0 0 30px rgba(212, 175, 55, 0.3)',
                  animation: 'pulseGoldText 2.5s infinite'
                }}>BURSALI OTO SERVİS</h2>
             </div>
             <div style={{ position: 'relative', width: '100%', maxWidth: '260px', aspectRatio: '1/1', borderRadius: '16px', border: '2px solid var(--accent-gold)', boxShadow: '0 10px 30px rgba(0,0,0,0.8)', overflow: 'hidden' }}>
-              <Image 
-                src="/avatar_hyper.png" 
-                alt="Sanal Usta Avatar" 
+              <Image
+                src="/avatar_hyper.png"
+                alt="Sanal Usta Avatar"
                 fill
                 priority={true}
                 sizes="(max-width: 768px) 100vw, 260px"
-                style={{ objectFit: 'cover' }} 
+                style={{ objectFit: 'cover' }}
               />
             </div>
             <h3 style={{ color: 'var(--text-light)', marginTop: '1.5rem', fontSize: '1.5rem' }}>Sistem: Çevrimiçi</h3>
@@ -435,7 +447,7 @@ export default function SanalUstaPage() {
 
           {/* Chat Section (Right) */}
           <div className="glass-panel hover-gold-border flex-2 min-w-full md:min-w-[350px] flex flex-col p-0 overflow-hidden h-[72dvh] md:h-[82vh] w-full">
-            
+
             {/* Chat Header */}
             <div style={{ background: 'rgba(212, 175, 55, 0.1)', borderBottom: '1px solid rgba(255,255,255,0.05)', padding: '1.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <div style={{ width: '40px', height: '40px', borderRadius: '50%', overflow: 'hidden', border: '2px solid var(--accent-gold)', position: 'relative' }}>
@@ -449,8 +461,8 @@ export default function SanalUstaPage() {
             {/* Chat Messages */}
             <div style={{ flex: 1, overflowY: 'auto', padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
               {messages.map(m => (
-                <div key={m.id} style={{ 
-                  alignSelf: m.role === 'user' ? 'flex-end' : 'flex-start', 
+                <div key={m.id} style={{
+                  alignSelf: m.role === 'user' ? 'flex-end' : 'flex-start',
                   maxWidth: '85%'
                 }}>
                   <div style={{
@@ -462,12 +474,12 @@ export default function SanalUstaPage() {
                     borderBottomLeftRadius: m.role === 'assistant' ? '4px' : '16px',
                   }}>
                     {m.content ? (
-                       <div 
+                       <div
                          style={{ fontSize: '1.1rem', margin: 0, color: 'var(--text-light)', whiteSpace: 'pre-wrap', lineHeight: '1.6' }}
                          dangerouslySetInnerHTML={{ __html: m.content }}
                        />
                     ) : null}
-                    
+
                     {m.role === 'assistant' && m.id !== 'welcome-msg' && (
                       <div style={{ marginTop: '1.5rem', paddingTop: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
                         <p style={{ fontSize: '0.85rem', color: '#94a3b8', marginBottom: '0.8rem', fontWeight: 'bold' }}>HIZLI İŞLEM MENÜSÜ</p>
@@ -536,7 +548,7 @@ export default function SanalUstaPage() {
                   className="flex-1 bg-white/5 border border-white/10 p-3 md:p-4 rounded-xl text-white text-base md:text-lg outline-none transition-colors focus:border-[var(--accent-gold)]"
                   style={{ paddingRight: '50px' }}
                 />
-                
+
                 {/* Voice Record Button */}
                 <button
                   type="button"
@@ -573,7 +585,7 @@ export default function SanalUstaPage() {
                     }
                   }}
                   className="absolute right-[110px] md:right-[130px] top-1/2 -translate-y-1/2 p-2 rounded-full transition-colors"
-                  style={{ 
+                  style={{
                     color: isListening ? '#ef4444' : 'var(--accent-gold)',
                     animation: isListening ? 'pulseRed 1.5s infinite' : 'none'
                   }}
@@ -586,8 +598,8 @@ export default function SanalUstaPage() {
                   </svg>
                 </button>
 
-                <button 
-                  type="submit" 
+                <button
+                  type="submit"
                   disabled={isLoading || !(input || '').trim()}
                   className="btn btn-gold py-3 px-6 md:px-8 text-base md:text-lg w-full md:w-auto"
                   style={{ opacity: (isLoading || !(input || '').trim()) ? 0.5 : 1 }}
