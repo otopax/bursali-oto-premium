@@ -7,8 +7,8 @@ export const runtime = 'nodejs';
 
 export async function GET() {
   try {
-    const totalResult = await prisma.$queryRawUnsafe(`SELECT count(id) as c FROM "FaultCode"`);
-    const embeddedResult = await prisma.$queryRawUnsafe(`SELECT count(id) as c FROM "FaultCode" WHERE embedding IS NOT NULL`);
+    const totalResult = await prisma.$queryRaw`SELECT count(id) as c FROM "FaultCode"`;
+    const embeddedResult = await prisma.$queryRaw`SELECT count(id) as c FROM "FaultCode" WHERE embedding IS NOT NULL`;
     
     const totalCount = Number(totalResult?.[0]?.c || 0);
     const embeddedCount = Number(embeddedResult?.[0]?.c || 0);

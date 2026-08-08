@@ -51,7 +51,7 @@ export async function GET(req, { params }) {
 
     const { id } = await params;
 
-    const order = await prisma.workOrder.findUnique({
+    const order = await prisma.workOrder.findFirst({
       where: { 
         id: id,
         tenantId: session.user.tenantId

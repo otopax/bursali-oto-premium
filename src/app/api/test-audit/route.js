@@ -1,9 +1,15 @@
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { logAudit } from '@/lib/audit';
+import { auth } from '@/auth';
 
 export async function GET() {
   try {
+    const session = await auth();
+    if (!session || !session.user || session.user.role !== 'SUPER_ADMIN') {
+      return NextResponse.json({ error: 'Unauthorized.' }, { status: 401 });
+    }
+
     const testAction = `API_TEST_ACTION_${Date.now()}`;
     
     // Log directly
