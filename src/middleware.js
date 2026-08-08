@@ -282,9 +282,7 @@ export async function middleware(request) {
     response.headers.set('Content-Security-Policy', csp);
     response.headers.set('x-nonce', nonce);
 
-    if (pathname.includes('/ariza-cozumleri')) {
-      response.headers.set('Cache-Control', 'no-store, no-cache, must-revalidate, max-age=0');
-    } else if (!pathname.startsWith('/api') && !pathname.startsWith('/login') && !pathname.startsWith('/admin')) {
+    if (!pathname.startsWith('/api') && !pathname.startsWith('/login') && !pathname.startsWith('/admin')) {
       response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=86400, stale-while-revalidate=43200');
     }
   }
