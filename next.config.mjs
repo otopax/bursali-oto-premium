@@ -159,6 +159,7 @@ const nextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
         ],
       },
+      ...ssgRouteHeaderRules,
       {
         source: '/api/:path*',
         headers: [noStoreHeader],
@@ -171,7 +172,6 @@ const nextConfig = {
         source: '/:locale(tr|en|ru|uk|ar)/login',
         headers: [noStoreHeader],
       },
-      ...ssgRouteHeaderRules,
       {
         source: '/:path*',
         headers: [
