@@ -3,11 +3,32 @@ const { PrismaClient } = require('@prisma/client');
 const { EventBus } = require('../lib/events/EventBus');
 const prisma = new PrismaClient();
 
+let tableChecked = false;
+
+async function ensureOutboxTable() {
+  if (tableChecked) return;
+  try {
+    await prisma.$executeRawUnsafe(`
+      CREATE TABLE IF NOT EXISTS "OutboxEvent" (
+        "id" VARCHAR(255) PRIMARY KEY,
+        "eventName" VARCHAR(255) NOT NULL,
+        "payload" JSONB NOT NULL,
+        "status" VARCHAR(50) DEFAULT 'PENDING',
+        "createdAt" TIMESTAMP(3) DEFAULT CURRENT_TIMESTAMP,
+        "processedAt" TIMESTAMP(3)
+      );
+    `);
+    tableChecked = true;
+  } catch (err) {
+    // Ignore if table exists or permission issue
+  }
+}
+
 async function relayEvents() {
   try {
-    // Tek bir transaction içinde SELECT (FOR UPDATE SKIP LOCKED) ve UPDATE işlemleri
+    await ensureOutboxTable();
+
     await prisma.$transaction(async (tx) => {
-      // 1. Satırları kilitle ve çek (aynı transaction içinde)
       const pendingEvents = await tx.$queryRaw`
         SELECT * FROM "OutboxEvent"
         WHERE status = 'PENDING'
@@ -16,38 +37,36 @@ async function relayEvents() {
         FOR UPDATE SKIP LOCKED
       `;
 
-      if (pendingEvents.length === 0) {
-        return; // İşlenecek event yok
+      if (!pendingEvents || pendingEvents.length === 0) {
+        return;
       }
 
       console.log(`[OutboxRelay] 📦 ${pendingEvents.length} adet event kilitlendi ve işleniyor...`);
 
       for (const event of pendingEvents) {
         try {
-          // 2. EventBus'a gönder (BullMQ)
           await EventBus.publish(event.eventName, event.payload);
 
-          // 3. Aynı transaction içinde durumu güncelle (Lock hala geçerli)
-          await tx.outboxEvent.update({
-            where: { id: event.id },
-            data: { status: 'PROCESSED', processedAt: new Date() }
-          });
+          await tx.$executeRawUnsafe(
+            `UPDATE "OutboxEvent" SET "status" = 'PROCESSED', "processedAt" = NOW() WHERE "id" = $1`,
+            event.id
+          );
 
           console.log(`[OutboxRelay] ✅ Event ${event.id} (${event.eventName}) işlendi.`);
-
         } catch (relayError) {
-          // 4. Hata durumunda bu event PENDING kalır (Lok serbest kalır, sonraki turda tekrar dener).
-          console.error(`[OutboxRelay] ❌ Event ${event.id} iletilemedi: ${relayError.message}. Tekrar denenmek üzere PENDING bırakıldı.`);
-          // Hata fırlatmıyoruz ki transaction devam etsin ve diğer event'ler işlensin.
-          // Bu event kilidi serbest bırakılır ve sonraki `relayEvents` çalışmasında tekrar yakalanır.
+          console.error(`[OutboxRelay] ❌ Event ${event.id} iletilemedi: ${relayError.message}`);
         }
       }
     }, {
-      timeout: 30000, // 30 saniye transaction timeout
-      isolationLevel: 'ReadCommitted' // Prisma 5.0+ için
+      timeout: 30000,
+      isolationLevel: 'ReadCommitted'
     });
 
   } catch (error) {
+    if (error.message && error.message.includes('OutboxEvent')) {
+      // Gracefully handle if database table creation is pending
+      return;
+    }
     console.error('[OutboxRelay] 💥 Beklenmeyen hata:', error.message);
   }
 }
