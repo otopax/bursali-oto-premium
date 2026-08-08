@@ -97,8 +97,42 @@ const nextConfig = {
     ];
   },
   async headers() {
-    // Kurumsal güvenlik başlıkları (Enterprise Security Headers)
+    // Enterprise Security & Scoped Caching Headers Matrix (ADIM 11.0)
+    const publicSsgCacheHeader = {
+      key: 'Cache-Control',
+      value: 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800',
+    };
 
+    const noStoreHeader = {
+      key: 'Cache-Control',
+      value: 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
+    };
+
+    const publicSsgRoutes = [
+      '/:locale(tr|en|ru|uk|ar)',
+      '/:locale(tr|en|ru|uk|ar)/sanal-usta',
+      '/:locale(tr|en|ru|uk|ar)/hakkimizda',
+      '/:locale(tr|en|ru|uk|ar)/otomatik-sanziman-tamiri',
+      '/:locale(tr|en|ru|uk|ar)/porsche-mercedes-ozel-servis',
+      '/:locale(tr|en|ru|uk|ar)/seffaf-fiyatlandirma',
+      '/:locale(tr|en|ru|uk|ar)/veri-silme-talebi',
+      '/:locale(tr|en|ru|uk|ar)/vip-filo-gece-bakimi',
+      '/:locale(tr|en|ru|uk|ar)/vip-garaj',
+      '/:locale(tr|en|ru|uk|ar)/gocek-cekici',
+      '/:locale(tr|en|ru|uk|ar)/kalkan-kas-yol-yardim',
+      '/:locale(tr|en|ru|uk|ar)/oludeniz-yol-yardim',
+      '/:locale(tr|en|ru|uk|ar)/kampanya/ucretsiz-checkup',
+      '/:locale(tr|en|ru|uk|ar)/blog',
+      '/:locale(tr|en|ru|uk|ar)/kutuphane',
+      '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri/:path*',
+      '/:locale(tr|en|ru|uk|ar)/ariza-kodlari/:path*',
+      '/:locale(tr|en|ru|uk|ar)/bakim-merkezi/:path*',
+    ];
+
+    const ssgRouteHeaderRules = publicSsgRoutes.map(route => ({
+      source: route,
+      headers: [publicSsgCacheHeader],
+    }));
 
     return [
       {
@@ -108,11 +142,36 @@ const nextConfig = {
         ],
       },
       {
+        source: '/_next/image/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400' },
+        ],
+      },
+      {
         source: '/images/:path*',
         headers: [
           { key: 'Cache-Control', value: 'public, max-age=2592000, s-maxage=2592000, stale-while-revalidate=86400' },
         ],
       },
+      {
+        source: '/fonts/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=31536000, s-maxage=31536000, immutable' },
+        ],
+      },
+      {
+        source: '/api/:path*',
+        headers: [noStoreHeader],
+      },
+      {
+        source: '/admin/:path*',
+        headers: [noStoreHeader],
+      },
+      {
+        source: '/:locale(tr|en|ru|uk|ar)/login',
+        headers: [noStoreHeader],
+      },
+      ...ssgRouteHeaderRules,
       {
         source: '/:path*',
         headers: [
