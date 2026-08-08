@@ -189,6 +189,96 @@ model FaultCode {
   @@index([vehicleId])
 }
 
+// ----- GATE 1: VAG DTC KNOWLEDGE GRAPH SCHEMAS -----
+
+model VagDtcCode {
+  id              String                 @id @default(uuid())
+  code            String                 @unique // e.g. "P0300"
+  vagCode         String?                // e.g. "16684"
+  hexCode         String?                // e.g. "000768"
+  titleTr         String                 // e.g. "Rastgele / Çoklu Silindir Ateşleme Kaçırma Arızası"
+  titleEn         String?                // e.g. "Random/Multiple Cylinder Misfire Detected"
+  system          String                 // e.g. "Motor / Ateşleme"
+  subsystem       String?                // e.g. "Silindir Ateşleme Zamanlaması"
+  severity        String                 @default("HIGH") // LOW, MEDIUM, HIGH, CRITICAL
+  slug            String                 @unique // e.g. "p0300-ariza-kodu"
+
+  // Bursalı Oto Özgün Türkçe Anlatımı
+  summaryTr       String                 @db.Text
+  symptomsTr      Json                   // ["Check Engine Lamba Yanması", "Rölantide Titreme"]
+  causesTr        Json                   // ["Ateşleme bobini arızası", "Buji aşınması", "Vakum kaçağı"]
+  diagnosticSteps Json                   // ["1. VAG-COM canlı misfire verisi", "2. Voltaj kontrolü"]
+  solutionsTr     Json                   // ["Bobin/buji değişimi", "EA888 adaptasyon reset"]
+  technicalNotes  String?                @db.Text // Saha Notları & Bülten Detayı
+
+  // Güvenlik & İzlenebilirlik İlişkileri
+  provenance      VagDtcProvenance?
+  fitments        VagDtcVehicleFitment[]
+  embeddings      VagDtcEmbedding[]
+
+  createdAt       DateTime               @default(now())
+  updatedAt       DateTime               @updatedAt
+
+  @@index([code])
+  @@index([vagCode])
+  @@index([slug])
+}
+
+model VagDtcProvenance {
+  id                   String     @id @default(uuid())
+  dtcId                String     @unique
+  dtc                  VagDtcCode @relation(fields: [dtcId], references: [id], onDelete: Cascade)
+  sourceProvider       String     @default("VAG Technical Manuals / OEM Reference")
+  sourceUrl            String?
+  sourceExternalId     String?
+  retrievedAt          DateTime   @default(now())
+  parserVersion        String     @default("v2.1")
+  normalizationVersion String     @default("v1.0")
+  fitmentConfidence    Float      @default(1.0)
+  contentVersion       String     @default("v2.1-TR-ORIGINAL")
+
+  createdAt            DateTime   @default(now())
+}
+
+model VagDtcVehicleFitment {
+  id            String     @id @default(uuid())
+  dtcId         String
+  dtc           VagDtcCode @relation(fields: [dtcId], references: [id], onDelete: Cascade)
+  brand         String     // "Volkswagen", "Audi", "SEAT", "Skoda", "Porsche"
+  model         String     // "Golf", "A4", "Leon", "Octavia", "Macan"
+  generation    String?    // "MK7", "B8", "5F"
+  engineCode    String?    // "EA888", "EA211"
+  engineDispl   String?    // "1.4 TSI", "2.0 TFSI"
+  yearStart     Int?
+  yearEnd       Int?
+  
+  // GATE 4 & GATE 5 EVIDENCE REQUIREMENT (No Evidence = NO Fitment Pass)
+  evidenceType  String     // "FACTORY_TSB", "MANUFACTURER_DTC_LIST", "VCDS_LABEL_FILE"
+  evidenceRef   String     // e.g. "TSB 2033223 / TPI 01 13 73"
+  isVerified    Boolean    @default(true)
+
+  createdAt     DateTime   @default(now())
+
+  @@index([dtcId])
+  @@index([brand, model])
+  @@index([engineCode])
+}
+
+model VagDtcEmbedding {
+  id           String     @id @default(uuid())
+  dtcId        String
+  dtc          VagDtcCode @relation(fields: [dtcId], references: [id], onDelete: Cascade)
+  chunkType    String     // "DIAGNOSTIC_PROCEDURE", "CAUSE_SOLUTION", "TSB_NOTE"
+  content      String     @db.Text
+  embedding    Json       // Float[] Vector (3072 dims or Gemini Embedding)
+  modelName    String     @default("text-embedding-3-small")
+  modelVersion Int        @default(1)
+
+  createdAt    DateTime   @default(now())
+
+  @@index([dtcId, chunkType])
+}
+
 model RepairVideo {
   id          String    @id @default(uuid())
   faultCodeId String
