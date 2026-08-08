@@ -1,0 +1,39 @@
+{
+  "timestamp": "2026-08-08T19:27:53.723Z",
+  "metrics": {
+    "rawDtcCount": 974,
+    "gate7InputCount": 133,
+    "quarantineCount": 841,
+    "embeddingAttempted": 133,
+    "embeddingSuccess": 133,
+    "embeddingFailed": 0,
+    "embeddingSkipped": 0,
+    "uniqueDtcEmbeddings": 133,
+    "duplicateDtcCount": 0,
+    "duplicateContentHashCount": 0,
+    "duplicateVectorCount": 0,
+    "quarantineLeakCount": 0,
+    "provenanceCoverage": "100%",
+    "contentHashCoverage": "100%",
+    "positiveRetrievalPassCount": 10,
+    "negativeQuarantinePassCount": 10
+  },
+  "assertions": {
+    "assertRawDtcCount": true,
+    "assertGate7InputCount": true,
+    "assertQuarantineCount": true,
+    "assertEmbeddedDtcCount": true,
+    "assertUniqueEmbeddedDtcCount": true,
+    "assertDuplicateDtcCount": true,
+    "assertDuplicateContentHashCount": true,
+    "assertQuarantineLeakCount": true,
+    "assertProvenanceCoverage": true,
+    "assertContentHashCoverage": true,
+    "assertAllIdsInAllowlist": true,
+    "assertQuarantineIntersectionZero": true,
+    "assertPositiveRetrievalPass": true,
+    "assertNegativeQuarantinePass": true,
+    "allGate8AssertionsPass": true
+  },
+  "finalVerdict": "GREEN — GATE 8 RAG INDEX STAGING VERIFIED"
+}
