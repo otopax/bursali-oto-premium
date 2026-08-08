@@ -1,64 +1,64 @@
 // 🚀 V5.0 FEATURE 4 & 5: Embedding Versioning ve Enterprise Knowledge Graph
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
   previewFeatures = ["postgresqlExtensions", "fullTextSearch"]
-  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+  binaryTargets   = ["native", "linux-musl-openssl-3.0.x"]
 }
 
 datasource db {
-  provider = "postgresql"
-  url      = env("DATABASE_URL")
-  directUrl = env("DIRECT_URL")
+  provider   = "postgresql"
+  url        = env("DATABASE_URL")
+  directUrl  = env("DIRECT_URL")
   extensions = [vector]
 }
 
 // ----- SAAS & MULTI-TENANCY (Faz 23) -----
 model Tenant {
-  id               String   @id @default(uuid())
-  name             String   // e.g. "Ahmet Usta Garajı"
-  subdomain        String?  @unique // e.g. "ahmetusta.bursali-oto.com"
+  id               String            @id @default(uuid())
+  name             String // e.g. "Ahmet Usta Garajı"
+  subdomain        String?           @unique // e.g. "ahmetusta.bursali-oto.com"
   subscriptionId   String?
   subscription     SubscriptionTier? @relation(fields: [subscriptionId], references: [id])
   users            TenantUser[]
   customers        Customer[]
   customerVehicles CustomerVehicle[]
   workOrders       WorkOrder[]
-  createdAt        DateTime @default(now())
+  createdAt        DateTime          @default(now())
 }
 
 model TenantUser {
-  id        String   @id @default(uuid())
+  id        String     @id @default(uuid())
   userId    String
-  user      User     @relation(fields: [userId], references: [id])
+  user      User       @relation(fields: [userId], references: [id])
   tenantId  String
-  tenant    Tenant   @relation(fields: [tenantId], references: [id])
+  tenant    Tenant     @relation(fields: [tenantId], references: [id])
   role      TenantRole @default(MEMBER)
-  createdAt DateTime @default(now())
-  
+  createdAt DateTime   @default(now())
+
   @@unique([userId, tenantId])
 }
 
 model User {
-  id             String    @id @default(uuid())
-  email          String    @unique
-  passwordHash   String?   // V5.0 Güvenlik: bcrytp hash
-  globalRole     Role      @default(MECHANIC)
-  tokenVersion   Int       @default(0) // Faz 2.5: Oturum İptali ve Güvenlik
-  mfaEnabled     Boolean   @default(false)
-  mfaSecret      String?
-  tenants        TenantUser[]
-  usageLogs      UsageLog[]
-  auditLogs      AuditLog[]
+  id           String       @id @default(uuid())
+  email        String       @unique
+  passwordHash String? // V5.0 Güvenlik: bcrytp hash
+  globalRole   Role         @default(MECHANIC)
+  tokenVersion Int          @default(0) // Faz 2.5: Oturum İptali ve Güvenlik
+  mfaEnabled   Boolean      @default(false)
+  mfaSecret    String?
+  tenants      TenantUser[]
+  usageLogs    UsageLog[]
+  auditLogs    AuditLog[]
 }
 
 model SubscriptionTier {
-  id            String    @id @default(uuid())
-  name          String    @unique
-  monthlyQuota  Int
-  price         Float
-  currency      String    @default("TRY")
-  features      Json      // Hangi özelliklerin açık olduğu
-  tenants       Tenant[]
+  id           String   @id @default(uuid())
+  name         String   @unique
+  monthlyQuota Int
+  price        Float
+  currency     String   @default("TRY")
+  features     Json // Hangi özelliklerin açık olduğu
+  tenants      Tenant[]
 }
 
 model UsageLog {
@@ -76,17 +76,17 @@ model UsageLog {
 
 // ----- YENİ: Embedding Versioning Tablosu -----
 model VectorEmbedding {
-  id               String   @id @default(uuid())
-  contentHash      String   @unique // İçeriğin SHA-256'sı
-  embedding        Json     // Vektör verisi (Float[] veya JSON)
-  modelName        String   // e.g. "text-embedding-3-small", "gemini-embedding-001"
-  modelVersion     String   // e.g. "v1", "v2"
-  createdAt        DateTime @default(now())
-  updatedAt        DateTime @updatedAt
+  id           String   @id @default(uuid())
+  contentHash  String   @unique // İçeriğin SHA-256'sı
+  embedding    Json // Vektör verisi (Float[] veya JSON)
+  modelName    String // e.g. "text-embedding-3-small", "gemini-embedding-001"
+  modelVersion String // e.g. "v1", "v2"
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
 
   // Hangi araca ait olduğu bilgisi (Knowledge Graph ile bağlantı)
-  vehicleId        String?
-  vehicle          Vehicle? @relation(fields: [vehicleId], references: [id])
+  vehicleId String?
+  vehicle   Vehicle? @relation(fields: [vehicleId], references: [id])
 
   @@index([modelName, modelVersion])
   @@index([contentHash, modelName]) // Sorgu optimizasyonu
@@ -94,83 +94,83 @@ model VectorEmbedding {
 
 // ----- YENİ: Enterprise Knowledge Graph (OEM -> Araç -> Motor -> ECU -> Sensör -> Arıza Kodu -> Video -> Parça) -----
 model Manufacturer {
-  id           String   @id @default(uuid())
-  name         String   @unique // e.g. "Toyota", "Ford"
-  country      String
-  logoUrl      String?
-  website      String?
-  vehicles     Vehicle[]
-  createdAt    DateTime @default(now())
+  id        String    @id @default(uuid())
+  name      String    @unique // e.g. "Toyota", "Ford"
+  country   String
+  logoUrl   String?
+  website   String?
+  vehicles  Vehicle[]
+  createdAt DateTime  @default(now())
 }
 
 model Vehicle {
-  id             String   @id @default(uuid())
-  manufacturerId String
-  manufacturer   Manufacturer @relation(fields: [manufacturerId], references: [id])
-  model          String   // e.g. "Corolla"
-  generation     String?  // e.g. "E210"
-  yearStart      Int
-  yearEnd        Int?
-  bodyType       String?  // Sedan, Hatchback, SUV
-  fuelType       String?  // Benzin, Dizel, Hybrid, Electric
+  id                 String            @id @default(uuid())
+  manufacturerId     String
+  manufacturer       Manufacturer      @relation(fields: [manufacturerId], references: [id])
+  model              String // e.g. "Corolla"
+  generation         String? // e.g. "E210"
+  yearStart          Int
+  yearEnd            Int?
+  bodyType           String? // Sedan, Hatchback, SUV
+  fuelType           String? // Benzin, Dizel, Hybrid, Electric
   engineDisplacement Float? // cc
-  power          Int?     // HP
-  engines        Engine[]
-  embeddings     VectorEmbedding[]
-  faultCodes     FaultCode[]
-  fuseBoxes      FuseBox[]
-  createdAt      DateTime @default(now())
+  power              Int? // HP
+  engines            Engine[]
+  embeddings         VectorEmbedding[]
+  faultCodes         FaultCode[]
+  fuseBoxes          FuseBox[]
+  createdAt          DateTime          @default(now())
 
   @@unique([manufacturerId, model, generation, yearStart])
 }
 
 model Engine {
-  id          String   @id @default(uuid())
-  vehicleId   String
-  vehicle     Vehicle  @relation(fields: [vehicleId], references: [id])
-  code        String   // e.g. "2ZR-FE"
-  cylinders   Int
+  id           String   @id @default(uuid())
+  vehicleId    String
+  vehicle      Vehicle  @relation(fields: [vehicleId], references: [id])
+  code         String // e.g. "2ZR-FE"
+  cylinders    Int
   displacement Float
-  fuelSystem  String   // Multipoint, Direct Injection
-  ecus        ECU[]
-  createdAt   DateTime @default(now())
+  fuelSystem   String // Multipoint, Direct Injection
+  ecus         ECU[]
+  createdAt    DateTime @default(now())
 }
 
 model ECU {
-  id          String   @id @default(uuid())
-  engineId    String
-  engine      Engine   @relation(fields: [engineId], references: [id])
-  partNumber  String   @unique
+  id              String   @id @default(uuid())
+  engineId        String
+  engine          Engine   @relation(fields: [engineId], references: [id])
+  partNumber      String   @unique
   softwareVersion String
-  sensors     Sensor[]
-  createdAt   DateTime @default(now())
+  sensors         Sensor[]
+  createdAt       DateTime @default(now())
 }
 
 model Sensor {
-  id          String   @id @default(uuid())
-  ecuId       String
-  ecu         ECU      @relation(fields: [ecuId], references: [id])
-  name        String   // e.g. "O2 Sensor Bank 1 Sensor 1"
-  type        String   // Oxygen, MAF, MAP, Temperature, Knock, Speed
-  minValue    Float?
-  maxValue    Float?
-  unit        String?  // Volt, °C, kPa, etc.
-  faultCodes  FaultCode[]
-  createdAt   DateTime @default(now())
+  id         String      @id @default(uuid())
+  ecuId      String
+  ecu        ECU         @relation(fields: [ecuId], references: [id])
+  name       String // e.g. "O2 Sensor Bank 1 Sensor 1"
+  type       String // Oxygen, MAF, MAP, Temperature, Knock, Speed
+  minValue   Float?
+  maxValue   Float?
+  unit       String? // Volt, °C, kPa, etc.
+  faultCodes FaultCode[]
+  createdAt  DateTime    @default(now())
 }
 
 model FaultCode {
-  id          String   @id @default(uuid())
-  code        String   @unique // e.g. "P0171"
-  description String   // e.g. "System Too Lean (Bank 1)"
-  severity    String   // LOW, MEDIUM, HIGH, CRITICAL
-  vehicleId   String?
-  vehicle     Vehicle? @relation(fields: [vehicleId], references: [id])
-  sensorId    String?
-  sensor      Sensor?  @relation(fields: [sensorId], references: [id])
+  id           String        @id @default(uuid())
+  code         String        @unique // e.g. "P0171"
+  description  String // e.g. "System Too Lean (Bank 1)"
+  severity     String // LOW, MEDIUM, HIGH, CRITICAL
+  vehicleId    String?
+  vehicle      Vehicle?      @relation(fields: [vehicleId], references: [id])
+  sensorId     String?
+  sensor       Sensor?       @relation(fields: [sensorId], references: [id])
   repairVideos RepairVideo[]
-  parts       Part[]   @relation("FaultCodeParts")
-  
+  parts        Part[]        @relation("FaultCodeParts")
+
   // AI Analiz Detayları (Mining Bot)
   symptoms           Json?
   commonCauses       Json?
@@ -180,56 +180,55 @@ model FaultCode {
 
   // V5.0 Embedding Versioning Support
   embedding        Unsupported("vector(3072)")?
-  embeddingModel   String?  // e.g. "gemini-embedding-001"
-  embeddingVersion Int?     // e.g. 1
-  
-  createdAt   DateTime @default(now())
+  embeddingModel   String? // e.g. "gemini-embedding-001"
+  embeddingVersion Int? // e.g. 1
+
+  createdAt DateTime @default(now())
 
   @@index([code])
   @@index([vehicleId])
 }
 
 model RepairVideo {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   faultCodeId String
   faultCode   FaultCode @relation(fields: [faultCodeId], references: [id])
   title       String
-  url         String   @unique
-  duration    Int?     // seconds
-  source      String   // YouTube, OEM, etc.
+  url         String    @unique
+  duration    Int? // seconds
+  source      String // YouTube, OEM, etc.
   thumbnail   String?
-  createdAt   DateTime @default(now())
+  createdAt   DateTime  @default(now())
 }
 
 model Part {
-  id          String   @id @default(uuid())
-  name        String
-  oemNumber   String?  @unique
-  category    String   // Brake, Engine, Suspension, Electrical
-  price       Float?
-  currency    String   @default("TRY")
-  stock       Int      @default(0)
+  id                   String      @id @default(uuid())
+  name                 String
+  oemNumber            String?     @unique
+  category             String // Brake, Engine, Suspension, Electrical
+  price                Float?
+  currency             String      @default("TRY")
+  stock                Int         @default(0)
   compatibleFaultCodes FaultCode[] @relation("FaultCodeParts")
-  createdAt   DateTime @default(now())
+  createdAt            DateTime    @default(now())
 
   @@index([oemNumber])
 }
 
-
-
 // ----- YENİ: Outbox Event Tablosu (Transactional Outbox için) -----
 model OutboxEvent {
-  id            String   @id @default(uuid())
-  aggregateType String   // e.g. "WorkOrder"
-  aggregateId   String   // e.g. "1234-abcd"
-  eventType     String   // e.g. "WorkOrderCreated"
-  eventVersion  String   @default("v1")
+  id            String    @id @default(uuid())
+  aggregateType String? // e.g. "WorkOrder"
+  aggregateId   String? // e.g. "1234-abcd"
+  eventType     String? // e.g. "WorkOrderCreated"
+  eventName     String? // e.g. "WorkOrderCreated"
+  eventVersion  String    @default("v1")
   payload       Json
-  status        String   @default("PENDING") // PENDING, PROCESSED, FAILED, DLQ
-  retryCount    Int      @default(0)
-  createdAt     DateTime @default(now())
+  status        String    @default("PENDING") // PENDING, PROCESSED, FAILED, DLQ
+  retryCount    Int       @default(0)
+  createdAt     DateTime  @default(now())
   processedAt   DateTime?
-  lastError     String?  @db.Text
+  lastError     String?   @db.Text
   traceId       String?
   correlationId String?
 
@@ -239,15 +238,15 @@ model OutboxEvent {
 
 // ----- YENİ: İzin Yönetimi (RBAC Overrides) -----
 model Permission {
-  id          String   @id @default(uuid())
-  role        Role
-  resource    String   // Örn: "Vehicle", "WorkOrder", "Invoice"
-  canRead     Boolean  @default(false)
-  canWrite    Boolean  @default(false)
-  canDelete   Boolean  @default(false)
-  canExport   Boolean  @default(false)
-  canApprove  Boolean  @default(false)
-  
+  id         String  @id @default(uuid())
+  role       Role
+  resource   String // Örn: "Vehicle", "WorkOrder", "Invoice"
+  canRead    Boolean @default(false)
+  canWrite   Boolean @default(false)
+  canDelete  Boolean @default(false)
+  canExport  Boolean @default(false)
+  canApprove Boolean @default(false)
+
   @@unique([role, resource])
 }
 
@@ -256,8 +255,8 @@ model AuditLog {
   id            String   @id @default(uuid())
   userId        String?
   user          User?    @relation(fields: [userId], references: [id])
-  action        String   // Örn: "UPDATE", "DELETE", "CREATE"
-  entityType    String   // Örn: "Vehicle", "User"
+  action        String // Örn: "UPDATE", "DELETE", "CREATE"
+  entityType    String // Örn: "Vehicle", "User"
   entityId      String?
   oldValues     Json?
   newValues     Json?
@@ -267,7 +266,7 @@ model AuditLog {
   browser       String?
   requestUrl    String?
   requestMethod String?
-  correlationId String?  // OpenTelemetry / Middleware izleme ID'si
+  correlationId String? // OpenTelemetry / Middleware izleme ID'si
   requestId     String?
   sessionId     String?
   createdAt     DateTime @default(now())
@@ -295,19 +294,19 @@ enum Role {
 
 model ApiKey {
   id             String    @id @default(uuid())
-  name           String    // Örn: "Vercel Cron Job", "Zapier Webhook"
+  name           String // Örn: "Vercel Cron Job", "Zapier Webhook"
   keyHash        String    @unique // Asla plaintext saklanmaz, hashlenir
-  role           Role      // BOT, SCHEDULER, WEBHOOK gibi servis rolleri
-  scopes         String[]  // ["Vehicle.Read", "Invoice.Export"] gibi
+  role           Role // BOT, SCHEDULER, WEBHOOK gibi servis rolleri
+  scopes         String[] // ["Vehicle.Read", "Invoice.Export"] gibi
   expiresAt      DateTime?
   lastUsedAt     DateTime?
   revokedAt      DateTime? // İptal edilme zamanı
-  allowedIPs     String[]  // ["192.168.1.1", "10.0.0.0/8"]
-  allowedOrigins String[]  // ["https://partner.com"]
+  allowedIPs     String[] // ["192.168.1.1", "10.0.0.0/8"]
+  allowedOrigins String[] // ["https://partner.com"]
   rateLimit      Int       @default(100) // İstek sayısı / dakika
   createdAt      DateTime  @default(now())
   updatedAt      DateTime  @updatedAt
-  
+
   @@index([role])
 }
 
@@ -318,51 +317,51 @@ enum TenantRole {
 }
 
 enum WorkOrderStatus {
-  PENDING      // Bekliyor
-  IN_PROGRESS  // İşlemde
-  COMPLETED    // Tamamlandı
-  DELIVERED    // Teslim Edildi
-  CANCELLED    // İptal
+  PENDING // Bekliyor
+  IN_PROGRESS // İşlemde
+  COMPLETED // Tamamlandı
+  DELIVERED // Teslim Edildi
+  CANCELLED // İptal
 }
 
 enum WorkOrderItemType {
-  PART         // Yedek Parça
-  LABOR        // İşçilik
+  PART // Yedek Parça
+  LABOR // İşçilik
 }
 
 // ----- YENİ: GARAGE ERP & VIP GARAJ MODÜLLERİ (Faz 31) -----
 
 model Customer {
-  id          String   @id @default(uuid())
-  tenantId    String
-  tenant      Tenant   @relation(fields: [tenantId], references: [id])
-  firstName   String
-  lastName    String?
-  phone       String   // Telefon Numarası (Plaka+Tel eşleşmesi ile login için kritik)
-  email       String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  deletedAt   DateTime? // Faz 2.5: Soft Delete
-  
-  vehicles    CustomerVehicle[]
+  id        String    @id @default(uuid())
+  tenantId  String
+  tenant    Tenant    @relation(fields: [tenantId], references: [id])
+  firstName String
+  lastName  String?
+  phone     String // Telefon Numarası (Plaka+Tel eşleşmesi ile login için kritik)
+  email     String?
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime? // Faz 2.5: Soft Delete
+
+  vehicles CustomerVehicle[]
 
   @@index([tenantId])
   @@index([phone]) // VIP Garaj login performansı için
 }
 
 model CustomerVehicle {
-  id               String   @id @default(uuid())
-  customerId       String
-  customer         Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
-  tenantId         String
-  tenant           Tenant   @relation(fields: [tenantId], references: [id])
-  
-  plate            String   // Plaka (VIP Garaj login için kritik)
-  vin              String?  // Şasi No
-  brand            String   // Örn: BMW
-  model            String   // Örn: 320i
-  year             Int?
-  
+  id         String   @id @default(uuid())
+  customerId String
+  customer   Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  tenantId   String
+  tenant     Tenant   @relation(fields: [tenantId], references: [id])
+
+  plate String // Plaka (VIP Garaj login için kritik)
+  vin   String? // Şasi No
+  brand String // Örn: BMW
+  model String // Örn: 320i
+  year  Int?
+
   // Phase 4: Vehicle Intelligence Platform Alanları
   fuelType         String?
   engineCode       String?
@@ -371,14 +370,14 @@ model CustomerVehicle {
   lastServiceDate  DateTime?
   lastServiceKm    Int?
   lastObdCodes     Json?
-  healthScore      Int?     @default(100) // 0-100 arası araç sağlık skoru
-  
+  healthScore      Int?      @default(100) // 0-100 arası araç sağlık skoru
+
   workOrders       WorkOrder[]
   serviceHistories ServiceHistory[]
   diagnosticLogs   DiagnosticLog[]
 
-  createdAt   DateTime @default(now())
-  deletedAt   DateTime? // Faz 2.5: Soft Delete
+  createdAt DateTime  @default(now())
+  deletedAt DateTime? // Faz 2.5: Soft Delete
 
   @@index([customerId])
   @@index([tenantId])
@@ -386,29 +385,29 @@ model CustomerVehicle {
 }
 
 model WorkOrder {
-  id              String   @id @default(uuid())
-  tenantId        String
-  tenant          Tenant   @relation(fields: [tenantId], references: [id])
-  vehicleId       String
-  vehicle         CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
-  assignedToId    String?  // İşi yapan usta (TenantUser veya User id)
-  
-  status          WorkOrderStatus @default(PENDING)
-  complaint       String?  @db.Text // Müşteri Şikayeti
-  mileage         Int?     // Giriş Kilometresi
-  notes           String?  @db.Text // Usta Notları (Müşteri de görebilir veya gizli tutulabilir)
-  
+  id           String          @id @default(uuid())
+  tenantId     String
+  tenant       Tenant          @relation(fields: [tenantId], references: [id])
+  vehicleId    String
+  vehicle      CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+  assignedToId String? // İşi yapan usta (TenantUser veya User id)
+
+  status    WorkOrderStatus @default(PENDING)
+  complaint String?         @db.Text // Müşteri Şikayeti
+  mileage   Int? // Giriş Kilometresi
+  notes     String?         @db.Text // Usta Notları (Müşteri de görebilir veya gizli tutulabilir)
+
   // Phase 4: Enterprise Consistency
-  version         Int      @default(1)
-  idempotencyKey  String?  @unique
-  
-  items           WorkOrderItem[]
-  
-  startedAt       DateTime?
-  completedAt     DateTime?
-  createdAt       DateTime @default(now())
-  updatedAt       DateTime @updatedAt
-  deletedAt       DateTime? // Faz 2.5: Soft Delete
+  version        Int     @default(1)
+  idempotencyKey String? @unique
+
+  items WorkOrderItem[]
+
+  startedAt   DateTime?
+  completedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime? // Faz 2.5: Soft Delete
 
   @@index([tenantId])
   @@index([vehicleId])
@@ -430,106 +429,106 @@ model IdempotencyRecord {
 }
 
 model WorkOrderItem {
-  id              String   @id @default(uuid())
-  workOrderId     String
-  workOrder       WorkOrder @relation(fields: [workOrderId], references: [id], onDelete: Cascade)
-  
-  type            WorkOrderItemType
-  name            String   // Örn: "Motul 5W30 Yağ" veya "Şanzıman Revizyon İşçiliği"
-  quantity        Float    @default(1)
-  unitPrice       Float    @default(0) // Birim Fiyat (KDV Hariç)
-  discount        Float    @default(0) // İskonto Tutarı
-  taxRate         Float    @default(20) // KDV Oranı (%)
-  
-  createdAt       DateTime @default(now())
+  id          String    @id @default(uuid())
+  workOrderId String
+  workOrder   WorkOrder @relation(fields: [workOrderId], references: [id], onDelete: Cascade)
+
+  type      WorkOrderItemType
+  name      String // Örn: "Motul 5W30 Yağ" veya "Şanzıman Revizyon İşçiliği"
+  quantity  Float             @default(1)
+  unitPrice Float             @default(0) // Birim Fiyat (KDV Hariç)
+  discount  Float             @default(0) // İskonto Tutarı
+  taxRate   Float             @default(20) // KDV Oranı (%)
+
+  createdAt DateTime @default(now())
 
   @@index([workOrderId])
 }
 
-
 // ----- YENİ: Sigorta ve Röle Tabloları (Faz 21) -----
 model FuseBox {
-  id              String   @id @default(uuid())
-  vehicleId       String
-  vehicle         Vehicle  @relation(fields: [vehicleId], references: [id])
-  name            String?
-  diagramImgUrl   String?
-  thumbnailUrl    String?
-  fuses           Fuse[]
-  createdAt       DateTime @default(now())
+  id            String   @id @default(uuid())
+  vehicleId     String
+  vehicle       Vehicle  @relation(fields: [vehicleId], references: [id])
+  name          String?
+  diagramImgUrl String?
+  thumbnailUrl  String?
+  fuses         Fuse[]
+  createdAt     DateTime @default(now())
 
   @@index([vehicleId])
 }
 
 model Fuse {
-  id              String   @id @default(uuid())
-  fuseBoxId       String
-  fuseBox         FuseBox  @relation(fields: [fuseBoxId], references: [id])
-  originalId      String?  // e.g. "1" or "R1"
-  type            String?  // "fuse", "relay", "connector"
-  format          String?  // "ato", "half", etc.
-  amperage        Float?
-  description     String?
-  isNotUsed       Boolean  @default(false)
-  createdAt       DateTime @default(now())
+  id          String   @id @default(uuid())
+  fuseBoxId   String
+  fuseBox     FuseBox  @relation(fields: [fuseBoxId], references: [id])
+  originalId  String? // e.g. "1" or "R1"
+  type        String? // "fuse", "relay", "connector"
+  format      String? // "ato", "half", etc.
+  amperage    Float?
+  description String?
+  isNotUsed   Boolean  @default(false)
+  createdAt   DateTime @default(now())
 
   @@index([fuseBoxId])
 }
+
 // ----- YENİ: Phase 4 Araç Zeka Platformu Modelleri -----
 model ServiceHistory {
-  id              String   @id @default(uuid())
-  vehicleId       String
-  vehicle         CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
-  
-  date            DateTime
-  mileage         Int
-  type            String   // Örn: Periyodik Bakım, Ağır Bakım, Arıza Onarımı
-  description     String   @db.Text
-  replacedParts   Json?    // Değişen parçaların listesi
-  cost            Float?
-  
-  createdAt       DateTime @default(now())
-  
+  id        String          @id @default(uuid())
+  vehicleId String
+  vehicle   CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+
+  date          DateTime
+  mileage       Int
+  type          String // Örn: Periyodik Bakım, Ağır Bakım, Arıza Onarımı
+  description   String   @db.Text
+  replacedParts Json? // Değişen parçaların listesi
+  cost          Float?
+
+  createdAt DateTime @default(now())
+
   @@index([vehicleId])
 }
 
 model DiagnosticLog {
-  id              String   @id @default(uuid())
-  vehicleId       String
-  vehicle         CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
-  
-  symptoms        String   @db.Text
-  aiSuggestion    String   @db.Text
-  aiConfidence    Float?
-  
-  userFeedback    String?  // Kullanıcı "bu doğruydu" veya "farklı bir şey çıktı" diyebilir
-  actualOutcome   String?  @db.Text // Servis sonucu gerçek arızanın ne olduğu
-  
-  createdAt       DateTime @default(now())
-  
+  id        String          @id @default(uuid())
+  vehicleId String
+  vehicle   CustomerVehicle @relation(fields: [vehicleId], references: [id], onDelete: Cascade)
+
+  symptoms     String @db.Text
+  aiSuggestion String @db.Text
+  aiConfidence Float?
+
+  userFeedback  String? // Kullanıcı "bu doğruydu" veya "farklı bir şey çıktı" diyebilir
+  actualOutcome String? @db.Text // Servis sonucu gerçek arızanın ne olduğu
+
+  createdAt DateTime @default(now())
+
   @@index([vehicleId])
 }
 
 model SocialLead {
-  id          Int      @id @default(autoincrement())
-  platform    String   @default("WEBSITE_BOT")
-  name        String?
-  phone       String
-  vehicle     String?
-  symptoms    String?  @db.Text
-  status      String   @default("NEW")
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        Int      @id @default(autoincrement())
+  platform  String   @default("WEBSITE_BOT")
+  name      String?
+  phone     String
+  vehicle   String?
+  symptoms  String?  @db.Text
+  status    String   @default("NEW")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }
 
 model SemanticCache {
-  id          String   @id @default(uuid())
-  queryHash   String   @unique // cosine bucket veya hash icin
-  query       String   @db.Text
-  response    String   @db.Text
-  embedding   Unsupported("vector(768)")?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  id        String                      @id @default(uuid())
+  queryHash String                      @unique // cosine bucket veya hash icin
+  query     String                      @db.Text
+  response  String                      @db.Text
+  embedding Unsupported("vector(768)")?
+  createdAt DateTime                    @default(now())
+  updatedAt DateTime                    @updatedAt
 }
 
 // ----- YENİ: Phase 5 - Feedback (GBP Yorum Sistemi İçin) -----
@@ -542,16 +541,4 @@ model Feedback {
   status      String   @default("PENDING") // PENDING, RESOLVED
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
-}
-
-// ----- YENİ: Outbox Pattern Tablosu -----
-model OutboxEvent {
-  id          String    @id @default(uuid())
-  eventName   String
-  payload     Json
-  status      String    @default("PENDING") // PENDING, PROCESSED, FAILED
-  createdAt   DateTime  @default(now())
-  processedAt DateTime?
-
-  @@index([status, createdAt])
 }
