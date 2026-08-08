@@ -1,14 +1,13 @@
-export function register() {
-  if (process.env.NEXT_RUNTIME === 'nodejs') {
-    try {
-      // We only enable OpenTelemetry on the Node.js runtime (server side)
-      const { registerOTel } = require('@vercel/otel');
+import * as Sentry from '@sentry/nextjs';
 
-      registerOTel({
-        serviceName: 'bursali-oto-service',
-      });
-    } catch {
-      // @vercel/otel is optional
-    }
+export async function register() {
+  if (process.env.NEXT_RUNTIME === 'nodejs') {
+    await import('../sentry.server.config');
+  }
+
+  if (process.env.NEXT_RUNTIME === 'edge') {
+    await import('../sentry.edge.config');
   }
 }
+
+export const onRequestError = Sentry.captureRequestError;
