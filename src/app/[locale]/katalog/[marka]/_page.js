@@ -70,7 +70,7 @@ export default async function BrandCatalogPage({ params }) {
     <main style={{ minHeight: '100vh', paddingTop: '100px', backgroundColor: 'var(--bg-dark)' }}>
       <section className="container" style={{ paddingBottom: '5rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem', paddingBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-          <Link href={`/${locale}/bilgi-bankasi`} style={{ color: 'var(--accent-gold)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '500' }}>
+          <Link href={`/${locale}/ariza-cozumleri`} style={{ color: 'var(--accent-gold)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: '500' }}>
             ← {locale === 'tr' ? 'Markalara Dön' : 'Back to Brands'}
           </Link>
         </div>

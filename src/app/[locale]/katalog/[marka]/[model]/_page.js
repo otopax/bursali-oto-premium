@@ -44,7 +44,7 @@ export default async function ModelCatalogPage({ params }) {
       <section className="container" style={{ paddingBottom: '5rem' }}>
         
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '2rem', paddingBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.1)' }}>
-          <Link href={`/${locale}/katalog/${marka}`} style={{ color: 'var(--accent-gold)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Link href={`/${locale}/ariza-cozumleri/${marka}`} style={{ color: 'var(--accent-gold)', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             ← {locale === 'tr' ? `${marka.toUpperCase()} Modellerine Dön` : `Back to ${marka.toUpperCase()} Models`}
           </Link>
         </div>
