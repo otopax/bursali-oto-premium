@@ -204,10 +204,10 @@ export default async function KutuphaneModelPage({ params }) {
             <div>
               <div style={{ fontSize: '2rem', marginBottom: '1rem' }}>⚠️</div>
               <h2 style={{ fontSize: '1.35rem', color: 'var(--accent-gold)', marginBottom: '0.75rem', fontWeight: '600' }}>
-                Arıza Çözümleri ({faultCount})
+                Arıza Çözümleri ve Arıza Kodları ({faultCount})
               </h2>
               <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', lineHeight: '1.6', fontSize: '0.95rem' }}>
-                {brandData.name || marka} {modelData.name || model} modeline ait kronik arızalar, DTC arıza kodları (P0087 vb.), belirtileri ve servis çözüm adımlarımız.
+                {brandData.name || marka} {modelData.name || model} modeline ait kronik arızalar, VAG OBD DTC arıza kodları (P0087, P0300 vb.), belirtileri ve servis çözüm adımlarımız.
               </p>
             </div>
             <Link href={`/${locale}/kutuphane/${marka}/${model}/arizalar`} style={{

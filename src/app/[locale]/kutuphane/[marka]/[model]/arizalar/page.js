@@ -86,11 +86,11 @@ export default async function KutuphaneFaultsListPage({ params }) {
             {modelData.name || model}
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
-          <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri</span>
+          <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri ve Arıza Kodları</span>
         </div>
 
         <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-light)' }}>
-          {brandData.name || marka} {modelData.name || model} <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri</span>
+          {brandData.name || marka} {modelData.name || model} <span style={{ color: 'var(--accent-gold)' }}>Arıza Çözümleri ve Arıza Kodları</span>
         </h1>
         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '800px', fontSize: '1.1rem' }}>
           {brandData.name || marka} {modelData.name || model} model araçlarda servisimize en sık gelen arıza kodlarını (DTC), belirtilerini ve uyguladığımız garantili tamir prosedürlerini inceleyin.
