@@ -51,6 +51,15 @@ export default async function ArizaCozumleriBrandPage({ params }) {
   if (!brandData) {
     notFound();
   }
+  const bName = brandData.name;
+
+  const h1Titles = {
+    tr: `${bName} Arıza Çözümleri`,
+    en: `${bName} Fault Solutions`,
+    ru: `Решения по ремонту ${bName}`,
+    uk: `Рішення з ремонту ${bName}`,
+    ar: `حلول أعطال ${bName}`
+  };
 
   const models = Object.entries(brandData.models).map(([slug, data]) => ({
     slug,
