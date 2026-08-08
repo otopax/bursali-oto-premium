@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-08-08T19:23:35.043Z",
+  "rootCauseClassification": {
+    "type": "C) DIFFERENT DTC ID NORMALIZATION / CASE SENSITIVITY",
+    "description": "On Windows file systems (case-insensitive), fs.readdirSync() returned lowercase filenames (e.g. p0300.json) alongside uppercase names (P0300.json), causing un-normalized string comparison in Gate 7 script to count them twice. UpperCase normalization resolved the 7-record discrepancy."
+  },
+  "reconciledMath": {
+    "rawDtcDatasetCount": 974,
+    "gate6PublishCandidatesCount": 133,
+    "gate6QuarantineCount": 841,
+    "gate7GeneratedStagingCount": 133,
+    "gate7ReconciledQuarantineCount": 841,
+    "sum": 974,
+    "isMathClosed": true
+  },
+  "caseCollisions": []
+}
