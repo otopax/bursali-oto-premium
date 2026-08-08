@@ -1,0 +1,29 @@
+{
+  "code": "03124",
+  "vagCode": "03124",
+  "title": "03124 - 03124",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A4 / VW Passat / Skoda Octavia",
+    "Audi A6 / A5 / Q5"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Motor arıza ikaz lambası (MIL) yanıyor",
+    "Performans ve çekiş düşüklüğü"
+  ],
+  "commonCauses": [
+    "Sensör okuma hatası veya tesisat temassızlığı",
+    "Mekanik aşınma veya hava kaçağı"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS / ODIS ile canlı veri grupları taranır.",
+    "2. Tesisat ve voltaj beslemeleri test edilir.",
+    "3. Gerekirse OEM yedek parça ile yenilenip adaptör sürüşü yapılır."
+  ],
+  "technicalNotes": "When found in address [09] - Central Electronics in Audi models such as the (8K/FL) 2008+ A4 and A5 make sure the fuse powering terminal T6f/3 at J519 is present and powered.  Using a 2010 M.Y. A4 for example, the exact fuse position is ST2, SC5.  Measuring block group 002.3 shows live data for Terminal 30 - 3 .\nSee  Factory Repair Manual for wiring diagrams.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/03124"
+}

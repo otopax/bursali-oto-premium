@@ -1,0 +1,33 @@
+{
+  "code": "16485",
+  "vagCode": "16485",
+  "title": "16485 - 16485/P0101/000257",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "2.0 TDI (CR Engine)"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Loss of Power",
+    "Erratic Idle"
+  ],
+  "commonCauses": [
+    "Mass Air Flow Sensör Okuma Değerleri (G70) faulty",
+    "Air Leak(s) after Mass Air Flow Sensör Okuma Değerleri (G70)",
+    "Excessive restrictions in the Intake/Exhaust System\nDirty air filter, clogged snow screen, clogged CAT",
+    "Dirty air filter, clogged snow screen, clogged CAT",
+    "Ground Spots corroded or Paint Residue",
+    "Kablo Tesisatı ve Soketleri and/or Connections from/to Mass Air Flow Sensör Okuma Değerleri (G70) faulty"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  Intake Air Filter",
+    "Kontrol edin:  Mass Air Flow Sensör Okuma Değerleri (G70)",
+    "Kontrol edin:  Ground Spots",
+    "Kontrol edin:  Kablo Tesisatı ve Soketleri and/or Connections from/to Mass Air Flow Sensör Okuma Değerleri (G70)"
+  ],
+  "technicalNotes": "When found in 2nd Gen 2.0T engines such as the CCTA make sure there are not any leaks in-between the MAF and the Turbocharger inlet.  This type of problem will not cause a boost leak but can cause this Implausible Signal DTC.\nIn MY 1995-2002 (?) in Europe at VW-diesel-cars G70 had the bad reputation of slowly losing his performance, causing loss of power. It's not a matter of defective or breaking down, but it is filthy / dirty (not easy to clean). You can check functionality by making a log in [01-engine], [meas.blocks-08], group 003 (3e gear, full throttle, from 1700-4000rpm)\nIt is not uncommon for a TDI to set Implausible Signal Mass Air Flow Sensör Okuma Değerleri (G70) faults when the engine performance is reduced due to a mechanical problem. These mechanical problems may include, but are not limited to:\nFaulty electric fuel pump or Restricted fuel filter. See the Fuel Pump Temel Ayarları (Basic Settings) Yapın:  for PD, PPD, and CR TDI Engines page for Temel Ayarları (Basic Settings) Yapın:  tips after replacement.\nExcessive restrictions in the intake/exhaust system\nInternal camshaft/valve/lifter problems",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/16485/P0101/000257"
+}

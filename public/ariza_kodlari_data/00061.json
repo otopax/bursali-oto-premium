@@ -1,0 +1,29 @@
+{
+  "code": "00061",
+  "vagCode": "00061",
+  "title": "00061 - P026A/000618",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "VW Tiguan / Touareg / Audi Q7"
+  ],
+  "engines": [
+    "3.0 TDI / TFSI V6"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Malfunction Indicator Lamp (MIL) active",
+    "Reduced engine output"
+  ],
+  "commonCauses": [
+    "Intercooler restricted (internal or external)",
+    "Faulty sensor",
+    "ECM firmware issue"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS / ODIS ile canlı veri grupları taranır.",
+    "2. Tesisat ve voltaj beslemeleri test edilir.",
+    "3. Gerekirse OEM yedek parça ile yenilenip adaptör sürüşü yapılır."
+  ],
+  "technicalNotes": "On some TDI CR engines, a faulty G42 / G31 sensor at the top of the intercooler may report a much higher than possible temperature:\nIDE04938 - Sensör Okuma Değerleri for temp after charge air cooler: raw value\nCase Study - P026A/000618 - Charge Air Cooler: Efficiency Below Threshold - MIL ON",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P026A/000618"
+}

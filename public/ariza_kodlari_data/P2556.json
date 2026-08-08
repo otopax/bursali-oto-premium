@@ -1,0 +1,27 @@
+{
+  "code": "P2556",
+  "vagCode": "",
+  "title": "P2556 - P2556",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "MIL On",
+    "Cooling system malfunctioning"
+  ],
+  "commonCauses": [
+    "Faulty Engine Coolant Level Sensör Okuma Değerleri (G32)",
+    "Faulty Engine Temperature Control Actuator (N493)",
+    "Kablo Tesisatı ve Soketleri or power/ground issues to those components"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  Engine Coolant Level Sensör Okuma Değerleri (G32), Engine Temperature Control Actuator (N493) in addition to the related wiring per the repair manual."
+  ],
+  "technicalNotes": "At face value you would initially believe this DTC is for the Engine Coolant Level Sensör Okuma Değerleri however in most cases that sensor is wired to the 17-Instrument Cluster or the 09-Central Electronics.  The Coolant Level Sensör Okuma Değerleri is not usually wired directly to the 01-Engine control module.  In those cases the thermostat (N493) and the wiring to it should be checked as per post #8 in this thread: https://forums.ross-tech.com/index.php?threads/28967/\nThe example vehicle would use this generation 09-Cent. Elect. module MLB based Cent. Elect. (J519) BCM1 and measuring block group 028.1 can be used to check the Coolant Level (G32) status.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P2556"
+}

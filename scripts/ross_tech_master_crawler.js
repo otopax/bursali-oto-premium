@@ -84,12 +84,13 @@ async function fetchAllFaultLinks(initialUrl) {
   let allLinks = [];
   let pageCounter = 1;
 
-  while (currentUrl && pageCounter <= 10) {
+  while (currentUrl && pageCounter <= 50) {
     try {
       console.log(`📡 Kategori Sayfası ${pageCounter} taranıyor: ${currentUrl}`);
       const response = await axios.get(currentUrl, {
         headers: {
-          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+          'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+          'Accept-Language': 'en-US,en;q=0.9'
         },
         timeout: 10000
       });
@@ -116,6 +117,7 @@ async function fetchAllFaultLinks(initialUrl) {
         const nextHref = nextLinkEl.attr('href');
         currentUrl = nextHref.startsWith('http') ? nextHref : `${BASE_URL}${nextHref}`;
         pageCounter++;
+        await new Promise((r) => setTimeout(r, 1500));
       } else {
         currentUrl = null;
       }
@@ -131,7 +133,8 @@ async function fetchAllFaultLinks(initialUrl) {
 
 async function startMasterCrawl() {
   console.log('🌐 ========================================================');
-  console.log('🚀 SINIRSIZ ROSS-TECH MASTER CRAWLER (MOTOR & MODEL AYRIŞTIRMALI)...');
+  console.log('🚀 SINIRSIZ GÜVENLİ ROSS-TECH MASTER CRAWLER (MOTOR & MODEL AYRIŞTIRMALI)...');
+  console.log('  -> IP Ban Koruması: 2.0 - 3.0 Saniye Dinamik Gecikme');
   console.log('🌐 ========================================================\n');
 
   const faultLinks = await fetchAllFaultLinks(CATEGORY_FAULTS_URL);
@@ -147,7 +150,8 @@ async function startMasterCrawl() {
       console.log(`  [${i + 1}/${faultLinks.length}] ✅ ${pageData.code} -> Model: ${pageData.models.join(', ')} | Motor: ${pageData.engines.join(', ')}`);
       savedFaults++;
     }
-    await new Promise((r) => setTimeout(r, 150));
+    const delay = 2000 + Math.floor(Math.random() * 1000);
+    await new Promise((r) => setTimeout(r, delay));
   }
 
   console.log(`\n🎉 TAM PARSING CRAWLER TAMAMLANDI!`);

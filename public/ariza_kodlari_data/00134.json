@@ -1,0 +1,30 @@
+{
+  "code": "00134",
+  "vagCode": "00134",
+  "title": "00134 - P053F/001343",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Malfunction Indicator Light (MIL) ON"
+  ],
+  "commonCauses": [
+    "Fault code will typically set when the difference between Actual and Specified Rail pressure is 15-Bar or 1.50-MPa",
+    "Poor fuel quantity delivery (In tank pump, fuel filter, damaged fuel lines, etc).",
+    "Fault with the G247-Rail Fuel Pressure Sensör Okuma Değerleri, wiring, connections, etc.",
+    "Fault with the N276-Fuel Pressure Regulator Valve, power, ground, connections, etc."
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  the in-tank fuel pressure with a mechanical gauge during startup.",
+    "Kontrol edin:  the Advanced Measuring Values for Rail pressures",
+    "Kontrol edin:  power supply at the N276-Fuel Pressure Regulator Valve",
+    "Kontrol edin:  the G247-Rail Fuel Pressure Sensör Okuma Değerleri"
+  ],
+  "technicalNotes": "ECM may also have stored in memory, P0088 - Fuel Rail/System Pressure: Too High.\nWith the 1.8L/2.0L engines, if fault code P0016 - Bank 1: Camshaft Position Sensör Okuma Değerleri (G40)/Engine Speed Sensör Okuma Değerleri (G28): Incorrect Correlation is also stored, please use this Ross-Tech forum page to verify engine timing is correct.\nAudi Volkswagen - 2.0L Chain Drive - P0016 Cam/Crank correlation check",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P053F/001343"
+}

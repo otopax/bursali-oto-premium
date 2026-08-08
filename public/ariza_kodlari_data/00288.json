@@ -1,0 +1,29 @@
+{
+  "code": "00288",
+  "vagCode": "00288",
+  "title": "00288 - 00288",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A4 / VW Passat / Skoda Octavia",
+    "Audi A6 / A5 / Q5",
+    "VW Tiguan / Touareg / Audi Q7"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Ignition power will NOT switch on",
+    "Steering column will or will not lock"
+  ],
+  "commonCauses": [
+    "Kablo Tesisatı ve Soketleri/Connections from/to N360",
+    "Faulty N360"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  wiring/connections from/to N360",
+    "Kontrol edin: /Değiştirin / Yenileyin:  failed N360"
+  ],
+  "technicalNotes": "If the ignition will not switch on, the communication with the Access Start controller still maybe possible, Try this:\nTurn on the hazards, press the brake pedal and hold the flash to pass\nThis will wake-up(activate) the CAN-Bus and may allow limited communication to the vehicle\nIf present clear the N360 fault code and if the vehicle's ignition power is now active, suspect a failed N360.\nWhen found in the Volkswagen Passat 3C, please see this page VW Passat (3C) Immobilizer\nWhen found on the Audi A6/S6/RS6/allroad (4F) the N360 is part of the steering column and is not available separately from the Audi at this time.\nSee TSB / TPI 2040593 for possible part/software update when found in Audi Q7 and A6 (2005 to 2015).\nhttps://static.nhtsa.gov/odi/tsbs/2015/MC-10120042-9999.pdf  NHTSA\nVehicles equipped with Immobilizer 4C or higher will require an online connection with VW/Audi/Bentley to correctly adapt the new N360 to the vehicle. erWin offers some Immobilizer and Pass-Thru solutions which are mentioned under the notes section of our Official Factory Repair Information page.\nDeğiştirin / Yenileyin: ment with a used N360 is not supported.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/00288"
+}

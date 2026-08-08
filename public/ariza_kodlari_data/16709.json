@@ -1,0 +1,34 @@
+{
+  "code": "16709",
+  "vagCode": "16709",
+  "title": "16709 - 16709/P0325",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "VW Tiguan / Touareg / Audi Q7"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Irregular rpm",
+    "Drivability problems",
+    "Loss of power",
+    "Engine damage"
+  ],
+  "commonCauses": [
+    "Circuit G61 short to Ground",
+    "Circuit G61 short to Power",
+    "Circuit G61 open",
+    "G61 improperly torqued",
+    "G61 damaged",
+    "Control Module damaged"
+  ],
+  "stepByStepSolution": [
+    "Torque Knock Sensör Okuma Değerleri 1 (G61) to specifications",
+    "Kontrol edin:  wiring and connections",
+    "Kontrol edin:  Knock Sensör Okuma Değerleri 1 (G61) and Knock Control"
+  ],
+  "technicalNotes": "This feature search for unusual (spontaneous) combustion. The sensor detects unusual vibrations and based on that it generates a voltage. Is this voltage outside a certain limit a dtc will be set.\n2007-2009 Touareg with 3.6L BHK engine, see TB 01-14-05 or TPI 20142019434 for possible updated hardware.\nhttps://static.nhtsa.gov/odi/tsbs/2014/SB-10069616-2280.pdf  NHTSA",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/16709/P0325"
+}
