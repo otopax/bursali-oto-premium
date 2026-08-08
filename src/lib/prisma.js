@@ -132,7 +132,7 @@ const basePrismaSingleton = () => {
 
 const globalForPrisma = globalThis;
 
-// Uretimde de global'de sakla: Vercel warm lambda'lari module scope'u yeniden
+// Uretimde de global'de sakla: Production container warm instance'lari module scope'u yeniden
 // kullanir; global saklama HMR (dev) ve yeniden import senaryolarinda
 // coklu istemci olusmasini engeller.
 const basePrisma = globalForPrisma.__basePrisma ?? basePrismaSingleton();

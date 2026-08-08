@@ -157,7 +157,7 @@ export class ChatService {
     // 5. Context Window Manager (Token Optimization)
     const optimizedMessages = this.optimizeContextWindow(messages, 12);
 
-    // 6. Execute Model Call via AI Provider (Vercel AI SDK Abstracted)
+    // 6. Execute Model Call via AI Provider (AI SDK Abstracted)
     const result = this.aiProvider.streamResponse({
       systemPrompt,
       messages: optimizedMessages,

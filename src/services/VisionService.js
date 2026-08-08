@@ -105,7 +105,7 @@ export class VisionService {
       // AI SDK Image type takes string (base64) or Uint8Array or URL. Wait, the `ai` docs: 
       // `image: new URL('data:image/jpeg;base64,...')` or Uint8Array. 
       // Actually `image: new URL('data:image/jpeg;base64,' + optimizedBase64)` is standard.
-      // Wait, Vercel AI SDK 3.x/4.x requires `image: new URL(...)` or buffer. Let's use Buffer.
+      // Wait, AI SDK 3.x/4.x requires `image: new URL(...)` or buffer. Let's use Buffer.
       const imageBuffer = Buffer.from(optimizedBase64, 'base64');
 
       const { object, usage } = await generateObject({

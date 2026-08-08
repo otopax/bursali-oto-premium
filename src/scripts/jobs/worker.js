@@ -23,14 +23,20 @@ const shutdown = async () => {
 process.on('SIGINT', shutdown);
 process.on('SIGTERM', shutdown);
 
-// Simple Health Check Endpoint for Railway/Vercel to ensure Worker is alive
+// Simple Health Check Endpoint for Railway to ensure Worker is alive
 const server = http.createServer((req, res) => {
-  if (req.url === '/health' || req.url === '/') {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Worker is alive');
+  if (
+    req.url === '/health' ||
+    req.url === '/api/health' ||
+    req.url === '/api/health/live' ||
+    req.url === '/api/health/ready' ||
+    req.url === '/'
+  ) {
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ status: 'ok', worker: true, timestamp: new Date().toISOString() }));
   } else {
     res.writeHead(404);
-    res.end('Not found');
+    res.end();
   }
 });
 

@@ -6,7 +6,13 @@ const { relayEvents } = require('./OutboxRelay');
 // Railway Healthcheck Server for Worker Container
 const port = process.env.PORT || 8080;
 const server = http.createServer((req, res) => {
-  if (req.url === '/api/health' || req.url === '/health' || req.url === '/') {
+  if (
+    req.url === '/api/health' ||
+    req.url === '/api/health/live' ||
+    req.url === '/api/health/ready' ||
+    req.url === '/health' ||
+    req.url === '/'
+  ) {
     res.writeHead(200, { 'Content-Type': 'application/json' });
     res.end(JSON.stringify({ status: 'ok', worker: true, timestamp: new Date().toISOString() }));
   } else {

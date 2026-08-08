@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 export default function GoogleAnalytics({ gaId }) {
   const [allowed, setAllowed] = useState(false);
   
-  // Eğer env boş gelirse (Vercel production vb.) hardcoded fallback kullan
+  // Eğer env boş gelirse hardcoded fallback kullan
   const effectiveGaId = gaId || "G-3SNV6H5568";
 
   useEffect(() => {
