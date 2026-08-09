@@ -68,7 +68,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function FaultCodePage({ params }) {
-  const { code } = await params;
+  const { code, locale } = await params;
   const upperCode = (code || '').toUpperCase();
   let fault = await getCachedFaultCode(code);
 
