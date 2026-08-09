@@ -1,57 +1,77 @@
-const IORedis = require('ioredis');
+import Redis from 'ioredis';
 
-let redisClient = null;
+let redis = null;
 
-function getLimiterClient() {
-  const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
-  if (isBuildPhase) return null;
-
-  if (!redisClient) {
-    const url = process.env.REDIS_URL;
-    if (!url || url.includes('localhost') || url.includes('127.0.0.1')) {
-      return null;
-    }
-    try {
-      redisClient = new IORedis(url, {
-        lazyConnect: true,
-        enableReadyCheck: false,
-        maxRetriesPerRequest: 1
-      });
-      redisClient.on('error', (err) => console.error('[Redis rateLimiter] bağlantı hatası:', err.message));
-      redisClient.defineCommand('atomicRateLimit', {
-        numberOfKeys: 1,
-        lua: `
-          local current = redis.call('incr', KEYS[1])
-          if current == 1 then
-            redis.call('expire', KEYS[1], tonumber(ARGV[1]))
-          end
-          if current > tonumber(ARGV[2]) then
-            return 0
-          end
-          return 1
-        `
-      });
-    } catch (e) {
-      return null;
-    }
-  }
-  return redisClient;
+if (process.env.REDIS_URL) {
+  try {
+    redis = new Redis(process.env.REDIS_URL, {
+      maxRetriesPerRequest: 1,
+      connectTimeout: 2000,
+      lazyConnect: true
+    });
+  } catch (e) {}
 }
 
-class RateLimiter {
-  static async check(ipAddress, endpoint = 'global', limit = 100, windowSeconds = 60) {
-    if (!ipAddress) return true;
-    const client = getLimiterClient();
-    if (!client) return true; // Fail-open during build or when Redis is unavailable
+const memoryRateLimit = new Map();
 
+/**
+ * Rate Limiter and Anti-bot protection using Redis sliding window with memory fallback
+ * @param {string} identifier - Unique client ID (IP address or API key)
+ * @param {number} [limit=60] - Max requests allowed per window
+ * @param {number} [windowSeconds=60] - Window size in seconds
+ * @returns {Promise<{ success: boolean, remaining: number, resetSeconds: number }>}
+ */
+export async function checkRateLimit(identifier, limit = 60, windowSeconds = 60) {
+  const key = `ratelimit:${identifier}`;
+  const now = Math.floor(Date.now() / 1000);
+
+  // 1. Try Redis Sliding Window Rate Limit
+  if (redis && redis.status === 'ready') {
     try {
-      const key = `ratelimit:${endpoint}:${ipAddress}`;
-      const allowed = await client.atomicRateLimit(key, windowSeconds, limit);
-      return allowed === 1;
+      const tx = redis.multi();
+      tx.incr(key);
+      tx.ttl(key);
+      const results = await tx.exec();
+
+      const count = results[0][1];
+      const ttl = results[1][1];
+
+      if (count === 1 || ttl === -1) {
+        await redis.expire(key, windowSeconds);
+      }
+
+      const remaining = Math.max(0, limit - count);
+      const success = count <= limit;
+
+      return {
+        success,
+        remaining,
+        resetSeconds: ttl > 0 ? ttl : windowSeconds
+      };
     } catch (e) {
-      return true; // Fail-open on Redis error
+      console.warn('Redis rate limit error, falling back to memory:', e.message);
     }
   }
-}
 
-module.exports = { RateLimiter };
+  // 2. Memory Fallback Rate Limiter
+  let record = memoryRateLimit.get(key);
+  if (!record || now > record.resetAt) {
+    record = {
+      count: 1,
+      resetAt: now + windowSeconds
+    };
+  } else {
+    record.count++;
+  }
+
+  memoryRateLimit.set(key, record);
+
+  const remaining = Math.max(0, limit - record.count);
+  const success = record.count <= limit;
+
+  return {
+    success,
+    remaining,
+    resetSeconds: Math.max(0, record.resetAt - now)
+  };
+}

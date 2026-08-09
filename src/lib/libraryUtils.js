@@ -2,7 +2,12 @@ import fs from 'fs';
 import path from 'path';
 
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
-const FUSEBOX_DIR = path.join(PUBLIC_DIR, 'fusebox_data');
+const SRC_DATA_DIR = path.join(process.cwd(), 'src', 'data');
+
+const FUSEBOX_DIR = fs.existsSync(path.join(SRC_DATA_DIR, 'fuseboxes'))
+  ? path.join(SRC_DATA_DIR, 'fuseboxes')
+  : path.join(PUBLIC_DIR, 'fusebox_data');
+
 const MANUALS_DIR = path.join(PUBLIC_DIR, 'startmycar_manuals');
 
 export function getAvailableBrands() {

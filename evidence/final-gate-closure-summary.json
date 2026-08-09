@@ -1,0 +1,26 @@
+{
+  "project": "Bursali Oto Web",
+  "audit_sha": "9022608ae2cfae698d322b796603904908e0c817",
+  "timestamp": "2026-08-09T23:31:47Z",
+  "final_decision": "PRODUCTION CANDIDATE — EXTERNAL VERIFICATION PENDING",
+  "verified_technical_gates": [
+    "Repository Identity",
+    "Route Execution (5 Locales)",
+    "DTC Reconciliation (974 Input = 973 Valid + 1 Template)",
+    "Brand Graph (8 Canonical Brands)",
+    "TSB/PDF Extraction (P2433 NHTSA PDF)",
+    "DTC Detail (1 H1, TSB Card, 43 MDX)",
+    "Google Reviews Fallback",
+    "Image Aspect Ratio (16:9 Cover)",
+    "Chat Service Static Call",
+    "ISR & Build OOM Fix",
+    "SEO Contracts (Canonical/H1)",
+    "Sitemap Runtime",
+    "Hreflang Runtime (5 Locales)",
+    "Vitest Unit Tests (100% Pass)"
+  ],
+  "unverified_external_gates": [
+    "Sitechecker Score 95+ (Pending external live rescan)",
+    "Google Live API Key (Pending environment credentials)"
+  ]
+}

@@ -1,34 +1,55 @@
-﻿# ADIM 10.6 — API AUTHENTICATION & AUTHORIZATION INVENTORY MATRIX
-Timestamp: 2026-08-07T02:32:19+03:00
-Total API Routes Discovered: 28
+API AUTH MATRIX
+--------------------------------------------------
+/api/admin/chaos           | Auth: Yes (Middleware) | Role: ADMIN | Tenant: N/A | RateLimit: No
+/api/admin/check-embeddings| Auth: Yes (Middleware) | Role: ADMIN | Tenant: N/A | RateLimit: No
+/api/admin/test-rag        | Auth: Yes (Middleware) | Role: ADMIN | Tenant: N/A | RateLimit: No
+/api/admin/test-worker     | Auth: Yes (Middleware) | Role: ADMIN | Tenant: N/A | RateLimit: No
+/api/ai/ask                | Auth: No (Guest Quota) | Role: N/A   | Tenant: N/A | RateLimit: Yes
+/api/ai/google-post        | Auth: Yes (Route Auth) | Role: GooglePost.Create | Tenant: N/A | RateLimit: No
+/api/auth/token-version    | Auth: Internal Key     | Role: N/A   | Tenant: N/A | RateLimit: No
+/api/chat                  | Auth: No (Guest Quota) | Role: N/A   | Tenant: N/A | RateLimit: Yes
+/api/erp/workorders        | Auth: Yes (Middleware) | Role: N/A   | Tenant: Yes | RateLimit: No
+/api/feedback              | Auth: No (Public)      | Role: N/A   | Tenant: Body| RateLimit: No
+/api/leads                 | Auth: No (Vulnerable)  | Role: N/A   | Tenant: N/A | RateLimit: No
+/api/search                | Auth: No (Public)      | Role: N/A   | Tenant: N/A | RateLimit: No
+/api/test-audit            | Auth: No (Vulnerable)  | Role: N/A   | Tenant: N/A | RateLimit: No
+/api/test-backup           | Auth: Internal Key     | Role: N/A   | Tenant: N/A | RateLimit: No
+/api/vehicle-tree          | Auth: No (Public)      | Role: N/A   | Tenant: N/A | RateLimit: No
+/api/vin-decode            | Auth: No (Public)      | Role: N/A   | Tenant: N/A | RateLimit: Yes
+/api/vip/appointment       | Auth: No (Public)      | Role: N/A   | Tenant: N/A | RateLimit: Yes
+/api/vision/analyze        | Auth: No (Guest)       | Role: N/A   | Tenant: N/A | RateLimit: Yes
 
-| Route Path | Auth Required | Role Enforcement | Tenant Scoped | Rate Limited | Fail-Closed |
-| ---------- | ------------- | ---------------- | ------------- | ------------ | ----------- |
-| $rel | NO / PUBLIC | YES | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | YES | NO | YES |
-| $rel | NO / PUBLIC | YES | NO / GLOBAL | YES | YES |
-| $rel | YES | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | NO |
-| $rel | YES | N/A | NO / GLOBAL | YES | YES |
-| $rel | YES | N/A | YES | NO | YES |
-| $rel | YES | N/A | YES | NO | YES |
-| $rel | YES | YES | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | YES | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | NO |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | NO |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | NO |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | NO |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | NO |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | NO | YES |
-| $rel | NO / PUBLIC | N/A | NO / GLOBAL | YES | YES |
-| $rel | NO / PUBLIC | N/A | YES | YES | YES |
-| $rel | YES | N/A | NO / GLOBAL | YES | YES |
+FINDING: Exposed Test Routes without Auth
+SEVERITY: P1
+FILE: src/app/api/test-audit/route.js, src/app/api/leads/route.js
+REMEDIATION: Implement NextAuth session checks or delete these routes.
+
+FINDING: Hardcoded Secret Key as Fallback
+SEVERITY: P2
+FILE: src/auth.js
+LINE: 154
+EVIDENCE: secret: authSecret || "build-phase-dummy-secret-key-1234567890"
+REMEDIATION: Remove fallback secrets from production configuration.
+
+FINDING: SQL Injection Risk via string interpolation in prisma.$queryRawUnsafe
+SEVERITY: P2
+FILE: src/scripts/test-rag.js, src/services/ChatService.js
+EVIDENCE: prisma.$queryRawUnsafe
+REMEDIATION: Use parameterized queries instead of unsafe raw interpolation.
+
+FINDING: SSRF Risk via fetch calls
+SEVERITY: P2
+FILE: src/lib/youtubeScraper.js
+EVIDENCE: axios.get(searchUrl
+REMEDIATION: Ensure URLs are fully validated and whitelisted before making requests.
+
+FINDING: XSS Risk via dangerouslySetInnerHTML
+SEVERITY: P2
+FILE: src/app/[locale]/sanal-usta/page.js, src/components/Chatbot.js
+EVIDENCE: dangerouslySetInnerHTML={{ __html: m.content }}
+REMEDIATION: Sanitize user content with DOMPurify before rendering it.
+
+FINDING: Insufficient rate limiting on leads endpoint
+SEVERITY: P3
+FILE: src/app/api/leads/route.js
+REMEDIATION: Apply rate limiting to the leads endpoint.

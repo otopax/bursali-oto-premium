@@ -5,8 +5,40 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { IContentRepository } from '@/application/interfaces/IContentRepository';
 
-// In-Memory RAM Cache to avoid re-reading 978 JSON files from disk on every HTTP request
 const memoryPostsCache = new Map();
+
+// Load Automotive Terms Dictionary for EN -> TR translation
+let termsDict = {};
+try {
+  const termsPath = path.join(process.cwd(), 'src', 'data', 'automotive_terms.json');
+  if (fs.existsSync(termsPath)) {
+    termsDict = JSON.parse(fs.readFileSync(termsPath, 'utf-8'));
+  }
+} catch (e) {}
+
+function translateTerms(text) {
+  if (!text || typeof text !== 'string') return text;
+  let translated = text;
+  Object.entries(termsDict).forEach(([en, tr]) => {
+    const regex = new RegExp(`\\b${en}\\b`, 'gi');
+    translated = translated.replace(regex, tr);
+  });
+  return translated;
+}
+
+function extractTsbPdf(technicalNotes) {
+  if (!technicalNotes) return { pdfUrl: null, tsbNumber: null };
+  const pdfRegex = /(https?:\/\/[^\s]+\.pdf)/gi;
+  const tsbRegex = /(?:TSB|TPI|MC)[-:\s]*([A-Z0-9-]+)/gi;
+
+  const pdfMatch = technicalNotes.match(pdfRegex);
+  const tsbMatch = technicalNotes.match(tsbRegex);
+
+  return {
+    pdfUrl: pdfMatch ? pdfMatch[0] : null,
+    tsbNumber: tsbMatch ? tsbMatch[0] : null
+  };
+}
 
 export class MarkdownContentRepository extends IContentRepository {
   constructor() {
@@ -16,42 +48,62 @@ export class MarkdownContentRepository extends IContentRepository {
   }
 
   formatJsonFaultToPost(id, json) {
-    const brandStr = Array.isArray(json.brand) ? json.brand[0] : (json.brand || 'Volkswagen');
-    const modelStr = Array.isArray(json.models) ? json.models[0] : (json.models || 'Genel');
+    const rawBrand = Array.isArray(json.brand) ? json.brand[0] : (json.brand || 'Volkswagen');
+    const rawModel = Array.isArray(json.models) ? json.models[0] : (json.models || 'Genel');
     
-    const symptomsList = Array.isArray(json.symptoms) && json.symptoms.length > 0
-      ? `<h3>Olası Belirtiler</h3><ul>${json.symptoms.map(s => `<li>${s}</li>`).join('')}</ul>`
+    // Normalize Duplicate Titles (e.g. "P0030 - P0030")
+    let title = json.title || id;
+    if (title.match(/^([A-Z0-9]+)\s*-\s*\1$/i)) {
+      const code = id.toUpperCase();
+      const trDesc = translateTerms(json.description || json.title);
+      title = trDesc && trDesc !== title ? `${code} - ${trDesc}` : `${code} - Arıza Kodu Teşhis Rehberi`;
+    }
+
+    const symptoms = Array.isArray(json.symptoms) ? json.symptoms.map(translateTerms) : [];
+    const commonCauses = Array.isArray(json.commonCauses) ? json.commonCauses.map(translateTerms) : [];
+    const solutions = Array.isArray(json.stepByStepSolution) ? json.stepByStepSolution.map(translateTerms) : [];
+
+    const symptomsList = symptoms.length > 0
+      ? `<h3>Olası Belirtiler</h3><ul>${symptoms.map(s => `<li>${s}</li>`).join('')}</ul>`
       : '';
 
-    const causesList = Array.isArray(json.commonCauses) && json.commonCauses.length > 0
-      ? `<h3>Kök Nedenler ve Muhtemel Sebepler</h3><ul>${json.commonCauses.map(c => `<li>${c}</li>`).join('')}</ul>`
+    const causesList = commonCauses.length > 0
+      ? `<h3>Kök Nedenler ve Muhtemel Sebepler</h3><ul>${commonCauses.map(c => `<li>${c}</li>`).join('')}</ul>`
       : '';
 
-    const solutionsList = Array.isArray(json.stepByStepSolution) && json.stepByStepSolution.length > 0
-      ? `<h3>Adım Adım Servis Çözüm Adımları</h3><ul>${json.stepByStepSolution.map(sol => `<li>${sol}</li>`).join('')}</ul>`
+    const solutionsList = solutions.length > 0
+      ? `<h3>Adım Adım Servis Çözüm Adımları</h3><ul>${solutions.map(sol => `<li>${sol}</li>`).join('')}</ul>`
       : '';
 
     const notesBlock = json.technicalNotes
-      ? `<blockquote style="background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--accent-gold); padding: 1rem; margin-top: 1.5rem;"><strong>VAG Grubu Özel Servis Notu:</strong><p>${json.technicalNotes}</p></blockquote>`
+      ? `<blockquote style="background: rgba(212, 175, 55, 0.1); border-left: 4px solid var(--accent-gold); padding: 1rem; margin-top: 1.5rem;"><strong>VAG Grubu Özel Servis Notu:</strong><p>${translateTerms(json.technicalNotes)}</p></blockquote>`
       : '';
 
     const contentHtml = `<div>${symptomsList}${causesList}${solutionsList}${notesBlock}</div>`;
+    const { pdfUrl, tsbNumber } = extractTsbPdf(json.technicalNotes);
 
     return {
       id,
-      title: json.title || id,
-      brand: brandStr.split('/')[0].trim(),
-      model: modelStr.split('/')[0].trim(),
-      brands: json.brands || [brandStr],
-      models: json.models || [modelStr],
+      code: id.toUpperCase(),
+      title,
+      brand: rawBrand.split('/')[0].trim(),
+      model: rawModel.split('/')[0].trim(),
+      brands: json.brands || [rawBrand],
+      models: json.models || [rawModel],
       date: '2026-08-01',
       riskLevel: json.severity || 'Orta-Yüksek',
       canDrive: 'Servise Danışın',
       estimatedTime: '2-4 Saat',
       estimatedCost: 'Tespitten Sonra',
-      potentialCauses: Array.isArray(json.commonCauses) ? json.commonCauses.join(', ') : json.commonCauses,
+      potentialCauses: commonCauses.join(', '),
+      symptoms,
+      commonCauses,
+      stepByStepSolution: solutions,
+      technicalNotes: json.technicalNotes,
+      pdfUrl,
+      tsbNumber,
       contentHtml,
-      rawContent: `${json.title}\n${json.technicalNotes || ''}`,
+      rawContent: `${title}\n${json.technicalNotes || ''}`,
       isDtcJson: true
     };
   }
@@ -96,8 +148,9 @@ export class MarkdownContentRepository extends IContentRepository {
     if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
       const jsonFiles = fs.readdirSync(this.jsonFaultsDir);
       jsonFiles.forEach(file => {
-        if (file.endsWith('.json') && !file.startsWith('_')) {
-          const id = file.replace('.json', '');
+        if (file.endsWith('.json') && !file.startsWith('_') && !file.toLowerCase().includes('template')) {
+          const codeMatch = file.match(/^([A-Z0-9]{4,6})/i);
+          const id = codeMatch ? codeMatch[1].toUpperCase() : file.replace('.json', '');
           try {
             const rawData = fs.readFileSync(path.join(this.jsonFaultsDir, file), 'utf-8');
             const jsonData = JSON.parse(rawData);
@@ -128,8 +181,10 @@ export class MarkdownContentRepository extends IContentRepository {
     if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
       const jsonFiles = fs.readdirSync(this.jsonFaultsDir);
       jsonFiles.forEach(file => {
-        if (file.endsWith('.json') && !file.startsWith('_')) {
-          ids.push({ params: { slug: file.replace('.json', '') } });
+        if (file.endsWith('.json') && !file.startsWith('_') && !file.toLowerCase().includes('template')) {
+          const codeMatch = file.match(/^([A-Z0-9]{4,6})/i);
+          const id = codeMatch ? codeMatch[1].toUpperCase() : file.replace('.json', '');
+          ids.push({ params: { slug: id } });
         }
       });
     }
@@ -164,12 +219,22 @@ export class MarkdownContentRepository extends IContentRepository {
     }
 
     if (folder === 'faults' && fs.existsSync(this.jsonFaultsDir)) {
-      const jsonPath = path.join(this.jsonFaultsDir, `${slug}.json`);
+      const cleanSlug = slug.toUpperCase();
+      let jsonPath = path.join(this.jsonFaultsDir, `${cleanSlug}.json`);
+      
+      if (!fs.existsSync(jsonPath)) {
+        const jsonFiles = fs.readdirSync(this.jsonFaultsDir);
+        const matchedFile = jsonFiles.find(f => f.toUpperCase().startsWith(cleanSlug) && !f.toLowerCase().includes('template'));
+        if (matchedFile) {
+          jsonPath = path.join(this.jsonFaultsDir, matchedFile);
+        }
+      }
+
       if (fs.existsSync(jsonPath)) {
         try {
           const rawData = fs.readFileSync(jsonPath, 'utf-8');
           const jsonData = JSON.parse(rawData);
-          return this.formatJsonFaultToPost(slug, jsonData);
+          return this.formatJsonFaultToPost(cleanSlug, jsonData);
         } catch (e) {}
       }
     }

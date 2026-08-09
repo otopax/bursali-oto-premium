@@ -52,8 +52,6 @@ export async function generateMetadata({ params }) {
 }
 
 export async function generateStaticParams() {
-  // ISR on-demand generation: Build anında SSG yükünü hafifletmek için boş dizi dönülür.
-  // dynamicParams = true sayesinde tüm sayfalar ilk kullanıcı/bot isteğinde anında üretilip cache'lenir.
   return [];
 }
 
@@ -273,6 +271,38 @@ export default async function KutuphaneFaultDetailPage({ params }) {
             <span style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>🕒 Okuma süresi: ~{readingTime} dk</span>
           </div>
         </header>
+
+        {postData.pdfUrl && (
+          <div style={{
+            background: 'rgba(212, 175, 55, 0.08)',
+            border: '1px solid var(--accent-gold)',
+            borderRadius: '16px',
+            padding: '1.5rem 2rem',
+            marginBottom: '3rem',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '1rem'
+          }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <span style={{ fontSize: '1.5rem' }}>📄</span>
+              <div>
+                <h3 style={{ color: 'var(--accent-gold)', margin: 0, fontSize: '1.2rem' }}>İlgili Üretici TSB / Servis Bülteni (PDF)</h3>
+                <span style={{ fontSize: '0.85rem', color: '#94a3b8' }}>Kaynak: {postData.tsbNumber || 'Resmi Servis Dokümanı (NHTSA / VAG)'}</span>
+              </div>
+            </div>
+            <p style={{ color: '#ccc', fontSize: '0.95rem', margin: 0 }}>
+              Bu arıza kodu için resmi üretici tarafından yayınlanmış teknik bülten (TSB) bağlantısını aşağıdan inceleyebilirsiniz.
+            </p>
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a href={postData.pdfUrl} target="_blank" rel="noopener noreferrer" className="btn btn-gold" style={{ display: 'inline-block', padding: '0.7rem 1.4rem', textDecoration: 'none', fontWeight: 'bold' }}>
+                TSB Bültenini Görüntüle (PDF) →
+              </a>
+              <a href={postData.pdfUrl} download target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', padding: '0.7rem 1.4rem', color: '#fff', border: '1px solid #444', borderRadius: '8px', textDecoration: 'none' }}>
+                PDF İndir
+              </a>
+            </div>
+          </div>
+        )}
 
         {postData.riskLevel && (
           <div style={{
