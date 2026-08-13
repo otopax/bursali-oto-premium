@@ -12,36 +12,95 @@ export class SearchEngine {
       return [];
     }
 
-    // Arama terimini Prisma'nın beklediği formata çeviriyoruz (Örn: "radyo|klima")
-    // "radyo sigortası" -> "radyo | sigortası"
     const formattedQuery = query.trim().split(/\s+/).join(' | ');
 
     try {
-      const results = await prisma.fuse.findMany({
-        where: {
-          OR: [
-            { description: { search: formattedQuery } },
-            { type: { search: formattedQuery } }
-          ]
-        },
+      // FAST PATH: Raw SQL with 'english' GIN index
+      // Option C: Force GIN scan via MATERIALIZED CTE to avoid planner bug, then sort by id
+      const rawResults = await prisma.$queryRaw`
+        WITH matches AS MATERIALIZED (
+          SELECT id
+          FROM "public"."Fuse"
+          WHERE to_tsvector('english', coalesce(type, '') || ' ' || coalesce(description, '')) @@ to_tsquery('english', ${formattedQuery})
+        )
+        SELECT id
+        FROM matches
+        ORDER BY id ASC
+        LIMIT ${limit}
+      `;
+      
+      const ids = rawResults.map(r => r.id);
+      
+      if (ids.length === 0) {
+        return [];
+      }
+
+      // Prisma Hydration
+      const hydratedResults = await prisma.fuse.findMany({
+        where: { id: { in: ids } },
         include: {
           fuseBox: {
             include: {
               vehicle: {
-                include: {
-                  manufacturer: true
-                }
+                include: { manufacturer: true }
               }
             }
           }
-        },
-        take: limit,
+        }
       });
 
-      return results;
+      // Semantic Order Restoration
+      const resultsMap = new Map();
+      hydratedResults.forEach(item => resultsMap.set(item.id, item));
+      
+      const orderedResults = [];
+      for (const id of ids) {
+        if (resultsMap.has(id)) {
+          orderedResults.push(resultsMap.get(id));
+        }
+      }
+
+      return orderedResults;
+
     } catch (error) {
-      console.error("SearchEngine Error:", error);
-      throw new Error("Arama sırasında veritabanı hatası oluştu.");
+      // Check if it's a missing column error (42703 - undefined_column)
+      // This allows graceful fallback only if the DDL hasn't been applied yet
+      const isMissingColumn = error.meta && error.meta.code === '42703';
+      const isUnknownFunction = error.meta && error.meta.code === '42883'; // Just in case
+      
+      if (!isMissingColumn && !isUnknownFunction) {
+        console.error("SearchEngine Fast Path Error (Infrastructure/DB failure):", error);
+        throw new Error("Arama sırasında veritabanı hatası oluştu.");
+      }
+      
+      console.warn("SearchEngine Fast Path failed (Missing column/function). Falling back to Legacy Prisma Search.");
+
+      // LEGACY FALLBACK
+      try {
+        const legacyResults = await prisma.fuse.findMany({
+          where: {
+            OR: [
+              { description: { search: formattedQuery } },
+              { type: { search: formattedQuery } }
+            ]
+          },
+          include: {
+            fuseBox: {
+              include: {
+                vehicle: {
+                  include: { manufacturer: true }
+                }
+              }
+            }
+          },
+          take: limit,
+        });
+
+        return legacyResults;
+      } catch (fallbackError) {
+        console.error("SearchEngine Legacy Fallback Error:", fallbackError);
+        throw new Error("Arama sırasında veritabanı hatası oluştu.");
+      }
     }
   }
 
