@@ -45,7 +45,7 @@ export async function GET(request) {
     const totalMs = Date.now() - globalStartTimer;
     
     // V4.0 Observability: Log Search Engine Performance
-    logger.info('Search Query Executed', { 
+    logger.app.info('Search Query Executed', { 
       query, 
       type, 
       totalTimeMs: totalMs,
@@ -61,7 +61,7 @@ export async function GET(request) {
     });
 
   } catch (error) {
-    logger.error('Search API Error', { error: error.message, stack: error.stack });
+    logger.app.error('Search API Error', { error: error.message, stack: error.stack });
     return NextResponse.json(
       { error: 'Arama motorunda geçici bir hata oluştu.' },
       { status: 500 }
