@@ -1,6 +1,6 @@
 import { businessData } from '@/lib/business';
 
-export default function StructuredData({ breadcrumbs = [], video = null, reviews = null, product = null, techArticle = null }) {
+export default function StructuredData({ breadcrumbs = [], video = null, reviews = null, product = null, techArticle = null, showFaq = false, showEmergency = false }) {
   const business = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
@@ -39,7 +39,7 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
     }
   };
 
-  const emergencyService = {
+  const emergencyService = showEmergency ? {
     "@context": "https://schema.org",
     "@type": "EmergencyService",
     "@id": `${businessData.url}/#emergency`,
@@ -57,9 +57,9 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
       opens: "00:00",
       closes: "23:59"
     }
-  };
+  } : null;
 
-  const faq = {
+  const faq = showFaq ? {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     mainEntity: businessData.faq.map(item => ({
@@ -70,7 +70,7 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
         text: item.answer
       }
     }))
-  };
+  } : null;
 
   const breadcrumbData = breadcrumbs.length > 0 ? {
     "@context": "https://schema.org",
@@ -147,8 +147,8 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(business) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyService) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+      {emergencyService && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(emergencyService) }} />}
+      {faq && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />}
       {breadcrumbData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }} />}
       {videoData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoData) }} />}
       {reviewData && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewData) }} />}
@@ -157,3 +157,4 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
     </>
   );
 }
+

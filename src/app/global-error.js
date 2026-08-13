@@ -10,6 +10,9 @@ export default function GlobalError({ error, reset }) {
 
   return (
     <html>
+      <head>
+        <title>Kritik Hata | Bursalı Oto Servis</title>
+      </head>
       <body>
         <div style={{
           minHeight: '100vh',

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Reviews() {
   const [reviews, setReviews] = useState([]);
@@ -93,7 +94,7 @@ export default function Reviews() {
             border: '1px solid rgba(255,255,255,0.05)', 
             display: 'flex', 
             flexDirection: 'column', 
-            justify: 'space-between' 
+            justifyContent: 'space-between' 
           }}>
             <div>
               <div className="review-stars" style={{ color: 'var(--accent-gold)', letterSpacing: '2px', marginBottom: '1rem' }}>
@@ -105,7 +106,7 @@ export default function Reviews() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '1rem' }}>
               {review.profile_photo_url ? (
-                <img src={review.profile_photo_url} alt={review.author_name} width={40} height={40} style={{ borderRadius: '50%', objectFit: 'cover' }} loading="lazy" />
+                <Image src={review.profile_photo_url} alt={review.author_name} width={40} height={40} style={{ borderRadius: '50%', objectFit: 'cover' }} />
               ) : (
                 <div style={{ width: 40, height: 40, borderRadius: '50%', background: 'rgba(212, 175, 55, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--accent-gold)', fontWeight: 'bold' }}>
                   {review.author_name ? review.author_name.charAt(0) : 'G'}

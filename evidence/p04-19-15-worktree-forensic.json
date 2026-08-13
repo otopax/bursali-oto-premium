@@ -1,0 +1,40 @@
+{
+  "local_head_sha": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+  "railway_sha": "093b38ca",
+  "worktree_clean": false,
+  "staged_changes": [],
+  "unstaged_changes": [
+    "tests/e2e/pdf.spec.js"
+  ],
+  "untracked_files": [],
+  "logger_fix": {
+    "present_in_head": "DISPROVEN",
+    "present_only_in_worktree": "PROVEN",
+    "evidence": [
+      "HEAD contains logger.error",
+      "Worktree contains logger.app.error"
+    ]
+  },
+  "deployment_candidate": {
+    "exact_candidate_sha": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+    "all_changes_committed": "DISPROVEN",
+    "unintended_changes": "UNKNOWN",
+    "ready": false
+  },
+  "production_mutations": {
+    "ddl": 0,
+    "dml": 0
+  },
+  "contradictions": [],
+  "facts": [
+    "LOCAL HEAD SHA: 4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+    "Git status generated.",
+    "Worktree Clean: false",
+    "Unstaged changes: 1",
+    "LOGGER_FIX_UNCOMMITTED = PROVEN",
+    "Deployment candidate is NOT ready because there are uncommitted changes in the worktree."
+  ],
+  "inferences": [],
+  "opinions": [],
+  "final": "HARD_STOP"
+}

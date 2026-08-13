@@ -1,0 +1,170 @@
+{
+  "benchmark": {
+    "radio": {
+      "ILIKE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 0.683,
+        "PLANNING_TIME_MS": 0.467,
+        "BUFFERS_HIT": 16,
+        "BUFFERS_READ": 7,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      },
+      "FTS_SIMPLE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 3.023,
+        "PLANNING_TIME_MS": 0.087,
+        "BUFFERS_HIT": 25,
+        "BUFFERS_READ": 15,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      }
+    },
+    "pump": {
+      "ILIKE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 0.917,
+        "PLANNING_TIME_MS": 0.142,
+        "BUFFERS_HIT": 24,
+        "BUFFERS_READ": 6,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      },
+      "FTS_SIMPLE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 2.43,
+        "PLANNING_TIME_MS": 0.04,
+        "BUFFERS_HIT": 25,
+        "BUFFERS_READ": 6,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      }
+    },
+    "injector": {
+      "ILIKE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 3.115,
+        "PLANNING_TIME_MS": 0.14,
+        "BUFFERS_HIT": 65,
+        "BUFFERS_READ": 37,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      },
+      "FTS_SIMPLE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 9.876,
+        "PLANNING_TIME_MS": 0.033,
+        "BUFFERS_HIT": 61,
+        "BUFFERS_READ": 47,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      }
+    },
+    "relay": {
+      "ILIKE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 0.057,
+        "PLANNING_TIME_MS": 0.181,
+        "BUFFERS_HIT": 2,
+        "BUFFERS_READ": 0,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      },
+      "FTS_SIMPLE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 0.178,
+        "PLANNING_TIME_MS": 0.042,
+        "BUFFERS_HIT": 2,
+        "BUFFERS_READ": 0,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      }
+    },
+    "ecu": {
+      "ILIKE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 0.449,
+        "PLANNING_TIME_MS": 0.13,
+        "BUFFERS_HIT": 13,
+        "BUFFERS_READ": 3,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      },
+      "FTS_SIMPLE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 2.717,
+        "PLANNING_TIME_MS": 0.027,
+        "BUFFERS_HIT": 20,
+        "BUFFERS_READ": 6,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      }
+    },
+    "fuel pump": {
+      "ILIKE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 1.502,
+        "PLANNING_TIME_MS": 0.155,
+        "BUFFERS_HIT": 32,
+        "BUFFERS_READ": 15,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      },
+      "FTS_SIMPLE": {
+        "ROWS": 20,
+        "EXECUTION_TIME_MS": 4.773,
+        "PLANNING_TIME_MS": 0.036,
+        "BUFFERS_HIT": 245,
+        "BUFFERS_READ": 9,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      }
+    },
+    "zzzz_nonexistent_123456": {
+      "ILIKE": {
+        "ROWS": 0,
+        "EXECUTION_TIME_MS": 310.565,
+        "PLANNING_TIME_MS": 0.147,
+        "BUFFERS_HIT": 16020,
+        "BUFFERS_READ": 16545,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      },
+      "FTS_SIMPLE": {
+        "ROWS": 0,
+        "EXECUTION_TIME_MS": 1041.915,
+        "PLANNING_TIME_MS": 0.058,
+        "BUFFERS_HIT": 16256,
+        "BUFFERS_READ": 16535,
+        "ROWS_REMOVED_BY_FILTER": 0,
+        "ERROR": "NO"
+      }
+    }
+  },
+  "nullAnalysis": {
+    "total": 1235232,
+    "nullDescription": 231734,
+    "nullType": 1147
+  },
+  "lengthAnalysis": {
+    "min": 1,
+    "max": 6541,
+    "avg": 37.55943609254827
+  },
+  "cardinality": {
+    "distinctDescriptions": 115146
+  },
+  "stemmingTest": {
+    "simple_pump": 39366,
+    "english_pump": 39521,
+    "simple_pumps": 163,
+    "english_pumps": 39521
+  },
+  "architectureDecisions": {
+    "INDEX_STRATEGY": "Hybrid: FTS GIN index (english) on COALESCE(type, '') || ' ' || COALESCE(description, '') for semantic terms, combined with a pg_trgm GIN index for partial matching.",
+    "QUERY_NORMALIZATION": "Replace spaces with ` & ` or ` | ` depending on exact match requirements in application layer before sending to TSQUERY. Do NOT expose raw FTS to users.",
+    "MULTILINGUAL_STRATEGY": "Application-level Turkish to English dictionary mapping before query execution (e.g. radyo -> radio).",
+    "EXPECTED_LATENCY": "< 50ms with GIN indexing.",
+    "STORAGE_ESTIMATE": "Estimated 150-250MB for GIN TSVECTOR + 200MB for GIN TRGM on 1.2M rows."
+  }
+}

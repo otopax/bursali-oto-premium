@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
 import { getToken } from 'next-auth/jwt';
+import { rateLimit } from '@/lib/rate-limit';
 
 const intlMiddleware = createMiddleware(routing);
 
@@ -40,39 +41,37 @@ export async function middleware(request) {
   const isNextAuthInternal = pathname.startsWith('/api/auth');
 
   // 1.2 Chaos Engineering (Fail-Open / Resiliency Testing)
-  const chaosDelay = request.headers.get('x-chaos-delay');
-  const chaosError = request.headers.get('x-chaos-error');
-  const chaosKvFail = request.headers.get('x-chaos-kv-fail');
-  const chaosQueueFail = request.headers.get('x-chaos-queue-fail');
-  const chaosAiTimeout = request.headers.get('x-chaos-ai-timeout');
-  
-  if (chaosError === 'true' && process.env.NODE_ENV !== 'production') {
-    return new NextResponse('Chaos Engineering: Simulated Fatal Error', { status: 500 });
-  }
-  
-  if (chaosDelay) {
-    const delayMs = parseInt(chaosDelay, 10);
-    if (!isNaN(delayMs) && delayMs > 0 && delayMs <= 10000) {
-      await new Promise(resolve => setTimeout(resolve, delayMs));
+  if (process.env.NODE_ENV !== 'production') {
+    const chaosDelay = request.headers.get('x-chaos-delay');
+    const chaosError = request.headers.get('x-chaos-error');
+    const chaosKvFail = request.headers.get('x-chaos-kv-fail');
+    const chaosQueueFail = request.headers.get('x-chaos-queue-fail');
+    const chaosAiTimeout = request.headers.get('x-chaos-ai-timeout');
+    
+    if (chaosError === 'true') {
+      return new NextResponse('Chaos Engineering: Simulated Fatal Error', { status: 500 });
     }
-  }
+    
+    if (chaosDelay) {
+      const delayMs = parseInt(chaosDelay, 10);
+      if (!isNaN(delayMs) && delayMs > 0 && delayMs <= 10000) {
+        await new Promise(resolve => setTimeout(resolve, delayMs));
+      }
+    }
 
-  if (chaosKvFail) request.headers.set('x-internal-chaos-kv', chaosKvFail);
-  if (chaosQueueFail) request.headers.set('x-internal-chaos-queue', chaosQueueFail);
-  if (chaosAiTimeout) request.headers.set('x-internal-chaos-ai', chaosAiTimeout);
+    if (chaosKvFail) request.headers.set('x-internal-chaos-kv', chaosKvFail);
+    if (chaosQueueFail) request.headers.set('x-internal-chaos-queue', chaosQueueFail);
+    if (chaosAiTimeout) request.headers.set('x-internal-chaos-ai', chaosAiTimeout);
+  }
   
   // 1.5 Global Rate Limiting (Strict Fail-Closed)
   try {
     const ip = request.ip || request.headers.get('x-forwarded-for') || '127.0.0.1';
-    const { rateLimit } = await import('@/lib/rate-limit');
-    await rateLimit('global', ip);
-  } catch (err) {
-    if (err.message === 'RATE_LIMIT_EXCEEDED') {
+    const rateLimitResult = await rateLimit('global', ip);
+    if (!rateLimitResult.success) {
       return new NextResponse('Too Many Requests', { status: 429 });
     }
-    if (err.message.includes('REDIS_UNAVAILABLE')) {
-      return new NextResponse('Service Unavailable - Redis missing or down', { status: 503 });
-    }
+  } catch (err) {
     console.error('[Middleware] Rate limiting error:', err.message);
   }
   
@@ -269,7 +268,7 @@ export async function middleware(request) {
 
     const csp = `
       default-src 'self';
-      script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com;
+      script-src 'self' 'nonce-${nonce}' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com;
       style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
       img-src 'self' blob: data: https:;
       font-src 'self' data: https://fonts.gstatic.com;

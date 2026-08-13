@@ -1,0 +1,98 @@
+{
+  "target": {
+    "DATABASE_URL_REDACTED": "postgresql://admin:***@127.0.0.1:5433/bursali_oto?schema=public",
+    "DATABASE_URL_HOST": "127.0.0.1",
+    "DATABASE_URL_PORT": "5433",
+    "DATABASE_URL_DATABASE": "bursali_oto",
+    "SERVER_VERSION": "PostgreSQL 15.4 (Debian 15.4-2.pgdg120+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 12.2.0-14) 12.2.0, 64-bit",
+    "SERVER_ADDR": "172.18.0.7",
+    "SERVER_PORT": 5432,
+    "DATABASE": "bursali_oto",
+    "SCHEMA": "public",
+    "CLASSIFICATION": "LOCAL_PRODUCTION_CLONE"
+  },
+  "environment": {
+    "nextVersion": "^15.5.21"
+  },
+  "git": {
+    "cwd": "C:\\Users\\xbors\\OneDrive\\Desktop\\Bursali_Oto_Dijital_Yonetim\\Web_Sitesi\\bursali-oto-web",
+    "branch": "main",
+    "head": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+    "status": "M next.config.mjs\n M playwright.config.js\n M prisma/schema.prisma\n M src/app/[locale]/ariza-kodlari/[code]/page.js\n M src/app/[locale]/kutuphane/page.js\n M src/app/[locale]/layout.js\n M src/app/[locale]/page.js\n M src/app/global-error.js\n M src/components/HamburgerMenu.js\n M src/components/Navigation.js\n M src/components/Reviews.js\n M src/components/StructuredData.js\n M src/lib/fuseboxDb.js\n D src/lib/rateLimiter.js\n M src/middleware.js\n M tests/e2e/driver-flow.spec.js\n M tests/e2e/vip-flow.spec.js\n?? .forensic-evidence/\n?? build_offline_log.txt\n?? db_test.txt\n?? evidence/p04-gate-14-production-preflight.json\n?? evidence/p04-master-forensic.json\n?? evidence/p04-prisma-native-index-compatibility.json\n?? evidence/p04-prisma-native-index-explain.txt\n?? evidence/p04-search-architecture-decision.json\n?? evidence/p04-search-index-benchmark.json\n?? evidence/p04-search-index-explain.txt\n?? forensic_worktree_diff.patch\n?? gate_p031.ps1\n?? gate_p031_node.mjs\n?? gate_p032r.mjs\n?? gate_p033.mjs\n?? gate_p034.mjs\n?? gate_p041.cjs\n?? gate_p041_v2.cjs\n?? gate_p042.ps1\n?? gate_p042_deploy.ps1\n?? gate_p042_forensic.ps1\n?? gate_p042_lock.ps1\n?? gate_p043.ps1\n?? gate_p043_v2.ps1\n?? gate_p044_lock.ps1\n?? gate_p044_push.ps1\n?? gate_p045.cjs\n?? p04-import-report.json\n?? scripts/audit_p0410_index_benchmark.cjs\n?? scripts/audit_p0411_native_index_compat.cjs\n?? scripts/audit_p0412_remediation_forensic.cjs\n?? scripts/audit_p0413_master_forensic.cjs\n?? scripts/audit_p04141_target_identity.cjs\n?? scripts/audit_p04142_target_discovery.cjs\n?? scripts/audit_p0414_production_preflight.cjs\n?? scripts/audit_p0471_anomaly.cjs\n?? scripts/audit_p047_compatibility.cjs\n?? scripts/audit_p0481_sql_forensic.cjs\n?? scripts/audit_p048_search_forensic.cjs\n?? scripts/audit_p049_search_architecture.cjs\n?? scripts/cleanup_p04.cjs\n?? scripts/discrepancy_audit_p04.cjs\n?? scripts/import_p04.cjs\n?? standby_db_test_copy/\n?? tests/e2e/h1.spec.js\n?? tests/e2e/hreflang.spec.js\n?? tests/e2e/json-ld.spec.js\n?? tests/e2e/pdf.spec.js"
+  },
+  "prisma": {
+    "version": "^5.22.0"
+  },
+  "docker": {
+    "containers": [
+      "99917cf631a3 | bursali_web | bursali-oto-web-web | 0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp\nc5088f6171ae | bursali_pgbouncer | edoburu/pgbouncer | 0.0.0.0:6432->6432/tcp, [::]:6432->6432/tcp\nc9278d71e91e | bursali_postgres | ankane/pgvector:latest | 0.0.0.0:5433->5432/tcp, [::]:5433->5432/tcp\n7abfdf977a8d | bursali_redis | redis:7-alpine | \na76aa3de0699 | bursali_prometheus | prom/prometheus | 0.0.0.0:9090->9090/tcp, [::]:9090->9090/tcp\ne61e3f585b19 | bursali_grafana | grafana/grafana | 0.0.0.0:3001->3000/tcp, [::]:3001->3000/tcp"
+    ],
+    "LOCAL_DOCKER_TARGET": "PROVEN"
+  },
+  "railway": {
+    "status": "Workspace:       otopax's Projects\n\nProject:         surprising-radiance\nProject ID:      093b38ca-194f-4d53-a44d-8145a3d8fcfd\n\nEnvironment:     production\nEnvironment ID:  0fbba32e-54cf-4904-a840-eb7a286b04ac\n\nLinked service\n\nbursali-oto-premium\n    status:        ● Online\n    repo:          otopax/bursali-oto-premium\n    url:           https://www.bursaliotoservis.com\n    region:        US East\n    deployment ID: 5b81ecde-c3df-49dc-992c-097d864af2b9\n    service ID:    d152ad6a-1b1b-4797-8c57-edc6d92b41d0\n\n────────────────────────────────────────────────\n\nAll resources\n\n    Services\n      - bursali-oto-premium: ● Online · https://www.bursaliotoservis.com\n      - Bursali Oto Worker: ● Online\n    Databases\n      - Redis: ● Online · redis-volume\n      - Postgres: ● Online · postgres-volume\n    Volumes\n      - postgres-volume-085T: detached · 0.1 GB / 4.9 GB · ready",
+    "variablesFound": true,
+    "RAILWAY_AUTHENTICATION": "AVAILABLE",
+    "TARGET_COMPARISON": "UNKNOWN"
+  },
+  "candidateDatabases": [
+    {
+      "DATABASE": "bursali_oto",
+      "HOST": "127.0.0.1",
+      "PORT": "5433",
+      "counts": {
+        "Fuse": 0,
+        "FuseBox": 0,
+        "Vehicle": 0,
+        "Manufacturer": 0,
+        "FaultCode": 15,
+        "VectorEmbedding": 0
+      }
+    }
+  ],
+  "datasetFingerprints": [
+    {
+      "CANDIDATE": "bursali_oto",
+      "MATCH": "FAIL"
+    }
+  ],
+  "schemaCompatibility": {
+    "PASS": "PASS"
+  },
+  "prismaReadOnlyCompatibility": {
+    "PASS": "PASS"
+  },
+  "searchIndexes": {
+    "inventory": [
+      {
+        "indexname": "Fuse_pkey",
+        "indexdef": "CREATE UNIQUE INDEX \"Fuse_pkey\" ON public.\"Fuse\" USING btree (id)"
+      },
+      {
+        "indexname": "Fuse_fuseBoxId_idx",
+        "indexdef": "CREATE INDEX \"Fuse_fuseBoxId_idx\" ON public.\"Fuse\" USING btree (\"fuseBoxId\")"
+      }
+    ]
+  },
+  "contradictionAudit": {
+    "C1": "RESOLVED (Empty clone)",
+    "C2": "RESOLVED (Docker clone)",
+    "C3": "UNRESOLVED",
+    "C4": "UNRESOLVED",
+    "C5": "RESOLVED (Counts differ)",
+    "C6": "RESOLVED",
+    "C7": "RESOLVED"
+  },
+  "authorization": {
+    "DATASET_IDENTITY_PROVEN": 0,
+    "TARGET_PROVEN": 0,
+    "DATABASE_IDENTITY_PROVEN": 1,
+    "RAILWAY_IDENTITY_PROVEN": 1,
+    "SCHEMA_COMPATIBILITY": "PASS",
+    "PRISMA_READ_ONLY_COMPATIBILITY": "PASS"
+  },
+  "final": {
+    "PRODUCTION_MIGRATION_AUTHORIZED": "NO",
+    "FINAL": "BLOCKED"
+  }
+}

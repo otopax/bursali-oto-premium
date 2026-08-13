@@ -1,4 +1,5 @@
 import { container } from '@/application/di/container';
+import Image from 'next/image';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 
@@ -155,10 +156,12 @@ export default async function KutuphaneHub({ params }) {
             <Link key={brand.slug} href={`/${locale}/kutuphane/${brand.slug}`} className="brand-box">
               <div className="brand-box-logo">
                 {brand.logo ? (
-                  <img 
+                  <Image 
                     src={brand.logo} 
-                    alt={brand.name} 
-                    style={{ filter: (brand.name === 'Volvo' || brand.name === 'Audi') ? 'invert(1)' : 'none' }} 
+                    alt={`${brand.name} Logosu`} 
+                    width={50}
+                    height={50}
+                    style={{ filter: (brand.name === 'Volvo' || brand.name === 'Audi') ? 'invert(1)' : 'none', objectFit: 'contain' }} 
                   />
                 ) : (
                   <span style={{ fontWeight: 'bold', color: 'var(--accent-gold)', fontSize: '1.5rem' }}>{brand.name.charAt(0)}</span>

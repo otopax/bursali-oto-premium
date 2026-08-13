@@ -1,0 +1,32 @@
+{
+  "execution": {
+    "currentGate": "P0.4.15"
+  },
+  "targetIdentity": {},
+  "railwayIdentity": {
+    "project": "surprising-radiance",
+    "environment": "production",
+    "service": "bursali-oto-premium"
+  },
+  "databaseIdentity": {},
+  "backup": {},
+  "schemaBaseline": {},
+  "dataBaseline": {},
+  "migration": {},
+  "indexes": {},
+  "queryPlans": {},
+  "performanceBefore": {},
+  "performanceAfter": {},
+  "searchCorrectness": {},
+  "normalization": {},
+  "trEnMapping": {},
+  "applicationTests": {},
+  "productionHealth": {},
+  "rollback": {},
+  "contradictions": {},
+  "authorization": {},
+  "finalDecision": {
+    "FINAL": "BLOCKED",
+    "REASON": "Failed to connect to Production DB: \nInvalid `prisma.$queryRawUnsafe()` invocation:\n\n\nCan't reach database server at `postgres.railway.internal:5432`\n\nPlease make sure your database server is running at `postgres.railway.internal:5432`."
+  }
+}

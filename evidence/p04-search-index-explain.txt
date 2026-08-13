@@ -1,0 +1,39 @@
+Fuse Row Count: 1235232
+
+--- PHASE 1: BASELINE ---
+Term: radio | ILIKE: 38.414ms (undefined) | FTS: 4.74ms
+Term: pump | ILIKE: 0.845ms (undefined) | FTS: 3.396ms
+Term: injector | ILIKE: 2.371ms (undefined) | FTS: 9.81ms
+Term: relay | ILIKE: 0.145ms (undefined) | FTS: 0.417ms
+Term: ecu | ILIKE: 3.059ms (undefined) | FTS: 16.253ms
+Term: fuel pump | ILIKE: 0.448ms (undefined) | FTS: 6.942ms
+Term: zzzz_nonexistent_123456 | ILIKE: 699.015ms (undefined) | FTS: 2661.23ms
+pg_trgm extension and index created.
+Prisma generates FTS query as: (to_tsvector('simple'::regconfig, description) @@ tsquery) OR (to_tsvector('simple'::regconfig, type) @@ tsquery)
+Proposed FTS Index Expression: to_tsvector('english', COALESCE("type",'') || ' ' || COALESCE("description",''))
+MATCH RESULT: FAIL - Semantic mismatch. Prisma queries distinct columns with 'simple' config, index is concatenated with 'english' config.
+
+--- PHASE 5: AFTER BENCHMARK ---
+Term: radio | ILIKE: 4.077ms (undefined) | FTS: 9.889ms
+Term: pump | ILIKE: 0.187ms (undefined) | FTS: 0.556ms
+Term: injector | ILIKE: 1.766ms (undefined) | FTS: 41.765ms
+Term: relay | ILIKE: 0.075ms (undefined) | FTS: 0.213ms
+Term: ecu | ILIKE: 0.762ms (undefined) | FTS: 2.326ms
+Term: fuel pump | ILIKE: 0.582ms (undefined) | FTS: 4.869ms
+Term: zzzz_nonexistent_123456 | ILIKE: 333.319ms (undefined) | FTS: 2670.432ms
+Trigram Index Used by Planner (when querying concatenated col): false
+Trigram Index Used by Prisma Standard ILIKE (OR col1 ILIKE...): false
+Normalized 'fuel pump' -> 'fuel pump'
+Application mapping layer simulated:
+- TR: radyo -> Normalized EN: radio
+- TR: fren -> Normalized EN: brake
+- TR: silecek -> Normalized EN: wiper
+- TR: yakıt -> Normalized EN: fuel
+- TR: pompa -> Normalized EN: pump
+Table Size: 254 MB
+TRGM Size: 62 MB
+FTS Size: 14 MB
+Total Indexes: 204 MB
+Running 5 concurrent TRGM searches for worst-case...
+5 concurrent searches completed in 14.70ms
+INDEX_STATE = PRESERVED_FOR_NEXT_GATE

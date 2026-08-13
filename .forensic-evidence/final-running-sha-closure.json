@@ -1,0 +1,15 @@
+{
+  "gate": "RUNNING_SHA",
+  "expectedReleaseSha": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+  "githubSha": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+  "railwayDeploymentSha": "4b84a3ef",
+  "runningSha": null,
+  "independentRuntimeSignal": null,
+  "result": "NOT_VERIFIED",
+  "observations": [
+    "No version headers in production response",
+    "/api/health endpoint provides uptime but no version/sha",
+    "/api/version and /api/status are not present (404)",
+    "HTML output does not contain the commit SHA"
+  ]
+}

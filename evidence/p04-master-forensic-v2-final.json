@@ -1,0 +1,58 @@
+{
+  "lifecycle": "P0.4.15-P0.4.20",
+  "railwayIdentity": {
+    "RAILWAY_PROJECT": "surprising-radiance",
+    "RAILWAY_ENVIRONMENT": "production",
+    "RAILWAY_SERVICE": "bursali-oto-premium"
+  },
+  "databaseIdentity": {},
+  "productionTargetIdentity": {},
+  "datasetIdentity": {},
+  "schemaCompatibility": {},
+  "prismaSqlEvidence": {},
+  "baseline": {},
+  "candidateIndexStrategy": {},
+  "migrationAuthorization": {},
+  "migrationExecution": {},
+  "indexVerification": {},
+  "afterBenchmark": {},
+  "beforeAfterComparison": {},
+  "queryNormalization": {},
+  "trEnMapping": {},
+  "applicationTests": {},
+  "rollback": {},
+  "contradictionAudit": [
+    {
+      "ID": "C_CONN",
+      "DESCRIPTION": "Railway DB is internal, execution is local.",
+      "EVIDENCE": "prodDbUrl contains .internal, process is not running inside Railway.",
+      "STATUS": "BLOCKING"
+    }
+  ],
+  "securityAudit": {},
+  "facts": [
+    "Railway CLI variables retrieved successfully.",
+    "DATABASE_HOST_REDACTED: postgresql://postgres:***@postgres.railway.internal:5432/railway",
+    "DATABASE_URL indicates an internal Railway network address (.internal)."
+  ],
+  "unknowns": [
+    "DATABASE_IDENTITY_PROVEN",
+    "DATASET_IDENTITY_PROVEN",
+    "SCHEMA_COMPATIBILITY",
+    "PRISMA_COMPATIBILITY",
+    "MIGRATION_EXECUTED",
+    "PERFORMANCE_IMPROVED",
+    "CBO_BEHAVIOR",
+    "TR_EN_MAPPING"
+  ],
+  "failures": [
+    "Execution environment is LOCAL, but database is Railway INTERNAL.",
+    "PUBLIC_NETWORKING_REQUIRED = TRUE"
+  ],
+  "engineeringOpinions": [
+    "Without deploying a temporary worker service explicitly into the Railway 'surprising-radiance' project, or enabling the public TCP proxy on the PostgreSQL service, local execution cannot route to 'postgres.railway.internal'.",
+    "Since the prompt forbids intrusive production code mutation to create a runner and forbids public DB exposure as a default, all non-intrusive internal execution options from the local machine are unavailable.",
+    "Therefore, per Rule 3: PUBLIC_NETWORKING_REQUIRED = TRUE."
+  ],
+  "finalDecision": "RED / BLOCKED"
+}

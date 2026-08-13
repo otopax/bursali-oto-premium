@@ -1,0 +1,146 @@
+{
+  "target_identity": {},
+  "database_identity": {
+    "db": "railway",
+    "usr": "postgres",
+    "ver": "PostgreSQL 18.4 (Debian 18.4-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+    "addr": "10.133.169.135",
+    "port": 5432
+  },
+  "application_database_provenance": {
+    "RAILWAY_PROJECT": "surprising-radiance",
+    "DATABASE_URL_EXISTS": false,
+    "TARGET_PROVEN": "UNKNOWN"
+  },
+  "production_table_inventory": {
+    "_prisma_migrations": 1,
+    "_FaultCodeParts": 32,
+    "SocialLead": 0,
+    "User": 0,
+    "TenantUser": 0,
+    "SubscriptionTier": 0,
+    "VectorEmbedding": 0,
+    "UsageLog": 0,
+    "Engine": 0,
+    "Manufacturer": 0,
+    "ECU": 0,
+    "Sensor": 0,
+    "FaultCode": 12,
+    "RepairVideo": 0,
+    "Part": 29,
+    "Vehicle": 0,
+    "Permission": 0,
+    "CustomerVehicle": 0,
+    "ApiKey": 0,
+    "WorkOrderItem": 0,
+    "FuseBox": 0,
+    "Fuse": 0,
+    "ServiceHistory": 0,
+    "Customer": 0,
+    "AuditLog": 1,
+    "Tenant": 0,
+    "DiagnosticLog": 0,
+    "IdempotencyRecord": 0,
+    "SemanticCache": 0,
+    "WorkOrder": 0,
+    "Feedback": 0,
+    "OutboxEvent": 0,
+    "VagDtcCode": 0,
+    "VagDtcProvenance": 0,
+    "VagDtcVehicleFitment": 0,
+    "VagDtcEmbedding": 0
+  },
+  "prisma_schema_compatibility": {
+    "missing_tables": [],
+    "expected_models": [
+      "Tenant",
+      "TenantUser",
+      "User",
+      "SubscriptionTier",
+      "UsageLog",
+      "VectorEmbedding",
+      "Manufacturer",
+      "Vehicle",
+      "Engine",
+      "ECU",
+      "Sensor",
+      "FaultCode",
+      "VagDtcCode",
+      "VagDtcProvenance",
+      "VagDtcVehicleFitment",
+      "VagDtcEmbedding",
+      "RepairVideo",
+      "Part",
+      "OutboxEvent",
+      "Permission",
+      "AuditLog",
+      "ApiKey",
+      "Customer",
+      "CustomerVehicle",
+      "WorkOrder",
+      "IdempotencyRecord",
+      "WorkOrderItem",
+      "FuseBox",
+      "Fuse",
+      "ServiceHistory",
+      "DiagnosticLog",
+      "SocialLead",
+      "SemanticCache",
+      "Feedback"
+    ]
+  },
+  "migration_history": {
+    "count": 1,
+    "latest": "20260704133903_faz_a_faultcode_ai_alanlari"
+  },
+  "dataset_provenance": {
+    "seed_script_exists": false,
+    "data_dumps_found": 1,
+    "DISPOSABLE_DATASET_PROVENANCE_TO_PRODUCTION": "UNKNOWN"
+  },
+  "search_data_source": {
+    "SEARCH_DATA_SOURCE_PROVEN": "UNKNOWN",
+    "redis_used": false
+  },
+  "contradictions": [
+    {
+      "ID": "C1",
+      "STATUS": "UNRESOLVED",
+      "EVIDENCE": "Disposable Fuse = 1235232, Production Fuse = 0"
+    },
+    {
+      "ID": "C3",
+      "STATUS": "RESOLVED",
+      "EVIDENCE": "PostgreSQL version difference is a fact, not a blocker."
+    },
+    {
+      "ID": "C7",
+      "STATUS": "BLOCKING",
+      "EVIDENCE": "Production data provenance is unknown."
+    }
+  ],
+  "facts": [
+    "Database connection successful.",
+    "Table inventory complete. Application data tables are partially populated.",
+    "Missing tables compared to Prisma schema: 0"
+  ],
+  "inferences": [],
+  "opinions": [],
+  "unknowns": [
+    "Whether the 1.23M rows in disposable DB belong in this production database.",
+    "Whether production application expects Fuse/FuseBox in PostgreSQL or another service."
+  ],
+  "mutations": {
+    "data": 0,
+    "ddl": 0,
+    "schema": 0,
+    "migration": 0,
+    "deployment": 0
+  },
+  "authorization": {
+    "production_data_import": "UNKNOWN",
+    "index_migration": "NO",
+    "p04_20_authorized": false
+  },
+  "final": "BLOCKED"
+}

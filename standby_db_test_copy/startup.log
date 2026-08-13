@@ -1,0 +1,96 @@
+2026-08-12 17:40:56.517 +03 [39012] LOG:  starting PostgreSQL 16.13, compiled by Visual C++ build 1944, 64-bit
+2026-08-12 17:40:56.518 +03 [39012] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-08-12 17:40:56.564 +03 [18644] LOG:  database system was interrupted; last known up at 2026-08-08 13:24:12 +03
+2026-08-12 17:41:05.751 +03 [18644] LOG:  could not open file "./startup.log": sharing violation
+2026-08-12 17:41:05.751 +03 [18644] DETAIL:  Continuing to retry for 30 seconds.
+2026-08-12 17:41:05.751 +03 [18644] HINT:  You might have antivirus, backup, or similar software interfering with the database system.
+2026-08-12 17:41:32.094 +03 [18644] LOG:  syncing data directory (fsync), elapsed time: 35.52 s, current path: .
+2026-08-12 17:41:32.099 +03 [18644] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-08-12 17:41:32.102 +03 [18644] LOG:  redo starts at 0/1ECEFD8
+2026-08-12 17:41:32.102 +03 [18644] LOG:  invalid record length at 0/1ECF0C0: expected at least 24, got 0
+2026-08-12 17:41:32.102 +03 [18644] LOG:  redo done at 0/1ECF088 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-08-12 17:41:32.117 +03 [41340] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-08-12 17:41:32.134 +03 [41340] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.027 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/1ECF0C0, redo lsn=0/1ECF0C0
+2026-08-12 17:41:32.161 +03 [39012] LOG:  database system is ready to accept connections
+2026-08-12 17:41:36.405 +03 [44536] FATAL:  role "xbors" does not exist
+2026-08-12 17:56:29.607 +03 [45008] LOG:  starting PostgreSQL 16.13, compiled by Visual C++ build 1944, 64-bit
+2026-08-12 17:56:29.607 +03 [45008] LOG:  listening on IPv4 address "127.0.0.1", port 5433
+2026-08-12 17:56:29.646 +03 [38188] LOG:  database system was interrupted; last known up at 2026-08-12 17:41:32 +03
+2026-08-12 17:56:35.453 +03 [38188] LOG:  could not open file "./startup.log": sharing violation
+2026-08-12 17:56:35.453 +03 [38188] DETAIL:  Continuing to retry for 30 seconds.
+2026-08-12 17:56:35.453 +03 [38188] HINT:  You might have antivirus, backup, or similar software interfering with the database system.
+2026-08-12 17:57:01.797 +03 [38188] LOG:  syncing data directory (fsync), elapsed time: 32.15 s, current path: .
+2026-08-12 17:57:01.799 +03 [38188] LOG:  database system was not properly shut down; automatic recovery in progress
+2026-08-12 17:57:01.803 +03 [38188] LOG:  redo starts at 0/1ECF138
+2026-08-12 17:57:01.803 +03 [38188] LOG:  invalid record length at 0/1ECF170: expected at least 24, got 0
+2026-08-12 17:57:01.803 +03 [38188] LOG:  redo done at 0/1ECF138 system usage: CPU: user: 0.00 s, system: 0.00 s, elapsed: 0.00 s
+2026-08-12 17:57:01.812 +03 [40652] LOG:  checkpoint starting: end-of-recovery immediate wait
+2026-08-12 17:57:01.842 +03 [40652] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.005 s, sync=0.005 s, total=0.032 s; sync files=2, longest=0.003 s, average=0.003 s; distance=0 kB, estimate=0 kB; lsn=0/1ECF170, redo lsn=0/1ECF170
+2026-08-12 17:57:01.876 +03 [45008] LOG:  database system is ready to accept connections
+2026-08-12 17:57:05.952 +03 [41496] FATAL:  role "xbors" does not exist
+2026-08-12 17:57:05.993 +03 [9028] FATAL:  role "postgres" does not exist
+2026-08-12 17:57:06.029 +03 [40384] FATAL:  role "postgres" does not exist
+2026-08-12 17:57:06.065 +03 [19936] FATAL:  role "postgres" does not exist
+2026-08-12 17:57:06.137 +03 [45008] LOG:  received fast shutdown request
+2026-08-12 17:57:06.138 +03 [45008] LOG:  aborting any active transactions
+2026-08-12 17:57:06.143 +03 [45008] LOG:  background worker "logical replication launcher" (PID 40404) exited with exit code 1
+2026-08-12 17:57:06.143 +03 [40652] LOG:  shutting down
+2026-08-12 17:57:06.144 +03 [40652] LOG:  checkpoint starting: shutdown immediate
+2026-08-12 17:57:06.156 +03 [40652] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.013 s; sync files=1, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1ECF220, redo lsn=0/1ECF220
+2026-08-12 17:57:06.163 +03 [45008] LOG:  database system is shut down
+2026-08-12 18:07:17.378 +03 [44444] LOG:  starting PostgreSQL 16.13, compiled by Visual C++ build 1944, 64-bit
+2026-08-12 18:07:17.378 +03 [44444] LOG:  listening on IPv4 address "127.0.0.1", port 15433
+2026-08-12 18:07:17.422 +03 [37704] LOG:  database system was shut down at 2026-08-12 17:57:06 +03
+2026-08-12 18:07:17.440 +03 [44444] LOG:  database system is ready to accept connections
+2026-08-12 18:07:21.573 +03 [43032] FATAL:  role "xbors" does not exist
+2026-08-12 18:07:21.651 +03 [44444] LOG:  received fast shutdown request
+2026-08-12 18:07:21.653 +03 [44444] LOG:  aborting any active transactions
+2026-08-12 18:07:21.658 +03 [44444] LOG:  background worker "logical replication launcher" (PID 43152) exited with exit code 1
+2026-08-12 18:07:21.659 +03 [31300] LOG:  shutting down
+2026-08-12 18:07:21.659 +03 [31300] LOG:  checkpoint starting: shutdown immediate
+2026-08-12 18:07:21.672 +03 [31300] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.014 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1ECF298, redo lsn=0/1ECF298
+2026-08-12 18:07:21.678 +03 [44444] LOG:  database system is shut down
+2026-08-12 18:08:23.109 +03 [22648] LOG:  starting PostgreSQL 16.13, compiled by Visual C++ build 1944, 64-bit
+2026-08-12 18:08:23.110 +03 [22648] LOG:  listening on IPv4 address "127.0.0.1", port 15433
+2026-08-12 18:08:23.140 +03 [2196] LOG:  database system was shut down at 2026-08-12 18:07:21 +03
+2026-08-12 18:08:23.160 +03 [22648] LOG:  database system is ready to accept connections
+2026-08-12 18:08:27.303 +03 [40104] FATAL:  role "xbors" does not exist
+2026-08-12 18:08:27.430 +03 [34164] ERROR:  relation "public.Manufacturer" does not exist at character 74
+2026-08-12 18:08:27.430 +03 [34164] STATEMENT:  SELECT "public"."Manufacturer"."id", "public"."Manufacturer"."name" FROM "public"."Manufacturer" WHERE ("public"."Manufacturer"."id") IN (SELECT "t1"."manufacturerId" FROM "public"."Vehicle" AS "t1" WHERE (("t1"."id") IN (SELECT "t2"."vehicleId" FROM "public"."FuseBox" AS "t2" WHERE (1=1 AND "t2"."vehicleId" IS NOT NULL)) AND "t1"."manufacturerId" IS NOT NULL)) ORDER BY "public"."Manufacturer"."name" ASC OFFSET $1
+2026-08-12 18:08:27.455 +03 [34164] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2026-08-12 18:08:27.470 +03 [22648] LOG:  received fast shutdown request
+2026-08-12 18:08:27.472 +03 [22648] LOG:  aborting any active transactions
+2026-08-12 18:08:27.476 +03 [22648] LOG:  background worker "logical replication launcher" (PID 22536) exited with exit code 1
+2026-08-12 18:08:27.476 +03 [8480] LOG:  shutting down
+2026-08-12 18:08:27.476 +03 [8480] LOG:  checkpoint starting: shutdown immediate
+2026-08-12 18:08:27.488 +03 [8480] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.002 s, total=0.013 s; sync files=2, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1ECF310, redo lsn=0/1ECF310
+2026-08-12 18:08:27.496 +03 [22648] LOG:  database system is shut down
+2026-08-12 18:09:52.597 +03 [7364] LOG:  starting PostgreSQL 16.13, compiled by Visual C++ build 1944, 64-bit
+2026-08-12 18:09:52.598 +03 [7364] LOG:  listening on IPv4 address "127.0.0.1", port 15433
+2026-08-12 18:09:52.638 +03 [20464] LOG:  database system was shut down at 2026-08-12 18:08:27 +03
+2026-08-12 18:09:52.655 +03 [7364] LOG:  database system is ready to accept connections
+2026-08-12 18:09:56.809 +03 [29912] FATAL:  role "xbors" does not exist
+2026-08-12 18:09:56.912 +03 [42272] ERROR:  relation "_prisma_migrations" does not exist at character 55
+2026-08-12 18:09:56.912 +03 [42272] STATEMENT:  SELECT id, checksum, finished_at, migration_name FROM _prisma_migrations ORDER BY finished_at DESC LIMIT 10;
+2026-08-12 18:09:57.025 +03 [7364] LOG:  received fast shutdown request
+2026-08-12 18:09:57.027 +03 [7364] LOG:  aborting any active transactions
+2026-08-12 18:09:57.030 +03 [7364] LOG:  background worker "logical replication launcher" (PID 11624) exited with exit code 1
+2026-08-12 18:09:57.030 +03 [44340] LOG:  shutting down
+2026-08-12 18:09:57.031 +03 [44340] LOG:  checkpoint starting: shutdown immediate
+2026-08-12 18:09:57.044 +03 [44340] LOG:  checkpoint complete: wrote 4 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.003 s, sync=0.003 s, total=0.014 s; sync files=3, longest=0.001 s, average=0.001 s; distance=0 kB, estimate=0 kB; lsn=0/1ECF388, redo lsn=0/1ECF388
+2026-08-12 18:09:57.051 +03 [7364] LOG:  database system is shut down
+2026-08-13 13:59:25.636 +03 [14988] LOG:  starting PostgreSQL 16.13, compiled by Visual C++ build 1944, 64-bit
+2026-08-13 13:59:25.638 +03 [14988] LOG:  listening on IPv4 address "127.0.0.1", port 15433
+2026-08-13 13:59:25.696 +03 [40320] LOG:  database system was shut down at 2026-08-12 18:09:57 +03
+2026-08-13 13:59:25.734 +03 [14988] LOG:  database system is ready to accept connections
+2026-08-13 13:59:29.908 +03 [10588] FATAL:  role "xbors" does not exist
+2026-08-13 13:59:30.123 +03 [38880] ERROR:  relation "_prisma_migrations" does not exist at character 55
+2026-08-13 13:59:30.123 +03 [38880] STATEMENT:  SELECT id, checksum, finished_at, migration_name FROM _prisma_migrations ORDER BY finished_at DESC LIMIT 10;
+2026-08-13 13:59:30.278 +03 [14988] LOG:  received fast shutdown request
+2026-08-13 13:59:30.280 +03 [14988] LOG:  aborting any active transactions
+2026-08-13 13:59:30.284 +03 [14988] LOG:  background worker "logical replication launcher" (PID 43824) exited with exit code 1
+2026-08-13 13:59:30.285 +03 [45020] LOG:  shutting down
+2026-08-13 13:59:30.286 +03 [45020] LOG:  checkpoint starting: shutdown immediate
+2026-08-13 13:59:30.304 +03 [45020] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.004 s, sync=0.003 s, total=0.019 s; sync files=2, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=0 kB; lsn=0/1ECF400, redo lsn=0/1ECF400
+2026-08-13 13:59:30.311 +03 [14988] LOG:  database system is shut down

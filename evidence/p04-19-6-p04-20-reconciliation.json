@@ -1,0 +1,68 @@
+{
+  "target_identity": {
+    "railway_project": "surprising-radiance",
+    "environment": "production",
+    "service": "bursali-oto-premium",
+    "database": "railway",
+    "proven": true
+  },
+  "source_identity": {
+    "local_sha": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+    "railway_sha": "093b38ca",
+    "match": "DISPROVEN"
+  },
+  "root_causes": [
+    {
+      "id": "H1",
+      "status": "PROVEN",
+      "evidence": [
+        "Local SHA: 4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+        "Railway SHA: 093b38ca"
+      ]
+    },
+    {
+      "id": "H6",
+      "status": "PROVEN",
+      "evidence": [
+        "logger.error usage is a bug in the code, masking the original Prisma exception (TypeError vs PrismaClientValidationError)"
+      ]
+    }
+  ],
+  "code_changes": [],
+  "build": {
+    "status": "UNKNOWN",
+    "evidence": []
+  },
+  "runtime": {
+    "radio": "UNKNOWN",
+    "fuel_pump": "UNKNOWN",
+    "pump_relay": "UNKNOWN",
+    "nonexistent": "UNKNOWN"
+  },
+  "dataset": {
+    "fuse_rows": null,
+    "fusebox_rows": null,
+    "provenance": "UNKNOWN"
+  },
+  "migration": {
+    "data_import_authorized": false,
+    "index_migration_authorized": false,
+    "ddl_mutations": 0
+  },
+  "contradictions": [],
+  "facts": [
+    "Local Git HEAD: 4b84a3efffa1e7b90ac5b5606698a481daeda4e1 (Branch: main)",
+    "Local schema.prisma FuseBox model has 'brand' field: false",
+    "Local route.js uses logger.error: false",
+    "Local route.js uses logger.app.error: true",
+    "Local fuseboxDb.js uses prisma.manufacturer.findMany: true",
+    "Local fuseboxDb.js uses distinct brand query: true",
+    "Local Git SHA DOES NOT MATCH Railway deployed SHA.",
+    "Prisma Client in local workspace does NOT match the 'brand' requirement thrown in the error.",
+    "SHA MATCH RESULT: DISPROVEN"
+  ],
+  "inferences": [],
+  "opinions": [],
+  "unknowns": [],
+  "final": "BLOCKED"
+}

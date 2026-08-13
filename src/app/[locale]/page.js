@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import TrustBadges from '@/components/TrustBadges';
 import { getTranslations } from 'next-intl/server';
 import { container } from '@/application/di/container';
@@ -26,11 +27,11 @@ export async function generateMetadata({ params }) {
   setRequestLocale(locale);
 
   const titles = {
-    tr: 'Bursalı Oto Servis Fethiye | Premium Araç & Motor Uzmanı',
-    en: 'Bursali Auto Repair Fethiye | Premium Car & Engine Specialist',
-    ru: 'Bursali Автосервис Фетхие | Ремонт Премиум Автомобилей',
-    uk: 'Bursali Автосервіс Фетхіє | Ремонт Преміум Автомобілів',
-    ar: 'ورشة بورصالي فتحية | متخصص صيانة السيارات الفاخرة',
+    tr: 'Premium Araç & Motor Uzmanı',
+    en: 'Premium Car & Engine Specialist',
+    ru: 'Ремонт Премиум Автомобилей',
+    uk: 'Ремонт Преміум Автомобілів',
+    ar: 'متخصص صيانة السيارات الفاخرة',
   };
 
   const descriptions = {
@@ -257,19 +258,19 @@ export default async function Home({ params }) {
               <h2 style={{ marginBottom: '0.5rem' }}>{t('faultsTitle')}</h2>
               <p style={{ color: 'var(--text-muted)', margin: 0 }}>{t('faultsDesc')}</p>
             </div>
-            <a href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" aria-label="Tüm Arıza Çözümlerini Gör" title="Tüm Arıza Çözümlerini Gör" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
+            <Link href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" aria-label="Tüm Arıza Çözümlerini Gör" title="Tüm Arıza Çözümlerini Gör" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
               {t('faultsBtn')}
-            </a>
+            </Link>
           </div>
           <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))' }}>
             {recentFaults.map(fault => (
-              <a key={fault.id} href={arizaUrl(locale, fault)} aria-label={`${fault.title} Detayları`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.5rem', textDecoration: 'none' }}>
+              <Link key={fault.id} href={arizaUrl(locale, fault)} aria-label={`${fault.title} Detayları`} className="glass-panel hover-gold-border" style={{ display: 'block', padding: '1.5rem', textDecoration: 'none' }}>
                 <span style={{ display: 'inline-block', padding: '4px 10px', background: 'rgba(212, 175, 55, 0.1)', color: 'var(--accent-gold)', borderRadius: '12px', fontSize: '0.8rem', fontWeight: 'bold', marginBottom: '1rem' }}>
                   {fault.brand}
                 </span>
                 <h3 style={{ color: 'var(--text-light)', fontSize: '1.1rem', marginBottom: '0.5rem', lineHeight: '1.4' }}>{fault.title}</h3>
                 <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', margin: 0 }}>{t('faultsModels')} {fault.model}</p>
-              </a>
+              </Link>
             ))}
           </div>
         </Reveal>
@@ -279,11 +280,11 @@ export default async function Home({ params }) {
       <Reveal delay={1} className="services-section container">
         <h2 style={{ textAlign: 'center', marginBottom: '2rem' }}>{t('specialServicesTitle')}</h2>
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginBottom: '3rem' }}>
-          <a href={`/${locale}/porsche-mercedes-ozel-servis`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Porsche & Premium Araç Servisi">Porsche & Premium Araç Servisi</a>
-          <a href={`/${locale}/english-speaking-mechanic`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="English Speaking Mechanic Fethiye">English Speaking Mechanic</a>
-          <a href={`/${locale}/fethiye-7-24-oto-cekici`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Fethiye 7/24 Acil Oto Çekici">7/24 Acil Oto Çekici</a>
-          <a href={`/${locale}/vip-filo-gece-bakimi`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="VIP Filo Gece Bakımı (Night-Shift)">VIP Filo Gece Bakımı (Night-Shift)</a>
-          <a href={`/${locale}/otomatik-sanziman-tamiri`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Otomatik Şanzıman Tamiri Fethiye">Otomatik Şanzıman Tamiri</a>
+          <Link href={`/${locale}/porsche-mercedes-ozel-servis`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Porsche & Premium Araç Servisi">Porsche & Premium Araç Servisi</Link>
+          <Link href={`/${locale}/english-speaking-mechanic`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="English Speaking Mechanic Fethiye">English Speaking Mechanic</Link>
+          <Link href={`/${locale}/fethiye-7-24-oto-cekici`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Fethiye 7/24 Acil Oto Çekici">7/24 Acil Oto Çekici</Link>
+          <Link href={`/${locale}/vip-filo-gece-bakimi`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="VIP Filo Gece Bakımı (Night-Shift)">VIP Filo Gece Bakımı (Night-Shift)</Link>
+          <Link href={`/${locale}/otomatik-sanziman-tamiri`} className="btn btn-gold" style={{ background: 'transparent', border: '1px solid var(--gold)' }} title="Otomatik Şanzıman Tamiri Fethiye">Otomatik Şanzıman Tamiri</Link>
         </div>
       </Reveal>
 
@@ -354,9 +355,9 @@ export default async function Home({ params }) {
           <p>{t('footerAddress')}</p>
           
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0', flexWrap: 'wrap' }}>
-            <a href={`/${locale}/hakkimizda`} title="Hakkımızda" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerAbout')}</a>
-            <a href={`/${locale}/seffaf-fiyatlandirma`} title="Şeffaf Fiyatlandırma" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerPricing')}</a>
-            <a href={`/${locale}/ariza-cozumleri`} title="Arıza Çözümleri" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerFaults')}</a>
+            <Link href={`/${locale}/hakkimizda`} title="Hakkımızda" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerAbout')}</Link>
+            <Link href={`/${locale}/seffaf-fiyatlandirma`} title="Şeffaf Fiyatlandırma" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerPricing')}</Link>
+            <Link href={`/${locale}/ariza-cozumleri`} title="Arıza Çözümleri" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerFaults')}</Link>
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0', flexWrap: 'wrap' }}>

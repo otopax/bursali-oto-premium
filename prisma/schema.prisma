@@ -96,7 +96,7 @@ model VectorEmbedding {
 model Manufacturer {
   id        String    @id @default(uuid())
   name      String    @unique // e.g. "Toyota", "Ford"
-  country   String
+  country   String?
   logoUrl   String?
   website   String?
   vehicles  Vehicle[]

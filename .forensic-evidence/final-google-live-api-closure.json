@@ -1,0 +1,17 @@
+{
+  "gate": "GOOGLE_PLACES_LIVE_API",
+  "releaseSha": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+  "production": "https://www.bursaliotoservis.com",
+  "configured": false,
+  "liveApi": "NOT_VERIFIED",
+  "fallback": "VERIFIED",
+  "endpoint": "/api/reviews",
+  "httpStatus": 200,
+  "secretExposed": false,
+  "result": "YELLOW",
+  "observations": [
+    "Production endpoint exists and returns 200 OK",
+    "Response matched the static fallback payload",
+    "No live Google Places API reviews were retrieved"
+  ]
+}

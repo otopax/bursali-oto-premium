@@ -1,0 +1,86 @@
+{
+  "production_identity": {},
+  "database_identity": {},
+  "search_engine_source": {
+    "SEARCH_ENGINE_USES_FUSE": "PROVEN",
+    "SEARCH_ENGINE_USES_FUSEBOX": "UNKNOWN",
+    "file": "\\src\\domains\\Search\\SearchEngine.js"
+  },
+  "production_search_path": {
+    "PRODUCTION_SEARCH_PATH_TO_FUSE": "PROVEN",
+    "PRODUCTION_SEARCH_PATH_TO_FUSEBOX": "UNKNOWN",
+    "callers": [
+      "\\src\\app\\api\\search\\route.js"
+    ]
+  },
+  "alternative_data_sources": {
+    "seed_script_exists": false,
+    "data_directory_exists": false,
+    "expected_source": "UNKNOWN"
+  },
+  "dataset_provenance": {
+    "DISPOSABLE_DATASET_PRODUCTION_PROVENANCE": "UNKNOWN",
+    "FUSE_PRODUCTION_DATA_REQUIRED": "PROVEN",
+    "FUSEBOX_PRODUCTION_DATA_REQUIRED": "UNKNOWN"
+  },
+  "deployment_intent": {},
+  "consistency_matrix": [
+    {
+      "component": "Fuse",
+      "expected": "Populated if queried",
+      "actual": "0 rows",
+      "status": "INCONSISTENT"
+    },
+    {
+      "component": "SearchEngine",
+      "expected": "Queries Fuse",
+      "actual": "Queries Fuse",
+      "status": "CONSISTENT"
+    }
+  ],
+  "contradictions": [
+    {
+      "ID": "C6",
+      "STATUS": "UNRESOLVED",
+      "EVIDENCE": "App queries Fuse but table is empty. Are these queries ever triggered?"
+    },
+    {
+      "ID": "C7",
+      "STATUS": "UNRESOLVED",
+      "EVIDENCE": "Intended production datasets are unknown."
+    },
+    {
+      "ID": "C8",
+      "STATUS": "UNRESOLVED",
+      "EVIDENCE": "Disposable dataset provenance is unknown."
+    },
+    {
+      "ID": "C10",
+      "STATUS": "UNRESOLVED",
+      "EVIDENCE": "Is production intentionally deployed without Fuse?"
+    }
+  ],
+  "facts": [
+    "SearchEngine implementation found in \\src\\domains\\Search\\SearchEngine.js",
+    "Call chain elements found: \\src\\app\\api\\search\\route.js"
+  ],
+  "inferences": [],
+  "opinions": [],
+  "unknowns": [
+    "Alternative data sources for Fuse/FuseBox (expected from PG, but absent)",
+    "Whether 1.23M dataset was ever intended to be imported to production."
+  ],
+  "mutations": {
+    "data": 0,
+    "ddl": 0,
+    "schema": 0,
+    "migration": 0,
+    "deployment": 0
+  },
+  "authorization": {
+    "data_import": "NO",
+    "index_migration": "NO",
+    "p04_20": false
+  },
+  "final": "BLOCKED"
+}

@@ -8,7 +8,11 @@ test.describe('GATE 4: VIP Customer Flow E2E', () => {
 
   test('VIP customer can render login form controls', async ({ page }) => {
     await page.goto('/tr/login');
-    const emailInput = page.getByPlaceholder('admin@bursalioto.com');
-    await expect(emailInput).toBeVisible();
+
+    // LoginForm is wrapped in <Suspense> due to useSearchParams().
+    // In standalone mode, the Suspense boundary resolves asynchronously.
+    // We must wait for the actual form to hydrate past the "Yükleniyor..." fallback.
+    const emailInput = page.getByTestId('login-email-input');
+    await expect(emailInput).toBeVisible({ timeout: 15000 });
   });
 });

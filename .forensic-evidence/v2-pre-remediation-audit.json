@@ -1,0 +1,56 @@
+[
+  {
+    "file": "src/app/[locale]/page.js",
+    "line": 28,
+    "currentBehavior": "Returns raw strings like 'Premium Araç & Motor Uzmanı' in generateMetadata which Next.js resolves strictly, bypassing the Playwright expected title format.",
+    "expectedBehavior": "Should use the centralized SEO contract or append the Brand dynamically to satisfy both SEO uniqueness and Playwright assertions.",
+    "risk": "High",
+    "proposedFix": "Restore brand suffix to the title in page.js or update Playwright assertions if the new title is the approved SEO contract.",
+    "verificationMethod": "Playwright test execution"
+  },
+  {
+    "file": "src/app/[locale]/ariza-kodlari/[code]/page.js",
+    "line": 118,
+    "currentBehavior": "H1 is generated conditionally based on description length. If description is short, it appends it, otherwise it uses a generic code.",
+    "expectedBehavior": "Must guarantee uniqueness across all DTC codes without duplicates on representative crawls.",
+    "risk": "Medium",
+    "proposedFix": "Ensure deterministic H1 fallback that always includes the DTC code plus a specific action keyword if description is missing.",
+    "verificationMethod": "HTML Crawl"
+  },
+  {
+    "file": "src/lib/rateLimiter.js",
+    "line": 1,
+    "currentBehavior": "File is completely deleted from the tree.",
+    "expectedBehavior": "Dead code should be safely removed without breaking dependencies.",
+    "risk": "Low",
+    "proposedFix": "None required. Build passed, confirming no remaining active imports.",
+    "verificationMethod": "Build (Exit code 0)"
+  },
+  {
+    "file": "scripts/hreflangValidator.js",
+    "line": "N/A",
+    "currentBehavior": "Does not exist in the working tree yet (was previously proposed but rejected). Current SEO contract uses buildSEOContract.",
+    "expectedBehavior": "A valid HTML-based crawler should parse alternate tags and verify 200 HTTP statuses and bi-directional relationships.",
+    "risk": "Medium",
+    "proposedFix": "Create a real DOM/Sitemap parser script that fetches URLs and validates hreflang reciprocity.",
+    "verificationMethod": "Run the new validator script on production/staging HTML"
+  },
+  {
+    "file": "src/lib/schemaValidator.test.js",
+    "line": "N/A",
+    "currentBehavior": "Does not exist in the working tree yet (was previously proposed).",
+    "expectedBehavior": "Schema validation should test rendered HTML JSON-LD rather than mocked objects.",
+    "risk": "High",
+    "proposedFix": "Add a Playwright test to extract and validate JSON-LD directly from the DOM.",
+    "verificationMethod": "Playwright test execution"
+  },
+  {
+    "file": "Repository Wide",
+    "line": "Multiple",
+    "currentBehavior": "<img/> and <Image/> elements exist with potentially empty or unoptimized alt text.",
+    "expectedBehavior": "Meaningful images must have descriptive alt attributes; decorative images must have empty alt attributes.",
+    "risk": "Medium",
+    "proposedFix": "Audit all <img> tags and surgically inject context-aware alt text manually.",
+    "verificationMethod": "Regex / AST scan followed by HTML scan"
+  }
+]

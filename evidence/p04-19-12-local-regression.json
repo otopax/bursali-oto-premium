@@ -1,0 +1,77 @@
+{
+  "queries": [
+    {
+      "query": "radio",
+      "status": 200,
+      "latency_ms": 53,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": null
+    },
+    {
+      "query": "fuel pump",
+      "status": 500,
+      "latency_ms": 4,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": "\nInvalid `prisma.fuse.findMany()` invocation in\nC:\\Users\\xbors\\OneDrive\\Desktop\\Bursali_Oto_Dijital_Yonetim\\Web_Sitesi\\bursali-oto-web\\scripts\\test_prisma_direct.cjs:20:45\n\n  17 const formattedQuery = q.trim().split(/\\\\s+/).join(' | ');\n  18 \n  19 try {\n→ 20     const fuses = await prisma.fuse.findMany(\nError occurred during query execution:\nConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: \"42601\", message: \"syntax error in tsquery: \\\"fuel pump\\\"\", severity: \"ERROR\", detail: None, column: None, hint: None }), transient: false })"
+    },
+    {
+      "query": "pump relay",
+      "status": 500,
+      "latency_ms": 2,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": "\nInvalid `prisma.fuse.findMany()` invocation in\nC:\\Users\\xbors\\OneDrive\\Desktop\\Bursali_Oto_Dijital_Yonetim\\Web_Sitesi\\bursali-oto-web\\scripts\\test_prisma_direct.cjs:20:45\n\n  17 const formattedQuery = q.trim().split(/\\\\s+/).join(' | ');\n  18 \n  19 try {\n→ 20     const fuses = await prisma.fuse.findMany(\nError occurred during query execution:\nConnectorError(ConnectorError { user_facing_error: None, kind: QueryError(PostgresError { code: \"42601\", message: \"syntax error in tsquery: \\\"pump relay\\\"\", severity: \"ERROR\", detail: None, column: None, hint: None }), transient: false })"
+    },
+    {
+      "query": "zzzz_nonexistent_123456",
+      "status": 200,
+      "latency_ms": 2,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": null
+    },
+    {
+      "query": "radyo",
+      "status": 200,
+      "latency_ms": 3,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": null
+    },
+    {
+      "query": "fren",
+      "status": 200,
+      "latency_ms": 5,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": null
+    },
+    {
+      "query": "silecek",
+      "status": 200,
+      "latency_ms": 3,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": null
+    },
+    {
+      "query": "yakıt",
+      "status": 200,
+      "latency_ms": 2,
+      "fuseCount": 0,
+      "faultCount": 2,
+      "error": null
+    },
+    {
+      "query": "pompa",
+      "status": 200,
+      "latency_ms": 3,
+      "fuseCount": 0,
+      "faultCount": 0,
+      "error": null
+    }
+  ],
+  "final": "FAIL"
+}

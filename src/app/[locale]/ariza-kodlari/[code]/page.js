@@ -44,11 +44,11 @@ export async function generateMetadata({ params }) {
   const fault = await getCachedFaultCode(code);
 
   const titles = {
-    tr: `${upperCode} Arıza Kodu Çözümü ${fault ? `: ${fault.description}` : ''} | Bursalı Oto Servis`,
-    en: `${upperCode} Fault Code Diagnosis & Solution | Bursali Auto Repair`,
-    ru: `${upperCode} Код Ошибки Диагностика и Ремонт | Bursali Auto Repair`,
-    uk: `${upperCode} Код Помилки Діагностика та Ремонт | Bursali Auto Repair`,
-    ar: `${upperCode} تشخيص رمز العطل وإصلاحه | Bursali Auto Repair`,
+    tr: `${upperCode} Arıza Kodu Çözümü ${fault ? `: ${fault.description}` : ''}`,
+    en: `${upperCode} Fault Code Diagnosis & Solution`,
+    ru: `${upperCode} Код Ошибки Диагностика и Ремонт`,
+    uk: `${upperCode} Код Помилки Діагностика та Ремонт`,
+    ar: `${upperCode} تشخيص رمز العطل وإصلاحه`,
   };
 
   const descriptions = {
@@ -115,11 +115,11 @@ export default async function FaultCodePage({ params }) {
   };
 
   const h1Titles = {
-    tr: `${fault.code} Arıza Kodu Çözümü`,
-    en: `${fault.code} Fault Code Diagnosis & Solution`,
-    ru: `Диагностика и решение ошибки ${fault.code}`,
-    uk: `Діагностика та вирішення помилки ${fault.code}`,
-    ar: `تشخيص وحل رمز الخطأ ${fault.code}`,
+    tr: fault.description && fault.description.length < 50 ? `${fault.code} - ${fault.description} Arıza Kodu Çözümü` : `${fault.code} Arıza Kodu Çözümü`,
+    en: fault.description && fault.description.length < 50 ? `${fault.code} - ${fault.description} Diagnosis & Solution` : `${fault.code} Fault Code Diagnosis & Solution`,
+    ru: fault.description && fault.description.length < 50 ? `${fault.code} - ${fault.description} Диагностика и решение` : `Диагностика и решение ошибки ${fault.code}`,
+    uk: fault.description && fault.description.length < 50 ? `${fault.code} - ${fault.description} Діагностика та вирішення` : `Діагностика та вирішення помилки ${fault.code}`,
+    ar: fault.description && fault.description.length < 50 ? `${fault.code} - ${fault.description} تشخيص وحل رمز الخطأ` : `تشخيص وحل رمز الخطأ ${fault.code}`,
   };
 
   return (

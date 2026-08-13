@@ -1,0 +1,273 @@
+﻿{
+    "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+    "manifest_timestamp":  "2026-08-11T02:05:13.5389188+03:00",
+    "evidence_count":  15,
+    "gates":  [
+                  {
+                      "timestamp":  "2026-08-11T01:57:36.8513183+03:00",
+                      "observations":  {
+                                           "Endpoint status":  200,
+                                           "Live API Verification":  "NOT VERIFIED",
+                                           "Fallback Verification":  "NOT VERIFIED",
+                                           "Configured (Live API)":  false
+                                       },
+                      "gate":  "8",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Invoke-WebRequest https://www.bursaliotoservis.com/api/reviews",
+                      "result":  "YELLOW",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-10T20:44:46.8774353+03:00",
+                      "observations":  "HEAD: 4b84a3efffa1e7b90ac5b5606698a481daeda4e1 | STATUS:  | DIFF: ",
+                      "gate":  "0",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "git rev-parse HEAD; git status --short; git diff --exit-code",
+                      "result":  "FAIL",
+                      "environment":  "local"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T01:56:45.8297022+03:00",
+                      "observations":  {
+                                           "Canonical brands":  8,
+                                           "Dangling edges":  0,
+                                           "Orphan nodes":  0,
+                                           "Models separated from brands":  true,
+                                           "Duplicate node IDs":  0,
+                                           "Forbidden brand nodes":  0
+                                       },
+                      "gate":  "6",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Check brand graph manifest",
+                      "result":  "PASS",
+                      "environment":  "local"
+                  },
+                  {
+                      "gate":  "5",
+                      "command":  "node scripts/reconcile_gate5_math.js (dynamic)",
+                      "timestamp":  "2026-08-10T23:05:03.945Z",
+                      "environment":  "local",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "result":  "PASS",
+                      "observations":  {
+                                           "TOTAL_INPUT":  974,
+                                           "TEMPLATE":  1,
+                                           "VALID_PRODUCTION_DTC":  973,
+                                           "DUPLICATE":  0,
+                                           "MALFORMED":  0,
+                                           "MATH_VALID":  true
+                                       }
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:00:03.1561001+03:00",
+                      "observations":  {
+                                           "Invalid locale":  0,
+                                           "Non-200 hreflang":  0,
+                                           "Locales found":  [
+
+                                                             ],
+                                           "Missing hreflang":  6
+                                       },
+                      "gate":  "13",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Parse hreflang and verify HTTP 200",
+                      "result":  "FAIL",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:01:08.8045411+03:00",
+                      "observations":  {
+                                           "Missing ALT tags":  0,
+                                           "Broken Images":  9
+                                       },
+                      "gate":  "17",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Parse \u003cimg\u003e tags and HEAD src",
+                      "result":  "FAIL",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T01:57:50.2180840+03:00",
+                      "observations":  {
+                                           "Request 2 Cache-Control":  "public, max-age=60, s-maxage=86400, stale-while-revalidate=43200",
+                                           "Request 1 Timing (ms)":  290.0582,
+                                           "Request 1 x-nextjs-cache":  "HIT",
+                                           "Request 2 Status":  200,
+                                           "Request 1 Cache-Control":  "public, max-age=60, s-maxage=86400, stale-while-revalidate=43200",
+                                           "Request 2 CF-Cache-Status":  "DYNAMIC",
+                                           "Request 1 CF-Cache-Status":  "DYNAMIC",
+                                           "Request 2 Timing (ms)":  210.43980000000002,
+                                           "Request 1 Age":  null,
+                                           "Request 1 Status":  200,
+                                           "Request 2 x-nextjs-cache":  "HIT",
+                                           "Request 2 Age":  null
+                                       },
+                      "gate":  "9",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Sequential Invoke-WebRequest to https://www.bursaliotoservis.com/tr/ariza-kodlari/P2433",
+                      "result":  "PASS",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:03:38.9874855+03:00",
+                      "observations":  {
+                                           "Passed":  16,
+                                           "Base URL Executed":  "https://www.bursaliotoservis.com",
+                                           "Console Errors":  0,
+                                           "Failed":  0,
+                                           "Total Tests":  16,
+                                           "Network 5xx":  0,
+                                           "Network 404":  0
+                                       },
+                      "gate":  "18",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "npx playwright test --reporter=list (with PLAYWRIGHT_TEST_BASE_URL)",
+                      "result":  "PASS",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:00:40.2214393+03:00",
+                      "observations":  {
+                                           "Content":  "User-Agent: GPTBot\nUser-Agent: ClaudeBot\nUser-Agent: Claude-Web\nUser-Agent: Anthropic-AI\nUser-Agent: Bytespider\nUser-Agent: CCBot\nUser-Agent: Google-Extended\nUser-Agent: ChatGPT-User\nUser-Agent: OAI-SearchBot\nUser-Agent: PerplexityBot\nUser-Agent: Applebot-Extended\nUser-Agent: Meta-ExternalAgent\nAllow: /\n\nUser-Agent: *\nAllow: /\nDisallow: /api/\nDisallow: /admin/\nDisallow: /*/admin/\nDisallow: /vip-garaj/\nDisallow: /*/vip-garaj/\nDisallow: /login/\nDisallow: /*/login/\nDisallow: /_next/\nDisallow: /private/\n\nHost: https://www.bursaliotoservis.com\nSitemap: https://www.bursaliotoservis.com/sitemap.xml\n",
+                                           "Has Sitemap":  true,
+                                           "Admin Protected":  true,
+                                           "HTTP 200":  true
+                                       },
+                      "gate":  "15",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "GET https://www.bursaliotoservis.com/robots.txt",
+                      "result":  "PASS",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:00:51.2633542+03:00",
+                      "observations":  {
+                                           "HSTS":  "max-age=31536000; includeSubDomains; preload",
+                                           "XFO":  "DENY",
+                                           "Referrer-Policy":  "strict-origin-when-cross-origin",
+                                           "Permissions-Policy":  "camera=(), microphone=(), geolocation=(), usb=(), bluetooth=()",
+                                           "XCTO":  "nosniff",
+                                           "CSP":  null
+                                       },
+                      "gate":  "16",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Invoke-WebRequest HEAD https://www.bursaliotoservis.com/",
+                      "result":  "FAIL",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T01:59:49.7753429+03:00",
+                      "observations":  {
+                                           "Pages":  [
+                                                         {
+                                                             "titleLength":  60,
+                                                             "title":  "Bursalı Oto Servis Fethiye | Premium Araç \u0026amp; Motor Uzmanı",
+                                                             "url":  "https://www.bursaliotoservis.com/tr",
+                                                             "h1Count":  0,
+                                                             "descriptionLength":  148
+                                                         },
+                                                         {
+                                                             "titleLength":  57,
+                                                             "title":  "Bursali Auto Repair | Premium Car \u0026amp; Engine Specialist",
+                                                             "url":  "https://www.bursaliotoservis.com/en",
+                                                             "h1Count":  0,
+                                                             "descriptionLength":  136
+                                                         },
+                                                         {
+                                                             "titleLength":  76,
+                                                             "title":  "Sanal Usta - Yapay Zeka Oto Teşhis | Bursalı Oto Servis | Bursalı Oto Servis",
+                                                             "url":  "https://www.bursaliotoservis.com/tr/sanal-usta",
+                                                             "h1Count":  1,
+                                                             "descriptionLength":  106
+                                                         },
+                                                         {
+                                                             "titleLength":  81,
+                                                             "title":  "Sigorta Kutusu ve Röle Şemaları | Bursalı Oto Servis Fethiye | Bursalı Oto Servis",
+                                                             "url":  "https://www.bursaliotoservis.com/tr/sigorta-kutuphanesi",
+                                                             "h1Count":  1,
+                                                             "descriptionLength":  100
+                                                         },
+                                                         {
+                                                             "titleLength":  57,
+                                                             "title":  "Bursalı Oto Servis Fethiye | Premium Araç ve Motor Uzmanı",
+                                                             "url":  "https://www.bursaliotoservis.com/tr/teknik-kutuphane",
+                                                             "h1Count":  1,
+                                                             "descriptionLength":  173
+                                                         },
+                                                         {
+                                                             "titleLength":  66,
+                                                             "title":  "P2433 Arıza Kodu Çözümü  | Bursalı Oto Servis | Bursalı Oto Servis",
+                                                             "url":  "https://www.bursaliotoservis.com/tr/ariza-kodlari/P2433",
+                                                             "h1Count":  1,
+                                                             "descriptionLength":  96
+                                                         }
+                                                     ],
+                                           "Missing H1":  2,
+                                           "Multiple H1":  0,
+                                           "Missing Title":  0,
+                                           "Missing Canonical":  1,
+                                           "Missing Description":  0
+                                       },
+                      "gate":  "12",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Parse representative HTML for SEO",
+                      "result":  "FAIL",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:02:43.9023772+03:00",
+                      "observations":  {
+                                           "RUNNING SHA":  "NOT VERIFIED",
+                                           "GITHUB SHA":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                                           "RAILWAY DEPLOYMENT SHA":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                                           "LOCAL SHA":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1"
+                                       },
+                      "gate":  "20",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "SHA Reconciliation",
+                      "result":  "YELLOW",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:00:26.5313404+03:00",
+                      "observations":  {
+                                           "Unexpected 404":  0,
+                                           "Has localhost":  false,
+                                           "HTTP 200":  true,
+                                           "Unexpected 5xx":  0,
+                                           "Total URLs in sitemap":  4120,
+                                           "Has dev URLs":  false
+                                       },
+                      "gate":  "14",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "GET https://www.bursaliotoservis.com/sitemap.xml and parse",
+                      "result":  "PASS",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T01:57:05.4812367+03:00",
+                      "observations":  {
+                                           "PDF URL HEAD Status":  200,
+                                           "PDF Content-Type":  "application/pdf",
+                                           "Production HTML contains tsbNumber":  false,
+                                           "Production HTML contains pdfUrl":  false
+                                       },
+                      "gate":  "7",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "Invoke-WebRequest https://www.bursaliotoservis.com/tr/ariza-kodlari/P2433; Invoke-WebRequest https://static.nhtsa.gov/odi/tsbs/2019/MC-10159350-0001.pdf",
+                      "result":  "FAIL",
+                      "environment":  "production"
+                  },
+                  {
+                      "timestamp":  "2026-08-11T02:01:55.0799017+03:00",
+                      "observations":  {
+                                           "SITE_CHECKER":  "NOT VERIFIED"
+                                       },
+                      "gate":  "19",
+                      "releaseSha":  "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+                      "command":  "External Sitechecker.pro manual trigger required",
+                      "result":  "YELLOW",
+                      "environment":  "production"
+                  }
+              ]
+}

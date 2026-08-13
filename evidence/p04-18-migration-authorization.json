@@ -1,0 +1,51 @@
+{
+  "lifecycle": "P0.4.15-P0.4.19",
+  "railwayIdentity": {
+    "project": "surprising-radiance",
+    "environment": "production",
+    "service": "bursali-oto-premium"
+  },
+  "databaseIdentity": {
+    "db": "railway",
+    "usr": "postgres",
+    "ver": "PostgreSQL 18.4 (Debian 18.4-1.pgdg13+1) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit",
+    "addr": "10.133.169.135",
+    "port": 5432,
+    "sch": "public",
+    "rec": false
+  },
+  "productionTargetIdentity": {
+    "DATASET_IDENTITY_PROVEN": "MISMATCH"
+  },
+  "datasetIdentity": {
+    "Fuse": 0,
+    "FuseBox": 0,
+    "FaultCode": 12
+  },
+  "schemaCompatibility": {},
+  "prismaSqlEvidence": {},
+  "baseline": {},
+  "candidateIndexStrategy": {},
+  "migrationAuthorization": {},
+  "migrationExecution": {
+    "indexes_created": [],
+    "ddl_mutations": 0
+  },
+  "indexVerification": {},
+  "afterBenchmark": {},
+  "beforeAfterComparison": {},
+  "queryNormalization": {},
+  "trEnMapping": {},
+  "applicationTests": {},
+  "rollback": {},
+  "contradictionAudit": [],
+  "securityAudit": {},
+  "facts": [
+    "Railway identity metadata acquired via CLI.",
+    "TCP connectivity and PostgreSQL handshake successful."
+  ],
+  "unknowns": [],
+  "failures": [],
+  "engineeringOpinions": [],
+  "finalDecision": "RED / BLOCKED (READ-ONLY GATE REACHED)"
+}

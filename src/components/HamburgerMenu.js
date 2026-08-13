@@ -10,6 +10,7 @@ export default function HamburgerMenu() {
   useEffect(() => {
     if (isOpen) {
       setIsOpen(false);
+      document.body.style.overflow = '';
       const navLinks = document.querySelector('.nav-links');
       if (navLinks) navLinks.classList.remove('mobile-open');
     }

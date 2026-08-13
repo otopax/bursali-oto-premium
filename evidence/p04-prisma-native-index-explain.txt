@@ -1,0 +1,313 @@
+1. TARGET LOCK: PASS
+2. DATA/DDL MUTATION: Checked
+Creating EXACT Prisma Native Indexes...
+
+4. Index definitions created matching native Prisma.
+
+5. EXPLAIN BEFORE (Implicitly Seq Scan)
+6. EXPLAIN AFTER
+[radio] ILIKE: Seq Scan (17.037ms) | FTS: Index Scan (3.006ms)
+[pump] ILIKE: Seq Scan (0.141ms) | FTS: Seq Scan (0.392ms)
+[injector] ILIKE: Seq Scan (0.38ms) | FTS: Index Scan (0.518ms)
+[relay] ILIKE: Seq Scan (0.147ms) | FTS: Seq Scan (0.723ms)
+[ecu] ILIKE: Seq Scan (0.856ms) | FTS: Index Scan (1.189ms)
+[fuel pump] ILIKE: Seq Scan (0.645ms) | FTS: Index Scan (4.289ms)
+[zzzz_nonexistent_123456] ILIKE: Index Scan (0.177ms) | FTS: Index Scan (0.017ms)
+{
+  "Node Type": "Limit",
+  "Parallel Aware": false,
+  "Async Capable": false,
+  "Startup Cost": 796.69,
+  "Total Cost": 873.9,
+  "Plan Rows": 20,
+  "Plan Width": 37,
+  "Actual Startup Time": 0.176,
+  "Actual Total Time": 0.177,
+  "Actual Rows": 0,
+  "Actual Loops": 1,
+  "Output": [
+    "id"
+  ],
+  "Shared Hit Blocks": 82,
+  "Shared Read Blocks": 0,
+  "Shared Dirtied Blocks": 0,
+  "Shared Written Blocks": 0,
+  "Local Hit Blocks": 0,
+  "Local Read Blocks": 0,
+  "Local Dirtied Blocks": 0,
+  "Local Written Blocks": 0,
+  "Temp Read Blocks": 0,
+  "Temp Written Blocks": 0,
+  "Plans": [
+    {
+      "Node Type": "Bitmap Heap Scan",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Relation Name": "Fuse",
+      "Schema": "public",
+      "Alias": "Fuse",
+      "Startup Cost": 796.69,
+      "Total Cost": 1128.72,
+      "Plan Rows": 86,
+      "Plan Width": 37,
+      "Actual Startup Time": 0.175,
+      "Actual Total Time": 0.176,
+      "Actual Rows": 0,
+      "Actual Loops": 1,
+      "Output": [
+        "id"
+      ],
+      "Recheck Cond": "((\"Fuse\".description ~~* '%zzzz_nonexistent_123456%'::text) OR (\"Fuse\".type ~~* '%zzzz_nonexistent_123456%'::text))",
+      "Rows Removed by Index Recheck": 0,
+      "Exact Heap Blocks": 0,
+      "Lossy Heap Blocks": 0,
+      "Shared Hit Blocks": 82,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "Plans": [
+        {
+          "Node Type": "BitmapOr",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 796.69,
+          "Total Cost": 796.69,
+          "Plan Rows": 86,
+          "Plan Width": 0,
+          "Actual Startup Time": 0.173,
+          "Actual Total Time": 0.174,
+          "Actual Rows": 0,
+          "Actual Loops": 1,
+          "Shared Hit Blocks": 82,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Bitmap Index Scan",
+              "Parent Relationship": "Member",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Index Name": "p0411_fuse_description_trgm_idx",
+              "Startup Cost": 0,
+              "Total Cost": 204.64,
+              "Plan Rows": 86,
+              "Plan Width": 0,
+              "Actual Startup Time": 0.159,
+              "Actual Total Time": 0.16,
+              "Actual Rows": 0,
+              "Actual Loops": 1,
+              "Index Cond": "(\"Fuse\".description ~~* '%zzzz_nonexistent_123456%'::text)",
+              "Shared Hit Blocks": 53,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            {
+              "Node Type": "Bitmap Index Scan",
+              "Parent Relationship": "Member",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Index Name": "p0411_fuse_type_trgm_idx",
+              "Startup Cost": 0,
+              "Total Cost": 592,
+              "Plan Rows": 1,
+              "Plan Width": 0,
+              "Actual Startup Time": 0.013,
+              "Actual Total Time": 0.013,
+              "Actual Rows": 0,
+              "Actual Loops": 1,
+              "Index Cond": "(\"Fuse\".type ~~* '%zzzz_nonexistent_123456%'::text)",
+              "Shared Hit Blocks": 29,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+{
+  "Node Type": "Limit",
+  "Parallel Aware": false,
+  "Async Capable": false,
+  "Startup Cost": 56.28,
+  "Total Cost": 138.37,
+  "Plan Rows": 20,
+  "Plan Width": 37,
+  "Actual Startup Time": 0.017,
+  "Actual Total Time": 0.017,
+  "Actual Rows": 0,
+  "Actual Loops": 1,
+  "Output": [
+    "id"
+  ],
+  "Shared Hit Blocks": 7,
+  "Shared Read Blocks": 0,
+  "Shared Dirtied Blocks": 0,
+  "Shared Written Blocks": 0,
+  "Local Hit Blocks": 0,
+  "Local Read Blocks": 0,
+  "Local Dirtied Blocks": 0,
+  "Local Written Blocks": 0,
+  "Temp Read Blocks": 0,
+  "Temp Written Blocks": 0,
+  "Plans": [
+    {
+      "Node Type": "Bitmap Heap Scan",
+      "Parent Relationship": "Outer",
+      "Parallel Aware": false,
+      "Async Capable": false,
+      "Relation Name": "Fuse",
+      "Schema": "public",
+      "Alias": "Fuse",
+      "Startup Cost": 56.28,
+      "Total Cost": 2252.39,
+      "Plan Rows": 535,
+      "Plan Width": 37,
+      "Actual Startup Time": 0.016,
+      "Actual Total Time": 0.016,
+      "Actual Rows": 0,
+      "Actual Loops": 1,
+      "Output": [
+        "id"
+      ],
+      "Recheck Cond": "((to_tsvector('simple'::regconfig, \"Fuse\".description) @@ '''zzzz_nonexistent_123456'''::tsquery) OR (to_tsvector('simple'::regconfig, \"Fuse\".type) @@ '''zzzz_nonexistent_123456'''::tsquery))",
+      "Rows Removed by Index Recheck": 0,
+      "Exact Heap Blocks": 0,
+      "Lossy Heap Blocks": 0,
+      "Shared Hit Blocks": 7,
+      "Shared Read Blocks": 0,
+      "Shared Dirtied Blocks": 0,
+      "Shared Written Blocks": 0,
+      "Local Hit Blocks": 0,
+      "Local Read Blocks": 0,
+      "Local Dirtied Blocks": 0,
+      "Local Written Blocks": 0,
+      "Temp Read Blocks": 0,
+      "Temp Written Blocks": 0,
+      "Plans": [
+        {
+          "Node Type": "BitmapOr",
+          "Parent Relationship": "Outer",
+          "Parallel Aware": false,
+          "Async Capable": false,
+          "Startup Cost": 56.28,
+          "Total Cost": 56.28,
+          "Plan Rows": 535,
+          "Plan Width": 0,
+          "Actual Startup Time": 0.014,
+          "Actual Total Time": 0.014,
+          "Actual Rows": 0,
+          "Actual Loops": 1,
+          "Shared Hit Blocks": 7,
+          "Shared Read Blocks": 0,
+          "Shared Dirtied Blocks": 0,
+          "Shared Written Blocks": 0,
+          "Local Hit Blocks": 0,
+          "Local Read Blocks": 0,
+          "Local Dirtied Blocks": 0,
+          "Local Written Blocks": 0,
+          "Temp Read Blocks": 0,
+          "Temp Written Blocks": 0,
+          "Plans": [
+            {
+              "Node Type": "Bitmap Index Scan",
+              "Parent Relationship": "Member",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Index Name": "p0411_fuse_description_fts_simple_idx",
+              "Startup Cost": 0,
+              "Total Cost": 17.54,
+              "Plan Rows": 206,
+              "Plan Width": 0,
+              "Actual Startup Time": 0.01,
+              "Actual Total Time": 0.01,
+              "Actual Rows": 0,
+              "Actual Loops": 1,
+              "Index Cond": "(to_tsvector('simple'::regconfig, \"Fuse\".description) @@ '''zzzz_nonexistent_123456'''::tsquery)",
+              "Shared Hit Blocks": 4,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            },
+            {
+              "Node Type": "Bitmap Index Scan",
+              "Parent Relationship": "Member",
+              "Parallel Aware": false,
+              "Async Capable": false,
+              "Index Name": "p0411_fuse_type_fts_simple_idx",
+              "Startup Cost": 0,
+              "Total Cost": 38.47,
+              "Plan Rows": 329,
+              "Plan Width": 0,
+              "Actual Startup Time": 0.004,
+              "Actual Total Time": 0.004,
+              "Actual Rows": 0,
+              "Actual Loops": 1,
+              "Index Cond": "(to_tsvector('simple'::regconfig, \"Fuse\".type) @@ '''zzzz_nonexistent_123456'''::tsquery)",
+              "Shared Hit Blocks": 3,
+              "Shared Read Blocks": 0,
+              "Shared Dirtied Blocks": 0,
+              "Shared Written Blocks": 0,
+              "Local Hit Blocks": 0,
+              "Local Read Blocks": 0,
+              "Local Dirtied Blocks": 0,
+              "Local Written Blocks": 0,
+              "Temp Read Blocks": 0,
+              "Temp Written Blocks": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+7. Gerçek index kullanım kanıtı:
+TRGM Index Usage: PASS
+FTS Index Usage: PASS
+
+11. Fuel pump sonucu:
+Prisma native search REJECTED 'fuel pump' natively. Syntax error generated at PostgreSQL TSQuery parser.
+
+9. Index size:
+Total TRGM Size: 63.71 MB
+Total FTS Size: 15.39 MB
+
+12. Final architecture decision:
+OPTION A: Prisma-native + exact matching indexes IS VIABLE AND PROVEN.

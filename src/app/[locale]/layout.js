@@ -1,4 +1,5 @@
 import { NextIntlClientProvider } from 'next-intl';
+import Link from 'next/link';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { Inter } from 'next/font/google';
 import '../globals.css';
@@ -129,7 +130,7 @@ export default async function RootLayout({ children, params }) {
         </Providers>
         
         {/* Yolda Kalanlar - Floating SOS Button (Desktop only) */}
-        <a 
+        <Link 
           href={`/${locale}/fethiye-7-24-oto-cekici`}
           className="desktop-only items-center gap-2"
           style={{
@@ -149,7 +150,7 @@ export default async function RootLayout({ children, params }) {
         >
           <span style={{ fontSize: '1.2rem' }}>🚨</span>
           <span>Acil Çekici Çağır</span>
-        </a>
+        </Link>
         <style dangerouslySetInnerHTML={{__html: `
           @keyframes pulse {
             0% { transform: scale(1); opacity: 0.9; }

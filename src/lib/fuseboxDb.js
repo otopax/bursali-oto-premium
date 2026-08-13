@@ -7,12 +7,12 @@ if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
 // Markaları getir
 export async function getFuseboxBrands() {
   try {
-    const brands = await prisma.fuseBox.findMany({
-      distinct: ['brand'],
-      select: { brand: true },
-      orderBy: { brand: 'asc' }
+    const manufacturers = await prisma.manufacturer.findMany({
+      where: { vehicles: { some: { fuseBoxes: { some: {} } } } },
+      select: { name: true },
+      orderBy: { name: 'asc' }
     });
-    return brands.map(b => b.brand);
+    return manufacturers.map(m => m.name);
   } catch (e) {
     console.error("Error fetching fusebox brands:", e);
     return [];
@@ -22,13 +22,16 @@ export async function getFuseboxBrands() {
 // Seçili markanın modellerini getir
 export async function getFuseboxModels(brand) {
   try {
-    const models = await prisma.fuseBox.findMany({
-      where: { brand: { equals: brand, mode: 'insensitive' } },
+    const vehicles = await prisma.vehicle.findMany({
+      where: { 
+        manufacturer: { name: { equals: brand, mode: 'insensitive' } },
+        fuseBoxes: { some: {} }
+      },
       distinct: ['model'],
       select: { model: true },
       orderBy: { model: 'asc' }
     });
-    return models.map(m => m.model);
+    return vehicles.map(v => v.model);
   } catch (e) {
     console.error(`Error fetching fusebox models for ${brand}:`, e);
     return [];
@@ -38,16 +41,29 @@ export async function getFuseboxModels(brand) {
 // Seçili marka ve modelin üretim yıllarını getir
 export async function getFuseboxYears(brand, model) {
   try {
-    const years = await prisma.fuseBox.findMany({
+    const vehicles = await prisma.vehicle.findMany({
       where: { 
-        brand: { equals: brand, mode: 'insensitive' },
-        model: { equals: model, mode: 'insensitive' }
+        manufacturer: { name: { equals: brand, mode: 'insensitive' } },
+        model: { equals: model, mode: 'insensitive' },
+        fuseBoxes: { some: {} }
       },
-      distinct: ['year'],
-      select: { year: true },
-      orderBy: { year: 'desc' }
+      select: { yearStart: true, yearEnd: true }
     });
-    return years.map(y => y.year);
+
+    const currentYear = new Date().getFullYear();
+    const yearSet = new Set();
+
+    for (const v of vehicles) {
+      if (v.yearStart) {
+        const end = v.yearEnd || currentYear;
+        for (let y = v.yearStart; y <= end; y++) {
+          yearSet.add(y);
+        }
+      }
+    }
+
+    const years = Array.from(yearSet).sort((a, b) => a - b);
+    return years;
   } catch (e) {
     console.error(`Error fetching fusebox years for ${brand} ${model}:`, e);
     return [];
@@ -57,15 +73,26 @@ export async function getFuseboxYears(brand, model) {
 // Seçili yılın tüm sigorta kutularını ve içindeki sigortaları getir
 export async function getFuseBoxesWithFuses(brand, model, year) {
   try {
+    const requestedYear = Number.parseInt(year, 10);
+    if (Number.isNaN(requestedYear)) {
+      return [];
+    }
+
     return await prisma.fuseBox.findMany({
       where: {
-        brand: { equals: brand, mode: 'insensitive' },
-        model: { equals: model, mode: 'insensitive' },
-        year: { equals: year, mode: 'insensitive' }
+        vehicle: {
+          manufacturer: { name: { equals: brand, mode: 'insensitive' } },
+          model: { equals: model, mode: 'insensitive' },
+          yearStart: { lte: requestedYear },
+          OR: [
+            { yearEnd: null },
+            { yearEnd: { gte: requestedYear } }
+          ]
+        }
       },
       include: {
         fuses: {
-          orderBy: { fuseNumber: 'asc' }
+          orderBy: { originalId: 'asc' }
         }
       }
     });

@@ -1,0 +1,61 @@
+{
+  "local_head_sha": "4b84a3efffa1e7b90ac5b5606698a481daeda4e1",
+  "railway_sha": "093b38ca",
+  "railway_full_sha": "UNKNOWN",
+  "worktree": {
+    "clean": false,
+    "staged_changes": [],
+    "unstaged_changes": [
+      "tests/e2e/pdf.spec.js"
+    ],
+    "untracked_files": []
+  },
+  "logger_fix": {
+    "present_in_head": "DISPROVEN",
+    "present_only_in_worktree": "PROVEN",
+    "head_state": "logger.error",
+    "worktree_state": "logger.app.error",
+    "evidence": [
+      "HEAD contains logger.error",
+      "Worktree contains logger.app.error"
+    ]
+  },
+  "instrumentation": {
+    "files_found": [],
+    "duplicate_files": "DISPROVEN",
+    "runtime_boot_blocked": "UNKNOWN",
+    "evidence": []
+  },
+  "local_database": {
+    "fuse_count": 0,
+    "fusebox_count": 0,
+    "faultcode_count": 15,
+    "part_count": 0
+  },
+  "runtime": {
+    "next_boot": "UNKNOWN",
+    "search_http": "UNKNOWN",
+    "search_engine_direct": "UNKNOWN",
+    "prisma_direct": "PROVEN"
+  },
+  "search_path": {
+    "fuse_query": "PROVEN",
+    "fusebox_query": "UNKNOWN",
+    "faultcode_query": "PROVEN",
+    "manufacturer_query": "UNKNOWN",
+    "fts_execution": "UNKNOWN",
+    "result_correctness": "UNKNOWN"
+  },
+  "deployment_candidate": {
+    "exact_candidate_sha": "",
+    "all_changes_committed": "DISPROVEN",
+    "unintended_changes": "UNKNOWN",
+    "runtime_validated": "UNKNOWN",
+    "ready": false
+  },
+  "production_mutations": {
+    "ddl": 0,
+    "dml": 0
+  },
+  "final": "HARD_STOP"
+}

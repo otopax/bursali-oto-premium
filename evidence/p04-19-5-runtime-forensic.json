@@ -1,0 +1,48 @@
+{
+  "api_endpoint_analysis": {
+    "path": "/api/search",
+    "source_file": "src/app/api/search/route.js"
+  },
+  "http_request_evidence": {
+    "target_url": "https://www.bursaliotoservis.com/api/search?q=radio",
+    "status": 500,
+    "body": ""
+  },
+  "runtime_log_evidence": {
+    "logs_retrieved": true,
+    "fuse_query_detected": true
+  },
+  "conclusions": {
+    "PRODUCTION_RUNTIME_SEARCH_TO_FUSE": "UNKNOWN",
+    "SEARCH_ENGINE_DEPENDS_ON_FUSE": "UNKNOWN",
+    "PRODUCTION_FUSE_DATASET_REQUIRED": "UNKNOWN"
+  },
+  "contradictions": [
+    {
+      "ID": "C_RUNTIME",
+      "STATUS": "UNRESOLVED",
+      "EVIDENCE": "We see the code, we can hit the endpoint, but we lack absolute observability proof that production runtime queried Fuse."
+    }
+  ],
+  "facts": [
+    "Source code indicates API route exists at /api/search",
+    "HTTP Request to https://www.bursaliotoservis.com/api/search?q=radio returned status 500",
+    "Railway logs show execution of Fuse-related code during the request window."
+  ],
+  "inferences": [],
+  "opinions": [],
+  "unknowns": [],
+  "mutations": {
+    "data": 0,
+    "ddl": 0,
+    "schema": 0,
+    "migration": 0,
+    "deployment": 0
+  },
+  "authorization": {
+    "data_import": "NO",
+    "index_migration": "NO",
+    "p04_20": false
+  },
+  "final": "BLOCKED"
+}

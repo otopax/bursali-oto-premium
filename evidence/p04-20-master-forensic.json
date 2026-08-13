@@ -1,0 +1,52 @@
+{
+  "project": "Bursali Oto",
+  "lifecycle": "P0.4.14-P0.4.20",
+  "target": {
+    "railway_identity_proven": true,
+    "database_identity_proven": false,
+    "dataset_identity_proven": false,
+    "production_target_proven": false
+  },
+  "baseline": {},
+  "migration": {
+    "authorized": false,
+    "executed": false,
+    "indexes_created": [],
+    "ddl_mutations": 0
+  },
+  "application": {
+    "normalization": "PASS",
+    "tr_en_mapping": "PASS",
+    "prisma_native": "NOT_RUN"
+  },
+  "performance": {
+    "before": {},
+    "after": {},
+    "round_trip_latency": {},
+    "database_execution": {},
+    "cbo_behavior": {}
+  },
+  "correctness": {},
+  "rollback": {},
+  "contradictions": [
+    {
+      "ID": "C_CONN",
+      "DESCRIPTION": "Connection to Railway DB failed",
+      "EVIDENCE": "\nInvalid `prisma.$queryRawUnsafe()` invocation:\n\n\nCan't reach database server at `postgres.railway.internal:5432`\n\nPlease make sure your database server is running at `postgres.railway.internal:5432`.",
+      "STATUS": "BLOCKING"
+    }
+  ],
+  "limitations": [
+    "DATABASE_URL points to an internal Railway network address (.internal) which is unreachable from the local execution environment."
+  ],
+  "facts": [
+    "Railway CLI variables successfully retrieved.",
+    "Execution blocked at P0.4.15 due to: Failed to connect or query Production DB: \nInvalid `prisma.$queryRawUnsafe()` invocation:\n\n\nCan't reach database server at `postgres.railway.internal:5432`\n\nPlease make sure your database server is running at `postgres.railway.internal:5432`.",
+    "Application normalizer verified to prevent raw TSQuery syntax injection (e.g., fuel pump -> fuel & pump)."
+  ],
+  "engineering_opinion": [
+    "The script successfully acquired the Railway variables, but the PostgreSQL endpoint provided (`postgres.railway.internal:5432`) is an internal network address. As a result, connection attempts from the local machine timeout or fail. This proves the security of the Railway internal network but prevents external forensic execution unless a TCP Proxy (Public Networking) is enabled on the Railway PostgreSQL service.",
+    "GEMINI ENGINEERING ALTERNATIVE: To proceed with P0.4.15+, either 1) Enable Public Networking on the Postgres service in Railway Dashboard and supply the external DATABASE_PUBLIC_URL for the execution, or 2) Run this exact master script as a Node.js Job/Worker directly inside the Railway environment."
+  ],
+  "final": "RED / BLOCKED"
+}

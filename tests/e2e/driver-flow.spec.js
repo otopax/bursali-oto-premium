@@ -4,7 +4,7 @@ test.describe('GATE 4: Driver User Flow E2E', () => {
   test('driver navigates homepage -> DTC search -> solution article -> chat -> lead CTA', async ({ page }) => {
     // 1. Homepage
     await page.goto('/tr');
-    await expect(page).toHaveTitle(/Bursalı Oto|Porsche|Audi|Volkswagen/i);
+    await expect(page).toHaveTitle(/Premium Araç/i);
 
     // 2. Navigate to Fault Code / Solution Article
     await page.goto('/tr/ariza-kodlari/p0420');
