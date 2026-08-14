@@ -11,7 +11,7 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgresql://admin:mysecretpassword@postgres:5432/bursali_oto?schema=public
+      - DATABASE_URL=${DATABASE_URL}
       - REDIS_URL=redis://redis:6379
       - NEXT_PUBLIC_SITE_URL=https://www.bursaliotoservis.com
     depends_on:
@@ -33,7 +33,7 @@ services:
       - "8080:8080"
     environment:
       - NODE_ENV=production
-      - DATABASE_URL=postgresql://admin:mysecretpassword@postgres:5432/bursali_oto?schema=public
+      - DATABASE_URL=${DATABASE_URL}
       - REDIS_URL=redis://redis:6379
       - PORT=8080
     depends_on:
@@ -49,9 +49,9 @@ services:
     container_name: bursali_postgres
     restart: always
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: mysecretpassword
-      POSTGRES_DB: bursali_oto
+      POSTGRES_USER: ${POSTGRES_USER:-admin}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-bursali_oto}
     ports:
       - "5433:5432"
     volumes:
@@ -84,8 +84,8 @@ services:
     environment:
       DB_HOST: postgres
       DB_PORT: 5432
-      DB_USER: admin
-      DB_PASSWORD: mysecretpassword
+      DB_USER: ${POSTGRES_USER:-admin}
+      DB_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "6432:6432"
     depends_on:
