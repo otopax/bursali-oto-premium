@@ -16,16 +16,12 @@ export class SearchEngine {
 
     try {
       // FAST PATH: Raw SQL with 'english' GIN index
-      // Option C: Force GIN scan via MATERIALIZED CTE to avoid planner bug, then sort by id
+      // Candidate D: TS_RANK optimization. Forces GIN index usage and avoids Materialized CTE heap fetch penalty.
       const rawResults = await prisma.$queryRaw`
-        WITH matches AS MATERIALIZED (
-          SELECT id
-          FROM "public"."Fuse"
-          WHERE to_tsvector('english', coalesce(type, '') || ' ' || coalesce(description, '')) @@ to_tsquery('english', ${formattedQuery})
-        )
         SELECT id
-        FROM matches
-        ORDER BY id ASC
+        FROM "public"."Fuse"
+        WHERE to_tsvector('english', coalesce(type, '') || ' ' || coalesce(description, '')) @@ to_tsquery('english', ${formattedQuery})
+        ORDER BY ts_rank(to_tsvector('english', coalesce(type, '') || ' ' || coalesce(description, '')), to_tsquery('english', ${formattedQuery})) DESC, id ASC
         LIMIT ${limit}
       `;
       
