@@ -23,11 +23,9 @@ const privilegedPrefixes = [
 ];
 
 export async function middleware(request) {
-  const pathname = request.nextUrl.pathname;
-  
   // --- ORIGIN LOCK VERIFICATION ---
   const originSecret = process.env.CLOUDFLARE_ORIGIN_SECRET;
-  if (originSecret && !pathname.startsWith('/api/health')) {
+  if (originSecret) {
     const incomingAuth = request.headers.get('x-origin-auth');
     if (incomingAuth !== originSecret) {
       return new NextResponse(
@@ -49,6 +47,7 @@ export async function middleware(request) {
   request.headers.delete('x-user-role');
   request.headers.delete('x-user-permissions');
 
+  const pathname = request.nextUrl.pathname;
   request.headers.set('x-current-path', pathname);
 
   // Exclude NextAuth internal endpoints from revocation checks so users can log out / fetch sessions
