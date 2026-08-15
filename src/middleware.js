@@ -23,6 +23,19 @@ const privilegedPrefixes = [
 ];
 
 export async function middleware(request) {
+  // --- ORIGIN LOCK VERIFICATION ---
+  const originSecret = process.env.CLOUDFLARE_ORIGIN_SECRET;
+  if (originSecret) {
+    const incomingAuth = request.headers.get('x-origin-auth');
+    if (incomingAuth !== originSecret) {
+      return new NextResponse(
+        JSON.stringify({ success: false, error: 'Unauthorized: Direct Origin Access Blocked' }),
+        { status: 401, headers: { 'content-type': 'application/json' } }
+      );
+    }
+  }
+  // ----------------------------------
+
   const nonce = crypto.randomUUID().replace(/-/g, '');
   
   // 1. Trace ID for observability & Anti-Spoofing: Strip client identity headers
