@@ -1,15 +1,15 @@
 import { Redis } from '@upstash/redis';
 import * as Sentry from "@sentry/nextjs";
 
-const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL || 'https://mock-upstash-url.upstash.io';
-const isMock = !process.env.UPSTASH_REDIS_REST_URL || REDIS_URL.includes('mock') || process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
+const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL;
+const isMock = !REDIS_URL || process.env.NEXT_PHASE === 'phase-production-build' || process.env.BUILDING === 'true' || process.env.IS_BUILD === 'true';
 
 let redisInstance = null;
-if (!isMock) {
+if (!isMock && REDIS_URL && process.env.UPSTASH_REDIS_REST_TOKEN) {
   try {
     redisInstance = new Redis({
       url: REDIS_URL,
-      token: process.env.UPSTASH_REDIS_REST_TOKEN || 'mock-token',
+      token: process.env.UPSTASH_REDIS_REST_TOKEN,
     });
   } catch (e) {
     redisInstance = null;

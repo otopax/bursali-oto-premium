@@ -3,8 +3,12 @@ import { z } from 'zod';
 const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.IS_BUILD === 'true' || !process.env.DATABASE_URL;
 
 const envSchema = z.object({
-  DATABASE_URL: z.string().url("Geçerli bir veritabanı URL'si girilmelidir.").default('postgresql://admin:dummy@localhost:5432/bursali_oto'),
-  GOOGLE_GENERATIVE_AI_API_KEY: z.string().default('AIzaSyDummyKeyForBuildPhaseValidation12345'),
+  DATABASE_URL: isBuildPhase 
+    ? z.string().default('postgresql://admin:dummy@localhost:5432/bursali_oto') 
+    : z.string().url("Geçerli bir veritabanı URL'si girilmelidir."),
+  GOOGLE_GENERATIVE_AI_API_KEY: isBuildPhase 
+    ? z.string().default('AIzaSyDummyKeyForBuildPhaseValidation12345') 
+    : z.string({ required_error: "Missing GOOGLE_GENERATIVE_AI_API_KEY" }),
   REDIS_URL: z.string().url("Geçerli bir Redis URL'si girilmelidir.").optional(),
   UPSTASH_REDIS_REST_URL: z.string().url("Geçerli bir Upstash URL'si girilmelidir.").optional(),
   UPSTASH_REDIS_REST_TOKEN: z.string().min(10, "Upstash Token geçersiz.").optional(),

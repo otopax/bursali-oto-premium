@@ -5,8 +5,12 @@ import { verifyPassword } from "@/lib/auth/password";
 import { rateLimit } from "@/lib/auth/rateLimit";
 import { redis } from "@/lib/cache";
 
-const authSecret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET || 'bursali-oto-production-fallback-secret-key-2026-auth';
 const isBuildPhase = process.env.NEXT_PHASE === 'phase-production-build' || process.env.IS_BUILD === 'true';
+const authSecret = process.env.AUTH_SECRET || process.env.NEXTAUTH_SECRET;
+
+if (!authSecret && !isBuildPhase) {
+  throw new Error("Missing AUTH_SECRET or NEXTAUTH_SECRET environment variable.");
+}
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   providers: [

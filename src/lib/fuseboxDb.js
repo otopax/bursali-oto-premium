@@ -1,11 +1,13 @@
-import { PrismaClient } from '@prisma/client';
-
-const globalForPrisma = global;
-const prisma = globalForPrisma.prisma || new PrismaClient();
-if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma = prisma;
+import { prisma } from '@/lib/prisma';
 
 // Markaları getir
 export async function getFuseboxBrands() {
+  const isBuild = process.env.IS_BUILD === 'true' || process.env.NEXT_PHASE === 'phase-production-build';
+  if (isBuild) {
+    console.warn('[FuseboxDB] Build phase detected. Skipping DB query for brands.');
+    return [];
+  }
+
   try {
     const manufacturers = await prisma.manufacturer.findMany({
       where: { vehicles: { some: { fuseBoxes: { some: {} } } } },
