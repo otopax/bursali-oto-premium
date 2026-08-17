@@ -80,14 +80,17 @@ export default function Reviews() {
 
   return (
     <div>
-      <div className="grid" style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+      <div style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
         gap: '1.5rem',
         marginBottom: '2rem'
       }}>
         {reviews.slice(0, visibleCount).map((review, index) => (
           <div key={index} className="review-card" style={{ 
+            flex: '1 1 280px',
+            maxWidth: '350px',
             padding: '2rem', 
             background: 'rgba(255,255,255,0.02)', 
             borderRadius: '12px', 

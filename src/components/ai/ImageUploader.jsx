@@ -113,12 +113,12 @@ export default function ImageUploader({ onAnalysisComplete }) {
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-100 max-w-md mx-auto">
-      <h3 className="text-xl font-semibold mb-4 text-gray-800">Hasar Tespiti (Vision AI)</h3>
+    <div className="glass-panel" style={{ maxWidth: '500px', margin: '0 auto', padding: '2rem' }}>
+      <h3 style={{ color: 'var(--accent-gold)', marginBottom: '1.5rem', fontSize: '1.5rem', textAlign: 'center' }}>Hasar Tespiti (Vision AI)</h3>
       
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
         <div>
-          <label htmlFor="vehicle-photo-input" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="vehicle-photo-input" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-light)', fontWeight: '500' }}>
             Arızalı Parçanın Fotoğrafı
           </label>
           <input
@@ -128,22 +128,30 @@ export default function ImageUploader({ onAnalysisComplete }) {
             accept="image/*"
             ref={fileInputRef}
             onChange={handleFileChange}
-            className="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary-50 file:text-primary-700 hover:file:bg-primary-100"
+            style={{
+              width: '100%',
+              padding: '0.8rem',
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid var(--glass-border)',
+              borderRadius: '8px',
+              color: 'var(--text-light)',
+              cursor: 'pointer'
+            }}
           />
         </div>
 
         {previewUrl && (
-          <div className="mt-4 flex justify-center">
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
             <img 
               src={previewUrl} 
               alt="Önizleme" 
-              className="max-h-48 rounded border border-gray-200 shadow-sm"
+              style={{ maxHeight: '200px', borderRadius: '8px', border: '1px solid var(--glass-border)' }}
             />
           </div>
         )}
 
         <div>
-          <label htmlFor="vehicle-prompt-input" className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="vehicle-prompt-input" style={{ display: 'block', marginBottom: '0.5rem', color: 'var(--text-light)', fontWeight: '500' }}>
             Ek Açıklama (Opsiyonel)
           </label>
           <input
@@ -152,12 +160,19 @@ export default function ImageUploader({ onAnalysisComplete }) {
             type="text"
             ref={promptInputRef}
             placeholder="Örn: Sağ kapıdaki çizik, Motor bloğundaki yağ kaçağı"
-            className="w-full border-gray-300 rounded-md shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm p-2 border"
+            style={{
+              width: '100%',
+              padding: '1rem',
+              background: 'rgba(255, 255, 255, 0.05)',
+              border: '1px solid var(--glass-border)',
+              borderRadius: '8px',
+              color: 'white'
+            }}
           />
         </div>
 
         {error && (
-          <div className="text-red-600 text-sm p-2 bg-red-50 rounded">
+          <div style={{ color: '#ef4444', padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '8px', border: '1px solid rgba(239, 68, 68, 0.2)', fontSize: '0.9rem' }}>
             {error}
           </div>
         )}
@@ -165,7 +180,14 @@ export default function ImageUploader({ onAnalysisComplete }) {
         <button
           type="submit"
           disabled={isUploading || !previewUrl}
-          className={`w-full py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${isUploading ? 'opacity-70 cursor-not-allowed' : ''}`}
+          className="btn btn-gold"
+          style={{
+            width: '100%',
+            padding: '1rem',
+            fontSize: '1.1rem',
+            opacity: (isUploading || !previewUrl) ? 0.6 : 1,
+            cursor: (isUploading || !previewUrl) ? 'not-allowed' : 'pointer'
+          }}
         >
           {isUploading ? 'Yapay Zeka Analiz Ediyor...' : 'Analiz Et'}
         </button>
