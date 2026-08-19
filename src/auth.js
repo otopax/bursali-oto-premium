@@ -155,6 +155,6 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
     strategy: "jwt",
     maxAge: 30 * 24 * 60 * 60, // 30 Days
   },
-  secret: authSecret || "build-phase-dummy-secret-key-1234567890",
+  secret: authSecret,
 });
 
