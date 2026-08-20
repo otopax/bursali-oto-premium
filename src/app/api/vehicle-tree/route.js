@@ -16,10 +16,10 @@ export async function GET(request) {
   const modelId = p.get('modelId');
 
   try {
-    if (!brand) return NextResponse.json({ brands: getBrands() });
-    if (modelId) return NextResponse.json({ brand, modelId, engines: getEngines(brand, modelId) });
-    if (modelGroupId) return NextResponse.json({ brand, modelGroupId, generations: getGenerations(brand, modelGroupId) });
-    return NextResponse.json({ brand, models: getModels(brand) });
+    if (!brand) return NextResponse.json({ brands: await getBrands() });
+    if (modelId) return NextResponse.json({ brand, modelId, engines: await getEngines(brand, modelId) });
+    if (modelGroupId) return NextResponse.json({ brand, modelGroupId, generations: await getGenerations(brand, modelGroupId) });
+    return NextResponse.json({ brand, models: await getModels(brand) });
   } catch (e) {
     return NextResponse.json({ error: e.message }, { status: 500 });
   }
