@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { getFuseboxBrands } from '@/lib/fuseboxDb';
 import { buildSEOContract } from '@/lib/seo/canonical';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }) {
   const { locale } = await params;
   return buildSEOContract({

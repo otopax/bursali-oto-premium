@@ -1,0 +1,973 @@
+﻿{
+    "metadata":  {
+                     "discovery_start_utc":  "2026-08-15T13:20:18.8950759Z",
+                     "domain":  "bursaliotoservis.com",
+                     "finished_utc":  "2026-08-15T13:20:27.8844486Z"
+                 },
+    "evidence":  {
+                     "gate11_1_waf_managed":  {
+                                                  "status":  200,
+                                                  "data":  {
+                                                               "description":  "Created by the Cloudflare security team, this ruleset is designed to provide protection for free zones",
+                                                               "id":  "77454fe2d30c4220b5701f6fdfb893ba",
+                                                               "kind":  "managed",
+                                                               "last_updated":  "2026-08-07T15:23:52.623096Z",
+                                                               "name":  "Cloudflare Managed Free Ruleset",
+                                                               "phase":  "http_request_firewall_managed",
+                                                               "rules":  [
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "cve-2021-44832",
+                                                                                                    "cve-2021-45105",
+                                                                                                    "log4j",
+                                                                                                    "rce"
+                                                                                                ],
+                                                                                 "description":  "Log4j Headers",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "b453c8ace3a54e0ab7c791510b51dc4d",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "147f480ca73e491f903b1924deedbb8f",
+                                                                                 "version":  "60"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "cve-2021-44832",
+                                                                                                    "cve-2021-45105",
+                                                                                                    "log4j",
+                                                                                                    "rce"
+                                                                                                ],
+                                                                                 "description":  "Log4j URI",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "7dfd111a6bad4b86bf3522cce6c5792f",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "3861aedd3c0241a792fb50b02eca0312",
+                                                                                 "version":  "60"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "cve-2014-6271",
+                                                                                                    "cve-2014-6277",
+                                                                                                    "cve-2014-6278",
+                                                                                                    "cve-2014-7169",
+                                                                                                    "cve-2014-7186",
+                                                                                                    "cve-2014-7187"
+                                                                                                ],
+                                                                                 "description":  "Shellshock",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "9f7e454e4cad45abbcc40696037f70df",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "bb57123923d27aa608576180c267b5e9",
+                                                                                 "version":  "49"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "code-injection",
+                                                                                                    "gravity-forms",
+                                                                                                    "plugin",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Plugin:Gravity Forms - Code Injection",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "9aa65152dfd2409b916aa6c6ae0bfb8c",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "f86e7b22e6776a17008d96bbb1d67dc2",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "code-injection",
+                                                                                                    "cve-2013-2010",
+                                                                                                    "plugin",
+                                                                                                    "w3-total-cache",
+                                                                                                    "wordpress",
+                                                                                                    "wp-super-cache"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Plugin:W3 Total Cache, Wordpress:Plugin:WP Super Cache - Code Injection - CVE:CVE-2013-2010",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "39c91a0a9dfb49a98b9446ab23728616",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "b6b67a8b558838cbd39ea3bd39ee7104",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "cve-2015-2292",
+                                                                                                    "plugin",
+                                                                                                    "sqli",
+                                                                                                    "wordpress",
+                                                                                                    "yoast-seo"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Plugin:Yoast SEO - SQLi - CVE:CVE-2015-2292",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "16165bcc426743198ca9846da7377369",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "7d48d4eb0636ba9c445076c8bd1791bb",
+                                                                                 "version":  "12"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "cve-2015-2213",
+                                                                                                    "sqli",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - SQLi - CVE:CVE-2015-2213",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "8211fe3405ca4f1382443e73b6c97bb0",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "12294af12a37bba15f911fa96f12a927",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "code-injection",
+                                                                                                    "cve-2014-4725",
+                                                                                                    "mailport",
+                                                                                                    "plugin",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Plugin:Mailport - Code Injection - CVE:CVE-2014-4725",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "d379921792144f699029a3b759e1ad94",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "91d78e18abcc61f9d017ddd4a0151d84",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "broken-access-control",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - Broken Access Control - Update Script",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "756cd04ee0434ec68da3eb5744a423e8",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "d2ad438b8337b5d0164fd86201bd7e95",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "code-injection",
+                                                                                                    "cve-2014-9735",
+                                                                                                    "plugin",
+                                                                                                    "revolution-slider",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Plugin:Revolution Slider - Code Injection - CVE:CVE-2014-9735",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "aec3bff788004085a54e63e835909138",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "f203c2f7acb637c30b0dffca31905a4f",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "broken-access-control",
+                                                                                                    "file-inclusion",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - Broken Access Control, File Inclusion",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "9ce4e284ff2a486aaa37d642bff5a079",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "13bc8134cfdbfbec7c0b647ddb242a9f",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "wordpress",
+                                                                                                    "xss"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - XSS",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "52cc923af3b4484696f6c8ecb9073f5c",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "f5d41ad2fdee77aff16d6d23e8014eb0",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "broken-access-control",
+                                                                                                    "cve-2018-12895",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - Broken Access Control - CVE:CVE-2018-12895",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "8399c1b1b32e45fb9674094a5472b59b",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "c2db66244d95901873d538715d17fef0",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "broken-access-control",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - Broken Access Control",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "1478cd46ee7e4979a7f0be58f3e87b31",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "cfc7c233016ac4575cea7da6bbd4129f",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "code-injection",
+                                                                                                    "cve-2019-8942",
+                                                                                                    "cve-2019-8943",
+                                                                                                    "file-inclusion",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - Code Injection, File Inclusion - CVE:CVE-2019-8943, CVE:CVE-2019-8942",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "a24d55f20dc94f0ebd69f3a1f982e575",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "29513732ff71d0d07d07cdbb316c82ef",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "command-injection",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - Command Injection",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "c1d0ed46741e44f19e9b75ecd8b2a9d6",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "ce26522dad467fefaf5698cf6538021a",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "deserialization",
+                                                                                                    "easy-wp-smtp",
+                                                                                                    "plugin",
+                                                                                                    "wordpress"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Plugin:Easy WP SMTP - Deserialization",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "cdbc99bfeaad43cf9000257c317a7b41",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "53a32bb6c74faa7ca5c77eb1696f22b3",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "cve-2019-11869",
+                                                                                                    "plugin",
+                                                                                                    "wordpress",
+                                                                                                    "xss",
+                                                                                                    "yuzo-related-posts"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Plugin:Yuzo Related Posts - XSS - CVE:CVE-2019-11869",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "93f26552f936415baf994cd877d4ba58",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "c7a47c3dff5322d1a59d3ba986ff2d02",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "theme",
+                                                                                                    "twentyfifteen",
+                                                                                                    "wordpress",
+                                                                                                    "xss"
+                                                                                                ],
+                                                                                 "description":  "Wordpress:Theme:TwentyFifteen - XSS",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "b0928a3200fe43bda32999c3edc6475c",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "bf2540ee571b3da20c14a2d3a2b95c24",
+                                                                                 "version":  "43"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "atlassian-confluence",
+                                                                                                    "code-injection",
+                                                                                                    "cve-2022-26134"
+                                                                                                ],
+                                                                                 "description":  "Atlassian Confluence - Code Injection - CVE:CVE-2022-26134",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "c806c77afd784455a5d0b5091702f7a0",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "4ab34bb73cbc6b227f38b637848ef44b",
+                                                                                 "version":  "12"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "description":  "Validate Headers",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "4c6b0411c4f34d7b8a28ca03c803ba82",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "1d77c756a2ef9dd72885c4071e9f26fa",
+                                                                                 "version":  "18"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "atlassian-confluence",
+                                                                                                    "cve-2023-22515",
+                                                                                                    "privilege-escalation"
+                                                                                                ],
+                                                                                 "description":  "Atlassian Confluence - Privilege Escalation - CVE:CVE-2023-22515",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "0cc7e2df1d614c74a8e4b1bc91935fcb",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "bb6ae105e94f6eb2ab60891db49b2227",
+                                                                                 "version":  "10"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "auth-bypass",
+                                                                                                    "cve-2025-43864",
+                                                                                                    "cve-2025-43865",
+                                                                                                    "react-router",
+                                                                                                    "new",
+                                                                                                    "beta"
+                                                                                                ],
+                                                                                 "description":  "React Router - Router and Remix Vulnerability - CVE:CVE-2025-43864, CVE:CVE-2025-43865",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "9e01df73001040289aa0449cf2f153c7",
+                                                                                 "last_updated":  "2025-04-27T02:00:29.148875Z",
+                                                                                 "ref":  "40405babfa09637bb06377a0b9edfb32",
+                                                                                 "version":  "1"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "rce",
+                                                                                                    "react",
+                                                                                                    "cve-2025-55182"
+                                                                                                ],
+                                                                                 "description":  "React - RCE - CVE:CVE-2025-55182",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "2b5d06e34a814a889bee9a0699702280",
+                                                                                 "last_updated":  "2025-12-03T16:22:52.477221Z",
+                                                                                 "ref":  "05253e585770c8f62cc649ddbfa9997a",
+                                                                                 "version":  "2"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "information-disclosure",
+                                                                                                    "react",
+                                                                                                    "cve-2025-55183"
+                                                                                                ],
+                                                                                 "description":  "React - Leaking Server Functions - CVE:CVE-2025-55183",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "3114709a3c3b4e3685052c7b251e86aa",
+                                                                                 "last_updated":  "2026-06-04T13:16:34.082059Z",
+                                                                                 "ref":  "d9bc06690e9fbba2c93c6a71dd17cf00",
+                                                                                 "version":  "3"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "rce",
+                                                                                                    "react",
+                                                                                                    "cve-2025-55182"
+                                                                                                ],
+                                                                                 "description":  "React - Remote Code Execution - CVE:CVE-2025-55182 - 2",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "cbdd3f48396e4b7389d6efd174746aff",
+                                                                                 "last_updated":  "2026-06-04T13:16:34.082059Z",
+                                                                                 "ref":  "c0e4f6a8d3b5179c4e6a8b0d2f4a6c00",
+                                                                                 "version":  "2"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "wordpress",
+                                                                                                    "sqli",
+                                                                                                    "cve-2026-60137"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - SQL Injection - CVE:CVE-2026-60137",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "db003b39b7774859a8d588ce33697a1a",
+                                                                                 "last_updated":  "2026-07-22T02:15:47.375931Z",
+                                                                                 "ref":  "aaab3dacd4500b43f1b9df78fa67d26e",
+                                                                                 "version":  "3"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "wordpress",
+                                                                                                    "rce",
+                                                                                                    "cve-2026-63030"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - Remote Code Execution - CVE:CVE-2026-63030",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "ebd3f2df15c74ddcbf6220c9b5ec246a",
+                                                                                 "last_updated":  "2026-07-22T02:15:47.375931Z",
+                                                                                 "ref":  "73f56bc478729ec92a5cdc6fdcbc2803",
+                                                                                 "version":  "3"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "generic",
+                                                                                                    "rce",
+                                                                                                    "new"
+                                                                                                ],
+                                                                                 "description":  "Generic Rules - RCE",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "6ad9f2049b094c608be0f8adcfe1a93c",
+                                                                                 "last_updated":  "2026-07-29T05:38:48.386913Z",
+                                                                                 "ref":  "068a8f4a9527f59fbe84311c5327badd",
+                                                                                 "version":  "1"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "wordpress",
+                                                                                                    "xss",
+                                                                                                    "cve-2026-64638",
+                                                                                                    "new"
+                                                                                                ],
+                                                                                 "description":  "Wordpress - XSS - CVE:CVE-2026-64638",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "5bdf578fff504b8cbe3b7f699ab5ed95",
+                                                                                 "last_updated":  "2026-08-07T15:23:52.623096Z",
+                                                                                 "ref":  "e9897e03be7cf4842db7ea2a8e354404",
+                                                                                 "version":  "2"
+                                                                             },
+                                                                             {
+                                                                                 "action":  "block",
+                                                                                 "categories":  [
+                                                                                                    "arbitrary-file-read",
+                                                                                                    "rce"
+                                                                                                ],
+                                                                                 "description":  "Rails - Arbitrary File Read \u0026 RCE - CVE:CVE-2026-66066",
+                                                                                 "enabled":  true,
+                                                                                 "id":  "7ecac499d14a4750aa58c1e21b7f9c67",
+                                                                                 "last_updated":  "2026-08-03T23:32:20.740694Z",
+                                                                                 "ref":  "81940a30a6a5cd8834b47f047b2d56fa",
+                                                                                 "version":  "2"
+                                                                             }
+                                                                         ],
+                                                               "source":  "firewall_managed",
+                                                               "version":  "73"
+                                                           },
+                                                  "success":  true
+                                              },
+                     "gate11_6_ssl":  {
+                                          "status":  200,
+                                          "data":  {
+                                                       "id":  "ssl",
+                                                       "value":  "strict",
+                                                       "modified_on":  "2026-07-19T23:06:16.551317Z",
+                                                       "certificate_status":  "active",
+                                                       "validation_errors":  [
+
+                                                                             ],
+                                                       "editable":  true
+                                                   },
+                                          "success":  true
+                                      },
+                     "rulesets_metadata":  {
+                                               "status":  200,
+                                               "data":  [
+                                                            {
+                                                                "description":  "Created by the Cloudflare security team, this ruleset provides normalization on the URL path",
+                                                                "id":  "70339d97bdb34195bbf054b1ebe81f76",
+                                                                "kind":  "managed",
+                                                                "last_updated":  "2024-08-01T17:37:11.538019Z",
+                                                                "name":  "Cloudflare Normalization Ruleset",
+                                                                "phase":  "http_request_sanitize",
+                                                                "version":  "6"
+                                                            },
+                                                            {
+                                                                "description":  "Created by the Cloudflare security team, this ruleset is designed to provide protection for free zones",
+                                                                "id":  "77454fe2d30c4220b5701f6fdfb893ba",
+                                                                "kind":  "managed",
+                                                                "last_updated":  "2026-08-07T15:23:52.623096Z",
+                                                                "name":  "Cloudflare Managed Free Ruleset",
+                                                                "phase":  "http_request_firewall_managed",
+                                                                "source":  "firewall_managed",
+                                                                "version":  "73"
+                                                            },
+                                                            {
+                                                                "description":  "Automatic mitigation of HTTP-based DDoS attacks. Cloudflare routinely adds signatures to address new attack vectors. Additional configuration allows you to customize the sensitivity of each rule and the performed mitigation action.",
+                                                                "id":  "4d21379b4f9f4bb088e0729962c8b3cf",
+                                                                "kind":  "managed",
+                                                                "last_updated":  "2026-08-14T15:59:27.382111Z",
+                                                                "name":  "DDoS L7 ruleset",
+                                                                "phase":  "ddos_l7",
+                                                                "version":  "3396"
+                                                            },
+                                                            {
+                                                                "description":  "",
+                                                                "id":  "b03ff34e5970412ca057521ce45addc0",
+                                                                "kind":  "zone",
+                                                                "last_updated":  "2026-07-20T00:21:12.49792Z",
+                                                                "name":  "default",
+                                                                "phase":  "http_request_cache_settings",
+                                                                "version":  "1"
+                                                            },
+                                                            {
+                                                                "description":  "",
+                                                                "id":  "f77877d77a154561b06f43e165490587",
+                                                                "kind":  "zone",
+                                                                "last_updated":  "2026-07-22T09:32:07.721742Z",
+                                                                "name":  "default",
+                                                                "phase":  "http_request_dynamic_redirect",
+                                                                "version":  "1"
+                                                            }
+                                                        ],
+                                               "success":  true
+                                           },
+                     "gate11_4_cache_rules":  {
+                                                  "status":  200,
+                                                  "data":  {
+                                                               "description":  "",
+                                                               "id":  "b03ff34e5970412ca057521ce45addc0",
+                                                               "kind":  "zone",
+                                                               "last_updated":  "2026-07-20T00:21:12.49792Z",
+                                                               "name":  "default",
+                                                               "phase":  "http_request_cache_settings",
+                                                               "rules":  [
+                                                                             {
+                                                                                 "action":  "set_cache_settings",
+                                                                                 "action_parameters":  {
+                                                                                                           "cache":  true,
+                                                                                                           "edge_ttl":  {
+                                                                                                                            "default":  2678400,
+                                                                                                                            "mode":  "override_origin"
+                                                                                                                        }
+                                                                                                       },
+                                                                                 "description":  "Cache Next.js Static Assets",
+                                                                                 "enabled":  true,
+                                                                                 "expression":  "(http.request.full_uri wildcard r\"*bursaliotoservis.com/_next/static/*\")",
+                                                                                 "id":  "b0a22d0e4f604e9681c57ce91c06b5df",
+                                                                                 "last_updated":  "2026-07-20T00:21:12.49792Z",
+                                                                                 "ref":  "b0a22d0e4f604e9681c57ce91c06b5df",
+                                                                                 "version":  "1"
+                                                                             }
+                                                                         ],
+                                                               "version":  "1"
+                                                           },
+                                                  "success":  true
+                                              },
+                     "gate11_6_aop":  {
+                                          "status":  400,
+                                          "data":  "MISSING/PERMISSION_DENIED_OR_ERROR",
+                                          "success":  false
+                                      },
+                     "gate11_0_identity":  {
+                                               "status":  200,
+                                               "data":  [
+                                                            {
+                                                                "id":  "3f5bbaaed3f5a3f602844732d07e2f9e",
+                                                                "name":  "bursaliotoservis.com",
+                                                                "status":  "active",
+                                                                "paused":  false,
+                                                                "type":  "full",
+                                                                "development_mode":  0,
+                                                                "name_servers":  [
+                                                                                     "garrett.ns.cloudflare.com",
+                                                                                     "melissa.ns.cloudflare.com"
+                                                                                 ],
+                                                                "original_name_servers":  [
+                                                                                              "ns1.vercel-dns.com",
+                                                                                              "ns2.vercel-dns.com"
+                                                                                          ],
+                                                                "original_registrar":  "name.com, inc. (id: 625)",
+                                                                "original_dnshost":  null,
+                                                                "modified_on":  "2026-07-06T10:01:17.232033Z",
+                                                                "created_on":  "2026-07-06T08:53:59.975036Z",
+                                                                "activated_on":  "2026-07-06T10:01:17.232033Z",
+                                                                "vanity_name_servers":  [
+
+                                                                                        ],
+                                                                "vanity_name_servers_ips":  null,
+                                                                "meta":  {
+                                                                             "step":  2,
+                                                                             "custom_certificate_quota":  0,
+                                                                             "page_rule_quota":  3,
+                                                                             "phishing_detected":  false
+                                                                         },
+                                                                "owner":  {
+                                                                              "id":  null,
+                                                                              "type":  "user",
+                                                                              "email":  null
+                                                                          },
+                                                                "account":  {
+                                                                                "id":  "8fe0b0d01b35b65ab2fff0284842869b",
+                                                                                "name":  "Xborsafethiye@gmail.com\u0027s Account"
+                                                                            },
+                                                                "tenant":  {
+                                                                               "id":  null,
+                                                                               "name":  null
+                                                                           },
+                                                                "tenant_unit":  {
+                                                                                    "id":  null
+                                                                                },
+                                                                "permissions":  [
+                                                                                    "#zone:read",
+                                                                                    "#zone_settings:read",
+                                                                                    "#dns_records:read",
+                                                                                    "#waf:read",
+                                                                                    "#page_shield:read",
+                                                                                    "#zone_versioning:read",
+                                                                                    "#api_gateway:read",
+                                                                                    "#zaraz:read",
+                                                                                    "#web3:read",
+                                                                                    "#healthchecks:read",
+                                                                                    "#waitingroom:read",
+                                                                                    "#access:read",
+                                                                                    "#ssl:read",
+                                                                                    "#worker:read",
+                                                                                    "#logs:read",
+                                                                                    "#lb:read",
+                                                                                    "#analytics:read"
+                                                                                ],
+                                                                "plan":  {
+                                                                             "id":  "0feeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+                                                                             "name":  "Free Website",
+                                                                             "price":  0,
+                                                                             "currency":  "USD",
+                                                                             "frequency":  "",
+                                                                             "is_subscribed":  false,
+                                                                             "can_subscribe":  false,
+                                                                             "legacy_id":  "free",
+                                                                             "legacy_discount":  false,
+                                                                             "externally_managed":  false
+                                                                         }
+                                                            }
+                                                        ],
+                                               "success":  true
+                                           },
+                     "gate11_5_bot_protection":  {
+                                                     "status":  200,
+                                                     "data":  {
+                                                                  "enable_js":  false,
+                                                                  "fight_mode":  false,
+                                                                  "ai_bots_protection":  "disabled",
+                                                                  "content_bots_protection":  "disabled",
+                                                                  "crawler_protection":  "disabled",
+                                                                  "ai_training":  "disabled",
+                                                                  "ai_search":  "disabled",
+                                                                  "ai_user":  "disabled",
+                                                                  "is_robots_txt_managed":  false,
+                                                                  "cf_robots_variant":  "off",
+                                                                  "ai_bots_migration_opt_out":  true,
+                                                                  "using_latest_model":  true
+                                                              },
+                                                     "success":  true
+                                                 },
+                     "gate11_7_dns":  {
+                                          "status":  200,
+                                          "data":  [
+                                                       {
+                                                           "id":  "73fd483cd04c8f56c36f7a43e252487c",
+                                                           "name":  "*.bursaliotoservis.com",
+                                                           "type":  "A",
+                                                           "content": "[REDACTED_IP]",
+                                                           "proxiable":  true,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-06T08:54:04.463841Z",
+                                                           "modified_on":  "2026-07-06T08:54:22.037684Z"
+                                                       },
+                                                       {
+                                                           "id":  "91aeb87e6592001d04a641b6e40ae911",
+                                                           "name":  "*.bursaliotoservis.com",
+                                                           "type":  "A",
+                                                           "content": "[REDACTED_IP]",
+                                                           "proxiable":  true,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-06T08:54:04.473279Z",
+                                                           "modified_on":  "2026-07-06T08:54:19.948505Z"
+                                                       },
+                                                       {
+                                                           "id":  "58fdca27c95b392b7879d105e6f4b045",
+                                                           "name":  "bursaliotoservis.com",
+                                                           "type":  "A",
+                                                           "content": "[REDACTED_IP]",
+                                                           "proxiable":  true,
+                                                           "proxied":  true,
+                                                           "ttl":  1,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-07T09:40:27.417719Z",
+                                                           "modified_on":  "2026-07-07T09:40:27.417719Z"
+                                                       },
+                                                       {
+                                                           "id":  "4bc076fda31f79f9acb0ae5c91680896",
+                                                           "name":  "bursaliotoservis.com",
+                                                           "type":  "A",
+                                                           "content": "[REDACTED_IP]",
+                                                           "proxiable":  true,
+                                                           "proxied":  true,
+                                                           "ttl":  1,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-07T09:40:08.874313Z",
+                                                           "modified_on":  "2026-07-07T09:40:08.874313Z"
+                                                       },
+                                                       {
+                                                           "id":  "628da9b23330428169fcfe8254752000",
+                                                           "name":  "bursaliotoservis.com",
+                                                           "type":  "CAA",
+                                                           "content":  "0 issue \"sectigo.com\"",
+                                                           "proxiable":  false,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "data":  {
+                                                                        "flags":  0,
+                                                                        "tag":  "issue",
+                                                                        "value":  "sectigo.com"
+                                                                    },
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-06T08:54:04.546703Z",
+                                                           "modified_on":  "2026-07-06T08:54:04.546703Z"
+                                                       },
+                                                       {
+                                                           "id":  "ec5baf75f3ec2163e5779a06e79eec59",
+                                                           "name":  "bursaliotoservis.com",
+                                                           "type":  "CAA",
+                                                           "content":  "0 issue \"pki.goog\"",
+                                                           "proxiable":  false,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "data":  {
+                                                                        "flags":  0,
+                                                                        "tag":  "issue",
+                                                                        "value":  "pki.goog"
+                                                                    },
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-06T08:54:04.539713Z",
+                                                           "modified_on":  "2026-07-06T08:54:04.539713Z"
+                                                       },
+                                                       {
+                                                           "id":  "d210984e49454315e901301289ba9175",
+                                                           "name":  "bursaliotoservis.com",
+                                                           "type":  "CAA",
+                                                           "content":  "0 issue \"letsencrypt.org\"",
+                                                           "proxiable":  false,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "data":  {
+                                                                        "flags":  0,
+                                                                        "tag":  "issue",
+                                                                        "value":  "letsencrypt.org"
+                                                                    },
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-06T08:54:04.531224Z",
+                                                           "modified_on":  "2026-07-06T08:54:04.531224Z"
+                                                       },
+                                                       {
+                                                           "id":  "5dac09197a921bd2572617f4676248ae",
+                                                           "name":  "_domainconnect.bursaliotoservis.com",
+                                                           "type":  "CNAME",
+                                                           "content":  "_domainconnect.vercel-dns.com",
+                                                           "proxiable":  true,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "settings":  {
+                                                                            "flatten_cname":  false
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-06T08:54:04.521071Z",
+                                                           "modified_on":  "2026-07-06T08:54:31.030009Z"
+                                                       },
+                                                       {
+                                                           "id":  "543fb2958b8e844ac5ad0c306d870e96",
+                                                           "name":  "www.bursaliotoservis.com",
+                                                           "type":  "CNAME",
+                                                           "content":  "86p0eck1.up.railway.app",
+                                                           "proxiable":  true,
+                                                           "proxied":  true,
+                                                           "ttl":  1,
+                                                           "settings":  {
+                                                                            "flatten_cname":  false
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-21T15:15:57.414371Z",
+                                                           "modified_on":  "2026-07-22T09:22:42.244607Z"
+                                                       },
+                                                       {
+                                                           "id":  "98d07b857556026d077d2b2a8a1c200c",
+                                                           "name":  "bursaliotoservis.com",
+                                                           "type":  "TXT",
+                                                           "content":  "\"v=spf1 -all\"",
+                                                           "proxiable":  false,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-19T17:10:19.282224Z",
+                                                           "modified_on":  "2026-07-19T17:10:19.282224Z"
+                                                       },
+                                                       {
+                                                           "id":  "f1e1a589bb9376a5a80e3f698abad8e0",
+                                                           "name":  "bursaliotoservis.com",
+                                                           "type":  "TXT",
+                                                           "content":  "\"google-site-verification=klkemp769q2oxGTybbKCFqouCWtNVFAa3VuXimfZj-k\"",
+                                                           "proxiable":  false,
+                                                           "proxied":  false,
+                                                           "ttl":  3600,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-13T16:56:52.332184Z",
+                                                           "modified_on":  "2026-07-13T16:56:52.332184Z"
+                                                       },
+                                                       {
+                                                           "id":  "58c01a588da30e0a45160d716f92c650",
+                                                           "name":  "_dmarc.bursaliotoservis.com",
+                                                           "type":  "TXT",
+                                                           "content":  "\"v=DMARC1; p=reject\"",
+                                                           "proxiable":  false,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-19T17:16:37.820715Z",
+                                                           "modified_on":  "2026-07-19T17:16:37.820715Z"
+                                                       },
+                                                       {
+                                                           "id":  "22f7c9cd70e766f989c33a03307d39d4",
+                                                           "name":  "_railway-verify.www.bursaliotoservis.com",
+                                                           "type":  "TXT",
+                                                           "content":  "\"railway-verify=89ae84fc75ea81524a80e5b4e9ab99cafac75cc6f5a46db5fd2013e88708b229\"",
+                                                           "proxiable":  false,
+                                                           "proxied":  false,
+                                                           "ttl":  1,
+                                                           "settings":  {
+
+                                                                        },
+                                                           "meta":  {
+
+                                                                    },
+                                                           "comment":  null,
+                                                           "tags":  [
+
+                                                                    ],
+                                                           "created_on":  "2026-07-21T15:17:17.459756Z",
+                                                           "modified_on":  "2026-07-21T15:17:17.459756Z"
+                                                       }
+                                                   ],
+                                          "success":  true
+                                      }
+                 }
+}

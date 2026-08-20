@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { getFuseboxModels } from '@/lib/fuseboxDb';
 
+export const dynamic = 'force-dynamic';
+
 export async function generateMetadata({ params }) {
   const { marka } = await params;
   const brandCapitalized = marka.split(/[_-]/).map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
