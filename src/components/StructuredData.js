@@ -5,30 +5,43 @@ export default function StructuredData({ breadcrumbs = [], video = null, reviews
     "@context": "https://schema.org",
     "@type": "AutoRepair",
     "@id": `${businessData.url}/#business`,
-    name: businessData.name,
+    name: "Bursalı Oto Servis Fethiye",
     description: businessData.description,
     url: businessData.url,
-    telephone: businessData.telephone,
+    telephone: "+90-554-881-20-21",
     image: businessData.image,
-    priceRange: businessData.priceRange,
+    priceRange: "₺₺",
     address: {
       "@type": "PostalAddress",
-      ...businessData.address
+      streetAddress: "Taşyaka, 264. Sk. Sanayi Sitesi 1/2",
+      addressLocality: "Fethiye",
+      addressRegion: "Muğla",
+      postalCode: "48300",
+      addressCountry: "TR"
     },
     geo: {
       "@type": "GeoCoordinates",
-      ...businessData.geo
+      latitude: 36.6257216,
+      longitude: 29.1368531
     },
-    openingHoursSpecification: businessData.openingHoursSpecification.map(oh => ({
-      "@type": "OpeningHoursSpecification",
-      ...oh
-    })),
-    areaServed: businessData.areaServed.map(area => ({
-      "@type": "City",
-      name: area
-    })),
-    knowsLanguage: businessData.knowsLanguage,
-    sameAs: businessData.sameAs,
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "08:30",
+        closes: "19:30"
+      }
+    ],
+    areaServed: [
+      { "@type": "City", name: "Fethiye" },
+      { "@type": "City", name: "Göcek" },
+      { "@type": "City", name: "Ölüdeniz" },
+      { "@type": "City", name: "Kalkan" }
+    ],
+    knowsLanguage: ["tr", "en", "ru", "uk"],
+    sameAs: [
+      "https://www.google.com/maps/place/BURSALI+OTO+SERV%C4%B0S/@36.6257216,29.1368531,16z/data=!3m1!4b1!4m6!3m5!1s0x14c043f908136bf7:0x197e3d1803a1d0c6!8m2!3d36.6257216!4d29.1368531!16s%2Fg%2F1hc1n_p_t"
+    ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Hizmetler",

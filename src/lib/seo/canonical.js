@@ -5,10 +5,12 @@ const DEFAULT_LOCALE = 'tr';
 export function buildCanonical(locale, path = '') {
   const normalizedPath = path.startsWith('/') || path === '' ? path : `/${path}`;
   const languages = {};
+  
   LOCALES.forEach((loc) => {
-    languages[loc] = `${SITE_URL}/${loc}${normalizedPath}`;
+    const hreflang = `${loc}-TR`;
+    languages[hreflang] = `${SITE_URL}/${loc}${normalizedPath}`;
   });
-  languages['x-default'] = `${SITE_URL}/${DEFAULT_LOCALE}${normalizedPath}`;
+  languages['x-default'] = `${SITE_URL}${normalizedPath}`;
 
   return {
     canonical: `${SITE_URL}/${locale}${normalizedPath}`,

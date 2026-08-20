@@ -4,6 +4,13 @@ import { routing } from './i18n/routing';
 import { getToken } from 'next-auth/jwt';
 import { rateLimit } from '@/lib/rate-limit';
 
+const BOT_USER_AGENTS = [/Googlebot/i, /Bingbot/i, /YandexBot/i, /DuckDuckBot/i, /Baiduspider/i, /Slurp/i];
+
+function isBot(req) {
+  const ua = req.headers.get('user-agent') || '';
+  return BOT_USER_AGENTS.some(rx => rx.test(ua));
+}
+
 const intlMiddleware = createMiddleware(routing);
 
 const protectedRoutes = [
@@ -226,12 +233,32 @@ export async function middleware(request) {
 
   // 3. Execute next-intl middleware for language routing
   let response;
+  const country = request.headers.get('cf-ipcountry') || request.headers.get('x-vercel-ip-country') || '';
   
   if (request.nextUrl.pathname === '/') {
     const url = request.nextUrl.clone();
-    url.pathname = '/tr';
-    response = NextResponse.rewrite(url);
-    response.headers.set('x-current-path', '/tr');
+    
+    // Cookie preference override
+    const cookieLocale = request.cookies.get('NEXT_LOCALE')?.value;
+    
+    if (isBot(request)) {
+      // Bots bypass geo-restriction to avoid cloaking
+      response = NextResponse.next();
+    } else if (cookieLocale) {
+      url.pathname = `/${cookieLocale}`;
+      response = NextResponse.rewrite(url);
+      response.headers.set('x-current-path', `/${cookieLocale}`);
+    } else if (country.toUpperCase() === 'TR') {
+      // Soft negotiation for TR IPs
+      url.pathname = '/tr';
+      response = NextResponse.rewrite(url);
+      response.headers.set('x-current-path', '/tr');
+    } else {
+      // Default to /tr or let next-intl handle default language detection
+      url.pathname = '/tr';
+      response = NextResponse.rewrite(url);
+      response.headers.set('x-current-path', '/tr');
+    }
   } else if (request.nextUrl.pathname.startsWith('/api')) {
     response = NextResponse.next({
       request: {
