@@ -73,6 +73,7 @@ function expandLocales(path, opts = {}) {
 }
 
 export const revalidate = 86400; // 24 hours ISR
+export const dynamic = 'force-dynamic';
 
 export default async function sitemap() {
   const now = new Date();
@@ -132,9 +133,9 @@ export default async function sitemap() {
     console.warn('[Sitemap] Blog yüklenemedi:', e.message);
   }
 
-  // 4) Fault Codes & Kütüphane (Hierarchy) - Sınırlandırılmış Harita
+  // 4) Araç Kataloğu (GraphProvider)
   try {
-    const hierarchy = await container.hierarchyBuilder.build('tr', 'faults');
+    const hierarchy = await container.graphProvider.buildTree();
     
     Object.entries(hierarchy).forEach(([marka, data]) => {
       entries.push(...expandLocales(`/ariza-cozumleri/${marka}`, { changeFrequency: 'weekly', priority: 0.9, lastModified: now }));
@@ -143,16 +144,10 @@ export default async function sitemap() {
       Object.keys(data.models).forEach(model => {
         entries.push(...expandLocales(`/ariza-cozumleri/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.85, lastModified: now }));
         entries.push(...expandLocales(`/kutuphane/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.75, lastModified: now }));
-        
-        // Model başına ilk 10 popüler arızayı sitemap'e al (sitemap şişmesini önle)
-        const topItems = (data.models[model].items || []).slice(0, 10);
-        topItems.forEach(post => {
-          entries.push(...expandLocales(`/kutuphane/${marka}/${model}/arizalar/${post.id}`, { changeFrequency: 'monthly', priority: 0.8, lastModified: now }));
-        });
       });
     });
   } catch (e) {
-    console.warn('[Sitemap] Fault codes & Kütüphane yüklenemedi:', e.message);
+    console.warn('[Sitemap] Araç kataloğu yüklenemedi:', e.message);
   }
 
   // 5) Motor Kodları

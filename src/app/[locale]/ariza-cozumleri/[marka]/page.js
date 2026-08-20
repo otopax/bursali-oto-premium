@@ -2,70 +2,52 @@ import { container } from '@/application/di/container';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-
-
-export const dynamicParams = true;
-export const revalidate = 86400;
-
-export async function generateStaticParams() {
-  return [];
-}
-
 import { buildSEOContract } from '@/lib/seo/canonical';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }) {
   const { locale, marka } = await params;
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
+  let hierarchy = {};
+  try {
+    hierarchy = await container.graphProvider.buildTree();
+  } catch (e) {
+    console.error(e);
+  }
   const brandData = hierarchy[marka];
   const bName = brandData ? brandData.name : marka.toUpperCase();
 
-  const titles = {
-    tr: `${bName} Kronik Arıza Çözümleri | Bursalı Oto Servis Fethiye`,
-    en: `${bName} Chronic Fault Solutions & Repair | Bursali Auto Repair`,
-    ru: `${bName} Инструкция по Ремонту и Диагностика | Bursali Auto Repair`,
-    uk: `${bName} Посібник з Ремонту та Діагностика | Bursali Auto Repair`,
-    ar: `${bName} دليل إصلاح الأعطال والتشخيص | Bursali Auto Repair`,
-  };
-
-  const descriptions = {
-    tr: `${bName} markasına ait en sık karşılaşılan kronik arızalar, kök nedenleri ve garantili tamir çözümleri. Fethiye özel servisi.`,
-    en: `Most common ${bName} chronic faults, root causes and guaranteed repair solutions at Bursali Auto Repair Fethiye.`,
-    ru: `Частые неисправности ${bName}, причины и гарантированный ремонт в автосервисе Bursali Fethiye.`,
-    uk: `Найпоширеніші несправності ${bName}, причини та гарантований ремонт в автосервісі Bursali Fethiye.`,
-    ar: `أكثر أعطال ${bName} شيوعاً وأسبابها وحلول الإصلاح المضمونة في ورشة بورصالي فتحية.`,
-  };
+  const title = `${bName} Modelleri ve Araç Kataloğu | Bursalı Oto Servis`;
+  const description = `${bName} markasına ait tüm modeller, donanım paketleri ve motor teknik özellikleri.`;
 
   return {
-    title: titles[locale] || titles.tr,
-    description: descriptions[locale] || descriptions.tr,
-    ...buildSEOContract({ locale, path: `/ariza-cozumleri/${marka}`, title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
+    title,
+    description,
+    ...buildSEOContract({ locale, path: `/ariza-cozumleri/${marka}`, title, description })
   };
 }
 
 export default async function ArizaCozumleriBrandPage({ params }) {
   const { locale, marka } = await params;
   setRequestLocale(locale);
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
+  
+  let hierarchy = {};
+  try {
+    hierarchy = await container.graphProvider.buildTree();
+  } catch(e) {
+    console.error(e);
+  }
   
   const brandData = hierarchy[marka];
   if (!brandData) {
     notFound();
   }
-  const bName = brandData.name;
-
-  const h1Titles = {
-    tr: `${bName} Arıza Çözümleri`,
-    en: `${bName} Fault Solutions`,
-    ru: `Решения по ремонту ${bName}`,
-    uk: `Рішення з ремонту ${bName}`,
-    ar: `حلول أعطال ${bName}`
-  };
 
   const models = Object.entries(brandData.models).map(([slug, data]) => ({
     slug,
-    name: data.name,
-    count: data.items.length
-  })).sort((a, b) => b.count - a.count);
+    name: data.name
+  })).sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
@@ -74,15 +56,15 @@ export default async function ArizaCozumleriBrandPage({ params }) {
         {/* Breadcrumb */}
         <div style={{ marginBottom: '2rem', fontSize: '0.9rem' }}>
           <Link href={`/${locale}/ariza-cozumleri`} style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>
-            &larr; Tüm Markalar
+            &larr; Araç Kataloğu Ana Sayfası
           </Link>
         </div>
 
         <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', color: 'var(--text-light)' }}>
-          {h1Titles[locale] || h1Titles.tr}
+          {brandData.name} <span style={{ color: 'var(--accent-gold)' }}>Modelleri</span>
         </h1>
         <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '800px', fontSize: '1.1rem' }}>
-          Aşağıdaki listeden aracınızın modelini seçerek, o modele ait yaygın arızaları ve çözümlerini inceleyebilirsiniz.
+          Araç teknik özelliklerine ve motor seçeneklerine ulaşmak istediğiniz modeli seçiniz. Toplam {models.length} model listelenmektedir.
         </p>
 
         <style dangerouslySetInnerHTML={{__html: `
@@ -117,19 +99,11 @@ export default async function ArizaCozumleriBrandPage({ params }) {
           .model-box-name {
             font-weight: 600;
             font-size: 1.2rem;
-            flex: 1;
-            min-width: 0;
-            padding-right: 0.5rem;
           }
-          .model-box-count {
+          .model-box-arrow {
             margin-left: auto;
-            flex-shrink: 0;
-            white-space: nowrap;
-            background: rgba(255,255,255,0.05);
-            color: #94a3b8;
-            font-size: 0.85rem;
-            padding: 4px 12px;
-            border-radius: 12px;
+            color: var(--accent-gold);
+            font-size: 1.2rem;
           }
         `}} />
 
@@ -137,7 +111,7 @@ export default async function ArizaCozumleriBrandPage({ params }) {
           {models.map(model => (
             <Link key={model.slug} href={`/${locale}/ariza-cozumleri/${marka}/${model.slug}`} className="model-box">
               <div className="model-box-name">{model.name}</div>
-              <div className="model-box-count">{model.count} Kayıt</div>
+              <div className="model-box-arrow">&rarr;</div>
             </Link>
           ))}
         </div>

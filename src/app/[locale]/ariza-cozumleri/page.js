@@ -1,35 +1,22 @@
 import { container } from '@/application/di/container';
+import Image from 'next/image';
 import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { buildSEOContract } from '@/lib/seo/canonical';
 
 export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+export const revalidate = 86400;
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
-  setRequestLocale(locale);
 
-  const titles = {
-    tr: 'Kronik Arıza Çözümleri Rehberi | Bursalı Oto Servis Fethiye',
-    en: 'Chronic Fault Solutions Guide | Bursali Auto Repair Fethiye',
-    ru: 'Справочник По Ремонту Неисправностей | Bursali Oto Servis Fethiye',
-    uk: 'Довідник З Ремонту Несправностей | Bursali Oto Servis Fethiye',
-    ar: 'دليل حلول الأعطال المزمنة | Bursali Oto Servis Fethiye',
-  };
-
-  const descriptions = {
-    tr: 'Fethiye premium oto servis olarak karşılaştığımız kronik arızalar, kök nedenleri ve çözümleri.',
-    en: 'Chronic car faults, root causes and expert repair solutions at Bursali Auto Repair Fethiye.',
-    ru: 'Типичные неисправности автомобилей, причины и решения по ремонту в Bursali Oto Servis.',
-    uk: 'Типові несправності авто, причини та якісний ремонт у Bursali Oto Servis Fethiye.',
-    ar: 'أعطال السيارات الشائعة وأسبابها وحلول الإصلاح المعتمدة في Bursali Oto Servis.',
-  };
+  const title = 'Araç Kataloğu & Teknik Özellikler | Bursalı Oto Servis';
+  const description = 'Tüm marka ve modellere ait araç katalogları, donanım paketleri ve motor teknik özellikleri.';
 
   return {
-    title: titles[locale] || titles.tr,
-    description: descriptions[locale] || descriptions.tr,
-    ...buildSEOContract({ locale, path: '/ariza-cozumleri', title: titles[locale] || titles.tr, description: descriptions[locale] || descriptions.tr })
+    title,
+    description,
+    ...buildSEOContract({ locale, path: '/ariza-cozumleri', title, description })
   };
 }
 
@@ -41,25 +28,27 @@ const BRAND_LOGOS = {
   'Volkswagen': 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg',
   'Land Rover': 'https://upload.wikimedia.org/wikipedia/en/4/4a/LandRover.svg',
   'Volvo': 'https://upload.wikimedia.org/wikipedia/commons/2/29/Volvo-Iron-Mark-Black.svg',
-  'Opel': 'https://upload.wikimedia.org/wikipedia/commons/9/98/Opel_logo_2020.svg',
-  'Genel / Premium': null
+  'Opel': 'https://upload.wikimedia.org/wikipedia/commons/9/98/Opel_logo_2020.svg'
 };
 
-export default async function ArizaCozumleriHub({ params }) {
+export default async function KutuphaneHub({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const hierarchy = await container.hierarchyBuilder.build(locale, 'faults');
+  
+  let hierarchy = {};
+  try {
+    hierarchy = await container.graphProvider.buildTree();
+  } catch (e) {
+    console.error(e);
+  }
 
   const brands = Object.entries(hierarchy).map(([slug, data]) => {
-    const uniquePostIds = new Set();
-    Object.values(data.models).forEach(model => {
-      model.items.forEach(item => uniquePostIds.add(item.id));
-    });
+    let totalModels = Object.keys(data.models).length;
     return {
       slug,
       name: data.name,
       logo: BRAND_LOGOS[data.name] || null,
-      count: uniquePostIds.size
+      count: totalModels
     };
   }).sort((a, b) => b.count - a.count);
 
@@ -67,10 +56,10 @@ export default async function ArizaCozumleriHub({ params }) {
     <main style={{ minHeight: '100vh', paddingTop: '100px', paddingBottom: '4rem', background: '#09090b' }}>
       <div className="container" style={{ margin: '0 auto', padding: '0 2rem', maxWidth: '1200px' }}>
         <h1 style={{ fontSize: '3rem', fontWeight: 'bold', marginBottom: '1rem', textAlign: 'center', color: 'var(--text-light)' }}>
-          Kronik Arıza Çözümleri Merkezi
+          Araç Kataloğu
         </h1>
         <p style={{ color: 'var(--text-muted)', textAlign: 'center', marginBottom: '3rem', maxWidth: '800px', margin: '0 auto 3rem auto', fontSize: '1.1rem' }}>
-          Avrupa premium araç markalarının en sık karşılaşılan kronik arızalarını, kök nedenlerini ve servisimizde uyguladığımız kalıcı çözümleri inceleyin. Lütfen markanızı seçin.
+          Araçlara özel donanım ve motor seçeneklerini incelemek için markanızı seçin. Toplam {brands.length} marka listelenmektedir.
         </p>
 
         <style dangerouslySetInnerHTML={{__html: `
@@ -147,17 +136,19 @@ export default async function ArizaCozumleriHub({ params }) {
             <Link key={brand.slug} href={`/${locale}/ariza-cozumleri/${brand.slug}`} className="brand-box">
               <div className="brand-box-logo">
                 {brand.logo ? (
-                  <img 
+                  <Image 
                     src={brand.logo} 
-                    alt={brand.name} 
-                    style={{ filter: (brand.name === 'Volvo' || brand.name === 'Audi') ? 'invert(1)' : 'none' }} 
+                    alt={`${brand.name} Logosu`} 
+                    width={50}
+                    height={50}
+                    style={{ filter: (brand.name === 'Volvo' || brand.name === 'Audi') ? 'invert(1)' : 'none', objectFit: 'contain' }} 
                   />
                 ) : (
                   <span style={{ fontWeight: 'bold', color: 'var(--accent-gold)', fontSize: '1.5rem' }}>{brand.name.charAt(0)}</span>
                 )}
               </div>
               <div className="brand-box-name">{brand.name.toUpperCase()}</div>
-              <div className="brand-box-count">{brand.count} Arıza</div>
+              <div className="brand-box-count">{brand.count} Model</div>
             </Link>
           ))}
         </div>

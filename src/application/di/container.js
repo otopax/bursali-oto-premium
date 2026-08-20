@@ -2,7 +2,7 @@ import { MarkdownContentRepository } from '@/infrastructure/repositories/Markdow
 import { GetSortedPostsUseCase } from '@/application/use-cases/GetSortedPostsUseCase';
 import { GetPostDataUseCase } from '@/application/use-cases/GetPostDataUseCase';
 import { GetPostPathsUseCase } from '@/application/use-cases/GetPostPathsUseCase';
-import { HierarchyBuilder } from '@/application/use-cases/HierarchyBuilder';
+import { GraphProvider } from '@/application/use-cases/GraphProvider';
 import { GoogleAiProvider } from '@/infrastructure/ai/GoogleAiProvider';
 import { ChatService } from '@/services/ChatService';
 import { VisionService } from '@/services/VisionService';
@@ -20,7 +20,7 @@ class DIContainer {
     this.getSortedPostsUseCase = new GetSortedPostsUseCase(this.contentRepository);
     this.getPostDataUseCase = new GetPostDataUseCase(this.contentRepository);
     this.getPostPathsUseCase = new GetPostPathsUseCase(this.contentRepository);
-    this.hierarchyBuilder = new HierarchyBuilder(this.contentRepository);
+    this.graphProvider = new GraphProvider();
     
     // Services
     this.chatService = new ChatService(this.aiProvider);
