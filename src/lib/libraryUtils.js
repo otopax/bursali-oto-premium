@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { readJsonCached } from './cacheFile';
 
 const PUBLIC_DIR = path.join(process.cwd(), 'public');
 const SRC_DATA_DIR = path.join(process.cwd(), 'src', 'data');
@@ -46,32 +47,26 @@ export function getModelsForBrand(brandSlug) {
   return Array.from(models).sort();
 }
 
-export function getFuseBoxDataForModel(brandSlug, modelSlug) {
+export async function getFuseBoxDataForModel(brandSlug, modelSlug) {
   const modelDir = path.join(FUSEBOX_DIR, brandSlug, modelSlug);
   const dataPath = path.join(modelDir, 'data.json');
   
-  if (fs.existsSync(dataPath)) {
-    try {
-      const content = fs.readFileSync(dataPath, 'utf-8');
-      return JSON.parse(content);
-    } catch (e) {
-      console.error(`Error reading fusebox data for ${brandSlug}/${modelSlug}`, e);
-    }
+  try {
+    return await readJsonCached(dataPath);
+  } catch (e) {
+    // If file does not exist or read fails, just return null
+    return null;
   }
-  return null;
 }
 
-export function getManualsDataForModel(brandSlug, modelSlug) {
+export async function getManualsDataForModel(brandSlug, modelSlug) {
   const modelDir = path.join(MANUALS_DIR, brandSlug, modelSlug);
   const dataPath = path.join(modelDir, 'data.json');
   
-  if (fs.existsSync(dataPath)) {
-    try {
-      const content = fs.readFileSync(dataPath, 'utf-8');
-      return JSON.parse(content);
-    } catch (e) {
-      console.error(`Error reading manuals data for ${brandSlug}/${modelSlug}`, e);
-    }
+  try {
+    return await readJsonCached(dataPath);
+  } catch (e) {
+    // If file does not exist or read fails, just return null
+    return null;
   }
-  return null;
 }

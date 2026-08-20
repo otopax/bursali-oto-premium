@@ -4,8 +4,9 @@
  * Arıza Çözümleri, VIP Garaj) tek kaynak olarak bunu kullanır.
  * JSON dosyaları uygulamayla deploy olur; bellek içinde önbeklenir.
  */
-import fs from 'fs';
+import fs from 'fs/promises';
 import path from 'path';
+import { readJsonCached } from './cacheFile';
 
 const DIR = path.join(process.cwd(), 'public/vehicle_tree');
 
@@ -14,36 +15,41 @@ export const vtSlug = (s) => (s || '').toString().toLowerCase()
   .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 
 let _cache = null;
-function loadAll() {
+
+async function loadAll() {
   if (_cache) return _cache;
   const map = {};
   try {
-    const files = fs.readdirSync(DIR).filter(f => f.endsWith('.json') && !f.startsWith('_'));
-    for (const f of files) {
+    const files = await fs.readdir(DIR);
+    const jsonFiles = files.filter(f => f.endsWith('.json') && !f.startsWith('_'));
+    
+    await Promise.all(jsonFiles.map(async (f) => {
       try {
-        const t = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf-8'));
-        if (t && t.make && Array.isArray(t.models)) map[vtSlug(t.make)] = t;
-      } catch (_) { /* bozuk dosyayı atla */ }
-    }
-  } catch (_) { /* klasör yoksa boş dön */ }
+        const t = await readJsonCached(path.join(DIR, f));
+        if (t && t.make && Array.isArray(t.models)) {
+          map[vtSlug(t.make)] = t;
+        }
+      } catch (_) { /* skip broken file */ }
+    }));
+  } catch (_) { /* ignore if dir missing */ }
   _cache = map;
   return map;
 }
 
-export function getBrands() {
-  const map = loadAll();
+export async function getBrands() {
+  const map = await loadAll();
   return Object.values(map)
     .map(t => ({ slug: vtSlug(t.make), name: t.make, makeId: t.makeId, modelCount: (t.models || []).length }))
     .sort((a, b) => a.name.localeCompare(b.name, 'tr'));
 }
 
-export function getBrandTree(brandSlug) {
-  const map = loadAll();
+export async function getBrandTree(brandSlug) {
+  const map = await loadAll();
   return map[brandSlug] || map[vtSlug(brandSlug)] || null;
 }
 
-export function getModels(brandSlug) {
-  const t = getBrandTree(brandSlug);
+export async function getModels(brandSlug) {
+  const t = await getBrandTree(brandSlug);
   if (!t) return [];
   return (t.models || []).map(m => ({
     name: m.name,
@@ -54,8 +60,8 @@ export function getModels(brandSlug) {
   }));
 }
 
-export function getGenerations(brandSlug, modelGroupId) {
-  const t = getBrandTree(brandSlug);
+export async function getGenerations(brandSlug, modelGroupId) {
+  const t = await getBrandTree(brandSlug);
   if (!t) return [];
   const m = (t.models || []).find(x => x.modelGroupId === modelGroupId);
   if (!m) return [];
@@ -78,8 +84,8 @@ const _cleanEngine = (e) => ({
   modelYili: _clean(e.modelYili),
 });
 
-export function getEngines(brandSlug, modelId) {
-  const t = getBrandTree(brandSlug);
+export async function getEngines(brandSlug, modelId) {
+  const t = await getBrandTree(brandSlug);
   if (!t) return [];
   for (const m of (t.models || [])) {
     for (const g of (m.generations || [])) {
@@ -90,9 +96,9 @@ export function getEngines(brandSlug, modelId) {
 }
 
 /** Serbest metinden (marka+model) en yakın düğümü bulmaya çalışır (Sanal Usta/VIP eşleme için) */
-export function findVehicle(brandName, modelName) {
+export async function findVehicle(brandName, modelName) {
   const bSlug = vtSlug(brandName);
-  const t = getBrandTree(bSlug);
+  const t = await getBrandTree(bSlug);
   if (!t) return null;
   const mSlug = vtSlug(modelName);
   const model = (t.models || []).find(m => vtSlug(m.name) === mSlug)

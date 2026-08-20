@@ -112,13 +112,14 @@ model Vehicle {
   yearStart          Int
   yearEnd            Int?
   bodyType           String? // Sedan, Hatchback, SUV
-  fuelType           String? // Benzin, Dizel, Hybrid, Electric
-  engineDisplacement Float? // cc
-  power              Int? // HP
+  // fuelType           String? // Benzin, Dizel, Hybrid, Electric (Taşındı: EngineVariant)
+  // engineDisplacement Float? // cc (Taşındı: Engine)
+  // power              Int? // HP (Taşındı: EngineVariant)
   engines            Engine[]
   embeddings         VectorEmbedding[]
   faultCodes         FaultCode[]
   fuseBoxes          FuseBox[]
+  sourceRecords      SourceImportRecord[]
   createdAt          DateTime          @default(now())
 
   @@unique([manufacturerId, model, generation, yearStart])
@@ -129,10 +130,13 @@ model Engine {
   vehicleId    String
   vehicle      Vehicle  @relation(fields: [vehicleId], references: [id])
   code         String // e.g. "2ZR-FE"
-  cylinders    Int
-  displacement Float
-  fuelSystem   String // Multipoint, Direct Injection
+  name         String?  // Canonical name (Opsiyonel)
+  cylinders    Int?
+  displacement Float?
+  fuelSystem   String? // Multipoint, Direct Injection
   ecus         ECU[]
+  variants     EngineVariant[]
+  sourceRecords SourceImportRecord[]
   createdAt    DateTime @default(now())
 }
 
@@ -632,3 +636,46 @@ model Feedback {
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
+// ----- YENİ: GATE 7 - 1:1 SOURCE PRESERVATION & KNOWLEDGE GRAPH ENGINE VARIANTS -----
+
+model EngineVariant {
+  id          String   @id @default(uuid())
+  engineId    String
+  engine      Engine   @relation(fields: [engineId], references: [id])
+  
+  designation String?  // Örn: "Supersport T"
+  power       Int?     // Çıkarılabiliyorsa HP değeri
+  fuelType    String?  // Örn: Benzin, Dizel, Hybrid
+  
+  sourceRecords SourceImportRecord[]
+  createdAt   DateTime @default(now())
+}
+
+model SourceImportRecord {
+  id              String   @id @default(uuid())
+  source          String   @default("WebDataBays")
+  
+  // Orijinal ham verinin birebir yansıması (Asla değiştirilmez)
+  brand           String
+  model           String
+  yearFrom        Int?
+  yearTo          Int?
+  engineNameRaw   String   // Örn: "1.4 16V 180 MultiAir Supersport T"
+  engineCode      String   // Örn: "955A8000"
+  rawRecord       Json     // Orijinal satırın tam JSON dökümü
+
+  // Knowledge Graph Katmanına (Normalize edilmiş verilere) Referanslar
+  vehicleId       String?
+  vehicle         Vehicle? @relation(fields: [vehicleId], references: [id])
+  engineId        String?
+  engine          Engine?  @relation(fields: [engineId], references: [id])
+  engineVariantId String?
+  engineVariant   EngineVariant? @relation(fields: [engineVariantId], references: [id])
+
+  importVersion   String   @default("v1.0")
+  createdAt       DateTime @default(now())
+
+  @@index([source])
+}
+

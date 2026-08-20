@@ -41,14 +41,14 @@ class JsonFileProvider {
 class PostgresProvider {
   // Bu sınıf ileride Prisma ORM ile doldurulacaktır.
   async getFaultBrands() {
-    const brands = await prisma.brand.findMany({ orderBy: { name: 'asc' } });
+    const brands = await prisma.brand.findMany({ take: 200, orderBy: { name: 'asc' } });
     return brands.map(b => b.slug);
   }
 
   async getFaultModels(brandSlug) {
     const brand = await prisma.brand.findUnique({ 
       where: { slug: brandSlug }, 
-      include: { models: { orderBy: { name: 'asc' } } } 
+      include: { models: { take: 500, orderBy: { name: 'asc' } } } 
     });
     if (!brand) return [];
     return brand.models.map(m => m.slug);
@@ -57,7 +57,7 @@ class PostgresProvider {
   async getFaultCodes(brandSlug, modelSlug) {
     const model = await prisma.model.findUnique({ 
       where: { slug: modelSlug }, 
-      include: { faultCodes: { orderBy: { code: 'asc' } } } 
+      include: { faultCodes: { take: 1000, orderBy: { code: 'asc' } } } 
     });
     if (!model) return [];
     return model.faultCodes.map(c => c.code);

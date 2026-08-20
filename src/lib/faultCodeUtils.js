@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import { readJsonCached } from './cacheFile';
 
 const FAULT_CODES_DIR = path.join(process.cwd(), 'public/ariza_kodlari_data');
 
@@ -20,15 +21,12 @@ export function getCodesForModel(brandSlug, modelSlug) {
   return fs.readdirSync(modelDir).filter(file => fs.statSync(path.join(modelDir, file)).isDirectory()).sort();
 }
 
-export function getFaultCodeData(brandSlug, modelSlug, codeSlug) {
+export async function getFaultCodeData(brandSlug, modelSlug, codeSlug) {
   const dataPath = path.join(FAULT_CODES_DIR, brandSlug, modelSlug, codeSlug, 'data.json');
-  if (fs.existsSync(dataPath)) {
-    try {
-      const content = fs.readFileSync(dataPath, 'utf-8');
-      return JSON.parse(content);
-    } catch (e) {
-      console.error(`Error reading fault data for ${brandSlug}/${modelSlug}/${codeSlug}`, e);
-    }
+  try {
+    return await readJsonCached(dataPath);
+  } catch (e) {
+    // If file does not exist or read fails, just return null
+    return null;
   }
-  return null;
 }

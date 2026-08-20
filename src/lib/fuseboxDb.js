@@ -12,6 +12,7 @@ export async function getFuseboxBrands() {
     const manufacturers = await prisma.manufacturer.findMany({
       where: { vehicles: { some: { fuseBoxes: { some: {} } } } },
       select: { name: true },
+      take: 200,
       orderBy: { name: 'asc' }
     });
     return manufacturers.map(m => m.name);
@@ -31,6 +32,7 @@ export async function getFuseboxModels(brand) {
       },
       distinct: ['model'],
       select: { model: true },
+      take: 500,
       orderBy: { model: 'asc' }
     });
     return vehicles.map(v => v.model);
@@ -49,6 +51,7 @@ export async function getFuseboxYears(brand, model) {
         model: { equals: model, mode: 'insensitive' },
         fuseBoxes: { some: {} }
       },
+      take: 100,
       select: { yearStart: true, yearEnd: true }
     });
 
@@ -92,6 +95,7 @@ export async function getFuseBoxesWithFuses(brand, model, year) {
           ]
         }
       },
+      take: 50,
       include: {
         fuses: {
           orderBy: { originalId: 'asc' }
