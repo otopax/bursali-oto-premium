@@ -132,9 +132,6 @@ const nextConfig = {
       '/:locale(tr|en|ru|uk|ar)/oludeniz-yol-yardim',
       '/:locale(tr|en|ru|uk|ar)/kampanya/ucretsiz-checkup',
       '/:locale(tr|en|ru|uk|ar)/blog',
-      '/:locale(tr|en|ru|uk|ar)/kutuphane',
-      '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri/:path*',
-      '/:locale(tr|en|ru|uk|ar)/ariza-kodlari/:path*',
       '/:locale(tr|en|ru|uk|ar)/bakim-merkezi/:path*',
     ];
 
@@ -175,6 +172,14 @@ const nextConfig = {
       },
       {
         source: '/admin/:path*',
+        headers: [noStoreHeader],
+      },
+      {
+        source: '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri/:path*',
+        headers: [noStoreHeader],
+      },
+      {
+        source: '/:locale(tr|en|ru|uk|ar)/kutuphane',
         headers: [noStoreHeader],
       },
       {
