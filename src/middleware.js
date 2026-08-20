@@ -307,7 +307,6 @@ export async function middleware(request) {
       form-action 'self';
     `.replace(/\s{2,}/g, ' ').trim();
     response.headers.set('Content-Security-Policy', csp);
-    response.headers.set('x-nonce', nonce);
 
     if (!pathname.startsWith('/api') && !pathname.startsWith('/login') && !pathname.startsWith('/admin')) {
       response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=86400, stale-while-revalidate=43200');
