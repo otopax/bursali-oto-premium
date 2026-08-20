@@ -6,7 +6,7 @@ import { SEO_PRIORITY } from '@/data/seo-oncelik';
 /**
  * Kurumsal Dinamik Sitemap Generator
  * - 5 dil (tr, en, ru, uk, ar) × tüm public sayfalar
- * - Dinamik sayfalar: blog, katalog, ariza-cozumleri, sigorta-kutuphanesi, bilgi-bankasi
+ * - Dinamik sayfalar: blog, katalog, arac-katalogu, sigorta-kutuphanesi, bilgi-bankasi
  * - Maximum 10,000 URL emniyet sınırı (Next.js sitemap 50,000 limit koruması)
  */
 
@@ -17,7 +17,7 @@ const DEFAULT_LOCALE = 'tr';
 const STATIC_PATHS = [
   '', // ana sayfa
   '/sanal-usta',
-  '/ariza-cozumleri',
+  '/arac-katalogu',
   '/sigorta-kutuphanesi',
   '/teknik-kutuphane',
   '/kutuphane',
@@ -138,11 +138,11 @@ export default async function sitemap() {
     const hierarchy = await container.graphProvider.buildTree();
     
     Object.entries(hierarchy).forEach(([marka, data]) => {
-      entries.push(...expandLocales(`/ariza-cozumleri/${marka}`, { changeFrequency: 'weekly', priority: 0.9, lastModified: now }));
+      entries.push(...expandLocales(`/arac-katalogu/${marka}`, { changeFrequency: 'weekly', priority: 0.9, lastModified: now }));
       entries.push(...expandLocales(`/kutuphane/${marka}`, { changeFrequency: 'weekly', priority: 0.8, lastModified: now }));
       
       Object.keys(data.models).forEach(model => {
-        entries.push(...expandLocales(`/ariza-cozumleri/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.85, lastModified: now }));
+        entries.push(...expandLocales(`/arac-katalogu/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.85, lastModified: now }));
         entries.push(...expandLocales(`/kutuphane/${marka}/${model}`, { changeFrequency: 'weekly', priority: 0.75, lastModified: now }));
       });
     });

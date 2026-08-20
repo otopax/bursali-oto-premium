@@ -15,7 +15,7 @@ export default function Navigation({ locale }) {
         {/* Desktop and Mobile Menu Links */}
         <div className="nav-links">
           
-          <Link href={`/${locale}/ariza-cozumleri`} aria-label="Arıza Çözümleri" className="nav-link">
+          <Link href={`/${locale}/arac-katalogu`} aria-label="Arıza Çözümleri" className="nav-link">
             {locale === 'tr' ? 'Arıza Çözümleri' : 'Troubleshooting'}
           </Link>
           

@@ -134,7 +134,7 @@ export default async function FaultCodePage({ params }) {
           <div className="flex items-center space-x-2 text-sm text-slate-400 mb-4">
             <Link href={`/${locale}`} className="hover:text-white">Anasayfa</Link>
             <span>/</span>
-            <Link href={`/${locale}/ariza-cozumleri`} className="hover:text-white">Arıza Çözümleri</Link>
+            <Link href={`/${locale}/arac-katalogu`} className="hover:text-white">Arıza Çözümleri</Link>
             <span>/</span>
             <span className="text-amber-400 font-semibold">{fault.code}</span>
           </div>

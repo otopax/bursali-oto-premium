@@ -21,7 +21,7 @@ export default async function EmptyFaultPage({ params }) {
       <h1>Arıza Çözümleri</h1>
       <p style={{ marginTop: '2rem', color: 'var(--text-muted)' }}>Arıza kodları ve onarım rehberleri veritabanımız güncellenmektedir. Yakında aktif edilecektir.</p>
       <div style={{ marginTop: '3rem' }}>
-        <Link href={"/" + locale + "/ariza-cozumleri"} style={{ color: 'var(--accent-gold)' }}>&larr; Araç Kataloğuna Dön</Link>
+        <Link href={"/" + locale + "/arac-katalogu"} style={{ color: 'var(--accent-gold)' }}>&larr; Araç Kataloğuna Dön</Link>
       </div>
     </main>
   );

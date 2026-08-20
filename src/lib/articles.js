@@ -72,11 +72,11 @@ export const articles = [
     excerpt: 'Volkswagen Touareg 2.5 TDI (R5) motorlarında görülen kronik turbo arızası, su eksiltme ve eksantrik aşınması sorunlarının garantili komple motor revizyonu.',
     content: `
       <h2>VW Touareg 2.5 TDI R5 Motorların Kronik Sorunları Nelerdir?</h2>
-      <img src="/ariza-cozumleri/touareg/touareg-1.png" alt="VW Touareg 2.5 TDI Motor" style="width: 100%; border-radius: 12px; margin: 1.5rem 0;" />
+      <img src="/arac-katalogu/touareg/touareg-1.png" alt="VW Touareg 2.5 TDI Motor" style="width: 100%; border-radius: 12px; margin: 1.5rem 0;" />
       <p>Touareg 2.5 TDI araçlarda kullanılan ve triger kayışı/zinciri yerine dişli aktarım sistemine sahip olan efsanevi R5 motorlar, yüksek tork ve güç sunar. Ancak zamanla ağır kasanın da etkisiyle motor içerisinde ciddi aşınmalar meydana gelebilmektedir.</p>
 
       <h2>Motoru İndirmeyi Gerektiren Başlıca Arızalar</h2>
-      <img src="/ariza-cozumleri/touareg/touareg-2.png" alt="VW Touareg Motor ve Şanzıman Revizyonu" style="width: 100%; border-radius: 12px; margin: 1.5rem 0;" />
+      <img src="/arac-katalogu/touareg/touareg-2.png" alt="VW Touareg Motor ve Şanzıman Revizyonu" style="width: 100%; border-radius: 12px; margin: 1.5rem 0;" />
       <ul>
         <li><strong>Su Pompası (Devirdaim) Arızası:</strong> R5 motorların en büyük kronik sorunudur. Su pompası bloğun içinde olduğu için, bozulduğunda antifiriz doğrudan motor yağına karışır. Yağın bozulması turbo ve yatakların sarmasına neden olabilir.</li>
         <li><strong>Eksantrik Mili Aşınması:</strong> Yanlış spesifikasyonda motor yağı kullanımı, eksantrik millerinde aşınmaya ve supap iticilerinde (fincanlarda) delinmeye yol açar. Araçta performans kaybı ve vuruntulu çalışma başlar.</li>
@@ -85,8 +85,8 @@ export const articles = [
 
       <h2>Bursalı Oto Servis Uzmanlığı ile Komple Motor Revizyonu</h2>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
-        <img src="/ariza-cozumleri/touareg/touareg-4.png" alt="VW Touareg Turbo Revizyonu" style="width: 100%; border-radius: 12px;" />
-        <img src="/ariza-cozumleri/touareg/touareg-5.png" alt="VW Touareg Şanzıman İndirme" style="width: 100%; border-radius: 12px;" />
+        <img src="/arac-katalogu/touareg/touareg-4.png" alt="VW Touareg Turbo Revizyonu" style="width: 100%; border-radius: 12px;" />
+        <img src="/arac-katalogu/touareg/touareg-5.png" alt="VW Touareg Şanzıman İndirme" style="width: 100%; border-radius: 12px;" />
       </div>
       <p>Fotoğraflarda da görebileceğiniz üzere, ağır hasar almış veya yatak sarmış Touareg motorlarını <strong>komple şanzıman ile birlikte indirerek</strong> klinik bir ortamda dağıtıyoruz. VAG grubu (Volkswagen/Audi) araçlar için özel olan <strong>ODIS diagnostik yazılımı</strong> ve orijinal sente/dişli kilitleme aparatları kullanılarak motoru sıfırdan topluyoruz. Piston, segman, eksantrik ve turbo revizyonlarında yalnızca OEM (Orijinal) parçalar kullanarak aracınıza ikinci bir hayat veriyoruz.</p>
     `,

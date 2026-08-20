@@ -258,7 +258,7 @@ export default async function Home({ params }) {
               <h2 style={{ marginBottom: '0.5rem' }}>{t('faultsTitle')}</h2>
               <p style={{ color: 'var(--text-muted)', margin: 0 }}>{t('faultsDesc')}</p>
             </div>
-            <Link href={`/${locale}/ariza-cozumleri`} className="btn btn-gold" aria-label="Tüm Arıza Çözümlerini Gör" title="Tüm Arıza Çözümlerini Gör" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
+            <Link href={`/${locale}/arac-katalogu`} className="btn btn-gold" aria-label="Tüm Arıza Çözümlerini Gör" title="Tüm Arıza Çözümlerini Gör" style={{ padding: '0.8rem 1.5rem', background: 'transparent', border: '1px solid var(--accent-gold)' }}>
               {t('faultsBtn')}
             </Link>
           </div>
@@ -357,7 +357,7 @@ export default async function Home({ params }) {
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0', flexWrap: 'wrap' }}>
             <Link href={`/${locale}/hakkimizda`} title="Hakkımızda" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerAbout')}</Link>
             <Link href={`/${locale}/seffaf-fiyatlandirma`} title="Şeffaf Fiyatlandırma" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerPricing')}</Link>
-            <Link href={`/${locale}/ariza-cozumleri`} title="Arıza Çözümleri" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerFaults')}</Link>
+            <Link href={`/${locale}/arac-katalogu`} title="Arıza Çözümleri" style={{ color: 'var(--text-light)', textDecoration: 'none', padding: '12px 0', minWidth: '48px', display: 'inline-block' }}>{t('footerFaults')}</Link>
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '1.5rem', margin: '1.5rem 0', flexWrap: 'wrap' }}>

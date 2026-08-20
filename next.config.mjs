@@ -69,7 +69,7 @@ const nextConfig = {
       // 404 & Login Regressions 301 Redirects
       {
         source: '/:locale(tr|en|ru|uk|ar)/hizmetler',
-        destination: '/:locale/ariza-cozumleri',
+        destination: '/:locale/arac-katalogu',
         permanent: true,
       },
       {
@@ -84,22 +84,22 @@ const nextConfig = {
       },
       {
         source: '/:locale(tr|en|ru|uk|ar)/ariza-kodlari',
-        destination: '/:locale/ariza-cozumleri',
+        destination: '/:locale/arac-katalogu',
         permanent: true,
       },
       {
         source: '/:locale(tr|en|ru|uk|ar)/bilgi-bankasi',
-        destination: '/:locale/ariza-cozumleri',
+        destination: '/:locale/arac-katalogu',
         permanent: true,
       },
       {
         source: '/:locale(tr|en|ru|uk|ar)/blog',
-        destination: '/:locale/ariza-cozumleri',
+        destination: '/:locale/arac-katalogu',
         permanent: true,
       },
-      // Kod makaleleri Kütüphane'ye taşındı (model="Tüm Modeller"): eski ariza-cozumleri linkleri → kutuphane
+      // Kod makaleleri Kütüphane'ye taşındı (model="Tüm Modeller"): eski arac-katalogu linkleri → kutuphane
       {
-        source: '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri/:brand/tum-modeller/:slug',
+        source: '/:locale(tr|en|ru|uk|ar)/arac-katalogu/:brand/tum-modeller/:slug',
         destination: '/:locale/kutuphane/:slug',
         permanent: true,
       }
@@ -175,7 +175,7 @@ const nextConfig = {
         headers: [noStoreHeader],
       },
       {
-        source: '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri/:path*',
+        source: '/:locale(tr|en|ru|uk|ar)/arac-katalogu/:path*',
         headers: [noStoreHeader],
       },
       {

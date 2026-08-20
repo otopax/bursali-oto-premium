@@ -59,7 +59,7 @@ export default async function ArizaKodlariIndexPage({ params }) {
         <h2 style={{ color: 'var(--accent-gold)', marginBottom: '1rem' }}>Popüler OBD2 Arıza Kodları</h2>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
           {['P0030', 'P2433', 'P0087', 'P0101', 'P0300', 'P0420'].map((code) => (
-            <Link href={`/${locale}/ariza-cozumleri`} key={code} style={{ 
+            <Link href={`/${locale}/arac-katalogu`} key={code} style={{ 
               background: 'rgba(255,255,255,0.03)',
               padding: '0.6rem 1.2rem',
               borderRadius: '8px',

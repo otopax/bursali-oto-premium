@@ -16,7 +16,7 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    ...buildSEOContract({ locale, path: '/ariza-cozumleri', title, description })
+    ...buildSEOContract({ locale, path: '/arac-katalogu', title, description })
   };
 }
 
@@ -133,7 +133,7 @@ export default async function KutuphaneHub({ params }) {
 
         <div className="brands-grid">
           {brands.map(brand => (
-            <Link key={brand.slug} href={`/${locale}/ariza-cozumleri/${brand.slug}`} className="brand-box">
+            <Link key={brand.slug} href={`/${locale}/arac-katalogu/${brand.slug}`} className="brand-box">
               <div className="brand-box-logo">
                 {brand.logo ? (
                   <Image 

@@ -52,7 +52,7 @@ export default async function MaintenanceCenterPage({ params }) {
       title: 'OBD Arıza Kodu Sorgulama',
       desc: 'P0171, P0420 gibi hata kodlarının ne anlama geldiğini ve çözümünü bulun.',
       icon: '💻',
-      link: `/${locale}/ariza-cozumleri`
+      link: `/${locale}/arac-katalogu`
     },
     {
       id: 'sanal-usta',

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
   return {
     title,
     description,
-    ...buildSEOContract({ locale, path: `/ariza-cozumleri/${marka}`, title, description })
+    ...buildSEOContract({ locale, path: `/arac-katalogu/${marka}`, title, description })
   };
 }
 
@@ -55,7 +55,7 @@ export default async function ArizaCozumleriBrandPage({ params }) {
         
         {/* Breadcrumb */}
         <div style={{ marginBottom: '2rem', fontSize: '0.9rem' }}>
-          <Link href={`/${locale}/ariza-cozumleri`} style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>
+          <Link href={`/${locale}/arac-katalogu`} style={{ color: 'var(--accent-gold)', textDecoration: 'none' }}>
             &larr; Araç Kataloğu Ana Sayfası
           </Link>
         </div>
@@ -109,7 +109,7 @@ export default async function ArizaCozumleriBrandPage({ params }) {
 
         <div className="models-grid">
           {models.map(model => (
-            <Link key={model.slug} href={`/${locale}/ariza-cozumleri/${marka}/${model.slug}`} className="model-box">
+            <Link key={model.slug} href={`/${locale}/arac-katalogu/${marka}/${model.slug}`} className="model-box">
               <div className="model-box-name">{model.name}</div>
               <div className="model-box-arrow">&rarr;</div>
             </Link>

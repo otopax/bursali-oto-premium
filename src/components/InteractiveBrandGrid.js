@@ -93,7 +93,7 @@ export default function InteractiveBrandGrid({ locale }) {
         {premiumBrands.map((brand) => (
           <a 
             key={brand.id} 
-            href={`/${locale}/ariza-cozumleri/${brand.id}`} 
+            href={`/${locale}/arac-katalogu/${brand.id}`} 
             className="brand-card"
             onMouseEnter={() => setHoveredBrand(brand.id)}
             onMouseLeave={() => setHoveredBrand(null)}

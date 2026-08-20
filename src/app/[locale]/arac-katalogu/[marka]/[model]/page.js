@@ -21,12 +21,12 @@ export async function generateMetadata({ params }) {
     return {
       title,
       description,
-      ...buildSEOContract({ locale, path: `/ariza-cozumleri/${marka}/${model}`, title, description })
+      ...buildSEOContract({ locale, path: `/arac-katalogu/${marka}/${model}`, title, description })
     };
   } catch (e) {
     return {
       title: 'Araç Kataloğu | Bursalı Oto Servis',
-      ...buildSEOContract({ locale, path: `/ariza-cozumleri/${marka}/${model}`, title: 'Araç Kataloğu', description: 'Bursalı Oto Araç Kataloğu' })
+      ...buildSEOContract({ locale, path: `/arac-katalogu/${marka}/${model}`, title: 'Araç Kataloğu', description: 'Bursalı Oto Araç Kataloğu' })
     };
   }
 }
@@ -62,11 +62,11 @@ export default async function ArizaCozumleriModelPage({ params }) {
         
         {/* Breadcrumb Navigation */}
         <div style={{ marginBottom: '2rem', fontSize: '0.9rem', display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
-          <Link href={`/${locale}/ariza-cozumleri`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
+          <Link href={`/${locale}/arac-katalogu`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
             Katalog
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>
-          <Link href={`/${locale}/ariza-cozumleri/${marka}`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
+          <Link href={`/${locale}/arac-katalogu/${marka}`} style={{ color: 'var(--text-muted)', textDecoration: 'none' }}>
             {brandData.name}
           </Link>
           <span style={{ color: 'var(--text-muted)' }}>/</span>

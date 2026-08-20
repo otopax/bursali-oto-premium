@@ -43,7 +43,7 @@ export default function FaultCodeSearch({ locale }) {
   const executeSearch = (searchKey) => {
     setIsDropdownOpen(false);
     const targetSlug = faultCodesIndex[searchKey] || searchKey.replace(/\s+/g, '');
-    router.push(`/${locale}/ariza-cozumleri/${targetSlug}`);
+    router.push(`/${locale}/arac-katalogu/${targetSlug}`);
   };
 
   const handleSearch = (e) => {

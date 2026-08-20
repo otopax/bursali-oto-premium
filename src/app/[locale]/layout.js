@@ -18,7 +18,7 @@ const inter = Inter({ subsets: ['latin', 'latin-ext'], variable: '--font-inter',
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.bursaliotoservis.com';
 
 // Root layout metadata — canonical BURAYA KOYULMAZ.
-// Her sayfa (blog, ariza-cozumleri, seffaf-fiyatlandirma vb.) generateMetadata
+// Her sayfa (blog, arac-katalogu, seffaf-fiyatlandirma vb.) generateMetadata
 // içinde @/lib/seo/canonical helper'ı ile kendi canonical'ını verir.
 // Layout burada yalnızca fallback title/description/OG/twitter + hreflang languages sağlar.
 // Kendi canonical'ı OLMAYAN sayfalar için Google URL'i kendisi canonical seçer (doğru davranış).

@@ -2,7 +2,7 @@
  * MERKEZİ URL ÜRETİCİ (Single Source of Truth for internal links)
  *
  * Arıza çözümü sayfalarının fiziksel rotası 3-seviyelidir:
- *   /{locale}/ariza-cozumleri/{markaSlug}/{modelSlug}/{kod}
+ *   /{locale}/arac-katalogu/{markaSlug}/{modelSlug}/{kod}
  * ve [marka]/[model]/[kod]/page.js `dynamicParams = false` olduğu için
  * SADECE generateStaticParams'ta üretilen (HierarchyBuilder slug'ları) yollar 200 döner.
  *
@@ -50,7 +50,7 @@ export function modelSlug(model) {
  * Bir arıza (fault/post) nesnesi için kanonik 3-seviye URL üretir.
  * @param {string} locale - 'tr' | 'en' | 'ru' | 'uk' | 'ar'
  * @param {{brand?: string, model?: string, id: string}} fault
- * @returns {string} örn: /tr/ariza-cozumleri/volkswagen/passat/volkswagen-p2458-ariza-kodu-cozumu
+ * @returns {string} örn: /tr/arac-katalogu/volkswagen/passat/volkswagen-p2458-ariza-kodu-cozumu
  */
 export function arizaUrl(locale, fault) {
   if (!fault || !fault.id) return `/${locale}/kutuphane`;
