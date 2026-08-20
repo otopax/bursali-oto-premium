@@ -1,0 +1,30 @@
+{
+  "code": "65535",
+  "vagCode": "65535",
+  "title": "65535 - 65535",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Motor arıza ikaz lambası (MIL) yanıyor",
+    "Performans ve çekiş düşüklüğü"
+  ],
+  "commonCauses": [
+    "Kablo Tesisatı ve Soketleri from/to Control Module faulty\nVoltage Supply and/or Ground Supply faulty",
+    "Voltage Supply and/or Ground Supply faulty",
+    "Control Module faulty\nControl Module Housing leaky",
+    "Control Module Housing leaky"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin: /Temizleyin:  Kablo Tesisatı ve Soketleri from/to Control Module\nKontrol edin:  Voltage Supply and Ground Supply including the Main Supply/Connections at the Battery",
+    "Kontrol edin:  Voltage Supply and Ground Supply including the Main Supply/Connections at the Battery",
+    "Değiştirin / Yenileyin:  Control Module"
+  ],
+  "technicalNotes": "This fault is NOT to be ignored when found in a major and/or critical system (Airbag, ABS etc.). If you try to clear this fault, VCDS may tell you that there is an unexpected result or that the controller refused the command. This is normal since this specific fault can generally not be cleared.\nWhen stored in other unimportant systems (Radio etc.) the general suggestion is to ignore it unless you notice functional limitations. Within the warranty period dealers are usually required to replace such control modules, but there have been a couple of cases with similar codes where these are getting ignored due to flaws in the control module software. If in doubt please refer to technical bulletins and similar documents provided by the vehicle manufacturer.\nWhen found in Audi Airbag Generation 6 & 7 (see Audi TPI 1308401):\nA Problem with the Acceleration Sensör Okuma Değerleri may result in the Airbag Control Module storing this Fault Code. Değiştirin / Yenileyin:  the Airbag Control Module and both Acceleration Sensör Okuma Değerleris.\nWhen found in Audi Airbag Generation 8:\nDue to low Voltage the Control Module does not complete it's Self Test successfully. Değiştirin / Yenileyin:  Airbag Control Module and install a low Voltage Protection Relay to ensure future mishaps won't cause this again. UPDATE The Protection Relay may not be available anymore, though the Parts Catalog lists updated Control Modules now.\nWhen found in certain older TDI Engine Control Modules (ECM) which have a vacuum line going to them:\nKontrol edin: /Repair the Vacuum Line before and inside the ECM.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/65535"
+}

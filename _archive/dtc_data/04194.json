@@ -1,0 +1,32 @@
+{
+  "code": "04194",
+  "vagCode": "04194",
+  "title": "04194 - 04194",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Malfunction Indicator Light (MIL) ON"
+  ],
+  "commonCauses": [
+    "Sigorta ve Röle Bağlantıları(s) faulty",
+    "Supply Voltage low",
+    "Battery faulty",
+    "Loose/faulty electrical connections",
+    "Generator faulty"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  Sigorta ve Röle Bağlantıları(s)",
+    "Kontrol edin:  Supply Voltage",
+    "Kontrol edin: /Değiştirin / Yenileyin:  Battery",
+    "Correct electrical connections",
+    "Kontrol edin: /Değiştirin / Yenileyin:  Generator"
+  ],
+  "technicalNotes": "When found in the J519 (7E0/BCM PQ25), Address [09-Cent. Elect.], check stored value in the Adaptasyon / Kalibrasyon Yapın:  Channels [050], [051] and [052] for the \"Energy Management\". Typically these are set to a value of [0]. If the fault code 04194 does not clear and there is no other cause found, try to [Save] a new value of [0] to each of these channels,[050], [051] and [052] in the J519, even if the value is currently [0]. Then see if the fault code clears. ref: 7E0-937-BCM-V1",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/04194"
+}

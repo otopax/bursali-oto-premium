@@ -1,0 +1,30 @@
+{
+  "code": "00451",
+  "vagCode": "00451",
+  "title": "00451 - P11A7/004519",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Tüm VAG Grubu Modeller (Audi, VW, Seat, Skoda, Porsche)"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Possible loss of power, due to AVS (Audi Valve Lift System) default position affecting lower (1000~3100 RPM) torque curve",
+    "All non affected actuators are switched to the Large Valve Lift position.",
+    "Fault code entry without EPC or Kontrol edin:  Engine lights due to no deterioration of Exhaust Emissions"
+  ],
+  "commonCauses": [
+    "Kablo Tesisatı ve Soketleri and/or connections (short circuit?)",
+    "Voltage supply failure to the Cam Adjustment Actuators",
+    "Faulty Engine Control Module"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  wiring and connections",
+    "Kontrol edin:  for battery voltage at Cam Adjustment Actuators",
+    "Kontrol edin:  Engine Control Module with [Output tests]"
+  ],
+  "technicalNotes": "See the Ross-Tech forum post: - Case Study: P11A7 00 - Audi Valve Lift System - E888 engines\nThis Fault code is for the F369-Control element (4) for camshaft adjustment, Cylinder [2]\nAVS system function when coolant temperature is above 14°F (–10°C).\nMaximum of 3.0 amperes for each Cam Adjustment Actuator",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P11A7/004519"
+}

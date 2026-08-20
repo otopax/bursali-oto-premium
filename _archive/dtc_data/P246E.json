@@ -1,0 +1,31 @@
+{
+  "code": "P246E",
+  "vagCode": "",
+  "title": "P246E - P246E",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A4 / VW Passat / Skoda Octavia"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Power Loss/Limp mode",
+    "MIL on",
+    "Glow Plug Light on",
+    "DPF Light on"
+  ],
+  "commonCauses": [
+    "EGT sensor faulty",
+    "EGT wiring faulty"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  EGT sensor and wiring.",
+    "Note, when found in RoW B8 chassis A4 (8K) models with Engine code CAGA which uses the UDS protocol:\nThe Advanced Measuring Values for EGT sensors may not be labeled correctly!  Make sure to check [*ENG106430*] Exhaust gas temperature before particulate filter even though this is the last (4th) sensor.\nUnplugging the suspect EGT sensor while re-checking the resulting fault codes and evaluating Advanced Measuring Values would be advised before replacing parts.",
+    "The Advanced Measuring Values for EGT sensors may not be labeled correctly!  Make sure to check [*ENG106430*] Exhaust gas temperature before particulate filter even though this is the last (4th) sensor.",
+    "Unplugging the suspect EGT sensor while re-checking the resulting fault codes and evaluating Advanced Measuring Values would be advised before replacing parts."
+  ],
+  "technicalNotes": "VAG grubu araçlarda bu kod görüldüğünde öncelikle yetkili diyagnoz cihazı (ODIS/VCDS) ile canlı değer testi yapılmalıdır.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P246E"
+}

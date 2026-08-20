@@ -1,0 +1,32 @@
+{
+  "code": "02830",
+  "vagCode": "02830",
+  "title": "02830 - 02830",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A4 / VW Passat / Skoda Octavia"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Motor arıza ikaz lambası (MIL) yanıyor",
+    "Performans ve çekiş düşüklüğü"
+  ],
+  "commonCauses": [
+    "Supply Voltage insufficient",
+    "Control Module Coding incorrect",
+    "Incorrect Control Module installed"
+  ],
+  "stepByStepSolution": [
+    "Kontrol edin:  Control Module Power Supply",
+    "Kontrol edin:  Control Module Coding (see Vehicle specific Diagnostic Procedures).",
+    "Kontrol edin:  CAN-Databus Powertrain Cut-Off Relay (J788)\nKontrol edin:  Measuring Value Blocks (MVB)\nPerform Output Test and check for an audible noise while the Relay is being actuated.",
+    "Kontrol edin:  Measuring Value Blocks (MVB)",
+    "Perform Output Test and check for an audible noise while the Relay is being actuated.",
+    "Kontrol edin:  if Control Module (Part Number) fits the Car's Equipment"
+  ],
+  "technicalNotes": "When found in VW Passat (3C): CAN-Gateway:\nIf the Car is equipped with Adaptive Cruise Control (ACC) or other Systems using the Extended CAN-Databus, check Measuring Value Block (MVB) 002.3. The Value should change between active and passive when the Ignition is being cycled.\nIf the CAN-Gateway has been replaced, check if Address 4F - Central Electronics II is installed/listed in the Installation List . You may need to update the Gateway [Installation List] to register this Control Module properly.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/02830"
+}

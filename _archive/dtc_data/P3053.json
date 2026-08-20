@@ -1,0 +1,28 @@
+{
+  "code": "P3053",
+  "vagCode": "",
+  "title": "P3053 - P3053",
+  "brand": "Audi / Volkswagen / SEAT / Skoda / Porsche",
+  "models": [
+    "Audi A3 / VW Golf / Seat Leon"
+  ],
+  "engines": [
+    "Tüm VAG Benzinli (TSI/TFSI) ve Dizel (TDI) Motorlar"
+  ],
+  "severity": "Orta-Yüksek (VAG Teşhisi Gerekli)",
+  "symptoms": [
+    "Motor arıza ikaz lambası (MIL) yanıyor",
+    "Performans ve çekiş düşüklüğü"
+  ],
+  "commonCauses": [
+    "Sensör okuma hatası veya tesisat temassızlığı",
+    "Mekanik aşınma veya hava kaçağı"
+  ],
+  "stepByStepSolution": [
+    "1. VCDS / ODIS ile canlı veri grupları taranır.",
+    "2. Tesisat ve voltaj beslemeleri test edilir.",
+    "3. Gerekirse OEM yedek parça ile yenilenip adaptör sürüşü yapılır."
+  ],
+  "technicalNotes": "When found in MQB Golf based models such as the 2018 - 2019 (CDVC) 3.6L Vr6 VW Atlas verify the fuse to T91a/88 terminal of the ECM (623) labeled \"SIG\" in the wiring diagram is OK.  A blown or missing fused power supply to that terminal of the ECM will result in this DTC.  This was fuse SB22 on the 2019 Atlas we received feedback from.\nKablo Tesisatı ve Soketleri diagrams can be obtained from erWin directly: Official Factory Repair Information.",
+  "sourceUrl": "https://wiki.ross-tech.com/wiki/index.php/P3053"
+}
