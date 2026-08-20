@@ -1,4 +1,4 @@
-﻿import { setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
 import { buildSEOContract } from '@/lib/seo/canonical';
 
