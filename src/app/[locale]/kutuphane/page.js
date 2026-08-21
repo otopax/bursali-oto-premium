@@ -1,5 +1,6 @@
-import { setRequestLocale, getTranslations } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import Link from 'next/link';
+import Image from 'next/image';
 import { buildSEOContract } from '@/lib/seo/canonical';
 import { getBrands } from '@/lib/vehicleTree';
 import { getAllArticles } from '@/lib/mdxUtils';
@@ -15,61 +16,79 @@ export async function generateMetadata({ params }) {
   };
 }
 
+const PRIORITY_BRANDS = [
+  'bmw', 'mercedes-benz', 'audi', 'porsche', 'volkswagen', 'volvo', 'land-rover', 'mini'
+];
+
 export default async function KutuphanePage({ params }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('Library');
 
-  const brands = await getBrands();
-  const allArticles = getAllArticles();
+  let brands = await getBrands();
+
+  brands.sort((a, b) => {
+    const idxA = PRIORITY_BRANDS.indexOf(a.slug);
+    const idxB = PRIORITY_BRANDS.indexOf(b.slug);
+    
+    if (idxA !== -1 && idxB !== -1) return idxA - idxB;
+    if (idxA !== -1) return -1;
+    if (idxB !== -1) return 1;
+    return a.name.localeCompare(b.name, 'tr');
+  });
+
+  const allArticles = getAllArticles(locale);
 
   return (
     <main className="min-h-screen pt-[120px] pb-24 bg-gradient-to-b from-dark-900 to-black">
       <div className="container-custom">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        <div className="mb-12 border-l-4 border-accent-gold pl-6 py-2 bg-white/5 rounded-r-2xl max-w-4xl">
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
             Otomotiv Bilgi <span className="text-accent-gold">Kütüphanesi</span>
           </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Marka, model ve motor detaylarına göre arıza çözümleri, bakım rehberleri ve araç teknik verileri.
+          <p className="text-lg text-gray-400">
+            Tüm marka ve modeller için detaylı motor seçenekleri, kronik sorunlar, kasa kodları ve uzman onarım rehberleri.
           </p>
         </div>
 
         {/* Brands Section */}
-        <div className="mb-20">
-          <h2 className="text-2xl md:text-3xl font-semibold text-white mb-8 pb-4 border-b border-white/10 flex items-center gap-3">
-            <span className="w-1.5 h-8 bg-accent-gold rounded-full inline-block"></span>
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-white mb-6 border-b border-white/10 pb-4">
             Araç Kataloğu
           </h2>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {brands.map((brand) => (
               <Link 
-                href={`/${locale}/kutuphane/${brand.slug}`}
                 key={brand.slug}
-                className="group p-4 bg-white/5 border border-white/10 rounded-xl hover:bg-accent-gold/10 hover:border-accent-gold/30 transition-all duration-300 flex flex-col items-center justify-center gap-2"
+                href={`/${locale}/kutuphane/${brand.slug}`}
+                className="group relative flex flex-col items-center justify-center p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent-gold/50 transition-all duration-300 overflow-hidden"
               >
-                <div className="w-12 h-12 relative flex items-center justify-center opacity-70 group-hover:opacity-100 transition-opacity">
-                  <span className="text-2xl font-bold text-gray-400 group-hover:text-accent-gold">
-                    {brand.name.charAt(0)}
-                  </span>
+                {/* Brand Logo - Using clearbit as a reliable source for brand logos based on domain */}
+                <div className="w-16 h-16 mb-4 flex items-center justify-center bg-white rounded-full p-2 group-hover:scale-110 transition-transform duration-500 shadow-lg relative">
+                  <Image 
+                    src={`https://logo.clearbit.com/${brand.slug.replace('-benz', '')}.com`}
+                    alt={`${brand.name} Logosu`}
+                    width={48}
+                    height={48}
+                    className="object-contain w-full h-full z-10"
+                    unoptimized
+                  />
+                  {/* Fallback avatar if Image fails or takes time */}
+                  <div className="absolute inset-0 flex items-center justify-center bg-dark-800 text-accent-gold font-bold text-xl rounded-full uppercase opacity-0 group-hover:opacity-10 transition-opacity">
+                    {brand.name.substring(0, 2)}
+                  </div>
                 </div>
-                <span className="text-gray-300 font-medium text-center truncate w-full">
-                  {brand.name}
-                </span>
-                {brand.modelCount > 0 && (
-                  <span className="text-xs text-gray-500">
-                    {brand.modelCount} Model
-                  </span>
-                )}
+                <h3 className="text-white font-medium text-center z-10">{brand.name}</h3>
+                
+                {/* Decorative background glow */}
+                <div className="absolute inset-0 bg-gradient-to-t from-accent-gold/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
               </Link>
             ))}
           </div>
-        </div>
+        </section>
 
         {/* Recent Articles Section */}
-        <div>
+        <section>
           <h2 className="text-2xl md:text-3xl font-semibold text-white mb-8 pb-4 border-b border-white/10 flex items-center gap-3">
             <span className="w-1.5 h-8 bg-accent-gold rounded-full inline-block"></span>
             Son Eklenen Çözüm Rehberleri
@@ -113,7 +132,7 @@ export default async function KutuphanePage({ params }) {
               <p className="text-gray-400">Henüz makale bulunmuyor. Yakında yeni içerikler eklenecektir.</p>
             </div>
           )}
-        </div>
+        </section>
       </div>
     </main>
   );

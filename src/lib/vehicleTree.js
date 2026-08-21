@@ -75,7 +75,11 @@ export async function getGenerations(brandSlug, modelGroupId) {
   }));
 }
 
-const _clean = (s) => (typeof s === 'string' ? s.replace(/\s+/g, ' ').trim() : s);
+const _clean = (s) => {
+  if (typeof s !== 'string') return s;
+  return s.replace(/[\r\n\t]+/g, ' ').replace(/\s+/g, ' ').trim();
+};
+
 const _cleanEngine = (e) => ({
   tip: _clean(e.tip),
   motorKodu: _clean(e.motorKodu),
