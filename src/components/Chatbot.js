@@ -21,14 +21,15 @@ export default function Chatbot() {
         onClick={handleClick}
         style={{ 
           position: 'fixed', 
-          bottom: '20px', 
+          bottom: '20px',
+          right: '20px',
           backgroundColor: 'var(--accent-gold)', 
           color: 'black', 
           width: '70px',
           height: '70px',
           borderRadius: '50%', 
           boxShadow: '0 0 20px rgba(212, 175, 55, 0.4), inset 0 0 10px rgba(255, 255, 255, 0.5)', 
-          zIndex: 1000, 
+          zIndex: 10000, 
           border: '3px solid #111', 
           cursor: 'pointer', 
           display: 'flex', 

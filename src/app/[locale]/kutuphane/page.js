@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { buildSEOContract } from '@/lib/seo/canonical';
 import { getBrands } from '@/lib/vehicleTree';
 import { getAllArticles } from '@/lib/mdxUtils';
+import BrandLogo from '@/components/BrandLogo';
 
 export const dynamic = 'force-dynamic';
 
@@ -63,20 +64,9 @@ export default async function KutuphanePage({ params }) {
                 href={`/${locale}/kutuphane/${brand.slug}`}
                 className="group relative flex flex-col items-center justify-center p-6 bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-accent-gold/50 transition-all duration-300 overflow-hidden"
               >
-                {/* Brand Logo - Using clearbit as a reliable source for brand logos based on domain */}
+                {/* Brand Logo with Fallback */}
                 <div className="w-16 h-16 mb-4 flex items-center justify-center bg-white rounded-full p-2 group-hover:scale-110 transition-transform duration-500 shadow-lg relative">
-                  <Image 
-                    src={`https://logo.clearbit.com/${brand.slug.replace('-benz', '')}.com`}
-                    alt={`${brand.name} Logosu`}
-                    width={48}
-                    height={48}
-                    className="object-contain w-full h-full z-10"
-                    unoptimized
-                  />
-                  {/* Fallback avatar if Image fails or takes time */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-dark-800 text-accent-gold font-bold text-xl rounded-full uppercase opacity-0 group-hover:opacity-10 transition-opacity">
-                    {brand.name.substring(0, 2)}
-                  </div>
+                  <BrandLogo brand={brand} />
                 </div>
                 <h3 className="text-white font-medium text-center z-10">{brand.name}</h3>
                 
