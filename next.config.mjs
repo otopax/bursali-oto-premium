@@ -69,7 +69,7 @@ const nextConfig = {
       // 404 & Login Regressions 301 Redirects
       {
         source: '/:locale(tr|en|ru|uk|ar)/hizmetler',
-        destination: '/:locale/arac-katalogu',
+        destination: '/:locale/kutuphane',
         permanent: true,
       },
       {
@@ -84,23 +84,33 @@ const nextConfig = {
       },
       {
         source: '/:locale(tr|en|ru|uk|ar)/ariza-kodlari',
-        destination: '/:locale/arac-katalogu',
+        destination: '/:locale/kutuphane',
         permanent: true,
       },
       {
         source: '/:locale(tr|en|ru|uk|ar)/bilgi-bankasi',
-        destination: '/:locale/arac-katalogu',
+        destination: '/:locale/kutuphane',
         permanent: true,
       },
       {
         source: '/:locale(tr|en|ru|uk|ar)/blog',
-        destination: '/:locale/arac-katalogu',
+        destination: '/:locale/kutuphane',
         permanent: true,
       },
-      // Kod makaleleri Kütüphane'ye taşındı (model="Tüm Modeller"): eski arac-katalogu linkleri → kutuphane
+      // Kod makaleleri Kütüphane'ye taşındı: eski arac-katalogu linkleri -> kutuphane
       {
         source: '/:locale(tr|en|ru|uk|ar)/arac-katalogu/:brand/tum-modeller/:slug',
-        destination: '/:locale/kutuphane/:slug',
+        destination: '/:locale/kutuphane/makale/:slug',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk|ar)/arac-katalogu',
+        destination: '/:locale/kutuphane',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk|ar)/arac-katalogu/:path*',
+        destination: '/:locale/kutuphane/:path*',
         permanent: true,
       }
     ];
