@@ -15,13 +15,12 @@ export default function BrandLogo({ brand }) {
   }
 
   return (
-    <Image 
-      src={`https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://${domain}&size=128`}
+    <img 
+      src={`https://logo.clearbit.com/${domain}`}
       alt={`${brand.name} Logosu`}
       width={48}
       height={48}
       className="object-contain w-full h-full z-10"
-      unoptimized
       onError={() => setError(true)}
     />
   );
