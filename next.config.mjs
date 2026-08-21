@@ -88,6 +88,16 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri',
+        destination: '/:locale/kutuphane',
+        permanent: true,
+      },
+      {
+        source: '/:locale(tr|en|ru|uk|ar)/ariza-cozumleri/:path*',
+        destination: '/:locale/kutuphane/:path*',
+        permanent: true,
+      },
+      {
         source: '/:locale(tr|en|ru|uk|ar)/bilgi-bankasi',
         destination: '/:locale/kutuphane',
         permanent: true,
