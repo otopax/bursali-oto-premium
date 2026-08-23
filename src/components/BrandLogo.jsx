@@ -16,7 +16,7 @@ export default function BrandLogo({ brand }) {
 
   return (
     <img 
-      src={`https://logo.clearbit.com/${domain}`}
+      src={`https://www.google.com/s2/favicons?domain=${domain}&sz=128`}
       alt={`${brand.name} Logosu`}
       width={48}
       height={48}
